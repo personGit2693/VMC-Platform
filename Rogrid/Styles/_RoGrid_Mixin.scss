@@ -1,0 +1,1913 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Image itself Style Rogrid Mixin*/
+@mixin childImage_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+/*Image itself Style Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Body Style Rogrid Mixin*/
+
+/*_Body itself*/
+@mixin bodyitself_RoStyle{
+	box-sizing: border-box;	
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+}
+/*_Body itself*/
+
+
+
+/*_Body scrollbar*/
+@mixin bodyScrollBar_RoStyle{
+	width: 7px;
+	height: 7px;
+}
+/*_Body scrollbar*/
+
+
+
+/*_Body track*/
+@mixin bodyTrack_RoStyle{
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+/*_Body track*/
+
+
+
+/*_Body handle*/
+@mixin bodyHandle_RoStyle{
+	background: #57DBFF; 
+	border-radius: 10px;
+}
+/*_Body handle*/
+
+
+
+/*_Body handle hover*/
+@mixin bodyHandleHover_RoStyle{
+	background: #91DBFF;
+}
+/*_Body handle hover*/
+
+/*Body Style Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Inputs Wrapper, Placeholder & Inputs itself Rogrid Mixin*/
+
+/*_Custom Inputs Wrapper*/
+@mixin customInputsWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	padding: 15px 5px 5px 5px;
+	border-radius: 7px;	
+	border-color: var(--customInputColor); /*To be changed animation*/
+	border-width: 1px;
+	border-style: solid;
+	z-index: 0;
+}
+/*_Custom Inputs Wrapper*/
+
+
+
+/*_Inputs themselves*/
+@mixin customInputs_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing:border-box;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-family: calibri;
+	font-weight: normal;
+	font-style: normal;
+	font-size: var(--customInputFSize);
+	background: transparent;
+	color: var(--customInputColor);
+}
+/*_Inputs themselves*/
+
+
+
+/*_Default Placehoder properties*/
+@mixin customInputsPlace_RoStyle{
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 95%;
+	top:50%; /*To be changed animation*/
+	transform: translateY(-50%); /*To be changed animation*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--customInputFSize);; /*To be changed animation*/
+	color: var(--customInputColor); /*To be changed animation*/
+	z-index: -1;
+	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
+	text-overflow: ellipsis;
+}
+/*_Default Placehoder properties*/
+
+
+
+/*_Default Placehoder(For Date & Drowpdown) properties*/
+@mixin customInputsPlaceUp_RoStyle{
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 95%;
+	top:33%; /*To be changed animation*/ /*To be changed*/
+	transform: translateY(-50%); /*To be changed animation*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--customInputFSize); /*To be changed animation*/
+	color: var(--customInputColor); /*To be changed animation*/
+	z-index: -1;
+	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
+	text-overflow: ellipsis;
+}
+/*_Default Placehoder(For Date & Dropdown) properties*/
+
+
+
+/*_Animated Placeholder*/
+@mixin customInputsPlaceAnimate_RoStyle{
+	top: 0px; /*changed animation*/
+	transform: none; /*changed animation*/
+	font-size: var(--customInputAnimFSize); /*changed animation*/
+}
+/*_Animated Placeholder*/
+
+/*Custom Inputs Wrapper, Placeholder & Inputs itself Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Current Date Rogrid Mixin*/
+@mixin currentDate_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: normal;
+	word-break: keep-all;
+	font-style: var(--currDateFStyle);
+	font-weight: var(--currDateFWeight);
+	font-size: var(--currDateFsize);
+	font-family: calibri;
+	color: var(--currDateFColor);
+}
+/*Current Date Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom checkbox Rogrid Mixin*/
+@mixin customCheckboxWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+}
+
+
+
+@mixin cusCheckboxLabel_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	white-space: normal;
+	cursor: pointer;
+	font-family: calibri;
+	font-style: var(--cusCheckboxFStyle);
+	font-weight: var(--cusCheckboxFWeight);
+	font-size: var(--custCheckboxFSize);
+	color: var(--cusCheckboxColor);
+}
+
+
+
+@mixin cusCheckbox_RoStyle{
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--cusCheckboxWidthHeight);
+	height: var(--cusCheckboxWidthHeight);
+	margin-left: 4px;
+	border-width: var(--cusCheckboxBorderWidth);
+	border-style: solid;
+	border-color: var(--cusCheckboxBorderColor);
+	vertical-align: bottom;
+}
+
+
+
+@mixin checkIcon_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+
+
+@mixin origCheckbox_RoStyle{
+	position: absolute;
+	visibility: hidden;
+}
+/*Custom checkbox Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Modal and Blurrer Rogrid Mixin*/
+
+/*_Blurrer*/
+@mixin blurrer_RoStyle{
+	position: fixed;
+	display: none;
+	box-sizing: border-box;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.5;
+	z-index: var(--putOnTop);
+}
+/*_Blurrer*/
+
+
+
+/*_Modal*/
+@mixin modalmeCon_Style{
+	position: fixed;
+	display: none;
+	overflow: auto;
+	box-sizing: border-box;
+	border: 1px solid grey;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0px;
+	height: 0px;
+	background-color: rgba(237, 231, 225 ,0.5);	
+	z-index: var(--topOnBlurrer);
+	flex-flow: column nowrap;
+	align-items: center;
+	transition: width 0.5s ease-out 0s, height 0.5s ease-out 1s;
+}
+
+
+
+@mixin modalItself_RoStyle{
+	position: absolute;
+	display: none;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: var(--modalWidth);
+	height: var(--modalHeight);
+	top: var(--modalTop);
+	border-radius: 7px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--modalBorderColor);
+	background-color: var(--modalBodyBgColor);
+	transition: top 0.5s ease-out 0s;
+	flex-shrink: 0;
+	transform: scale(0);
+	transition: transform 0.3s ease-out 1.5s;
+}
+
+
+
+@mixin modalScrollWidth_RoStyle{
+	width: 7px;
+	height: 7px;
+}
+
+
+
+@mixin modalScrollTrack_RoStyle{
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+
+
+
+@mixin modalScrollHandle_RoStyle{
+	background: #57DBFF; 
+	border-radius: 10px;
+}
+
+
+
+@mixin modalScrollHover_RoStyle{
+	background: #91DBFF;
+}
+
+
+
+@mixin modalHeader_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	top: 0px;		
+	flex-wrap: nowrap;
+	flex-direction: row;
+	background-color: var(--modalHeaderBgColor);
+}
+
+
+
+@mixin modalHeaderTxt_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	width: 100%;
+	flex-shrink: 1;
+	flex-grow: 0;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--modalHeaderFSize);
+	font-family: calibri;
+	color: var(--modalHeaderFColor); 
+	text-align: center;	
+	align-self: center;	
+}
+
+
+
+@mixin modalHeaderCloser_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: nowrap;
+	width: var(--modalCloseIconSize);
+	height: var(--modalCloseIconSize);
+	align-self: flex-start;
+	flex-shrink: 0;
+	flex-grow: 0;
+	cursor: pointer;
+}
+
+
+
+@mixin modalCloseIcon_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+@mixin modalBody_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: auto;
+	width: auto;
+	padding: 8px;
+}
+/*_Modal*/
+
+/*Custom Modal and Blurrer Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Spinner Loading RoGrid Mixin*/
+@mixin spinnerLoad_RoStyle{
+	position: fixed;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: var(--topSpinBlurrer);
+	width: var(--spinnerWidthHeight);
+	height: var(--spinnerWidthHeight);
+}
+/*Spinner Loading RoGrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Search Input with Style RoGrid Mixin*/
+@mixin searchInput_Style{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: var(--inputSearchWidth);
+	padding-top: var(--inputSearchTopPadding);
+	padding-right: var(--inputSearchRightPadding);
+	padding-bottom: var(--inputSearchBottomPadding);
+	padding-left: var(--inputSearchLeftPadding);
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--inputSearchBorderColor);
+	border-radius: var(--inputSearchBorderRadius);
+	outline: none;
+	background: transparent var(--inputSearchIcon) var(--inputSearchIconHori) center no-repeat; 
+	background-size: var(--inputSearchIconSize);
+	background-origin: padding-box;
+	font-style: normal;
+	font-weight: normal;
+	font-family: calibri;
+	font-size: var(--inputSearchFSize);
+	color: var(--inputSearchFColor);
+}
+/*Search Input with Style RoGrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Notification Box Rogrid Mixin*/
+@mixin notiBoxFlexWrap_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	width: auto;
+	padding: 7px;
+	margin: 4px;	
+}
+
+
+
+@mixin notiBoxSuccessBg_RoStyle{
+	background-color: #DFF0D8;
+}
+
+
+
+@mixin notiBoxFailedBg_RoStyle{
+	background-color: #F2DEDE;
+}
+
+
+
+@mixin notiBoxMessItem_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: normal;
+	word-break: keep-all;
+	flex-shrink: 1;
+	width: 100%;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--notiFSize);
+}
+
+
+
+@mixin notiBoxSuccessColor_RoStyle{
+	color: #3C763D;
+}
+
+
+
+@mixin notiBoxFailedColor_RoStyle{
+	color: #A94442;
+}
+
+
+
+@mixin notiBoxCloseIconItemWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-shrink: 0;
+	width: var(--notiCloseIconWidthHeight);
+	height: var(--notiCloseIconWidthHeight);
+	cursor: pointer;
+}
+/*Notification Box Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Customized Normal Button Rogrid Mixin*/
+@mixin normalBtn_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: normal;
+	word-break: keep-all;
+	width: var(--normBtnWidth);
+	padding: var(--normBtnPadding);
+	border-style: solid;
+	border-width: var(--normBtnBorderWidth);
+	border-color: var(--normBtnBorderColor);
+	border-radius: var(--normBtnRadius);
+	outline: none;
+	font-style: normal;
+	font-weight: var(--normBtnFWeight);
+	font-family: calibri;
+	font-size: var(--normBtnFSize);
+	background-color: var(--normBtnBgColor);
+	color: var(--normBtnFcolor);	
+	cursor: pointer;
+}
+
+
+
+@mixin normalBtn_HovAct_RoStyle{
+	color: var(--normBtnHovActFColor);
+	background-color: var(--normBtnHovActBgColor);
+}
+/*Customized Normal Button Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*For Icon Only Button Rogrid Mixin*/
+@mixin iconBtn_RoStyle{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: var(--iconBtnWidth);
+	height: var(--iconBtnHeight);
+	background-color: var(--iconBtnBgColor);
+	background-image: var(--iconBtnBgIcon);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: var(--iconBtnBgSize);
+	background-origin: padding-box;
+	border-style: solid;
+	border-width: var(--iconBtnBorderWidth);
+	border-color: var(--iconBtnBorderColor);
+	border-radius: var(--iconBtnBorderRadius);
+	outline: none;
+	cursor: pointer;
+	vertical-align: top;	
+}
+/*For Icon Only Button Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*For Gridbox Rogrid Mixin*/
+
+/*_For flexbox with hori space between and center for mobile/tablet*/
+@mixin gridBoxFlexBetweenWrapping_Mobile_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: column wrap; /*To be changed*/
+	justify-content: center; /*To be changed*/
+	border: 1px solid transparent;
+}
+
+@mixin gridBoxFlexBetweenWrapping_Tablet_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row wrap; /*changed*/
+	justify-content: center; /*To be changed*/
+	border: 1px solid transparent;
+}
+
+@mixin gridBoxFlexBetweenWrapping_LD_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row wrap; /*changed*/
+	justify-content: space-between; /*changed*/
+	border: 1px solid transparent;
+}
+/*_For flexbox with hori space between and center for mobile/tablet*/
+
+
+
+/*_For flexbox wrap item with hori flex start and center for mobile/table*/
+@mixin gridBoxFlexStartWrapping_MT_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row wrap;
+	justify-content: center; /*To be changed*/
+}
+
+@mixin gridBoxFlexStartWrapping_LD_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row wrap;
+	justify-content: flex-start; /*changed*/
+}
+/*_For flexbox wrap item with hori flex start and center for mobile/table*/
+
+
+
+/*_For flexbox with hori center and center for mobile/tablet*/
+@mixin gridBoxFlexCenterWrapping_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row wrap;
+	justify-content: center; /*To be changed*/
+}
+/*_For flexbox with hori center and center for mobile/tablet*/
+
+
+
+/*_For flexbox with hori flex start for mobile to desktop and flow column when mobile and tablet*/
+@mixin gridBoxFlexStartAllWrapping_MT_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: column wrap; /*To be changed*/
+	justify-content: flex-start; 
+}
+
+@mixin gridBoxFlexStartAllWrapping_LD_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row wrap; /*changed*/
+	justify-content: flex-start; 
+}
+/*_For flexbox with hori flex start for mobile to desktop and flow column when mobile and tablet*/
+
+/*For Gridbox Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*For Custom Radio Button Rogrid Mixin*/
+@mixin radioFlex_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: auto;
+}
+
+
+
+@mixin customRadioCircleSelf_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-shrink: 0;
+	border-style: solid;		
+	border-width: var(--cusRadioBorderWidth);
+	border-color: var(--cusRadioBorderColor);
+	width: var(--cusRadioWidthHeight); 
+	height: var(--cusRadioWidthHeight);
+	padding: 3px;
+	border-radius: 50%;
+	box-shadow: none; /*box-shadow: 0px 0px 15px #00fafa; in JS*/
+	background-color: var(--cusRadioBgColor);
+	cursor: pointer;
+}
+
+
+
+@mixin customRadioCheckSelf_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-shrink: 0;
+	border-style: solid;		
+	border-width: var(--cusRadioBorderWidth);
+	border-color: var(--cusRadioBorderColor);
+	width: var(--cusRadioWidthHeight); 
+	height: var(--cusRadioWidthHeight);	
+	background-color: var(--cusRadioBgColor);
+	cursor: pointer;
+}
+
+
+
+@mixin innerCircle_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border-radius: 50%;
+}
+
+
+
+@mixin innerCheck_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+
+
+@mixin originalRadioBtn_RoStyle{
+	position: absolute;
+	visibility: hidden;
+	top: 0px;
+}
+
+
+
+@mixin radioTextLabel_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	width: 100%;
+	padding: 4px;
+	font-style: normal;
+	font-weight: var(--cusRadioFWeight);
+	font-size: var(--cusRadioFsize);
+	font-family: calibri;
+	color: var(--cusRadioFColor);
+}
+
+
+
+@mixin radioIconLabel_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	width: var(--radioIconLabelWidthHeight); 
+	height: var(--radioIconLabelWidthHeight);
+}
+
+
+
+@mixin radioIconImage_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+/*For Custom Radio Button Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*For Calendar Lite Rogrid Mixin*/
+@mixin calendarLiteItself_RoStyle{
+	position: relative;		
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 1px solid transparent;
+	background-color: #ffffff;
+}
+
+
+
+@mixin calendarLiteHeader_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 10px #5DA9DD;
+}
+
+
+
+@mixin calendarLiteHeaderItem_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+@mixin calendarLiteHeaderTxt_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--calendarHeadTxtFSize);
+	color: #06a685;
+}
+
+
+
+@mixin calendarLiteHeaderButton_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	width: var(--calendarHeadBtnWidthHeight);
+	height: var(--calendarHeadBtnWidthHeight);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+
+
+@mixin calendarLiteDays_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	justify-content: space-around;	
+}
+
+
+
+@mixin calendarLiteDaysText_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 70px; /*To be changed*/
+	padding: 4px;
+	text-align: center;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--calendarDayTxtFSize);
+}
+
+
+
+@mixin printableDayTextNum_RoStyle{
+	margin: 5px;
+}
+/*For Calendar Lite Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*For Custom Dropdown Button List Rogrid Mixin*/
+@mixin cusDroplistBtn_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: var(--droplistBtnWidth);
+	border-width: var(--droplistBtnBorderWidth);
+	border-style: solid;
+	border-color: var(--droplistBtnBorderColor);
+	background-color: var(--droplistBtnBgColor);								
+	border-radius: var(--dropListBorderRadius);
+}
+
+
+
+@mixin masterBtnWrap_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	background-color: transparent;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+
+
+@mixin masterBtn_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	background-color: transparent;		
+	width: 100%;
+	cursor: pointer;
+	padding: var(--droplistBtnPadding); 
+	color: var(--droplistBtnFColor);
+	font-style: normal;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: var(--dropListBtnFSize);
+}
+
+
+
+@mixin masterBtnIcon_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-color: transparent;
+	width: var(--dropListBtnIconSize);		
+	height: var(--dropListBtnIconSize);
+	flex-shrink: 0;
+	cursor: pointer;
+}
+
+
+
+@mixin droplistWrap_RoStyle{
+	position: relative;
+	display: none;
+	overflow: visible;
+	box-sizing: border-box;
+}
+
+
+
+@mixin listBtn_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	white-space: normal;
+	width: 100%;
+	border-width: var(--listBtnBorderWidth);
+	border-style: solid;
+	border-color: var(--listBtnBorderColor);
+	font-style: normal;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: var(--dropListBtnFSize);
+	color: var(--droplistBtnFColor);
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+	padding: var(--droplistBtnPadding);
+}
+
+@mixin listBtnHover_RoStyle{
+	background-color: var(--listBtnBgColorha);
+	color: var(--listBtnFColorha);
+}
+/*For Custom Dropdown Button List Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+@mixin dateRangeWrap_RoStyle{
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 0px solid transparent;
+	width: auto;
+}
+
+
+@mixin dateRange_RoStyle{
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	box-sizing: border-box;
+	background-color: transparent;
+	border-radius: var(--dateRangeBorderRadius);	
+	border-width: var(--dateRangeBorderWidth);
+	border-style: solid;
+	border-color: var(--dateRangeBorderColor);
+	width: auto;
+	cursor: pointer;
+}
+
+
+@mixin dateRangeDetails_RoStyle{
+	position: relative;
+	overflow: visible;
+	display: flex;
+	box-sizing: border-box;	
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: var(--dateRangePadding);
+}
+
+
+@mixin dateRangeIcon_RoStyle{
+	position: relative;
+	overflow: visible;	
+	box-sizing: border-box;
+	width: var(--dateRangeIconSize);
+	height: var(--dateRangeIconSize);	
+	background-color: transparent;
+	background-image: var(--dateRangeIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+}
+
+
+@mixin dateRangeText_RoStyle{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;	
+	white-space: nowrap;
+	font-family: calibri;
+	font-size: var(--dateRangeFSize);
+	font-weight: normal;
+	font-style: normal;
+	color: var(--dateRangeFColor);
+}
+
+
+@mixin dateRangeTooltipArrow_RoStyle{
+	position: absolute;
+	box-sizing: border-box;
+	display: none;
+	border-width: 7px;
+	border-style: solid;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: var(--dateRangeTooltipColor);
+	border-left-color: transparent;
+	width: 10px;		
+}
+
+
+@mixin dateRangeCalLiteWrap_Mobile_RoStyle{
+	position: absolute;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid transparent;
+	box-sizing: border-box;	
+	flex-flow: column nowrap; /*To be changed*/
+	width: var(--dateRangeCalLiteWrapWidth);
+	max-height: 0px;
+	top: var(--dateRangeCalLiteWrapTop);	
+	transition: max-height 0.5s;
+	-webkit-transition: max-height 0.5s;
+}
+@mixin dateRangeCalLiteWrap_TLD_RoStyle{
+	position: absolute;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid transparent;
+	box-sizing: border-box;	
+	flex-flow: row nowrap; /*changed*/
+	width: var(--dateRangeCalLiteWrapWidth);
+	max-height: 0px;
+	top: var(--dateRangeCalLiteWrapTop);	
+	transition: max-height 0.5s;
+	-webkit-transition: max-height 0.5s;
+}
+
+
+@mixin dateRangeCalLite_RoStyle{
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--dateRangeCalLiteBorderColor);
+}
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+@mixin selectDropdownWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border-width: var(--selectDropdownBorderWidth);
+	border-style: solid;
+	border-color: var(--selectDropdownBorderColor);
+	border-radius: var(--selectDropdownBorderRadius);
+	width: var(--selectDropdownWidth);
+	cursor: pointer;
+}
+
+
+@mixin selectDropdownFlex_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 5px;
+	background-color: var(--selectDropdownBgColor);
+}
+
+
+@mixin selectDropdownIcon_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--optIcon);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--selectDropdownIconSize);
+	height: var(--selectDropdownIconSize);
+	flex-shrink: 0;
+}
+
+
+@mixin selectDropdownText_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	text-overflow: ellipsis;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--selectDropdownFSize);
+	color: var(--selectDropdownFColor);
+	margin-left: 4px;
+}
+
+
+@mixin selectDropdownResetBtn_RoStyle{
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--selectDropdownResetBtnIcon);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--selectDropdownResetBtnSize);
+	height: var(--selectDropdownResetBtnSize);
+	flex-shrink: 0;
+}
+
+
+@mixin displayedSelectedChevron_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--selectDropdownChevron);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--selectDropdownChevronSize);
+	height: var(--selectDropdownChevronSize);
+	flex-shrink: 0;
+	transform: rotateX(0deg);
+	-webkit-transition: transform 0.5s;
+	transition: transform 0.5s;
+}
+
+
+@mixin selectDropdownOptionsWrap_RoStyle{
+	position: absolute;
+	display: none;
+	box-sizing: border-box;
+	overflow: auto;
+	max-height: 0;
+	width: 100%;
+	background-color: var(--selectDropdownBgColor);
+	-webkit-transition: max-height 1s;
+	transition: max-height 1s;
+}
+
+
+@mixin searchOpts_RoStyle{
+	position: sticky;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: var(--searchOptsBgColor);
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--selectDropdownBorderColor);
+	top: 0;
+	z-index: 1;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--selectDropdownFSize);
+	color: var(--searchOptsFColor);
+	padding: 7px;
+}
+
+
+@mixin hoverSelectDropdownOpt_RoStyle{
+	background-color: var(--hoverOptBgColor);
+	color: var(--hoverOptFColor);
+}
+
+
+@mixin selectDropdownOptionsWrapScrollbar_RoStyle{
+	width: var(--selectDropdownScrollSize);
+	height: var(--selectDropdownScrollSize);
+}
+
+
+@mixin selectDropdownOptionsWrapTrack_RoStyle{
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+
+
+@mixin selectDropdownOptionsWrapThumb_RoStyle{
+	background-color: var(--optWrapThumbBgColor);
+	border-radius: 10px;
+}
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+@mixin boxLoaderWrap_RoStyle{
+	position: relative;
+	display: none; /*JS Change to flex*/
+	box-sizing: border-box;
+	overflow: hidden;
+	width: auto;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@mixin boxLoaderIcon_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--boxLoaderIconSize);
+	height: var(--boxLoaderIconSize);
+}
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+@mixin chartWrap_RoStyle{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-width: var(--chartWrapBorderWidth);	
+	border-style: var(--chartWrapBorderStyle);
+	border-color: var(--chartWrapBorderColor);
+	border-radius: var(--chartWrapBorderRadius);
+	width: var(--chartWrapWidth);
+	height: var(--chartWrapHeight);
+}
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Layout one made Rogrid Mixin*/
+
+/*_Flex Items wrapper*/
+@mixin layoutOne_RoStyle{
+	position: fixed;
+	display: flex;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: 100%;
+}
+/*_Flex Items wrapper*/
+
+
+
+/*_Left Side Wrapper*/
+@mixin leftsideItem_Mobile_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	direction: rtl;
+	width: 0px; /*180px To be changed (JS)*/
+	height: 100%;	
+	flex-shrink: 0;
+	background: var(--naviBgColor);
+}
+@mixin leftsideItem_Tablet_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	direction: rtl;
+	width: 0px; /*200px changed (JS)*/
+	height: 100%;	
+	flex-shrink: 0;
+	background: var(--naviBgColor);
+}
+@mixin leftsideItem_Laptop_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	direction: rtl;
+	width: 250px; /*250px changed (JS)*/
+	height: 100%;
+	flex-shrink: 0;
+	background: var(--naviBgColor);
+}
+@mixin leftsideItem_Desktop_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	direction: rtl;
+	width: 270px; /*270px changed (JS)*/
+	height: 100%;
+	flex-shrink: 0;	
+	background: var(--naviBgColor);
+}
+/*_Left Side Wrapper*/
+
+
+
+/*_Main Side Wrapper*/
+@mixin mainsideItem_RoStyle{	
+	position: relative;
+	box-sizing: border-box;
+	overflow: auto;
+	width: 100%;
+	height: auto;	
+	background-color: var(--mainBodyBgColor);
+}
+/*_Main Side Wrapper*/
+
+
+
+/*_Left side Content*/
+@mixin naviWrapper_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	direction: ltr;
+	width: auto;
+	height: auto;
+	background: none;
+}
+/*_Left side Content*/
+
+
+
+/*_Navigation Menu*/
+@mixin mainNavMenu_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--mainNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--mainNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--mainNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+}
+
+
+@mixin activeMainNavMenu_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--hoverMainNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--mainNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--hoverMainNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+}
+
+
+@mixin mainNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--mainNavMenuIconSize);
+	height: var(--mainNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--mainNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+@mixin activeMainNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--mainNavMenuIconSize);
+	height: var(--mainNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--activeMainNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+@mixin mainNavMenu_Hover_RoStyle{
+	background-color: var(--hoverMainNavMenuBgColor);
+	color: var(--hoverMainNavMenuFColor);
+}
+
+
+@mixin mainNavMenuIconWrap_Hover_RoStyle{
+	background-image: var(--activeMainNavMenuIcon);
+}
+
+
+@mixin generalNavMenuText_RoStyle{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	font-family: calibri;		
+	width: 100%;
+	margin-left: 7px;
+}
+
+
+@mixin chevronIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--chevronIconSize);
+	height: var(--chevronIconSize);
+	flex-shrink: 0;
+	transform: rotate(0deg);
+	transition: transform 0.1s;
+	-webkit-transition: transform 0.1s;
+}
+
+
+@mixin activeChevronIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--chevronIconSize);
+	height: var(--chevronIconSize);
+	flex-shrink: 0;
+	transform: rotate(90deg);
+	transition: transform 0.1s;
+	-webkit-transition: transform 0.1s;
+}
+/*_Navigation Menu*/
+
+
+
+/*_Navigation Menus From Collapse or Sub Menu*/
+@mixin subNavMenuWrap_RoStyle{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: var(--subNavMenuWrapBgColor);
+	transition: max-height 0.5s;		
+	-webkit-transition: max-height 0.5s;
+}
+
+
+@mixin subNavMenu_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--subNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--subNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--subNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+}
+
+
+@mixin activeSubNavMenu_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--hoverSubNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--subNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--hoverSubNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+}
+
+
+@mixin subNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--subNavMenuIconSize);
+	height: var(--subNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--subNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+@mixin activeSubNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--subNavMenuIconSize);
+	height: var(--subNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--activeSubNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+@mixin subNavMenu_Hover_RoStyle{
+	background-color: var(--hoverSubNavMenuBgColor);
+	color: var(--hoverSubNavMenuFColor);
+}
+
+
+@mixin subNavMenuIconWrap_Hover_RoStyle{
+	background-image: var(--activeSubNavMenuIcon);
+}
+/*_Navigation Menus From Collapse or Sub Menu*/
+
+
+
+/*_Burger*/
+@mixin burgerIconWrap_Mobile_RoStyle{
+	position: relative;
+	display: inline-block; /*To be changed*/
+	box-sizing: border-box;
+	overflow: visible;	
+	width: 25px; /*To be changed*/
+	height: 25px; /*To be changed*/
+	cursor: pointer;
+}
+@mixin burgerIconWrap_Tablet_RoStyle{
+	position: relative;
+	display: inline-block; /*To be changed*/
+	box-sizing: border-box;
+	overflow: visible;	
+	width: 25px; /*To be changed*/
+	height: 25px; /*To be changed*/
+	cursor: pointer;
+}
+@mixin burgerIconWrap_Laptop_RoStyle{
+	position: relative;
+	display: none; /*changed*/
+	box-sizing: border-box;
+	overflow: visible;	
+	width: 28px; /*changed*/
+	height: 28px; /*changed*/
+	cursor: pointer;	
+}
+@mixin burgerIconWrap_Desktop_RoStyle{
+	position: relative;
+	display: none; /*changed*/
+	box-sizing: border-box;
+	overflow: visible;	
+	width: 32px; /*changed*/
+	height: 32px; /*changed*/
+	cursor: pointer;
+}
+/*_Burger*/
+
+
+
+/*_Navigation Menu Icon*/
+@mixin icon_RoStyle{
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+/*_Navigation Menu Icon*/
+
+
+
+/*_Main side content*/
+@mixin perMainContent_RoStyle{
+	position: relative;	
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	width: auto;	
+}
+/*_Main side content*/
+
+
+
+/*_Main side project title*/
+@mixin layoutOneHeaderArea_RoStyle{
+	padding: 8px;	
+	white-space: nowrap;	
+	background-color: var(--projectTitle_BgColor);
+}
+
+
+@mixin projectTitleText_Mobile_RoStyle{
+	position: relative;
+	display: block; /*To be changed*/
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: normal;
+	word-break: keep-all;				
+	padding-right: 5px;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
+	color: var(--projectTitleTextFColor);
+	vertical-align: top;
+}
+@mixin projectTitleText_TLD_RoStyle{
+	position: relative;
+	display: inline-block; /*changed*/
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: normal;
+	word-break: keep-all;				
+	padding-right: 5px;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
+	color: var(--projectTitleTextFColor);
+	vertical-align: top;
+}
+/*_Main side project title*/
+
+
+/*_Project Title and Login User Details*/
+@mixin projTitleAndUserLogin_Mobile_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: column wrap; /*To be changed*/
+	align-items: center;
+	justify-content: flex-start; /*To be changed*/
+	width: 100%;
+}
+@mixin projTitleAndUserLogin_TLD_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row wrap; /*changed*/
+	align-items: center;
+	justify-content: space-between; /*changed*/
+	width: 100%;
+}
+
+
+@mixin projTitleTxt_RoStyle{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	white-space: normal;
+	width: auto;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
+	color: var(--projectTitleTextFColor);
+	padding: 5px;
+}
+
+
+
+@mixin userLogin_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row nowrap;
+	width: auto;
+}
+
+
+@mixin userLoginIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	width: var(--projectTitleUserIconSize);
+	height: var(--projectTitleUserIconSize);
+	flex-shrink: 0;
+	margin-right: 3px;
+}
+
+
+@mixin userLoginDetails_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	white-space: normal;
+	width: auto;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
+	color: var(--projectTitleTextFColor);
+	align-self: center;
+}
+/*_Project Title and Login User Details*/
+
+/*Layout one Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Footer Rogrid Mixin*/
+@mixin liner_RoStyle{
+	visibility: hidden;
+}
+
+
+
+@mixin footerWrap_RoStyle{
+	position: fixed;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	bottom: 0px;
+	left: 0px;
+	background: var(--footerBgColor);
+	width: 100%;	
+	text-align: center;
+}
+
+
+
+@mixin footerTxt_RoStyle{
+	font-style: normal; 
+	font-weight: normal;
+	font-family: calibri;
+	font-size: var(--footerFSize);
+	color: var(--footerFColor);
+}
+/*Footer Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/

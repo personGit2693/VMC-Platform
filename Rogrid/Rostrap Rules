@@ -1,0 +1,515 @@
+* Rostrap Framework Rules
+	• Always Add the Rogrid Folder & src Folder into Project Folder
+	• Follow the Path Order when creating a New Page Folder (Project Folder/Module Folders/Files Folders)
+* How to use Layout one Design
+	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeLayOneNavScript.js" or "RogridNodeLayOneNavScript_Index.js"
+	• Codes needed
+		• --projectTitleTextFColor: value; (To provide font color) (projectTitle_RoClass, projTitleTxt_RoClass, userLoginDetails_RoClass)
+		• --projectTitleTextFSize: value; (To provide font size) (projectTitle_RoClass, projTitleTxt_RoClass, userLoginDetails_RoClass)
+		• --projectTitleUserIconSize: value; (To provide icon size) (userLoginIconWrap_RoClass)
+	• Structure
+		<div class="rolayout_RoClass"> <--The body 
+			<div class="sidemecha_RoClass" style=" --naviBgColor:value; "> <--Left Side
+				<div class="sidemechaCon_RoClass"> <--Left Side Per Item
+					My Content
+				</div>
+			</div>
+			<div class="mainmecha_RoClass" style=" --mainBodyBgColor:value; "> <--Right Side or Main Side
+				<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:value; "> <--Header
+					<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div> <--Burger
+
+					<!--Choose header style-->
+					//Without user login details
+					<div class="projectTitle_RoClass">My Project Title</div>
+
+					//With user login details
+					<div class="projTitleAndUserLogin_RoClass">
+						<div class="projTitleTxt_RoClass">My Page</div>
+						<div class="userLogin_RoClass">
+							<div class="userLoginIconWrap_RoClass"><img src="filename"></div>
+							<div class="userLoginDetails_RoClass">Account Details</div>
+						</div>
+					</div>
+					<!--Choose header style-->
+				</div> 
+				<div class="mainmechaCon_RoClass"> <--Right Side or Main Side Per Item
+					My Content
+				</div>				
+			</div> 
+		</div>
+
+* How to use navigation link with collapse and navigation link
+	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeLayOneNavScript.js" or "RogridNodeLayOneNavScript_Index.js"
+	• Codes needed
+		• --generalNavMenuPadding: value; (To provide padding per nav menu) (mainNavMenu_RoClass, subNavMenu_RoClass)
+
+		• --mainNavMenuIconSize: value; (To provide main nav icon size) (mainNavMenuIconWrap_RoClass, activeMainNavMenuIconWrap_RoClass)
+		• --mainNavMenuFSize: value; (To provide main nav font size) (mainNavMenu_RoClass, activeMainNavMenu_RoClass)
+		• --mainNavMenuBgColor: value; (To provide main nav background color) (mainNavMenu_RoClass) 
+		• --mainNavMenuFColor: value; (To provide main nav font color) (mainNavMenu_RoClass)
+		• --hoverMainNavMenuBgColor: value; (To provide main nav background color when hovered and active) (mainNavMenu_RoClass, activeMainNavMenu_RoClass)
+		• --hoverMainNavMenuFColor: yellow;	(To provide main nav font color when hovered and active) (mainNavMenu_RoClass, activeMainNavMenu_RoClass)
+
+		• --subNavMenuIconSize: value; (To provide sub nav icon size) (subNavMenuIconWrap_RoClass, activeSubNavMenuIconWrap_RoClass)
+		• --subNavMenuWrapBgColor: value; (To provide sub nav wrapper background color) (subNavMenuWrap_RoClass)
+		• --subNavMenuBgColor: value; (To provide sub nav background color) (subNavMenu_RoClass) 
+		• --subNavMenuFSize: value; (To provide sub nav font size) (subNavMenu_RoClass, activeSubNavMenu_RoClass)
+		• --subNavMenuFColor: value; (To provide sub nav font color) (subNavMenu_RoClass)
+		• --hoverSubNavMenuBgColor: value; (To provide sub nav background color when hovered and active) (subNavMenu_RoClass, activeSubNavMenu_RoClass)
+		• --hoverSubNavMenuFColor: value; (To provide sub nav font color when hovered and active) (subNavMenu_RoClass, activeSubNavMenu_RoClass)
+
+		• --chevronIconSize: value; (To provide chevron size) (chevronIconWrap_RoClass)
+
+	• Structure
+		//Without Sub Menus
+		<a href="" class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass">					
+			<div class="mainNavMenuIconWrap_RoClass OR activeMainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url(' value '); --activeMainNavMenuIcon:url(' value ')"></div> <--Use only "--activeMainNavMenuIcon" for active
+			<span class="generalNavMenuText_RoClass">navigation 1</span>
+		</a>
+
+		//With sub menus
+		<div class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass" onclick="collapseMenu(this)">					
+			<div class="mainNavMenuIconWrap_RoClass OR activeMainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url(' value '); --activeMainNavMenuIcon:url(' value ')"></div> <--Use only "--activeMainNavMenuIcon" for active
+			<span class="generalNavMenuText_RoClass">navigation 2</span><div class="chevronIconWrap_RoClass"><img src=" value " /></div>
+		</div>
+		<div style="max-height: 0px;" class="subNavMenuWrap_RoClass"> <--Set "max-height" to at least 1000px for active
+			<a href="" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">					
+				<div class="subNavMenuIconWrap_RoClass OR activeSubNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url(' value '); --activeSubNavMenuIcon:url(' value ')"></div> <--Use only "--activeSubNavMenuIcon" for active
+				<span class="generalNavMenuText_RoClass">navigation 2.1</span>
+			</a>
+		</div>
+
+* How to use input RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Codes needed 
+		• " --customInputColor: value " (Provide the color of input element) (For cusInputs_RoClass and its children)
+		• " --customInputFSize: value " (Provide font size) (For input)
+		• " --customInputAnimFSize: value " (Provide font size for animation) (For placeholdme_RoClass or upPlaceholdme_RoClass)
+	• Structure
+		<div class="cusInputs_RoClass">					
+			<input type="text" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+			<div class="placeholdme_RoClass">Username</div> Note: Use "upPlaceholdme_RoClass" for datepicker and others similar to that.
+		</div>
+
+* How to use current day and date RogridNodeScript
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Codes needed 
+		• " --currDateFStyle: value " (Provide the font style) (For currentDate_RoClass)
+		• " --currDateFWeight: value " (Provide the font weight) (For currentDate_RoClass)
+		• " --currDateFsize: value " (Provide the font size) (For currentDate_RoClass)
+		• " --currDateFColor: value " (Provide font color) (For currentDate_RoClass)
+	• Structure
+		<div class="mainmechaCon_RoClass"> <--Main Side Per Item
+			<div class="currentDate_RoClass"></div>
+		</div>
+
+* How to use footer RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file
+	• Codes needed 
+		• " --footerBgColor: value " (Provide background color) (For footerTxt_RoClass)
+		• " --footerFSize: value " (Provide font size) (For footerTxt_RoClass)
+		• " --footerFColor: value " (Provide font color) (For footerTxt_RoClass)
+	• Structure
+		<hr class="linethis_RoClass">
+		<div class=footerWrap_RoClass>
+			<span class="footerTxt_RoClass">&copy; 2021 Human Resource Information System. All rights reserved.</span>
+		</div>
+
+* How to use Custom Checkbox RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Codes needed 
+		• " --cusCheckboxFStyle: value " (Provide the font style) (For label element)
+		• " --cusCheckboxFWeight: value " (Provide the font weigth) (For label element)
+		• " --custCheckboxFSize: value " (Provide the font size) (For label element)
+		• " --cusCheckboxColor: value " (Provide the font color) (For label element)
+		• " --cusCheckboxWidthHeight: value " (Provide the width and height of check) (For boxme_RoClass)
+		• " --cusCheckboxBorderWidth: value " (Provide the border thick) (For boxme_RoClass)
+		• " --cusCheckboxBorderColor: value " (Provide the border color) (For boxme_RoClass)
+	• Structure
+		<div class="cusCheckBoxPaper_RoClass">
+			<label for=" inputIdValue ">InnerTextHere:<div class="boxme_RoClass"><img src="filename"></div></label>
+			<input type="checkbox" id=" inputIdValue " onchange="checkCusCheckBox(this)" autocomplete="off"> <--Hide this element
+		</div>
+
+* How to use blurrer RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Structure
+		<div class="thisIsJapan_RoClass" style=" --putOnTop: integer; "></div>
+
+
+Modal Note: Invoke "showMyMod('modalme_RoClass', index)" function to show the modal.
+* How to use Custom Modal RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Codes needed 
+		• " --modalTop: value " (Provide the top position of the modal) (For modalme_RoClass) 
+		• " --modalWidth: value " (Provide the width of the modal) (For modalme_RoClass) 
+		• " --modalHeight: value " (Provide the height of the modal) (For modalme_RoClass)		
+		• " --modalBorderColor: value " (Provide the border color of the modal) (For modalme_RoClass)
+		• " --modalBodyBgColor: value " (Provide the background color of the modal body) (For modalme_RoClass)
+		• " --modalHeaderBgColor: value " (Provide the background color of the modal header) (For modalHeader_RoClass)
+		• " --modalHeaderFSize: value " (Provide the modal header font size) (For modalHeadTxt_RoClass)
+		• " --modalHeaderFColor: value " (Provide the modal header font color) (For modalHeadTxt_RoClass)
+		• " --modalCloseIconSize: value " (Provide the close icon size) (For modalHeadClose_RoClass)
+	• Structure
+		<div class="modalmeCon_RoClass" style=" --topOnBlurrer: integer; ">
+			<div class="modalme_RoClass">
+				<div class="modalHeader_RoClass">
+					<div class="modalHeadTxt_RoClass">Value</div>
+					<div class="modalHeadClose_RoClass" onclick="closeMyMod('modalme_RoClass', index)"><img src="../../src/closeModIcon.png"></div>
+				</div>
+				<div class="modalBody_RoClass">
+					<!--Content Here-->
+				</div>			
+			</div>
+		</div>
+
+Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner and "removeSpinningLoad()" to stop spinner.
+* How to use spinning loading
+	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Prerequisite
+		•  Blurrer RoStrap
+	• Codes needed 
+		• " --spinnerWidthHeight: value " (Provide the loading icon width and height) (For spinnerLoad_RoClass) 
+	• Structure
+	<div class="spinnerLoad_RoClass" style=" --topSpinBlurrer: integer; ">
+		<img src="../../src/loading.gif">
+	</div>
+
+* How to use input search RoStrap
+	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed 
+		• " --inputSearchWidth: value " (Provide width for mobile) (For searchInput_RoClass)
+		• " --inputSearchTopPadding: value " (Provide top padding) (For searchInput_RoClass)
+		• " --inputSearchRightPadding: value " (Provide right padding) (For searchInput_RoClass)
+		• " --inputSearchBottomPadding: value " (Provide bottom padding) (For searchInput_RoClass)
+		• " --inputSearchLeftPadding: value " (Provide left padding) (For searchInput_RoClass)
+		• " --inputSearchBorderColor: value " (Provide border color) (For searchInput_RoClass)
+		• " --inputSearchBorderRadius: value " (Provide border radius) (For searchInput_RoClass)
+		• " --inputSearchIcon: value " (Provide search icon. Inline Style Only) (For searchInput_RoClass)
+		• " --inputSearchIconHori: value " (Provide horizontal position of the icon) (For searchInput_RoClass)
+		• " --inputSearchIconSize: value " (Provide icon size) (For searchInput_RoClass)
+		• " --inputSearchFSize: value " (Provide font size) (For searchInput_RoClass)
+		• " --inputSearchFColor: value " (Provide font color) (For searchInput_RoClass)
+	• Structure
+	<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url(' filename ')">
+
+Notification Box Note: Invoke "notifyNodeBox(boolean, ' Sample Message ', ' wrapper-id ')" function to create and show notification box with auto close and "notifyNodeBoxStay(boolean, ' Sample Message ', ' wrapper-id ')" for stay. No need to copy paste the structure just invoke the function on your javascript. 
+* How to use Notification Box RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed 
+		• " --notiFSize: value " (Provide font size) (For notifyMessItem_Suc_RoClass or notifyMessItem_Failed_RoClass)
+		• " --notiCloseIconWidthHeight: value " (Provide close icon width and height) (For notifyCloseItem_Suc_RoClass or notifyCloseItem_Failed_RoClass)
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Different types of Notification Boxes. (For guide only on how it was made)
+		• For Success Style
+			• "notifyFlex_Suc_RoClass" 
+			• "notifyMessItem_Suc_RoClass"
+			• "notifyCloseItem_Suc_RoClass"
+			• 'src="../../src/closeModIcon_Suc.png"'
+
+		• For Failed Style
+			• "notifyFlex_Failed_RoClass"
+			• "notifyMessItem_Failed_RoClass"
+			• "notifyCloseItem_Failed_RoClass"
+			• 'src="../../src/closeModIcon_Failed.png"'
+	• Structure
+		<div class="notifyFlex_Suc_RoClass"> (For guide only on how it was made)
+			<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b>Message Here</div>
+			<div class="notifyCloseItem_Suc_RoClass">
+				<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">
+			</div>
+		</div>
+
+* How to use customized normal button RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed
+		• " --normBtnWidth: value " (Provide the button width) (For normButton_RoClass)
+		• " --normBtnPadding: value " (Provide the button padding) (For normButton_RoClass)
+		• " --normBtnBorderWidth: value " (Provide the button border thickness) (For normButton_RoClass)
+		• " --normBtnBorderColor: value " (Provide the button border color) (For normButton_RoClass)
+		• " --normBtnRadius: value " (Provide the button border radius) (For normButton_RoClass)
+		• " --normBtnFWeight: value " (Provide the button font weight) (For normButton_RoClass)
+		• " --normBtnFSize: value " (Provide the button font size) (For normButton_RoClass)
+		• " --normBtnBgColor: value " (Provide the button background color) (For normButton_RoClass)
+		• " --normBtnFcolor: value " (Provide the button font color) (For normButton_RoClass)
+		• " --normBtnHovActFColor: value " (Provide the button font color when active or hovered) (For normButton_RoClass)
+		• " --normBtnHovActBgColor: value " (Provide the button background color when active or hovered) (For normButton_RoClass)
+		
+	• Structure
+		<button class="normButton_RoClass">Button Text</button>
+
+* How to use button with icon only RoStrap Style
+	• Import "RoStrap_Mixin" to your scss file.	
+	• Codes needed
+		• " --iconBtnWidth: value " (Provide icon button width) (For iconBtn_RoClass)		
+		• " --iconBtnHeight: value " (Provide icon button height) (For iconBtn_RoClass)
+		• " --iconBtnBgColor: value " (Provide icon button background color) (For iconBtn_RoClass)
+		• " --iconBtnBgIcon: value " (Provide icon button an icon, Inline Style Only) (For iconBtn_RoClass)
+		• " --iconBtnBgSize: value " (Provide icon button icon size) (For iconBtn_RoClass)
+		• " --iconBtnBorderWidth: value " (Provide icon button border thickness) (For iconBtn_RoClass)
+		• " --iconBtnBorderColor: value " (Provide icon button border color) (For iconBtn_RoClass)
+		• " --iconBtnBorderRadius: value " (Provide icon button border radius) (For iconBtn_RoClass)
+	• Structure
+		<button class="iconBtn_RoClass" style="--iconBtnBgIcon: url(' filename ') "></button>
+
+
+Radio Button Note: The "colorName" parameter In "radioCircleSelected(this, ' colorName ')" function is for what color will be displayed when circle-type radio button was selected.
+* How to use custom radio button with Circle type & Check type RoStyle
+	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Codes needed
+		• " --cusRadioBorderWidth: value " (Provide custom radio circle border thickness) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
+		• " --cusRadioBorderColor: value " (Provide custom radio circle border color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
+		• " --cusRadioWidthHeight: value " (Provide custom radio circle width and height) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
+		• " --cusRadioBgColor: value " (Provide custom radio background color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)		
+		• " --cusRadioFWeight: value " (Provide font weight) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
+		• " --cusRadioFsize: value " (Provide font size) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
+		• " --cusRadioFColor: value " (Provide font color) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
+		• " --radioIconLabelWidthHeight: value " (Provide label icon size) (For radioCircleIconLabel_RoClass or radioCheckIconLabel_RoClass)
+	• Structure
+		<div class="radioCircleFlex_RoClass"> <-- Circle-Type							
+			<label for=" sampleOption1-Id " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
+			<input type="radio" id=" sampleOption1-Id " name="nameHere" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' colorName ')" autocomplete="off">
+			<div class="radioCircleTxtLabel_RoClass">Some Text Here</div> <--For Text Label. Choose only one between Text Label and Icon Label.
+			<div class="radioCircleIconLabel_RoClass"><img src=" filename "></div> <--For Icon Label. Choose only one between Text Label and Icon Label.
+		</div>
+
+		<div class="radioCheckFlex_RoClass"> <-- Check-type							
+			<label for=" sampleOption2-Id " class="customRadioCheck_RoClass"><img src="../../src/checkIcon.png"></label>
+			<input type="radio" id=" sampleOption2-Id " name="nameHere" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">
+			<div class="radioCheckTxtLabel_RoClass">Some Text Here</div> <--For Text Label. Choose only one between Text Label and Icon Label.
+			<div class="radioCheckIconLabel_RoClass" style=""><img src=" filename "></div> <--For Icon Label. Choose only one between Text Label and Icon Label.
+		</div>
+
+
+* How to use Calendar Lite Rostrap
+	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed 
+		• " --calendarHeadTxtFSize: value " (Provide header font size) (For calLiteMonthText_RoClass and calLiteYearText_RoClass)
+		• " --calendarHeadBtnWidthHeight: value " (Provide header button width and height) (For calLiteButton_RoClass)
+		• " --calendarDayTxtFSize: value " (Provide day font size) (For calLiteDaysTxt_RoClass, calLiteDaysIndex_RoClass)
+	• Add Script "CalendarLite.js". 
+	• Invoke this function. 
+		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myCalendarLite')" 
+	• Customize Editable Section on CalendarLite.js
+	• Structure
+		<div class="calLite_RoClass" id="myCalendarLite">
+			<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
+			<div class="calLiteHead_RoClass">
+				<div class="calLiteMonthHead_RoClass">
+					<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
+					<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
+				</div>
+				<div class="calLiteYearHead_RoClass">
+					<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
+					<div class="calLiteYearText_RoClass"><!--Print Here--></div>
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
+				</div>									
+			</div>
+			<div class="calLiteDaysTxt_RoClass">
+				<div>Sun</div>
+				<div>Mon</div>
+				<div>Tue</div>
+				<div>Wed</div>
+				<div>Thu</div>
+				<div>Fri</div>
+				<div>Sat</div>
+			</div>
+			<div class="calLiteDaysIndex_RoClass">
+				<div>
+					<!--Print Here-->
+				</div>
+				<div>
+					<!--Print Here-->								
+				</div>
+				<div>
+					<!--Print Here-->										
+				</div>
+				<div>
+					<!--Print Here-->										
+				</div>
+				<div>
+					<!--Print Here-->										
+				</div>
+				<div>
+					<!--Print Here-->										
+				</div>
+				<div>
+					<!--Print Here-->										
+				</div>
+			</div>
+		</div>						
+	
+
+* How to use webpage screenshot function.
+	• Add Script "<script type="text/javascript" src="../../Rogrid/Scripts/html2canvas.js"></script>"
+	• Add Script "<script type="text/javascript" src="../../Rogrid/Scripts/FileSaver.min.js"></script>"
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Invoke " capturePage(captureElemId_Param, this) "
+
+
+* How to use Custom Dropdown Button List.
+	• Import "RoStrap_Mixin" to your scss file. 
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
+	• Find "Editable action button arrow icon" to change the arrow icon in js.
+	• Codes needed for providing styles 
+		• " --droplistBtnWidth: value; " (Provide the width) (cusDroplistBtn_RoClass)
+		• " --droplistBtnBorderWidth: value; " (Provide border thickness) (cusDroplistBtn_RoClass)		
+		• " --droplistBtnBorderColor: value; " (Provide border color) (cusDroplistBtn_RoClass)
+		• " --droplistBtnBgColor: value; " (Provide border color) (cusDroplistBtn_RoClass)
+		• " --dropListBorderRadius: value; " (Provide background color) (cusDroplistBtn_RoClass)
+		• " --droplistBtnPadding: value; " (Provide padding) (masterBtnWrap_RoClass>button and listBtn_RoClass)
+		• " --droplistBtnFColor: value; " (Provide font color) (masterBtnWrap_RoClass>button and listBtn_RoClass)
+		• " --dropListBtnFSize: value; " (Provide font size) (masterBtnWrap_RoClass>button and listBtn_RoClass)
+		• " --dropListBtnIconSize: value; " (Provide icon width and height) (masterBtnWrap_RoClass>button and listBtn_RoClass)
+		• " --listBtnBorderWidth: value; " (Provide list button border thickness) (listBtn_RoClass)
+		• " --listBtnBorderColor: value; " (Provide list button border color) (listBtn_RoClass)
+		• " --listBtnBgColorha: value; " (Provide list button bg color when hovered) (listBtn_RoClass)
+		• " --listBtnFColorha: value; " (Provide list button font color when hovered) (listBtn_RoClass)
+	• Structure
+		<div class="cusDroplistBtn_RoClass">
+			<div class="masterBtnWrap_RoClass">
+				<button>Masterlist Button</button>
+				<div><img src="./src/Chevron Down.png"></div>
+			</div>					
+			<div class="droplistWrap_RoClass">
+				<button class="listBtn_RoClass">Button List 1</button>
+				<button class="listBtn_RoClass">Button List 2</button>
+				<button class="listBtn_RoClass">Button List 3</button>
+			</div>
+		</div>
+
+
+Charts Note: For more reference go to "index.js" or "Sample_Page.js" or read the documentation "https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery"
+* How to use Chart.
+	• Import "RoStrap_Mixin" to your scss file. 
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Add Script "Plugin_GstaticChart.js"
+	• Codes needed for providing styles 
+		• " --chartWrapWidth: value; " (Provide chart wrapper width) (chartWrap_RoClass) 
+		• " --chartWrapHeight: value; " (Provide chart wrapper height) (chartWrap_RoClass)
+		• " --chartWrapBorderWidth: value; " (Provide chart wrapper border width) (chartWrap_RoClass) 
+		• " --chartWrapBorderStyle: value; " (Provide chart wrapper border style) (chartWrap_RoClass) 
+		• " --chartWrapBorderColor: value; " (Provide chart wrapper border color) (chartWrap_RoClass) 
+		• " --chartWrapBorderRadius: value; " (Provide chart wrapper border radius) (chartWrap_RoClass) 		
+	•Structure
+		<div class="chartWrap_RoClass" id=" elementId "></div>
+
+
+* How to use Date Range.
+	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Add Script "CalendarLite.js"
+	• Prerequisite
+		•  Calendar Lite RoStrap
+	• Invoke this function.
+		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myDateRangeFrom')" 
+	• Codes needed for providing styles 		
+		• " --dateRangeBorderRadius: value; " (Provide Date Range border radius) (dateRange_RoClass) 
+		• " --dateRangeBorderWidth: value; " (Provide Date Range border width) (dateRange_RoClass)
+		• " --dateRangeBorderColor: value; " (Provide Date Range border color) (dateRange_RoClass)
+		• " --dateRangePadding: value; " (Provide Date Range Details Wrapper padding) (dateRangeDatails_RoClass)
+		• " --dateRangeIconSize: value; " (Provide Date Range Calendar Icon Size) (dateRangeIcon_RoClass)
+		• " --dateRangeIcon: value; " (Provide Date Range Calendar Icon) (dateRangeIcon_RoClass)
+		• " --dateRangeFSize: value; " (Provide Date Range Font Size) (dateRangeText_RoClass)
+		• " --dateRangeFColor: value; " (Provide Date Range Font Color) (dateRangeText_RoClass)
+		• " --dateRangeTooltipColor: value; " (Provide color for the Date Range tooltip arrow) (dateRangeTooltipArrow_RoClass)
+		• " --dateRangeCalLiteWrapWidth: value; " (Provide  Date Range Calendar Lite wrapper width) (dateRangeCalLiteWrap_RoClass)
+		• " --dateRangeCalLiteWrapTop: value; " (Provide Date Range Calendar lite Wrapper Top) (dateRangeCalLiteWrap_RoClass)
+		• " --dateRangeCalLiteBorderColor: value; " (Provide Date Range Calendar lite border color) (dateRangeCalLite_RoClass)		
+	•Structure
+		<div class="dateRangeWrap_RoClass">
+			<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
+				<div class="dateRangeDatails_RoClass">
+					<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('./src/calendaricon white.png');"></div>
+					<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
+				</div>
+				<div class="dateRangeTooltipArrow_RoClass"></div>					
+			</div>				
+			<div class="dateRangeCalLiteWrap_RoClass">
+				//Date Range Calendar Lite From
+				<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass" id="myDateRangeFrom">
+					Content
+				</div>
+
+				//Date Range Calendar Lite To
+				<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass" id="myDateRangeTo">
+					Content
+				</div>
+			</div>
+		</div>
+
+
+Dropdown Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts, true);" on every page js. The "height" parameter in showSelectDropdownOpts(this, ' height ') function is for the maximum visibility height for covering the options.
+* How to use Select Dropdown.
+	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Codes needed for providing styles
+		• " --selectDropdownWidth: value; " (Provide Select Dropdown width) (selectDropdownWrap_RoClass) 		
+		• " --selectDropdownBorderWidth: value; " (Provide Select Dropdown border width) (selectDropdownWrap_RoClass)
+		• " --selectDropdownBorderColor: value; " (Provide Select Dropdown border color) (selectDropdownWrap_RoClass, searchOpts_RoClass)
+		• " --selectDropdownBorderRadius: value; " (Provide Select Dropdown border radius) (selectDropdownWrap_RoClass)
+		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass)		
+		• " --optIcon: value; " (Provide Option icon. Inline Style Only) (displayedSelectedIcon_RoClass, optIcon_RoClass)
+		• " --selectDropdownIconSize: value; " (Provide Option icon size) (displayedSelectedIcon_RoClass, optIcon_RoClass)
+		• " --selectDropdownFSize: value; " (Provide Option font size) (displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass)
+		• " --selectDropdownFColor: value; " (Provide Option font color) (displayedSelectedText_RoClass, optText_RoClass)
+		• " --selectDropdownChevron: value; " (Provide Chevron icon. Inline Style Only) (displayedSelectedChevron_RoClass)
+		• " --selectDropdownChevronSize: value; " (Provide Chevron size) (displayedSelectedChevron_RoClass)
+		• " --searchOptsBgColor: value; " (Provide Search Options Background Color) (searchOpts_RoClass)
+		• " --searchOptsFColor: value; " (Provide Search Options Font Color) (searchOpts_RoClass)
+		• " --hoverOptBgColor: value; " (Provide Option backgroun color when hovered) (selectDropdownOpt_RoClass)
+		• " --hoverOptFColor: value; " (Provide Option font color when hovered) (selectDropdownOpt_RoClass)
+		• " --selectDropdownScrollSize: value; " (Provide Options Wrapper scroll size) (selectDropdownOptionsWrap_RoClass)
+		• " --optWrapThumbBgColor: value; " (Provide Options Wrapper scroll thumb background color) (selectDropdownOptionsWrap_RoClass)		
+		• " --selectDropdownResetBtnIcon: url(' pathname ') " (Provide Reset Button Icon. Inline Style Only) (displayedSelectedResetBtn_RoClass)
+		• " --selectDropdownResetBtnSize: value; " (Provide Reset Button Icon Size) (displayedSelectedResetBtn_RoClass)
+	•Structure
+		<div class="selectDropdownWrap_RoClass">
+			<input type="hidden" class="selectedOptValue_RoClass">
+			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, ' height ')">
+				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
+				<div class="displayedSelectedText_RoClass">Selected Text</div>
+				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('./src/closeModIcon.png');" onclick="resetSelectDropdown(this, 'Please select from option', './src/ph flag.png', 'Selected Text')"></div>
+				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('./src/Chevron Up.png');"></div>						
+			</div>
+			<div class="selectDropdownOptionsWrap_RoClass">
+				<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
+				<div class="selectDropdownOptsArea_RoClass">
+					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, ' height ')">
+						<input type="hidden" class="optValue_RoClass" value="Opt1">
+						<div class="optIcon_RoClass" style="--optIcon: url('./src/china flag.png');"></div>
+						<div class="optText_RoClass">Option 1</div>
+					</div>
+					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, ' height ')">
+						<input type="hidden" class="optValue_RoClass" value="Opt2">
+						<div class="optIcon_RoClass" style="--optIcon: url('./src/usa flag.png');"></div>
+						<div class="optText_RoClass">Option 2</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+Box-Loader Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for displaying the box loader and " hideBoxLoader(boxLoaderWrap) " function for hiding.
+* How to use box loader.
+	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Codes needed for providing styles
+		• " --boxLoaderIconSize: value; " (Provide the size of Box Loader Icon) (boxLoaderIcon_RoClass) 		
+	•Structure
+		<div class="boxLoaderWrap_RoClass">
+			<div class="boxLoaderIcon_RoClass">
+				<img src=" filename ">
+			</div>
+		</div>

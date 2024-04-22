@@ -1,0 +1,1650 @@
+/***********************************************************************************************************************************************************************************************************/
+/*From another mixin*/
+@import "RoGrid_Mixin";
+/*From another mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Body Style RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+body{
+	@include bodyitself_RoStyle;
+}
+
+/* width */
+body::-webkit-scrollbar {
+	@include bodyScrollBar_RoStyle;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+	@include bodyTrack_RoStyle;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+	@include bodyHandle_RoStyle;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+	@include bodyHandleHover_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Body Style RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Inputs RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+div.cusInputs_RoClass{
+	@include customInputsWrap_RoStyle;
+}
+
+div.cusInputs_RoClass>input{
+	@include customInputs_RoStyle;
+}
+
+div.cusInputs_RoClass>select{
+	@include customInputs_RoStyle;
+}
+
+div.cusInputs_RoClass>.placeholdme_RoClass{
+	@include customInputsPlace_RoStyle;
+}
+
+div.cusInputs_RoClass>.upPlaceholdme_RoClass{
+	@include customInputsPlaceUp_RoStyle;
+}	
+
+div.cusInputs_RoClass>input:focus + .placeholdme_RoClass,
+div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass{
+	@include customInputsPlaceAnimate_RoStyle;
+}
+
+div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass,
+div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass{
+	@include customInputsPlaceAnimate_RoStyle;
+}
+
+div.cusInputs_RoClass>select:focus + .placeholdme_RoClass,
+div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass{
+	@include customInputsPlaceAnimate_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Custom Inputs RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Current Date RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+.currentDate_RoClass{
+	@include currentDate_RoStyle;
+} 
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Current Date RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Checkbox RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.cusCheckBoxPaper_RoClass{
+	@include customCheckboxWrap_RoStyle;
+}
+
+.cusCheckBoxPaper_RoClass>label{
+	@include cusCheckboxLabel_RoStyle;		
+}
+
+.cusCheckBoxPaper_RoClass>input{
+	@include origCheckbox_RoStyle;
+}
+
+.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass{
+	@include cusCheckbox_RoStyle;
+}
+
+.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass>img{
+	@include checkIcon_RoStyle;
+}
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Custom Checkbox RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Modal RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General media*/
+
+/*Blurrer*/
+.thisIsJapan_RoClass{
+	@include blurrer_RoStyle;
+}
+/*Blurrer*/
+
+
+/*Modal Container*/
+.modalmeCon_RoClass{
+	@include modalmeCon_Style;
+}
+/*Modal Container*/
+
+
+/*Custom Modal itself*/
+.modalme_RoClass{
+	@include modalItself_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass{
+	@include modalHeader_RoStyle;
+}
+
+.modalme_RoClass>.modalBody_RoClass{
+	@include modalBody_RoStyle;
+}
+
+/* width */
+.modalBody_RoClass::-webkit-scrollbar {
+	@include modalScrollWidth_RoStyle;
+}
+
+/* Track */
+.modalBody_RoClass::-webkit-scrollbar-track {
+	@include modalScrollTrack_RoStyle;
+}
+
+/* Handle */
+.modalBody_RoClass::-webkit-scrollbar-thumb {
+	@include modalScrollHandle_RoStyle;
+}
+
+/* Handle on hover */
+.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
+	@include modalScrollHover_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass>.modalHeadTxt_RoClass{
+	@include modalHeaderTxt_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass{
+	@include modalHeaderCloser_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
+	@include modalCloseIcon_RoStyle;
+}
+/*Custom Modal itself*/
+
+/*General media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Custom Modal RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Spinner Loading RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Medial*/
+
+.spinnerLoad_RoClass{
+	@include spinnerLoad_RoStyle;
+}
+
+.spinnerLoad_RoClass>img{
+	@include childImage_RoStyle;
+}
+
+/*General Medial*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Spinner Loading RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Search Input with Style RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+input.searchInput_RoClass{
+	@include searchInput_Style;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Search Input with Style RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Notification Box RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+/*_Success Notification Box*/
+.notifyFlex_Suc_RoClass{
+	@include notiBoxFlexWrap_RoStyle;
+	@include notiBoxSuccessBg_RoStyle;
+}
+
+.notifyFlex_Suc_RoClass>.notifyMessItem_Suc_RoClass{
+	@include notiBoxMessItem_RoStyle;		
+	@include notiBoxSuccessColor_RoStyle;
+}
+
+.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass{
+	@include notiBoxCloseIconItemWrap_RoStyle;
+}
+
+.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass>img{
+	@include childImage_RoStyle;
+}
+/*_Success Notification Box*/
+
+
+/*_Failed Notification Box*/
+.notifyFlex_Failed_RoClass{
+	@include notiBoxFlexWrap_RoStyle;
+	@include notiBoxFailedBg_RoStyle;
+}
+
+.notifyFlex_Failed_RoClass>.notifyMessItem_Failed_RoClass{
+	@include notiBoxMessItem_RoStyle;		
+	@include notiBoxFailedColor_RoStyle;
+}
+
+.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass{
+	@include notiBoxCloseIconItemWrap_RoStyle;
+}
+
+.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass>img{
+	@include childImage_RoStyle;
+}
+/*_Failed Notification Box*/
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Notification Box RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Normal Custom Button RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Medial*/
+
+.normButton_RoClass{
+	@include normalBtn_RoStyle;
+}
+
+.normButton_RoClass:hover{
+	@include normalBtn_HovAct_RoStyle;
+}
+
+.normButton_RoClass:active{
+	@include normalBtn_HovAct_RoStyle;
+}	
+
+/*General Medial*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Normal Custom Button RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Icon Button Only RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+button.iconBtn_RoClass{
+	@include iconBtn_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Icon Button Only RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Radio Button RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+/*_Radio Button Circle Type*/
+.radioCircleFlex_RoClass{
+	@include radioFlex_RoStyle;
+}
+
+.radioCircleFlex_RoClass>label.customRadioCircle_RoClass{
+	@include customRadioCircleSelf_RoStyle;
+}
+
+.radioCircleFlex_RoClass>label.customRadioCircle_RoClass>span.innerCircle_RoClass{
+	@include innerCircle_RoStyle;
+}
+
+.radioCircleFlex_RoClass>input{
+	@include originalRadioBtn_RoStyle;
+}
+
+.radioCircleFlex_RoClass>.radioCircleTxtLabel_RoClass{
+	@include radioTextLabel_RoStyle;
+}
+
+.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass{
+	@include radioIconLabel_RoStyle;
+}
+
+.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass>img{
+	@include radioIconImage_RoStyle;
+}
+/*_Radio Button Circle Type*/
+
+
+/*_Radio Button Check Type*/
+.radioCheckFlex_RoClass{
+	@include radioFlex_RoStyle;
+}
+
+.radioCheckFlex_RoClass>label.customRadioCheck_RoClass{
+	@include customRadioCheckSelf_RoStyle;
+}
+
+.radioCheckFlex_RoClass>label.customRadioCheck_RoClass>img{
+	@include innerCheck_RoStyle;
+}
+
+.radioCheckFlex_RoClass>input{
+	@include originalRadioBtn_RoStyle;
+}
+
+.radioCheckFlex_RoClass>.radioCheckTxtLabel_RoClass{
+	@include radioTextLabel_RoStyle;
+}
+
+.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass{
+	@include radioIconLabel_RoStyle;
+}
+
+.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass>img{
+	@include radioIconImage_RoStyle;
+}
+/*_Radio Button Check Type*/
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Custom Radio Button RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Calendar Lite RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+.calLite_RoClass{
+	@include calendarLiteItself_RoStyle;
+}
+
+.calLite_RoClass>.calLiteHead_RoClass{
+	@include calendarLiteHeader_RoStyle;			
+}
+
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass{
+	@include calendarLiteHeaderItem_RoStyle;
+}
+
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass{
+	@include calendarLiteHeaderItem_RoStyle;
+}
+
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass>.calLiteMonthText_RoClass{
+	@include calendarLiteHeaderTxt_RoStyle;		
+}
+
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass>.calLiteYearText_RoClass{
+	@include calendarLiteHeaderTxt_RoStyle;
+}
+
+.calLiteButton_RoClass{
+	@include calendarLiteHeaderButton_RoStyle;
+}
+
+.calLiteButton_RoClass>img{
+	@include childImage_RoStyle;
+}	
+
+.calLite_RoClass>.calLiteDaysTxt_RoClass{
+	@include calendarLiteDays_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysTxt_RoClass>div{
+	@include calendarLiteDaysText_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysIndex_RoClass{
+	@include calendarLiteDays_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysIndex_RoClass>div{
+	@include calendarLiteDaysText_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysIndex_RoClass>div>div{
+	@include printableDayTextNum_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Calendar Lite RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Dropdown Button List*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.cusDroplistBtn_RoClass{
+	@include cusDroplistBtn_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass{
+	@include masterBtnWrap_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>button{
+	@include masterBtn_RoStyle;	
+}
+
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div{
+	@include masterBtnIcon_RoStyle;	
+}
+
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div>img{
+	@include childImage_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.droplistWrap_RoClass{
+	@include droplistWrap_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass{
+	@include listBtn_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass:hover{
+	@include listBtnHover_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Custom Dropdown Button List*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+.chartWrap_RoClass{
+	@include chartWrap_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.dateRangeWrap_RoClass{
+	@include dateRangeWrap_RoStyle;
+}
+
+.dateRange_RoClass{
+	@include dateRange_RoStyle;	
+}
+
+.dateRangeDetails_RoClass{
+	@include dateRangeDetails_RoStyle;
+}
+
+.dateRangeIcon_RoClass{
+	@include dateRangeIcon_RoStyle;
+}
+
+.dateRangeText_RoClass{
+	@include dateRangeText_RoStyle;
+}
+
+.dateRangeTooltipArrow_RoClass{
+	@include dateRangeTooltipArrow_RoStyle;
+}
+
+.dateRangeCalLite_RoClass{
+	@include dateRangeCalLite_RoStyle;
+}
+/*General Media*/
+
+
+/*Mobile*/
+@media all and (max-width:641px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Mobile_RoStyle;
+	}
+}
+
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_TLD_RoStyle;
+	}
+}
+
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_TLD_RoStyle;
+	}
+}
+
+/*Desktop*/
+@media all and (min-width:1601px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_TLD_RoStyle;
+	}
+}
+/***********************************************************************************************************************************************************************************************************/
+
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.selectDropdownWrap_RoClass{
+	@include selectDropdownWrap_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass{
+	@include selectDropdownFlex_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .displayedSelectedIcon_RoClass{
+	@include selectDropdownIcon_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
+	@include selectDropdownText_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .displayedSelectedResetBtn_RoClass{
+	@include selectDropdownResetBtn_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .displayedSelectedChevron_RoClass{
+	@include displayedSelectedChevron_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass{
+	@include selectDropdownOptionsWrap_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .searchOpts_RoClass{
+	@include searchOpts_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOpt_RoClass{
+	@include selectDropdownFlex_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .optIcon_RoClass{
+	@include selectDropdownIcon_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .optText_RoClass{
+	@include selectDropdownText_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOpt_RoClass:hover, .selectDropdownOpt_RoClass:hover .optText_RoClass{
+	@include hoverSelectDropdownOpt_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOptionsWrap_RoClass::-webkit-scrollbar{
+	@include selectDropdownOptionsWrapScrollbar_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-track{
+	@include selectDropdownOptionsWrapTrack_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-thumb{
+	@include selectDropdownOptionsWrapThumb_RoStyle;
+}
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+.boxLoaderWrap_RoClass{
+	@include boxLoaderWrap_RoStyle;
+}
+
+.boxLoaderWrap_RoClass .boxLoaderIcon_RoClass{
+	@include boxLoaderIcon_RoStyle;
+}
+
+.boxLoaderIcon_RoClass img{
+	@include childImage_RoStyle;
+}
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Style Here*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Style Here*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	/*Style Here*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Layout one design RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	/*Layout itself*/	
+	div.rolayout_RoClass{
+		@include layoutOne_RoStyle;
+	}	
+
+	/*Left Side Item*/
+	div.rolayout_RoClass>div.sidemecha_RoClass{
+		@include leftsideItem_Mobile_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+		background: #4DAF4F;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #4DAF4F; 
+	}
+
+	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
+		@include naviWrapper_RoStyle;
+	}
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
+	}
+
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
+	
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
+
+
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
+
+
+	/*Main Side*/
+	div.rolayout_RoClass>div.mainmecha_RoClass{
+		@include mainsideItem_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+		background: #03fce3;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #03fce3; 
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass{
+		@include perMainContent_RoStyle;
+	}
+
+	/*_Burger*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass{
+		@include burgerIconWrap_Mobile_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass>img.burgerIcon_RoClass{
+		@include icon_RoStyle;
+	}
+	/*_Burger*/
+
+
+	/*_Project Title*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.layoutOneHead_RoClass{
+		@include layoutOneHeaderArea_RoStyle;
+	}
+	
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
+		@include projectTitleText_Mobile_RoStyle;
+	}
+	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_Mobile_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
+	/*Main Side*/
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Layout itself*/	
+	div.rolayout_RoClass{
+		@include layoutOne_RoStyle;
+	}
+	/*Layout itself*/
+
+
+	/*Left Side Item*/
+	div.rolayout_RoClass>div.sidemecha_RoClass{
+		@include leftsideItem_Tablet_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+		background: #4DAF4F;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #4DAF4F; 
+	}
+
+	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
+		@include naviWrapper_RoStyle;
+	}	
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
+	}
+
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
+	
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
+
+
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
+
+
+	/*Main Side*/
+	div.rolayout_RoClass>div.mainmecha_RoClass{
+		@include mainsideItem_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+		background: #03fce3;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #03fce3; 
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>div.mainmechaCon_RoClass{
+		@include perMainContent_RoStyle;
+	}
+
+	/*_Burger*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass{
+		@include burgerIconWrap_Tablet_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass>img.burgerIcon_RoClass{
+		@include icon_RoStyle;
+	}
+	/*_Burger*/
+
+
+	/*_Project Title*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.layoutOneHead_RoClass{
+		@include layoutOneHeaderArea_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
+		@include projectTitleText_TLD_RoStyle;
+	}
+	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_TLD_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
+	/*Main Side*/	
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Layout itself*/	
+	div.rolayout_RoClass{
+		@include layoutOne_RoStyle;
+	}
+	/*Layout itself*/
+
+
+	/*Left Side Item*/
+	div.rolayout_RoClass>div.sidemecha_RoClass{
+		@include leftsideItem_Laptop_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+		background: #4DAF4F;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #4DAF4F; 
+	}
+
+	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
+		@include naviWrapper_RoStyle;
+	}	
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
+	}
+
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
+	
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
+
+
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
+
+
+	/*Main Side*/
+	div.rolayout_RoClass>div.mainmecha_RoClass{
+		@include mainsideItem_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+		background: #03fce3;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #03fce3; ; 
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>div.mainmechaCon_RoClass{
+		@include perMainContent_RoStyle;
+	}
+
+	/*_Burger*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass{
+		@include burgerIconWrap_Laptop_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass>img.burgerIcon_RoClass{
+		@include icon_RoStyle;
+	}
+	/*_Burger*/
+
+
+	/*_Project Title*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.layoutOneHead_RoClass{
+		@include layoutOneHeaderArea_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
+		@include projectTitleText_TLD_RoStyle;
+	}
+	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_TLD_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
+	/*Main Side*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Dekstop*/
+@media all and (min-width:1601px){
+	/*Layout itself*/	
+	div.rolayout_RoClass{
+		@include layoutOne_RoStyle;
+	}
+	/*Layout itself*/
+
+
+	/*Left Side Item*/
+	div.rolayout_RoClass>div.sidemecha_RoClass{
+		@include leftsideItem_Desktop_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+		background: #4DAF4F;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #4DAF4F; 
+	}
+
+	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
+		@include naviWrapper_RoStyle;
+	}	
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
+	}
+
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
+	
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
+
+
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
+
+
+	/*Main Side*/
+	div.rolayout_RoClass>div.mainmecha_RoClass{
+		@include mainsideItem_RoStyle;
+	}
+
+	/* width */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;		
+	}
+
+	/* Track */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px gray; 
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+		background: #03fce3;
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	div.rolayout_RoClass>div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+		background: #03fce3; 
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>div.mainmechaCon_RoClass{
+		@include perMainContent_RoStyle;
+	}
+
+	/*_Burger*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass{
+		@include burgerIconWrap_Desktop_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>div.burger_RoClass>img.burgerIcon_RoClass{
+		@include icon_RoStyle;
+	}
+	/*_Burger*/
+
+
+	/*_Project Title*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.layoutOneHead_RoClass{
+		@include layoutOneHeaderArea_RoStyle;
+	}
+
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
+		@include projectTitleText_TLD_RoStyle;
+	}
+	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_TLD_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
+	/*Main Side*/	
+}
+/*Dekstop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Layout one design RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Footer RoStrap Mixin*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Medial*/
+
+hr.linethis_RoClass{
+	@include liner_RoStyle;
+}
+
+div.footerWrap_RoClass{
+	@include footerWrap_RoStyle;
+}
+
+div.footerWrap_RoClass>span.footerTxt_RoClass{
+	@include footerTxt_RoStyle;
+}
+
+/*General Medial*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Footer RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/

@@ -1,0 +1,625 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+@import "../../Rogrid/Styles/RoStrap_Mixin";
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root {
+	/*Search Box*/
+	--inputSearchWidth: 250px;
+	--inputSearchTopPadding: 0px;
+	--inputSearchRightPadding: 0px;
+	--inputSearchBottomPadding: 2px;
+	--inputSearchLeftPadding: 30px;
+	--inputSearchBorderColor: transparent;
+	--inputSearchBorderRadius: 30px;
+	--inputSearchIconHori: 10px;
+	--inputSearchIconSize: 16px;
+	--inputSearchFSize: 15px;
+	--inputSearchFColor: #FFFFFF;
+	/*Search Box*/
+
+	/*Side Apps Main Menu*/
+	--generalNavMenuPadding: 10px;
+
+	--mainNavMenuIconSize: 30px;
+	--mainNavMenuFSize: 16px;
+	--mainNavMenuBgColor: transparent;
+	--mainNavMenuFColor: #FFFFFF;
+	--hoverMainNavMenuBgColor: #303031;
+	--hoverMainNavMenuFColor: #FFFFFF;	
+	/*Side Apps Main Menu*/
+
+	/*Side Apps Sub Menu*/
+	--subNavMenuIconSize: 30px;
+	--subNavMenuWrapBgColor: transparent;
+	--subNavMenuBgColor: transparent;
+	--subNavMenuFSize: 16px;
+	--subNavMenuFColor: white;
+	--hoverSubNavMenuBgColor: #303031;
+	--hoverSubNavMenuFColor: white;
+
+	--chevronIconSize: 16px;
+	/*Side Apps Sub Menu*/
+
+	--projectTitleTextFColor: #808080;
+
+	/*Footer*/
+	--footerBgColor: #242526;
+	--footerFSize: 14px;
+	--footerFColor: #FFFFFF;
+	/*Footer*/
+
+	/*Default Style: Dark Mode*/
+	--bg-color-1: #18191A;
+	--bg-color-2: #242526;
+	--bg-color-3: #3A3B3C;
+	--bg-color-4: #2176FF;
+	--bg-color-5: #666667;
+	--bg-color-6: #FFFFFF;
+	--bg-color-7: #3A3B3C;
+	--bg-color-8: #3A3B3C;
+	--bg-color-9: #3A3B3C;
+	--bg-color-10: #7ABCF4;
+	--bg-color-11: #8ED770;
+	--text-color-1: #FFFFFF;
+	--text-color-2: #000000;
+	--text-color-3: #808080;
+	--text-color-4: #BCBFC4;
+	--border-color-1: #3D3E3F;
+	--border-color-2: #121413;
+	--border-color-3: #3E3F40;
+	/*Default Style: Dark Mode*/
+}
+/*Root*/
+
+.light-mode {
+	--inputSearchFColor: #000000;
+	--mainNavMenuFColor: #000000;
+	--hoverMainNavMenuBgColor: #E4E6E8;
+	--hoverMainNavMenuFColor: #000000;
+	--subNavMenuFColor: #000000;
+	--hoverSubNavMenuBgColor: #E4E6E8;
+	--hoverSubNavMenuFColor: #000000;
+	--projectTitleTextFColor: gray;
+	--footerBgColor: #FFFFFF;
+	--footerFColor: #000000;
+	--bg-color-1: #F0F2F5;
+	--bg-color-2: #FFFFFF;
+	--bg-color-3: #F0F2F5;
+	--bg-color-5: #BCC0C4;
+	--bg-color-6: #3A3B3C;
+	--bg-color-7: #E94450;
+	--bg-color-8: #7AC4B2;
+	--bg-color-9: #FFBA57;
+	--text-color-1: #000000;
+	--text-color-2: #FFFFFF;
+	--text-color-4: #000000;
+	--border-color-1: #DCDEE1;
+	--border-color-2: #E2E4E7;
+	--border-color-3: #F0F2F5;
+}
+/***********************************************************************************************************************************************************************************************************/
+/*General*/
+@font-face {
+	font-family: 'Binance PLEX';
+	src: url(../Fonts/Binance-PLEX.ttf);
+}
+
+* {
+	font-family: 'Binance PLEX' !important;
+	box-sizing: border-box;
+	transition: all .15s !important;
+}
+
+body {
+	background-color: var(--bg-color-1);
+}
+
+input,
+input:focus,
+textarea,
+textarea:focus {
+	border: none;
+	outline: none;
+	color: var(--text-color-1);
+}
+
+.top-section {
+	height: 55px;
+	background-color: var(--bg-color-2);
+	border-bottom: 1px solid var(--border-color-1);
+	padding: 5px 15px;
+	display: flex;
+	gap: 5px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top-section .top-left-menu {
+	display: flex;
+	gap: 5px;
+}
+
+.top-left-menu .home-logo {
+	width: 39px;
+	height: 39px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-7);
+}
+
+.top-left-menu .home-logo:hover {
+	opacity: .7;
+}
+
+.top-left-menu .home-logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.top-left-menu #searchInput_RoId {
+	background-color: var(--bg-color-3);
+	border: none;
+	height: 40px;
+}
+
+#searchInput_RoId::placeholder {
+	color: var(--text-color-4);
+}
+
+.top-section .top-right-menu {
+	display: flex;
+	gap: 5px;
+}
+
+.top-right-menu .toggle-mode {
+	width: 100px;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--bg-color-6);
+	color: var(--text-color-2);
+	cursor: pointer;
+}
+
+.top-right-menu .toggle-mode:hover {
+	opacity: .7;
+}
+
+.top-right-menu .menu {
+	display: flex;
+	width: 39px;
+	height: 39px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-8);
+	cursor: pointer;
+}
+
+.top-right-menu .menu:hover {
+	opacity: .7;
+}
+
+.top-right-menu .gear-icon {
+	background-color: var(--bg-color-9);
+}
+
+.top-right-menu .menu img {
+	width: 100%;
+	height: 100%;
+}
+
+/*Mid Content*/
+#rolayout_RoId {
+	height: calc(100% - 78px);
+	display: flex;
+	justify-content: space-between;
+}
+
+/*Left Content*/
+.rolayout_RoClass #sidemecha_RoId {
+	padding: 7px 5px;
+	direction: ltr;
+	background-color: var(--bg-color-1);
+}
+
+#sidemecha_RoId::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+
+#sidemecha_RoId:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+.sidemechaCon_RoClass .company-logo {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.sidemechaCon_RoClass .company-logo img {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.mainNavMenu_RoClass .generalNavMenuText_RoClass {
+	font-weight: bold;
+}
+
+.mainNavMenu_RoClass .chevronIconWrap_RoClass {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+}
+/*Left Content*/
+
+/*Mid Content*/
+.rolayout_RoClass #mainmecha_RoClass {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+#mainmecha_RoClass::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+
+#mainmecha_RoClass:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+.mainmecha_RoClass #mainmechaCon_RoId {
+	max-width: 600px;
+	padding-left: 0px;
+}
+
+.mainmecha_RoClass #burger_RoId {
+	width: 39px;
+	height: 39px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-8);
+}
+
+.mainmechaCon_RoClass #projectTitle_RoId {
+	display: flex;
+	justify-content: center;
+	margin-top: 5px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-10);
+	border: 1px solid var(--border-color-2);
+}
+
+.mainmechaCon_RoClass .post-form {
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	color: var(--text-color-1);
+	background-color: var(--bg-color-2);
+	border: 1px solid var(--border-color-2);
+}
+
+.create-post-form .post-title,
+.create-post-form .post-content {
+	display: block;
+	margin: 10px 0px 3px 0px;
+	font-size: 16px;
+}
+
+.create-post-form #post-title {
+	width: 100%;
+	height: 30px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.create-post-form #post-content {
+	width: 100%;
+	min-height: 50px;
+	padding: 7px;
+	resize: none;
+	overflow-y: hidden;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.create-post-form .create-post-button {
+	margin-top: 10px;
+	border: none;
+	padding: 7px 15px;
+	border-radius: 3px;
+	display: block;
+	background-color: #2176FF;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.create-post-form .create-post-button:hover {
+	opacity: .7;
+}
+
+.create-post-form .create-post-button:active {
+	opacity: .5;
+}
+
+.mainmechaCon_RoClass .posts {
+	color: var(--text-color-1);
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.posts .recent-posts {
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-11);
+	border: 1px solid var(--border-color-2);
+	color: var(--text-color-3);
+}
+
+.posts .post-list {
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-2);
+	border: 1px solid var(--border-color-2);
+}
+
+.posts button {
+	cursor: pointer;
+	border-radius: 3px;
+	border: none;
+	padding: 2px 8px;
+	background-color: var(--bg-color-3);
+	color: var(--text-color-1);
+}
+
+.posts button:hover {
+	opacity: .7;
+}
+
+.posts button:active {
+	opacity: .5;
+}
+
+.post-list .post-title {
+	margin-bottom: 7px;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.post-list .post-content {
+	width: 100%;
+	margin-bottom: 7px;
+	white-space: normal;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.post-list .post-actions,
+.comment .comment-actions,
+.comment .reply-actions {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.post-actions .post-like-count {
+	margin-right: 10px;
+}
+
+.post-list .date-posted {
+	font-size: 11px;
+	margin-block: 5px;
+	white-space: normal;
+}
+
+.comment-section .comment {
+	border-left: 2px solid var(--border-color-3);
+	margin-left: 20px;
+	padding-left: 10px;
+}
+
+.comment .post-comment {
+	margin-bottom: 7px;
+	white-space: normal;
+	padding-block: 7px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.comment .reply-input {
+	width: 100%;
+	margin-block: 5px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.comment .post-reply {
+	margin-bottom: 7px;
+	white-space: normal;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+
+.comment-actions .comment-like-count {
+	margin-right: 10px;
+}
+
+.post-list .comment-input {
+	margin: 10px 0px 5px 0px;
+	width: 100%;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-3);
+}
+/*Mid Content*/
+
+/*Right Content*/
+.rolayout_RoClass .right-side-content {
+	width: 250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: var(--bg-color-1);
+}
+
+.right-side-content::-webkit-scrollbar {
+	width: 7px;
+}
+
+.right-side-content::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+
+.right-side-content:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+.right-side-content .right-side-title {
+	margin-top: 10px;
+	padding: 10px;
+	color: var(--text-color-1);
+	font-weight: bold;
+}
+/*Right Content*/
+
+body #footerWrap_RoId {
+	padding: 1px;
+	border-top: 1px solid var(--border-color-1);
+}
+
+.footerWrap_RoClass #footerTxt_RoId {
+	font-weight: bold;
+}
+/*General*/
+/***********************************************************************************************************************************************************************************************************/
+::-webkit-scrollbar-thumb {
+	background-color: var(--bg-color-5) !important;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	display: none;
+}
+/***********************************************************************************************************************************************************************************************************/
+/*Section Comment Name*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px) {
+	.top-section .searchInput_RoClass {
+		--inputSearchWidth: 90px;
+	}
+
+	.top-section .searchInput_RoClass {
+		--inputSearchFSize: 12px;
+	}
+
+	.top-right-menu .toggle-mode {
+		width: 50px;
+		font-size: 12px;
+	}
+
+	.rolayout_RoClass #mainmecha_RoClass {
+		justify-content: flex-start;
+	}
+
+	.mainmecha_RoClass .projectTitle_RoClass {
+		--projectTitleTextFSize: 14px;
+	}
+
+	.create-post-form .post-title,
+	.create-post-form .post-content,
+	.post-list .post-title {
+		font-size: 14px;
+	}
+
+	.mainmechaCon_RoClass .posts {
+		font-size: 12px;
+	}
+
+	.posts .recent-posts {
+		font-size: 14px
+	}
+
+	.rolayout_RoClass .right-side-content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	.mainmecha_RoClass .projectTitle_RoClass {
+		--projectTitleTextFSize: 14px;
+	}
+
+	.posts .recent-posts {
+		font-size: 14px
+	}
+
+	.rolayout_RoClass .right-side-content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+	.mainmecha_RoClass .projectTitle_RoClass {
+		--projectTitleTextFSize: 16px;
+	}
+
+	.posts .recent-posts {
+		font-size: 16px
+	}
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px) {
+	.mainmecha_RoClass .projectTitle_RoClass {
+		--projectTitleTextFSize: 16px;
+	}
+
+	.posts .recent-posts {
+		font-size: 16px
+	}
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Section Comment Name*/
+/***********************************************************************************************************************************************************************************************************/
