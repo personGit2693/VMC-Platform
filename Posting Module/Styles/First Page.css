@@ -3216,7 +3216,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Root*/
 :root {
   /*Search Box*/
-  --inputSearchWidth: 250px;
+  --inputSearchWidth: 255px;
   --inputSearchTopPadding: 0px;
   --inputSearchRightPadding: 0px;
   --inputSearchBottomPadding: 2px;
