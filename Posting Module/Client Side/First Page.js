@@ -80,7 +80,7 @@ function removeFilePreview() {
 /*For right side content controls / functions*/
 window.addEventListener('DOMContentLoaded', () => {
 	const burgerIcon = document.querySelector('.burger-icon');
-	const rightSideContent = document.querySelector('.right-side-content');
+	const rightSideContent = document.querySelector('.right-side-container');
 
 	function toggleRightSideContent() {
 		if (window.innerWidth <= 1080) {

@@ -3216,8 +3216,36 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
+/*Search Box*/
+/*Search Box*/
+/*Side Apps Main Menu*/
+/*Side Apps Main Menu*/
+/*Side Apps Sub Menu*/
+/*Side Apps Sub Menu*/
+/*Footer*/
+/*Footer*/
+/*Dark Mode (Default Style)*/
+/*Dark Mode (Default Style)*/
+/*Light Mode*/
+/*Light Mode*/
+/*Binance Font*/
+/*Binance Font*/
+/*Webkit*/
+/*Webkit*/
+/*Asterisk*/
+/*Asterisk*/
+/*Body Background*/
+/*Body Background*/
 /*Top Section*/
 /*Top Section*/
+/*Mid Section Height*/
+/*Mid Section Height*/
+/*Left Content*/
+/*Left Content*/
+/*Footer*/
+/*Footer*/
+/*Mobile Top Section*/
+/*Mobile Top Section*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3259,7 +3287,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --hoverSubNavMenuFColor: white;
   --chevronIconSize: 16px;
   /*Side Apps Sub Menu*/
-  --projectTitleTextFColor: #FFFFFF;
   /*Footer*/
   --footerBgColor: #242526;
   --footerFSize: 14px;
@@ -3283,9 +3310,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --border-color-2: #121413;
   --border-color-3: #3E3F40;
   --border-color-4: #444749;
-  /*Default Style: Dark Mode*/ }
+  /*Default Style: Dark Mode*/
+  --projectTitleTextFColor: #FFFFFF; }
 
 /*Root*/
+/***********************************************************************************************************************************************************************************************************/
+/*General*/
 .light-mode {
   --inputSearchFColor: #000000;
   --mainNavMenuFColor: #000000;
@@ -3312,11 +3342,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --border-color-3: #F0F2F5;
   --border-color-4: #CED0D4; }
 
-/***********************************************************************************************************************************************************************************************************/
-/*General*/
 @font-face {
   font-family: 'Binance PLEX';
   src: url(../Fonts/Binance-PLEX.ttf); }
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color-5) !important; }
+
+::-webkit-scrollbar-track {
+  display: none; }
+
 * {
   font-family: 'Binance PLEX' !important;
   box-sizing: border-box;
@@ -3338,6 +3372,7 @@ video {
   width: 100%;
   height: 100%; }
 
+/*Top Section*/
 .top-section {
   height: 55px;
   background-color: var(--bg-color-2);
@@ -3409,6 +3444,7 @@ video {
   width: 100%;
   height: 100%; }
 
+/*Top Section*/
 /*Mid Section*/
 #rolayout_RoId {
   height: calc(100% - 78px);
@@ -3434,8 +3470,8 @@ video {
   margin-bottom: 15px; }
 
 .sidemechaCon_RoClass .company-logo img {
-  width: 100px;
-  height: 100px;
+  width: 170px;
+  height: 170px;
   cursor: pointer; }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
@@ -3512,7 +3548,7 @@ video {
 
 .create-post-form #post-content {
   width: 100%;
-  min-height: 50px;
+  min-height: 55px;
   padding: 7px;
   resize: none;
   overflow-y: hidden;
@@ -3526,7 +3562,7 @@ video {
   width: 240px;
   white-space: nowrap;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 14px;
   background-color: #8ED770;
   color: #808080;
@@ -3540,7 +3576,7 @@ video {
   margin-top: 10px;
   border-radius: 10px;
   min-height: 120px;
-  padding: 7px 7px 3px 7px;
+  padding: 8px 8px 4px 8px;
   position: relative; }
 
 .file-preview-container .file-preview-element {
@@ -3686,29 +3722,48 @@ video {
 
 /*Mid Content*/
 /*Right Content*/
-.rolayout_RoClass .right-side-content {
-  width: 250px;
+.rolayout_RoClass .right-side-container {
+  width: 300px;
   flex-shrink: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: var(--bg-color-1);
-  margin-right: 11px;
-  z-index: 1; }
+  background-color: transparent;
+  z-index: 1;
+  direction: rtl;
+  padding: 0px 0px 10px 20px; }
 
-.right-side-content::-webkit-scrollbar {
+.right-side-container::-webkit-scrollbar,
+#side-content::-webkit-scrollbar {
   width: 7px; }
 
-.right-side-content::-webkit-scrollbar-thumb {
+.right-side-container::-webkit-scrollbar-thumb,
+#side-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
   visibility: hidden; }
 
-.right-side-content:hover::-webkit-scrollbar-thumb {
+.right-side-container:hover::-webkit-scrollbar-thumb,
+#side-content:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
 
-.right-side-content .right-side-title {
+.right-side-container .side-content-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 20px;
+  padding: 0 !important;
+  height: 400px;
   margin-top: 10px;
-  padding: 10px;
-  color: var(--text-color-1);
-  font-weight: bold; }
+  border: 1px solid var(--border-color-4); }
+
+.side-content-wrapper #side-content {
+  height: 100%;
+  overflow: auto;
+  padding-block: 7px; }
+
+.right-side-container .side-content-two {
+  height: 300px; }
+
+.right-side-container .side-content-three {
+  height: 600px; }
 
 /*Right Content*/
 /*Footer*/
@@ -3722,26 +3777,17 @@ body #footerWrap_RoId {
 /*Footer*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
-::-webkit-scrollbar-thumb {
-  background-color: var(--bg-color-5) !important;
-  border-radius: 10px; }
-
-::-webkit-scrollbar-track {
-  display: none; }
-
 /***********************************************************************************************************************************************************************************************************/
 /*General Media Query*/
-@media (min-width: 1081px) and (max-width: 1200px) {
+@media (min-width: 1081px) and (max-width: 1250px) {
   .mainmecha_RoClass #mainmechaCon_RoId {
-    max-width: 550px; } }
+    max-width: 450px; } }
 /*General Media Query*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
   .top-section .searchInput_RoClass {
-    --inputSearchWidth: 90px; }
-
-  .top-section .searchInput_RoClass {
+    --inputSearchWidth: 90px;
     --inputSearchFSize: 12px; }
 
   .top-right-menu .toggle-mode {
@@ -3761,26 +3807,18 @@ body #footerWrap_RoId {
   .create-post-form .post-category,
   .create-post-form .post-title,
   .create-post-form .post-content,
-  .post-list .post-title {
+  .post-list .post-title,
+  .posts .recent-posts {
     font-size: 14px; }
 
   .mainmechaCon_RoClass .posts {
     font-size: 12px; }
 
-  .posts .recent-posts {
-    font-size: 14px; }
-
-  .rolayout_RoClass .right-side-content {
+  .rolayout_RoClass .right-side-container {
     width: 100%;
     height: 100%;
-    position: absolute; }
-
-  .right-side-content #sidemecha_RoId {
-    display: flex;
-    justify-content: center; }
-
-  .sidemecha_RoClass .sidemechaCon_RoClass {
-    width: 250px; } }
+    position: absolute;
+    background-color: var(--bg-color-1); } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3798,17 +3836,11 @@ body #footerWrap_RoId {
   .posts .recent-posts {
     font-size: 14px; }
 
-  .rolayout_RoClass .right-side-content {
+  .rolayout_RoClass .right-side-container {
     width: 100%;
     height: 100%;
-    position: absolute; }
-
-  .right-side-content #sidemecha_RoId {
-    display: flex;
-    justify-content: center; }
-
-  .sidemecha_RoClass .sidemechaCon_RoClass {
-    width: 250px; } }
+    position: absolute;
+    background-color: var(--bg-color-1); } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

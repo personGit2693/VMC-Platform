@@ -13,113 +13,52 @@
 /*Root*/
 :root {
 	/*Search Box*/
-	--inputSearchWidth: 250px;
-	--inputSearchTopPadding: 0px;
-	--inputSearchRightPadding: 0px;
-	--inputSearchBottomPadding: 2px;
-	--inputSearchLeftPadding: 30px;
-	--inputSearchBorderColor: transparent;
-	--inputSearchBorderRadius: 30px;
-	--inputSearchIconHori: 10px;
-	--inputSearchIconSize: 16px;
-	--inputSearchFSize: 15px;
-	--inputSearchFColor: #FFFFFF;
+	@include top-searchbox_Root;
 	/*Search Box*/
 
 	/*Side Apps Main Menu*/
-	--generalNavMenuPadding: 10px;
-
-	--mainNavMenuIconSize: 30px;
-	--mainNavMenuFSize: 16px;
-	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: #FFFFFF;
-	--hoverMainNavMenuBgColor: #303031;
-	--hoverMainNavMenuFColor: #FFFFFF;	
+	@include side-app-main_Root;
 	/*Side Apps Main Menu*/
 
 	/*Side Apps Sub Menu*/
-	--subNavMenuIconSize: 30px;
-	--subNavMenuWrapBgColor: transparent;
-	--subNavMenuBgColor: transparent;
-	--subNavMenuFSize: 16px;
-	--subNavMenuFColor: white;
-	--hoverSubNavMenuBgColor: #303031;
-	--hoverSubNavMenuFColor: white;
-
-	--chevronIconSize: 16px;
+	@include side-app-sub_Root;
 	/*Side Apps Sub Menu*/
 
+	/*Footer*/
+	@include footer-style_Root;
+	/*Footer*/
+
+	/*Default Style: Dark Mode*/
+	@include dark-mode_Root;
+	/*Default Style: Dark Mode*/
+
 	--projectTitleTextFColor: #FFFFFF;
-
-	/*Footer*/
-	--footerBgColor: #242526;
-	--footerFSize: 14px;
-	--footerFColor: #FFFFFF;
-	/*Footer*/
-
-	/*Default Style: Dark Mode*/
-	--bg-color-1: #18191A;
-	--bg-color-2: #242526;
-	--bg-color-3: #3A3B3C;
-	--bg-color-4: #2176FF;
-	--bg-color-5: #666667;
-	--bg-color-6: #FFFFFF;
-	--bg-color-7: #3A3B3C;
-	--bg-color-8: #3A3B3C;
-	--bg-color-9: #3A3B3C;
-	--text-color-1: #FFFFFF;
-	--text-color-2: #000000;
-	--text-color-3: #808080;
-	--text-color-4: #BCBFC4;
-	--border-color-1: #3D3E3F;
-	--border-color-2: #121413;
-	--border-color-3: #3E3F40;
-	--border-color-4: #444749;
-	/*Default Style: Dark Mode*/
 }
 /*Root*/
-
-.light-mode {
-	--inputSearchFColor: #000000;
-	--mainNavMenuFColor: #000000;
-	--hoverMainNavMenuBgColor: #E4E6E8;
-	--hoverMainNavMenuFColor: #000000;
-	--subNavMenuFColor: #000000;
-	--hoverSubNavMenuBgColor: #E4E6E8;
-	--hoverSubNavMenuFColor: #000000;
-	--footerBgColor: #FFFFFF;
-	--footerFColor: #000000;
-	--bg-color-1: #F0F2F5;
-	--bg-color-2: #FFFFFF;
-	--bg-color-3: #F0F2F5;
-	--bg-color-5: #BCC0C4;
-	--bg-color-6: #3A3B3C;
-	--bg-color-7: #C62417;
-	--bg-color-8: #7AC4B2;
-	--bg-color-9: #7ABCF4;
-	--text-color-1: #000000;
-	--text-color-2: #FFFFFF;
-	--text-color-4: #000000;
-	--border-color-1: #DCDEE1;
-	--border-color-2: #E2E4E7;
-	--border-color-3: #F0F2F5;
-	--border-color-4: #CED0D4;
-}
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+.light-mode {
+	@include light-mode_General;
+}
+
 @font-face {
-	font-family: 'Binance PLEX';
-	src: url(../Fonts/Binance-PLEX.ttf);
+	@include font-face_General;
+}
+
+::-webkit-scrollbar-thumb {
+	@include scrollbar-thumb_General;
+}
+
+::-webkit-scrollbar-track {
+	@include scrollbar-track_General;
 }
 
 * {
-	font-family: 'Binance PLEX' !important;
-	box-sizing: border-box;
-	transition: all .15s !important;
+	@include asterisk_General;
 }
 
 body {
-	background-color: var(--bg-color-1);
+	@include body-bg_General;
 }
 
 input,
@@ -137,128 +76,98 @@ video {
 	height: 100%;
 }
 
+/*Top Section*/
 .top-section {
-	@include top-section-General;
+	@include top-section_General;
 }
 
 .top-section .top-left-menu {
-	display: flex;
-	gap: 5px;
+	@include top-left-menu_General;
 }
 
 .top-left-menu .home-logo {
-	width: 39px;
-	height: 39px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-7);
+	@include home-logo_General;
 }
 
 .top-left-menu .home-logo:hover {
-	opacity: .7;
+	@include home-logo-hover_General;
 }
 
 .top-left-menu .home-logo img {
-	width: 100%;
-	height: 100%;
+	@include home-logo-img_General;
 }
 
 .top-left-menu #searchInput_RoId {
-	background-color: var(--bg-color-3);
-	border: none;
-	height: 40px;
+	@include searchInput_RoId_General;
 }
 
 #searchInput_RoId::placeholder {
-	color: var(--text-color-4);
+	@include searchInput_RoId-placeholder_General;
 }
 
 .top-section .top-right-menu {
-	display: flex;
-	gap: 5px;
+	@include top-right-menu_General;
 }
 
 .top-right-menu .toggle-mode {
-	width: 100px;
-	font-weight: bold;
-	border: none;
-	border-radius: 10px;
-	background-color: var(--bg-color-6);
-	color: var(--text-color-2);
-	cursor: pointer;
+	@include toggle-mode_General;
 }
 
 .top-right-menu .toggle-mode:hover {
-	opacity: .7;
+	@include toggle-mode-hover_General;
 }
 
 .top-right-menu .menu {
-	display: flex;
-	width: 39px;
-	height: 39px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-8);
-	cursor: pointer;
+	@include menu_General;
 }
 
 .top-right-menu .menu:hover {
-	opacity: .7;
+	@include menu-hover_General;
 }
 
 .top-right-menu .gear-icon {
-	background-color: var(--bg-color-9);
+	@include gear-icon_General;
 }
 
 .top-right-menu .menu img {
-	width: 100%;
-	height: 100%;
+	@include menu-img_General;
 }
+/*Top Section*/
 
 /*Mid Section*/
 #rolayout_RoId {
-	height: calc(100% - 78px);
+	@include rolayout_RoId_General;
 	display: flex;
 	justify-content: space-between;
 }
 
 /*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
-	padding-block: 7px;
-	direction: ltr;
-	background-color: var(--bg-color-1);
-	z-index: 1;
+	@include sidemecha_RoId_General;
 }
 
 #sidemecha_RoId::-webkit-scrollbar-thumb {
-	visibility: hidden;
+	@include sidemecha_RoId-webkit_General;
 }
 
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	visibility: visible;
+	@include sidemecha_RoId-hover-webkit_General;
 }
 
 .sidemechaCon_RoClass .company-logo {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 15px;
+	@include company-logo_General;
 }
 
 .sidemechaCon_RoClass .company-logo img {
-	width: 100px;
-	height: 100px;
-	cursor: pointer;
+	@include company-logo-img_General;
 }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
-	font-weight: bold;
+	@include generalNavMenuText_RoClass_General;
 }
 
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
-	width: 20px;
-	height: 20px;
-	background-color: white;
-	border-radius: 50%;
+	@include chevronIconWrap_RoClass_General;
 }
 /*Left Content*/
 
@@ -336,7 +245,7 @@ video {
 
 .create-post-form #post-content {
 	width: 100%;
-	min-height: 50px;
+	min-height: 55px;
 	padding: 7px;
 	resize: none;
 	overflow-y: hidden;
@@ -351,7 +260,7 @@ video {
 	width: 240px;
 	white-space: nowrap;
 	border-radius: 10px;
-	margin-top: 10px;
+	margin-top: 8px;
 	font-size: 14px;
 	background-color: #8ED770;
 	color: #808080;
@@ -367,7 +276,7 @@ video {
 	margin-top: 10px;
 	border-radius: 10px;
 	min-height: 120px;
-	padding: 7px 7px 3px 7px;
+	padding: 8px 8px 4px 8px;
 	position: relative;
 }
 
@@ -537,61 +446,75 @@ video {
 /*Mid Content*/
 
 /*Right Content*/
-.rolayout_RoClass .right-side-content {
-	width: 250px;
+.rolayout_RoClass .right-side-container {
+	width: 300px;
 	flex-shrink: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: var(--bg-color-1);
-	margin-right: 11px;
+	background-color: transparent;
 	z-index: 1;
+	direction: rtl;
+	padding: 0px 0px 10px 20px;
 }
 
-.right-side-content::-webkit-scrollbar {
+.right-side-container::-webkit-scrollbar,
+#side-content::-webkit-scrollbar {
 	width: 7px;
 }
 
-.right-side-content::-webkit-scrollbar-thumb {
+.right-side-container::-webkit-scrollbar-thumb,
+#side-content::-webkit-scrollbar-thumb {
+	border-radius: 10px;
 	visibility: hidden;
 }
 
-.right-side-content:hover::-webkit-scrollbar-thumb {
+.right-side-container:hover::-webkit-scrollbar-thumb,
+#side-content:hover::-webkit-scrollbar-thumb {
 	visibility: visible;
 }
 
-.right-side-content .right-side-title {
+.right-side-container .side-content-wrapper {
+	overflow: hidden;
+	border-radius: 10px;
+	margin-right: 20px;
+	padding: 0 !important;
+	height: 400px;
 	margin-top: 10px;
-	padding: 10px;
-	color: var(--text-color-1);
-	font-weight: bold;
+	border: 1px solid var(--border-color-4);
+}
+
+.side-content-wrapper #side-content {
+	height: 100%;
+	overflow: auto;
+	padding-block: 7px;
+}
+
+.right-side-container .side-content-two {
+	height: 300px;
+}
+
+.right-side-container .side-content-three {
+	height: 600px;
 }
 /*Right Content*/
 
 /*Footer*/
 body #footerWrap_RoId {
-	padding: 1px;
-	border-top: 1px solid var(--border-color-1);
+	@include footerWrap_RoId_General;
 }
 
 .footerWrap_RoClass #footerTxt_RoId {
-	font-weight: bold;
+	@include footerTxt_RoId_General;
 }
 /*Footer*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
-::-webkit-scrollbar-thumb {
-	background-color: var(--bg-color-5) !important;
-	border-radius: 10px;
-}
 
-::-webkit-scrollbar-track {
-	display: none;
-}
 /***********************************************************************************************************************************************************************************************************/
 /*General Media Query*/
-@media (min-width:1081px) and (max-width:1200px) {
+@media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		max-width: 550px;
+		max-width: 450px;
 	}
 }
 /*General Media Query*/
@@ -599,16 +522,11 @@ body #footerWrap_RoId {
 /*Mobile*/
 @media all and (max-width:641px) {
 	.top-section .searchInput_RoClass {
-		--inputSearchWidth: 90px;
-	}
-
-	.top-section .searchInput_RoClass {
-		--inputSearchFSize: 12px;
+		@include searchInput_RoClass_Mobile;
 	}
 
 	.top-right-menu .toggle-mode {
-		width: 50px;
-		font-size: 12px;
+		@include toggle-mode_Mobile;
 	}
 
 	.rolayout_RoClass #mainmecha_RoClass {
@@ -627,7 +545,8 @@ body #footerWrap_RoId {
 	.create-post-form .post-category,
 	.create-post-form .post-title,
 	.create-post-form .post-content,
-	.post-list .post-title {
+	.post-list .post-title,
+	.posts .recent-posts {
 		font-size: 14px;
 	}
 
@@ -635,23 +554,11 @@ body #footerWrap_RoId {
 		font-size: 12px;
 	}
 
-	.posts .recent-posts {
-		font-size: 14px
-	}
-
-	.rolayout_RoClass .right-side-content {
+	.rolayout_RoClass .right-side-container {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-	}
-
-	.right-side-content #sidemecha_RoId {
-		display: flex;
-		justify-content: center;
-	}
-
-	.sidemecha_RoClass .sidemechaCon_RoClass {
-		width: 250px;
+		background-color: var(--bg-color-1);
 	}
 }
 /*Mobile*/
@@ -677,19 +584,11 @@ body #footerWrap_RoId {
 		font-size: 14px
 	}
 
-	.rolayout_RoClass .right-side-content {
+	.rolayout_RoClass .right-side-container {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-	}
-
-	.right-side-content #sidemecha_RoId {
-		display: flex;
-		justify-content: center;
-	}
-
-	.sidemecha_RoClass .sidemechaCon_RoClass {
-		width: 250px;
+		background-color: var(--bg-color-1);
 	}
 }
 /*Tablet*/

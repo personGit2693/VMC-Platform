@@ -1,7 +1,139 @@
 /***********************************************************************************************************************************************************************************************************/
-/*Top Section*/
+/*Search Box*/
+@mixin top-searchbox_Root {
+	--inputSearchWidth: 250px;
+	--inputSearchTopPadding: 0px;
+	--inputSearchRightPadding: 0px;
+	--inputSearchBottomPadding: 2px;
+	--inputSearchLeftPadding: 30px;
+	--inputSearchBorderColor: transparent;
+	--inputSearchBorderRadius: 30px;
+	--inputSearchIconHori: 10px;
+	--inputSearchIconSize: 16px;
+	--inputSearchFSize: 15px;
+	--inputSearchFColor: #FFFFFF;
+}
+/*Search Box*/
 
-@mixin top-section-General{
+/*Side Apps Main Menu*/
+@mixin side-app-main_Root {
+	--generalNavMenuPadding: 10px;
+
+	--mainNavMenuIconSize: 30px;
+	--mainNavMenuFSize: 16px;
+	--mainNavMenuBgColor: transparent;
+	--mainNavMenuFColor: #FFFFFF;
+	--hoverMainNavMenuBgColor: #303031;
+	--hoverMainNavMenuFColor: #FFFFFF;
+}
+/*Side Apps Main Menu*/
+
+/*Side Apps Sub Menu*/
+@mixin side-app-sub_Root {
+	--subNavMenuIconSize: 30px;
+	--subNavMenuWrapBgColor: transparent;
+	--subNavMenuBgColor: transparent;
+	--subNavMenuFSize: 16px;
+	--subNavMenuFColor: white;
+	--hoverSubNavMenuBgColor: #303031;
+	--hoverSubNavMenuFColor: white;
+
+	--chevronIconSize: 16px;
+}
+/*Side Apps Sub Menu*/
+
+/*Footer*/
+@mixin footer-style_Root {
+	--footerBgColor: #242526;
+	--footerFSize: 14px;
+	--footerFColor: #FFFFFF;
+}
+/*Footer*/
+
+/*Dark Mode (Default Style)*/
+@mixin dark-mode_Root {
+	--bg-color-1: #18191A;
+	--bg-color-2: #242526;
+	--bg-color-3: #3A3B3C;
+	--bg-color-4: #2176FF;
+	--bg-color-5: #666667;
+	--bg-color-6: #FFFFFF;
+	--bg-color-7: #3A3B3C;
+	--bg-color-8: #3A3B3C;
+	--bg-color-9: #3A3B3C;
+	--text-color-1: #FFFFFF;
+	--text-color-2: #000000;
+	--text-color-3: #808080;
+	--text-color-4: #BCBFC4;
+	--border-color-1: #3D3E3F;
+	--border-color-2: #121413;
+	--border-color-3: #3E3F40;
+	--border-color-4: #444749;
+}
+/*Dark Mode (Default Style)*/
+
+/*Light Mode*/
+@mixin light-mode_General {
+	--inputSearchFColor: #000000;
+	--mainNavMenuFColor: #000000;
+	--hoverMainNavMenuBgColor: #E4E6E8;
+	--hoverMainNavMenuFColor: #000000;
+	--subNavMenuFColor: #000000;
+	--hoverSubNavMenuBgColor: #E4E6E8;
+	--hoverSubNavMenuFColor: #000000;
+	--footerBgColor: #FFFFFF;
+	--footerFColor: #000000;
+	--bg-color-1: #F0F2F5;
+	--bg-color-2: #FFFFFF;
+	--bg-color-3: #F0F2F5;
+	--bg-color-5: #BCC0C4;
+	--bg-color-6: #3A3B3C;
+	--bg-color-7: #C62417;
+	--bg-color-8: #7AC4B2;
+	--bg-color-9: #7ABCF4;
+	--text-color-1: #000000;
+	--text-color-2: #FFFFFF;
+	--text-color-4: #000000;
+	--border-color-1: #DCDEE1;
+	--border-color-2: #E2E4E7;
+	--border-color-3: #F0F2F5;
+	--border-color-4: #CED0D4;
+}
+/*Light Mode*/
+
+/*Binance Font*/
+@mixin font-face_General {
+	font-family: 'Binance PLEX';
+	src: url(../Fonts/Binance-PLEX.ttf);
+}
+/*Binance Font*/
+
+/*Webkit*/
+@mixin scrollbar-thumb_General {
+	background-color: var(--bg-color-5) !important;
+}
+
+@mixin scrollbar-track_General {
+	display: none;
+}
+/*Webkit*/
+
+/*Asterisk*/
+@mixin asterisk_General {
+	font-family: 'Binance PLEX' !important;
+	box-sizing: border-box;
+	transition: all .15s !important;
+}
+/*Asterisk*/
+
+/*Body Background*/
+@mixin body-bg_General {
+	background-color: var(--bg-color-1);
+}
+/*Body Background*/
+
+/*Top Section*/
+@mixin top-section_General {
 	height: 55px;
 	background-color: var(--bg-color-2);
 	border-bottom: 1px solid var(--border-color-1);
@@ -12,5 +144,148 @@
 	align-items: center;
 }
 
+@mixin top-left-menu_General {
+	display: flex;
+	gap: 5px;
+}
+
+@mixin home-logo_General {
+	width: 39px;
+	height: 39px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-7);
+}
+
+@mixin home-logo-hover_General {
+	opacity: .7;
+}
+
+@mixin home-logo-img_General {
+	width: 100%;
+	height: 100%;
+}
+
+@mixin searchInput_RoId_General {
+	background-color: var(--bg-color-3);
+	border: none;
+	height: 40px;
+}
+
+@mixin searchInput_RoId-placeholder_General {
+	color: var(--text-color-4);
+}
+
+@mixin top-right-menu_General {
+	display: flex;
+	gap: 5px;
+}
+
+@mixin toggle-mode_General {
+	width: 100px;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--bg-color-6);
+	color: var(--text-color-2);
+	cursor: pointer;
+}
+
+@mixin toggle-mode-hover_General {
+	opacity: .7;
+}
+
+@mixin menu_General {
+	display: flex;
+	width: 39px;
+	height: 39px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-8);
+	cursor: pointer;
+}
+
+@mixin menu-hover_General {
+	opacity: .7;
+}
+
+@mixin gear-icon_General {
+	background-color: var(--bg-color-9);
+}
+
+@mixin menu-img_General {
+	width: 100%;
+	height: 100%;
+}
 /*Top Section*/
+
+/*Mid Section Height*/
+@mixin rolayout_RoId_General {
+	height: calc(100% - 78px);
+}
+/*Mid Section Height*/
+
+/*Left Content*/
+@mixin sidemecha_RoId_General {
+	padding-block: 7px;
+	direction: ltr;
+	background-color: var(--bg-color-1);
+	z-index: 1;
+}
+
+@mixin sidemecha_RoId-webkit_General {
+	visibility: hidden;
+}
+
+@mixin sidemecha_RoId-hover-webkit_General {
+	visibility: visible;
+}
+
+@mixin company-logo_General {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+@mixin company-logo-img_General {
+	width: 170px;
+	height: 170px;
+	cursor: pointer;
+}
+
+@mixin generalNavMenuText_RoClass_General {
+	font-weight: bold;
+}
+
+@mixin chevronIconWrap_RoClass_General {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+}
+/*Left Content*/
+
+/*Footer*/
+@mixin footerWrap_RoId_General {
+	padding: 1px;
+	border-top: 1px solid var(--border-color-1);
+}
+
+@mixin footerTxt_RoId_General {
+	font-weight: bold;
+}
+/*Footer*/
+
+/*Mobile Top Section*/
+@mixin searchInput_RoClass_Mobile {
+	--inputSearchWidth: 90px;
+	--inputSearchFSize: 12px;
+}
+
+@mixin toggle-mode_Mobile {
+	width: 50px;
+	font-size: 12px;
+}
+/*Mobile Top Section*/
+
 /***********************************************************************************************************************************************************************************************************/
