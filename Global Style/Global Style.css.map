@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,6MAA6M;AAC7M,iBAAiB;ACDjB,6MAA6M;AAC7M,eAAe;AAaf,eAAe;AACf,6MAA6M;ADZ7M,iBAAiB;AACjB,6MAA6M",
+"sources": ["Global%20Style.scss","_Mixin%20Global%20Style.scss"],
+"names": [],
+"file": "Global%20Style.css"
+}

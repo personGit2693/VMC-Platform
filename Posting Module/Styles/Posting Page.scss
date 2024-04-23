@@ -1,6 +1,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
-@import "../../Rogrid/Styles/RoStrap_Mixin";
+@import "../../Global Style/Rostrap Global";
+@import "../../Global Style/Global Style";
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -137,14 +138,7 @@ video {
 }
 
 .top-section {
-	height: 55px;
-	background-color: var(--bg-color-2);
-	border-bottom: 1px solid var(--border-color-1);
-	padding: 5px 15px;
-	display: flex;
-	gap: 5px;
-	justify-content: space-between;
-	align-items: center;
+	@include top-section-General;
 }
 
 .top-section .top-left-menu {
