@@ -3247,7 +3247,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --hoverSubNavMenuFColor: white;
   --chevronIconSize: 16px;
   /*Side Apps Sub Menu*/
-  --projectTitleTextFColor: #808080;
+  --projectTitleTextFColor: #FFFFFF;
   /*Footer*/
   --footerBgColor: #242526;
   --footerFSize: 14px;
@@ -3263,8 +3263,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --bg-color-7: #3A3B3C;
   --bg-color-8: #3A3B3C;
   --bg-color-9: #3A3B3C;
-  --bg-color-10: #7ABCF4;
-  --bg-color-11: #8ED770;
   --text-color-1: #FFFFFF;
   --text-color-2: #000000;
   --text-color-3: #808080;
@@ -3272,6 +3270,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --border-color-1: #3D3E3F;
   --border-color-2: #121413;
   --border-color-3: #3E3F40;
+  --border-color-4: #444749;
   /*Default Style: Dark Mode*/ }
 
 /*Root*/
@@ -3283,7 +3282,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --subNavMenuFColor: #000000;
   --hoverSubNavMenuBgColor: #E4E6E8;
   --hoverSubNavMenuFColor: #000000;
-  --projectTitleTextFColor: gray;
   --footerBgColor: #FFFFFF;
   --footerFColor: #000000;
   --bg-color-1: #F0F2F5;
@@ -3291,15 +3289,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --bg-color-3: #F0F2F5;
   --bg-color-5: #BCC0C4;
   --bg-color-6: #3A3B3C;
-  --bg-color-7: #E94450;
+  --bg-color-7: #C62417;
   --bg-color-8: #7AC4B2;
-  --bg-color-9: #FFBA57;
+  --bg-color-9: #7ABCF4;
   --text-color-1: #000000;
   --text-color-2: #FFFFFF;
   --text-color-4: #000000;
   --border-color-1: #DCDEE1;
   --border-color-2: #E2E4E7;
-  --border-color-3: #F0F2F5; }
+  --border-color-3: #F0F2F5;
+  --border-color-4: #CED0D4; }
 
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
@@ -3321,6 +3320,11 @@ textarea:focus {
   border: none;
   outline: none;
   color: var(--text-color-1); }
+
+img,
+video {
+  width: 100%;
+  height: 100%; }
 
 .top-section {
   height: 55px;
@@ -3393,7 +3397,7 @@ textarea:focus {
   width: 100%;
   height: 100%; }
 
-/*Mid Content*/
+/*Mid Section*/
 #rolayout_RoId {
   height: calc(100% - 78px);
   display: flex;
@@ -3401,9 +3405,10 @@ textarea:focus {
 
 /*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
-  padding: 7px 5px;
+  padding-block: 7px;
   direction: ltr;
-  background-color: var(--bg-color-1); }
+  background-color: var(--bg-color-1);
+  z-index: 1; }
 
 #sidemecha_RoId::-webkit-scrollbar-thumb {
   visibility: hidden; }
@@ -3433,19 +3438,13 @@ textarea:focus {
 /*Left Content*/
 /*Mid Content*/
 .rolayout_RoClass #mainmecha_RoClass {
-  flex: 1;
   display: flex;
-  justify-content: center; }
-
-#mainmecha_RoClass::-webkit-scrollbar-thumb {
-  visibility: hidden; }
-
-#mainmecha_RoClass:hover::-webkit-scrollbar-thumb {
-  visibility: visible; }
+  justify-content: center;
+  position: absolute;
+  height: 100%; }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
-  max-width: 600px;
-  padding-left: 0px; }
+  max-width: 600px; }
 
 .mainmecha_RoClass #burger_RoId {
   width: 39px;
@@ -3460,7 +3459,8 @@ textarea:focus {
   margin-top: 5px;
   padding: 10px;
   border-radius: 10px;
-  background-color: var(--bg-color-10);
+  white-space: nowrap;
+  background-color: #096B6C;
   border: 1px solid var(--border-color-2); }
 
 .mainmechaCon_RoClass .post-form {
@@ -3470,6 +3470,20 @@ textarea:focus {
   color: var(--text-color-1);
   background-color: var(--bg-color-2);
   border: 1px solid var(--border-color-2); }
+
+.create-post-form .post-category-label {
+  margin: 5px 5px 10px 0px;
+  display: inline-block; }
+
+.create-post-form .post-category {
+  border: none;
+  outline: 2px solid #808080;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer; }
+
+.create-post-form .post-category:hover {
+  opacity: .7; }
 
 .create-post-form .post-title,
 .create-post-form .post-content {
@@ -3492,6 +3506,52 @@ textarea:focus {
   overflow-y: hidden;
   border-radius: 10px;
   background-color: var(--bg-color-3); }
+
+.create-post-form .custom-file-upload {
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  white-space: nowrap;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: #8ED770;
+  color: #808080;
+  cursor: pointer; }
+
+.create-post-form .custom-file-upload:hover {
+  opacity: .7; }
+
+.create-post-form .file-preview-container {
+  border: 1px solid var(--border-color-4);
+  margin-top: 10px;
+  border-radius: 10px;
+  min-height: 120px;
+  padding: 7px 7px 3px 7px;
+  position: relative; }
+
+.file-preview-container .file-preview-element {
+  border-radius: 10px; }
+
+.file-preview-container .remove-file-button {
+  border: 1px solid #202224;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background-color: #3E4042;
+  color: #C0C3C7;
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  line-height: 22px;
+  cursor: pointer; }
+
+.file-preview-container .remove-file-button:hover {
+  opacity: .8; }
 
 .create-post-form .create-post-button {
   margin-top: 10px;
@@ -3520,9 +3580,9 @@ textarea:focus {
   justify-content: center;
   padding: 10px;
   border-radius: 10px;
-  background-color: var(--bg-color-11);
+  background-color: #3C746B;
   border: 1px solid var(--border-color-2);
-  color: var(--text-color-3); }
+  color: #FFFFFF; }
 
 .posts .post-list {
   margin-top: 10px;
@@ -3616,9 +3676,12 @@ textarea:focus {
 /*Right Content*/
 .rolayout_RoClass .right-side-content {
   width: 250px;
+  flex-shrink: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: var(--bg-color-1); }
+  background-color: var(--bg-color-1);
+  margin-right: 11px;
+  z-index: 1; }
 
 .right-side-content::-webkit-scrollbar {
   width: 7px; }
@@ -3636,6 +3699,7 @@ textarea:focus {
   font-weight: bold; }
 
 /*Right Content*/
+/*Footer*/
 body #footerWrap_RoId {
   padding: 1px;
   border-top: 1px solid var(--border-color-1); }
@@ -3643,6 +3707,7 @@ body #footerWrap_RoId {
 .footerWrap_RoClass #footerTxt_RoId {
   font-weight: bold; }
 
+/*Footer*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 ::-webkit-scrollbar-thumb {
@@ -3653,7 +3718,11 @@ body #footerWrap_RoId {
   display: none; }
 
 /***********************************************************************************************************************************************************************************************************/
-/*Section Comment Name*/
+/*General Media Query*/
+@media (min-width: 1081px) and (max-width: 1200px) {
+  .mainmecha_RoClass #mainmechaCon_RoId {
+    max-width: 550px; } }
+/*General Media Query*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
@@ -3668,11 +3737,16 @@ body #footerWrap_RoId {
     font-size: 12px; }
 
   .rolayout_RoClass #mainmecha_RoClass {
-    justify-content: flex-start; }
+    position: static; }
+
+  .mainmecha_RoClass #mainmechaCon_RoId {
+    max-width: 100%; }
 
   .mainmecha_RoClass .projectTitle_RoClass {
     --projectTitleTextFSize: 14px; }
 
+  .create-post-form .post-category-label,
+  .create-post-form .post-category,
   .create-post-form .post-title,
   .create-post-form .post-content,
   .post-list .post-title {
@@ -3687,12 +3761,25 @@ body #footerWrap_RoId {
   .rolayout_RoClass .right-side-content {
     width: 100%;
     height: 100%;
-    position: absolute; } }
+    position: absolute; }
+
+  .right-side-content #sidemecha_RoId {
+    display: flex;
+    justify-content: center; }
+
+  .sidemecha_RoClass .sidemechaCon_RoClass {
+    width: 250px; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  .rolayout_RoClass #mainmecha_RoClass {
+    position: static; }
+
+  .mainmecha_RoClass #mainmechaCon_RoId {
+    max-width: 100%; }
+
   .mainmecha_RoClass .projectTitle_RoClass {
     --projectTitleTextFSize: 14px; }
 
@@ -3702,7 +3789,14 @@ body #footerWrap_RoId {
   .rolayout_RoClass .right-side-content {
     width: 100%;
     height: 100%;
-    position: absolute; } }
+    position: absolute; }
+
+  .right-side-content #sidemecha_RoId {
+    display: flex;
+    justify-content: center; }
+
+  .sidemecha_RoClass .sidemechaCon_RoClass {
+    width: 250px; } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

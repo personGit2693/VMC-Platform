@@ -26,6 +26,57 @@ function autoResizeTextarea(textarea) {
 }
 /*For textarea auto resize*/
 
+/*For handling file selection*/
+document.getElementById('file-upload').addEventListener('change', function(event) {
+	const file = event.target.files[0];
+	const fileReader = new FileReader();
+
+	fileReader.onload = function(event) {
+		const filePreviewContainer = document.getElementById('file-preview-container');
+		filePreviewContainer.innerHTML = '';
+
+		const fileType = file.type.split('/')[0];
+
+		let previewElement;
+
+		if (fileType === 'image') {
+			previewElement = document.createElement('img');
+			previewElement.classList.add('file-preview-element');
+		} else if (fileType === 'video') {
+			previewElement = document.createElement('video');
+			previewElement.classList.add('file-preview-element');
+			previewElement.setAttribute('controls', ''); 
+		} else {
+			previewElement = document.createElement('div');
+			previewElement.textContent = file.name;
+		}
+
+		previewElement.src = event.target.result;
+
+		const removeButton = document.createElement('button');
+		removeButton.textContent = 'x';
+		removeButton.classList.add('remove-file-button');
+		removeButton.addEventListener('click', function() {
+			removeFilePreview();
+		});
+
+		filePreviewContainer.appendChild(previewElement);
+		filePreviewContainer.appendChild(removeButton);
+	};
+
+	fileReader.readAsDataURL(file);
+});
+
+function removeFilePreview() {
+	const fileInput = document.getElementById('file-upload');
+	const filePreviewContainer = document.getElementById('file-preview-container');
+
+	fileInput.value = '';
+
+	filePreviewContainer.innerHTML = '';
+}
+/*For handling file selection*/
+
 /*For right side content controls / functions*/
 window.addEventListener('DOMContentLoaded', () => {
 	const burgerIcon = document.querySelector('.burger-icon');

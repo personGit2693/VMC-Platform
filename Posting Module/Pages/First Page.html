@@ -30,7 +30,7 @@
 		<!--Left Side Content-->
 		<div class="sidemecha_RoClass" id="sidemecha_RoId" style="--naviBgColor:transparent;">
 			<div class="sidemechaCon_RoClass">
-				<div class="company-logo"><img src="../../src/DOH Logo.png"></div>
+				<div class="company-logo"><img src="../../src/vmclogo.png"></div>
 
 				<!--With Sub Menus-->
 				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
@@ -124,11 +124,28 @@
 
 				<!--Post Section-->
 				<div class="post-form">
-					<form class="create-post-form">
+					<form class="create-post-form" enctype="multipart/form-data">
+						<label class="post-category-label" for="post-category">Category:</label>
+						
+						<select class="post-category" id="post-category" required>
+							<option value="">Select Category</option>
+							<option value="category1">Category 1</option>
+							<option value="category2">Category 2</option>
+							<option value="category2">Category 3</option>
+							<!-- Add more category options as needed -->
+						</select>
+
 						<label class="post-title" for="post-title">Title:</label>
 						<input type="text" id="post-title" required>
+
 						<label class="post-content" for="post-content">Content:</label>
 						<textarea id="post-content" rows="1" required oninput="autoResizeTextarea(this)"></textarea>
+
+						<label for="file-upload" class="custom-file-upload">Add a Photo or Video (optional)</label>
+						<input id="file-upload" type="file" style="display: none;">
+
+						<div class="file-preview-container" id="file-preview-container"></div>
+
 						<button class="create-post-button" type="submit">Submit Post</button>
 					</form>
 				</div>
@@ -209,10 +226,9 @@
 
 		<!--Right Side Content-->
 		<div class="right-side-content">
-			<div class="right-side-title">Right Side Sample</div>
-
 			<div class="sidemecha_RoClass" id="sidemecha_RoId" style="--naviBgColor:transparent;">
 				<div class="sidemechaCon_RoClass">
+					<div class="right-side-title">Right Side Sample</div>
 
 					<!--With Sub Menus-->
 					<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
