@@ -1,6 +1,6 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Search Box*/
-@mixin top-searchbox_Root {
+@mixin top-searchbox_Root_Global {
 	--inputSearchWidth: 250px;
 	--inputSearchTopPadding: 0px;
 	--inputSearchRightPadding: 0px;
@@ -16,7 +16,7 @@
 /*Search Box*/
 
 /*Side Apps Main Menu*/
-@mixin side-app-main_Root {
+@mixin side-app-main_Root_Global {
 	--generalNavMenuPadding: 10px;
 
 	--mainNavMenuIconSize: 30px;
@@ -29,21 +29,21 @@
 /*Side Apps Main Menu*/
 
 /*Side Apps Sub Menu*/
-@mixin side-app-sub_Root {
+@mixin side-app-sub_Root_Global {
 	--subNavMenuIconSize: 30px;
 	--subNavMenuWrapBgColor: transparent;
 	--subNavMenuBgColor: transparent;
 	--subNavMenuFSize: 16px;
-	--subNavMenuFColor: white;
+	--subNavMenuFColor: #FFFFFF;
 	--hoverSubNavMenuBgColor: #303031;
-	--hoverSubNavMenuFColor: white;
+	--hoverSubNavMenuFColor: #FFFFFF;
 
 	--chevronIconSize: 16px;
 }
 /*Side Apps Sub Menu*/
 
 /*Footer*/
-@mixin footer-style_Root {
+@mixin footer-style_Root_Global {
 	--footerBgColor: #242526;
 	--footerFSize: 14px;
 	--footerFColor: #FFFFFF;
@@ -51,29 +51,23 @@
 /*Footer*/
 
 /*Dark Mode (Default Style)*/
-@mixin dark-mode_Root {
+@mixin dark-mode_Root_Global {
 	--bg-color-1: #18191A;
 	--bg-color-2: #242526;
 	--bg-color-3: #3A3B3C;
-	--bg-color-4: #2176FF;
 	--bg-color-5: #666667;
 	--bg-color-6: #FFFFFF;
 	--bg-color-7: #3A3B3C;
 	--bg-color-8: #3A3B3C;
 	--bg-color-9: #3A3B3C;
-	--text-color-1: #FFFFFF;
 	--text-color-2: #000000;
-	--text-color-3: #808080;
 	--text-color-4: #BCBFC4;
 	--border-color-1: #3D3E3F;
-	--border-color-2: #121413;
-	--border-color-3: #3E3F40;
-	--border-color-4: #444749;
 }
 /*Dark Mode (Default Style)*/
 
 /*Light Mode*/
-@mixin light-mode_General {
+@mixin light-mode_General_Global {
 	--inputSearchFColor: #000000;
 	--mainNavMenuFColor: #000000;
 	--hoverMainNavMenuBgColor: #E4E6E8;
@@ -91,35 +85,41 @@
 	--bg-color-7: #C62417;
 	--bg-color-8: #7AC4B2;
 	--bg-color-9: #7ABCF4;
-	--text-color-1: #000000;
 	--text-color-2: #FFFFFF;
 	--text-color-4: #000000;
 	--border-color-1: #DCDEE1;
-	--border-color-2: #E2E4E7;
-	--border-color-3: #F0F2F5;
-	--border-color-4: #CED0D4;
 }
 /*Light Mode*/
 
 /*Binance Font*/
-@mixin font-face_General {
+@mixin font-face_General_Global {
 	font-family: 'Binance PLEX';
 	src: url(../Fonts/Binance-PLEX.ttf);
 }
 /*Binance Font*/
 
 /*Webkit*/
-@mixin scrollbar-thumb_General {
-	background-color: var(--bg-color-5) !important;
+@mixin scrollbar_General_Global {
+	width: 7px;
 }
 
-@mixin scrollbar-track_General {
+@mixin scrollbar-thumb_General_Global {
+	background-color: var(--bg-color-5) !important;
+	border-radius: 10px;
+	visibility: hidden;
+}
+
+@mixin scrollbar-track_General_Global {
 	display: none;
+}
+
+@mixin mainmecha_RoId-scrollbar-thumb_General_Global {
+	visibility: visible;
 }
 /*Webkit*/
 
 /*Asterisk*/
-@mixin asterisk_General {
+@mixin asterisk_General_Global {
 	font-family: 'Binance PLEX' !important;
 	box-sizing: border-box;
 	transition: all .15s !important;
@@ -127,13 +127,21 @@
 /*Asterisk*/
 
 /*Body Background*/
-@mixin body-bg_General {
+@mixin body-bg_General_Global {
 	background-color: var(--bg-color-1);
 }
 /*Body Background*/
 
+/*Input and Textarea Style*/
+@mixin input-textarea-style_General_Global {
+	border: none;
+	outline: none;
+	color: var(--text-color-1);
+}
+/*Input and Textarea Style*/
+
 /*Top Section*/
-@mixin top-section_General {
+@mixin top-section_General_Global {
 	height: 55px;
 	background-color: var(--bg-color-2);
 	border-bottom: 1px solid var(--border-color-1);
@@ -144,12 +152,12 @@
 	align-items: center;
 }
 
-@mixin top-left-menu_General {
+@mixin top-left-menu_General_Global {
 	display: flex;
 	gap: 5px;
 }
 
-@mixin home-logo_General {
+@mixin home-logo_General_Global {
 	width: 39px;
 	height: 39px;
 	padding: 7px;
@@ -157,31 +165,31 @@
 	background-color: var(--bg-color-7);
 }
 
-@mixin home-logo-hover_General {
+@mixin home-logo-hover_General_Global {
 	opacity: .7;
 }
 
-@mixin home-logo-img_General {
+@mixin home-logo-img_General_Global {
 	width: 100%;
 	height: 100%;
 }
 
-@mixin searchInput_RoId_General {
+@mixin searchInput_RoId_General_Global {
 	background-color: var(--bg-color-3);
 	border: none;
 	height: 40px;
 }
 
-@mixin searchInput_RoId-placeholder_General {
+@mixin searchInput_RoId-placeholder_General_Global {
 	color: var(--text-color-4);
 }
 
-@mixin top-right-menu_General {
+@mixin top-right-menu_General_Global {
 	display: flex;
 	gap: 5px;
 }
 
-@mixin toggle-mode_General {
+@mixin toggle-mode_General_Global {
 	width: 100px;
 	font-weight: bold;
 	border: none;
@@ -191,11 +199,11 @@
 	cursor: pointer;
 }
 
-@mixin toggle-mode-hover_General {
+@mixin toggle-mode-hover_General_Global {
 	opacity: .7;
 }
 
-@mixin menu_General {
+@mixin menu_General_Global {
 	display: flex;
 	width: 39px;
 	height: 39px;
@@ -205,59 +213,55 @@
 	cursor: pointer;
 }
 
-@mixin menu-hover_General {
+@mixin menu-hover_General_Global {
 	opacity: .7;
 }
 
-@mixin gear-icon_General {
+@mixin gear-icon_General_Global {
 	background-color: var(--bg-color-9);
 }
 
-@mixin menu-img_General {
+@mixin menu-img_General_Global {
 	width: 100%;
 	height: 100%;
 }
 /*Top Section*/
 
 /*Mid Section Height*/
-@mixin rolayout_RoId_General {
+@mixin rolayout_RoId_General_Global {
 	height: calc(100% - 78px);
 }
 /*Mid Section Height*/
 
 /*Left Content*/
-@mixin sidemecha_RoId_General {
+@mixin sidemecha_RoId_General_Global {
 	padding-block: 7px;
 	direction: ltr;
 	background-color: var(--bg-color-1);
 	z-index: 1;
 }
 
-@mixin sidemecha_RoId-webkit_General {
-	visibility: hidden;
-}
-
-@mixin sidemecha_RoId-hover-webkit_General {
+@mixin sidemecha_RoId-hover-webkit_General_Global {
 	visibility: visible;
 }
 
-@mixin company-logo_General {
+@mixin company-logo_General_Global {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 15px;
 }
 
-@mixin company-logo-img_General {
+@mixin company-logo-img_General_Global {
 	width: 170px;
 	height: 170px;
 	cursor: pointer;
 }
 
-@mixin generalNavMenuText_RoClass_General {
+@mixin generalNavMenuText_RoClass_General_Global {
 	font-weight: bold;
 }
 
-@mixin chevronIconWrap_RoClass_General {
+@mixin chevronIconWrap_RoClass_General_Global {
 	width: 20px;
 	height: 20px;
 	background-color: white;
@@ -265,24 +269,34 @@
 }
 /*Left Content*/
 
+/*Burger*/
+@mixin burger_RoId_General_Global {
+	width: 39px;
+	height: 39px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: var(--bg-color-8);
+}
+/*Burger*/
+
 /*Footer*/
-@mixin footerWrap_RoId_General {
+@mixin footerWrap_RoId_General_Global {
 	padding: 1px;
 	border-top: 1px solid var(--border-color-1);
 }
 
-@mixin footerTxt_RoId_General {
+@mixin footerTxt_RoId_General_Global {
 	font-weight: bold;
 }
 /*Footer*/
 
 /*Mobile Top Section*/
-@mixin searchInput_RoClass_Mobile {
+@mixin searchInput_RoClass_Mobile_Global {
 	--inputSearchWidth: 90px;
 	--inputSearchFSize: 12px;
 }
 
-@mixin toggle-mode_Mobile {
+@mixin toggle-mode_Mobile_Global {
 	width: 50px;
 	font-size: 12px;
 }

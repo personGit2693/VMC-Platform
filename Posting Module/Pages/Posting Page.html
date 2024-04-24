@@ -94,7 +94,7 @@
 		<!--Left Side Content-->
 
 		<!--Mid Content-->
-		<div class="mainmecha_RoClass" id="mainmecha_RoClass" style="--mainBodyBgColor:transparent;">
+		<div class="mainmecha_RoClass" id="mainmecha_RoId" style="--mainBodyBgColor:transparent;">
 			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" id="mainmechaCon_RoId" style="--projectTitle_BgColor:transparent;">
 				<div class="burger_RoClass" id="burger_RoId"><img class="burgerIcon_RoClass"></div>
 
@@ -119,8 +119,11 @@
 						<input type="text" id="post-title" required>
 
 						<label class="post-content" for="post-content">Content:</label>
-						<textarea id="post-content" rows="1" required oninput="autoResizeTextarea(this)"></textarea>
 
+						<div class="textarea-container">
+							<textarea id="post-content" rows="1" required oninput="autoResizeTextarea(this)"></textarea>
+						</div>
+						
 						<label for="file-upload" class="custom-file-upload">Add a Photo or Video (optional)</label>
 						<input id="file-upload" type="file" style="display: none;">
 
@@ -427,7 +430,7 @@
 	</div>
 	<!--Bottom Section / Footer-->
 
-	<script type="text/javascript" src="../Client Side/First Page.js"></script>
+	<script type="text/javascript" src="../Client Side/Posting Page.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 </body>
 </html>

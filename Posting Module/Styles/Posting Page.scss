@@ -2,543 +2,409 @@
 /*Import Mixins*/
 @import "../../Global Style/Rostrap Global";
 @import "../../Global Style/Global Style";
+@import "Mixin Posting";
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 
-
 /***********************************************************************************************************************************************************************************************************/
-
 
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
 	/*Search Box*/
-	@include top-searchbox_Root;
+	@include top-searchbox_Root_Global;
 	/*Search Box*/
 
 	/*Side Apps Main Menu*/
-	@include side-app-main_Root;
+	@include side-app-main_Root_Global;
 	/*Side Apps Main Menu*/
 
 	/*Side Apps Sub Menu*/
-	@include side-app-sub_Root;
+	@include side-app-sub_Root_Global;
 	/*Side Apps Sub Menu*/
 
+	/*Project Title*/
+	@include project-title_Root_Posting;
+	/*Project Title*/
+
 	/*Footer*/
-	@include footer-style_Root;
+	@include footer-style_Root_Global;
 	/*Footer*/
 
-	/*Default Style: Dark Mode*/
-	@include dark-mode_Root;
-	/*Default Style: Dark Mode*/
-
-	--projectTitleTextFColor: #FFFFFF;
+	/*Dark Mode (Default Style)*/
+	@include dark-mode_Root_Global;
+	@include dark-mode_Root_Posting;
+	/*Dark Mode (Default Style)*/
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
 .light-mode {
-	@include light-mode_General;
+	@include light-mode_General_Global;
+	@include light-mode_General_Posting;
 }
 
 @font-face {
-	@include font-face_General;
+	@include font-face_General_Global;
+}
+
+::-webkit-scrollbar {
+	@include scrollbar_General_Global;
 }
 
 ::-webkit-scrollbar-thumb {
-	@include scrollbar-thumb_General;
+	@include scrollbar-thumb_General_Global;
 }
 
 ::-webkit-scrollbar-track {
-	@include scrollbar-track_General;
+	@include scrollbar-track_General_Global;
 }
 
 * {
-	@include asterisk_General;
+	@include asterisk_General_Global;
 }
 
 body {
-	@include body-bg_General;
+	@include body-bg_General_Global;
 }
 
 input,
 input:focus,
 textarea,
 textarea:focus {
-	border: none;
-	outline: none;
-	color: var(--text-color-1);
+	@include input-textarea-style_General_Global;
 }
 
 img,
 video {
-	width: 100%;
-	height: 100%;
+	@include img-video_General_Posting;
 }
 
 /*Top Section*/
 .top-section {
-	@include top-section_General;
+	@include top-section_General_Global;
 }
 
 .top-section .top-left-menu {
-	@include top-left-menu_General;
+	@include top-left-menu_General_Global;
 }
 
 .top-left-menu .home-logo {
-	@include home-logo_General;
+	@include home-logo_General_Global;
 }
 
 .top-left-menu .home-logo:hover {
-	@include home-logo-hover_General;
+	@include home-logo-hover_General_Global;
 }
 
 .top-left-menu .home-logo img {
-	@include home-logo-img_General;
+	@include home-logo-img_General_Global;
 }
 
 .top-left-menu #searchInput_RoId {
-	@include searchInput_RoId_General;
+	@include searchInput_RoId_General_Global;
 }
 
 #searchInput_RoId::placeholder {
-	@include searchInput_RoId-placeholder_General;
+	@include searchInput_RoId-placeholder_General_Global;
 }
 
 .top-section .top-right-menu {
-	@include top-right-menu_General;
+	@include top-right-menu_General_Global;
 }
 
 .top-right-menu .toggle-mode {
-	@include toggle-mode_General;
+	@include toggle-mode_General_Global;
 }
 
 .top-right-menu .toggle-mode:hover {
-	@include toggle-mode-hover_General;
+	@include toggle-mode-hover_General_Global;
 }
 
 .top-right-menu .menu {
-	@include menu_General;
+	@include menu_General_Global;
 }
 
 .top-right-menu .menu:hover {
-	@include menu-hover_General;
+	@include menu-hover_General_Global;
 }
 
 .top-right-menu .gear-icon {
-	@include gear-icon_General;
+	@include gear-icon_General_Global;
 }
 
 .top-right-menu .menu img {
-	@include menu-img_General;
+	@include menu-img_General_Global;
 }
 /*Top Section*/
 
-/*Mid Section*/
+/*Mid Section Start*/
 #rolayout_RoId {
-	@include rolayout_RoId_General;
-	display: flex;
-	justify-content: space-between;
+	@include rolayout_RoId_General_Global;
+	@include rolayout_RoId_General_Posting;
 }
 
 /*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
-	@include sidemecha_RoId_General;
-}
-
-#sidemecha_RoId::-webkit-scrollbar-thumb {
-	@include sidemecha_RoId-webkit_General;
+	@include sidemecha_RoId_General_Global;
 }
 
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	@include sidemecha_RoId-hover-webkit_General;
+	@include sidemecha_RoId-hover-webkit_General_Global;
 }
 
 .sidemechaCon_RoClass .company-logo {
-	@include company-logo_General;
+	@include company-logo_General_Global;
 }
 
 .sidemechaCon_RoClass .company-logo img {
-	@include company-logo-img_General;
+	@include company-logo-img_General_Global;
 }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
-	@include generalNavMenuText_RoClass_General;
+	@include generalNavMenuText_RoClass_General_Global;
 }
 
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
-	@include chevronIconWrap_RoClass_General;
+	@include chevronIconWrap_RoClass_General_Global;
 }
 /*Left Content*/
 
 /*Mid Content*/
-.rolayout_RoClass #mainmecha_RoClass {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	height: 100%;
+.rolayout_RoClass #mainmecha_RoId {
+	@include mainmecha_RoClass_General_Posting;
+}
+
+#mainmecha_RoId::-webkit-scrollbar-thumb {
+	@include mainmecha_RoId-scrollbar-thumb_General_Global;
 }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
-	max-width: 600px;
+	@include mainmechaCon_RoId_General_Posting;
 }
 
 .mainmecha_RoClass #burger_RoId {
-	width: 39px;
-	height: 39px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-8);
+	@include burger_RoId_General_Global;
 }
 
 .mainmechaCon_RoClass #projectTitle_RoId {
-	display: flex;
-	justify-content: center;
-	margin-top: 5px;
-	padding: 10px;
-	border-radius: 10px;
-	white-space: nowrap;
-	background-color: #096B6C;
-	border: 1px solid var(--border-color-2);
+	@include projectTitle_RoId_General_Posting;
 }
 
 .mainmechaCon_RoClass .post-form {
-	margin-top: 10px;
-	padding: 10px;
-	border-radius: 10px;
-	color: var(--text-color-1);
-	background-color: var(--bg-color-2);
-	border: 1px solid var(--border-color-2);
+	@include post-form_General_Posting;
 }
 
 .create-post-form .post-category-label {
-	margin: 5px 5px 10px 0px;
-	display: inline-block;
+	@include post-category-label_General_Posting;
 }
 
 .create-post-form .post-category {
-	border: none;
-	outline: 2px solid #808080;
-	border-radius: 5px;
-	padding: 3px;
-	cursor: pointer;
+	@include post-category_General_Posting;
 }
 
 .create-post-form .post-category:hover {
-	opacity: .7;
+	@include post-category-hover_General_Posting;
 }
 
 .create-post-form .post-title,
 .create-post-form .post-content {
-	display: block;
-	margin: 10px 0px 3px 0px;
-	font-size: 16px;
+	@include post-title-1_General_Posting;
 }
 
 .create-post-form #post-title {
-	width: 100%;
-	height: 30px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include post-title-id_General_Posting;
 }
 
-.create-post-form #post-content {
-	width: 100%;
-	min-height: 55px;
-	padding: 7px;
-	resize: none;
-	overflow-y: hidden;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+.create-post-form .textarea-container {
+	@include textarea-container_General_Posting;
+}
+
+.textarea-container #post-content {
+	@include post-content-id_General_Posting;
+}
+
+#post-content:hover::-webkit-scrollbar-thumb {
+	@include post-content-id-hover-webkit_General_Posting;
 }
 
 .create-post-form .custom-file-upload {
-	padding: 7px;
-	display: flex;
-	justify-content: center;
-	width: 240px;
-	white-space: nowrap;
-	border-radius: 10px;
-	margin-top: 8px;
-	font-size: 14px;
-	background-color: #8ED770;
-	color: #808080;
-	cursor: pointer;
+	@include custom-file-upload_General_Posting;
 }
 
 .create-post-form .custom-file-upload:hover {
-	opacity: .7;
+	@include custom-file-upload-hover_General_Posting;
 }
 
 .create-post-form .file-preview-container {
-	border: 1px solid var(--border-color-4);
-	margin-top: 10px;
-	border-radius: 10px;
-	min-height: 120px;
-	padding: 8px 8px 4px 8px;
-	position: relative;
+	@include file-preview-container_General_Posting;
 }
 
 .file-preview-container .file-preview-element {
-	border-radius: 10px;
+	@include file-preview-element_General_Posting;
 }
 
 .file-preview-container .remove-file-button {
-	border: 1px solid #202224;
-	position: absolute;
-	top: 18px;
-	right: 15px;
-	background-color: #3E4042;
-	color: #C0C3C7;
-	height: 30px;
-	width: 30px;
-	font-size: 25px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	line-height: 22px;
-	cursor: pointer;
+	@include remove-file-button_General_Posting;
 }
 
 .file-preview-container .remove-file-button:hover {
-	opacity: .8;
+	@include remove-file-button-hover_General_Posting;
 }
 
 .create-post-form .create-post-button {
-	margin-top: 10px;
-	border: none;
-	padding: 7px 15px;
-	border-radius: 3px;
-	display: block;
-	background-color: #2176FF;
-	color: #FFFFFF;
-	cursor: pointer;
+	@include create-post-button_General_Posting;
 }
 
 .create-post-form .create-post-button:hover {
-	opacity: .7;
+	@include create-post-button-hover_General_Posting;
 }
 
 .create-post-form .create-post-button:active {
-	opacity: .5;
+	@include create-post-button-active_General_Posting;
 }
 
 .mainmechaCon_RoClass .posts {
-	color: var(--text-color-1);
-	margin-top: 10px;
-	font-size: 14px;
+	@include posts_General_Posting;
 }
 
 .posts .recent-posts {
-	font-weight: bold;
-	display: flex;
-	justify-content: center;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: #3C746B;
-	border: 1px solid var(--border-color-2);
-	color: #FFFFFF;
+	@include recent-posts_General_Posting;
 }
 
 .posts .post-list {
-	margin-top: 10px;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: var(--bg-color-2);
-	border: 1px solid var(--border-color-2);
+	@include post-list_General_Posting;
 }
 
 .posts button {
-	cursor: pointer;
-	border-radius: 3px;
-	border: none;
-	padding: 2px 8px;
-	background-color: var(--bg-color-3);
-	color: var(--text-color-1);
+	@include posts-buttons_General_Posting;
 }
 
 .posts button:hover {
-	opacity: .7;
+	@include posts-buttons-hover_General_Posting;
 }
 
 .posts button:active {
-	opacity: .5;
+	@include posts-buttons-active_General_Posting;
 }
 
 .post-list .post-title {
-	margin-bottom: 7px;
-	font-size: 16px;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include post-title-2_General_Posting;
 }
 
 .post-list .post-content {
-	width: 100%;
-	margin-bottom: 7px;
-	white-space: normal;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include post-content_General_Posting;
 }
 
 .post-list .post-actions,
 .comment .comment-actions,
 .comment .reply-actions {
-	display: flex;
-	align-items: center;
-	gap: 6px;
+	@include post-actions_General_Posting;
 }
 
 .post-actions .post-like-count {
-	margin-right: 10px;
+	@include post-like-count_General_Posting;
 }
 
 .post-list .date-posted {
-	font-size: 11px;
-	margin-block: 5px;
-	white-space: normal;
+	@include date-posted_General_Posting;
 }
 
 .comment-section .comment {
-	border-left: 2px solid var(--border-color-3);
-	margin-left: 20px;
-	padding-left: 10px;
+	@include comment_General_Posting;
 }
 
 .comment .post-comment {
-	margin-bottom: 7px;
-	white-space: normal;
-	padding-block: 7px;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include post-comment_General_Posting;
 }
 
 .comment .reply-input {
-	width: 100%;
-	margin-block: 5px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include reply-input_General_Posting;
 }
 
 .comment .post-reply {
-	margin-bottom: 7px;
-	white-space: normal;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include post-reply_General_Posting;
 }
 
 .comment-actions .comment-like-count {
-	margin-right: 10px;
+	@include comment-like-count_General_Posting;
 }
 
 .post-list .comment-input {
-	margin: 10px 0px 5px 0px;
-	width: 100%;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
+	@include comment-input_General_Posting;
 }
 /*Mid Content*/
 
 /*Right Content*/
 .rolayout_RoClass .right-side-container {
-	width: 300px;
-	flex-shrink: 0;
-	overflow-y: auto;
-	overflow-x: hidden;
-	background-color: transparent;
-	z-index: 1;
-	direction: rtl;
-	padding: 0px 0px 10px 20px;
-}
-
-.right-side-container::-webkit-scrollbar,
-#side-content::-webkit-scrollbar {
-	width: 7px;
-}
-
-.right-side-container::-webkit-scrollbar-thumb,
-#side-content::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	visibility: hidden;
+	@include right-side-container_General_Posting;
 }
 
 .right-side-container:hover::-webkit-scrollbar-thumb,
 #side-content:hover::-webkit-scrollbar-thumb {
-	visibility: visible;
+	@include right-side-container-hover-webkit_General_Posting;
 }
 
 .right-side-container .side-content-wrapper {
-	overflow: hidden;
-	border-radius: 10px;
-	margin-right: 20px;
-	padding: 0 !important;
-	height: 400px;
-	margin-top: 10px;
-	border: 1px solid var(--border-color-4);
+	@include side-content-wrapper_General_Posting;
 }
 
 .side-content-wrapper #side-content {
-	height: 100%;
-	overflow: auto;
-	padding-block: 7px;
+	@include side-content-id_General_Posting;
 }
 
 .right-side-container .side-content-two {
-	height: 300px;
+	@include side-content-two_General_Posting;
 }
 
 .right-side-container .side-content-three {
-	height: 600px;
+	@include side-content-three_General_Posting;
 }
 /*Right Content*/
+/*Mid Section End*/
 
-/*Footer*/
+/*Bottom Section / Footer*/
 body #footerWrap_RoId {
-	@include footerWrap_RoId_General;
+	@include footerWrap_RoId_General_Global;
 }
 
 .footerWrap_RoClass #footerTxt_RoId {
-	@include footerTxt_RoId_General;
+	@include footerTxt_RoId_General_Global;
 }
-/*Footer*/
+/*Bottom Section / Footer*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
-/*General Media Query*/
+/*Other Media Query*/
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		max-width: 450px;
+		@include mainmechaCon_RoId_MQ_Posting;
 	}
 }
-/*General Media Query*/
+/*Other Media Query*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px) {
 	.top-section .searchInput_RoClass {
-		@include searchInput_RoClass_Mobile;
+		@include searchInput_RoClass_Mobile_Global;
 	}
 
 	.top-right-menu .toggle-mode {
-		@include toggle-mode_Mobile;
+		@include toggle-mode_Mobile_Global;
 	}
 
-	.rolayout_RoClass #mainmecha_RoClass {
-		position: static;
+	.rolayout_RoClass #mainmecha_RoId {
+		@include mainmecha_RoId_Mobile_Posting;
 	}
 
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		max-width: 100%;
+		@include mainmechaCon_RoId_Mobile_Posting;
 	}
 
 	.mainmecha_RoClass .projectTitle_RoClass {
-		--projectTitleTextFSize: 14px;
+		@include projectTitle_RoClass_Mobile_Posting;
 	}
 
 	.create-post-form .post-category-label,
@@ -547,78 +413,72 @@ body #footerWrap_RoId {
 	.create-post-form .post-content,
 	.post-list .post-title,
 	.posts .recent-posts {
-		font-size: 14px;
+		@include post-category-label_Mobile_Posting;
 	}
 
 	.mainmechaCon_RoClass .posts {
-		font-size: 12px;
+		@include posts_Mobile_Posting;
 	}
 
 	.rolayout_RoClass .right-side-container {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background-color: var(--bg-color-1);
+		@include right-side-container_Mobile_Posting;
 	}
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 
-
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px) {
-	.rolayout_RoClass #mainmecha_RoClass {
-		position: static;
+	.rolayout_RoClass #mainmecha_RoId {
+		@include mainmecha_RoId_Tablet_Posting;
 	}
 
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		max-width: 100%;
+		@include mainmechaCon_RoId_Tablet_Posting;
 	}
 
 	.mainmecha_RoClass .projectTitle_RoClass {
-		--projectTitleTextFSize: 14px;
+		@include projectTitle_RoClass_Tablet_Posting;
 	}
 
 	.posts .recent-posts {
-		font-size: 14px
+		@include recent-posts_Tablet_Posting;
 	}
 
 	.rolayout_RoClass .right-side-container {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background-color: var(--bg-color-1);
+		@include right-side-container_Tablet_Posting;
 	}
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 
-
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px) {
 	.mainmecha_RoClass .projectTitle_RoClass {
-		--projectTitleTextFSize: 16px;
+		@include projectTitle_RoClass_Laptop_Posting;
 	}
 
 	.posts .recent-posts {
-		font-size: 16px
+		@include recent-posts_Laptop_Posting;
 	}
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 
-
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px) {
 	.mainmecha_RoClass .projectTitle_RoClass {
-		--projectTitleTextFSize: 16px;
+		@include projectTitle_RoClass_Desktop_Posting;
 	}
 
 	.posts .recent-posts {
-		font-size: 16px
+		@include recent-posts_Desktop_Posting;
 	}
 }
 /*Desktop*/

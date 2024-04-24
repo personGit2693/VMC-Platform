@@ -3236,12 +3236,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Asterisk*/
 /*Body Background*/
 /*Body Background*/
+/*Input and Textarea Style*/
+/*Input and Textarea Style*/
 /*Top Section*/
 /*Top Section*/
 /*Mid Section Height*/
 /*Mid Section Height*/
 /*Left Content*/
 /*Left Content*/
+/*Burger*/
+/*Burger*/
 /*Footer*/
 /*Footer*/
 /*Mobile Top Section*/
@@ -3249,6 +3253,41 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
+/*************************************************************************************/
+/*Root*/
+/*Dark Mode (Default Style)*/
+/*Dark Mode (Default Style)*/
+/*Root*/
+/*************************************************************************************/
+/*General*/
+/*Mid Section Start*/
+/*Mid Content*/
+/*Mid Content*/
+/*Right Content*/
+/*Right Content*/
+/*Mid Section End*/
+/*General*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Other Media Query*/
+/*Other Media Query*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Mobile @media (max-width:641px)*/
+/*Mobile @media (max-width:641px)*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Tablet @media (min-width:642px) and (max-width:1080px)*/
+/*Tablet @media (min-width:642px) and (max-width:1080px)*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Laptop @media (min-width:1081px) and (max-width:1600px)*/
+/*Laptop @media (min-width:1081px) and (max-width:1600px)*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Desktop @media (min-width:1601px)*/
+/*Desktop @media (min-width:1601px)*/
+/*************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3282,36 +3321,38 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --subNavMenuWrapBgColor: transparent;
   --subNavMenuBgColor: transparent;
   --subNavMenuFSize: 16px;
-  --subNavMenuFColor: white;
+  --subNavMenuFColor: #FFFFFF;
   --hoverSubNavMenuBgColor: #303031;
-  --hoverSubNavMenuFColor: white;
+  --hoverSubNavMenuFColor: #FFFFFF;
   --chevronIconSize: 16px;
   /*Side Apps Sub Menu*/
+  /*Project Title*/
+  --projectTitleTextFColor: #FFFFFF;
+  /*Project Title*/
   /*Footer*/
   --footerBgColor: #242526;
   --footerFSize: 14px;
   --footerFColor: #FFFFFF;
   /*Footer*/
-  /*Default Style: Dark Mode*/
+  /*Dark Mode (Default Style)*/
   --bg-color-1: #18191A;
   --bg-color-2: #242526;
   --bg-color-3: #3A3B3C;
-  --bg-color-4: #2176FF;
   --bg-color-5: #666667;
   --bg-color-6: #FFFFFF;
   --bg-color-7: #3A3B3C;
   --bg-color-8: #3A3B3C;
   --bg-color-9: #3A3B3C;
-  --text-color-1: #FFFFFF;
   --text-color-2: #000000;
-  --text-color-3: #808080;
   --text-color-4: #BCBFC4;
   --border-color-1: #3D3E3F;
+  --bg-color-4: #2176FF;
+  --text-color-1: #FFFFFF;
+  --text-color-3: #808080;
   --border-color-2: #121413;
   --border-color-3: #3E3F40;
   --border-color-4: #444749;
-  /*Default Style: Dark Mode*/
-  --projectTitleTextFColor: #FFFFFF; }
+  /*Dark Mode (Default Style)*/ }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3334,10 +3375,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --bg-color-7: #C62417;
   --bg-color-8: #7AC4B2;
   --bg-color-9: #7ABCF4;
-  --text-color-1: #000000;
   --text-color-2: #FFFFFF;
   --text-color-4: #000000;
   --border-color-1: #DCDEE1;
+  --text-color-1: #000000;
   --border-color-2: #E2E4E7;
   --border-color-3: #F0F2F5;
   --border-color-4: #CED0D4; }
@@ -3345,8 +3386,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 @font-face {
   font-family: 'Binance PLEX';
   src: url(../Fonts/Binance-PLEX.ttf); }
+::-webkit-scrollbar {
+  width: 7px; }
+
 ::-webkit-scrollbar-thumb {
-  background-color: var(--bg-color-5) !important; }
+  background-color: var(--bg-color-5) !important;
+  border-radius: 10px;
+  visibility: hidden; }
 
 ::-webkit-scrollbar-track {
   display: none; }
@@ -3370,7 +3416,8 @@ textarea:focus {
 img,
 video {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: block; }
 
 /*Top Section*/
 .top-section {
@@ -3445,7 +3492,7 @@ video {
   height: 100%; }
 
 /*Top Section*/
-/*Mid Section*/
+/*Mid Section Start*/
 #rolayout_RoId {
   height: calc(100% - 78px);
   display: flex;
@@ -3457,9 +3504,6 @@ video {
   direction: ltr;
   background-color: var(--bg-color-1);
   z-index: 1; }
-
-#sidemecha_RoId::-webkit-scrollbar-thumb {
-  visibility: hidden; }
 
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
@@ -3485,11 +3529,14 @@ video {
 
 /*Left Content*/
 /*Mid Content*/
-.rolayout_RoClass #mainmecha_RoClass {
+.rolayout_RoClass #mainmecha_RoId {
   display: flex;
   justify-content: center;
   position: absolute;
   height: 100%; }
+
+#mainmecha_RoId::-webkit-scrollbar-thumb {
+  visibility: visible; }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
   max-width: 600px; }
@@ -3541,19 +3588,25 @@ video {
 
 .create-post-form #post-title {
   width: 100%;
-  height: 30px;
   padding: 7px;
   border-radius: 10px;
   background-color: var(--bg-color-3); }
 
-.create-post-form #post-content {
-  width: 100%;
-  min-height: 55px;
-  padding: 7px;
-  resize: none;
-  overflow-y: hidden;
+.create-post-form .textarea-container {
+  padding: 7px 5px 7px 7px;
   border-radius: 10px;
   background-color: var(--bg-color-3); }
+
+.textarea-container #post-content {
+  width: 100%;
+  min-height: 50px;
+  max-height: 300px;
+  resize: none;
+  background-color: transparent;
+  display: block; }
+
+#post-content:hover::-webkit-scrollbar-thumb {
+  visibility: visible; }
 
 .create-post-form .custom-file-upload {
   padding: 7px;
@@ -3562,7 +3615,7 @@ video {
   width: 240px;
   white-space: nowrap;
   border-radius: 10px;
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 14px;
   background-color: #8ED770;
   color: #808080;
@@ -3576,7 +3629,7 @@ video {
   margin-top: 10px;
   border-radius: 10px;
   min-height: 120px;
-  padding: 8px 8px 4px 8px;
+  padding: 8px;
   position: relative; }
 
 .file-preview-container .file-preview-element {
@@ -3732,15 +3785,6 @@ video {
   direction: rtl;
   padding: 0px 0px 10px 20px; }
 
-.right-side-container::-webkit-scrollbar,
-#side-content::-webkit-scrollbar {
-  width: 7px; }
-
-.right-side-container::-webkit-scrollbar-thumb,
-#side-content::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  visibility: hidden; }
-
 .right-side-container:hover::-webkit-scrollbar-thumb,
 #side-content:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
@@ -3766,7 +3810,8 @@ video {
   height: 600px; }
 
 /*Right Content*/
-/*Footer*/
+/*Mid Section End*/
+/*Bottom Section / Footer*/
 body #footerWrap_RoId {
   padding: 1px;
   border-top: 1px solid var(--border-color-1); }
@@ -3774,15 +3819,16 @@ body #footerWrap_RoId {
 .footerWrap_RoClass #footerTxt_RoId {
   font-weight: bold; }
 
-/*Footer*/
+/*Bottom Section / Footer*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
-/*General Media Query*/
+/*Other Media Query*/
 @media (min-width: 1081px) and (max-width: 1250px) {
   .mainmecha_RoClass #mainmechaCon_RoId {
     max-width: 450px; } }
-/*General Media Query*/
+/*Other Media Query*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
@@ -3794,7 +3840,7 @@ body #footerWrap_RoId {
     width: 50px;
     font-size: 12px; }
 
-  .rolayout_RoClass #mainmecha_RoClass {
+  .rolayout_RoClass #mainmecha_RoId {
     position: static; }
 
   .mainmecha_RoClass #mainmechaCon_RoId {
@@ -3821,10 +3867,11 @@ body #footerWrap_RoId {
     background-color: var(--bg-color-1); } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  .rolayout_RoClass #mainmecha_RoClass {
+  .rolayout_RoClass #mainmecha_RoId {
     position: static; }
 
   .mainmecha_RoClass #mainmechaCon_RoId {
@@ -3843,6 +3890,7 @@ body #footerWrap_RoId {
     background-color: var(--bg-color-1); } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
@@ -3853,6 +3901,7 @@ body #footerWrap_RoId {
     font-size: 16px; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
+/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
