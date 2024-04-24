@@ -13,52 +13,54 @@
 /*Root*/
 :root {
 	/*Search Box*/
-	@include top-searchbox_Root;
+	@include global_top-searchbox;
 	/*Search Box*/
 
 	/*Side Apps Main Menu*/
-	@include side-app-main_Root;
+	@include global_side-app-main;
 	/*Side Apps Main Menu*/
 
 	/*Side Apps Sub Menu*/
-	@include side-app-sub_Root;
+	@include global_side-app-sub;
 	/*Side Apps Sub Menu*/
 
 	/*Footer*/
-	@include footer-style_Root;
+	@include global_footer-style;
 	/*Footer*/
 
 	/*Default Style: Dark Mode*/
-	@include dark-mode_Root;
+	@include global_dark-mode;
 	/*Default Style: Dark Mode*/
 
 	--projectTitleTextFColor: #FFFFFF;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
 /*General*/
 .light-mode {
-	@include light-mode_General;
+	@include global_light-mode;
 }
 
 @font-face {
-	@include font-face_General;
+	@include global_font-face;
 }
 
 ::-webkit-scrollbar-thumb {
-	@include scrollbar-thumb_General;
+	@include global_scrollbar-thumb;
 }
 
 ::-webkit-scrollbar-track {
-	@include scrollbar-track_General;
+	@include global_scrollbar-track;
 }
 
 * {
-	@include asterisk_General;
+	@include global_asterisk;
 }
 
 body {
-	@include body-bg_General;
+	@include global_body-bg;
 }
 
 input,
@@ -78,96 +80,96 @@ video {
 
 /*Top Section*/
 .top-section {
-	@include top-section_General;
+	@include global_top-section;
 }
 
 .top-section .top-left-menu {
-	@include top-left-menu_General;
+	@include global_top-left-menu;
 }
 
 .top-left-menu .home-logo {
-	@include home-logo_General;
+	@include global_home-logo;
 }
 
 .top-left-menu .home-logo:hover {
-	@include home-logo-hover_General;
+	@include global_home-logo-hover;
 }
 
 .top-left-menu .home-logo img {
-	@include home-logo-img_General;
+	@include global_home-logo-img;
 }
 
 .top-left-menu #searchInput_RoId {
-	@include searchInput_RoId_General;
+	@include global_searchInput_RoId;
 }
 
 #searchInput_RoId::placeholder {
-	@include searchInput_RoId-placeholder_General;
+	@include global_searchInput_RoId-placeholder;
 }
 
 .top-section .top-right-menu {
-	@include top-right-menu_General;
+	@include global_top-right-menu;
 }
 
 .top-right-menu .toggle-mode {
-	@include toggle-mode_General;
+	@include global_toggle-mode;
 }
 
 .top-right-menu .toggle-mode:hover {
-	@include toggle-mode-hover_General;
+	@include global_toggle-mode-hover;
 }
 
-.top-right-menu .menu {
-	@include menu_General;
+.top-right-menu .menus {
+	@include global_menus;
 }
 
-.top-right-menu .menu:hover {
-	@include menu-hover_General;
+.top-right-menu .menus:hover {
+	@include global_menus-hover;
 }
 
 .top-right-menu .gear-icon {
-	@include gear-icon_General;
+	@include global_gear-icon;
 }
 
-.top-right-menu .menu img {
-	@include menu-img_General;
+.top-right-menu .menus img {
+	@include global_menus-img;
 }
 /*Top Section*/
 
 /*Mid Section*/
 #rolayout_RoId {
-	@include rolayout_RoId_General;
+	@include global_rolayout_RoId;
 	display: flex;
 	justify-content: space-between;
 }
 
 /*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
-	@include sidemecha_RoId_General;
+	@include global_sidemecha_RoId;
 }
 
 #sidemecha_RoId::-webkit-scrollbar-thumb {
-	@include sidemecha_RoId-webkit_General;
+	@include global_sidemecha_RoId-webkit;
 }
 
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	@include sidemecha_RoId-hover-webkit_General;
+	@include global_sidemecha_RoId-hover-webkit;
 }
 
 .sidemechaCon_RoClass .company-logo {
-	@include company-logo_General;
+	@include global_company-logo;
 }
 
 .sidemechaCon_RoClass .company-logo img {
-	@include company-logo-img_General;
+	@include global_company-logo-img;
 }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
-	@include generalNavMenuText_RoClass_General;
+	@include global_generalNavMenuText_RoClass;
 }
 
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
-	@include chevronIconWrap_RoClass_General;
+	@include global_chevronIconWrap_RoClass;
 }
 /*Left Content*/
 
@@ -500,11 +502,11 @@ video {
 
 /*Footer*/
 body #footerWrap_RoId {
-	@include footerWrap_RoId_General;
+	@include global_footerWrap_RoId;
 }
 
 .footerWrap_RoClass #footerTxt_RoId {
-	@include footerTxt_RoId_General;
+	@include global_footerTxt_RoId;
 }
 /*Footer*/
 /*General*/
@@ -519,14 +521,16 @@ body #footerWrap_RoId {
 }
 /*General Media Query*/
 /***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px) {
 	.top-section .searchInput_RoClass {
-		@include searchInput_RoClass_Mobile;
+		@include global_searchInput_RoClass_Mobile;
 	}
 
 	.top-right-menu .toggle-mode {
-		@include toggle-mode_Mobile;
+		@include global_toggle-mode_Mobile;
 	}
 
 	.rolayout_RoClass #mainmecha_RoClass {
@@ -581,7 +585,7 @@ body #footerWrap_RoId {
 	}
 
 	.posts .recent-posts {
-		font-size: 14px
+		font-size: 14px;
 	}
 
 	.rolayout_RoClass .right-side-container {
@@ -603,7 +607,7 @@ body #footerWrap_RoId {
 	}
 
 	.posts .recent-posts {
-		font-size: 16px
+		font-size: 16px;
 	}
 }
 /*Laptop*/
@@ -618,11 +622,8 @@ body #footerWrap_RoId {
 	}
 
 	.posts .recent-posts {
-		font-size: 16px
+		font-size: 16px;
 	}
 }
 /*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
