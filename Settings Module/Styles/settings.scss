@@ -1,6 +1,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
-@import "../../Rogrid/Styles/RoStrap_Mixin";
+@import "../../Global Style/Rostrap Global";
+@import "../../Global Style/Global Style";
 
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
@@ -14,45 +15,25 @@
 :root{
 
 	/*Side Apps without Sub Menu*/
-	--generalNavMenuPadding: 10px;
+	/*Search Box*/
+	@include global_top-searchbox;
+	/*Search Box*/
 
-	--mainNavMenuIconSize: 30px;
-	--mainNavMenuFSize: 16px;
-	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: white;
-	--hoverMainNavMenuBgColor: #303031;
-	--hoverMainNavMenuFColor: white;	
-	/*Side Apps without Sub Menu*/
+	/*Side Apps Main Menu*/
+	@include global_side-app-main;
+	/*Side Apps Main Menu*/
 
-	/*Side Apps with Sub Menu*/
-	--subNavMenuIconSize: 30px;
-	--subNavMenuWrapBgColor: transparent;
-	--subNavMenuBgColor: transparent;
-	--subNavMenuFSize: 16px;
-	--subNavMenuFColor: white;
-	--hoverSubNavMenuBgColor: #303031;
-	--hoverSubNavMenuFColor: white;
+	/*Side Apps Sub Menu*/
+	@include global_side-app-sub;
+	/*Side Apps Sub Menu*/
 
-	--chevronIconSize: 16px;
-	/*Side Apps with Sub Menu*/
+	/*Footer*/
+	@include global_footer-style;
+	/*Footer*/
 
-
-	--projectTitleTextFColor: White;
-	--projectTitleTextFSize: 30px;
-	--projectTitleUserIconSize: 25px;
-
-
-	--inputSearchWidth: 400px;
-	--inputSearchTopPadding: 3px;
-	--inputSearchRightPadding: 3px;
-	--inputSearchBottomPadding: 3px;
-	--inputSearchLeftPadding: 3px;
-	--inputSearchBorderColor: white;
-	--inputSearchBorderRadius: 999px;
-	--inputSearchIconHori: 98%;
-	--inputSearchIconSize: 10px;
-	--inputSearchFSize: 20px;
-	--inputSearchFColor: white;
+	/*Dark Mode (Default Style)*/
+	@include global_dark-mode;
+	/*Dark Mode (Default Style)*/
 
 	--normBtnPadding: 1px;
 	--normBtnBorderWidth: 1px;
@@ -111,6 +92,131 @@
 
 }
 /*Root*/
+
+/**Global Codes**/
+.light-mode {
+	@include global_light-mode;
+}
+
+@font-face {
+	@include global_font-face;
+}
+
+::-webkit-scrollbar {
+	@include global_scrollbar;
+}
+
+::-webkit-scrollbar-thumb {
+	@include global_scrollbar-thumb;
+}
+
+::-webkit-scrollbar-track {
+	@include global_scrollbar-track;
+}
+
+* {
+	@include global_asterisk;
+}
+
+body {
+	@include global_body-bg;
+}
+
+input,
+input:focus,
+textarea,
+textarea:focus {
+	@include global_input-textarea-style;
+}
+
+/*Top Section*/
+.top-section {
+	@include global_top-section;
+}
+
+.top-section .top-left-menu {
+	@include global_top-left-menu;
+}
+
+.top-left-menu .home-logo {
+	@include global_home-logo;
+}
+
+.top-left-menu .home-logo:hover {
+	@include global_home-logo-hover;
+}
+
+.top-left-menu .home-logo img {
+	@include global_home-logo-img;
+}
+
+.top-left-menu #searchInput_RoId {
+	@include global_searchInput_RoId;
+}
+
+#searchInput_RoId::placeholder {
+	@include global_searchInput_RoId-placeholder;
+}
+
+.top-section .top-right-menu {
+	@include global_top-right-menu;
+}
+
+.top-right-menu .toggle-mode {
+	@include global_toggle-mode;
+}
+
+.top-right-menu .toggle-mode:hover {
+	@include global_toggle-mode-hover;
+}
+
+.top-right-menu .topMenus {
+	@include global_topMenus;
+}
+
+.top-right-menu .topMenus:hover {
+	@include global_topMenus-hover;
+}
+
+.top-right-menu .gear-icon {
+	@include global_gear-icon;
+}
+
+.top-right-menu .topMenus img {
+	@include global_topMenus-img;
+}
+/*Top Section*/
+
+/*Mid Section Start*/
+#rolayout_RoId {
+	@include global_rolayout_RoId;
+}
+
+/*Left Content*/
+.rolayout_RoClass #sidemecha_RoId {
+	@include global_sidemecha_RoId;
+}
+
+#sidemecha_RoId:hover::-webkit-scrollbar-thumb {
+	@include global_sidemecha_RoId-hover-webkit;
+}
+
+.sidemechaCon_RoClass .company-logo {
+	@include global_company-logo;
+}
+
+.sidemechaCon_RoClass .company-logo img {
+	@include global_company-logo-img;
+}
+
+.mainNavMenu_RoClass .generalNavMenuText_RoClass {
+	@include global_generalNavMenuText_RoClass;
+}
+
+.mainNavMenu_RoClass .chevronIconWrap_RoClass {
+	@include global_chevronIconWrap_RoClass;
+}
+/***End Global Codes**/
 @font-face{
 	font-family: myOwnFont;
 	src:url(../Fonts/Binance-PLEX.ttf);
