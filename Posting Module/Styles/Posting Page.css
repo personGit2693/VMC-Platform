@@ -3222,8 +3222,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Side Apps Main Menu*/
 /*Side Apps Sub Menu*/
 /*Side Apps Sub Menu*/
-/*Footer*/
-/*Footer*/
 /*Dark Mode (Default Style)*/
 /*Dark Mode (Default Style)*/
 /*Light Mode*/
@@ -3356,6 +3354,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*General*/
 .light-mode {
   --inputSearchFColor: #000000;
@@ -3472,7 +3471,7 @@ video {
 .top-right-menu .toggle-mode:hover {
   opacity: .7; }
 
-.top-right-menu .menu {
+.top-right-menu .menus {
   display: flex;
   width: 39px;
   height: 39px;
@@ -3481,13 +3480,13 @@ video {
   background-color: var(--bg-color-8);
   cursor: pointer; }
 
-.top-right-menu .menu:hover {
+.top-right-menu .menus:hover {
   opacity: .7; }
 
 .top-right-menu .gear-icon {
   background-color: var(--bg-color-9); }
 
-.top-right-menu .menu img {
+.top-right-menu .menus img {
   width: 100%;
   height: 100%; }
 
@@ -3830,6 +3829,7 @@ body #footerWrap_RoId {
     max-width: 450px; } }
 /*Other Media Query*/
 /***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
   .top-section .searchInput_RoClass {
@@ -3911,8 +3911,6 @@ body #footerWrap_RoId {
   .posts .recent-posts {
     font-size: 16px; } }
 /*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Posting%20Page.css.map */
