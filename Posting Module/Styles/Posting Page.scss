@@ -2,25 +2,23 @@
 /*Import Mixins*/
 @import "../../Global Style/Rostrap Global";
 @import "../../Global Style/Global Style";
-@import "Mixin Posting";
+@import "./Mixin Posting Page";
 /*Import Mixins*/
-/***********************************************************************************************************************************************************************************************************/
-
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
 	/*Search Box*/
-	@include top-searchbox_Root_Global;
+	@include global_top-searchbox;
 	/*Search Box*/
 
 	/*Side Apps Main Menu*/
-	@include side-app-main_Root_Global;
+	@include global_side-app-main;
 	/*Side Apps Main Menu*/
 
 	/*Side Apps Sub Menu*/
-	@include side-app-sub_Root_Global;
+	@include global_side-app-sub;
 	/*Side Apps Sub Menu*/
 
 	/*Project Title*/
@@ -28,51 +26,53 @@
 	/*Project Title*/
 
 	/*Footer*/
-	@include footer-style_Root_Global;
+	@include global_footer-style;
 	/*Footer*/
 
 	/*Dark Mode (Default Style)*/
-	@include dark-mode_Root_Global;
+	@include global_dark-mode;
 	@include dark-mode_Root_Posting;
 	/*Dark Mode (Default Style)*/
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
 /*General*/
 .light-mode {
-	@include light-mode_General_Global;
+	@include global_light-mode;
 	@include light-mode_General_Posting;
 }
 
 @font-face {
-	@include font-face_General_Global;
+	@include global_font-face;
 }
 
 ::-webkit-scrollbar {
-	@include scrollbar_General_Global;
+	@include global_scrollbar;
 }
 
 ::-webkit-scrollbar-thumb {
-	@include scrollbar-thumb_General_Global;
+	@include global_scrollbar-thumb;
 }
 
 ::-webkit-scrollbar-track {
-	@include scrollbar-track_General_Global;
+	@include global_scrollbar-track;
 }
 
 * {
-	@include asterisk_General_Global;
+	@include global_asterisk;
 }
 
 body {
-	@include body-bg_General_Global;
+	@include global_body-bg;
 }
 
 input,
 input:focus,
 textarea,
 textarea:focus {
-	@include input-textarea-style_General_Global;
+	@include global_input-textarea-style;
 }
 
 img,
@@ -82,91 +82,91 @@ video {
 
 /*Top Section*/
 .top-section {
-	@include top-section_General_Global;
+	@include global_top-section;
 }
 
 .top-section .top-left-menu {
-	@include top-left-menu_General_Global;
+	@include global_top-left-menu;
 }
 
 .top-left-menu .home-logo {
-	@include home-logo_General_Global;
+	@include global_home-logo;
 }
 
 .top-left-menu .home-logo:hover {
-	@include home-logo-hover_General_Global;
+	@include global_home-logo-hover;
 }
 
 .top-left-menu .home-logo img {
-	@include home-logo-img_General_Global;
+	@include global_home-logo-img;
 }
 
 .top-left-menu #searchInput_RoId {
-	@include searchInput_RoId_General_Global;
+	@include global_searchInput_RoId;
 }
 
 #searchInput_RoId::placeholder {
-	@include searchInput_RoId-placeholder_General_Global;
+	@include global_searchInput_RoId-placeholder;
 }
 
 .top-section .top-right-menu {
-	@include top-right-menu_General_Global;
+	@include global_top-right-menu;
 }
 
 .top-right-menu .toggle-mode {
-	@include toggle-mode_General_Global;
+	@include global_toggle-mode;
 }
 
 .top-right-menu .toggle-mode:hover {
-	@include toggle-mode-hover_General_Global;
+	@include global_toggle-mode-hover;
 }
 
-.top-right-menu .menu {
-	@include menu_General_Global;
+.top-right-menu .topMenus {
+	@include global_topMenus;
 }
 
-.top-right-menu .menu:hover {
-	@include menu-hover_General_Global;
+.top-right-menu .topMenus:hover {
+	@include global_topMenus-hover;
 }
 
 .top-right-menu .gear-icon {
-	@include gear-icon_General_Global;
+	@include global_gear-icon;
 }
 
-.top-right-menu .menu img {
-	@include menu-img_General_Global;
+.top-right-menu .topMenus img {
+	@include global_topMenus-img;
 }
 /*Top Section*/
 
 /*Mid Section Start*/
 #rolayout_RoId {
-	@include rolayout_RoId_General_Global;
+	@include global_rolayout_RoId;
 	@include rolayout_RoId_General_Posting;
 }
 
 /*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
-	@include sidemecha_RoId_General_Global;
+	@include global_sidemecha_RoId;
 }
 
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	@include sidemecha_RoId-hover-webkit_General_Global;
+	@include global_sidemecha_RoId-hover-webkit;
 }
 
 .sidemechaCon_RoClass .company-logo {
-	@include company-logo_General_Global;
+	@include global_company-logo;
 }
 
 .sidemechaCon_RoClass .company-logo img {
-	@include company-logo-img_General_Global;
+	@include global_company-logo-img;
 }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
-	@include generalNavMenuText_RoClass_General_Global;
+	@include global_generalNavMenuText_RoClass;
 }
 
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
-	@include chevronIconWrap_RoClass_General_Global;
+	@include global_chevronIconWrap_RoClass;
 }
 /*Left Content*/
 
@@ -176,7 +176,7 @@ video {
 }
 
 #mainmecha_RoId::-webkit-scrollbar-thumb {
-	@include mainmecha_RoId-scrollbar-thumb_General_Global;
+	@include global_mainmecha_RoId-scrollbar-thumb;
 }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
@@ -184,7 +184,7 @@ video {
 }
 
 .mainmecha_RoClass #burger_RoId {
-	@include burger_RoId_General_Global;
+	@include global_burger_RoId;
 }
 
 .mainmechaCon_RoClass #projectTitle_RoId {
@@ -365,17 +365,16 @@ video {
 
 /*Bottom Section / Footer*/
 body #footerWrap_RoId {
-	@include footerWrap_RoId_General_Global;
+	@include global_footerWrap_RoId;
 }
 
 .footerWrap_RoClass #footerTxt_RoId {
-	@include footerTxt_RoId_General_Global;
+	@include global_footerTxt_RoId;
 }
 /*Bottom Section / Footer*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Query*/
 @media (min-width:1081px) and (max-width:1250px) {
@@ -385,14 +384,16 @@ body #footerWrap_RoId {
 }
 /*Other Media Query*/
 /***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px) {
 	.top-section .searchInput_RoClass {
-		@include searchInput_RoClass_Mobile_Global;
+		@include global_searchInput_RoClass;
 	}
 
 	.top-right-menu .toggle-mode {
-		@include toggle-mode_Mobile_Global;
+		@include global_toggle-mode;
 	}
 
 	.rolayout_RoClass #mainmecha_RoId {
@@ -427,7 +428,6 @@ body #footerWrap_RoId {
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px) {
@@ -454,7 +454,6 @@ body #footerWrap_RoId {
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px) {
@@ -469,7 +468,6 @@ body #footerWrap_RoId {
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px) {
@@ -482,7 +480,4 @@ body #footerWrap_RoId {
 	}
 }
 /*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/*Section Comment Name*/
 /***********************************************************************************************************************************************************************************************************/
