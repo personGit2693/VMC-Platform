@@ -22,7 +22,7 @@
 	/*Side Apps Sub Menu*/
 
 	/*Project Title*/
-	@include project-title_Root_Posting;
+	@include project-title;
 	/*Project Title*/
 
 	/*Footer*/
@@ -31,7 +31,7 @@
 
 	/*Dark Mode (Default Style)*/
 	@include global_dark-mode;
-	@include dark-mode_Root_Posting;
+	@include dark-mode;
 	/*Dark Mode (Default Style)*/
 }
 /*Root*/
@@ -41,7 +41,7 @@
 /*General*/
 .light-mode {
 	@include global_light-mode;
-	@include light-mode_General_Posting;
+	@include light-mode;
 }
 
 @font-face {
@@ -77,7 +77,7 @@ textarea:focus {
 
 img,
 video {
-	@include img-video_General_Posting;
+	@include img-video;
 }
 
 /*Top Section*/
@@ -136,12 +136,24 @@ video {
 .top-right-menu .topMenus img {
 	@include global_topMenus-img;
 }
+
+.profile img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid var(--border-color-2);
+	cursor: pointer;
+}
+
+.profile img:hover {
+	opacity: .7;
+}
 /*Top Section*/
 
 /*Mid Section Start*/
 #rolayout_RoId {
 	@include global_rolayout_RoId;
-	@include rolayout_RoId_General_Posting;
+	@include rolayout_RoId;
 }
 
 /*Left Content*/
@@ -172,7 +184,7 @@ video {
 
 /*Mid Content*/
 .rolayout_RoClass #mainmecha_RoId {
-	@include mainmecha_RoClass_General_Posting;
+	@include mainmecha_RoClass;
 }
 
 #mainmecha_RoId::-webkit-scrollbar-thumb {
@@ -180,7 +192,7 @@ video {
 }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
-	@include mainmechaCon_RoId_General_Posting;
+	@include mainmechaCon_RoId;
 }
 
 .mainmecha_RoClass #burger_RoId {
@@ -188,177 +200,269 @@ video {
 }
 
 .mainmechaCon_RoClass #projectTitle_RoId {
-	@include projectTitle_RoId_General_Posting;
+	@include projectTitle_RoId;
 }
 
 .mainmechaCon_RoClass .post-form {
-	@include post-form_General_Posting;
+	@include post-form;
 }
 
 .create-post-form .post-category-label {
-	@include post-category-label_General_Posting;
+	@include post-category-label;
 }
 
 .create-post-form .post-category {
-	@include post-category_General_Posting;
+	@include post-category;
 }
 
 .create-post-form .post-category:hover {
-	@include post-category-hover_General_Posting;
+	@include post-category-hover;
 }
 
 .create-post-form .post-title,
 .create-post-form .post-content {
-	@include post-title-1_General_Posting;
+	@include post-title-1;
 }
 
 .create-post-form #post-title {
-	@include post-title-id_General_Posting;
+	@include post-title-id;
 }
 
 .create-post-form .textarea-container {
-	@include textarea-container_General_Posting;
+	@include textarea-container;
 }
 
 .textarea-container #post-content {
-	@include post-content-id_General_Posting;
+	@include post-content-id;
 }
 
 #post-content:hover::-webkit-scrollbar-thumb {
-	@include post-content-id-hover-webkit_General_Posting;
+	@include post-content-id-hover-webkit;
 }
 
 .create-post-form .custom-file-upload {
-	@include custom-file-upload_General_Posting;
+	@include custom-file-upload;
 }
 
 .create-post-form .custom-file-upload:hover {
-	@include custom-file-upload-hover_General_Posting;
+	@include custom-file-upload-hover;
 }
 
-.create-post-form .file-preview-container {
-	@include file-preview-container_General_Posting;
+.file-preview-container {
+	@include file-preview-container;
 }
 
 .file-preview-container .file-preview-element {
-	@include file-preview-element_General_Posting;
+	@include file-preview-element;
 }
 
 .file-preview-container .remove-file-button {
-	@include remove-file-button_General_Posting;
+	@include remove-file-button;
 }
 
 .file-preview-container .remove-file-button:hover {
-	@include remove-file-button-hover_General_Posting;
+	@include remove-file-button-hover;
 }
 
 .create-post-form .create-post-button {
-	@include create-post-button_General_Posting;
+	@include create-post-button;
 }
 
 .create-post-form .create-post-button:hover {
-	@include create-post-button-hover_General_Posting;
+	@include create-post-button-hover;
 }
 
 .create-post-form .create-post-button:active {
-	@include create-post-button-active_General_Posting;
+	@include create-post-button-active;
 }
 
 .mainmechaCon_RoClass .posts {
-	@include posts_General_Posting;
+	@include posts;
 }
 
 .posts .recent-posts {
-	@include recent-posts_General_Posting;
+	@include recent-posts;
 }
 
 .posts .post-list {
-	@include post-list_General_Posting;
+	@include post-list;
+}
+
+.post-list .profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.post-list .chosen-category {
+	padding-block: 10px;
 }
 
 .posts button {
-	@include posts-buttons_General_Posting;
+	@include posts-buttons;
 }
 
 .posts button:hover {
-	@include posts-buttons-hover_General_Posting;
+	@include posts-buttons-hover;
 }
 
 .posts button:active {
-	@include posts-buttons-active_General_Posting;
+	@include posts-buttons-active;
 }
 
 .post-list .post-title {
-	@include post-title-2_General_Posting;
+	@include post-title-2;
 }
 
 .post-list .post-content {
-	@include post-content_General_Posting;
+	@include post-content;
+}
+
+.post-list .post-reactions {
+	padding: 10px 3px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	color: var(--text-color-3);
+	border-bottom: 2px solid var(--border-color-4);
+}
+
+.post-list .actions button {
+	color: var(--text-color-4);
+	margin-top: 5px;
+}
+
+.post-reactions .reaction-icon-container {
+	display: flex;
+}
+
+.reaction-icon-container .reaction-icon {
+	height: 15px;
+	width: 15px;
+}
+
+.post-reactions .comment-count {
+	margin-left: auto;
+	margin-right: 7px;
+}
+
+.actions .reaction-popup-container {
+	position: relative;
+}
+
+.reaction-popup-container:hover .reactions-popup {
+	transform: scale(1, 1);
+}
+
+.reaction-popup-container .reactions-popup {
+	display: flex;
+	gap: 5px;
+	background-color: var(--bg-color-4);
+	padding: 5px 4px;
+	border: 1px solid var(--border-color-5);
+	border-radius: 30px;
+	position: absolute;
+	bottom: 100%;
+	transform: scale(1, 0);
+	transform-origin: bottom;
+	transition: transform ease-in-out .4s !important;
+}
+
+.reactions-popup img {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+}
+
+.reactions-popup img:hover {
+	opacity: .7;
+}
+
+.reactions-popup img:active {
+	opacity: .5;
 }
 
 .post-list .post-actions,
 .comment .comment-actions,
 .comment .reply-actions {
-	@include post-actions_General_Posting;
-}
-
-.post-actions .post-like-count {
-	@include post-like-count_General_Posting;
+	@include post-actions;
 }
 
 .post-list .date-posted {
-	@include date-posted_General_Posting;
+	@include date-posted;
 }
 
 .comment-section .comment {
-	@include comment_General_Posting;
+	@include comment;
+}
+
+.profile-container {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 10px;
+}
+
+.profile-container .profile img {
+	width: 30px;
+	height: 30px;
+	margin: 1px 5px 0px 0px;
 }
 
 .comment .post-comment {
-	@include post-comment_General_Posting;
+	@include post-comment;
+}
+
+.comment .comment-name {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 2px;
 }
 
 .comment .reply-input {
-	@include reply-input_General_Posting;
+	@include reply-input;
 }
 
 .comment .post-reply {
-	@include post-reply_General_Posting;
+	@include post-reply;
 }
 
 .comment-actions .comment-like-count {
-	@include comment-like-count_General_Posting;
+	@include comment-like-count;
 }
 
-.post-list .comment-input {
-	@include comment-input_General_Posting;
+.profile-container .comment-input {
+	@include comment-input;
+}
+
+.comment-input::placeholder {
+	font-size: 14px;
 }
 /*Mid Content*/
 
 /*Right Content*/
 .rolayout_RoClass .right-side-container {
-	@include right-side-container_General_Posting;
+	@include right-side-container;
 }
 
 .right-side-container:hover::-webkit-scrollbar-thumb,
 #side-content:hover::-webkit-scrollbar-thumb {
-	@include right-side-container-hover-webkit_General_Posting;
+	@include right-side-container-hover-webkit;
 }
 
 .right-side-container .side-content-wrapper {
-	@include side-content-wrapper_General_Posting;
+	@include side-content-wrapper;
 }
 
 .side-content-wrapper #side-content {
-	@include side-content-id_General_Posting;
+	@include side-content-id;
 }
 
 .right-side-container .side-content-two {
-	@include side-content-two_General_Posting;
+	@include side-content-two;
 }
 
 .right-side-container .side-content-three {
-	@include side-content-three_General_Posting;
+	@include side-content-three;
 }
 /*Right Content*/
 /*Mid Section End*/
@@ -379,7 +483,7 @@ body #footerWrap_RoId {
 /*Other Media Query*/
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_MQ_Posting;
+		@include mainmechaCon_RoId_MQ;
 	}
 }
 /*Other Media Query*/
@@ -389,40 +493,27 @@ body #footerWrap_RoId {
 /*Mobile*/
 @media all and (max-width:641px) {
 	.top-section .searchInput_RoClass {
-		@include global_searchInput_RoClass;
+		@include global_searchInput_RoClass_Mobile;
+	}
+
+	#searchInput_RoId::placeholder {
+		color: transparent;
 	}
 
 	.top-right-menu .toggle-mode {
-		@include global_toggle-mode;
+		@include global_toggle-mode_Mobile;
 	}
 
 	.rolayout_RoClass #mainmecha_RoId {
-		@include mainmecha_RoId_Mobile_Posting;
+		@include mainmecha_RoId_Mobile;
 	}
 
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_Mobile_Posting;
-	}
-
-	.mainmecha_RoClass .projectTitle_RoClass {
-		@include projectTitle_RoClass_Mobile_Posting;
-	}
-
-	.create-post-form .post-category-label,
-	.create-post-form .post-category,
-	.create-post-form .post-title,
-	.create-post-form .post-content,
-	.post-list .post-title,
-	.posts .recent-posts {
-		@include post-category-label_Mobile_Posting;
-	}
-
-	.mainmechaCon_RoClass .posts {
-		@include posts_Mobile_Posting;
+		@include mainmechaCon_RoId_Mobile;
 	}
 
 	.rolayout_RoClass .right-side-container {
-		@include right-side-container_Mobile_Posting;
+		@include right-side-container_MobTab;
 	}
 }
 /*Mobile*/
@@ -432,23 +523,15 @@ body #footerWrap_RoId {
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px) {
 	.rolayout_RoClass #mainmecha_RoId {
-		@include mainmecha_RoId_Tablet_Posting;
+		@include mainmecha_RoId_Tablet;
 	}
 
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_Tablet_Posting;
-	}
-
-	.mainmecha_RoClass .projectTitle_RoClass {
-		@include projectTitle_RoClass_Tablet_Posting;
-	}
-
-	.posts .recent-posts {
-		@include recent-posts_Tablet_Posting;
+		@include mainmechaCon_RoId_Tablet;
 	}
 
 	.rolayout_RoClass .right-side-container {
-		@include right-side-container_Tablet_Posting;
+		@include right-side-container_MobTab;
 	}
 }
 /*Tablet*/
@@ -458,11 +541,11 @@ body #footerWrap_RoId {
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px) {
 	.mainmecha_RoClass .projectTitle_RoClass {
-		@include projectTitle_RoClass_Laptop_Posting;
+		@include projectTitle_RoClass_Laptop;
 	}
 
 	.posts .recent-posts {
-		@include recent-posts_Laptop_Posting;
+		@include recent-posts_Laptop;
 	}
 }
 /*Laptop*/
@@ -471,12 +554,16 @@ body #footerWrap_RoId {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px) {
+	.mainmecha_RoClass #mainmechaCon_RoId {
+		@include mainmechaCon_RoId_Desktop;
+	}
+
 	.mainmecha_RoClass .projectTitle_RoClass {
-		@include projectTitle_RoClass_Desktop_Posting;
+		@include projectTitle_RoClass_Desktop;
 	}
 
 	.posts .recent-posts {
-		@include recent-posts_Desktop_Posting;
+		@include recent-posts_Desktop;
 	}
 }
 /*Desktop*/

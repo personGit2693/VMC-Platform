@@ -1,55 +1,62 @@
 /*************************************************************************************/
 /*Root*/
-@mixin project-title_Root_Posting {
+@mixin project-title {
+	--projectTitleTextFSize: 14px;
 	--projectTitleTextFColor: #FFFFFF;
 }
 
 /*Dark Mode (Default Style)*/
-@mixin dark-mode_Root_Posting {
-	--bg-color-4: #2176FF; // unused
+@mixin dark-mode {
+	--bg-color-4: #242526;
 	--text-color-1: #FFFFFF;
-	--text-color-3: #808080; //unused
+	--text-color-3: #CDD1D5;
+	--text-color-4: #ADB1B3;
 	--border-color-2: #121413;
 	--border-color-3: #3E3F40;
 	--border-color-4: #444749;
+	--border-color-5: #353637;
 }
 /*Dark Mode (Default Style)*/
 
 /*Root*/
 /*************************************************************************************/
 /*General*/
-@mixin light-mode_General_Posting {
+@mixin light-mode {
+	--bg-color-4: #FFFFFF;
 	--text-color-1: #000000;
+	--text-color-3: #5F6266;
+	--text-color-4: #6E6F72;
 	--border-color-2: #E2E4E7;
 	--border-color-3: #F0F2F5;
 	--border-color-4: #CED0D4;
+	--border-color-5: #E4E4E4;
 }
 
-@mixin img-video_General_Posting {
+@mixin img-video {
 	width: 100%;
 	height: 100%;
 	display: block;
 }
 
 /*Mid Section Start*/
-@mixin rolayout_RoId_General_Posting {
+@mixin rolayout_RoId {
 	display: flex;
 	justify-content: space-between;
 }
 
 /*Mid Content*/
-@mixin mainmecha_RoClass_General_Posting {
+@mixin mainmecha_RoClass {
 	display: flex;
 	justify-content: center;
 	position: absolute;
 	height: 100%;
 }
 
-@mixin mainmechaCon_RoId_General_Posting {
+@mixin mainmechaCon_RoId {
 	max-width: 600px;
 }
 
-@mixin projectTitle_RoId_General_Posting {
+@mixin projectTitle_RoId {
 	display: flex;
 	justify-content: center;
 	margin-top: 5px;
@@ -60,7 +67,7 @@
 	border: 1px solid var(--border-color-2);
 }
 
-@mixin post-form_General_Posting {
+@mixin post-form {
 	margin-top: 10px;
 	padding: 10px;
 	border-radius: 10px;
@@ -69,12 +76,12 @@
 	border: 1px solid var(--border-color-2);
 }
 
-@mixin post-category-label_General_Posting {
+@mixin post-category-label {
 	margin: 5px 5px 10px 0px;
 	display: inline-block;
 }
 
-@mixin post-category_General_Posting {
+@mixin post-category {
 	border: none;
 	outline: 2px solid #808080;
 	border-radius: 5px;
@@ -82,30 +89,31 @@
 	cursor: pointer;
 }
 
-@mixin post-category-hover_General_Posting {
+@mixin post-category-hover {
 	opacity: .7;
 }
 
-@mixin post-title-1_General_Posting {
+@mixin post-title-1 {
 	display: block;
 	margin: 10px 0px 3px 0px;
 	font-size: 16px;
 }
 
-@mixin post-title-id_General_Posting {
+@mixin post-title-id {
 	width: 100%;
 	padding: 7px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
+	font-size: 16px;
 }
 
-@mixin textarea-container_General_Posting {
+@mixin textarea-container {
 	padding: 7px 5px 7px 7px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
 }
 
-@mixin post-content-id_General_Posting {
+@mixin post-content-id {
 	width: 100%;
 	min-height: 50px;
 	max-height: 300px;
@@ -114,11 +122,11 @@
 	display: block;
 }
 
-@mixin post-content-id-hover-webkit_General_Posting {
+@mixin post-content-id-hover-webkit {
 	visibility: visible;
 }
 
-@mixin custom-file-upload_General_Posting {
+@mixin custom-file-upload {
 	padding: 7px;
 	display: flex;
 	justify-content: center;
@@ -132,24 +140,24 @@
 	cursor: pointer;
 }
 
-@mixin custom-file-upload-hover_General_Posting {
+@mixin custom-file-upload-hover {
 	opacity: .7;
 }
 
-@mixin file-preview-container_General_Posting {
+@mixin file-preview-container {
 	border: 1px solid var(--border-color-4);
 	margin-top: 10px;
 	border-radius: 10px;
-	min-height: 120px;
-	padding: 8px;
 	position: relative;
 }
 
-@mixin file-preview-element_General_Posting {
+@mixin file-preview-element {
 	border-radius: 10px;
+	margin: 8px;
+	width: calc(100% - 16px);
 }
 
-@mixin remove-file-button_General_Posting {
+@mixin remove-file-button {
 	border: 1px solid #202224;
 	position: absolute;
 	top: 18px;
@@ -166,11 +174,11 @@
 	cursor: pointer;
 }
 
-@mixin remove-file-button-hover_General_Posting {
+@mixin remove-file-button-hover {
 	opacity: .8;
 }
 
-@mixin create-post-button_General_Posting {
+@mixin create-post-button {
 	margin-top: 10px;
 	border: none;
 	padding: 7px 15px;
@@ -181,21 +189,21 @@
 	cursor: pointer;
 }
 
-@mixin create-post-button-hover_General_Posting {
+@mixin create-post-button-hover {
 	opacity: .7;
 }
 
-@mixin create-post-button-active_General_Posting {
+@mixin create-post-button-active {
 	opacity: .5;
 }
 
-@mixin posts_General_Posting {
+@mixin posts {
 	color: var(--text-color-1);
 	margin-top: 10px;
 	font-size: 14px;
 }
 
-@mixin recent-posts_General_Posting {
+@mixin recent-posts {
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
@@ -204,9 +212,10 @@
 	background-color: #3C746B;
 	border: 1px solid var(--border-color-2);
 	color: #FFFFFF;
+	font-size: 14px;
 }
 
-@mixin post-list_General_Posting {
+@mixin post-list {
 	margin-top: 10px;
 	padding: 10px;
 	border-radius: 10px;
@@ -214,7 +223,7 @@
 	border: 1px solid var(--border-color-2);
 }
 
-@mixin posts-buttons_General_Posting {
+@mixin posts-buttons {
 	cursor: pointer;
 	border-radius: 3px;
 	border: none;
@@ -223,15 +232,15 @@
 	color: var(--text-color-1);
 }
 
-@mixin posts-buttons-hover_General_Posting {
+@mixin posts-buttons-hover {
 	opacity: .7;
 }
 
-@mixin posts-buttons-active_General_Posting {
+@mixin posts-buttons-active {
 	opacity: .5;
 }
 
-@mixin post-title-2_General_Posting {
+@mixin post-title-2 {
 	margin-bottom: 7px;
 	font-size: 16px;
 	padding: 10px;
@@ -239,47 +248,43 @@
 	background-color: var(--bg-color-3);
 }
 
-@mixin post-content_General_Posting {
+@mixin post-content {
 	width: 100%;
-	margin-bottom: 7px;
 	white-space: normal;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
 }
 
-@mixin post-actions_General_Posting {
+@mixin post-actions {
 	display: flex;
 	align-items: center;
 	gap: 6px;
 }
 
-@mixin post-like-count_General_Posting {
-	margin-right: 10px;
-}
-
-@mixin date-posted_General_Posting {
+@mixin date-posted {
 	font-size: 11px;
 	margin-block: 5px;
 	white-space: normal;
+	color: var(--text-color-4);
 }
 
-@mixin comment_General_Posting {
+@mixin comment {
 	border-left: 2px solid var(--border-color-3);
-	margin-left: 20px;
-	padding-left: 10px;
+	margin-left: 5px;
+	padding-left: 5px;
+
 }
 
-@mixin post-comment_General_Posting {
+@mixin post-comment {
 	margin-bottom: 7px;
 	white-space: normal;
-	padding-block: 7px;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
 }
 
-@mixin reply-input_General_Posting {
+@mixin reply-input {
 	width: 100%;
 	margin-block: 5px;
 	padding: 7px;
@@ -287,7 +292,7 @@
 	background-color: var(--bg-color-3);
 }
 
-@mixin post-reply_General_Posting {
+@mixin post-reply {
 	margin-bottom: 7px;
 	white-space: normal;
 	padding: 10px;
@@ -295,21 +300,21 @@
 	background-color: var(--bg-color-3);
 }
 
-@mixin comment-like-count_General_Posting {
+@mixin comment-like-count {
 	margin-right: 10px;
 }
 
-@mixin comment-input_General_Posting {
-	margin: 10px 0px 5px 0px;
+@mixin comment-input {
 	width: 100%;
 	padding: 7px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
+	resize: none;
 }
 /*Mid Content*/
 
 /*Right Content*/
-@mixin right-side-container_General_Posting {
+@mixin right-side-container {
 	width: 300px;
 	flex-shrink: 0;
 	overflow-y: auto;
@@ -320,11 +325,11 @@
 	padding: 0px 0px 10px 20px;
 }
 
-@mixin right-side-container-hover-webkit_General_Posting {
+@mixin right-side-container-hover-webkit {
 	visibility: visible;
 }
 
-@mixin side-content-wrapper_General_Posting {
+@mixin side-content-wrapper {
 	overflow: hidden;
 	border-radius: 10px;
 	margin-right: 20px;
@@ -334,17 +339,17 @@
 	border: 1px solid var(--border-color-4);
 }
 
-@mixin side-content-id_General_Posting {
+@mixin side-content-id {
 	height: 100%;
 	overflow: auto;
 	padding-block: 7px;
 }
 
-@mixin side-content-two_General_Posting {
+@mixin side-content-two {
 	height: 300px;
 }
 
-@mixin side-content-three_General_Posting {
+@mixin side-content-three {
 	height: 600px;
 }
 /*Right Content*/
@@ -352,87 +357,64 @@
 /*General*/
 /*************************************************************************************/
 /*************************************************************************************/
-/*Other Media Query*/
-@mixin mainmechaCon_RoId_MQ_Posting {
+/*Other Media Queries*/
+@mixin mainmechaCon_RoId_MQ {
 	max-width: 450px;
 }
-/*Other Media Query*/
-/*************************************************************************************/
-/*************************************************************************************/
-/*Mobile @media (max-width:641px)*/
-@mixin mainmecha_RoId_Mobile_Posting {
-	position: static;
-}
 
-@mixin mainmechaCon_RoId_Mobile_Posting {
-	max-width: 100%;
-}
-
-@mixin projectTitle_RoClass_Mobile_Posting {
-	--projectTitleTextFSize: 14px;
-}
-
-@mixin post-category-label_Mobile_Posting {
-	font-size: 14px;
-}
-
-@mixin posts_Mobile_Posting {
-	font-size: 12px;
-}
-
-@mixin right-side-container_Mobile_Posting {
+@mixin right-side-container_MobTab {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	background-color: var(--bg-color-1);
+}
+/*Other Media Queries*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Mobile @media (max-width:641px)*/
+@mixin mainmecha_RoId_Mobile {
+	position: static;
+}
+
+@mixin mainmechaCon_RoId_Mobile {
+	max-width: 100%;
 }
 /*Mobile @media (max-width:641px)*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Tablet @media (min-width:642px) and (max-width:1080px)*/
-@mixin mainmecha_RoId_Tablet_Posting {
+@mixin mainmecha_RoId_Tablet {
 	position: static;
 }
 
-@mixin mainmechaCon_RoId_Tablet_Posting {
+@mixin mainmechaCon_RoId_Tablet {
 	max-width: 100%;
-}
-
-@mixin projectTitle_RoClass_Tablet_Posting {
-	--projectTitleTextFSize: 14px;
-}
-
-@mixin recent-posts_Tablet_Posting {
-	font-size: 14px
-}
-
-@mixin right-side-container_Tablet_Posting {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-color: var(--bg-color-1);
 }
 /*Tablet @media (min-width:642px) and (max-width:1080px)*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Laptop @media (min-width:1081px) and (max-width:1600px)*/
-@mixin projectTitle_RoClass_Laptop_Posting {
+@mixin projectTitle_RoClass_Laptop {
 	--projectTitleTextFSize: 16px;
 }
 
-@mixin recent-posts_Laptop_Posting {
+@mixin recent-posts_Laptop {
 	font-size: 16px
 }
 /*Laptop @media (min-width:1081px) and (max-width:1600px)*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Desktop @media (min-width:1601px)*/
-@mixin projectTitle_RoClass_Desktop_Posting {
-	--projectTitleTextFSize: 16px;
+@mixin mainmechaCon_RoId_Desktop {
+	max-width: 650px;
 }
 
-@mixin recent-posts_Desktop_Posting {
-	font-size: 16px
+@mixin projectTitle_RoClass_Desktop {
+	--projectTitleTextFSize: 18px;
+}
+
+@mixin recent-posts_Desktop {
+	font-size: 18px
 }
 /*Desktop @media (min-width:1601px)*/
 /*************************************************************************************/

@@ -8,7 +8,7 @@
 	--inputSearchLeftPadding: 30px;
 	--inputSearchBorderColor: transparent;
 	--inputSearchBorderRadius: 30px;
-	--inputSearchIconHori: 10px;
+	--inputSearchIconHori: 12px;
 	--inputSearchIconSize: 16px;
 	--inputSearchFSize: 15px;
 	--inputSearchFColor: #FFFFFF;
@@ -122,7 +122,7 @@
 @mixin global_asterisk {
 	font-family: 'Binance PLEX' !important;
 	box-sizing: border-box;
-	transition: all .15s !important;
+	transition: all .15s ease-in-out !important;
 }
 /*Asterisk*/
 
@@ -158,8 +158,8 @@
 }
 
 @mixin global_home-logo {
-	width: 39px;
-	height: 39px;
+	width: 40px;
+	height: 40px;
 	padding: 7px;
 	border-radius: 10px;
 	background-color: var(--bg-color-7);
@@ -205,8 +205,8 @@
 
 @mixin global_topMenus {
 	display: flex;
-	width: 39px;
-	height: 39px;
+	width: 40px;
+	height: 40px;
 	padding: 7px;
 	border-radius: 10px;
 	background-color: var(--bg-color-8);
@@ -271,8 +271,8 @@
 
 /*Burger*/
 @mixin global_burger_RoId {
-	width: 39px;
-	height: 39px;
+	width: 40px;
+	height: 40px;
 	padding: 7px;
 	border-radius: 10px;
 	background-color: var(--bg-color-8);
@@ -291,9 +291,11 @@
 /*Footer*/
 
 /*Mobile Top Section*/
-@mixin global_searchInput_RoClass{
-	--inputSearchWidth: 90px;
+@mixin global_searchInput_RoClass_Mobile {
+	--inputSearchWidth: 40px;
 	--inputSearchFSize: 12px;
+	border-radius: 50%;
+
 }
 
 @mixin global_toggle-mode_Mobile {
