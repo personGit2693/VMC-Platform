@@ -7,24 +7,29 @@
 	<link rel="stylesheet" type="text/css" href="../Styles/settings.css">
 </head>
 <body>
+	<!--Top Section-->
 	<div class="top-section">
-		<a class="top-left-menu" href=""><img class="home-logo" src="../../src/homeiconwhite.png"></a>
+		<div class="top-left-menu">
+			<a class="home-logo" href=""><img src="../../src/homeiconwhite.png"></a>
 
-		<!--Search Textbox-->
-		<input type="text" class="searchInput_RoClass" id="searchInput_RoId" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
-		<!--Search Textbox-->
+			<!--Search Textbox-->
+			<input type="text" class="searchInput_RoClass" id="searchInput_RoId" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
+			<!--Search Textbox-->
+		</div>
 
 		<div class="top-right-menu">
-			<div class="menu"><img class="menu-img" src=../../src/announcementiconwhite.png></div>
-			<div class="menu"><img class="menu-img" src=../../src/gear_white.png></div>
+			<button class="toggle-mode" id="toggle-mode">Light Mode</button>
+			<div class="topMenus burger-icon"><img src="../../src/burgericon.png"></div>
+			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 		</div>
 	</div>
+	<!--Top Section-->
 	<div class="rolayout_RoClass" id="rolayout_RoId">
 
 		<!---Side Menu---->
-		<div class="sidemecha_RoClass" style=" --naviBgColor:#373839; ">
+		<div class="sidemecha_RoClass" style=" --naviBgColor:transparent; ">
 			<div class="sidemechaCon_RoClass" style="color:white">
-				<div class="company-logo"><img src="../../src/DOH Logo.png"></div>
+				<div class="company-logo"><img src="../../src/vmclogo.png"></div>
 				<!--With Sub Menus-->
 				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/sccc icon green.png'); --activeMainNavMenuIcon:url('../../src/sccc icon green.png')"></div>
@@ -114,11 +119,7 @@
 	
 				<!--Settings Content-Title-->
 				<div class="projTitleAndUserLogin_RoClass">
-					<div class="projTitleTxt_RoClass" style="height:50px;">Settings</div>
-					<div class="userLogin_RoClass">
-						<div class="userLoginIconWrap_RoClass"><img src="../../src/avataricon_white.png"></div>
-						<div class="userLoginDetails_RoClass">Account Details</div>
-					</div>
+					<div class="projTitleTxt_RoClass" style="height:50px;">Settings</div>	
 				</div>
 				<!--End title-->
 				
