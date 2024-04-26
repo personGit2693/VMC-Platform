@@ -137,7 +137,7 @@ video {
 	@include global_topMenus-img;
 }
 
-.profile img {
+.user-profile img {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -145,8 +145,12 @@ video {
 	cursor: pointer;
 }
 
-.profile img:hover {
+.user-profile img:hover {
 	opacity: .7;
+}
+
+#user-profile {
+	margin-inline: 5px;
 }
 /*Top Section*/
 
@@ -288,7 +292,7 @@ video {
 	@include post-list;
 }
 
-.post-list .profile {
+.post-list .user-profile {
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -319,12 +323,16 @@ video {
 }
 
 .post-list .post-reactions {
-	padding: 10px 3px;
+	padding: 10px 4px;
 	display: flex;
-	align-items: center;
-	gap: 5px;
 	color: var(--text-color-3);
-	border-bottom: 2px solid var(--border-color-4);
+	border-bottom: 1px solid var(--border-color-4);
+}
+
+.post-reactions .reactions-container {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
 }
 
 .post-list .actions button {
@@ -332,8 +340,10 @@ video {
 	margin-top: 5px;
 }
 
-.post-reactions .reaction-icon-container {
+.post-list .reaction-icon-container {
 	display: flex;
+	align-items: center;
+	gap: 2px;
 }
 
 .reaction-icon-container .reaction-icon {
@@ -344,6 +354,11 @@ video {
 .post-reactions .comment-count {
 	margin-left: auto;
 	margin-right: 7px;
+	cursor: pointer;
+}
+
+.post-reactions .comment-count:hover {
+	text-decoration: underline;
 }
 
 .actions .reaction-popup-container {
@@ -356,7 +371,7 @@ video {
 
 .reaction-popup-container .reactions-popup {
 	display: flex;
-	gap: 5px;
+	gap: 7px;
 	background-color: var(--bg-color-4);
 	padding: 5px 4px;
 	border: 1px solid var(--border-color-5);
@@ -365,26 +380,35 @@ video {
 	bottom: 100%;
 	transform: scale(1, 0);
 	transform-origin: bottom;
-	transition: transform ease-in-out .4s !important;
+	transition: transform linear .3s !important;
 }
 
-.reactions-popup img {
+.reactions-popup .emoji-container {
+	height: 32px;
+	width: 32px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.emoji-container img {
 	height: 32px;
 	width: 32px;
 	cursor: pointer;
+	position: absolute;
 }
 
-.reactions-popup img:hover {
-	opacity: .7;
+.emoji-container img:hover {
+	height: 39px;
+	width: 39px;
 }
 
-.reactions-popup img:active {
+.emoji-container img:active {
 	opacity: .5;
 }
 
 .post-list .post-actions,
-.comment .comment-actions,
-.comment .reply-actions {
+.comment .comment-actions {
 	@include post-actions;
 }
 
@@ -392,8 +416,26 @@ video {
 	@include date-posted;
 }
 
+.post-list .comment-section {
+	max-height: 400px;
+	overflow: auto;
+}
+
+.comment-section:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
 .comment-section .comment {
 	@include comment;
+}
+
+.comment .comment-reactions {
+	padding: 10px 4px;
+	display: flex;
+	gap: 15px;
+	color: var(--text-color-3);
+	border-bottom: 1px solid var(--border-color-4);
+	flex-wrap: wrap;
 }
 
 .profile-container {
@@ -402,7 +444,7 @@ video {
 	margin-top: 10px;
 }
 
-.profile-container .profile img {
+.profile-container .user-profile img {
 	width: 30px;
 	height: 30px;
 	margin: 1px 5px 0px 0px;
@@ -415,15 +457,7 @@ video {
 .comment .comment-name {
 	font-weight: bold;
 	font-size: 12px;
-	margin-bottom: 2px;
-}
-
-.comment .reply-input {
-	@include reply-input;
-}
-
-.comment .post-reply {
-	@include post-reply;
+	margin-bottom: 3px;
 }
 
 .comment-actions .comment-like-count {
@@ -442,10 +476,12 @@ video {
 /*Right Content*/
 .rolayout_RoClass .right-side-container {
 	@include right-side-container;
+
 }
 
 .right-side-container:hover::-webkit-scrollbar-thumb,
-#side-content:hover::-webkit-scrollbar-thumb {
+.side-content-wrapper:hover::-webkit-scrollbar-thumb,
+ {
 	@include right-side-container-hover-webkit;
 }
 
@@ -453,16 +489,47 @@ video {
 	@include side-content-wrapper;
 }
 
-.side-content-wrapper #side-content {
-	@include side-content-id;
+.side-content-wrapper .side-content-title {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding-block: 20px;
+	background-color: var(--bg-color-4);
+	font-weight: bold;
+	border-bottom: 1px solid var(--border-color-4);
 }
 
-.right-side-container .side-content-two {
-	@include side-content-two;
+.side-content-wrapper .side-content-content {
+	margin-bottom: 25px;
 }
 
-.right-side-container .side-content-three {
-	@include side-content-three;
+.side-content-content .content-title {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--text-color-4);
+}
+
+.side-content-content .date {
+	font-size: 12px;
+	color: var(--text-color-4);
+}
+
+.side-content-content .message-info {
+	margin-top: 10px;
+	font-size: 14px;
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid var(--border-color-1);
+	background-color: var(--bg-color-3);
+}
+
+.right-side-container .pinned-posts-wrapper {
+	height:300px;
+}
+
+.pinned-posts-wrapper a {
+	color: inherit;
 }
 /*Right Content*/
 /*Mid Section End*/
@@ -476,6 +543,76 @@ body #footerWrap_RoId {
 	@include global_footerTxt_RoId;
 }
 /*Bottom Section / Footer*/
+
+/*Chat Section*/
+.chat-toggle-button {
+	position: fixed;
+	bottom: 38px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	background-color: var(--bg-color-11);
+	border: 1px solid var(--border-color-2);
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 1px 2px 0px;
+	color: var(--text-color-4);
+	font-weight: bold;
+}
+
+.chat-toggle-button:hover {
+	opacity: .7;
+}
+
+.chat-container {
+	position: fixed;
+	bottom: 23px;
+	right: 0px;
+	width: 350px;
+	height: calc(100% - 78px);
+	background-color: var(--bg-color-1);
+	padding: 0px 10px 10px 10px;
+	overflow: auto;
+}
+
+.chat-container:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+.chat-container .contacts {
+	font-weight: bold;
+	padding-block: 20px;
+	color: var(--text-color-4);
+}
+
+.chat-container .contact-container {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	padding: 6px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.chat-container .contact-container:hover {
+	background-color: var(--bg-color-10);
+}
+
+.contact-container .profile-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.contact-container .profile-name {
+	color: var(--text-color-1);
+	font-weight: bold;
+}
+/*Chat Section*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -484,6 +621,15 @@ body #footerWrap_RoId {
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
 		@include mainmechaCon_RoId_MQ;
+	}
+
+	.post-list .post-reactions {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.post-reactions .comment-count {
+		margin: 0px;
 	}
 }
 /*Other Media Query*/
@@ -512,8 +658,21 @@ body #footerWrap_RoId {
 		@include mainmechaCon_RoId_Mobile;
 	}
 
+	.post-list .post-reactions {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.post-reactions .comment-count {
+		margin: 0px;
+	}
+
 	.rolayout_RoClass .right-side-container {
 		@include right-side-container_MobTab;
+	}
+
+	.chat-container {
+		width: 100%;
 	}
 }
 /*Mobile*/

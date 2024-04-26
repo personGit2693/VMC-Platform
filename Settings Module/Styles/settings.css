@@ -3268,7 +3268,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --inputSearchLeftPadding: 30px;
   --inputSearchBorderColor: transparent;
   --inputSearchBorderRadius: 30px;
-  --inputSearchIconHori: 10px;
+  --inputSearchIconHori: 12px;
   --inputSearchIconSize: 16px;
   --inputSearchFSize: 15px;
   --inputSearchFColor: #FFFFFF;
@@ -3400,7 +3400,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 * {
   font-family: 'Binance PLEX' !important;
   box-sizing: border-box;
-  transition: all .15s !important; }
+  transition: all .15s linear !important; }
 
 body {
   background-color: var(--bg-color-1); }
@@ -3429,8 +3429,8 @@ textarea:focus {
   gap: 5px; }
 
 .top-left-menu .home-logo {
-  width: 39px;
-  height: 39px;
+  width: 40px;
+  height: 40px;
   padding: 7px;
   border-radius: 10px;
   background-color: var(--bg-color-7); }
@@ -3468,8 +3468,8 @@ textarea:focus {
 
 .top-right-menu .topMenus {
   display: flex;
-  width: 39px;
-  height: 39px;
+  width: 40px;
+  height: 40px;
   padding: 7px;
   border-radius: 10px;
   background-color: var(--bg-color-8);
@@ -3506,8 +3506,8 @@ textarea:focus {
   margin-bottom: 15px; }
 
 .sidemechaCon_RoClass .company-logo img {
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   cursor: pointer; }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {

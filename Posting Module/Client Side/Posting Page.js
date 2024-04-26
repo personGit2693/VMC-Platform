@@ -77,6 +77,18 @@ function removeFilePreview() {
 }
 /*For handling file selection*/
 
+/*Show / Hide toggle for comment section*/
+function toggleCommentSection() {
+	const commentSection = document.getElementById("comment-section");
+
+	if (commentSection.style.display === "none") {
+		commentSection.style.display = "block";
+	} else {
+		commentSection.style.display = "none";
+	}
+}
+/*Show / Hide toggle for comment section*/
+
 /*For right side content controls / functions*/
 window.addEventListener('DOMContentLoaded', () => {
 	const burgerIcon = document.querySelector('.burger-icon');
@@ -117,3 +129,15 @@ window.addEventListener('DOMContentLoaded', () => {
 	window.addEventListener('resize', toggleRightSideContent);
 });
 /*For right side content controls / functions*/
+
+/*Show / Hide toggle for chat container*/
+document.querySelector('.chat-toggle-button').addEventListener('click', function() {
+	var chatContainer = document.querySelector('.chat-container');
+
+	if (chatContainer.style.display === 'none') {
+		chatContainer.style.display = 'block';
+	} else {
+		chatContainer.style.display = 'none';
+	}
+});
+/*Show / Hide toggle for chat container*/

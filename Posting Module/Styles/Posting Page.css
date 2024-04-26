@@ -3347,6 +3347,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --text-color-4: #BCBFC4;
   --border-color-1: #3D3E3F;
   --bg-color-4: #242526;
+  --bg-color-10: #303031;
+  --bg-color-11: #5D5E61;
   --text-color-1: #FFFFFF;
   --text-color-3: #CDD1D5;
   --text-color-4: #ADB1B3;
@@ -3382,6 +3384,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --text-color-4: #000000;
   --border-color-1: #DCDEE1;
   --bg-color-4: #FFFFFF;
+  --bg-color-10: #E4E6E8;
+  --bg-color-11: #FFFFFF;
   --text-color-1: #000000;
   --text-color-3: #5F6266;
   --text-color-4: #6E6F72;
@@ -3407,7 +3411,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 * {
   font-family: 'Binance PLEX' !important;
   box-sizing: border-box;
-  transition: all .15s ease-in-out !important; }
+  transition: all .15s linear !important; }
 
 body {
   background-color: var(--bg-color-1); }
@@ -3498,15 +3502,18 @@ video {
   width: 100%;
   height: 100%; }
 
-.profile img {
+.user-profile img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--border-color-2);
   cursor: pointer; }
 
-.profile img:hover {
+.user-profile img:hover {
   opacity: .7; }
+
+#user-profile {
+  margin-inline: 5px; }
 
 /*Top Section*/
 /*Mid Section Start*/
@@ -3531,8 +3538,8 @@ video {
   margin-bottom: 15px; }
 
 .sidemechaCon_RoClass .company-logo img {
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   cursor: pointer; }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
@@ -3711,7 +3718,7 @@ video {
   background-color: var(--bg-color-2);
   border: 1px solid var(--border-color-2); }
 
-.post-list .profile {
+.post-list .user-profile {
   display: flex;
   align-items: center;
   gap: 10px; }
@@ -3748,19 +3755,24 @@ video {
   background-color: var(--bg-color-3); }
 
 .post-list .post-reactions {
-  padding: 10px 3px;
+  padding: 10px 4px;
   display: flex;
-  align-items: center;
-  gap: 5px;
   color: var(--text-color-3);
-  border-bottom: 2px solid var(--border-color-4); }
+  border-bottom: 1px solid var(--border-color-4); }
+
+.post-reactions .reactions-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; }
 
 .post-list .actions button {
   color: var(--text-color-4);
   margin-top: 5px; }
 
-.post-reactions .reaction-icon-container {
-  display: flex; }
+.post-list .reaction-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 2px; }
 
 .reaction-icon-container .reaction-icon {
   height: 15px;
@@ -3768,7 +3780,11 @@ video {
 
 .post-reactions .comment-count {
   margin-left: auto;
-  margin-right: 7px; }
+  margin-right: 7px;
+  cursor: pointer; }
+
+.post-reactions .comment-count:hover {
+  text-decoration: underline; }
 
 .actions .reaction-popup-container {
   position: relative; }
@@ -3778,7 +3794,7 @@ video {
 
 .reaction-popup-container .reactions-popup {
   display: flex;
-  gap: 5px;
+  gap: 7px;
   background-color: var(--bg-color-4);
   padding: 5px 4px;
   border: 1px solid var(--border-color-5);
@@ -3787,72 +3803,80 @@ video {
   bottom: 100%;
   transform: scale(1, 0);
   transform-origin: bottom;
-  transition: transform ease-in-out .4s !important; }
+  transition: transform linear .3s !important; }
 
-.reactions-popup img {
+.reactions-popup .emoji-container {
   height: 32px;
   width: 32px;
-  cursor: pointer; }
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
 
-.reactions-popup img:hover {
-  opacity: .7; }
+.emoji-container img {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  position: absolute; }
 
-.reactions-popup img:active {
+.emoji-container img:hover {
+  height: 39px;
+  width: 39px; }
+
+.emoji-container img:active {
   opacity: .5; }
 
 .post-list .post-actions,
-.comment .comment-actions,
-.comment .reply-actions {
+.comment .comment-actions {
   display: flex;
   align-items: center;
   gap: 6px; }
 
 .post-list .date-posted {
-  font-size: 11px;
-  margin-block: 5px;
+  font-size: 12px;
+  padding-block: 5px;
   white-space: normal;
   color: var(--text-color-4); }
 
+.post-list .comment-section {
+  max-height: 400px;
+  overflow: auto; }
+
+.comment-section:hover::-webkit-scrollbar-thumb {
+  visibility: visible; }
+
 .comment-section .comment {
-  border-left: 2px solid var(--border-color-3);
-  margin-left: 5px;
+  border-left: 1px solid var(--border-color-4);
   padding-left: 5px; }
+
+.comment .comment-reactions {
+  padding: 10px 4px;
+  display: flex;
+  gap: 15px;
+  color: var(--text-color-3);
+  border-bottom: 1px solid var(--border-color-4);
+  flex-wrap: wrap; }
 
 .profile-container {
   display: flex;
   align-items: flex-start;
   margin-top: 10px; }
 
-.profile-container .profile img {
+.profile-container .user-profile img {
   width: 30px;
   height: 30px;
   margin: 1px 5px 0px 0px; }
 
 .comment .post-comment {
-  margin-bottom: 7px;
   white-space: normal;
   padding: 10px;
+  margin-right: 10px;
   border-radius: 10px;
   background-color: var(--bg-color-3); }
 
 .comment .comment-name {
   font-weight: bold;
   font-size: 12px;
-  margin-bottom: 2px; }
-
-.comment .reply-input {
-  width: 100%;
-  margin-block: 5px;
-  padding: 7px;
-  border-radius: 10px;
-  background-color: var(--bg-color-3); }
-
-.comment .post-reply {
-  margin-bottom: 7px;
-  white-space: normal;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: var(--bg-color-3); }
+  margin-bottom: 3px; }
 
 .comment-actions .comment-like-count {
   margin-right: 10px; }
@@ -3871,37 +3895,63 @@ video {
 /*Right Content*/
 .rolayout_RoClass .right-side-container {
   width: 300px;
-  flex-shrink: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: transparent;
+  overflow: auto;
   z-index: 1;
-  direction: rtl;
-  padding: 0px 0px 10px 20px; }
+  margin-right: 22px;
+  color: #FFFFFF;
+  direction: rtl; }
 
 .right-side-container:hover::-webkit-scrollbar-thumb,
-#side-content:hover::-webkit-scrollbar-thumb {
+.side-content-wrapper:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
 
 .right-side-container .side-content-wrapper {
-  overflow: hidden;
+  height: 580px;
   border-radius: 10px;
-  margin-right: 20px;
-  padding: 0 !important;
-  height: 400px;
+  padding-inline: 20px;
+  border: 1px solid var(--border-color-2);
+  background-color: var(--bg-color-4);
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: ltr;
+  margin: 10px 0px 0px 10px;
+  color: var(--text-color-1); }
+
+.side-content-wrapper .side-content-title {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding-block: 20px;
+  background-color: var(--bg-color-4);
+  font-weight: bold;
+  border-bottom: 1px solid var(--border-color-4); }
+
+.side-content-wrapper .side-content-content {
+  margin-bottom: 25px; }
+
+.side-content-content .content-title {
   margin-top: 10px;
-  border: 1px solid var(--border-color-4); }
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color-4); }
 
-.side-content-wrapper #side-content {
-  height: 100%;
-  overflow: auto;
-  padding-block: 7px; }
+.side-content-content .date {
+  font-size: 12px;
+  color: var(--text-color-4); }
 
-.right-side-container .side-content-two {
+.side-content-content .message-info {
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color-1);
+  background-color: var(--bg-color-3); }
+
+.right-side-container .pinned-posts-wrapper {
   height: 300px; }
 
-.right-side-container .side-content-three {
-  height: 600px; }
+.pinned-posts-wrapper a {
+  color: inherit; }
 
 /*Right Content*/
 /*Mid Section End*/
@@ -3914,13 +3964,81 @@ body #footerWrap_RoId {
   font-weight: bold; }
 
 /*Bottom Section / Footer*/
+/*Chat Section*/
+.chat-toggle-button {
+  position: fixed;
+  bottom: 38px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-color-11);
+  border: 1px solid var(--border-color-2);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 1px 2px 0px;
+  color: var(--text-color-4);
+  font-weight: bold; }
+
+.chat-toggle-button:hover {
+  opacity: .7; }
+
+.chat-container {
+  position: fixed;
+  bottom: 23px;
+  right: 0px;
+  width: 350px;
+  height: calc(100% - 78px);
+  background-color: var(--bg-color-1);
+  padding: 0px 10px 10px 10px;
+  overflow: auto; }
+
+.chat-container:hover::-webkit-scrollbar-thumb {
+  visibility: visible; }
+
+.chat-container .contacts {
+  font-weight: bold;
+  padding-block: 20px;
+  color: var(--text-color-4); }
+
+.chat-container .contact-container {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.chat-container .contact-container:hover {
+  background-color: var(--bg-color-10); }
+
+.contact-container .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
+
+.contact-container .profile-name {
+  color: var(--text-color-1);
+  font-weight: bold; }
+
+/*Chat Section*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Query*/
 @media (min-width: 1081px) and (max-width: 1250px) {
   .mainmecha_RoClass #mainmechaCon_RoId {
-    max-width: 450px; } }
+    max-width: 450px; }
+
+  .post-list .post-reactions {
+    flex-direction: column;
+    gap: 10px; }
+
+  .post-reactions .comment-count {
+    margin: 0px; } }
 /*Other Media Query*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3944,11 +4062,21 @@ body #footerWrap_RoId {
   .mainmecha_RoClass #mainmechaCon_RoId {
     max-width: 100%; }
 
+  .post-list .post-reactions {
+    flex-direction: column;
+    gap: 10px; }
+
+  .post-reactions .comment-count {
+    margin: 0px; }
+
   .rolayout_RoClass .right-side-container {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: var(--bg-color-1); } }
+    background-color: var(--bg-color-1); }
+
+  .chat-container {
+    width: 100%; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

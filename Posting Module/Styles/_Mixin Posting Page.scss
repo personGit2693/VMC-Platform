@@ -8,11 +8,13 @@
 /*Dark Mode (Default Style)*/
 @mixin dark-mode {
 	--bg-color-4: #242526;
+	--bg-color-10: #303031;
+	--bg-color-11: #5D5E61;
 	--text-color-1: #FFFFFF;
 	--text-color-3: #CDD1D5;
 	--text-color-4: #ADB1B3;
 	--border-color-2: #121413;
-	--border-color-3: #3E3F40;
+	--border-color-3: #3E3F40; // unused
 	--border-color-4: #444749;
 	--border-color-5: #353637;
 }
@@ -23,11 +25,13 @@
 /*General*/
 @mixin light-mode {
 	--bg-color-4: #FFFFFF;
+	--bg-color-10: #E4E6E8;
+	--bg-color-11: #FFFFFF;
 	--text-color-1: #000000;
 	--text-color-3: #5F6266;
 	--text-color-4: #6E6F72;
 	--border-color-2: #E2E4E7;
-	--border-color-3: #F0F2F5;
+	--border-color-3: #F0F2F5; // unused
 	--border-color-4: #CED0D4;
 	--border-color-5: #E4E4E4;
 }
@@ -263,39 +267,21 @@
 }
 
 @mixin date-posted {
-	font-size: 11px;
-	margin-block: 5px;
+	font-size: 12px;
+	padding-block: 5px;
 	white-space: normal;
 	color: var(--text-color-4);
 }
 
 @mixin comment {
-	border-left: 2px solid var(--border-color-3);
-	margin-left: 5px;
+	border-left: 1px solid var(--border-color-4);
 	padding-left: 5px;
-
 }
 
 @mixin post-comment {
-	margin-bottom: 7px;
 	white-space: normal;
 	padding: 10px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
-}
-
-@mixin reply-input {
-	width: 100%;
-	margin-block: 5px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-3);
-}
-
-@mixin post-reply {
-	margin-bottom: 7px;
-	white-space: normal;
-	padding: 10px;
+	margin-right: 10px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
 }
@@ -316,13 +302,11 @@
 /*Right Content*/
 @mixin right-side-container {
 	width: 300px;
-	flex-shrink: 0;
-	overflow-y: auto;
-	overflow-x: hidden;
-	background-color: transparent;
+	overflow: auto;
 	z-index: 1;
+	margin-right: 22px;
+	color: #FFFFFF;
 	direction: rtl;
-	padding: 0px 0px 10px 20px;
 }
 
 @mixin right-side-container-hover-webkit {
@@ -330,28 +314,18 @@
 }
 
 @mixin side-content-wrapper {
-	overflow: hidden;
+	height: 580px;
 	border-radius: 10px;
-	margin-right: 20px;
-	padding: 0 !important;
-	height: 400px;
-	margin-top: 10px;
-	border: 1px solid var(--border-color-4);
+	padding-inline: 20px;
+	border: 1px solid var(--border-color-2);
+	background-color: var(--bg-color-4);
+	overflow-y: auto;
+	overflow-x: hidden;
+	direction: ltr;
+	margin: 10px 0px 0px 10px;
+	color: var(--text-color-1);
 }
 
-@mixin side-content-id {
-	height: 100%;
-	overflow: auto;
-	padding-block: 7px;
-}
-
-@mixin side-content-two {
-	height: 300px;
-}
-
-@mixin side-content-three {
-	height: 600px;
-}
 /*Right Content*/
 /*Mid Section End*/
 /*General*/

@@ -22,7 +22,7 @@
 			<div class="topMenus burger-icon"><img src="../../src/burgericon.png"></div>
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
-			<div class="profile">
+			<div class="user-profile" id="user-profile">
 				<img src="../../src/cat-profile.png">
 			</div>
 		</div>
@@ -106,7 +106,6 @@
 				<!--//Without user login details-->
 				<div class="projectTitle_RoClass" id="projectTitle_RoId">CREATE A POST</div>
 
-				<!--Post Section-->
 				<div class="post-form">
 					<form class="create-post-form" enctype="multipart/form-data">
 						<label class="post-category-label" for="post-category">Category:</label>
@@ -116,7 +115,8 @@
 							<option value="category1">Category 1</option>
 							<option value="category2">Category 2</option>
 							<option value="category2">Category 3</option>
-							<!-- Add more category options as needed -->
+							<option value="category2">Category 4</option>
+							<option value="category2">Category 5</option>
 						</select>
 
 						<label class="post-title" for="post-title">Title:</label>
@@ -137,11 +137,12 @@
 					</form>
 				</div>
 
+				<!--Posts Section-->
 				<div class="posts">
 					<div class="recent-posts">RECENT POSTS</div>
 
 					<div class="post-list">
-						<div class="profile">
+						<div class="user-profile">
 							<img src="../../src/cat-profile.png">
 							<div>John Smith</div>
 						</div>
@@ -159,7 +160,6 @@
 							</p>
 
 							<p>ASC Ref No. G0113N010524G</p>
-							
 						</div>
 
 						<div class="file-preview-container">
@@ -167,29 +167,78 @@
 						</div>
 						
 						<div class="post-reactions">
-							<div class=reaction-icon-container>
-								<img class="reaction-icon" src="../../src/heart-icon.webp">
-								<img class="reaction-icon" src="../../src/like-icon.webp">
-								<img class="reaction-icon" src="../../src/wow-icon.svg">
+							<div class="reactions-container">
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/like-icon.webp">
+									<div class="reaction-count">101</div>
+								</div>
+
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/heart-icon.webp">
+									<div class="reaction-count">38</div>
+								</div>
+
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/care-icon.webp">
+									<div class="reaction-count">11</div>
+								</div>
+
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/haha-icon.png">
+									<div class="reaction-count">16</div>
+								</div>
+
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/wow-icon.svg">
+									<div class="reaction-count">40</div>
+								</div>
+
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/sad-icon.webp">
+									<div class="reaction-count">11</div>
+								</div>
+
+								<div class="reaction-icon-container">
+									<img class="reaction-icon" src="../../src/angry-icon.png">
+									<div class="reaction-count">4</div>
+								</div>
 							</div>
-							
-							<div class="reaction-count">258</div>
-							<div class="comment-count">15 comments</div>
+
+							<div class="comment-count" onclick="toggleCommentSection()">4 comments</div>
 						</div>
 
-						
 						<div class="post-actions actions">
 							<div class="reaction-popup-container">
 								<button class="like-button">Like</button>
 
 								<div class="reactions-popup">
-									<img class="like-icon" src="../../src/like-icon.webp">
-									<img class="heart-icon" src="../../src/heart-icon.webp">
-									<img class="care-icon" src="../../src/care-icon.webp">
-									<img class="haha-icon" src="../../src/haha-icon.png">
-									<img class="wow-icon" src="../../src/wow-icon.svg">
-									<img class="sad-icon" src="../../src/sad-icon.webp">
-									<img class="angry-icon" src="../../src/angry-icon.png">
+									<div class="emoji-container">
+										<img class="like-icon" src="../../src/like-icon.webp">
+									</div>
+
+									<div class="emoji-container">
+										<img class="heart-icon" src="../../src/heart-icon.webp">
+									</div>
+
+									<div class="emoji-container">
+										<img class="care-icon" src="../../src/care-icon.webp">
+									</div>
+
+									<div class="emoji-container">
+										<img class="haha-icon" src="../../src/haha-icon.png">
+									</div>
+
+									<div class="emoji-container">
+										<img class="wow-icon" src="../../src/wow-icon.svg">
+									</div>
+
+									<div class="emoji-container">
+										<img class="sad-icon" src="../../src/sad-icon.webp">
+									</div>
+
+									<div class="emoji-container">
+										<img class="angry-icon" src="../../src/angry-icon.png">
+									</div>
 								</div>
 							</div>
 
@@ -200,15 +249,16 @@
 
 						<div class="date-posted">Date Posted: 4/19/2024, 7:51:06 PM</div>
 
-						<div class="comment-section">
+						<!--Comment Section-->
+						<div class="comment-section" id="comment-section" style="display: none;">
 							<div class="comment">
 								<div class="profile-container">
-									<div class="profile">
+									<div class="user-profile">
 										<img src="../../src/cat-profile.png">
 									</div>
 
 									<div class="post-comment">
-										<div class="comment-name">Kara Williams</div>
+										<div class="comment-name">Robert Johnson</div>
 
 										<div>
 											I left my phone in Roy Sison Medina's car. I am Robert Johnson, it was from Lincoln Tower Proscenium to el Chupacabra Makati. I have phone ocater of his location, please advise!
@@ -216,13 +266,41 @@
 									</div>
 								</div>
 
-								<div class="post-reactions">
-									<div class=reaction-icon-container>
-										<img class="reaction-icon" src="../../src/sad-icon.webp">
-										<img class="reaction-icon" src="../../src/care-icon.webp">
+								<div class="comment-reactions">
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/like-icon.webp">
+										<div class="reaction-count">101</div>
 									</div>
 
-									<div class="reaction-count">48</div>
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/heart-icon.webp">
+										<div class="reaction-count">38</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/care-icon.webp">
+										<div class="reaction-count">11</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/haha-icon.png">
+										<div class="reaction-count">16</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/wow-icon.svg">
+										<div class="reaction-count">40</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/sad-icon.webp">
+										<div class="reaction-count">11</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/angry-icon.png">
+										<div class="reaction-count">4</div>
+									</div>
 								</div>
 
 								<div class="comment-actions actions">
@@ -230,121 +308,107 @@
 										<button class="like-button">Like</button>
 
 										<div class="reactions-popup">
-											<img class="like-icon" src="../../src/like-icon.webp">
-											<img class="heart-icon" src="../../src/heart-icon.webp">
-											<img class="care-icon" src="../../src/care-icon.webp">
-											<img class="haha-icon" src="../../src/haha-icon.png">
-											<img class="wow-icon" src="../../src/wow-icon.svg">
-											<img class="sad-icon" src="../../src/sad-icon.webp">
-											<img class="angry-icon" src="../../src/angry-icon.png">
+											<div class="emoji-container">
+												<img class="like-icon" src="../../src/like-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="heart-icon" src="../../src/heart-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="care-icon" src="../../src/care-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="haha-icon" src="../../src/haha-icon.png">
+											</div>
+
+											<div class="emoji-container">
+												<img class="wow-icon" src="../../src/wow-icon.svg">
+											</div>
+
+											<div class="emoji-container">
+												<img class="sad-icon" src="../../src/sad-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="angry-icon" src="../../src/angry-icon.png">
+											</div>
 										</div>
 									</div>
 
-									<button>Reply</button>
 									<button>Edit</button>
 									<button>Delete</button>
 								</div>
 
 								<div class="date-posted">Date Posted: 4/19/2024, 8:39:45 PM</div>
+							</div>
 
-								<div class="reply-section">
-									<div class="comment">
-										<div class="profile-container">
-											<div class="profile">
-												<img src="../../src/cat-profile.png">
-											</div>
+							<div class="comment">
+								<div class="profile-container">
+									<div class="user-profile">
+										<img src="../../src/cat-profile.png">
+									</div>
 
-											<div class="post-reply">
-												<div class="comment-name">Oliver Luna</div>
-												<div>China oil.</div>
-											</div>
-										</div>
+									<div class="post-comment">
+										<div class="comment-name">Robert Johnson</div>
 
-										<div class="post-reactions">
-											<div class=reaction-icon-container>
-												<img class="reaction-icon" src="../../src/angry-icon.png">
-												<img class="reaction-icon" src="../../src/haha-icon.png">
-											</div>
-
-											<div class="reaction-count">25</div>
-										</div>
-
-										<div class="reply-actions actions">
-											<div class="reaction-popup-container">
-												<button class="like-button">Like</button>
-
-												<div class="reactions-popup">
-													<img class="like-icon" src="../../src/like-icon.webp">
-													<img class="heart-icon" src="../../src/heart-icon.webp">
-													<img class="care-icon" src="../../src/care-icon.webp">
-													<img class="haha-icon" src="../../src/haha-icon.png">
-													<img class="wow-icon" src="../../src/wow-icon.svg">
-													<img class="sad-icon" src="../../src/sad-icon.webp">
-													<img class="angry-icon" src="../../src/angry-icon.png">
-												</div>
-											</div>
-
-											<button>Reply</button>
-											<button>Edit</button>
-											<button>Delete</button>
-										</div>
-
-										<div class="date-posted">Date Posted: 4/19/2024, 8:55:22 PM</div>
-
-										<div class="reply-section">
-											<div class="comment">
-												<div class="profile-container">
-													<div class="profile">
-														<img src="../../src/cat-profile.png">
-													</div>
-
-													<div class="post-reply">
-														<div class="comment-name">Wendy Santos</div>
-														<div>Haha! san ka punta galing?</div>
-													</div>
-												</div>
-
-												<div class="post-reactions">
-													<div class=reaction-icon-container>
-														<img class="reaction-icon" src="../../src/wow-icon.svg">
-														<img class="reaction-icon" src="../../src/like-icon.webp">
-													</div>
-
-													<div class="reaction-count">11</div>
-												</div>
-
-												<div class="reply-actions actions">
-													<div class="reaction-popup-container">
-														<button class="like-button">Like</button>
-
-														<div class="reactions-popup">
-															<img class="like-icon" src="../../src/like-icon.webp">
-															<img class="heart-icon" src="../../src/heart-icon.webp">
-															<img class="care-icon" src="../../src/care-icon.webp">
-															<img class="haha-icon" src="../../src/haha-icon.png">
-															<img class="wow-icon" src="../../src/wow-icon.svg">
-															<img class="sad-icon" src="../../src/sad-icon.webp">
-															<img class="angry-icon" src="../../src/angry-icon.png">
-														</div>
-													</div>
-													
-													<button>Reply</button>
-													<button>Edit</button>
-													<button>Delete</button>
-												</div>
-
-												<div class="date-posted">Date Posted: 4/19/2024, 8:55:22 PM</div>
-											</div>
+										<div>
+											I left my phone in Roy Sison Medina's car. I am Robert Johnson, it was from Lincoln Tower Proscenium to el Chupacabra Makati. I have phone ocater of his location, please advise!
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
 
-						<div class="comment-section">
+								<div class="comment-reactions">
+
+								</div>
+
+								<div class="comment-actions actions">
+									<div class="reaction-popup-container">
+										<button class="like-button">Like</button>
+
+										<div class="reactions-popup">
+											<div class="emoji-container">
+												<img class="like-icon" src="../../src/like-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="heart-icon" src="../../src/heart-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="care-icon" src="../../src/care-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="haha-icon" src="../../src/haha-icon.png">
+											</div>
+
+											<div class="emoji-container">
+												<img class="wow-icon" src="../../src/wow-icon.svg">
+											</div>
+
+											<div class="emoji-container">
+												<img class="sad-icon" src="../../src/sad-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="angry-icon" src="../../src/angry-icon.png">
+											</div>
+										</div>
+									</div>
+
+									<button>Edit</button>
+									<button>Delete</button>
+								</div>
+
+								<div class="date-posted">Date Posted: 4/19/2024, 8:39:45 PM</div>
+							</div>
+
 							<div class="comment">
 								<div class="profile-container">
-									<div class="profile">
+									<div class="user-profile">
 										<img src="../../src/cat-profile.png">
 									</div>
 
@@ -354,13 +418,41 @@
 									</div>
 								</div>
 
-								<div class="post-reactions">
-									<div class=reaction-icon-container>
-										<img class="reaction-icon" src="../../src/heart-icon.webp">
-										<img class="reaction-icon" src="../../src/wow-icon.svg">
+								<div class="comment-reactions">
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/like-icon.webp">
+										<div class="reaction-count">101</div>
 									</div>
 
-									<div class="reaction-count">39</div>
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/heart-icon.webp">
+										<div class="reaction-count">38</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/care-icon.webp">
+										<div class="reaction-count">11</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/haha-icon.png">
+										<div class="reaction-count">16</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/wow-icon.svg">
+										<div class="reaction-count">40</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/sad-icon.webp">
+										<div class="reaction-count">11</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/angry-icon.png">
+										<div class="reaction-count">4</div>
+									</div>
 								</div>
 
 								<div class="comment-actions actions">
@@ -368,29 +460,46 @@
 										<button class="like-button">Like</button>
 
 										<div class="reactions-popup">
-											<img class="like-icon" src="../../src/like-icon.webp">
-											<img class="heart-icon" src="../../src/heart-icon.webp">
-											<img class="care-icon" src="../../src/care-icon.webp">
-											<img class="haha-icon" src="../../src/haha-icon.png">
-											<img class="wow-icon" src="../../src/wow-icon.svg">
-											<img class="sad-icon" src="../../src/sad-icon.webp">
-											<img class="angry-icon" src="../../src/angry-icon.png">
+											<div class="emoji-container">
+												<img class="like-icon" src="../../src/like-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="heart-icon" src="../../src/heart-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="care-icon" src="../../src/care-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="haha-icon" src="../../src/haha-icon.png">
+											</div>
+
+											<div class="emoji-container">
+												<img class="wow-icon" src="../../src/wow-icon.svg">
+											</div>
+
+											<div class="emoji-container">
+												<img class="sad-icon" src="../../src/sad-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="angry-icon" src="../../src/angry-icon.png">
+											</div>
 										</div>
 									</div>
 									
-									<button>Reply</button>
 									<button>Edit</button>
 									<button>Delete</button>
 								</div>
 
 								<div class="date-posted">Date Posted: 4/19/2024, 8:39:45 PM</div>
 							</div>
-						</div>
 
-						<div class="comment-section">
 							<div class="comment">
 								<div class="profile-container">
-									<div class="profile">
+									<div class="user-profile">
 										<img src="../../src/cat-profile.png">
 									</div>
 
@@ -403,13 +512,41 @@
 									</div>
 								</div>
 
-								<div class="post-reactions">
-									<div class=reaction-icon-container>
-										<img class="reaction-icon" src="../../src/heart-icon.webp">
-										<img class="reaction-icon" src="../../src/angry-icon.png">
+								<div class="comment-reactions">
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/like-icon.webp">
+										<div class="reaction-count">101</div>
 									</div>
 
-									<div class="reaction-count">20</div>
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/heart-icon.webp">
+										<div class="reaction-count">38</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/care-icon.webp">
+										<div class="reaction-count">11</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/haha-icon.png">
+										<div class="reaction-count">16</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/wow-icon.svg">
+										<div class="reaction-count">40</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/sad-icon.webp">
+										<div class="reaction-count">11</div>
+									</div>
+
+									<div class="reaction-icon-container">
+										<img class="reaction-icon" src="../../src/angry-icon.png">
+										<div class="reaction-count">4</div>
+									</div>
 								</div>
 
 								<div class="comment-actions actions">
@@ -417,75 +554,47 @@
 										<button class="like-button">Like</button>
 
 										<div class="reactions-popup">
-											<img class="like-icon" src="../../src/like-icon.webp">
-											<img class="heart-icon" src="../../src/heart-icon.webp">
-											<img class="care-icon" src="../../src/care-icon.webp">
-											<img class="haha-icon" src="../../src/haha-icon.png">
-											<img class="wow-icon" src="../../src/wow-icon.svg">
-											<img class="sad-icon" src="../../src/sad-icon.webp">
-											<img class="angry-icon" src="../../src/angry-icon.png">
+											<div class="emoji-container">
+												<img class="like-icon" src="../../src/like-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="heart-icon" src="../../src/heart-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="care-icon" src="../../src/care-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="haha-icon" src="../../src/haha-icon.png">
+											</div>
+
+											<div class="emoji-container">
+												<img class="wow-icon" src="../../src/wow-icon.svg">
+											</div>
+
+											<div class="emoji-container">
+												<img class="sad-icon" src="../../src/sad-icon.webp">
+											</div>
+
+											<div class="emoji-container">
+												<img class="angry-icon" src="../../src/angry-icon.png">
+											</div>
 										</div>
 									</div>
 
-									<button>Reply</button>
 									<button>Edit</button>
 									<button>Delete</button>
 								</div>
 
 								<div class="date-posted">Date Posted: 4/19/2024, 8:39:45 PM</div>
-
-								<div class="reply-section">
-									<div class="comment">
-										<div class="profile-container">
-											<div class="profile">
-												<img src="../../src/grab-profile.png">
-											</div>
-
-											<div class="post-reply">
-												<div class="comment-name">Grab</div>
-												<div>
-													So sorry for the trouble 😔️ In order for the respective team to look into this, please file a report through the following link: <a href="">https://help.grab.com/.../115005941667-I-can't-pay-with...</a> by clicking Login to get help and selecting 'Why do I have an unsettled amount in the App' as the issue so that the dedicated team can check the transaction further. Rest assured, you will be notified directly via your registered email address for updates.
-												</div>
-											</div>
-										</div>
-
-										<div class="post-reactions">
-											<div class=reaction-icon-container>
-												<img class="reaction-icon" src="../../src/haha-icon.png">
-												<img class="reaction-icon" src="../../src/like-icon.webp">
-											</div>
-
-											<div class="reaction-count">18</div>
-										</div>
-
-										<div class="reply-actions actions">
-											<div class="reaction-popup-container">
-												<button class="like-button">Like</button>
-
-												<div class="reactions-popup">
-													<img class="like-icon" src="../../src/like-icon.webp">
-													<img class="heart-icon" src="../../src/heart-icon.webp">
-													<img class="care-icon" src="../../src/care-icon.webp">
-													<img class="haha-icon" src="../../src/haha-icon.png">
-													<img class="wow-icon" src="../../src/wow-icon.svg">
-													<img class="sad-icon" src="../../src/sad-icon.webp">
-													<img class="angry-icon" src="../../src/angry-icon.png">
-												</div>
-											</div>
-											
-											<button>Reply</button>
-											<button>Edit</button>
-											<button>Delete</button>
-										</div>
-
-										<div class="date-posted">Date Posted: 4/19/2024, 8:55:22 PM</div>
-									</div>
-								</div>
 							</div>
 						</div>
+						<!--Comment Section-->
 
 						<div class="profile-container">
-							<div class="profile">
+							<div class="user-profile">
 								<img src="../../src/cat-profile.png">
 							</div>
 
@@ -493,7 +602,7 @@
 						</div>
 					</div>
 				</div>
-				<!--Post Section-->
+				<!--Posts Section-->
 
 				<!--//With user login details
 				<div class="projTitleAndUserLogin_RoClass">
@@ -512,214 +621,83 @@
 		<!--Right Side Content-->
 		<div class="right-side-container">
 			<!--Side Content 1-->
-			<div class="sidemecha_RoClass side-content-wrapper" id="sidemecha_RoId" style="--naviBgColor:transparent;">
-				<div class="sidemechaCon_RoClass" id="side-content">
-					<!--Without Sub Menus-->
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
+			<div class="side-content-wrapper">
+				<div class="side-content-title">Global Messages</div>
 
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
+				<div class="side-content-content">
+					<div class="content-title">Boss Amo messaged Juan Dela Cruz</div>
+					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
 
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
+					<div class="message-info">
+						<div>Message:<br><br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</div>
+					</div>
+				</div>
 
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
+				<div class="side-content-content">
+					<div class="content-title">Boss Amo messaged Hubert Blaine Wolfeschl Sr.</div>
+					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
 
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
-
-					<a href="" class="mainNavMenu_RoClass">					
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/angry-icon.png'); --activeMainNavMenuIcon:url('../../src/angry-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 1</span>
-					</a>
+					<div class="message-info">
+						<div>Message:<br><br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--Side Content 1-->
 
 			<!--Side Content 2-->
-			<div class="sidemecha_RoClass side-content-wrapper side-content-two" id="sidemecha_RoId" style="--naviBgColor:transparent;">
-				<div class="sidemechaCon_RoClass" id="side-content">
-					<!--With Sub Menus-->
-					<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/heart-icon.webp'); --activeMainNavMenuIcon:url('../../src/care-icon.webp')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 2</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png"/></div>
-					</div>
+			<div class="side-content-wrapper pinned-posts-wrapper">
+				<div class="side-content-title">Pinned Posts</div>
 
-					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-					</div>
+				<div class="side-content-content">
+					<div class="content-title"><a href="">Grab Car Saver</a></div>
+					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
 				</div>
 			</div>
 			<!--Side Content 2-->
-
-			<!--Side Content 3-->
-			<div class="sidemecha_RoClass side-content-wrapper side-content-three" id="sidemecha_RoId" style="--naviBgColor:transparent;">
-				<div class="sidemechaCon_RoClass" id="side-content">
-					<!--With Sub Menus-->
-					<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
-						<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/haha-icon.png'); --activeMainNavMenuIcon:url('../../src/haha-icon.png')"></div>
-						<span class="generalNavMenuText_RoClass">CONTENT 3</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png"/></div>
-					</div>
-
-					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-
-						<a href="" class="subNavMenu_RoClass">					
-							<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
-							<span class="generalNavMenuText_RoClass">Content</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<!--Side Content 3-->
 		</div>
 		<!--Right Side Content-->
 	</div>
@@ -731,6 +709,129 @@
 		<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 HRIS. All rights reserved.</span>
 	</div>
 	<!--Bottom Section / Footer-->
+
+	<!--Chat Section-->
+	<div class="chat-toggle-button">C</div>
+
+	<div class="chat-container" style="display: none;">
+		<div class="contacts">Contacts</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Jane Luna</div>
+		</div>
+	</div>
+	<!--Chat Section-->
 
 	<script type="text/javascript" src="../Client Side/Posting Page.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
