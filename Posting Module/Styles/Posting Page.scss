@@ -405,6 +405,7 @@ video {
 	width: 32px;
 	cursor: pointer;
 	position: absolute;
+	transition: all .15s linear;
 }
 
 .emoji-container img:hover {

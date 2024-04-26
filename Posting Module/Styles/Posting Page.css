@@ -3821,7 +3821,8 @@ video {
   height: 32px;
   width: 32px;
   cursor: pointer;
-  position: absolute; }
+  position: absolute;
+  transition: all .15s linear; }
 
 .emoji-container img:hover {
   height: 39px;
