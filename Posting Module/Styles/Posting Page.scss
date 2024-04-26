@@ -165,8 +165,12 @@ video {
 	@include global_sidemecha_RoId;
 }
 
+#sidemecha_RoId::-webkit-scrollbar-thumb {
+	@include global_sidemecha_RoId-sb-thumb;
+}
+
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	@include global_sidemecha_RoId-hover-webkit;
+	@include global_sidemecha_RoId-hover-sb-thumb;
 }
 
 .sidemechaCon_RoClass .company-logo {
@@ -175,6 +179,11 @@ video {
 
 .sidemechaCon_RoClass .company-logo img {
 	@include global_company-logo-img;
+}
+
+.sidemechaCon_RoClass .mainNavMenu_RoClass,
+.sidemechaCon_RoClass .subNavMenu_RoClass {
+	@include global_mainNavMenu_RoClass;
 }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
@@ -189,10 +198,6 @@ video {
 /*Mid Content*/
 .rolayout_RoClass #mainmecha_RoId {
 	@include mainmecha_RoClass;
-}
-
-#mainmecha_RoId::-webkit-scrollbar-thumb {
-	@include global_mainmecha_RoId-scrollbar-thumb;
 }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
@@ -240,8 +245,12 @@ video {
 	@include post-content-id;
 }
 
+#post-content::-webkit-scrollbar-thumb {
+	@include post-content-id-sb-thumb;
+}
+
 #post-content:hover::-webkit-scrollbar-thumb {
-	@include post-content-id-hover-webkit;
+	@include post-content-id-hover-sb-thumb;
 }
 
 .create-post-form .custom-file-upload {
@@ -421,6 +430,10 @@ video {
 	overflow: auto;
 }
 
+.comment-section::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+
 .comment-section:hover::-webkit-scrollbar-thumb {
 	visibility: visible;
 }
@@ -476,13 +489,16 @@ video {
 /*Right Content*/
 .rolayout_RoClass .right-side-container {
 	@include right-side-container;
+}
 
+.right-side-container::-webkit-scrollbar-thumb,
+.side-content-wrapper::-webkit-scrollbar-thumb {
+	@include right-side-container-sb-thumb;
 }
 
 .right-side-container:hover::-webkit-scrollbar-thumb,
-.side-content-wrapper:hover::-webkit-scrollbar-thumb,
- {
-	@include right-side-container-hover-webkit;
+.side-content-wrapper:hover::-webkit-scrollbar-thumb {
+	@include right-side-container-hover-sb-thumb;
 }
 
 .right-side-container .side-content-wrapper {
@@ -577,6 +593,10 @@ body #footerWrap_RoId {
 	background-color: var(--bg-color-1);
 	padding: 0px 10px 10px 10px;
 	overflow: auto;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+	visibility: hidden;
 }
 
 .chat-container:hover::-webkit-scrollbar-thumb {

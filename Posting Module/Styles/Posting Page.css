@@ -3402,16 +3402,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-color-5) !important;
-  border-radius: 10px;
-  visibility: hidden; }
+  border-radius: 10px; }
 
 ::-webkit-scrollbar-track {
   display: none; }
 
 * {
   font-family: 'Binance PLEX' !important;
-  box-sizing: border-box;
-  transition: all .15s linear !important; }
+  box-sizing: border-box; }
 
 body {
   background-color: var(--bg-color-1); }
@@ -3529,6 +3527,9 @@ video {
   background-color: var(--bg-color-1);
   z-index: 1; }
 
+#sidemecha_RoId::-webkit-scrollbar-thumb {
+  visibility: hidden; }
+
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
 
@@ -3541,6 +3542,10 @@ video {
   width: 140px;
   height: 140px;
   cursor: pointer; }
+
+.sidemechaCon_RoClass .mainNavMenu_RoClass,
+.sidemechaCon_RoClass .subNavMenu_RoClass {
+  transition: all 0s; }
 
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
   font-weight: bold; }
@@ -3558,9 +3563,6 @@ video {
   justify-content: center;
   position: absolute;
   height: 100%; }
-
-#mainmecha_RoId::-webkit-scrollbar-thumb {
-  visibility: visible; }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
   max-width: 600px; }
@@ -3629,6 +3631,9 @@ video {
   resize: none;
   background-color: transparent;
   display: block; }
+
+#post-content::-webkit-scrollbar-thumb {
+  visibility: hidden; }
 
 #post-content:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
@@ -3841,6 +3846,9 @@ video {
   max-height: 400px;
   overflow: auto; }
 
+.comment-section::-webkit-scrollbar-thumb {
+  visibility: hidden; }
+
 .comment-section:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
 
@@ -3900,6 +3908,10 @@ video {
   margin-right: 22px;
   color: #FFFFFF;
   direction: rtl; }
+
+.right-side-container::-webkit-scrollbar-thumb,
+.side-content-wrapper::-webkit-scrollbar-thumb {
+  visibility: hidden; }
 
 .right-side-container:hover::-webkit-scrollbar-thumb,
 .side-content-wrapper:hover::-webkit-scrollbar-thumb {
@@ -3995,6 +4007,9 @@ body #footerWrap_RoId {
   background-color: var(--bg-color-1);
   padding: 0px 10px 10px 10px;
   overflow: auto; }
+
+.chat-container::-webkit-scrollbar-thumb {
+  visibility: hidden; }
 
 .chat-container:hover::-webkit-scrollbar-thumb {
   visibility: visible; }

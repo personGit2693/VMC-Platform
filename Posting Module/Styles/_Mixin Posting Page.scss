@@ -126,7 +126,11 @@
 	display: block;
 }
 
-@mixin post-content-id-hover-webkit {
+@mixin post-content-id-sb-thumb {
+	visibility: hidden;
+}
+
+@mixin post-content-id-hover-sb-thumb {
 	visibility: visible;
 }
 
@@ -309,7 +313,11 @@
 	direction: rtl;
 }
 
-@mixin right-side-container-hover-webkit {
+@mixin right-side-container-sb-thumb {
+	visibility: hidden;
+}
+
+@mixin right-side-container-hover-sb-thumb {
 	visibility: visible;
 }
 

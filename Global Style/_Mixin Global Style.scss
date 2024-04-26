@@ -106,15 +106,10 @@
 @mixin global_scrollbar-thumb {
 	background-color: var(--bg-color-5) !important;
 	border-radius: 10px;
-	visibility: hidden;
 }
 
 @mixin global_scrollbar-track {
 	display: none;
-}
-
-@mixin global_mainmecha_RoId-scrollbar-thumb {
-	visibility: visible;
 }
 /*Webkit*/
 
@@ -122,7 +117,6 @@
 @mixin global_asterisk {
 	font-family: 'Binance PLEX' !important;
 	box-sizing: border-box;
-	transition: all .15s linear !important;
 }
 /*Asterisk*/
 
@@ -241,7 +235,11 @@
 	z-index: 1;
 }
 
-@mixin global_sidemecha_RoId-hover-webkit {
+@mixin global_sidemecha_RoId-sb-thumb {
+	visibility: hidden;
+}
+
+@mixin global_sidemecha_RoId-hover-sb-thumb {
 	visibility: visible;
 }
 
@@ -255,6 +253,10 @@
 	width: 140px;
 	height: 140px;
 	cursor: pointer;
+}
+
+@mixin global_mainNavMenu_RoClass {
+	transition: all 0s;
 }
 
 @mixin global_generalNavMenuText_RoClass {
