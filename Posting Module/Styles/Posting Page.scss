@@ -584,7 +584,7 @@ video {
 /*Mobile Start*/
 @media all and (max-width:641px) {
 	.chat-container {
-		@include chat-container;
+		@include chat-container_Mobile;
 	}
 }
 /*Mobile End*/
