@@ -3522,7 +3522,7 @@ video {
 
 /*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
-  padding-block: 7px;
+  padding-block: 8px;
   direction: ltr;
   background-color: var(--bg-color-1);
   z-index: 1; }
@@ -3565,7 +3565,8 @@ video {
   height: 100%; }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
-  max-width: 600px; }
+  max-width: 600px;
+  position: absolute; }
 
 .mainmecha_RoClass #burger_RoId {
   width: 40px;
@@ -3927,7 +3928,7 @@ video {
   overflow-y: auto;
   overflow-x: hidden;
   direction: ltr;
-  margin: 10px 0px 0px 10px;
+  margin: 10px 0px 8px 10px;
   color: var(--text-color-1); }
 
 .side-content-wrapper .side-content-title {
@@ -4073,7 +4074,7 @@ body #footerWrap_RoId {
     font-size: 12px; }
 
   .rolayout_RoClass #mainmecha_RoId {
-    position: static; }
+    position: relative; }
 
   .mainmecha_RoClass #mainmechaCon_RoId {
     max-width: 100%; }
@@ -4099,7 +4100,7 @@ body #footerWrap_RoId {
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
   .rolayout_RoClass #mainmecha_RoId {
-    position: static; }
+    position: relative; }
 
   .mainmecha_RoClass #mainmechaCon_RoId {
     max-width: 100%; }
