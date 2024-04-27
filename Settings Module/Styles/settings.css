@@ -1,23 +1,23 @@
 /*
-Error: Undefined mixin 'global_sidemecha_RoId-hover-webkit'.
-        on line 201 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss, in `global_sidemecha_RoId-hover-webkit'
-        from line 201 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss
+Error: Undefined mixin 'global_footer-style'.
+        on line 31 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss, in `global_footer-style'
+        from line 31 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss
 
-196: .rolayout_RoClass #sidemecha_RoId {
-197: 	@include global_sidemecha_RoId;
-198: }
-199: 
-200: #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-201: 	@include global_sidemecha_RoId-hover-webkit;
-202: }
-203: 
-204: .sidemechaCon_RoClass .company-logo {
-205: 	@include global_company-logo;
-206: }
+26: 	/*Side Apps Sub Menu*\/
+27: 	@include global_side-app-sub;
+28: 	/*Side Apps Sub Menu*\/
+29: 
+30: 	/*Footer*\/
+31: 	@include global_footer-style;
+32: 	/*Footer*\/
+33: 
+34: 	/*Dark Mode (Default Style)*\/
+35: 	@include global_dark-mode;
+36: 	/*Dark Mode (Default Style)*\/
 
 Backtrace:
-C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss:201:in `global_sidemecha_RoId-hover-webkit'
-C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss:201
+C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss:31:in `global_footer-style'
+C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss:31
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +66,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'global_sidemecha_RoId-hover-webkit'.\A         on line 201 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss, in `global_sidemecha_RoId-hover-webkit'\A         from line 201 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss\A \A 196: .rolayout_RoClass #sidemecha_RoId {\A 197: 	@include global_sidemecha_RoId;\A 198: }\A 199: \A 200: #sidemecha_RoId:hover::-webkit-scrollbar-thumb {\A 201: 	@include global_sidemecha_RoId-hover-webkit;\A 202: }\A 203: \A 204: .sidemechaCon_RoClass .company-logo {\A 205: 	@include global_company-logo;\A 206: }"; }
+  content: "Error: Undefined mixin 'global_footer-style'.\A         on line 31 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss, in `global_footer-style'\A         from line 31 of C:\Users\Mik\Downloads\Coding 101\VMC Platform\Settings Module\Styles\settings.scss\A \A 26: 	/*Side Apps Sub Menu*/\A 27: 	@include global_side-app-sub;\A 28: 	/*Side Apps Sub Menu*/\A 29: \A 30: 	/*Footer*/\A 31: 	@include global_footer-style;\A 32: 	/*Footer*/\A 33: \A 34: 	/*Dark Mode (Default Style)*/\A 35: 	@include global_dark-mode;\A 36: 	/*Dark Mode (Default Style)*/"; }

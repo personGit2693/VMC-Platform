@@ -36,12 +36,6 @@
 	--border-color-5: #E4E4E4;
 }
 
-@mixin img-video {
-	width: 100%;
-	height: 100%;
-	display: block;
-}
-
 /*Mid Section Start*/
 @mixin rolayout_RoId {
 	display: flex;
@@ -94,11 +88,15 @@
 	cursor: pointer;
 }
 
-@mixin post-category-hover {
+@mixin hover-opacity {
 	opacity: .7;
 }
 
-@mixin post-title-1 {
+@mixin active-opacity {
+	opacity: .5;
+}
+
+@mixin create-post-form-post-title {
 	display: block;
 	margin: 10px 0px 3px 0px;
 	font-size: 16px;
@@ -127,11 +125,11 @@
 	display: block;
 }
 
-@mixin post-content-id-sb-thumb {
+@mixin sb-thumb-visibility {
 	visibility: hidden;
 }
 
-@mixin post-content-id-hover-sb-thumb {
+@mixin hover-sb-thumb-visibility {
 	visibility: visible;
 }
 
@@ -147,10 +145,6 @@
 	background-color: #8ED770;
 	color: #808080;
 	cursor: pointer;
-}
-
-@mixin custom-file-upload-hover {
-	opacity: .7;
 }
 
 @mixin file-preview-container {
@@ -183,10 +177,6 @@
 	cursor: pointer;
 }
 
-@mixin remove-file-button-hover {
-	opacity: .8;
-}
-
 @mixin create-post-button {
 	margin-top: 10px;
 	border: none;
@@ -196,10 +186,6 @@
 	background-color: #2176FF;
 	color: #FFFFFF;
 	cursor: pointer;
-}
-
-@mixin create-post-button-hover {
-	opacity: .7;
 }
 
 @mixin create-post-button-active {
@@ -232,6 +218,16 @@
 	border: 1px solid var(--border-color-2);
 }
 
+@mixin post-list-user-profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+@mixin chosen-category {
+	padding-block: 10px;
+}
+
 @mixin posts-buttons {
 	cursor: pointer;
 	border-radius: 3px;
@@ -241,15 +237,7 @@
 	color: var(--text-color-1);
 }
 
-@mixin posts-buttons-hover {
-	opacity: .7;
-}
-
-@mixin posts-buttons-active {
-	opacity: .5;
-}
-
-@mixin post-title-2 {
+@mixin post-list-post-title {
 	margin-bottom: 7px;
 	font-size: 16px;
 	padding: 10px;
@@ -265,6 +253,88 @@
 	background-color: var(--bg-color-3);
 }
 
+@mixin post-reactions {
+	padding: 10px 4px;
+	display: flex;
+	color: var(--text-color-3);
+	border-bottom: 1px solid var(--border-color-4);
+}
+
+@mixin reactions-container {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+@mixin actions-button {
+	color: var(--text-color-4);
+	margin-top: 5px;
+}
+
+@mixin reaction-icon-container {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+@mixin reaction-icon {
+	height: 15px;
+	width: 15px;
+}
+
+@mixin comment-count {
+	margin-left: auto;
+	margin-right: 7px;
+	cursor: pointer;
+}
+
+@mixin comment-count-hover {
+	text-decoration: underline;
+}
+
+@mixin reaction-popup-container {
+	position: relative;
+}
+
+@mixin reaction-popup-container-hover {
+	transform: scale(1, 1);
+}
+
+@mixin reactions-popup {
+	display: flex;
+	gap: 7px;
+	background-color: var(--bg-color-4);
+	padding: 5px 4px;
+	border: 1px solid var(--border-color-5);
+	border-radius: 30px;
+	position: absolute;
+	bottom: 100%;
+	transform: scale(1, 0);
+	transform-origin: bottom;
+	transition: transform .3s linear;
+}
+
+@mixin emoji-container {
+	height: 32px;
+	width: 32px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+@mixin emoji-container-img {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	position: absolute;
+	transition: all .15s linear;
+}
+
+@mixin emoji-container-img-hover {
+	height: 39px;
+	width: 39px;
+}
+
 @mixin post-actions {
 	display: flex;
 	align-items: center;
@@ -278,9 +348,35 @@
 	color: var(--text-color-4);
 }
 
+@mixin comment-section {
+	max-height: 400px;
+	overflow: auto;
+}
+
 @mixin comment {
 	border-left: 1px solid var(--border-color-4);
 	padding-left: 5px;
+}
+
+@mixin comment-reactions {
+	padding: 10px 4px;
+	display: flex;
+	gap: 15px;
+	color: var(--text-color-3);
+	border-bottom: 1px solid var(--border-color-4);
+	flex-wrap: wrap;
+}
+
+@mixin profile-container {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 10px;
+}
+
+@mixin user-profile-img {
+	width: 30px;
+	height: 30px;
+	margin: 1px 5px 0px 0px;
 }
 
 @mixin post-comment {
@@ -289,6 +385,12 @@
 	margin-right: 10px;
 	border-radius: 10px;
 	background-color: var(--bg-color-3);
+}
+
+@mixin comment-name {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 3px;
 }
 
 @mixin comment-like-count {
@@ -302,6 +404,10 @@
 	background-color: var(--bg-color-3);
 	resize: none;
 }
+
+@mixin comment-input-placeholder {
+	font-size: 14px;
+}
 /*Mid Content*/
 
 /*Right Content*/
@@ -312,6 +418,7 @@
 	margin-right: 22px;
 	color: #FFFFFF;
 	direction: rtl;
+	background-color: var(--bg-color-1);
 }
 
 @mixin right-side-container-sb-thumb {
@@ -335,44 +442,157 @@
 	color: var(--text-color-1);
 }
 
+@mixin side-content-title {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding-block: 20px;
+	background-color: var(--bg-color-4);
+	font-weight: bold;
+	border-bottom: 1px solid var(--border-color-4);
+}
+
+@mixin side-content-content {
+	margin-bottom: 25px;
+}
+
+@mixin content-title {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--text-color-4);
+}
+
+@mixin date {
+	font-size: 12px;
+	color: var(--text-color-4);
+}
+
+@mixin message-info {
+	margin-top: 10px;
+	font-size: 14px;
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid var(--border-color-1);
+	background-color: var(--bg-color-3);
+}
+
+@mixin pinned-posts-wrapper {
+	height:300px;
+}
+
+@mixin pinned-posts-wrapper-a {
+	color: inherit;
+}
 /*Right Content*/
 /*Mid Section End*/
+
+/*Chat Section*/
+@mixin chat-toggle-button {
+	position: fixed;
+	bottom: 38px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	background-color: var(--bg-color-11);
+	border: 1px solid var(--border-color-2);
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 1px 2px 0px;
+	color: var(--text-color-4);
+	font-weight: bold;
+}
+
+@mixin chat-container {
+	position: fixed;
+	bottom: 23px;
+	right: 0px;
+	width: 350px;
+	height: calc(100% - 78px);
+	background-color: var(--bg-color-1);
+	padding: 0px 10px 10px 10px;
+	overflow: auto;
+}
+
+@mixin contacts {
+	font-weight: bold;
+	padding-block: 20px;
+	color: var(--text-color-4);
+}
+
+@mixin contact-container {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	padding: 6px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+@mixin contact-container-hover {
+	background-color: var(--bg-color-10);
+}
+
+@mixin profile-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+@mixin profile-name {
+	color: var(--text-color-1);
+	font-weight: bold;
+}
+/*Chat Section*/
 /*General*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Other Media Queries*/
-@mixin mainmechaCon_RoId_MQ {
+@mixin mainmechaCon_RoId_OMQ {
 	max-width: 450px;
 }
 
-@mixin right-side-container_MobTab {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-color: var(--bg-color-1);
+@mixin post-reactions_OMQ {
+	flex-direction: column;
+	gap: 10px;
+}
+
+@mixin comment-count_OMQ {
+	margin: 0px;
 }
 /*Other Media Queries*/
 /*************************************************************************************/
 /*************************************************************************************/
-/*Mobile @media (max-width:641px)*/
-@mixin mainmecha_RoId_Mobile {
+/*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
+@mixin right-side-container_MobTab {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+@mixin mainmecha_RoId_MobTab {
 	position: relative;
 }
 
-@mixin mainmechaCon_RoId_Mobile {
+@mixin mainmechaCon_RoId_MobTab {
 	max-width: 100%;
+}
+/*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Mobile @media (max-width:641px)*/
+@mixin chat-container {
+	width: 100%;
 }
 /*Mobile @media (max-width:641px)*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Tablet @media (min-width:642px) and (max-width:1080px)*/
-@mixin mainmecha_RoId_Tablet {
-	position: relative;
-}
 
-@mixin mainmechaCon_RoId_Tablet {
-	max-width: 100%;
-}
 /*Tablet @media (min-width:642px) and (max-width:1080px)*/
 /*************************************************************************************/
 /*************************************************************************************/

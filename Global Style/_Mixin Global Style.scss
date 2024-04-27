@@ -11,7 +11,6 @@
 	--inputSearchIconHori: 12px;
 	--inputSearchIconSize: 16px;
 	--inputSearchFSize: 15px;
-	--inputSearchFColor: #FFFFFF;
 }
 /*Search Box*/
 
@@ -22,9 +21,6 @@
 	--mainNavMenuIconSize: 30px;
 	--mainNavMenuFSize: 16px;
 	--mainNavMenuBgColor: transparent;
-	--mainNavMenuFColor: #FFFFFF;
-	--hoverMainNavMenuBgColor: #303031;
-	--hoverMainNavMenuFColor: #FFFFFF;
 }
 /*Side Apps Main Menu*/
 
@@ -34,21 +30,10 @@
 	--subNavMenuWrapBgColor: transparent;
 	--subNavMenuBgColor: transparent;
 	--subNavMenuFSize: 16px;
-	--subNavMenuFColor: #FFFFFF;
-	--hoverSubNavMenuBgColor: #303031;
-	--hoverSubNavMenuFColor: #FFFFFF;
 
 	--chevronIconSize: 16px;
 }
 /*Side Apps Sub Menu*/
-
-/*Footer*/
-@mixin global_footer-style {
-	--footerBgColor: #242526;
-	--footerFSize: 14px;
-	--footerFColor: #FFFFFF;
-}
-/*Footer*/
 
 /*Dark Mode (Default Style)*/
 @mixin global_dark-mode {
@@ -63,20 +48,24 @@
 	--text-color-2: #000000;
 	--text-color-4: #BCBFC4;
 	--border-color-1: #3D3E3F;
+
+	--inputSearchFColor: #FFFFFF;
+
+	--mainNavMenuFColor: #FFFFFF;
+	--hoverMainNavMenuBgColor: #303031;
+	--hoverMainNavMenuFColor: #FFFFFF;
+
+	--subNavMenuFColor: #FFFFFF;
+	--hoverSubNavMenuBgColor: #303031;
+	--hoverSubNavMenuFColor: #FFFFFF;
+
+	--footerFColor: #FFFFFF;
+	--footerBgColor: #242526;
 }
 /*Dark Mode (Default Style)*/
 
 /*Light Mode*/
 @mixin global_light-mode {
-	--inputSearchFColor: #000000;
-	--mainNavMenuFColor: #000000;
-	--hoverMainNavMenuBgColor: #E4E6E8;
-	--hoverMainNavMenuFColor: #000000;
-	--subNavMenuFColor: #000000;
-	--hoverSubNavMenuBgColor: #E4E6E8;
-	--hoverSubNavMenuFColor: #000000;
-	--footerBgColor: #FFFFFF;
-	--footerFColor: #000000;
 	--bg-color-1: #F0F2F5;
 	--bg-color-2: #FFFFFF;
 	--bg-color-3: #F0F2F5;
@@ -88,6 +77,19 @@
 	--text-color-2: #FFFFFF;
 	--text-color-4: #000000;
 	--border-color-1: #DCDEE1;
+
+	--inputSearchFColor: #000000;
+
+	--mainNavMenuFColor: #000000;
+	--hoverMainNavMenuBgColor: #E4E6E8;
+	--hoverMainNavMenuFColor: #000000;
+
+	--subNavMenuFColor: #000000;
+	--hoverSubNavMenuBgColor: #E4E6E8;
+	--hoverSubNavMenuFColor: #000000;
+
+	--footerBgColor: #FFFFFF;
+	--footerFColor: #000000;
 }
 /*Light Mode*/
 
@@ -132,6 +134,12 @@
 	outline: none;
 	color: var(--text-color-1);
 }
+
+@mixin global_img-video {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
 /*Input and Textarea Style*/
 
 /*Top Section*/
@@ -159,8 +167,12 @@
 	background-color: var(--bg-color-7);
 }
 
-@mixin global_home-logo-hover {
+@mixin global_hover-opacity {
 	opacity: .7;
+}
+
+@mixin global_active-opacity {
+	opacity: .5;
 }
 
 @mixin global_home-logo-img {
@@ -193,10 +205,6 @@
 	cursor: pointer;
 }
 
-@mixin global_toggle-mode-hover {
-	opacity: .7;
-}
-
 @mixin global_topMenus {
 	display: flex;
 	width: 40px;
@@ -207,17 +215,20 @@
 	cursor: pointer;
 }
 
-@mixin global_topMenus-hover {
-	opacity: .7;
-}
-
 @mixin global_gear-icon {
 	background-color: var(--bg-color-9);
 }
 
-@mixin global_topMenus-img {
-	width: 100%;
-	height: 100%;
+@mixin global_user-profile {
+	margin-left: 5px;
+}
+
+@mixin global_user-profile-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid var(--border-color-2);
+	cursor: pointer;
 }
 /*Top Section*/
 
@@ -235,11 +246,11 @@
 	z-index: 1;
 }
 
-@mixin global_sidemecha_RoId-sb-thumb {
+@mixin global_sb-thumb-visibility {
 	visibility: hidden;
 }
 
-@mixin global_sidemecha_RoId-hover-sb-thumb {
+@mixin global_hover-sb-thumb-visibility {
 	visibility: visible;
 }
 
@@ -288,6 +299,7 @@
 }
 
 @mixin global_footerTxt_RoId {
+	--footerFSize: 14px;
 	font-weight: bold;
 }
 /*Footer*/
@@ -299,6 +311,10 @@
 	border-radius: 50%;
 
 }
+
+@mixin global_searchInput-placeholder_Mobile {
+	color: transparent;
+}	
 
 @mixin global_toggle-mode_Mobile {
 	width: 50px;

@@ -3222,8 +3222,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Side Apps Main Menu*/
 /*Side Apps Sub Menu*/
 /*Side Apps Sub Menu*/
-/*Footer*/
-/*Footer*/
 /*Dark Mode (Default Style)*/
 /*Dark Mode (Default Style)*/
 /*Light Mode*/
@@ -3266,11 +3264,17 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Right Content*/
 /*Right Content*/
 /*Mid Section End*/
+/*Chat Section*/
+/*Chat Section*/
 /*General*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Other Media Queries*/
 /*Other Media Queries*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
+/*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Mobile @media (max-width:641px)*/
@@ -3290,8 +3294,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Root*/
+/*Global Codes to Copy Start*/
+/*Root Start*/
 :root {
   /*Search Box*/
   --inputSearchWidth: 250px;
@@ -3304,36 +3308,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --inputSearchIconHori: 12px;
   --inputSearchIconSize: 16px;
   --inputSearchFSize: 15px;
-  --inputSearchFColor: #FFFFFF;
   /*Search Box*/
   /*Side Apps Main Menu*/
   --generalNavMenuPadding: 10px;
   --mainNavMenuIconSize: 30px;
   --mainNavMenuFSize: 16px;
   --mainNavMenuBgColor: transparent;
-  --mainNavMenuFColor: #FFFFFF;
-  --hoverMainNavMenuBgColor: #303031;
-  --hoverMainNavMenuFColor: #FFFFFF;
   /*Side Apps Main Menu*/
   /*Side Apps Sub Menu*/
   --subNavMenuIconSize: 30px;
   --subNavMenuWrapBgColor: transparent;
   --subNavMenuBgColor: transparent;
   --subNavMenuFSize: 16px;
-  --subNavMenuFColor: #FFFFFF;
-  --hoverSubNavMenuBgColor: #303031;
-  --hoverSubNavMenuFColor: #FFFFFF;
   --chevronIconSize: 16px;
   /*Side Apps Sub Menu*/
-  /*Project Title*/
-  --projectTitleTextFSize: 14px;
-  --projectTitleTextFColor: #FFFFFF;
-  /*Project Title*/
-  /*Footer*/
-  --footerBgColor: #242526;
-  --footerFSize: 14px;
-  --footerFColor: #FFFFFF;
-  /*Footer*/
   /*Dark Mode (Default Style)*/
   --bg-color-1: #18191A;
   --bg-color-2: #242526;
@@ -3346,32 +3334,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --text-color-2: #000000;
   --text-color-4: #BCBFC4;
   --border-color-1: #3D3E3F;
-  --bg-color-4: #242526;
-  --bg-color-10: #303031;
-  --bg-color-11: #5D5E61;
-  --text-color-1: #FFFFFF;
-  --text-color-3: #CDD1D5;
-  --text-color-4: #ADB1B3;
-  --border-color-2: #121413;
-  --border-color-3: #3E3F40;
-  --border-color-4: #444749;
-  --border-color-5: #353637;
+  --inputSearchFColor: #FFFFFF;
+  --mainNavMenuFColor: #FFFFFF;
+  --hoverMainNavMenuBgColor: #303031;
+  --hoverMainNavMenuFColor: #FFFFFF;
+  --subNavMenuFColor: #FFFFFF;
+  --hoverSubNavMenuBgColor: #303031;
+  --hoverSubNavMenuFColor: #FFFFFF;
+  --footerFColor: #FFFFFF;
+  --footerBgColor: #242526;
   /*Dark Mode (Default Style)*/ }
 
-/*Root*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*General*/
+/*Root End*/
+/*General Start*/
 .light-mode {
-  --inputSearchFColor: #000000;
-  --mainNavMenuFColor: #000000;
-  --hoverMainNavMenuBgColor: #E4E6E8;
-  --hoverMainNavMenuFColor: #000000;
-  --subNavMenuFColor: #000000;
-  --hoverSubNavMenuBgColor: #E4E6E8;
-  --hoverSubNavMenuFColor: #000000;
-  --footerBgColor: #FFFFFF;
-  --footerFColor: #000000;
   --bg-color-1: #F0F2F5;
   --bg-color-2: #FFFFFF;
   --bg-color-3: #F0F2F5;
@@ -3383,16 +3359,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --text-color-2: #FFFFFF;
   --text-color-4: #000000;
   --border-color-1: #DCDEE1;
-  --bg-color-4: #FFFFFF;
-  --bg-color-10: #E4E6E8;
-  --bg-color-11: #FFFFFF;
-  --text-color-1: #000000;
-  --text-color-3: #5F6266;
-  --text-color-4: #6E6F72;
-  --border-color-2: #E2E4E7;
-  --border-color-3: #F0F2F5;
-  --border-color-4: #CED0D4;
-  --border-color-5: #E4E4E4; }
+  --inputSearchFColor: #000000;
+  --mainNavMenuFColor: #000000;
+  --hoverMainNavMenuBgColor: #E4E6E8;
+  --hoverMainNavMenuFColor: #000000;
+  --subNavMenuFColor: #000000;
+  --hoverSubNavMenuBgColor: #E4E6E8;
+  --hoverSubNavMenuFColor: #000000;
+  --footerBgColor: #FFFFFF;
+  --footerFColor: #000000; }
 
 @font-face {
   font-family: 'Binance PLEX';
@@ -3428,7 +3403,7 @@ video {
   height: 100%;
   display: block; }
 
-/*Top Section*/
+/*Top Section Start*/
 .top-section {
   height: 55px;
   background-color: var(--bg-color-2);
@@ -3450,8 +3425,17 @@ video {
   border-radius: 10px;
   background-color: var(--bg-color-7); }
 
-.top-left-menu .home-logo:hover {
+.top-left-menu .home-logo:hover,
+.top-right-menu .toggle-mode:hover,
+.top-right-menu .topMenus:hover,
+.user-profile img:hover {
   opacity: .7; }
+
+.top-left-menu .home-logo:active,
+.top-right-menu .toggle-mode:active,
+.top-right-menu .topMenus:active,
+.user-profile img:active {
+  opacity: .5; }
 
 .top-left-menu .home-logo img {
   width: 100%;
@@ -3478,9 +3462,6 @@ video {
   color: var(--text-color-2);
   cursor: pointer; }
 
-.top-right-menu .toggle-mode:hover {
-  opacity: .7; }
-
 .top-right-menu .topMenus {
   display: flex;
   width: 40px;
@@ -3490,15 +3471,11 @@ video {
   background-color: var(--bg-color-8);
   cursor: pointer; }
 
-.top-right-menu .topMenus:hover {
-  opacity: .7; }
-
 .top-right-menu .gear-icon {
   background-color: var(--bg-color-9); }
 
-.top-right-menu .topMenus img {
-  width: 100%;
-  height: 100%; }
+.top-right-menu .user-profile {
+  margin-left: 5px; }
 
 .user-profile img {
   width: 40px;
@@ -3507,20 +3484,12 @@ video {
   border: 1px solid var(--border-color-2);
   cursor: pointer; }
 
-.user-profile img:hover {
-  opacity: .7; }
-
-#user-profile {
-  margin-inline: 5px; }
-
-/*Top Section*/
+/*Top Section End*/
 /*Mid Section Start*/
 #rolayout_RoId {
-  height: calc(100% - 78px);
-  display: flex;
-  justify-content: space-between; }
+  height: calc(100% - 78px); }
 
-/*Left Content*/
+/*Left Content Start*/
 .rolayout_RoClass #sidemecha_RoId {
   padding-block: 8px;
   direction: ltr;
@@ -3556,8 +3525,86 @@ video {
   background-color: white;
   border-radius: 50%; }
 
-/*Left Content*/
-/*Mid Content*/
+/*Left Content End*/
+/*Mid Content Start*/
+.mainmecha_RoClass #burger_RoId {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--bg-color-8); }
+
+/*Mid Content End*/
+/*Mid Section End*/
+/*Bottom Section / Footer Start*/
+#footerWrap_RoId {
+  padding: 1px;
+  border-top: 1px solid var(--border-color-1); }
+
+.footerWrap_RoClass #footerTxt_RoId {
+  --footerFSize: 14px;
+  font-weight: bold; }
+
+/*Bottom Section / Footer End*/
+/*General End*/
+/*Mobile Start*/
+@media all and (max-width: 641px) {
+  .top-section .searchInput_RoClass {
+    --inputSearchWidth: 40px;
+    --inputSearchFSize: 12px;
+    border-radius: 50%; }
+
+  #searchInput_RoId::placeholder {
+    color: transparent; }
+
+  .top-right-menu .toggle-mode {
+    width: 50px;
+    font-size: 12px; } }
+/*Mobile End*/
+/*Global Codes to Copy End*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Root Start*/
+:root {
+  /*Project Title*/
+  --projectTitleTextFSize: 14px;
+  --projectTitleTextFColor: #FFFFFF;
+  /*Project Title*/
+  /*Dark Mode (Default Style)*/
+  --bg-color-4: #242526;
+  --bg-color-10: #303031;
+  --bg-color-11: #5D5E61;
+  --text-color-1: #FFFFFF;
+  --text-color-3: #CDD1D5;
+  --text-color-4: #ADB1B3;
+  --border-color-2: #121413;
+  --border-color-3: #3E3F40;
+  --border-color-4: #444749;
+  --border-color-5: #353637;
+  /*Dark Mode (Default Style)*/ }
+
+/*Root End*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*General Start*/
+.light-mode {
+  --bg-color-4: #FFFFFF;
+  --bg-color-10: #E4E6E8;
+  --bg-color-11: #FFFFFF;
+  --text-color-1: #000000;
+  --text-color-3: #5F6266;
+  --text-color-4: #6E6F72;
+  --border-color-2: #E2E4E7;
+  --border-color-3: #F0F2F5;
+  --border-color-4: #CED0D4;
+  --border-color-5: #E4E4E4; }
+
+/*Mid Section Start*/
+#rolayout_RoId {
+  display: flex;
+  justify-content: space-between; }
+
+/*Mid Content Start*/
 .rolayout_RoClass #mainmecha_RoId {
   display: flex;
   justify-content: center;
@@ -3567,13 +3614,6 @@ video {
 .mainmecha_RoClass #mainmechaCon_RoId {
   max-width: 600px;
   position: absolute; }
-
-.mainmecha_RoClass #burger_RoId {
-  width: 40px;
-  height: 40px;
-  padding: 7px;
-  border-radius: 10px;
-  background-color: var(--bg-color-8); }
 
 .mainmechaCon_RoClass #projectTitle_RoId {
   display: flex;
@@ -3604,8 +3644,21 @@ video {
   padding: 3px;
   cursor: pointer; }
 
-.create-post-form .post-category:hover {
+.create-post-form .post-category:hover,
+.create-post-form .custom-file-upload:hover,
+.file-preview-container .remove-file-button:hover,
+.create-post-form .create-post-button:hover,
+.posts button:hover,
+.chat-toggle-button:hover {
   opacity: .7; }
+
+.create-post-form .custom-file-upload:active,
+.file-preview-container .remove-file-button:active,
+.create-post-form .create-post-button:active,
+.posts button:active,
+.emoji-container img:active,
+.chat-toggle-button:active {
+  opacity: .5; }
 
 .create-post-form .post-title,
 .create-post-form .post-content {
@@ -3633,10 +3686,14 @@ video {
   background-color: transparent;
   display: block; }
 
-#post-content::-webkit-scrollbar-thumb {
+#post-content::-webkit-scrollbar-thumb,
+.comment-section::-webkit-scrollbar-thumb,
+.chat-container::-webkit-scrollbar-thumb {
   visibility: hidden; }
 
-#post-content:hover::-webkit-scrollbar-thumb {
+#post-content:hover::-webkit-scrollbar-thumb,
+.comment-section:hover::-webkit-scrollbar-thumb,
+.chat-container:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
 
 .create-post-form .custom-file-upload {
@@ -3651,9 +3708,6 @@ video {
   background-color: #8ED770;
   color: #808080;
   cursor: pointer; }
-
-.create-post-form .custom-file-upload:hover {
-  opacity: .7; }
 
 .file-preview-container {
   border: 1px solid var(--border-color-4);
@@ -3682,9 +3736,6 @@ video {
   line-height: 22px;
   cursor: pointer; }
 
-.file-preview-container .remove-file-button:hover {
-  opacity: .8; }
-
 .create-post-form .create-post-button {
   margin-top: 10px;
   border: none;
@@ -3694,9 +3745,6 @@ video {
   background-color: #2176FF;
   color: #FFFFFF;
   cursor: pointer; }
-
-.create-post-form .create-post-button:hover {
-  opacity: .7; }
 
 .create-post-form .create-post-button:active {
   opacity: .5; }
@@ -3739,12 +3787,6 @@ video {
   padding: 2px 8px;
   background-color: var(--bg-color-3);
   color: var(--text-color-1); }
-
-.posts button:hover {
-  opacity: .7; }
-
-.posts button:active {
-  opacity: .5; }
 
 .post-list .post-title {
   margin-bottom: 7px;
@@ -3809,7 +3851,7 @@ video {
   bottom: 100%;
   transform: scale(1, 0);
   transform-origin: bottom;
-  transition: transform linear .3s !important; }
+  transition: transform .3s linear; }
 
 .reactions-popup .emoji-container {
   height: 32px;
@@ -3829,9 +3871,6 @@ video {
   height: 39px;
   width: 39px; }
 
-.emoji-container img:active {
-  opacity: .5; }
-
 .post-list .post-actions,
 .comment .comment-actions {
   display: flex;
@@ -3847,12 +3886,6 @@ video {
 .post-list .comment-section {
   max-height: 400px;
   overflow: auto; }
-
-.comment-section::-webkit-scrollbar-thumb {
-  visibility: hidden; }
-
-.comment-section:hover::-webkit-scrollbar-thumb {
-  visibility: visible; }
 
 .comment-section .comment {
   border-left: 1px solid var(--border-color-4);
@@ -3901,15 +3934,16 @@ video {
 .comment-input::placeholder {
   font-size: 14px; }
 
-/*Mid Content*/
-/*Right Content*/
+/*Mid Content End*/
+/*Right Content Start*/
 .rolayout_RoClass .right-side-container {
   width: 300px;
   overflow: auto;
   z-index: 1;
   margin-right: 22px;
   color: #FFFFFF;
-  direction: rtl; }
+  direction: rtl;
+  background-color: var(--bg-color-1); }
 
 .right-side-container::-webkit-scrollbar-thumb,
 .side-content-wrapper::-webkit-scrollbar-thumb {
@@ -3967,18 +4001,9 @@ video {
 .pinned-posts-wrapper a {
   color: inherit; }
 
-/*Right Content*/
+/*Right Content End*/
 /*Mid Section End*/
-/*Bottom Section / Footer*/
-body #footerWrap_RoId {
-  padding: 1px;
-  border-top: 1px solid var(--border-color-1); }
-
-.footerWrap_RoClass #footerTxt_RoId {
-  font-weight: bold; }
-
-/*Bottom Section / Footer*/
-/*Chat Section*/
+/*Chat Section Start*/
 .chat-toggle-button {
   position: fixed;
   bottom: 38px;
@@ -3997,24 +4022,8 @@ body #footerWrap_RoId {
   color: var(--text-color-4);
   font-weight: bold; }
 
-.chat-toggle-button:hover {
-  opacity: .7; }
-
 .chat-container {
-  position: fixed;
-  bottom: 23px;
-  right: 0px;
-  width: 350px;
-  height: calc(100% - 78px);
-  background-color: var(--bg-color-1);
-  padding: 0px 10px 10px 10px;
-  overflow: auto; }
-
-.chat-container::-webkit-scrollbar-thumb {
-  visibility: hidden; }
-
-.chat-container:hover::-webkit-scrollbar-thumb {
-  visibility: visible; }
+  width: 100%; }
 
 .chat-container .contacts {
   font-weight: bold;
@@ -4041,89 +4050,61 @@ body #footerWrap_RoId {
   color: var(--text-color-1);
   font-weight: bold; }
 
-/*Chat Section*/
-/*General*/
+/*Chat Section End*/
+/*General End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Other Media Query*/
+/*Other Media Queries Start*/
 @media (min-width: 1081px) and (max-width: 1250px) {
   .mainmecha_RoClass #mainmechaCon_RoId {
-    max-width: 450px; }
-
+    max-width: 450px; } }
+@media (max-width: 641px), (min-width: 1081px) and (max-width: 1250px) {
   .post-list .post-reactions {
     flex-direction: column;
     gap: 10px; }
 
   .post-reactions .comment-count {
     margin: 0px; } }
-/*Other Media Query*/
+/*Other Media Queries End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width: 641px) {
-  .top-section .searchInput_RoClass {
-    --inputSearchWidth: 40px;
-    --inputSearchFSize: 12px;
-    border-radius: 50%; }
-
-  #searchInput_RoId::placeholder {
-    color: transparent; }
-
-  .top-right-menu .toggle-mode {
-    width: 50px;
-    font-size: 12px; }
+/*Mobile and Tablet Start*/
+@media (min-width: 0px) and (max-width: 1080px) {
+  .rolayout_RoClass .right-side-container {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
 
   .rolayout_RoClass #mainmecha_RoId {
     position: relative; }
 
   .mainmecha_RoClass #mainmechaCon_RoId {
-    max-width: 100%; }
-
-  .post-list .post-reactions {
-    flex-direction: column;
-    gap: 10px; }
-
-  .post-reactions .comment-count {
-    margin: 0px; }
-
-  .rolayout_RoClass .right-side-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--bg-color-1); }
-
+    max-width: 100%; } }
+/*Mobile and Tablet End*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile Start*/
+@media all and (max-width: 641px) {
   .chat-container {
     width: 100%; } }
-/*Mobile*/
+/*Mobile End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width: 642px) and (max-width: 1080px) {
-  .rolayout_RoClass #mainmecha_RoId {
-    position: relative; }
-
-  .mainmecha_RoClass #mainmechaCon_RoId {
-    max-width: 100%; }
-
-  .rolayout_RoClass .right-side-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--bg-color-1); } }
-/*Tablet*/
+/*Tablet Start*/
+/*Tablet End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
+/*Laptop Start*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
   .mainmecha_RoClass .projectTitle_RoClass {
     --projectTitleTextFSize: 16px; }
 
   .posts .recent-posts {
     font-size: 16px; } }
-/*Laptop*/
+/*Laptop End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
+/*Desktop Start*/
 @media all and (min-width: 1601px) {
   .mainmecha_RoClass #mainmechaCon_RoId {
     max-width: 650px; }
@@ -4133,7 +4114,7 @@ body #footerWrap_RoId {
 
   .posts .recent-posts {
     font-size: 18px; } }
-/*Desktop*/
+/*Desktop End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Posting%20Page.css.map */

@@ -5,9 +5,8 @@
 @import "./Mixin Posting Page";
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Root*/
+/*Global Codes to Copy Start*/
+/*Root Start*/
 :root {
 	/*Search Box*/
 	@include global_top-searchbox;
@@ -21,27 +20,15 @@
 	@include global_side-app-sub;
 	/*Side Apps Sub Menu*/
 
-	/*Project Title*/
-	@include project-title;
-	/*Project Title*/
-
-	/*Footer*/
-	@include global_footer-style;
-	/*Footer*/
-
 	/*Dark Mode (Default Style)*/
 	@include global_dark-mode;
-	@include dark-mode;
 	/*Dark Mode (Default Style)*/
 }
-/*Root*/
-/***********************************************************************************************************************************************************************************************************/
+/*Root End*/
 
-/***********************************************************************************************************************************************************************************************************/
-/*General*/
+/*General Start*/
 .light-mode {
 	@include global_light-mode;
-	@include light-mode;
 }
 
 @font-face {
@@ -77,10 +64,10 @@ textarea:focus {
 
 img,
 video {
-	@include img-video;
+	@include global_img-video;
 }
 
-/*Top Section*/
+/*Top Section Start*/
 .top-section {
 	@include global_top-section;
 }
@@ -93,8 +80,18 @@ video {
 	@include global_home-logo;
 }
 
-.top-left-menu .home-logo:hover {
-	@include global_home-logo-hover;
+.top-left-menu .home-logo:hover,
+.top-right-menu .toggle-mode:hover,
+.top-right-menu .topMenus:hover,
+.user-profile img:hover {
+	@include global_hover-opacity;
+}
+
+.top-left-menu .home-logo:active,
+.top-right-menu .toggle-mode:active,
+.top-right-menu .topMenus:active,
+.user-profile img:active {
+	@include global_active-opacity;
 }
 
 .top-left-menu .home-logo img {
@@ -117,60 +114,39 @@ video {
 	@include global_toggle-mode;
 }
 
-.top-right-menu .toggle-mode:hover {
-	@include global_toggle-mode-hover;
-}
-
 .top-right-menu .topMenus {
 	@include global_topMenus;
-}
-
-.top-right-menu .topMenus:hover {
-	@include global_topMenus-hover;
 }
 
 .top-right-menu .gear-icon {
 	@include global_gear-icon;
 }
 
-.top-right-menu .topMenus img {
-	@include global_topMenus-img;
+.top-right-menu .user-profile {
+	@include global_user-profile;
 }
 
 .user-profile img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 1px solid var(--border-color-2);
-	cursor: pointer;
+	@include global_user-profile-img;
 }
-
-.user-profile img:hover {
-	opacity: .7;
-}
-
-#user-profile {
-	margin-inline: 5px;
-}
-/*Top Section*/
+/*Top Section End*/
 
 /*Mid Section Start*/
 #rolayout_RoId {
 	@include global_rolayout_RoId;
-	@include rolayout_RoId;
 }
 
-/*Left Content*/
+/*Left Content Start*/
 .rolayout_RoClass #sidemecha_RoId {
 	@include global_sidemecha_RoId;
 }
 
 #sidemecha_RoId::-webkit-scrollbar-thumb {
-	@include global_sidemecha_RoId-sb-thumb;
+	@include global_sb-thumb-visibility;
 }
 
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	@include global_sidemecha_RoId-hover-sb-thumb;
+	@include global_hover-sb-thumb-visibility;
 }
 
 .sidemechaCon_RoClass .company-logo {
@@ -193,19 +169,75 @@ video {
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
 	@include global_chevronIconWrap_RoClass;
 }
-/*Left Content*/
+/*Left Content End*/
 
-/*Mid Content*/
+/*Mid Content Start*/
+.mainmecha_RoClass #burger_RoId {
+	@include global_burger_RoId;
+}
+/*Mid Content End*/
+/*Mid Section End*/
+
+/*Bottom Section / Footer Start*/
+#footerWrap_RoId {
+	@include global_footerWrap_RoId;
+}
+
+.footerWrap_RoClass #footerTxt_RoId {
+	@include global_footerTxt_RoId;
+}
+/*Bottom Section / Footer End*/
+/*General End*/
+
+/*Mobile Start*/
+@media all and (max-width:641px) {
+	.top-section .searchInput_RoClass {
+		@include global_searchInput_RoClass_Mobile;
+	}
+
+	#searchInput_RoId::placeholder {
+		@include global_searchInput-placeholder_Mobile;
+	}
+
+	.top-right-menu .toggle-mode {
+		@include global_toggle-mode_Mobile;
+	}
+}
+/*Mobile End*/
+/*Global Codes to Copy End*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Root Start*/
+:root {
+	/*Project Title*/
+	@include project-title;
+	/*Project Title*/
+
+	/*Dark Mode (Default Style)*/
+	@include dark-mode;
+	/*Dark Mode (Default Style)*/
+}
+/*Root End*/
+/***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Start*/
+.light-mode {
+	@include light-mode;
+}
+
+/*Mid Section Start*/
+#rolayout_RoId {
+	@include rolayout_RoId;
+}
+
+/*Mid Content Start*/
 .rolayout_RoClass #mainmecha_RoId {
 	@include mainmecha_RoId;
 }
 
 .mainmecha_RoClass #mainmechaCon_RoId {
 	@include mainmechaCon_RoId;
-}
-
-.mainmecha_RoClass #burger_RoId {
-	@include global_burger_RoId;
 }
 
 .mainmechaCon_RoClass #projectTitle_RoId {
@@ -224,13 +256,27 @@ video {
 	@include post-category;
 }
 
-.create-post-form .post-category:hover {
-	@include post-category-hover;
+.create-post-form .post-category:hover,
+.create-post-form .custom-file-upload:hover,
+.file-preview-container .remove-file-button:hover,
+.create-post-form .create-post-button:hover,
+.posts button:hover,
+.chat-toggle-button:hover {
+	@include hover-opacity;
+}
+
+.create-post-form .custom-file-upload:active,
+.file-preview-container .remove-file-button:active,
+.create-post-form .create-post-button:active,
+.posts button:active,
+.emoji-container img:active,
+.chat-toggle-button:active {
+	@include active-opacity;
 }
 
 .create-post-form .post-title,
 .create-post-form .post-content {
-	@include post-title-1;
+	@include create-post-form-post-title;
 }
 
 .create-post-form #post-title {
@@ -245,20 +291,20 @@ video {
 	@include post-content-id;
 }
 
-#post-content::-webkit-scrollbar-thumb {
-	@include post-content-id-sb-thumb;
+#post-content::-webkit-scrollbar-thumb,
+.comment-section::-webkit-scrollbar-thumb,
+.chat-container::-webkit-scrollbar-thumb {
+	@include sb-thumb-visibility;
 }
 
-#post-content:hover::-webkit-scrollbar-thumb {
-	@include post-content-id-hover-sb-thumb;
+#post-content:hover::-webkit-scrollbar-thumb,
+.comment-section:hover::-webkit-scrollbar-thumb,
+.chat-container:hover::-webkit-scrollbar-thumb {
+	@include hover-sb-thumb-visibility;
 }
 
 .create-post-form .custom-file-upload {
 	@include custom-file-upload;
-}
-
-.create-post-form .custom-file-upload:hover {
-	@include custom-file-upload-hover;
 }
 
 .file-preview-container {
@@ -273,16 +319,8 @@ video {
 	@include remove-file-button;
 }
 
-.file-preview-container .remove-file-button:hover {
-	@include remove-file-button-hover;
-}
-
 .create-post-form .create-post-button {
 	@include create-post-button;
-}
-
-.create-post-form .create-post-button:hover {
-	@include create-post-button-hover;
 }
 
 .create-post-form .create-post-button:active {
@@ -302,29 +340,19 @@ video {
 }
 
 .post-list .user-profile {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+	@include post-list-user-profile;
 }
 
 .post-list .chosen-category {
-	padding-block: 10px;
+	@include chosen-category;
 }
 
 .posts button {
 	@include posts-buttons;
 }
 
-.posts button:hover {
-	@include posts-buttons-hover;
-}
-
-.posts button:active {
-	@include posts-buttons-active;
-}
-
 .post-list .post-title {
-	@include post-title-2;
+	@include post-list-post-title;
 }
 
 .post-list .post-content {
@@ -332,89 +360,55 @@ video {
 }
 
 .post-list .post-reactions {
-	padding: 10px 4px;
-	display: flex;
-	color: var(--text-color-3);
-	border-bottom: 1px solid var(--border-color-4);
+	@include post-reactions;
 }
 
 .post-reactions .reactions-container {
-	display: flex;
-	gap: 15px;
-	flex-wrap: wrap;
+	@include reactions-container;
 }
 
 .post-list .actions button {
-	color: var(--text-color-4);
-	margin-top: 5px;
+	@include actions-button;
 }
 
 .post-list .reaction-icon-container {
-	display: flex;
-	align-items: center;
-	gap: 2px;
+	@include reaction-icon-container;
 }
 
 .reaction-icon-container .reaction-icon {
-	height: 15px;
-	width: 15px;
+	@include reaction-icon;
 }
 
 .post-reactions .comment-count {
-	margin-left: auto;
-	margin-right: 7px;
-	cursor: pointer;
+	@include comment-count;
 }
 
 .post-reactions .comment-count:hover {
-	text-decoration: underline;
+	@include comment-count-hover;
 }
 
 .actions .reaction-popup-container {
-	position: relative;
+	@include reaction-popup-container;
 }
 
 .reaction-popup-container:hover .reactions-popup {
-	transform: scale(1, 1);
+	@include reaction-popup-container-hover;
 }
 
 .reaction-popup-container .reactions-popup {
-	display: flex;
-	gap: 7px;
-	background-color: var(--bg-color-4);
-	padding: 5px 4px;
-	border: 1px solid var(--border-color-5);
-	border-radius: 30px;
-	position: absolute;
-	bottom: 100%;
-	transform: scale(1, 0);
-	transform-origin: bottom;
-	transition: transform linear .3s !important;
+	@include reactions-popup;
 }
 
 .reactions-popup .emoji-container {
-	height: 32px;
-	width: 32px;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
+	@include emoji-container;
 }
 
 .emoji-container img {
-	height: 32px;
-	width: 32px;
-	cursor: pointer;
-	position: absolute;
-	transition: all .15s linear;
+	@include emoji-container-img;
 }
 
 .emoji-container img:hover {
-	height: 39px;
-	width: 39px;
-}
-
-.emoji-container img:active {
-	opacity: .5;
+	@include emoji-container-img-hover;
 }
 
 .post-list .post-actions,
@@ -427,16 +421,7 @@ video {
 }
 
 .post-list .comment-section {
-	max-height: 400px;
-	overflow: auto;
-}
-
-.comment-section::-webkit-scrollbar-thumb {
-	visibility: hidden;
-}
-
-.comment-section:hover::-webkit-scrollbar-thumb {
-	visibility: visible;
+	@include comment-section;
 }
 
 .comment-section .comment {
@@ -444,24 +429,15 @@ video {
 }
 
 .comment .comment-reactions {
-	padding: 10px 4px;
-	display: flex;
-	gap: 15px;
-	color: var(--text-color-3);
-	border-bottom: 1px solid var(--border-color-4);
-	flex-wrap: wrap;
+	@include comment-reactions;
 }
 
 .profile-container {
-	display: flex;
-	align-items: flex-start;
-	margin-top: 10px;
+	@include profile-container;
 }
 
 .profile-container .user-profile img {
-	width: 30px;
-	height: 30px;
-	margin: 1px 5px 0px 0px;
+	@include user-profile-img;
 }
 
 .comment .post-comment {
@@ -469,9 +445,7 @@ video {
 }
 
 .comment .comment-name {
-	font-weight: bold;
-	font-size: 12px;
-	margin-bottom: 3px;
+	@include comment-name;
 }
 
 .comment-actions .comment-like-count {
@@ -483,11 +457,11 @@ video {
 }
 
 .comment-input::placeholder {
-	font-size: 14px;
+	@include comment-input-placeholder;
 }
-/*Mid Content*/
+/*Mid Content End*/
 
-/*Right Content*/
+/*Right Content Start*/
 .rolayout_RoClass .right-side-container {
 	@include right-side-container;
 }
@@ -507,218 +481,125 @@ video {
 }
 
 .side-content-wrapper .side-content-title {
-	position: sticky;
-	top: 0;
-	width: 100%;
-	padding-block: 20px;
-	background-color: var(--bg-color-4);
-	font-weight: bold;
-	border-bottom: 1px solid var(--border-color-4);
+	@include side-content-title;
 }
 
 .side-content-wrapper .side-content-content {
-	margin-bottom: 25px;
+	@include side-content-content;
 }
 
 .side-content-content .content-title {
-	margin-top: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	color: var(--text-color-4);
+	@include content-title;
 }
 
 .side-content-content .date {
-	font-size: 12px;
-	color: var(--text-color-4);
+	@include date;
 }
 
 .side-content-content .message-info {
-	margin-top: 10px;
-	font-size: 14px;
-	padding: 15px;
-	border-radius: 10px;
-	border: 1px solid var(--border-color-1);
-	background-color: var(--bg-color-3);
+	@include message-info;
 }
 
 .right-side-container .pinned-posts-wrapper {
-	height:300px;
+	@include pinned-posts-wrapper;
 }
 
 .pinned-posts-wrapper a {
-	color: inherit;
+	@include pinned-posts-wrapper-a;
 }
-/*Right Content*/
+/*Right Content End*/
 /*Mid Section End*/
 
-/*Bottom Section / Footer*/
-body #footerWrap_RoId {
-	@include global_footerWrap_RoId;
-}
-
-.footerWrap_RoClass #footerTxt_RoId {
-	@include global_footerTxt_RoId;
-}
-/*Bottom Section / Footer*/
-
-/*Chat Section*/
+/*Chat Section Start*/
 .chat-toggle-button {
-	position: fixed;
-	bottom: 38px;
-	right: 15px;
-	width: 50px;
-	height: 50px;
-	background-color: var(--bg-color-11);
-	border: 1px solid var(--border-color-2);
-	border-radius: 50%;
-	cursor: pointer;
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0px 1px 2px 0px;
-	color: var(--text-color-4);
-	font-weight: bold;
-}
-
-.chat-toggle-button:hover {
-	opacity: .7;
+	@include chat-toggle-button;
 }
 
 .chat-container {
-	position: fixed;
-	bottom: 23px;
-	right: 0px;
-	width: 350px;
-	height: calc(100% - 78px);
-	background-color: var(--bg-color-1);
-	padding: 0px 10px 10px 10px;
-	overflow: auto;
-}
-
-.chat-container::-webkit-scrollbar-thumb {
-	visibility: hidden;
-}
-
-.chat-container:hover::-webkit-scrollbar-thumb {
-	visibility: visible;
+	@include chat-container;
 }
 
 .chat-container .contacts {
-	font-weight: bold;
-	padding-block: 20px;
-	color: var(--text-color-4);
+	@include contacts;
 }
 
 .chat-container .contact-container {
-	display: flex;
-	align-items: center;
-	gap: 11px;
-	padding: 6px;
-	border-radius: 10px;
-	cursor: pointer;
+	@include contact-container;
 }
 
 .chat-container .contact-container:hover {
-	background-color: var(--bg-color-10);
+	@include contact-container-hover;
 }
 
 .contact-container .profile-img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
+	@include profile-img;
 }
 
 .contact-container .profile-name {
-	color: var(--text-color-1);
-	font-weight: bold;
+	@include profile-name;
 }
-/*Chat Section*/
-/*General*/
+/*Chat Section End*/
+/*General End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Other Media Query*/
+/*Other Media Queries Start*/
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_MQ;
+		@include mainmechaCon_RoId_OMQ;
 	}
+}
 
+@media (max-width:641px), (min-width:1081px) and (max-width:1250px) {
 	.post-list .post-reactions {
-		flex-direction: column;
-		gap: 10px;
+		@include post-reactions_OMQ
 	}
 
 	.post-reactions .comment-count {
-		margin: 0px;
+		@include comment-count_OMQ;
 	}
 }
-/*Other Media Query*/
+/*Other Media Queries End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
+/*Mobile and Tablet Start*/
+@media (min-width:0px) and (max-width:1080px) {
+	.rolayout_RoClass .right-side-container {
+		@include right-side-container_MobTab;
+	}
+
+	.rolayout_RoClass #mainmecha_RoId {
+		@include mainmecha_RoId_MobTab;
+	}
+
+	.mainmecha_RoClass #mainmechaCon_RoId {
+		@include mainmechaCon_RoId_MobTab;
+	}
+}
+/*Mobile and Tablet End*/
+/***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile Start*/
 @media all and (max-width:641px) {
-	.top-section .searchInput_RoClass {
-		@include global_searchInput_RoClass_Mobile;
-	}
-
-	#searchInput_RoId::placeholder {
-		color: transparent;
-	}
-
-	.top-right-menu .toggle-mode {
-		@include global_toggle-mode_Mobile;
-	}
-
-	.rolayout_RoClass #mainmecha_RoId {
-		@include mainmecha_RoId_Mobile;
-	}
-
-	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_Mobile;
-	}
-
-	.post-list .post-reactions {
-		flex-direction: column;
-		gap: 10px;
-	}
-
-	.post-reactions .comment-count {
-		margin: 0px;
-	}
-
-	.rolayout_RoClass .right-side-container {
-		@include right-side-container_MobTab;
-	}
-
 	.chat-container {
-		width: 100%;
+		@include chat-container;
 	}
 }
-/*Mobile*/
+/*Mobile End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
+/*Tablet Start*/
 @media all and (min-width:642px) and (max-width:1080px) {
-	.rolayout_RoClass #mainmecha_RoId {
-		@include mainmecha_RoId_Tablet;
-	}
-
-	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_Tablet;
-	}
-
-	.rolayout_RoClass .right-side-container {
-		@include right-side-container_MobTab;
-	}
+	
 }
-/*Tablet*/
+/*Tablet End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
+/*Laptop Start*/
 @media all and (min-width:1081px) and (max-width:1600px) {
 	.mainmecha_RoClass .projectTitle_RoClass {
 		@include projectTitle_RoClass_Laptop;
@@ -728,11 +609,11 @@ body #footerWrap_RoId {
 		@include recent-posts_Laptop;
 	}
 }
-/*Laptop*/
+/*Laptop End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
+/*Desktop Start*/
 @media all and (min-width:1601px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
 		@include mainmechaCon_RoId_Desktop;
@@ -746,5 +627,5 @@ body #footerWrap_RoId {
 		@include recent-posts_Desktop;
 	}
 }
-/*Desktop*/
+/*Desktop End*/
 /***********************************************************************************************************************************************************************************************************/
