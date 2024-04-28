@@ -133,6 +133,8 @@
 	border: none;
 	outline: none;
 	color: var(--text-color-1);
+	font-size: 13px;
+	display: block;
 }
 
 @mixin global_img-video {

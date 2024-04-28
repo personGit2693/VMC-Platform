@@ -598,7 +598,9 @@
 								<img src="../../src/cat-profile.png">
 							</div>
 
-							<textarea class="comment-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Write a comment..."></textarea>
+							<div class="textarea-comment-container">
+								<textarea class="comment-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Write a comment..."></textarea>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -627,33 +629,31 @@
 				<div class="side-content-content">
 					<div class="content-title">Boss Amo messaged Juan Dela Cruz</div>
 					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
-
-					<div class="message-info">
-						<div>Message:<br><br>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</div>
-					</div>
 				</div>
 
 				<div class="side-content-content">
 					<div class="content-title">Boss Amo messaged Hubert Blaine Wolfeschl Sr.</div>
 					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
+				</div>
 
-					<div class="message-info">
-						<div>Message:<br><br>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</div>
-					</div>
+				<div class="side-content-content">
+					<div class="content-title">Boss Amo messaged Juan Dela Cruz</div>
+					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
+				</div>
+
+				<div class="side-content-content">
+					<div class="content-title">Boss Amo messaged Juan Dela Cruz</div>
+					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
+				</div>
+
+				<div class="side-content-content">
+					<div class="content-title">Boss Amo messaged Juan Dela Cruz</div>
+					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
+				</div>
+
+				<div class="side-content-content">
+					<div class="content-title">Boss Amo messaged Juan Dela Cruz</div>
+					<div class="date">Date Sent: 4/19/2024, 8:39:45 PM</div>
 				</div>
 			</div>
 			<!--Side Content 1-->
@@ -661,11 +661,6 @@
 			<!--Side Content 2-->
 			<div class="side-content-wrapper pinned-posts-wrapper">
 				<div class="side-content-title">Pinned Posts</div>
-
-				<div class="side-content-content">
-					<div class="content-title"><a href="">Grab Car Saver</a></div>
-					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
-				</div>
 
 				<div class="side-content-content">
 					<div class="content-title"><a href="">Grab Car Saver</a></div>
@@ -713,124 +708,81 @@
 	<!--Chat Section-->
 	<div class="chat-toggle-button">C</div>
 
-	<div class="chat-container" style="display: none;">
-		<div class="contacts">Contacts</div>
+	<div class="chat-container" style="display: block;">
+		<div class="contacts">
+			<div class="contact-text">Contacts</div>
 
-		<div class="contact-container">
+			<input type="text" class="searchInput_RoClass" id="search-contact" style="--inputSearchIcon: url('../../src/searchIcon.png')">
+		</div>
+
+		<div class="contact-container" onclick="toggleChatBox('Angelo Arellano')">
+			<img class="profile-img" src="../../src/cat-profile.png">
+			<div class="profile-name">Angelo Arellano</div>
+		</div>
+
+		<div class="contact-container" onclick="toggleChatBox('Jane Luna')">
 			<img class="profile-img" src="../../src/cat-profile.png">
 			<div class="profile-name">Jane Luna</div>
 		</div>
 
-		<div class="contact-container">
+		<div class="contact-container" onclick="toggleChatBox('Richard Bautista')">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">Richard Baustista</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 
 		<div class="contact-container">
 			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
-		</div>
-
-		<div class="contact-container">
-			<img class="profile-img" src="../../src/cat-profile.png">
-			<div class="profile-name">Jane Luna</div>
+			<div class="profile-name">First Last</div>
 		</div>
 	</div>
+
+	<div class="chat-box-container" style="visibility: hidden;"></div>
+	
 	<!--Chat Section-->
 
 	<script type="text/javascript" src="../Client Side/Posting Page.js"></script>

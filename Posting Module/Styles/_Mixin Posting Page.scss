@@ -13,6 +13,7 @@
 	--text-color-1: #FFFFFF;
 	--text-color-3: #CDD1D5;
 	--text-color-4: #ADB1B3;
+	--text-color-5: #E3E5E9;
 	--border-color-2: #121413;
 	--border-color-3: #3E3F40; // unused
 	--border-color-4: #444749;
@@ -30,6 +31,7 @@
 	--text-color-1: #000000;
 	--text-color-3: #5F6266;
 	--text-color-4: #6E6F72;
+	--text-color-5: #000000;
 	--border-color-2: #E2E4E7;
 	--border-color-3: #F0F2F5; // unused
 	--border-color-4: #CED0D4;
@@ -397,16 +399,18 @@
 	margin-right: 10px;
 }
 
-@mixin comment-input {
+@mixin textarea-comment-container {
 	width: 100%;
 	padding: 7px;
-	border-radius: 10px;
 	background-color: var(--bg-color-3);
-	resize: none;
+	border-radius: 10px;
 }
 
-@mixin comment-input-placeholder {
-	font-size: 14px;
+@mixin comment-input {
+	width: 100%;
+	resize: none;
+	max-height: 250px;
+	background-color: transparent;
 }
 /*Mid Content*/
 
@@ -430,7 +434,7 @@
 }
 
 @mixin side-content-wrapper {
-	height: 580px;
+	height: 316px;
 	border-radius: 10px;
 	padding-inline: 20px;
 	border: 1px solid var(--border-color-2);
@@ -468,17 +472,8 @@
 	color: var(--text-color-4);
 }
 
-@mixin message-info {
-	margin-top: 10px;
-	font-size: 14px;
-	padding: 15px;
-	border-radius: 10px;
-	border: 1px solid var(--border-color-1);
-	background-color: var(--bg-color-3);
-}
-
 @mixin pinned-posts-wrapper {
-	height:300px;
+	
 }
 
 @mixin pinned-posts-wrapper-a {
@@ -520,14 +515,35 @@
 
 @mixin contacts {
 	font-weight: bold;
-	padding-block: 20px;
+	padding-block: 10px;
 	color: var(--text-color-4);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin search-contact-id {
+	--inputSearchIconHori: 10px;
+	--inputSearchIconSize: 14px;
+	--inputSearchFSize: 12px;
+	width: 36px;
+	height: 36px;
+	margin-right: 15px;
+	padding-left: 22px;
+	cursor: pointer;
+	border: 1px solid transparent;
+
+}
+
+@mixin search-contact-id-hover {
+	background-color: var(--bg-color-10);
+	border: 1px solid var(--border-color-2);
 }
 
 @mixin contact-container {
 	display: flex;
 	align-items: center;
-	gap: 11px;
+	gap: 13px;
 	padding: 6px;
 	border-radius: 10px;
 	cursor: pointer;
@@ -544,8 +560,194 @@
 }
 
 @mixin profile-name {
+	color: var(--text-color-5);
+	font-size: 15px;
+}
+
+@mixin chat-box-container {
+	width: 320px;
+	height: 430px;
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	position: absolute;
+	bottom: 23px;
+	right: 80px;
+	background-color: var(--bg-color-2);
+	border: 1px solid var(--border-color-2);
+	border-bottom: none;
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin contact-profile-container {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 8px;
+	border-bottom: 1px solid var(--border-color-1);
+}
+
+@mixin contact-picture {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+@mixin contact-name {
+	font-size: 15px;
 	color: var(--text-color-1);
+}
+
+@mixin chat-box {
+	width: 100%;
+	overflow: auto;
+	padding: 5px 0px 10px 0px;
+}
+
+@mixin contact-profile-container-big {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	padding-block: 34px;
+}
+
+@mixin contact-picture-big {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;	
+}
+
+@mixin contact-name-big {
+	font-size: 17px;
+	color: var(--text-color-1);
+}
+
+@mixin right-chat-container {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-top: 5px;
+	padding-right: 8px;
+}
+
+@mixin chat-and-date-right {
+	margin-top: 5px;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+@mixin chat-date-sent {
+	font-size: 11px;
+	border-radius: 10px;
+	padding: 0px 5px 0px 5px;
+	color: var(--text-color-4);
+}
+
+@mixin right-chat {
+	margin-top: 3px;
+	padding: 8px 11px;
+	border-radius: 16px;
+	font-size: 13px;
+	background-color: #0084FF;
+	color: #FFFFFF;
+}
+
+@mixin left-chat-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+	padding-left: 8px;
+}
+
+@mixin chat-and-date-left {
+	margin-top: 5px;
+	width: 210px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+@mixin left-chat-pic-container {
+	display: flex;
+	align-items: flex-end;
+	gap: 8px;
+}
+
+@mixin left-chat-pic {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+}
+
+@mixin left-chat {
+	margin-top: 3px;
+	padding: 8px 11px;
+	border-radius: 16px;
+	font-size: 13px;
+	background-color: var(--bg-color-3);
+	color: var(--text-color-1);
+}
+
+@mixin chat-input-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 10px;
+	width: 100%;
+	padding: 10px;
+}
+
+@mixin textarea-chat-container {
+	width: 100%;
+	border-radius: 10px;
+	padding: 5px 7px;
+	background-color: var(--bg-color-3);
+	border: 1px solid var(--border-color-1);
+}
+
+@mixin chat-input {
+	width: 100%;
+	resize: none;
+	background-color: transparent;
+	max-height: 100px;
+	overflow: auto;
+}
+
+@mixin chat-send-button {
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	background-color: #2176FF;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+@mixin close-chat-button {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border-radius: 50%;
+	border: none;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: #0084FF;
 	font-weight: bold;
+	width: 30px;
+	height: 30px;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+
+@mixin close-chat-button-hover {
+	background-color: var(--bg-color-3);
 }
 /*Chat Section*/
 /*General*/
@@ -563,6 +765,20 @@
 
 @mixin comment-count_OMQ {
 	margin: 0px;
+}
+
+@mixin chat-toggle-button_OMQ {
+	top: 60px;
+	left: 10px;
+}
+
+@mixin contact-text_OMQ {
+	visibility: hidden;
+}
+
+@mixin chat-box-container_OMQ {
+	width: 300px;
+	right: 10px;
 }
 /*Other Media Queries*/
 /*************************************************************************************/

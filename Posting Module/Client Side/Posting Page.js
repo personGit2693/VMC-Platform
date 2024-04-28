@@ -141,3 +141,306 @@ document.querySelector('.chat-toggle-button').addEventListener('click', function
 	}
 });
 /*Show / Hide toggle for chat container*/
+
+/*Function for toggling the chat box container*/
+function toggleChatBox(contactName) {
+	var chatBox = document.querySelector('.chat-box-container');
+
+	if (chatBox.style.visibility === 'hidden') {
+		chatBox.style.visibility = 'visible';
+	}
+
+	var chatHistory = getSampleChatHistory(contactName);
+	chatBox.innerHTML = chatHistory;
+}
+
+function closeChatBox() {
+	var chatBox = document.querySelector('.chat-box-container');
+	chatBox.style.visibility = 'hidden';
+}
+
+// Sample chat history for demonstration purposes
+function getSampleChatHistory(contactName) {
+
+	if (contactName === 'Angelo Arellano') {
+		return `
+			<div class="contact-profile-container">
+				<img class="contact-picture" src="../../src/cat-profile.png">
+				<div class="contact-name">Angelo Arellano</div>
+			</div>
+
+			<div class="chat-box">
+				<div class="contact-profile-container-big">
+					<img class="contact-picture-big" src="../../src/cat-profile.png">
+					<div class="contact-name-big">Angelo Arellano</div>
+				</div>
+
+				<div class="right-chat-container">
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">Pre</div>
+						<div class="right-chat">Kailan mo babayaran utang mo, tagal na nun ah</div>
+					</div>
+
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+						</div>
+					</div>
+				</div>
+
+				<div class="left-chat-container">
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">Left chat sample.</div>
+						</div>
+					</div>
+
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-chat-container">
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">Right chat sample.</div>
+					</div>
+
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">My apologies, but I can't right now.</div>
+					</div>
+				</div>
+
+				<div class="left-chat-container">
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">Okay!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="chat-input-container">
+				<div class="textarea-chat-container">
+					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+				</div>
+				
+				<button class="chat-send-button">Send</button>
+			</div>
+
+			<button class="close-chat-button" onclick="closeChatBox()">X</button>
+		`;
+	} else if (contactName === 'Jane Luna') {
+		return `
+			<div class="contact-profile-container">
+				<img class="contact-picture" src="../../src/cat-profile.png">
+				<div class="contact-name">Jane Luna</div>
+			</div>
+
+			<div class="chat-box">
+				<div class="contact-profile-container-big">
+					<img class="contact-picture-big" src="../../src/cat-profile.png">
+					<div class="contact-name-big">Jane Luna</div>
+				</div>
+
+				<div class="right-chat-container">
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">Jane, nahanap ko na wallet mo kaso wala ng laman.</div>
+						<div class="right-chat">Hahaha</div>
+					</div>
+
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+						</div>
+					</div>
+				</div>
+
+				<div class="left-chat-container">
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">Left chat sample.</div>
+						</div>
+					</div>
+
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-chat-container">
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">Right chat sample.</div>
+					</div>
+
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">My apologies, but I can't right now.</div>
+					</div>
+				</div>
+
+				<div class="left-chat-container">
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">Okay!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="chat-input-container">
+				<div class="textarea-chat-container">
+					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+				</div>
+				
+				<button class="chat-send-button">Send</button>
+			</div>
+
+			<button class="close-chat-button" onclick="closeChatBox()">X</button>
+		`;
+	} else if (contactName === 'Richard Bautista') {
+		return `
+			<div class="contact-profile-container">
+				<img class="contact-picture" src="../../src/cat-profile.png">
+				<div class="contact-name">Richard Bautista</div>
+			</div>
+
+			<div class="chat-box">
+				<div class="contact-profile-container-big">
+					<img class="contact-picture-big" src="../../src/cat-profile.png">
+					<div class="contact-name-big">Richard Bautista</div>
+				</div>
+
+				<div class="right-chat-container">
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">aw</div>
+						<div class="right-chat">San ka na Richard?</div>
+					</div>
+
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+						</div>
+					</div>
+				</div>
+
+				<div class="left-chat-container">
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">Left chat sample.</div>
+						</div>
+					</div>
+
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-chat-container">
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">Right chat sample.</div>
+					</div>
+
+					<div class="chat-and-date-right">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="right-chat">My apologies, but I can't right now.</div>
+					</div>
+				</div>
+
+				<div class="left-chat-container">
+					<div class="chat-and-date-left">
+						<div class="chat-date-sent">4/19/2024, 8:39:45 PM</div>
+
+						<div class="left-chat-pic-container">
+							<img class="left-chat-pic" src="../../src/cat-profile.png">
+
+							<div class="left-chat">Okay!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="chat-input-container">
+				<div class="textarea-chat-container">
+					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+				</div>
+				
+				<button class="chat-send-button">Send</button>
+			</div>
+
+			<button class="close-chat-button" onclick="closeChatBox()">X</button>
+		`;
+	}
+}
+/*Function for toggling the chat box container*/

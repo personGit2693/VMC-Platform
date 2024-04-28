@@ -261,7 +261,8 @@ video {
 .file-preview-container .remove-file-button:hover,
 .create-post-form .create-post-button:hover,
 .posts button:hover,
-.chat-toggle-button:hover {
+.chat-toggle-button:hover,
+.chat-input-container .chat-send-button:hover {
 	@include hover-opacity;
 }
 
@@ -270,7 +271,10 @@ video {
 .create-post-form .create-post-button:active,
 .posts button:active,
 .emoji-container img:active,
-.chat-toggle-button:active {
+.chat-toggle-button:active,
+.contacts .search-contact:active,
+.chat-input-container .chat-send-button:active,
+.chat-box-container .close-chat-button:active {
 	@include active-opacity;
 }
 
@@ -452,12 +456,12 @@ video {
 	@include comment-like-count;
 }
 
-.profile-container .comment-input {
-	@include comment-input;
+.profile-container .textarea-comment-container {
+	@include textarea-comment-container;
 }
 
-.comment-input::placeholder {
-	@include comment-input-placeholder;
+.textarea-comment-container .comment-input {
+	@include comment-input;
 }
 /*Mid Content End*/
 
@@ -496,10 +500,6 @@ video {
 	@include date;
 }
 
-.side-content-content .message-info {
-	@include message-info;
-}
-
 .right-side-container .pinned-posts-wrapper {
 	@include pinned-posts-wrapper;
 }
@@ -523,6 +523,14 @@ video {
 	@include contacts;
 }
 
+.contacts #search-contact {
+	@include search-contact-id;
+}
+
+.contacts #search-contact:hover {
+	@include search-contact-id-hover;
+}
+
 .chat-container .contact-container {
 	@include contact-container;
 }
@@ -537,6 +545,98 @@ video {
 
 .contact-container .profile-name {
 	@include profile-name;
+}
+
+.chat-box-container {
+	@include chat-box-container;
+}
+
+.chat-box-container .contact-profile-container {
+	@include contact-profile-container;
+}
+
+.contact-profile-container .contact-picture {
+	@include contact-picture;
+}
+
+.contact-profile-container .contact-name {
+	@include contact-name;
+}
+
+.chat-box-container .chat-box {
+	@include chat-box;
+}
+
+.chat-box .contact-profile-container-big {
+	@include contact-profile-container-big;
+}
+
+.contact-profile-container-big .contact-picture-big {
+	@include contact-picture-big;
+}
+
+.contact-profile-container-big .contact-name-big {
+	@include contact-name-big;
+}
+
+.chat-box .right-chat-container {
+	@include right-chat-container;
+}
+
+.right-chat-container .chat-and-date-right {
+	@include chat-and-date-right;
+}
+
+.chat-box .chat-date-sent {
+	@include chat-date-sent;
+}
+
+.chat-and-date-right .right-chat {
+	@include right-chat;
+}
+
+.chat-box .left-chat-container {
+	@include left-chat-container;
+}
+
+.left-chat-container .chat-and-date-left {
+	@include chat-and-date-left;
+}
+
+.chat-and-date-left .left-chat-pic-container {
+	@include left-chat-pic-container;
+}
+
+.left-chat-pic-container .left-chat-pic {
+	@include left-chat-pic;	
+}
+
+.left-chat-pic-container .left-chat {
+	@include left-chat;
+}
+
+.chat-box-container .chat-input-container {
+	@include chat-input-container;
+}
+
+.chat-input-container .textarea-chat-container {
+	@include textarea-chat-container;
+}
+
+.textarea-chat-container .chat-input {
+	@include chat-input;
+}
+
+.chat-input-container .chat-send-button {
+	@include chat-send-button;
+}
+
+.chat-box-container .close-chat-button {
+	@include close-chat-button;
+}
+
+.chat-box-container .close-chat-button:hover {
+	@include close-chat-button-hover;
 }
 /*Chat Section End*/
 /*General End*/
@@ -557,6 +657,20 @@ video {
 
 	.post-reactions .comment-count {
 		@include comment-count_OMQ;
+	}
+}
+
+@media (max-width:400px) {
+	.contacts .contact-text {
+		@include contact-text_OMQ;
+	}
+
+	.chat-toggle-button {
+		@include chat-toggle-button_OMQ;
+	}
+
+	.chat-box-container {
+		@include chat-box-container_OMQ;
 	}
 }
 /*Other Media Queries End*/
