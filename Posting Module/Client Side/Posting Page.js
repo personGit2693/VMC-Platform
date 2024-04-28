@@ -165,7 +165,10 @@ function getSampleChatHistory(contactName) {
 	if (contactName === 'Angelo Arellano') {
 		return `
 			<div class="contact-profile-container">
-				<img class="contact-picture" src="../../src/cat-profile.png">
+				<div class="contact-picture-container">
+					<img class="contact-picture" src="../../src/cat-profile.png">
+				</div>
+
 				<div class="contact-name">Angelo Arellano</div>
 			</div>
 
@@ -258,7 +261,10 @@ function getSampleChatHistory(contactName) {
 	} else if (contactName === 'Jane Luna') {
 		return `
 			<div class="contact-profile-container">
-				<img class="contact-picture" src="../../src/cat-profile.png">
+				<div class="contact-picture-container">
+					<img class="contact-picture" src="../../src/cat-profile.png">
+				</div>
+
 				<div class="contact-name">Jane Luna</div>
 			</div>
 
@@ -351,7 +357,10 @@ function getSampleChatHistory(contactName) {
 	} else if (contactName === 'Richard Bautista') {
 		return `
 			<div class="contact-profile-container">
-				<img class="contact-picture" src="../../src/cat-profile.png">
+				<div class="contact-picture-container">
+					<img class="contact-picture" src="../../src/cat-profile.png">
+				</div>
+				
 				<div class="contact-name">Richard Bautista</div>
 			</div>
 

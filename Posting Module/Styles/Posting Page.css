@@ -3665,7 +3665,8 @@ video {
 .chat-toggle-button:active,
 .contacts .search-contact:active,
 .chat-input-container .chat-send-button:active,
-.chat-box-container .close-chat-button:active {
+.chat-box-container .close-chat-button:active,
+.contact-picture-container:active {
   opacity: .5; }
 
 .create-post-form .post-title,
@@ -4093,10 +4094,21 @@ video {
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 8px;
+  padding: 2px;
   border-bottom: 1px solid var(--border-color-1); }
 
-.contact-profile-container .contact-picture {
+.contact-profile-container .contact-picture-container {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contact-picture-container:hover {
+  background-color: var(--bg-color-3); }
+
+.contact-picture-container .contact-picture {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -4257,8 +4269,7 @@ video {
     visibility: hidden; }
 
   .chat-toggle-button {
-    top: 60px;
-    left: 10px; }
+    top: 110px; }
 
   .chat-box-container {
     width: 300px;

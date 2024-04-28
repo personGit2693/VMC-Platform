@@ -584,8 +584,17 @@
 	display: flex;
 	align-items: center;
 	gap: 7px;
-	padding: 8px;
+	padding: 2px;
 	border-bottom: 1px solid var(--border-color-1);
+}
+
+@mixin contact-picture-container {
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @mixin contact-picture {
@@ -768,8 +777,7 @@
 }
 
 @mixin chat-toggle-button_OMQ {
-	top: 60px;
-	left: 10px;
+	top: 110px;
 }
 
 @mixin contact-text_OMQ {

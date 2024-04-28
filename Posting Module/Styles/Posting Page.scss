@@ -274,7 +274,8 @@ video {
 .chat-toggle-button:active,
 .contacts .search-contact:active,
 .chat-input-container .chat-send-button:active,
-.chat-box-container .close-chat-button:active {
+.chat-box-container .close-chat-button:active,
+.contact-picture-container:active {
 	@include active-opacity;
 }
 
@@ -555,7 +556,15 @@ video {
 	@include contact-profile-container;
 }
 
-.contact-profile-container .contact-picture {
+.contact-profile-container .contact-picture-container {
+	@include contact-picture-container;
+}
+
+.contact-picture-container:hover {
+	@include close-chat-button-hover;
+}
+
+.contact-picture-container .contact-picture {
 	@include contact-picture;
 }
 
