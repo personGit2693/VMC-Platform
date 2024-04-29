@@ -449,6 +449,7 @@ body{
 
 .settingsSeconddiv_Class{
 	border:1px solid white;
+	border-radius:6px;
 	padding:auto;
 }
 
@@ -464,7 +465,9 @@ body{
 .preferencesOptions_Class{
 	margin:auto;
 	width:40%;
+	padding:10px;
 	border:1px solid gray;
+	border-radius:6px;
 	justify-content: space-around;
 }
 
