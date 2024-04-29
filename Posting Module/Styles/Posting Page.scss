@@ -844,6 +844,14 @@ video {
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Queries Start*/
 @media (max-width:900px) {
+	.modalme_RoClass .modalHeadClose_RoClass {
+		background-color: var(--bg-color-12);
+	}
+
+	.modalme_RoClass .home-logo img {
+		background-color: var(--bg-color-7);
+	}
+
 	.modalme_RoClass .modalBody_RoClass {
 		flex-direction: column;
 		padding-top: 55px;

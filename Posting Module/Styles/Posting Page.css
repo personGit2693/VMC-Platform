@@ -6787,6 +6787,7 @@ video {
   --bg-color-4: #242526;
   --bg-color-10: #303031;
   --bg-color-11: #5D5E61;
+  --bg-color-12: #161617;
   --text-color-3: #CDD1D5;
   --text-color-4: #ADB1B3;
   --text-color-5: #E3E5E9;
@@ -6804,6 +6805,7 @@ video {
   --bg-color-4: #FFFFFF;
   --bg-color-10: #E4E6E8;
   --bg-color-11: #FFFFFF;
+  --bg-color-12: #999999;
   --text-color-3: #5F6266;
   --text-color-4: #6E6F72;
   --text-color-5: #000000;
@@ -7633,6 +7635,12 @@ video {
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Queries Start*/
 @media (max-width: 900px) {
+  .modalme_RoClass .modalHeadClose_RoClass {
+    background-color: var(--bg-color-12); }
+
+  .modalme_RoClass .home-logo img {
+    background-color: var(--bg-color-7); }
+
   .modalme_RoClass .modalBody_RoClass {
     flex-direction: column;
     padding-top: 55px; }
