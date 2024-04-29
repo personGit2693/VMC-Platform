@@ -7645,8 +7645,13 @@ video {
     flex-direction: column;
     padding-top: 55px; }
 
+  .modalme_RoClass .posted-file-container {
+    max-height: 55%;
+    flex: 2; }
+
   .modalme_RoClass .posted-info-container {
-    width: auto; }
+    width: auto;
+    flex: 1; }
 
   .posted-info-container .modal-menu-container {
     position: fixed;
