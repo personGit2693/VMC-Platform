@@ -3253,59 +3253,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Root*/
-:root {
-  --normBtnPadding: 1px;
-  --normBtnBorderWidth: 1px;
-  --normBtnBorderColor: white;
-  --normBtnRadius: 6px;
-  --normBtnFWeight: 500px;
-  --normBtnBgColor: #2058B2;
-  --normBtnHovActFColor: red;
-  --normBtnHovActBgColor: white;
-  --customInputColor: white;
-  --customInputFSize: 10px;
-  --customInputAnimFSize: 10px;
-  --iconBtnWidth: 200px;
-  --iconBtnHeight: 200px;
-  --iconBtnBorderColor: transparent;
-  --iconBtnBgSize:22px;
-  --iconBtnHeight: 30px;
-  --selectDropdownWidth: auto;
-  --selectDropdownBorderWidth: 1px;
-  --selectDropdownBorderColor: #18191A;
-  --selectDropdownBorderRadius: 99px;
-  --selectDropdownBgColor:#18191A;
-  --selectDropdownIconSize:14px;
-  --selectDropdownFSize: auto;
-  --selectDropdownFColor: white;
-  --selectDropdownChevronSize: 20px;
-  --searchOptsBgColor: white;
-  --searchOptsFColor: black;
-  --hoverOptBgColor: gray;
-  --hoverOptFColor: red;
-  --selectDropdownScrollSize:5px;
-  --optWrapThumbBgColor: red;
-  --selectDropdownResetBtnSize: 20px;
-  --cusRadioBorderWidth: 1px;
-  --cusRadioBorderColor: white;
-  --cusRadioWidthHeight: 10px;
-  --cusRadioBgColor: gray;
-  --cusRadioFWeight: 200px;
-  --cusRadioFsize: 15px;
-  --cusRadioFColor: white;
-  --cusCheckboxFWeight: 500;
-  --custCheckboxFSize: 17px;
-  --cusCheckboxColor: white;
-  --cusCheckboxWidthHeight: 15px;
-  --cusCheckboxBorderWidth: 1px;
-  --cusCheckboxBorderColor: gray;
-  --footerBgColor: #242526;
-  --footerFSize: 14px;
-  --footerFColor: white; }
-
+/*Global Codes to Copy Start*/
+/*Root Start*/
 :root {
   /*Search Box*/
   --inputSearchWidth: 250px;
@@ -3574,6 +3523,59 @@ video {
     font-size: 12px; } }
 /*Mobile End*/
 /*Global Codes to Copy End*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root {
+  --normBtnPadding: 1px;
+  --normBtnBorderWidth: 1px;
+  --normBtnBorderColor: white;
+  --normBtnRadius: 6px;
+  --normBtnFWeight: 500px;
+  --normBtnBgColor: #2058B2;
+  --normBtnHovActFColor: red;
+  --normBtnHovActBgColor: white;
+  --customInputColor: white;
+  --customInputFSize: 10px;
+  --customInputAnimFSize: 10px;
+  --iconBtnWidth: 200px;
+  --iconBtnHeight: 200px;
+  --iconBtnBorderColor: transparent;
+  --iconBtnBgSize:22px;
+  --iconBtnHeight: 30px;
+  --selectDropdownWidth: auto;
+  --selectDropdownBorderWidth: 1px;
+  --selectDropdownBorderColor: #18191A;
+  --selectDropdownBorderRadius: 99px;
+  --selectDropdownBgColor:#18191A;
+  --selectDropdownIconSize:14px;
+  --selectDropdownFSize: auto;
+  --selectDropdownFColor: white;
+  --selectDropdownChevronSize: 20px;
+  --searchOptsBgColor: white;
+  --searchOptsFColor: black;
+  --hoverOptBgColor: gray;
+  --hoverOptFColor: red;
+  --selectDropdownScrollSize:5px;
+  --optWrapThumbBgColor: red;
+  --selectDropdownResetBtnSize: 20px;
+  --cusRadioBorderWidth: 1px;
+  --cusRadioBorderColor: white;
+  --cusRadioWidthHeight: 10px;
+  --cusRadioBgColor: gray;
+  --cusRadioFWeight: 200px;
+  --cusRadioFsize: 15px;
+  --cusRadioFColor: white;
+  --cusCheckboxFWeight: 500;
+  --custCheckboxFSize: 17px;
+  --cusCheckboxColor: white;
+  --cusCheckboxWidthHeight: 15px;
+  --cusCheckboxBorderWidth: 1px;
+  --cusCheckboxBorderColor: gray;
+  --footerBgColor: #242526;
+  --footerFSize: 14px;
+  --footerFColor: white; }
+
 @font-face {
   font-family: myOwnFont;
   src: url(../Fonts/Binance-PLEX.ttf); }
@@ -3589,9 +3591,6 @@ body {
 .userLogin_RoClass .userLoginDetails_RoClass {
   font-size: 20px;
   font-family: myOwnFont; }
-
-.searchInput_RoClass {
-  margin: 5px; }
 
 .mainmechaCon_RoClass .SettingsClass {
   display: flex;
@@ -3749,10 +3748,6 @@ body {
   .setting_Title_Class {
     color: white;
     font-size: 20px; }
-
-  .searchInput_RoClass {
-    --inputSearchWidth: 230px;
-    --inputSearchFSize: 10px; }
 
   .normButton_RoClass {
     --normBtnWidth: 140px;
