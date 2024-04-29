@@ -14,33 +14,12 @@
 /*Root*/
 :root{
 
-	/*Side Apps without Sub Menu*/
-	/*Search Box*/
-	@include global_top-searchbox;
-	/*Search Box*/
-
-	/*Side Apps Main Menu*/
-	@include global_side-app-main;
-	/*Side Apps Main Menu*/
-
-	/*Side Apps Sub Menu*/
-	@include global_side-app-sub;
-	/*Side Apps Sub Menu*/
-
-	/*Footer*/
-	@include global_footer-style;
-	/*Footer*/
-
-	/*Dark Mode (Default Style)*/
-	@include global_dark-mode;
-	/*Dark Mode (Default Style)*/
-
 	--normBtnPadding: 1px;
 	--normBtnBorderWidth: 1px;
 	--normBtnBorderColor: white;
-	--normBtnRadius: 999px;
+	--normBtnRadius: 6px;
 	--normBtnFWeight: 500px;
-	--normBtnBgColor: gray;
+	--normBtnBgColor: #2058B2;
 	--normBtnHovActFColor: red;
 	--normBtnHovActBgColor: white;
 
@@ -91,9 +70,26 @@
 	--footerFColor: white;
 
 }
-/*Root*/
+:root {
+	/*Search Box*/
+	@include global_top-searchbox;
+	/*Search Box*/
 
-/**Global Codes**/
+	/*Side Apps Main Menu*/
+	@include global_side-app-main;
+	/*Side Apps Main Menu*/
+
+	/*Side Apps Sub Menu*/
+	@include global_side-app-sub;
+	/*Side Apps Sub Menu*/
+
+	/*Dark Mode (Default Style)*/
+	@include global_dark-mode;
+	/*Dark Mode (Default Style)*/
+}
+/*Root End*/
+
+/*General Start*/
 .light-mode {
 	@include global_light-mode;
 }
@@ -129,7 +125,12 @@ textarea:focus {
 	@include global_input-textarea-style;
 }
 
-/*Top Section*/
+img,
+video {
+	@include global_img-video;
+}
+
+/*Top Section Start*/
 .top-section {
 	@include global_top-section;
 }
@@ -142,8 +143,18 @@ textarea:focus {
 	@include global_home-logo;
 }
 
-.top-left-menu .home-logo:hover {
-	@include global_home-logo-hover;
+.top-left-menu .home-logo:hover,
+.top-right-menu .toggle-mode:hover,
+.top-right-menu .topMenus:hover,
+.user-profile img:hover {
+	@include global_hover-opacity;
+}
+
+.top-left-menu .home-logo:active,
+.top-right-menu .toggle-mode:active,
+.top-right-menu .topMenus:active,
+.user-profile img:active {
+	@include global_active-opacity;
 }
 
 .top-left-menu .home-logo img {
@@ -166,39 +177,39 @@ textarea:focus {
 	@include global_toggle-mode;
 }
 
-.top-right-menu .toggle-mode:hover {
-	@include global_toggle-mode-hover;
-}
-
 .top-right-menu .topMenus {
 	@include global_topMenus;
-}
-
-.top-right-menu .topMenus:hover {
-	@include global_topMenus-hover;
 }
 
 .top-right-menu .gear-icon {
 	@include global_gear-icon;
 }
 
-.top-right-menu .topMenus img {
-	@include global_topMenus-img;
+.top-right-menu .user-profile {
+	@include global_user-profile;
 }
-/*Top Section*/
+
+.user-profile img {
+	@include global_user-profile-img;
+}
+/*Top Section End*/
 
 /*Mid Section Start*/
 #rolayout_RoId {
 	@include global_rolayout_RoId;
 }
 
-/*Left Content*/
+/*Left Content Start*/
 .rolayout_RoClass #sidemecha_RoId {
 	@include global_sidemecha_RoId;
 }
 
+#sidemecha_RoId::-webkit-scrollbar-thumb {
+	@include global_sb-thumb-visibility;
+}
+
 #sidemecha_RoId:hover::-webkit-scrollbar-thumb {
-	@include global_sidemecha_RoId-hover-webkit;
+	@include global_hover-sb-thumb-visibility;
 }
 
 .sidemechaCon_RoClass .company-logo {
@@ -209,6 +220,11 @@ textarea:focus {
 	@include global_company-logo-img;
 }
 
+.sidemechaCon_RoClass .mainNavMenu_RoClass,
+.sidemechaCon_RoClass .subNavMenu_RoClass {
+	@include global_mainNavMenu_RoClass;
+}
+
 .mainNavMenu_RoClass .generalNavMenuText_RoClass {
 	@include global_generalNavMenuText_RoClass;
 }
@@ -216,79 +232,56 @@ textarea:focus {
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
 	@include global_chevronIconWrap_RoClass;
 }
-/***End Global Codes**/
+/*Left Content End*/
+
+/*Mid Content Start*/
+.mainmecha_RoClass #burger_RoId {
+	@include global_burger_RoId;
+}
+/*Mid Content End*/
+/*Mid Section End*/
+
+/*Bottom Section / Footer Start*/
+#footerWrap_RoId {
+	@include global_footerWrap_RoId;
+}
+
+.footerWrap_RoClass #footerTxt_RoId {
+	@include global_footerTxt_RoId;
+}
+/*Bottom Section / Footer End*/
+/*General End*/
+
+/*Mobile Start*/
+@media all and (max-width:641px) {
+	.top-section .searchInput_RoClass {
+		@include global_searchInput_RoClass_Mobile;
+	}
+
+	#searchInput_RoId::placeholder {
+		@include global_searchInput-placeholder_Mobile;
+	}
+
+	.top-right-menu .toggle-mode {
+		@include global_toggle-mode_Mobile;
+	}
+}
+/*Mobile End*/
+/*Global Codes to Copy End*/
 @font-face{
 	font-family: myOwnFont;
 	src:url(../Fonts/Binance-PLEX.ttf);
-}
-
-.top-section {
-	height: 45px;
-	background-color: #242526;
-	border-bottom: 1px solid #3D3E3F;
-	padding: 5px 15px;
-	display: flex;
-	justify-content: space-between;
-}
-
-.top-section .top-left-menu {
-	display: flex;
-	align-items:center;
-}
-
-.top-left-menu .home-logo {
-	height: 30px;
-	width: 30px;
-}
-
-.top-section #searchInput_RoId {
-	background-color: #3A3B3C;
-	height:30px;
-	margin:auto;
-}
-
-.top-section .top-right-menu {
-	display: flex;
-	gap: 15px;
-}
-
-.top-right-menu .menu {
-	display: flex;
-	align-items: center;
-}
-
-.menu .menu-img {
-	height: 30px;
-	width: 30px;
-	cursor: pointer;
-}
-
-#rolayout_RoId {
-	height: calc(100% - 75px);
-}
-
-.rolayout_RoClass #sidemecha_RoId {
-	border-right: 1px solid #3D3E3F;
-	padding: 10px 5px;
-	direction: ltr;
-}
-
-.sidemechaCon_RoClass .company-logo {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 15px;
-}
-
-.sidemechaCon_RoClass .company-logo img {
-	width: 100px;
-	height: 100px;
 }
 
 body{
 	height:100%;
 	font-family: myOwnFont;
 	overflow: auto;
+}
+
+.setting_Title_Class{
+	color:white;
+	font-size:30px;
 }
 
 .userLogin_RoClass .userLoginDetails_RoClass{
@@ -333,10 +326,16 @@ body{
 #profilePic-Wrap{
 	width:100%;
 	display:flex;
-	flex-direction:row;
-	height:250px;
+	flex-direction:column;
+	align-items: center;
+	height:10%;
 	border-bottom:1px solid violet;
 }
+
+#profilePic-Wrap #profilePic-id{
+		width:100%;
+}
+
 #picAndbuttonwrap_id{
 	width:40%;
 	display:flex;
@@ -348,6 +347,8 @@ body{
 #picAndbuttonwrap_id #imgWrapper_id{
 	width:60%;
 	height:80%;
+	border:2px solid white;
+	border-radius:6px;
 
 }
 
@@ -479,15 +480,10 @@ body{
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-.projTitleAndUserLogin_RoClass{
-	--projectTitleTextFColor: White;
-	--projectTitleTextFSize: 40px;
-	--projectTitleUserIconSize: 25px;
 
-}
-
-.projTitleTxt_RoClass{
-	padding:0;
+.setting_Title_Class{
+	color:white;
+	font-size:20px;
 }
 
 .searchInput_RoClass{
@@ -495,18 +491,7 @@ body{
 	--inputSearchFSize: 10px;
 
 }	
-#profilePic-Wrap{
-	width:100%;
-	display:flex;
-	flex-direction:column;
-	align-items: center;
-	height:10%;
-}
 
-
-#profilePic-Wrap #profilePic-id{
-		width:100%;
-}
 
 .normButton_RoClass{
 		--normBtnWidth: 140px;
@@ -551,18 +536,6 @@ body{
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 	
-#profilePic-Wrap{
-	width:100%;
-	display:flex;
-	flex-direction:column;
-	align-items: center;
-	height:10%;
-}
-
-
-#profilePic-Wrap #profilePic-id{
-		width:100%;
-}
 
 .normButton_RoClass{
 		--normBtnWidth: 140px;
@@ -576,18 +549,6 @@ body{
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-#profilePic-Wrap{
-	width:100%;
-	display:flex;
-	flex-direction:column;
-	align-items: center;
-	height:10%;
-}
-
-
-#profilePic-Wrap #profilePic-id{
-		width:100%;
-}
 
 .normButton_RoClass{
 		--normBtnWidth: 150px;
@@ -601,19 +562,6 @@ body{
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-	
-#profilePic-Wrap{
-	width:100%;
-	display:flex;
-	flex-direction:column;
-	align-items: center;
-	height:10%;
-}
-
-
-#profilePic-Wrap #profilePic-id{
-		width:100%;
-}
 
 	.normButton_RoClass{
 		--normBtnWidth: 160px;

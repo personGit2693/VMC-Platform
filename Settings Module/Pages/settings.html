@@ -33,7 +33,7 @@
 				<!--With Sub Menus-->
 				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/sccc icon green.png'); --activeMainNavMenuIcon:url('../../src/sccc icon green.png')"></div>
-					<span class="generalNavMenuText_RoClass">APPS</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right.png"/></div>
+					<span class="generalNavMenuText_RoClass">APPS</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png"/></div>
 				</div>
 
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
@@ -114,12 +114,12 @@
 		<!--Burger-->
 		<div class="mainmecha_RoClass" style=" --mainBodyBgColor:#18191A; ">
 			<!--Header-->
-			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:#242526; ">
+			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:#181919; ">
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
 	
 				<!--Settings Content-Title-->
 				<div class="projTitleAndUserLogin_RoClass">
-					<div class="projTitleTxt_RoClass" style="height:50px;">Settings</div>	
+					<div class="projTitleTxt_RoClass"><p class="setting_Title_Class">Settings</p></div>	
 				</div>
 				<!--End title-->
 				
@@ -237,18 +237,37 @@
 						<div class="settingsPreferencesControl_Class">Preferences</div><br>
 							<!---Light and Dark Mode-->
 							<div class="preferencesOptions_Class">
-								<div style="color:yellow;">Light and Dark Mode</div>
+								<div style="color:yellow;">Keep Searches For</div>
 								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
 									<label for=" circleRadioBtn1 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
 									<input type="radio" id=" circleRadioBtn1 " name="circlesample" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' yellow ')" autocomplete="off">
-									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">Light Mode</div>
+									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">3 days</div>
 								</div>
 
 								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
 									<label for=" circleRadioBtn2 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
 									<input type="radio" id=" circleRadioBtn2 " name="circlesample" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' yellow ')" autocomplete="off">
-									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">Dark Mode</div>
+									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">7 days</div>
 								</div>
+
+								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
+									<label for=" circleRadioBtn3 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
+									<input type="radio" id=" circleRadioBtn3 " name="circlesample" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' yellow ')" autocomplete="off">
+									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">15 days</div>
+								</div>
+
+								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
+									<label for=" circleRadioBtn4 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
+									<input type="radio" id=" circleRadioBtn4 " name="circlesample" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' yellow ')" autocomplete="off">
+									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">30 days</div>
+								</div>
+
+								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
+									<label for=" circleRadioBtn5 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
+									<input type="radio" id=" circleRadioBtn5 " name="circlesample" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' yellow ')" autocomplete="off">
+									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">Default(See all searches for the whole year)</div>
+								</div>
+
 							</div><br><br>
 							<!---End Light and Dark Mode-->
 							<div class="preferencesOptions_Class" style="margin-bottom:10px;">
