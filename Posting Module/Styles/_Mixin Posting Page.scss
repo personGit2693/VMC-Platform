@@ -10,7 +10,6 @@
 	--bg-color-4: #242526;
 	--bg-color-10: #303031;
 	--bg-color-11: #5D5E61;
-	--text-color-1: #FFFFFF;
 	--text-color-3: #CDD1D5;
 	--text-color-4: #ADB1B3;
 	--text-color-5: #E3E5E9;
@@ -28,7 +27,6 @@
 	--bg-color-4: #FFFFFF;
 	--bg-color-10: #E4E6E8;
 	--bg-color-11: #FFFFFF;
-	--text-color-1: #000000;
 	--text-color-3: #5F6266;
 	--text-color-4: #6E6F72;
 	--text-color-5: #000000;
@@ -363,7 +361,7 @@
 @mixin comment-reactions {
 	padding: 10px 4px;
 	display: flex;
-	gap: 15px;
+	gap: 14px;
 	color: var(--text-color-3);
 	border-bottom: 1px solid var(--border-color-4);
 	flex-wrap: wrap;
@@ -472,10 +470,6 @@
 	color: var(--text-color-4);
 }
 
-@mixin pinned-posts-wrapper {
-	
-}
-
 @mixin pinned-posts-wrapper-a {
 	color: inherit;
 }
@@ -497,9 +491,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0px 1px 2px 0px;
-	color: var(--text-color-4);
-	font-weight: bold;
+	padding: 1px 1px 0px 0px;
+}
+
+@mixin chat-toggle-button-img {
+	width: 25px;
+	height: 25px;
 }
 
 @mixin chat-container {
@@ -770,10 +767,6 @@
 @mixin post-reactions_OMQ {
 	flex-direction: column;
 	gap: 10px;
-}
-
-@mixin comment-count_OMQ {
-	margin: 0px;
 }
 
 @mixin chat-toggle-button_OMQ {

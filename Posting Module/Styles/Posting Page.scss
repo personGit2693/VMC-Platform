@@ -1,6 +1,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 @import "../../Global Style/Rostrap Global";
+@import "../../Rogrid/Styles/RoStrap_Mixin";
 @import "../../Global Style/Global Style";
 @import "./Mixin Posting Page";
 /*Import Mixins*/
@@ -82,14 +83,14 @@ video {
 
 .top-left-menu .home-logo:hover,
 .top-right-menu .toggle-mode:hover,
-.top-right-menu .topMenus:hover,
+.topMenus:hover,
 .user-profile img:hover {
 	@include global_hover-opacity;
 }
 
 .top-left-menu .home-logo:active,
 .top-right-menu .toggle-mode:active,
-.top-right-menu .topMenus:active,
+.topMenus:active,
 .user-profile img:active {
 	@include global_active-opacity;
 }
@@ -114,11 +115,11 @@ video {
 	@include global_toggle-mode;
 }
 
-.top-right-menu .topMenus {
+.topMenus {
 	@include global_topMenus;
 }
 
-.top-right-menu .gear-icon {
+.gear-icon {
 	@include global_gear-icon;
 }
 
@@ -226,6 +227,185 @@ video {
 	@include light-mode;
 }
 
+/*Modal*/
+.modalmeCon_RoClass {
+	border: none;
+}
+
+.modalmeCon_RoClass .modalme_RoClass {
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+}
+
+.modalme_RoClass .modalHeadClose_RoClass {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 8px;
+	left: 18px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	z-index: 1;
+	background-color: #161617;
+}
+
+.modalHeadClose_RoClass .close-mod-icon {
+	width: 35px;
+	height: 35px;
+}
+
+.modalme_RoClass .home-logo img {
+	width: 40px;
+	height: 40px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: #3A3B3C;
+	position: absolute;
+	top: 8px;
+	left: 66px;
+	z-index: 1;
+}
+
+.modalme_RoClass .modalBody_RoClass {
+	height: 100%;
+	padding: 0px;
+	display: flex;
+}
+
+.modalme_RoClass .posted-file-container {
+	flex: 1;
+	background-color: #000000;
+}
+
+.posted-file-container .posted-file {
+	object-fit: contain;
+}
+
+.modalme_RoClass .posted-info-container {
+	width: 360px;
+	overflow-y: scroll;
+	padding: 0px 3px 10px 0px;
+	background-color: var(--bg-color-4);
+	flex-shrink: 0;
+}
+
+.posted-info-container button {
+	@include posts-buttons;
+}
+
+.posted-info-container .modal-menu-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 8px;
+	padding-right: 18px;
+	height: 55px;
+	border-bottom: 1px solid var(--border-color-1);
+}
+
+.posted-info-container .user-profile-modal {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 7px 15px;
+	margin-top: 8px;
+	color: var(--text-color-1);
+}
+
+.posted-info-container .chosen-category {
+	font-size: 12px;
+	color: var(--text-color-1);
+	padding-left: 15px;
+}
+
+.posted-info-container .posted-title {
+	color: var(--text-color-1);
+	margin-top: 10px;
+	padding-left: 15px;
+}
+
+.posted-info-container .posted-content {
+	color: var(--text-color-1);
+	font-size: 14px;
+	padding-inline: 15px;
+}
+
+.posted-info-container .posted-reactions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 30px;
+	color: var(--text-color-3);
+}
+
+.posted-reactions .reactions-container {
+	display: flex;
+	gap: 15px;
+	padding-left: 10px;
+	flex-wrap: wrap;
+}
+
+.posted-reactions .reaction-icon-container {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+.posted-reactions .reaction-count {
+	font-size: 14px;
+}
+
+.posted-reactions .comment-count {
+	font-size: 15px;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.posted-reactions .comment-count:hover {
+	@include comment-count-hover;
+}
+
+.posted-info-container .posted-actions {
+	display: flex;
+	gap: 10px;
+	padding-inline: 15px;
+	margin-top: 5px;
+	border-top: 1px solid var(--border-color-4);
+}
+
+.posted-info-container .date-posted {
+	font-size: 12px;
+	padding: 5px 15px;
+	color: var(--text-color-4);
+}
+
+.posted-info-container .modal-comment-section {
+	color: var(--text-color-1);
+	font-size: 14px;
+	max-height: 450px;
+	overflow-y: scroll;
+}
+
+.modal-comment-section .comment {
+	padding-left: 7px;
+}
+
+.modal-comment-section .reaction-icon-container {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+.posted-info-container .comment-profile-container {
+	padding-inline: 7px;
+}
+/*Modal*/
+
 /*Mid Section Start*/
 #rolayout_RoId {
 	@include rolayout_RoId;
@@ -262,7 +442,10 @@ video {
 .create-post-form .create-post-button:hover,
 .posts button:hover,
 .chat-toggle-button:hover,
-.chat-input-container .chat-send-button:hover {
+.chat-input-container .chat-send-button:hover,
+.modalme_RoClass .home-logo img:hover,
+.posted-info-container button:hover,
+.modalHeadClose_RoClass:hover {
 	@include hover-opacity;
 }
 
@@ -275,7 +458,10 @@ video {
 .contacts .search-contact:active,
 .chat-input-container .chat-send-button:active,
 .chat-box-container .close-chat-button:active,
-.contact-picture-container:active {
+.contact-picture-container:active,
+.modalHeadClose_RoClass:active,
+.modalme_RoClass .home-logo img:active,
+.posted-info-container button:active {
 	@include active-opacity;
 }
 
@@ -298,13 +484,17 @@ video {
 
 #post-content::-webkit-scrollbar-thumb,
 .comment-section::-webkit-scrollbar-thumb,
-.chat-container::-webkit-scrollbar-thumb {
+.chat-container::-webkit-scrollbar-thumb,
+.posted-info-container::-webkit-scrollbar-thumb,
+.modal-comment-section::-webkit-scrollbar-thumb {
 	@include sb-thumb-visibility;
 }
 
 #post-content:hover::-webkit-scrollbar-thumb,
 .comment-section:hover::-webkit-scrollbar-thumb,
-.chat-container:hover::-webkit-scrollbar-thumb {
+.chat-container:hover::-webkit-scrollbar-thumb,
+.posted-info-container:hover::-webkit-scrollbar-thumb,
+.modal-comment-section:hover::-webkit-scrollbar-thumb {
 	@include hover-sb-thumb-visibility;
 }
 
@@ -372,7 +562,7 @@ video {
 	@include reactions-container;
 }
 
-.post-list .actions button {
+.actions button {
 	@include actions-button;
 }
 
@@ -501,10 +691,6 @@ video {
 	@include date;
 }
 
-.right-side-container .pinned-posts-wrapper {
-	@include pinned-posts-wrapper;
-}
-
 .pinned-posts-wrapper a {
 	@include pinned-posts-wrapper-a;
 }
@@ -514,6 +700,10 @@ video {
 /*Chat Section Start*/
 .chat-toggle-button {
 	@include chat-toggle-button;
+}
+
+.chat-toggle-button img {
+	@include chat-toggle-button-img;
 }
 
 .chat-container {
@@ -653,6 +843,25 @@ video {
 
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Queries Start*/
+@media (max-width:900px) {
+	.modalme_RoClass .modalBody_RoClass {
+		flex-direction: column;
+		padding-top: 55px;
+	}
+
+	.modalme_RoClass .posted-info-container {
+		width: auto;
+	}
+
+	.posted-info-container .modal-menu-container {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: var(--bg-color-2);
+		border-bottom: 1px solid var(--border-color-1);
+	}
+}
+
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
 		@include mainmechaCon_RoId_OMQ;
@@ -662,10 +871,6 @@ video {
 @media (max-width:641px), (min-width:1081px) and (max-width:1250px) {
 	.post-list .post-reactions {
 		@include post-reactions_OMQ
-	}
-
-	.post-reactions .comment-count {
-		@include comment-count_OMQ;
 	}
 }
 

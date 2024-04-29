@@ -3341,8 +3341,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --bg-color-7: #3A3B3C;
   --bg-color-8: #3A3B3C;
   --bg-color-9: #3A3B3C;
+  --text-color-1: #FFFFFF;
   --text-color-2: #000000;
-  --text-color-4: #BCBFC4;
+  --text-color-6: #BCBFC4;
   --border-color-1: #3D3E3F;
   --inputSearchFColor: #FFFFFF;
   --mainNavMenuFColor: #FFFFFF;
@@ -3366,8 +3367,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --bg-color-7: #C62417;
   --bg-color-8: #7AC4B2;
   --bg-color-9: #7ABCF4;
+  --text-color-1: #000000;
   --text-color-2: #FFFFFF;
-  --text-color-4: #000000;
+  --text-color-6: #000000;
   --border-color-1: #DCDEE1;
   --inputSearchFColor: #000000;
   --mainNavMenuFColor: #000000;
@@ -3456,10 +3458,11 @@ video {
 .top-left-menu #searchInput_RoId {
   background-color: var(--bg-color-3);
   border: none;
-  height: 40px; }
+  height: 40px;
+  font-size: 14px; }
 
 #searchInput_RoId::placeholder {
-  color: var(--text-color-4); }
+  color: var(--text-color-6); }
 
 .top-section .top-right-menu {
   display: flex;
@@ -3475,7 +3478,6 @@ video {
   cursor: pointer; }
 
 .top-right-menu .topMenus {
-  display: flex;
   width: 40px;
   height: 40px;
   padding: 7px;

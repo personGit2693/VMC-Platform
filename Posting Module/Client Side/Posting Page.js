@@ -87,6 +87,16 @@ function toggleCommentSection() {
 		commentSection.style.display = "none";
 	}
 }
+
+function toggleModalCommentSection() {
+	const modalCommentSection = document.getElementById("modal-comment-section");
+
+	if (modalCommentSection.style.display === "none") {
+		modalCommentSection.style.display = "block";
+	} else {
+		modalCommentSection.style.display = "none";
+	}
+}
 /*Show / Hide toggle for comment section*/
 
 /*For right side content controls / functions*/
@@ -360,7 +370,7 @@ function getSampleChatHistory(contactName) {
 				<div class="contact-picture-container">
 					<img class="contact-picture" src="../../src/cat-profile.png">
 				</div>
-				
+
 				<div class="contact-name">Richard Bautista</div>
 			</div>
 
