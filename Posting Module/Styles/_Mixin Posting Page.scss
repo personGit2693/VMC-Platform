@@ -38,6 +38,165 @@
 	--border-color-5: #E4E4E4;
 }
 
+/*Modal*/
+@mixin modalmeCon_RoClass {
+	border: none;
+}
+
+@mixin modalme_RoClass {
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+}
+
+@mixin modalHeadClose_RoClass {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 8px;
+	left: 18px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	z-index: 1;
+	background-color: #161617;
+}
+
+@mixin close-mod-icon {
+	width: 35px;
+	height: 35px;
+}
+
+@mixin home-logo-img {
+	width: 40px;
+	height: 40px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: #3A3B3C;
+	position: absolute;
+	top: 8px;
+	left: 66px;
+	z-index: 1;
+}
+
+@mixin modalBody_RoClass {
+	height: 100%;
+	padding: 0px;
+	display: flex;
+}
+
+@mixin posted-file-container {
+	flex: 1;
+	background-color: #000000;
+}
+
+@mixin posted-file {
+	object-fit: contain;
+}
+
+@mixin posted-info-container {
+	width: 365px;
+	overflow-y: scroll;
+	padding: 0px 3px 10px 0px;
+	background-color: var(--bg-color-4);
+	flex-shrink: 0;
+}
+
+@mixin modal-menu-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 8px;
+	padding-right: 18px;
+	height: 55px;
+	border-bottom: 1px solid var(--border-color-1);
+}
+
+@mixin user-profile-modal {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 7px 15px;
+	margin-top: 8px;
+	color: var(--text-color-1);
+}
+
+@mixin chosen-category-modal {
+	font-size: 12px;
+	color: var(--text-color-1);
+	padding-left: 15px;
+}
+
+@mixin posted-title {
+	color: var(--text-color-1);
+	margin-top: 10px;
+	padding-left: 15px;
+}
+
+@mixin posted-content {
+	color: var(--text-color-1);
+	font-size: 14px;
+	padding-inline: 15px;
+}
+
+@mixin posted-reactions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 30px;
+	color: var(--text-color-3);
+}
+
+@mixin reactions-container-modal {
+	display: flex;
+	gap: 15px;
+	padding-left: 10px;
+	flex-wrap: wrap;
+}
+
+@mixin reaction-count {
+	font-size: 14px;
+}
+
+@mixin comment-count-modal {
+	font-size: 15px;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+@mixin posted-actions {
+	display: flex;
+	gap: 10px;
+	padding-inline: 15px;
+	margin-top: 5px;
+	border-top: 1px solid var(--border-color-4);
+}
+
+@mixin date-posted-modal {
+	font-size: 12px;
+	padding: 5px 15px;
+	color: var(--text-color-4);
+}
+
+@mixin modal-comment-section {
+	color: var(--text-color-1);
+	font-size: 14px;
+	max-height: 450px;
+	overflow-y: scroll;
+}
+
+@mixin comment-modal {
+	padding-left: 7px;
+}
+
+@mixin comment-profile-container {
+	padding-inline: 7px;
+}
+/*Modal*/
+
 /*Mid Section Start*/
 @mixin rolayout_RoId {
 	display: flex;
@@ -160,6 +319,10 @@
 	border-radius: 10px;
 	margin: 8px;
 	width: calc(100% - 16px);
+	max-height: 550px;
+	min-height: 250px;
+	object-fit: contain;
+	background-color: #000000;
 }
 
 @mixin remove-file-button {
@@ -434,7 +597,7 @@
 }
 
 @mixin side-content-wrapper {
-	height: 316px;
+	height: 315px;
 	border-radius: 10px;
 	padding-inline: 20px;
 	border: 1px solid var(--border-color-2);
@@ -503,10 +666,10 @@
 
 @mixin chat-container {
 	position: fixed;
-	bottom: 23px;
+	bottom: 25px;
 	right: 0px;
 	width: 350px;
-	height: calc(100% - 78px);
+	height: calc(100% - 80px);
 	background-color: var(--bg-color-1);
 	padding: 0px 10px 10px 10px;
 	overflow: auto;
@@ -552,10 +715,43 @@
 	background-color: var(--bg-color-10);
 }
 
+@mixin profile-img-container {
+	position: relative;
+	width: 40px;
+	height: 40px;
+}
+
 @mixin profile-img {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+}
+
+@mixin indicator-container {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--bg-color-1);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin online-indicator {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #2E9A48;
+}
+
+@mixin offline-indicator {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #C70100;
 }
 
 @mixin profile-name {
@@ -570,7 +766,7 @@
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 	position: absolute;
-	bottom: 23px;
+	bottom: 25px;
 	right: 80px;
 	background-color: var(--bg-color-2);
 	border: 1px solid var(--border-color-2);
@@ -582,7 +778,7 @@
 @mixin contact-profile-container {
 	display: flex;
 	align-items: center;
-	gap: 7px;
+	gap: 2px;
 	padding: 2px;
 	border-bottom: 1px solid var(--border-color-1);
 }
@@ -594,6 +790,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
 
 @mixin contact-picture {
@@ -603,9 +800,37 @@
 	cursor: pointer;
 }
 
+@mixin indicator-container-small {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: var(--bg-color-2);
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin online-indicator-small {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #2E9A48;
+}
+
+@mixin offline-indicator-small {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #C70100;
+}
+
 @mixin contact-name {
-	font-size: 15px;
+	font-size: 14px;
 	color: var(--text-color-1);
+	max-width: 185px;
 }
 
 @mixin chat-box {
@@ -620,6 +845,37 @@
 	align-items: center;
 	gap: 8px;
 	padding-block: 34px;
+}
+
+@mixin contact-pic-container-big {
+	position: relative;
+}
+
+@mixin indicator-container-big {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: var(--bg-color-2);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin online-indicator-big {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #2E9A48;
+}
+
+@mixin offline-indicator-big {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #C70100;
 }
 
 @mixin contact-picture-big {
@@ -735,6 +991,18 @@
 	cursor: pointer;
 }
 
+@mixin buzz-chat-button {
+	position: absolute;
+	right: 42px;
+	top: 10px;
+	border-radius: 10px;
+	border: none;
+	background-color: transparent;
+	width: 40px;
+	height: 30px;
+	cursor: pointer;
+}
+
 @mixin close-chat-button {
 	position: absolute;
 	right: 10px;
@@ -762,6 +1030,37 @@
 /*************************************************************************************/
 /*************************************************************************************/
 /*Other Media Queries*/
+@mixin modalHeadClose_RoClass_OMQ {
+	background-color: var(--bg-color-12);
+}
+
+@mixin home-logo-img_OMQ {
+	background-color: var(--bg-color-7);
+}
+
+@mixin modalBody_RoClass_OMQ {
+	flex-direction: column;
+	padding-top: 55px;
+}
+
+@mixin posted-file-container_OMQ {
+	max-height: 55%;
+	flex: 2;
+}
+
+@mixin posted-info-container_OMQ {
+	width: auto;
+	flex: 1;
+}
+
+@mixin modal-menu-container_OMQ {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: var(--bg-color-2);
+	border-bottom: 1px solid var(--border-color-1);
+}
+
 @mixin mainmechaCon_RoId_OMQ {
 	max-width: 450px;
 }
@@ -781,7 +1080,9 @@
 
 @mixin chat-box-container_OMQ {
 	width: 300px;
-	right: 10px;
+	left: 0;
+	right: 0;
+	margin-inline: auto;
 }
 /*Other Media Queries*/
 /*************************************************************************************/
@@ -799,6 +1100,19 @@
 
 @mixin mainmechaCon_RoId_MobTab {
 	max-width: 100%;
+}
+
+@mixin chat-toggle-button_MobTab {
+	bottom: 63px;
+}
+
+@mixin chat-container_MobTab {
+	bottom: 50px;
+	height: calc(100% - 105px);
+}
+
+@mixin chat-box-container_MobTab {
+	bottom: 50px;
 }
 /*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
 /*************************************************************************************/

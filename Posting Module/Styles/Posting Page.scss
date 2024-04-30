@@ -190,6 +190,18 @@ video {
 /*Bottom Section / Footer End*/
 /*General End*/
 
+/*Mobile and Tablet Start*/
+@media (min-width:0px) and (max-width:1080px) {
+	#rolayout_RoId {
+		@include global_rolayout_RoId_MobTab;
+	}
+
+	#footerWrap_RoId {
+		@include global_footerWrap_RoId_MobTab;	
+	}
+}
+/*Mobile and Tablet End*/
+
 /*Mobile Start*/
 @media all and (max-width:641px) {
 	.top-section .searchInput_RoClass {
@@ -229,68 +241,39 @@ video {
 
 /*Modal*/
 .modalmeCon_RoClass {
-	border: none;
+	@include modalmeCon_RoClass;
 }
 
 .modalmeCon_RoClass .modalme_RoClass {
-	width: 100%;
-	height: 100%;
-	border-radius: 0px;
+	@include modalme_RoClass;
 }
 
 .modalme_RoClass .modalHeadClose_RoClass {
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	top: 8px;
-	left: 18px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	z-index: 1;
-	background-color: #161617;
+	@include modalHeadClose_RoClass;
 }
 
 .modalHeadClose_RoClass .close-mod-icon {
-	width: 35px;
-	height: 35px;
+	@include close-mod-icon;
 }
 
 .modalme_RoClass .home-logo img {
-	width: 40px;
-	height: 40px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: #3A3B3C;
-	position: absolute;
-	top: 8px;
-	left: 66px;
-	z-index: 1;
+	@include home-logo-img;
 }
 
 .modalme_RoClass .modalBody_RoClass {
-	height: 100%;
-	padding: 0px;
-	display: flex;
+	@include modalBody_RoClass;
 }
 
 .modalme_RoClass .posted-file-container {
-	flex: 1;
-	background-color: #000000;
+	@include posted-file-container;
 }
 
 .posted-file-container .posted-file {
-	object-fit: contain;
+	@include posted-file;
 }
 
 .modalme_RoClass .posted-info-container {
-	width: 360px;
-	overflow-y: scroll;
-	padding: 0px 3px 10px 0px;
-	background-color: var(--bg-color-4);
-	flex-shrink: 0;
+	@include posted-info-container;
 }
 
 .posted-info-container button {
@@ -298,72 +281,44 @@ video {
 }
 
 .posted-info-container .modal-menu-container {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 8px;
-	padding-right: 18px;
-	height: 55px;
-	border-bottom: 1px solid var(--border-color-1);
+	@include modal-menu-container;
 }
 
 .posted-info-container .user-profile-modal {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	padding: 7px 15px;
-	margin-top: 8px;
-	color: var(--text-color-1);
+	@include user-profile-modal;
 }
 
 .posted-info-container .chosen-category {
-	font-size: 12px;
-	color: var(--text-color-1);
-	padding-left: 15px;
+	@include chosen-category-modal;
 }
 
 .posted-info-container .posted-title {
-	color: var(--text-color-1);
-	margin-top: 10px;
-	padding-left: 15px;
+	@include posted-title;
 }
 
 .posted-info-container .posted-content {
-	color: var(--text-color-1);
-	font-size: 14px;
-	padding-inline: 15px;
+	@include posted-content;
 }
 
 .posted-info-container .posted-reactions {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	margin-top: 30px;
-	color: var(--text-color-3);
+	@include posted-reactions;
 }
 
 .posted-reactions .reactions-container {
-	display: flex;
-	gap: 15px;
-	padding-left: 10px;
-	flex-wrap: wrap;
+	@include reactions-container-modal;
 }
 
-.posted-reactions .reaction-icon-container {
-	display: flex;
-	align-items: center;
-	gap: 3px;
+.posted-reactions .reaction-icon-container,
+.modal-comment-section .reaction-icon-container {
+	@include reaction-icon-container;
 }
 
 .posted-reactions .reaction-count {
-	font-size: 14px;
+	@include reaction-count;
 }
 
 .posted-reactions .comment-count {
-	font-size: 15px;
-	cursor: pointer;
-	margin-left: auto;
-	margin-right: 10px;
+	@include comment-count-modal;
 }
 
 .posted-reactions .comment-count:hover {
@@ -371,38 +326,23 @@ video {
 }
 
 .posted-info-container .posted-actions {
-	display: flex;
-	gap: 10px;
-	padding-inline: 15px;
-	margin-top: 5px;
-	border-top: 1px solid var(--border-color-4);
+	@include posted-actions;
 }
 
 .posted-info-container .date-posted {
-	font-size: 12px;
-	padding: 5px 15px;
-	color: var(--text-color-4);
+	@include date-posted-modal;
 }
 
 .posted-info-container .modal-comment-section {
-	color: var(--text-color-1);
-	font-size: 14px;
-	max-height: 450px;
-	overflow-y: scroll;
+	@include modal-comment-section;
 }
 
 .modal-comment-section .comment {
-	padding-left: 7px;
-}
-
-.modal-comment-section .reaction-icon-container {
-	display: flex;
-	align-items: center;
-	gap: 3px;
+	@include comment-modal;
 }
 
 .posted-info-container .comment-profile-container {
-	padding-inline: 7px;
+	@include comment-profile-container;
 }
 /*Modal*/
 
@@ -457,6 +397,7 @@ video {
 .chat-toggle-button:active,
 .contacts .search-contact:active,
 .chat-input-container .chat-send-button:active,
+.chat-box-container .buzz-chat-button:active,
 .chat-box-container .close-chat-button:active,
 .contact-picture-container:active,
 .modalHeadClose_RoClass:active,
@@ -730,8 +671,24 @@ video {
 	@include contact-container-hover;
 }
 
-.contact-container .profile-img {
+.contact-container .profile-img-container {
+	@include profile-img-container;
+}
+
+.profile-img-container .profile-img {
 	@include profile-img;
+}
+
+.profile-img-container .indicator-container {
+	@include indicator-container;
+}
+
+.indicator-container .online-indicator {
+	@include online-indicator;
+}
+
+.indicator-container .offline-indicator {
+	@include offline-indicator;
 }
 
 .contact-container .profile-name {
@@ -750,12 +707,20 @@ video {
 	@include contact-picture-container;
 }
 
-.contact-picture-container:hover {
-	@include close-chat-button-hover;
-}
-
 .contact-picture-container .contact-picture {
 	@include contact-picture;
+}
+
+.contact-picture-container .indicator-container-small {
+	@include indicator-container-small;
+}
+
+.indicator-container-small .online-indicator-small {
+	@include online-indicator-small;
+}
+
+.indicator-container-small .offline-indicator-small {
+	@include offline-indicator-small;
 }
 
 .contact-profile-container .contact-name {
@@ -770,8 +735,24 @@ video {
 	@include contact-profile-container-big;
 }
 
-.contact-profile-container-big .contact-picture-big {
+.contact-profile-container-big .contact-pic-container-big {
+	@include contact-pic-container-big;
+}
+
+.contact-pic-container-big .contact-picture-big {
 	@include contact-picture-big;
+}
+
+.contact-pic-container-big .indicator-container-big {
+	@include indicator-container-big;
+}
+
+.indicator-container-big .online-indicator-big {
+	@include online-indicator-big;
+}
+
+.indicator-container-big .offline-indicator-big {
+	@include offline-indicator-big;
 }
 
 .contact-profile-container-big .contact-name-big {
@@ -830,11 +811,17 @@ video {
 	@include chat-send-button;
 }
 
+.chat-box-container .buzz-chat-button {
+	@include buzz-chat-button;
+}
+
 .chat-box-container .close-chat-button {
 	@include close-chat-button;
 }
 
-.chat-box-container .close-chat-button:hover {
+.chat-box-container .close-chat-button:hover,
+.contact-picture-container:hover,
+.chat-box-container .buzz-chat-button:hover {
 	@include close-chat-button-hover;
 }
 /*Chat Section End*/
@@ -845,34 +832,27 @@ video {
 /*Other Media Queries Start*/
 @media (max-width:900px) {
 	.modalme_RoClass .modalHeadClose_RoClass {
-		background-color: var(--bg-color-12);
+		@include modalHeadClose_RoClass_OMQ;
 	}
 
 	.modalme_RoClass .home-logo img {
-		background-color: var(--bg-color-7);
+		@include home-logo-img_OMQ;
 	}
 
 	.modalme_RoClass .modalBody_RoClass {
-		flex-direction: column;
-		padding-top: 55px;
+		@include modalBody_RoClass_OMQ;
 	}
 
 	.modalme_RoClass .posted-file-container {
-		max-height: 55%;
-		flex: 2;
+		@include posted-file-container_OMQ;
 	}
 
 	.modalme_RoClass .posted-info-container {
-		width: auto;
-		flex: 1;
+		@include posted-info-container_OMQ;
 	}
 
 	.posted-info-container .modal-menu-container {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		background-color: var(--bg-color-2);
-		border-bottom: 1px solid var(--border-color-1);
+		@include modal-menu-container_OMQ;
 	}
 }
 
@@ -917,6 +897,18 @@ video {
 
 	.mainmecha_RoClass #mainmechaCon_RoId {
 		@include mainmechaCon_RoId_MobTab;
+	}
+
+	.chat-toggle-button {
+		@include chat-toggle-button_MobTab;
+	}
+
+	.chat-container {
+		@include chat-container_MobTab;
+	}
+
+	.chat-box-container {
+		@include chat-box-container_MobTab;
 	}
 }
 /*Mobile and Tablet End*/

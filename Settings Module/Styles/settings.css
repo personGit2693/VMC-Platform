@@ -3246,6 +3246,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Burger*/
 /*Footer*/
 /*Footer*/
+/*Mid Section Height Mobtab*/
+/*Mid Section Height Mobtab*/
+/*Footer MobTab*/
+/*Footer MobTab*/
 /*Mobile Top Section*/
 /*Mobile Top Section*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3266,7 +3270,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --inputSearchBorderRadius: 30px;
   --inputSearchIconHori: 12px;
   --inputSearchIconSize: 16px;
-  --inputSearchFSize: 15px;
   /*Search Box*/
   /*Side Apps Main Menu*/
   --generalNavMenuPadding: 10px;
@@ -3301,8 +3304,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --subNavMenuFColor: #FFFFFF;
   --hoverSubNavMenuBgColor: #303031;
   --hoverSubNavMenuFColor: #FFFFFF;
-  --footerFColor: #FFFFFF;
   --footerBgColor: #242526;
+  --footerFColor: #FFFFFF;
   /*Dark Mode (Default Style)*/ }
 
 /*Root End*/
@@ -3364,7 +3367,8 @@ img,
 video {
   width: 100%;
   height: 100%;
-  display: block; }
+  display: block;
+  object-fit: contain; }
 
 /*Top Section Start*/
 .top-section {
@@ -3450,14 +3454,15 @@ video {
 /*Top Section End*/
 /*Mid Section Start*/
 #rolayout_RoId {
-  height: calc(100% - 78px); }
+  height: calc(100% - 80px); }
 
 /*Left Content Start*/
 .rolayout_RoClass #sidemecha_RoId {
   padding-block: 8px;
   direction: ltr;
   background-color: var(--bg-color-1);
-  z-index: 1; }
+  z-index: 1;
+  overflow-y: scroll; }
 
 #sidemecha_RoId::-webkit-scrollbar-thumb {
   visibility: hidden; }
@@ -3502,10 +3507,14 @@ video {
 /*Bottom Section / Footer Start*/
 #footerWrap_RoId {
   padding: 1px;
-  border-top: 1px solid var(--border-color-1); }
+  border-top: 1px solid var(--border-color-1);
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .footerWrap_RoClass #footerTxt_RoId {
-  --footerFSize: 14px;
+  --footerFSize: 13px;
   font-weight: bold; }
 
 /*Bottom Section / Footer End*/
@@ -3514,7 +3523,6 @@ video {
 @media all and (max-width: 641px) {
   .top-section .searchInput_RoClass {
     --inputSearchWidth: 40px;
-    --inputSearchFSize: 12px;
     border-radius: 50%; }
 
   #searchInput_RoId::placeholder {

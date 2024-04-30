@@ -10,7 +10,6 @@
 	--inputSearchBorderRadius: 30px;
 	--inputSearchIconHori: 12px;
 	--inputSearchIconSize: 16px;
-	--inputSearchFSize: 15px;
 }
 /*Search Box*/
 
@@ -60,8 +59,8 @@
 	--hoverSubNavMenuBgColor: #303031;
 	--hoverSubNavMenuFColor: #FFFFFF;
 
-	--footerFColor: #FFFFFF;
 	--footerBgColor: #242526;
+	--footerFColor: #FFFFFF;
 }
 /*Dark Mode (Default Style)*/
 
@@ -143,6 +142,7 @@
 	width: 100%;
 	height: 100%;
 	display: block;
+	object-fit: contain;
 }
 /*Input and Textarea Style*/
 
@@ -238,7 +238,7 @@
 
 /*Mid Section Height*/
 @mixin global_rolayout_RoId {
-	height: calc(100% - 78px);
+	height: calc(100% - 80px);
 }
 /*Mid Section Height*/
 
@@ -248,6 +248,7 @@
 	direction: ltr;
 	background-color: var(--bg-color-1);
 	z-index: 1;
+	overflow-y: scroll;
 }
 
 @mixin global_sb-thumb-visibility {
@@ -300,18 +301,33 @@
 @mixin global_footerWrap_RoId {
 	padding: 1px;
 	border-top: 1px solid var(--border-color-1);
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @mixin global_footerTxt_RoId {
-	--footerFSize: 14px;
+	--footerFSize: 13px;
 	font-weight: bold;
 }
 /*Footer*/
 
+/*Mid Section Height Mobtab*/
+@mixin global_rolayout_RoId_MobTab {
+	height: calc(100% - 105px);
+}
+/*Mid Section Height Mobtab*/
+
+/*Footer MobTab*/
+@mixin global_footerWrap_RoId_MobTab {
+	height: 50px;
+}
+/*Footer MobTab*/
+
 /*Mobile Top Section*/
 @mixin global_searchInput_RoClass_Mobile {
 	--inputSearchWidth: 40px;
-	--inputSearchFSize: 12px;
 	border-radius: 50%;
 }
 

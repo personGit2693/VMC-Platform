@@ -177,6 +177,10 @@ function getSampleChatHistory(contactName) {
 			<div class="contact-profile-container">
 				<div class="contact-picture-container">
 					<img class="contact-picture" src="../../src/cat-profile.png">
+
+					<div class="indicator-container-small">
+						<div class="online-indicator-small"></div>
+					</div>
 				</div>
 
 				<div class="contact-name">Angelo Arellano</div>
@@ -184,7 +188,14 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-box">
 				<div class="contact-profile-container-big">
-					<img class="contact-picture-big" src="../../src/cat-profile.png">
+					<div class="contact-pic-container-big">
+						<img class="contact-picture-big" src="../../src/cat-profile.png">
+
+						<div class="indicator-container-big">
+							<div class="online-indicator-big"></div>
+						</div>
+					</div>	
+
 					<div class="contact-name-big">Angelo Arellano</div>
 				</div>
 
@@ -266,6 +277,7 @@ function getSampleChatHistory(contactName) {
 				<button class="chat-send-button">Send</button>
 			</div>
 
+			<button class="buzz-chat-button"><img src="../../src/buzz-icon.png"></button>
 			<button class="close-chat-button" onclick="closeChatBox()">X</button>
 		`;
 	} else if (contactName === 'Jane Luna') {
@@ -273,6 +285,10 @@ function getSampleChatHistory(contactName) {
 			<div class="contact-profile-container">
 				<div class="contact-picture-container">
 					<img class="contact-picture" src="../../src/cat-profile.png">
+
+					<div class="indicator-container-small">
+						<div class="online-indicator-small"></div>
+					</div>
 				</div>
 
 				<div class="contact-name">Jane Luna</div>
@@ -280,7 +296,14 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-box">
 				<div class="contact-profile-container-big">
-					<img class="contact-picture-big" src="../../src/cat-profile.png">
+					<div class="contact-pic-container-big">
+						<img class="contact-picture-big" src="../../src/cat-profile.png">
+
+						<div class="indicator-container-big">
+							<div class="online-indicator-big"></div>
+						</div>
+					</div>
+
 					<div class="contact-name-big">Jane Luna</div>
 				</div>
 
@@ -362,6 +385,7 @@ function getSampleChatHistory(contactName) {
 				<button class="chat-send-button">Send</button>
 			</div>
 
+			<button class="buzz-chat-button"><img src="../../src/buzz-icon.png"></button>
 			<button class="close-chat-button" onclick="closeChatBox()">X</button>
 		`;
 	} else if (contactName === 'Richard Bautista') {
@@ -369,6 +393,10 @@ function getSampleChatHistory(contactName) {
 			<div class="contact-profile-container">
 				<div class="contact-picture-container">
 					<img class="contact-picture" src="../../src/cat-profile.png">
+
+					<div class="indicator-container-small">
+						<div class="offline-indicator-small"></div>
+					</div>
 				</div>
 
 				<div class="contact-name">Richard Bautista</div>
@@ -376,7 +404,14 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-box">
 				<div class="contact-profile-container-big">
-					<img class="contact-picture-big" src="../../src/cat-profile.png">
+					<div class="contact-pic-container-big">
+						<img class="contact-picture-big" src="../../src/cat-profile.png">
+
+						<div class="indicator-container-big">
+							<div class="offline-indicator-big"></div>
+						</div>
+					</div>
+
 					<div class="contact-name-big">Richard Bautista</div>
 				</div>
 
@@ -458,6 +493,7 @@ function getSampleChatHistory(contactName) {
 				<button class="chat-send-button">Send</button>
 			</div>
 
+			<button class="buzz-chat-button"><img src="../../src/buzz-icon.png"></button>
 			<button class="close-chat-button" onclick="closeChatBox()">X</button>
 		`;
 	}
