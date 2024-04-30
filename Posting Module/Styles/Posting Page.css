@@ -7497,7 +7497,7 @@ video {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #C70100; }
+  background-color: #808080; }
 
 .contact-container .profile-name {
   color: var(--text-color-5);
@@ -7532,13 +7532,13 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .contact-picture-container .contact-picture {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 50%; }
 
 .contact-picture-container .indicator-container-small {
   width: 14px;
@@ -7562,7 +7562,7 @@ video {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #C70100; }
+  background-color: #808080; }
 
 .contact-profile-container .contact-name {
   font-size: 14px;
@@ -7611,7 +7611,7 @@ video {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #C70100; }
+  background-color: #808080; }
 
 .contact-profile-container-big .contact-name-big {
   font-size: 17px;

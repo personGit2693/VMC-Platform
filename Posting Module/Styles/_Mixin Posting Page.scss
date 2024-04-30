@@ -751,7 +751,7 @@
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background-color: #C70100;
+	background-color: #808080;
 }
 
 @mixin profile-name {
@@ -791,13 +791,13 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	cursor: pointer;
 }
 
 @mixin contact-picture {
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	cursor: pointer;
 }
 
 @mixin indicator-container-small {
@@ -824,7 +824,7 @@
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background-color: #C70100;
+	background-color: #808080;
 }
 
 @mixin contact-name {
@@ -875,7 +875,7 @@
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
-	background-color: #C70100;
+	background-color: #808080;
 }
 
 @mixin contact-picture-big {
