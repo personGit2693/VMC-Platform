@@ -411,7 +411,7 @@ video {
 	@include create-post-form-post-title;
 }
 
-.create-post-form #post-title {
+.create-post-form #post-title-id {
 	@include post-title-id;
 }
 
@@ -419,11 +419,11 @@ video {
 	@include textarea-container;
 }
 
-.textarea-container #post-content {
+.textarea-container #post-content-id {
 	@include post-content-id;
 }
 
-#post-content::-webkit-scrollbar-thumb,
+#post-content-id::-webkit-scrollbar-thumb,
 .comment-section::-webkit-scrollbar-thumb,
 .chat-container::-webkit-scrollbar-thumb,
 .posted-info-container::-webkit-scrollbar-thumb,
@@ -431,7 +431,7 @@ video {
 	@include sb-thumb-visibility;
 }
 
-#post-content:hover::-webkit-scrollbar-thumb,
+#post-content-id:hover::-webkit-scrollbar-thumb,
 .comment-section:hover::-webkit-scrollbar-thumb,
 .chat-container:hover::-webkit-scrollbar-thumb,
 .posted-info-container:hover::-webkit-scrollbar-thumb,
@@ -655,11 +655,11 @@ video {
 	@include contacts;
 }
 
-.contacts #search-contact {
+.contacts #search-contact-id {
 	@include search-contact-id;
 }
 
-.contacts #search-contact:hover {
+.contacts #search-contact-id:hover {
 	@include search-contact-id-hover;
 }
 

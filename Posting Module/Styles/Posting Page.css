@@ -7064,7 +7064,7 @@ video {
   margin: 10px 0px 3px 0px;
   font-size: 16px; }
 
-.create-post-form #post-title {
+.create-post-form #post-title-id {
   width: 100%;
   padding: 7px;
   border-radius: 10px;
@@ -7076,7 +7076,7 @@ video {
   border-radius: 10px;
   background-color: var(--bg-color-3); }
 
-.textarea-container #post-content {
+.textarea-container #post-content-id {
   width: 100%;
   min-height: 50px;
   max-height: 300px;
@@ -7084,14 +7084,14 @@ video {
   background-color: transparent;
   display: block; }
 
-#post-content::-webkit-scrollbar-thumb,
+#post-content-id::-webkit-scrollbar-thumb,
 .comment-section::-webkit-scrollbar-thumb,
 .chat-container::-webkit-scrollbar-thumb,
 .posted-info-container::-webkit-scrollbar-thumb,
 .modal-comment-section::-webkit-scrollbar-thumb {
   visibility: hidden; }
 
-#post-content:hover::-webkit-scrollbar-thumb,
+#post-content-id:hover::-webkit-scrollbar-thumb,
 .comment-section:hover::-webkit-scrollbar-thumb,
 .chat-container:hover::-webkit-scrollbar-thumb,
 .posted-info-container:hover::-webkit-scrollbar-thumb,
@@ -7439,7 +7439,7 @@ video {
   align-items: center;
   justify-content: space-between; }
 
-.contacts #search-contact {
+.contacts #search-contact-id {
   --inputSearchIconHori: 10px;
   --inputSearchIconSize: 14px;
   --inputSearchFSize: 12px;
@@ -7450,7 +7450,7 @@ video {
   cursor: pointer;
   border: 1px solid transparent; }
 
-.contacts #search-contact:hover {
+.contacts #search-contact-id:hover {
   background-color: var(--bg-color-10);
   border: 1px solid var(--border-color-2); }
 

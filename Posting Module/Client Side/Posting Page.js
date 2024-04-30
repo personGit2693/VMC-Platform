@@ -1,5 +1,5 @@
 /*For Dark / Light Mode toggle*/
-const toggleModeButton = document.getElementById('toggle-mode');
+const toggleModeButton = document.getElementById('toggle-mode-id');
 const body = document.body;
 
 function setMode(isLightMode) {
@@ -27,12 +27,12 @@ function autoResizeTextarea(textarea) {
 /*For textarea auto resize*/
 
 /*For handling file selection*/
-document.getElementById('file-upload').addEventListener('change', function(event) {
+document.getElementById('file-upload-id').addEventListener('change', function(event) {
 	const file = event.target.files[0];
 	const fileReader = new FileReader();
 
 	fileReader.onload = function(event) {
-		const filePreviewContainer = document.getElementById('file-preview-container');
+		const filePreviewContainer = document.getElementById('file-preview-container-id');
 		filePreviewContainer.innerHTML = '';
 
 		const fileType = file.type.split('/')[0];
@@ -68,8 +68,8 @@ document.getElementById('file-upload').addEventListener('change', function(event
 });
 
 function removeFilePreview() {
-	const fileInput = document.getElementById('file-upload');
-	const filePreviewContainer = document.getElementById('file-preview-container');
+	const fileInput = document.getElementById('file-upload-id');
+	const filePreviewContainer = document.getElementById('file-preview-container-id');
 
 	fileInput.value = '';
 
@@ -79,7 +79,7 @@ function removeFilePreview() {
 
 /*Show / Hide toggle for comment section*/
 function toggleCommentSection() {
-	const commentSection = document.getElementById("comment-section");
+	const commentSection = document.getElementById("comment-section-id");
 
 	if (commentSection.style.display === "none") {
 		commentSection.style.display = "block";
@@ -89,7 +89,7 @@ function toggleCommentSection() {
 }
 
 function toggleModalCommentSection() {
-	const modalCommentSection = document.getElementById("modal-comment-section");
+	const modalCommentSection = document.getElementById("modal-comment-section-id");
 
 	if (modalCommentSection.style.display === "none") {
 		modalCommentSection.style.display = "block";
