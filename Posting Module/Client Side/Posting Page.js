@@ -162,6 +162,13 @@ function toggleChatBox(contactName) {
 
 	var chatHistory = getSampleChatHistory(contactName);
 	chatBox.innerHTML = chatHistory;
+
+	scrollChatBoxToBottom();
+}
+
+function scrollChatBoxToBottom() {
+	var chatBox = document.querySelector('.chat-box');
+	chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function closeChatBox() {
