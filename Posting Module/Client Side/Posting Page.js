@@ -174,13 +174,10 @@ function getSampleChatHistory(contactName) {
 
 	if (contactName === 'Angelo Arellano') {
 		return `
-			<div class="contact-profile-container">
-				<div class="contact-picture-container">
-					<img class="contact-picture" src="../../src/cat-profile.png">
-
-					<div class="indicator-container-small">
-						<div class="online-indicator-small"></div>
-					</div>
+			<div class="contact-profile-container-small">
+				<div class="contact-pic-container-small">
+					<img class="contact-picture-small" src="../../src/cat-profile.png">
+					<div class="online-indicator-medium"></div>
 				</div>
 
 				<div class="contact-name">Angelo Arellano</div>
@@ -190,10 +187,7 @@ function getSampleChatHistory(contactName) {
 				<div class="contact-profile-container-big">
 					<div class="contact-pic-container-big">
 						<img class="contact-picture-big" src="../../src/cat-profile.png">
-
-						<div class="indicator-container-big">
-							<div class="online-indicator-big"></div>
-						</div>
+						<div class="online-indicator-big"></div>
 					</div>	
 
 					<div class="contact-name-big">Angelo Arellano</div>
@@ -282,13 +276,10 @@ function getSampleChatHistory(contactName) {
 		`;
 	} else if (contactName === 'Jane Luna') {
 		return `
-			<div class="contact-profile-container">
-				<div class="contact-picture-container">
-					<img class="contact-picture" src="../../src/cat-profile.png">
-
-					<div class="indicator-container-small">
-						<div class="online-indicator-small"></div>
-					</div>
+			<div class="contact-profile-container-small">
+				<div class="contact-pic-container-small">
+					<img class="contact-picture-small" src="../../src/cat-profile.png">
+					<div class="online-indicator-medium"></div>
 				</div>
 
 				<div class="contact-name">Jane Luna</div>
@@ -298,10 +289,7 @@ function getSampleChatHistory(contactName) {
 				<div class="contact-profile-container-big">
 					<div class="contact-pic-container-big">
 						<img class="contact-picture-big" src="../../src/cat-profile.png">
-
-						<div class="indicator-container-big">
-							<div class="online-indicator-big"></div>
-						</div>
+						<div class="online-indicator-big"></div>
 					</div>
 
 					<div class="contact-name-big">Jane Luna</div>
@@ -390,13 +378,10 @@ function getSampleChatHistory(contactName) {
 		`;
 	} else if (contactName === 'Richard Bautista') {
 		return `
-			<div class="contact-profile-container">
-				<div class="contact-picture-container">
-					<img class="contact-picture" src="../../src/cat-profile.png">
-
-					<div class="indicator-container-small">
-						<div class="offline-indicator-small"></div>
-					</div>
+			<div class="contact-profile-container-small">
+				<div class="contact-pic-container-small">
+					<img class="contact-picture-small" src="../../src/cat-profile.png">
+					<div class="offline-indicator-medium"></div>
 				</div>
 
 				<div class="contact-name">Richard Bautista</div>
@@ -406,10 +391,7 @@ function getSampleChatHistory(contactName) {
 				<div class="contact-profile-container-big">
 					<div class="contact-pic-container-big">
 						<img class="contact-picture-big" src="../../src/cat-profile.png">
-
-						<div class="indicator-container-big">
-							<div class="offline-indicator-big"></div>
-						</div>
+						<div class="offline-indicator-big"></div>
 					</div>
 
 					<div class="contact-name-big">Richard Bautista</div>

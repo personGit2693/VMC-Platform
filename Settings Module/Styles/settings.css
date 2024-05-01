@@ -3393,13 +3393,13 @@ video {
   background-color: var(--bg-color-7); }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode:hover,
+.top-right-menu .toggle-mode-class:hover,
 .top-right-menu .topMenus:hover,
 .user-profile img:hover {
   opacity: .7; }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode:active,
+.top-right-menu .toggle-mode-class:active,
 .top-right-menu .topMenus:active,
 .user-profile img:active {
   opacity: .5; }
@@ -3421,7 +3421,7 @@ video {
   display: flex;
   gap: 5px; }
 
-.top-right-menu .toggle-mode {
+.top-right-menu .toggle-mode-class {
   width: 100px;
   font-weight: bold;
   border: none;
@@ -3528,7 +3528,7 @@ video {
   #searchInput_RoId::placeholder {
     color: transparent; }
 
-  .top-right-menu .toggle-mode {
+  .top-right-menu .toggle-mode-class {
     width: 50px;
     font-size: 12px; } }
 /*Mobile End*/

@@ -15,9 +15,10 @@
 	--text-color-4: #ADB1B3;
 	--text-color-5: #E3E5E9;
 	--border-color-2: #121413;
-	--border-color-3: #3E3F40; // unused
+	--border-color-3: #18191A;
 	--border-color-4: #444749;
 	--border-color-5: #353637;
+	--border-color-6: #242526;
 }
 /*Dark Mode (Default Style)*/
 
@@ -33,9 +34,10 @@
 	--text-color-4: #6E6F72;
 	--text-color-5: #000000;
 	--border-color-2: #E2E4E7;
-	--border-color-3: #F0F2F5; // unused
+	--border-color-3: #F0F2F5;
 	--border-color-4: #CED0D4;
 	--border-color-5: #E4E4E4;
+	--border-color-6: #FFFFFF;
 }
 
 /*Modal*/
@@ -181,7 +183,7 @@
 	color: var(--text-color-4);
 }
 
-@mixin modal-comment-section {
+@mixin modal-comment-section-class {
 	color: var(--text-color-1);
 	font-size: 14px;
 	max-height: 450px;
@@ -241,7 +243,7 @@
 	display: inline-block;
 }
 
-@mixin post-category {
+@mixin post-category-class {
 	border: none;
 	outline: 2px solid #808080;
 	border-radius: 5px;
@@ -257,7 +259,7 @@
 	opacity: .5;
 }
 
-@mixin create-post-form-post-title {
+@mixin create-post-form-post-title-class {
 	display: block;
 	margin: 10px 0px 3px 0px;
 	font-size: 16px;
@@ -308,7 +310,7 @@
 	cursor: pointer;
 }
 
-@mixin file-preview-container {
+@mixin file-preview-container-class {
 	border: 1px solid var(--border-color-4);
 	margin-top: 10px;
 	border-radius: 10px;
@@ -402,7 +404,7 @@
 	color: var(--text-color-1);
 }
 
-@mixin post-list-post-title {
+@mixin post-list-post-title-class {
 	margin-bottom: 7px;
 	font-size: 16px;
 	padding: 10px;
@@ -410,7 +412,7 @@
 	background-color: var(--bg-color-3);
 }
 
-@mixin post-content {
+@mixin post-content-class {
 	width: 100%;
 	white-space: normal;
 	padding: 10px;
@@ -513,7 +515,7 @@
 	color: var(--text-color-4);
 }
 
-@mixin comment-section {
+@mixin comment-section-class {
 	max-height: 400px;
 	overflow: auto;
 }
@@ -716,9 +718,9 @@
 }
 
 @mixin profile-img-container {
-	position: relative;
 	width: 40px;
 	height: 40px;
+	position: relative;
 }
 
 @mixin profile-img {
@@ -727,31 +729,26 @@
 	border-radius: 50%;
 }
 
-@mixin indicator-container {
+@mixin online-indicator-small {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background-color: var(--bg-color-1);
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-@mixin online-indicator {
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
 	background-color: #2E9A48;
+	border: 2px solid var(--border-color-3);
 }
 
-@mixin offline-indicator {
-	width: 8px;
-	height: 8px;
+@mixin offline-indicator-small {
+	width: 12px;
+	height: 12px;
 	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	background-color: #808080;
+	border: 2px solid var(--border-color-3);
 }
 
 @mixin profile-name {
@@ -775,7 +772,7 @@
 	flex-direction: column;
 }
 
-@mixin contact-profile-container {
+@mixin contact-profile-container-small {
 	display: flex;
 	align-items: center;
 	gap: 2px;
@@ -783,7 +780,7 @@
 	border-bottom: 1px solid var(--border-color-1);
 }
 
-@mixin contact-picture-container {
+@mixin contact-pic-container-small {
 	width: 44px;
 	height: 44px;
 	border-radius: 10px;
@@ -794,37 +791,32 @@
 	cursor: pointer;
 }
 
-@mixin contact-picture {
+@mixin contact-picture-small {
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
 }
 
-@mixin indicator-container-small {
+@mixin online-indicator-medium {
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
-	background-color: var(--bg-color-2);
 	position: absolute;
 	bottom: 6px;
 	right: 6px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-@mixin online-indicator-small {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
 	background-color: #2E9A48;
+	border: 2px solid var(--border-color-6);
 }
 
-@mixin offline-indicator-small {
-	width: 10px;
-	height: 10px;
+@mixin offline-indicator-medium {
+	width: 14px;
+	height: 14px;
 	border-radius: 50%;
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
 	background-color: #808080;
+	border: 2px solid var(--border-color-6);
 }
 
 @mixin contact-name {
@@ -851,31 +843,26 @@
 	position: relative;
 }
 
-@mixin indicator-container-big {
+@mixin online-indicator-big {
 	width: 18px;
 	height: 18px;
 	border-radius: 50%;
-	background-color: var(--bg-color-2);
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-@mixin online-indicator-big {
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
 	background-color: #2E9A48;
+	border: 2px solid var(--border-color-6);
 }
 
 @mixin offline-indicator-big {
-	width: 14px;
-	height: 14px;
+	width: 18px;
+	height: 18px;
 	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	background-color: #808080;
+	border: 2px solid var(--border-color-6);
 }
 
 @mixin contact-picture-big {

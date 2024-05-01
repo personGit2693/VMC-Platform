@@ -82,14 +82,14 @@ video {
 }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode:hover,
+.top-right-menu .toggle-mode-class:hover,
 .topMenus:hover,
 .user-profile img:hover {
 	@include global_hover-opacity;
 }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode:active,
+.top-right-menu .toggle-mode-class:active,
 .topMenus:active,
 .user-profile img:active {
 	@include global_active-opacity;
@@ -111,8 +111,8 @@ video {
 	@include global_top-right-menu;
 }
 
-.top-right-menu .toggle-mode {
-	@include global_toggle-mode;
+.top-right-menu .toggle-mode-class {
+	@include global_toggle-mode-class;
 }
 
 .topMenus {
@@ -212,8 +212,8 @@ video {
 		@include global_searchInput-placeholder_Mobile;
 	}
 
-	.top-right-menu .toggle-mode {
-		@include global_toggle-mode_Mobile;
+	.top-right-menu .toggle-mode-class {
+		@include global_toggle-mode-class_Mobile;
 	}
 }
 /*Mobile End*/
@@ -309,7 +309,7 @@ video {
 }
 
 .posted-reactions .reaction-icon-container,
-.modal-comment-section .reaction-icon-container {
+.modal-comment-section-class .reaction-icon-container {
 	@include reaction-icon-container;
 }
 
@@ -333,11 +333,11 @@ video {
 	@include date-posted-modal;
 }
 
-.posted-info-container .modal-comment-section {
-	@include modal-comment-section;
+.posted-info-container .modal-comment-section-class {
+	@include modal-comment-section-class;
 }
 
-.modal-comment-section .comment {
+.modal-comment-section-class .comment {
 	@include comment-modal;
 }
 
@@ -372,13 +372,13 @@ video {
 	@include post-category-label;
 }
 
-.create-post-form .post-category {
-	@include post-category;
+.create-post-form .post-category-class {
+	@include post-category-class;
 }
 
-.create-post-form .post-category:hover,
+.create-post-form .post-category-class:hover,
 .create-post-form .custom-file-upload:hover,
-.file-preview-container .remove-file-button:hover,
+.file-preview-container-class .remove-file-button:hover,
 .create-post-form .create-post-button:hover,
 .posts button:hover,
 .chat-toggle-button:hover,
@@ -390,7 +390,7 @@ video {
 }
 
 .create-post-form .custom-file-upload:active,
-.file-preview-container .remove-file-button:active,
+.file-preview-container-class .remove-file-button:active,
 .create-post-form .create-post-button:active,
 .posts button:active,
 .emoji-container img:active,
@@ -399,16 +399,16 @@ video {
 .chat-input-container .chat-send-button:active,
 .chat-box-container .buzz-chat-button:active,
 .chat-box-container .close-chat-button:active,
-.contact-picture-container:active,
+.contact-pic-container-small:active,
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
 .posted-info-container button:active {
 	@include active-opacity;
 }
 
-.create-post-form .post-title,
-.create-post-form .post-content {
-	@include create-post-form-post-title;
+.create-post-form .post-title-class,
+.create-post-form .post-content-class {
+	@include create-post-form-post-title-class;
 }
 
 .create-post-form #post-title-id {
@@ -424,18 +424,18 @@ video {
 }
 
 #post-content-id::-webkit-scrollbar-thumb,
-.comment-section::-webkit-scrollbar-thumb,
+.comment-section-class::-webkit-scrollbar-thumb,
 .chat-container::-webkit-scrollbar-thumb,
 .posted-info-container::-webkit-scrollbar-thumb,
-.modal-comment-section::-webkit-scrollbar-thumb {
+.modal-comment-section-class::-webkit-scrollbar-thumb {
 	@include sb-thumb-visibility;
 }
 
 #post-content-id:hover::-webkit-scrollbar-thumb,
-.comment-section:hover::-webkit-scrollbar-thumb,
+.comment-section-class:hover::-webkit-scrollbar-thumb,
 .chat-container:hover::-webkit-scrollbar-thumb,
 .posted-info-container:hover::-webkit-scrollbar-thumb,
-.modal-comment-section:hover::-webkit-scrollbar-thumb {
+.modal-comment-section-class:hover::-webkit-scrollbar-thumb {
 	@include hover-sb-thumb-visibility;
 }
 
@@ -443,15 +443,15 @@ video {
 	@include custom-file-upload;
 }
 
-.file-preview-container {
-	@include file-preview-container;
+.file-preview-container-class {
+	@include file-preview-container-class;
 }
 
-.file-preview-container .file-preview-element {
+.file-preview-container-class .file-preview-element {
 	@include file-preview-element;
 }
 
-.file-preview-container .remove-file-button {
+.file-preview-container-class .remove-file-button {
 	@include remove-file-button;
 }
 
@@ -487,12 +487,12 @@ video {
 	@include posts-buttons;
 }
 
-.post-list .post-title {
-	@include post-list-post-title;
+.post-list .post-title-class {
+	@include post-list-post-title-class;
 }
 
-.post-list .post-content {
-	@include post-content;
+.post-list .post-content-class {
+	@include post-content-class;
 }
 
 .post-list .post-reactions {
@@ -556,11 +556,11 @@ video {
 	@include date-posted;
 }
 
-.post-list .comment-section {
-	@include comment-section;
+.post-list .comment-section-class {
+	@include comment-section-class;
 }
 
-.comment-section .comment {
+.comment-section-class .comment {
 	@include comment;
 }
 
@@ -679,16 +679,12 @@ video {
 	@include profile-img;
 }
 
-.profile-img-container .indicator-container {
-	@include indicator-container;
+.profile-img-container .online-indicator-small {
+	@include online-indicator-small;
 }
 
-.indicator-container .online-indicator {
-	@include online-indicator;
-}
-
-.indicator-container .offline-indicator {
-	@include offline-indicator;
+.profile-img-container .offline-indicator-small {
+	@include offline-indicator-small;
 }
 
 .contact-container .profile-name {
@@ -699,31 +695,27 @@ video {
 	@include chat-box-container;
 }
 
-.chat-box-container .contact-profile-container {
-	@include contact-profile-container;
+.chat-box-container .contact-profile-container-small {
+	@include contact-profile-container-small;
 }
 
-.contact-profile-container .contact-picture-container {
-	@include contact-picture-container;
+.contact-profile-container-small .contact-pic-container-small {
+	@include contact-pic-container-small;
 }
 
-.contact-picture-container .contact-picture {
-	@include contact-picture;
+.contact-pic-container-small .contact-picture-small {
+	@include contact-picture-small;
 }
 
-.contact-picture-container .indicator-container-small {
-	@include indicator-container-small;
+.contact-pic-container-small .online-indicator-medium {
+	@include online-indicator-medium;
 }
 
-.indicator-container-small .online-indicator-small {
-	@include online-indicator-small;
+.contact-pic-container-small .offline-indicator-medium {
+	@include offline-indicator-medium;
 }
 
-.indicator-container-small .offline-indicator-small {
-	@include offline-indicator-small;
-}
-
-.contact-profile-container .contact-name {
+.contact-profile-container-small .contact-name {
 	@include contact-name;
 }
 
@@ -743,15 +735,11 @@ video {
 	@include contact-picture-big;
 }
 
-.contact-pic-container-big .indicator-container-big {
-	@include indicator-container-big;
-}
-
-.indicator-container-big .online-indicator-big {
+.contact-pic-container-big .online-indicator-big {
 	@include online-indicator-big;
 }
 
-.indicator-container-big .offline-indicator-big {
+.contact-pic-container-big .offline-indicator-big {
 	@include offline-indicator-big;
 }
 
@@ -820,7 +808,7 @@ video {
 }
 
 .chat-box-container .close-chat-button:hover,
-.contact-picture-container:hover,
+.contact-pic-container-small:hover,
 .chat-box-container .buzz-chat-button:hover {
 	@include close-chat-button-hover;
 }

@@ -6645,13 +6645,13 @@ video {
   background-color: var(--bg-color-7); }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode:hover,
+.top-right-menu .toggle-mode-class:hover,
 .topMenus:hover,
 .user-profile img:hover {
   opacity: .7; }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode:active,
+.top-right-menu .toggle-mode-class:active,
 .topMenus:active,
 .user-profile img:active {
   opacity: .5; }
@@ -6673,7 +6673,7 @@ video {
   display: flex;
   gap: 5px; }
 
-.top-right-menu .toggle-mode {
+.top-right-menu .toggle-mode-class {
   width: 100px;
   font-weight: bold;
   border: none;
@@ -6788,7 +6788,7 @@ video {
   #searchInput_RoId::placeholder {
     color: transparent; }
 
-  .top-right-menu .toggle-mode {
+  .top-right-menu .toggle-mode-class {
     width: 50px;
     font-size: 12px; } }
 /*Mobile End*/
@@ -6810,9 +6810,10 @@ video {
   --text-color-4: #ADB1B3;
   --text-color-5: #E3E5E9;
   --border-color-2: #121413;
-  --border-color-3: #3E3F40;
+  --border-color-3: #18191A;
   --border-color-4: #444749;
   --border-color-5: #353637;
+  --border-color-6: #242526;
   /*Dark Mode (Default Style)*/ }
 
 /*Root End*/
@@ -6830,7 +6831,8 @@ video {
   --border-color-2: #E2E4E7;
   --border-color-3: #F0F2F5;
   --border-color-4: #CED0D4;
-  --border-color-5: #E4E4E4; }
+  --border-color-5: #E4E4E4;
+  --border-color-6: #FFFFFF; }
 
 /*Modal*/
 .modalmeCon_RoClass {
@@ -6943,7 +6945,7 @@ video {
   flex-wrap: wrap; }
 
 .posted-reactions .reaction-icon-container,
-.modal-comment-section .reaction-icon-container {
+.modal-comment-section-class .reaction-icon-container {
   display: flex;
   align-items: center;
   gap: 2px; }
@@ -6972,13 +6974,13 @@ video {
   padding: 5px 15px;
   color: var(--text-color-4); }
 
-.posted-info-container .modal-comment-section {
+.posted-info-container .modal-comment-section-class {
   color: var(--text-color-1);
   font-size: 14px;
   max-height: 450px;
   overflow-y: scroll; }
 
-.modal-comment-section .comment {
+.modal-comment-section-class .comment {
   padding-left: 7px; }
 
 .posted-info-container .comment-profile-container {
@@ -7023,16 +7025,16 @@ video {
   margin: 5px 5px 10px 0px;
   display: inline-block; }
 
-.create-post-form .post-category {
+.create-post-form .post-category-class {
   border: none;
   outline: 2px solid #808080;
   border-radius: 5px;
   padding: 3px;
   cursor: pointer; }
 
-.create-post-form .post-category:hover,
+.create-post-form .post-category-class:hover,
 .create-post-form .custom-file-upload:hover,
-.file-preview-container .remove-file-button:hover,
+.file-preview-container-class .remove-file-button:hover,
 .create-post-form .create-post-button:hover,
 .posts button:hover,
 .chat-toggle-button:hover,
@@ -7043,7 +7045,7 @@ video {
   opacity: .7; }
 
 .create-post-form .custom-file-upload:active,
-.file-preview-container .remove-file-button:active,
+.file-preview-container-class .remove-file-button:active,
 .create-post-form .create-post-button:active,
 .posts button:active,
 .emoji-container img:active,
@@ -7052,14 +7054,14 @@ video {
 .chat-input-container .chat-send-button:active,
 .chat-box-container .buzz-chat-button:active,
 .chat-box-container .close-chat-button:active,
-.contact-picture-container:active,
+.contact-pic-container-small:active,
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
 .posted-info-container button:active {
   opacity: .5; }
 
-.create-post-form .post-title,
-.create-post-form .post-content {
+.create-post-form .post-title-class,
+.create-post-form .post-content-class {
   display: block;
   margin: 10px 0px 3px 0px;
   font-size: 16px; }
@@ -7085,17 +7087,17 @@ video {
   display: block; }
 
 #post-content-id::-webkit-scrollbar-thumb,
-.comment-section::-webkit-scrollbar-thumb,
+.comment-section-class::-webkit-scrollbar-thumb,
 .chat-container::-webkit-scrollbar-thumb,
 .posted-info-container::-webkit-scrollbar-thumb,
-.modal-comment-section::-webkit-scrollbar-thumb {
+.modal-comment-section-class::-webkit-scrollbar-thumb {
   visibility: hidden; }
 
 #post-content-id:hover::-webkit-scrollbar-thumb,
-.comment-section:hover::-webkit-scrollbar-thumb,
+.comment-section-class:hover::-webkit-scrollbar-thumb,
 .chat-container:hover::-webkit-scrollbar-thumb,
 .posted-info-container:hover::-webkit-scrollbar-thumb,
-.modal-comment-section:hover::-webkit-scrollbar-thumb {
+.modal-comment-section-class:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
 
 .create-post-form .custom-file-upload {
@@ -7111,13 +7113,13 @@ video {
   color: #808080;
   cursor: pointer; }
 
-.file-preview-container {
+.file-preview-container-class {
   border: 1px solid var(--border-color-4);
   margin-top: 10px;
   border-radius: 10px;
   position: relative; }
 
-.file-preview-container .file-preview-element {
+.file-preview-container-class .file-preview-element {
   border-radius: 10px;
   margin: 8px;
   width: calc(100% - 16px);
@@ -7126,7 +7128,7 @@ video {
   object-fit: contain;
   background-color: #000000; }
 
-.file-preview-container .remove-file-button {
+.file-preview-container-class .remove-file-button {
   border: 1px solid #202224;
   position: absolute;
   top: 18px;
@@ -7194,14 +7196,14 @@ video {
   background-color: var(--bg-color-3);
   color: var(--text-color-1); }
 
-.post-list .post-title {
+.post-list .post-title-class {
   margin-bottom: 7px;
   font-size: 16px;
   padding: 10px;
   border-radius: 10px;
   background-color: var(--bg-color-3); }
 
-.post-list .post-content {
+.post-list .post-content-class {
   width: 100%;
   white-space: normal;
   padding: 10px;
@@ -7289,11 +7291,11 @@ video {
   white-space: normal;
   color: var(--text-color-4); }
 
-.post-list .comment-section {
+.post-list .comment-section-class {
   max-height: 400px;
   overflow: auto; }
 
-.comment-section .comment {
+.comment-section-class .comment {
   border-left: 1px solid var(--border-color-4);
   padding-left: 5px; }
 
@@ -7466,38 +7468,34 @@ video {
   background-color: var(--bg-color-10); }
 
 .contact-container .profile-img-container {
-  position: relative;
   width: 40px;
-  height: 40px; }
+  height: 40px;
+  position: relative; }
 
 .profile-img-container .profile-img {
   width: 40px;
   height: 40px;
   border-radius: 50%; }
 
-.profile-img-container .indicator-container {
+.profile-img-container .online-indicator-small {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--bg-color-1);
   position: absolute;
   bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  background-color: #2E9A48;
+  border: 2px solid var(--border-color-3); }
 
-.indicator-container .online-indicator {
-  width: 8px;
-  height: 8px;
+.profile-img-container .offline-indicator-small {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: #2E9A48; }
-
-.indicator-container .offline-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #808080; }
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #808080;
+  border: 2px solid var(--border-color-3); }
 
 .contact-container .profile-name {
   color: var(--text-color-5);
@@ -7518,14 +7516,14 @@ video {
   display: flex;
   flex-direction: column; }
 
-.chat-box-container .contact-profile-container {
+.chat-box-container .contact-profile-container-small {
   display: flex;
   align-items: center;
   gap: 2px;
   padding: 2px;
   border-bottom: 1px solid var(--border-color-1); }
 
-.contact-profile-container .contact-picture-container {
+.contact-profile-container-small .contact-pic-container-small {
   width: 44px;
   height: 44px;
   border-radius: 10px;
@@ -7535,36 +7533,32 @@ video {
   position: relative;
   cursor: pointer; }
 
-.contact-picture-container .contact-picture {
+.contact-pic-container-small .contact-picture-small {
   width: 32px;
   height: 32px;
   border-radius: 50%; }
 
-.contact-picture-container .indicator-container-small {
+.contact-pic-container-small .online-indicator-medium {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--bg-color-2);
   position: absolute;
   bottom: 6px;
   right: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  background-color: #2E9A48;
+  border: 2px solid var(--border-color-6); }
 
-.indicator-container-small .online-indicator-small {
-  width: 10px;
-  height: 10px;
+.contact-pic-container-small .offline-indicator-medium {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background-color: #2E9A48; }
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: #808080;
+  border: 2px solid var(--border-color-6); }
 
-.indicator-container-small .offline-indicator-small {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #808080; }
-
-.contact-profile-container .contact-name {
+.contact-profile-container-small .contact-name {
   font-size: 14px;
   color: var(--text-color-1);
   max-width: 185px; }
@@ -7589,29 +7583,25 @@ video {
   height: 60px;
   border-radius: 50%; }
 
-.contact-pic-container-big .indicator-container-big {
+.contact-pic-container-big .online-indicator-big {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: var(--bg-color-2);
   position: absolute;
   bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  background-color: #2E9A48;
+  border: 2px solid var(--border-color-6); }
 
-.indicator-container-big .online-indicator-big {
-  width: 14px;
-  height: 14px;
+.contact-pic-container-big .offline-indicator-big {
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-color: #2E9A48; }
-
-.indicator-container-big .offline-indicator-big {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #808080; }
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #808080;
+  border: 2px solid var(--border-color-6); }
 
 .contact-profile-container-big .contact-name-big {
   font-size: 17px;
@@ -7736,7 +7726,7 @@ video {
   cursor: pointer; }
 
 .chat-box-container .close-chat-button:hover,
-.contact-picture-container:hover,
+.contact-pic-container-small:hover,
 .chat-box-container .buzz-chat-button:hover {
   background-color: var(--bg-color-3); }
 

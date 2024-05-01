@@ -134,7 +134,7 @@
 					<div class="date-posted">Date Posted: 4/19/2024, 7:51:06 PM</div>
 
 					<!--Comment Section-->
-					<div class="modal-comment-section" id="modal-comment-section-id" style="display: none;">
+					<div class="modal-comment-section-class" id="modal-comment-section-id" style="display: none;">
 						<div class="comment">
 							<div class="profile-container">
 								<div class="user-profile">
@@ -536,7 +536,7 @@
 		</div>
 
 		<div class="top-right-menu">
-			<button class="toggle-mode" id="toggle-mode-id">Light Mode</button>
+			<button class="toggle-mode-class" id="toggle-mode-id">Light Mode</button>
 			<div class="topMenus burger-icon"><img src="../../src/burgericon.png"></div>
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
@@ -626,7 +626,7 @@
 					<form class="create-post-form" enctype="multipart/form-data">
 						<label class="post-category-label" for="post-category-id">Category:</label>
 						
-						<select class="post-category" id="post-category-id" required>
+						<select class="post-category-class" id="post-category-id" required>
 							<option value="">Select Category</option>
 							<option value="category1">Category 1</option>
 							<option value="category2">Category 2</option>
@@ -635,10 +635,10 @@
 							<option value="category2">Category 5</option>
 						</select>
 
-						<label class="post-title" for="post-title-id">Title:</label>
+						<label class="post-title-class" for="post-title-id">Title:</label>
 						<input type="text" id="post-title-id" required>
 
-						<label class="post-content" for="post-content-id">Content:</label>
+						<label class="post-content-class" for="post-content-id">Content:</label>
 
 						<div class="textarea-container">
 							<textarea id="post-content-id" rows="1" required oninput="autoResizeTextarea(this)"></textarea>
@@ -647,7 +647,7 @@
 						<label for="file-upload-id" class="custom-file-upload">Add a Photo or Video (optional)</label>
 						<input id="file-upload-id" type="file" style="display: none;">
 
-						<div class="file-preview-container" id="file-preview-container-id"></div>
+						<div class="file-preview-container-class" id="file-preview-container-id"></div>
 
 						<button class="create-post-button" type="submit">Submit Post</button>
 					</form>
@@ -664,9 +664,9 @@
 						</div>
 						
 						<div class="chosen-category">Category: Category 1</div>
-						<div class="post-title">Grab Car Saver</div>
+						<div class="post-title-class">Grab Car Saver</div>
 
-						<div class="post-content">
+						<div class="post-content-class">
 							<p>
 								Yan ang lowbog! 🤿 Pwede ka gumala every day this summer sa baba ng rates ng GrabCar Saver, available in Manila, Pampanga, Bacolod, and Iloilo. 🚗 May extra 10% OFF on 60 rides when you subscribe to RideSaver for only P99. BOOK now! 💚
 							</p>
@@ -678,7 +678,7 @@
 							<p>ASC Ref No. G0113N010524G</p>
 						</div>
 
-						<div class="file-preview-container">
+						<div class="file-preview-container-class">
 							<img class="file-preview-element" src="../../src/grab.jpg">
 						</div>
 						
@@ -766,7 +766,7 @@
 						<div class="date-posted">Date Posted: 4/19/2024, 7:51:06 PM</div>
 
 						<!--Comment Section-->
-						<div class="comment-section" id="comment-section-id" style="display: none;">
+						<div class="comment-section-class" id="comment-section-id" style="display: none;">
 							<div class="comment">
 								<div class="profile-container">
 									<div class="user-profile">
@@ -1256,10 +1256,7 @@
 		<div class="contact-container" onclick="toggleChatBox('Angelo Arellano')">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="online-indicator"></div>
-				</div>
+				<div class="online-indicator-small"></div>
 			</div>
 			
 			<div class="profile-name">Angelo Arellano</div>
@@ -1268,10 +1265,7 @@
 		<div class="contact-container" onclick="toggleChatBox('Jane Luna')">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="online-indicator"></div>
-				</div>
+				<div class="online-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">Jane Luna</div>
@@ -1280,10 +1274,7 @@
 		<div class="contact-container" onclick="toggleChatBox('Richard Bautista')">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">Richard Baustista</div>
@@ -1292,10 +1283,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1304,10 +1292,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1316,10 +1301,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1328,10 +1310,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1340,10 +1319,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1352,10 +1328,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1364,10 +1337,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1376,10 +1346,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1388,10 +1355,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>
@@ -1400,10 +1364,7 @@
 		<div class="contact-container">
 			<div class="profile-img-container">
 				<img class="profile-img" src="../../src/cat-profile.png">
-
-				<div class="indicator-container">
-					<div class="offline-indicator"></div>
-				</div>
+				<div class="offline-indicator-small"></div>
 			</div>
 
 			<div class="profile-name">First Last</div>

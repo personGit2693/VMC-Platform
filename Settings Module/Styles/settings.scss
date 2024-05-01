@@ -81,14 +81,14 @@ video {
 }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode:hover,
+.top-right-menu .toggle-mode-class:hover,
 .top-right-menu .topMenus:hover,
 .user-profile img:hover {
 	@include global_hover-opacity;
 }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode:active,
+.top-right-menu .toggle-mode-class:active,
 .top-right-menu .topMenus:active,
 .user-profile img:active {
 	@include global_active-opacity;
@@ -110,8 +110,8 @@ video {
 	@include global_top-right-menu;
 }
 
-.top-right-menu .toggle-mode {
-	@include global_toggle-mode;
+.top-right-menu .toggle-mode-class {
+	@include global_toggle-mode-class;
 }
 
 .top-right-menu .topMenus {
@@ -199,8 +199,8 @@ video {
 		@include global_searchInput-placeholder_Mobile;
 	}
 
-	.top-right-menu .toggle-mode {
-		@include global_toggle-mode_Mobile;
+	.top-right-menu .toggle-mode-class {
+		@include global_toggle-mode-class_Mobile;
 	}
 }
 /*Mobile End*/
