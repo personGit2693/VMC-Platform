@@ -1,4 +1,5 @@
 /*For Dark / Light Mode toggle*/
+/*
 const toggleModeButton = document.getElementById('toggle-mode-id');
 const body = document.body;
 
@@ -17,6 +18,7 @@ toggleModeButton.addEventListener('click', () => {
 	setMode(newMode);
 	localStorage.setItem('isLightMode', newMode);
 });
+*/
 /*For Dark / Light Mode toggle*/
 
 /*For textarea auto resize*/

@@ -1,2 +1,2 @@
-const toggleModeButton = document.getElementById('toggle-mode-id');
-const body = document.body;
+export const toggleModeButton = document.getElementById('toggle-mode-id');
+export const body = document.body;

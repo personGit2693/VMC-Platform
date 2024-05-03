@@ -9,16 +9,22 @@
 
 
 /*Prep export variables*/
-const isLightMode = localStorage.getItem('isLightMode') === 'true';
+var isLightMode = localStorage.getItem('isLightMode') === 'true';
 /*Prep export variables*/
 
-/*Assign, Reset, Populate*/
 
+/*Assign, Reset, Populate*/
+/*_Assign isLightMode*/
+function assignIsLightMode(newMode){
+	isLightMode = newMode;
+}
+/*_Assign isLightMode*/
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
-	isLightMode
+	isLightMode,
+	assignIsLightMode
 };
 /*Export*/

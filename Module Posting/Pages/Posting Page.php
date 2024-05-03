@@ -536,7 +536,7 @@
 		</div>
 
 		<div class="top-right-menu">
-			<button class="toggle-mode-class" id="toggle-mode-id">Light Mode</button>
+			<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>
 			<div class="topMenus burger-icon"><img src="../../src/burgericon.png"></div>
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
@@ -1410,8 +1410,24 @@
 	<div class="chat-box-container" style="visibility: hidden;"></div>
 	<!--Chat Section-->
 
+
+	<!--Javascripts-->
+	<!--_Dependencies-->
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+	<!--_Dependencies-->
+
+	<!--_Mike JS-->
 	<script type="text/javascript" src="../Client Side/Posting Page.js"></script>
+	<!--_Mike JS-->
+
+	<!--_Controllers-->
+	<script type="module" src="../Client Side/Controller_Btn_ChangeMode.js"></script>
+	<!--_Controllers-->
+
+	<!--_Executor-->
+	<script type="module" src="../Client Side/Executor_Page_Posting.js"></script>
+	<!--_Executor-->
+	<!--Javascripts-->
 </body>
 </html>
