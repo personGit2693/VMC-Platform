@@ -3255,6 +3255,63 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
+/*************************************************************************************/
+/*Root*/
+:root {
+  --normBtnPadding: 1px;
+  --normBtnBorderWidth: 1px;
+  --normBtnBorderColor: white;
+  --normBtnRadius: 6px;
+  --normBtnFWeight: 500px;
+  --normBtnBgColor: #2058B2;
+  --normBtnHovActFColor: red;
+  --normBtnHovActBgColor: white;
+  --customInputColor: var(--text-color-1);
+  --customInputFSize: 10px;
+  --customInputAnimFSize: 10px;
+  --iconBtnWidth: 200px;
+  --iconBtnHeight: 200px;
+  --iconBtnBorderColor: transparent;
+  --iconBtnBgSize:22px;
+  --iconBtnHeight: 30px;
+  --selectDropdownWidth: auto;
+  --selectDropdownBorderWidth: 1px;
+  --selectDropdownBorderColor: var(--bg-color-1);
+  --selectDropdownBorderRadius: 99px;
+  --selectDropdownBgColor:var(--bg-color-1);
+  --selectDropdownIconSize:14px;
+  --selectDropdownFSize: auto;
+  --selectDropdownFColor: var(--text-color-1);
+  --selectDropdownChevronSize: 20px;
+  --searchOptsBgColor: white;
+  --searchOptsFColor: black;
+  --hoverOptBgColor: gray;
+  --hoverOptFColor: red;
+  --selectDropdownScrollSize:5px;
+  --optWrapThumbBgColor: red;
+  --selectDropdownResetBtnSize: 20px;
+  --cusRadioBorderWidth: 1px;
+  --cusRadioBorderColor: white;
+  --cusRadioWidthHeight: 10px;
+  --cusRadioBgColor: gray;
+  --cusRadioFWeight: 200px;
+  --cusRadioFsize: 15px;
+  --cusRadioFColor: var(--text-color-1);
+  --cusCheckboxFWeight: 500;
+  --custCheckboxFSize: 17px;
+  --cusCheckboxColor: var(--text-color-1);
+  --cusCheckboxWidthHeight: 15px;
+  --cusCheckboxBorderWidth: 1px;
+  --cusCheckboxBorderColor: gray;
+  --footerBgColor: #242526;
+  --footerFSize: 14px;
+  --footerFColor: var(--text-color-1); }
+
+/*Root*/
+/*************************************************************************************/
+/*General*/
+/*************************************************************************************/
+/*Mobile*/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /*Global Codes to Copy Start*/
@@ -3535,57 +3592,6 @@ video {
 /*Global Codes to Copy End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-/*Root*/
-:root {
-  --normBtnPadding: 1px;
-  --normBtnBorderWidth: 1px;
-  --normBtnBorderColor: white;
-  --normBtnRadius: 6px;
-  --normBtnFWeight: 500px;
-  --normBtnBgColor: #2058B2;
-  --normBtnHovActFColor: red;
-  --normBtnHovActBgColor: white;
-  --customInputColor: white;
-  --customInputFSize: 10px;
-  --customInputAnimFSize: 10px;
-  --iconBtnWidth: 200px;
-  --iconBtnHeight: 200px;
-  --iconBtnBorderColor: transparent;
-  --iconBtnBgSize:22px;
-  --iconBtnHeight: 30px;
-  --selectDropdownWidth: auto;
-  --selectDropdownBorderWidth: 1px;
-  --selectDropdownBorderColor: #18191A;
-  --selectDropdownBorderRadius: 99px;
-  --selectDropdownBgColor:#18191A;
-  --selectDropdownIconSize:14px;
-  --selectDropdownFSize: auto;
-  --selectDropdownFColor: white;
-  --selectDropdownChevronSize: 20px;
-  --searchOptsBgColor: white;
-  --searchOptsFColor: black;
-  --hoverOptBgColor: gray;
-  --hoverOptFColor: red;
-  --selectDropdownScrollSize:5px;
-  --optWrapThumbBgColor: red;
-  --selectDropdownResetBtnSize: 20px;
-  --cusRadioBorderWidth: 1px;
-  --cusRadioBorderColor: white;
-  --cusRadioWidthHeight: 10px;
-  --cusRadioBgColor: gray;
-  --cusRadioFWeight: 200px;
-  --cusRadioFsize: 15px;
-  --cusRadioFColor: white;
-  --cusCheckboxFWeight: 500;
-  --custCheckboxFSize: 17px;
-  --cusCheckboxColor: white;
-  --cusCheckboxWidthHeight: 15px;
-  --cusCheckboxBorderWidth: 1px;
-  --cusCheckboxBorderColor: gray;
-  --footerBgColor: #242526;
-  --footerFSize: 14px;
-  --footerFColor: white; }
-
 @font-face {
   font-family: myOwnFont;
   src: url(../Fonts/Binance-PLEX.ttf); }
@@ -3595,7 +3601,7 @@ body {
   overflow: auto; }
 
 .setting_Title_Class {
-  color: white;
+  color: var(--text-color-1);
   font-size: 30px; }
 
 .userLogin_RoClass .userLoginDetails_RoClass {
@@ -3635,7 +3641,9 @@ body {
   border-bottom: 1px solid violet; }
 
 #profilePic-Wrap #profilePic-id {
-  width: 100%; }
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 
 #picAndbuttonwrap_id {
   width: 40%;
@@ -3676,7 +3684,7 @@ body {
 #changePositionDisplay_id .selectDropdownWrap_RoClass {
   width: 100%;
   height: auto;
-  background: #18191A; }
+  background-color: var(--bg-color-1); }
 
 .selectDropdownOptionsWrap_RoClass {
   z-index: 99;
@@ -3685,7 +3693,7 @@ body {
 .selectDropdownWrap_RoClass .displayedSelectedText_RoClass {
   font-size: 20px;
   margin: auto;
-  background: #18191A;
+  background-color: var(--bg-color-1);
   text-align: center;
   overflow: visible; }
 
@@ -3719,18 +3727,15 @@ body {
 
 .settingsSeconddiv_Class {
   height: auto;
-  border-bottom: 1px solid violet; }
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: auto; }
 
 .checkboxesNotification_Class {
   height: auto; }
 
 .updateNotificationBtn_Class {
   width: auto; }
-
-.settingsSeconddiv_Class {
-  border: 1px solid white;
-  border-radius: 6px;
-  padding: auto; }
 
 .settingsPreferencesControl_Class {
   display: flex;
@@ -3755,13 +3760,12 @@ body {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  .setting_Title_Class {
-    color: white;
-    font-size: 20px; }
-
   .normButton_RoClass {
     --normBtnWidth: 140px;
-    --normBtnFSize: 60%; }
+    --normBtnFSize: 80%; }
+
+  .setting_Title_Class {
+    font-size: 20px; }
 
   .nameAndTitle-Wrap #nameDisplay-id {
     margin-left: auto;
@@ -3774,16 +3778,12 @@ body {
   #changePositionDisplay_id .selectDropdownWrap_RoClass {
     width: 80%;
     height: auto;
-    background: #18191A; }
+    background-color: var(--bg-color-1); }
 
   .selectDropdownWrap_RoClass .displayedSelectedText_RoClass {
     font-size: 10px;
     text-align: center;
-    overflow: visible; }
-
-  --customInputColor: white;
-  --customInputFSize: 15px;
-  --customInputAnimFSize: 5px; }
+    overflow: visible; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3791,7 +3791,23 @@ body {
 @media all and (min-width: 642px) and (max-width: 1080px) {
   .normButton_RoClass {
     --normBtnWidth: 140px;
-    --normBtnFSize: 70%; } }
+    --normBtnFSize: 85%; }
+
+  .setting_Title_Class {
+    font-size: 20px; }
+
+  .nameAndTitle-Wrap #nameDisplay-id {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px; }
+
+  #changePositionDisplay_id .selectDropdownWrap_RoClass {
+    width: 80%;
+    height: auto;
+    background-color: var(--bg-color-1); } }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3799,7 +3815,7 @@ body {
 @media all and (min-width: 1081px) and (max-width: 1600px) {
   .normButton_RoClass {
     --normBtnWidth: 150px;
-    --normBtnFSize: 75%; } }
+    --normBtnFSize: 90%; } }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3807,7 +3823,7 @@ body {
 @media all and (min-width: 1601px) {
   .normButton_RoClass {
     --normBtnWidth: 160px;
-    --normBtnFSize: 80%; } }
+    --normBtnFSize: 95%; } }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Section Comment Name*/
