@@ -9,7 +9,7 @@
 
 
 /*Prep export variables*/
-
+const isLightMode = localStorage.getItem('isLightMode') === 'true';
 /*Prep export variables*/
 
 /*Assign, Reset, Populate*/
@@ -18,5 +18,7 @@
 
 
 /*Export*/
-
+export {
+	isLightMode
+};
 /*Export*/
