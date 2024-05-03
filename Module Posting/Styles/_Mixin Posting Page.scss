@@ -226,7 +226,7 @@
 	border-radius: 10px;
 	white-space: nowrap;
 	background-color: #096B6C;
-	border: 1px solid var(--border-color-2);
+	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
 }
 
 @mixin post-form {
@@ -235,7 +235,7 @@
 	border-radius: 10px;
 	color: var(--text-color-1);
 	background-color: var(--bg-color-2);
-	border: 1px solid var(--border-color-2);
+	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
 }
 
 @mixin post-category-label {
@@ -248,6 +248,7 @@
 	outline: 2px solid #808080;
 	border-radius: 5px;
 	padding: 3px;
+	max-width: 100%;
 	cursor: pointer;
 }
 
@@ -372,9 +373,9 @@
 	padding: 10px;
 	border-radius: 10px;
 	background-color: #3C746B;
-	border: 1px solid var(--border-color-2);
 	color: #FFFFFF;
 	font-size: 14px;
+	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
 }
 
 @mixin post-list {
@@ -382,7 +383,7 @@
 	padding: 10px;
 	border-radius: 10px;
 	background-color: var(--bg-color-2);
-	border: 1px solid var(--border-color-2);
+	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
 }
 
 @mixin post-list-user-profile {

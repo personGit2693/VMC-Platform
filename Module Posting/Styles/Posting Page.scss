@@ -632,7 +632,8 @@ video {
 	@include date;
 }
 
-.pinned-posts-wrapper a {
+.pinned-posts-wrapper a,
+.my-posts-wrapper a {
 	@include pinned-posts-wrapper-a;
 }
 /*Right Content End*/
