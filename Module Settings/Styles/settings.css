@@ -3450,13 +3450,13 @@ video {
 
 .top-left-menu .home-logo:hover,
 .top-right-menu .toggle-mode-class:hover,
-.top-right-menu .topMenus:hover,
+.topMenus:hover,
 .user-profile img:hover {
   opacity: .7; }
 
 .top-left-menu .home-logo:active,
 .top-right-menu .toggle-mode-class:active,
-.top-right-menu .topMenus:active,
+.topMenus:active,
 .user-profile img:active {
   opacity: .5; }
 
@@ -3486,7 +3486,7 @@ video {
   color: var(--text-color-2);
   cursor: pointer; }
 
-.top-right-menu .topMenus {
+.topMenus {
   width: 40px;
   height: 40px;
   padding: 7px;
@@ -3494,7 +3494,7 @@ video {
   background-color: var(--bg-color-8);
   cursor: pointer; }
 
-.top-right-menu .gear-icon {
+.gear-icon {
   background-color: var(--bg-color-9); }
 
 .top-right-menu .user-profile {
@@ -3575,6 +3575,14 @@ video {
 
 /*Bottom Section / Footer End*/
 /*General End*/
+/*Mobile and Tablet Start*/
+@media (min-width: 0px) and (max-width: 1080px) {
+  #rolayout_RoId {
+    height: calc(100% - 105px); }
+
+  #footerWrap_RoId {
+    height: 50px; } }
+/*Mobile and Tablet End*/
 /*Mobile Start*/
 @media all and (max-width: 641px) {
   .top-section .searchInput_RoClass {

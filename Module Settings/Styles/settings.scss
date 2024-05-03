@@ -6,6 +6,7 @@
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /*Global Codes to Copy Start*/
+
 /*Root Start*/
 :root {
 	/*Search Box*/
@@ -82,14 +83,14 @@ video {
 
 .top-left-menu .home-logo:hover,
 .top-right-menu .toggle-mode-class:hover,
-.top-right-menu .topMenus:hover,
+.topMenus:hover,
 .user-profile img:hover {
 	@include global_hover-opacity;
 }
 
 .top-left-menu .home-logo:active,
 .top-right-menu .toggle-mode-class:active,
-.top-right-menu .topMenus:active,
+.topMenus:active,
 .user-profile img:active {
 	@include global_active-opacity;
 }
@@ -114,11 +115,11 @@ video {
 	@include global_toggle-mode-class;
 }
 
-.top-right-menu .topMenus {
+.topMenus {
 	@include global_topMenus;
 }
 
-.top-right-menu .gear-icon {
+.gear-icon {
 	@include global_gear-icon;
 }
 
@@ -188,6 +189,18 @@ video {
 }
 /*Bottom Section / Footer End*/
 /*General End*/
+
+/*Mobile and Tablet Start*/
+@media (min-width:0px) and (max-width:1080px) {
+	#rolayout_RoId {
+		@include global_rolayout_RoId_MobTab;
+	}
+
+	#footerWrap_RoId {
+		@include global_footerWrap_RoId_MobTab;	
+	}
+}
+/*Mobile and Tablet End*/
 
 /*Mobile Start*/
 @media all and (max-width:641px) {
