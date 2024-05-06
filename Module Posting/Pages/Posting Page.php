@@ -516,7 +516,7 @@
 						</div>
 
 						<div class="textarea-comment-container">
-							<textarea class="comment-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Write a comment..."></textarea>
+							<textarea class="comment-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Write a comment..."></textarea>
 						</div>
 					</div>
 				</div>
@@ -641,7 +641,7 @@
 						<label class="post-content-class" for="post-content-id">Content:</label>
 
 						<div class="textarea-container">
-							<textarea id="post-content-id" rows="1" required oninput="autoResizeTextarea(this)"></textarea>
+							<textarea id="post-content-id" rows="1" required oninput="controller_Textarea_ResizeTextArea(this)"></textarea>
 						</div>
 						
 						<label for="file-upload-id" class="custom-file-upload">Add a Photo or Video (optional)</label>
@@ -1148,7 +1148,7 @@
 							</div>
 
 							<div class="textarea-comment-container">
-								<textarea class="comment-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Write a comment..."></textarea>
+								<textarea class="comment-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Write a comment..."></textarea>
 							</div>
 						</div>
 					</div>
@@ -1423,6 +1423,7 @@
 
 	<!--_Controllers-->
 	<script type="module" src="../Client Side/Controller_Btn_ChangeMode.js"></script>
+	<script type="module" src="../Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<!--_Controllers-->
 
 	<!--_Executor-->

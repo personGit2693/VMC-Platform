@@ -22,10 +22,12 @@ toggleModeButton.addEventListener('click', () => {
 /*For Dark / Light Mode toggle*/
 
 /*For textarea auto resize*/
+/*
 function autoResizeTextarea(textarea) {
 	textarea.style.height = 'auto';
 	textarea.style.height = (textarea.scrollHeight) + 'px';
 }
+*/
 /*For textarea auto resize*/
 
 /*For handling file selection*/
@@ -274,7 +276,7 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-input-container">
 				<div class="textarea-chat-container">
-					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+					<textarea class="chat-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Type your message..."></textarea>
 				</div>
 				
 				<button class="chat-send-button">Send</button>
@@ -376,7 +378,7 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-input-container">
 				<div class="textarea-chat-container">
-					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+					<textarea class="chat-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Type your message..."></textarea>
 				</div>
 				
 				<button class="chat-send-button">Send</button>
@@ -478,7 +480,7 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-input-container">
 				<div class="textarea-chat-container">
-					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+					<textarea class="chat-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Type your message..."></textarea>
 				</div>
 				
 				<button class="chat-send-button">Send</button>
