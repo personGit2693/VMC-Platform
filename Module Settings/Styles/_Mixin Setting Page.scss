@@ -178,11 +178,31 @@
 	margin:auto;
 }
 
+@mixin nameEditWrap_class{
+	display:flex;
+	flex-direction:row;
+	vertical-align: center;
+	justify-content: space-around;
+}
+
 @mixin nameDisplay-id{
 	margin:auto;
 	align-items: center;
 	justify-content:center;
 	font-size: 60px;
+	margin-right:20px;
+}
+
+@mixin changeNameimgWrapper_id{
+	width:30px;
+	height:30px;
+	margin-top:auto;
+	margin:auto;
+}
+
+@mixin changeNamePic-id{
+	opacity:.7;
+	cursor:pointer;
 }
 
 @mixin changePositionDisplay_id{
@@ -292,6 +312,13 @@
 	justify-content:center;
 	text-align:center;
 	font-size: 25px;
+}
+
+@mixin mobile_changeNameimgWrapper_id{
+	width:15px;
+	height:15px;
+	margin-top:auto;
+	margin:auto;
 }
 
 @mixin mobile_selectDropdownWrap_RoClass{

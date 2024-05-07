@@ -3680,7 +3680,24 @@ body {
   margin: auto;
   align-items: center;
   justify-content: center;
-  font-size: 60px; }
+  font-size: 60px;
+  margin-right: 20px; }
+
+.nameEditWrap_class {
+  display: flex;
+  flex-direction: row;
+  vertical-align: center;
+  justify-content: space-around; }
+
+#changeNameimgWrapper_id {
+  width: 30px;
+  height: 30px;
+  margin-top: auto;
+  margin: auto; }
+
+#changeNamePic-id:hover {
+  opacity: .7;
+  cursor: pointer; }
 
 .nameAndTitle-Wrap #changePositionDisplay_id {
   width: 100%;
@@ -3781,6 +3798,12 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 25px; }
+
+  #changeNameimgWrapper_id {
+    width: 15px;
+    height: 15px;
+    margin-top: auto;
+    margin: auto; }
 
   #changePositionDisplay_id .selectDropdownWrap_RoClass {
     width: 80%;

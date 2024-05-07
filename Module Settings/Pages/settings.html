@@ -141,13 +141,16 @@
 						<div id="picAndbuttonwrap_id">
 							<div id="imgWrapper_id"><img id="profilePic-id" src="../../src/ernesto.webp"></div>
 							<div id="changeProfilePicBtn_id">
-								<button class="normButton_RoClass">Change Profile Picture</button>
+								<button class="normButton_RoClass">Change Profile Picture </button>
 							</div>
 						</div>
 						<!--Profile Picture and Change Button-->
 
 						<div class="nameAndTitle-Wrap">
-							<div id="nameDisplay-id">Ernesto Dela Cruz</div>
+							<div class="nameEditWrap_class">
+								<div id="nameDisplay-id">Ernesto Dela Cruz</div>
+								<div id="changeNameimgWrapper_id"><img id="changeNamePic-id" src="../../src/edit icon pen.png"></div>
+							</div>
 							<div id="changePositionDisplay_id">
 								<div class="selectDropdownWrap_RoClass">
 									<input type="hidden" class="selectedOptValue_RoClass">

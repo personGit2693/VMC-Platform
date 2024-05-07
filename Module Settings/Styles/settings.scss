@@ -291,6 +291,18 @@ body{
 
 }
 
+.nameEditWrap_class{
+	@include nameEditWrap_class;
+}
+
+#changeNameimgWrapper_id{
+	@include changeNameimgWrapper_id;
+}
+
+#changeNamePic-id:hover{
+	@include changeNamePic-id;
+}
+
 .nameAndTitle-Wrap #changePositionDisplay_id{
 	@include changePositionDisplay_id;
 }
@@ -377,6 +389,10 @@ body{
 .nameAndTitle-Wrap #nameDisplay-id{
 	@include mobile_nameDisplay-id;
 
+}
+
+#changeNameimgWrapper_id{
+	@include mobile_changeNameimgWrapper_id;
 }
 
 #changePositionDisplay_id .selectDropdownWrap_RoClass{
