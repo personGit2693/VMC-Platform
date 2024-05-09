@@ -10,6 +10,7 @@
 
 /*Prep export variables*/
 var isLightMode = localStorage.getItem('isLightMode') === 'true';
+const fileReader = new FileReader();
 /*Prep export variables*/
 
 

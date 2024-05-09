@@ -57,6 +57,8 @@ document.getElementById('file-upload-id').addEventListener('change', function(ev
 
 		previewElement.src = event.target.result;
 
+		console.log(event.target.result);
+
 		const removeButton = document.createElement('button');
 		removeButton.textContent = 'x';
 		removeButton.classList.add('remove-file-button');
@@ -65,8 +67,8 @@ document.getElementById('file-upload-id').addEventListener('change', function(ev
 		});
 
 		filePreviewContainer.appendChild(previewElement);
-		filePreviewContainer.appendChild(removeButton);
-	};
+		filePreviewContainer.appendChild(removeButton);		
+	};	
 
 	fileReader.readAsDataURL(file);
 });
