@@ -1,5 +1,5 @@
 /*Import*/
-
+import {fileInput} from "./Elements_Page_Posting.js"
 /*Import*/
 
 
@@ -20,12 +20,21 @@ function assignIsLightMode(newMode){
 	isLightMode = newMode;
 }
 /*_Assign isLightMode*/
+
+
+/*_Reset fileInput*/
+function resetFileInput(){
+	fileInput.value = '';
+}
+/*_Reset fileInput*/
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
 	isLightMode,
-	assignIsLightMode
+	assignIsLightMode,
+	fileReader,
+	resetFileInput
 };
 /*Export*/

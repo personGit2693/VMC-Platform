@@ -31,6 +31,7 @@ function autoResizeTextarea(textarea) {
 /*For textarea auto resize*/
 
 /*For handling file selection*/
+/*
 document.getElementById('file-upload-id').addEventListener('change', function(event) {
 	const file = event.target.files[0];
 	const fileReader = new FileReader();
@@ -57,8 +58,6 @@ document.getElementById('file-upload-id').addEventListener('change', function(ev
 
 		previewElement.src = event.target.result;
 
-		console.log(event.target.result);
-
 		const removeButton = document.createElement('button');
 		removeButton.textContent = 'x';
 		removeButton.classList.add('remove-file-button');
@@ -72,7 +71,9 @@ document.getElementById('file-upload-id').addEventListener('change', function(ev
 
 	fileReader.readAsDataURL(file);
 });
+*/
 
+/*
 function removeFilePreview() {
 	const fileInput = document.getElementById('file-upload-id');
 	const filePreviewContainer = document.getElementById('file-preview-container-id');
@@ -81,9 +82,11 @@ function removeFilePreview() {
 
 	filePreviewContainer.innerHTML = '';
 }
+*/
 /*For handling file selection*/
 
 /*Show / Hide toggle for comment section*/
+/*
 function toggleCommentSection() {
 	const commentSection = document.getElementById("comment-section-id");
 
@@ -93,6 +96,7 @@ function toggleCommentSection() {
 		commentSection.style.display = "none";
 	}
 }
+*/
 
 function toggleModalCommentSection() {
 	const modalCommentSection = document.getElementById("modal-comment-section-id");
@@ -106,6 +110,7 @@ function toggleModalCommentSection() {
 /*Show / Hide toggle for comment section*/
 
 /*For right side content controls / functions*/
+/*
 window.addEventListener('DOMContentLoaded', () => {
 	const burgerIcon = document.querySelector('.burger-icon');
 	const rightSideContent = document.querySelector('.right-side-container');
@@ -144,7 +149,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	window.addEventListener('resize', toggleRightSideContent);
 });
+*/
 /*For right side content controls / functions*/
+
 
 /*Show / Hide toggle for chat container*/
 document.querySelector('.chat-toggle-button').addEventListener('click', function() {

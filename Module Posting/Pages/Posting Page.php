@@ -537,7 +537,7 @@
 
 		<div class="top-right-menu">
 			<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>
-			<div class="topMenus burger-icon"><img src="../../src/burgericon.png"></div>
+			<div class="topMenus burger-icon" onclick="controller_Div_DisplayRightSideContent()"><img src="../../src/burgericon.png"></div>
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
 			<div class="user-profile">
@@ -645,7 +645,7 @@
 						</div>
 						
 						<label for="file-upload-id" class="custom-file-upload">Add a Photo or Video (optional)</label>
-						<input id="file-upload-id" type="file" style="display: none;">
+						<input id="file-upload-id" type="file" style="display: none;" onchange="controller_Btn_UploadFile(this)">
 
 						<div class="file-preview-container-class" id="file-preview-container-id"></div>
 
@@ -720,7 +720,7 @@
 								</div>
 							</div>
 
-							<div class="comment-count" onclick="toggleCommentSection()">4 comments</div>
+							<div class="comment-count" onclick="controller_Div_ToggleComments()">4 comments</div>
 						</div>
 
 						<div class="post-actions actions">
@@ -1424,6 +1424,9 @@
 	<!--_Controllers-->
 	<script type="module" src="../Client Side/Controller_Btn_ChangeMode.js"></script>
 	<script type="module" src="../Client Side/Controller_Textarea_ResizeTextArea.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_UploadFile.js"></script>
+	<script type="module" src="../Client Side/Controller_Div_ToggleComments.js"></script>
+	<script type="module" src="../Client Side/Controller_Div_DisplayRightSideContent.js"></script>
 	<!--_Controllers-->
 
 	<!--_Executor-->
