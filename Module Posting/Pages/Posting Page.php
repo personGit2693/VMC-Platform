@@ -88,7 +88,7 @@
 							</div>
 						</div>
 
-						<div class="comment-count" onclick="toggleModalCommentSection()">4 comments</div>
+						<div class="comment-count" onclick="controller_Div_ToggleModalComments()">4 comments</div>
 					</div>
 
 					<div class="posted-actions actions">
@@ -1426,6 +1426,7 @@
 	<script type="module" src="../Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_UploadFile.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_ToggleComments.js"></script>
+	<script type="module" src="../Client Side/Controller_Div_ToggleModalComments.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_DisplayRightSideContent.js"></script>
 	<!--_Controllers-->
 

@@ -1,5 +1,5 @@
 /*Import*/
-import {burgerIcon ,rightSideContent} from "./Elements_Page_Posting.js";
+import {img, burgerIcon ,rightSideContent} from "./Elements_Page_Posting.js";
 /*Import*/
 
 
@@ -10,6 +10,7 @@ function controller_Docs_ToggleRightSideContent(){
 	
 		rightSideContent.style.display = 'none';
 		burgerIcon.style.display = 'block';
+		img.src = '../../src/burgericon.png';
 
 	} else {
 

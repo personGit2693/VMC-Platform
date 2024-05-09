@@ -97,7 +97,7 @@ function toggleCommentSection() {
 	}
 }
 */
-
+/*
 function toggleModalCommentSection() {
 	const modalCommentSection = document.getElementById("modal-comment-section-id");
 
@@ -107,6 +107,7 @@ function toggleModalCommentSection() {
 		modalCommentSection.style.display = "none";
 	}
 }
+*/
 /*Show / Hide toggle for comment section*/
 
 /*For right side content controls / functions*/
@@ -114,11 +115,13 @@ function toggleModalCommentSection() {
 window.addEventListener('DOMContentLoaded', () => {
 	const burgerIcon = document.querySelector('.burger-icon');
 	const rightSideContent = document.querySelector('.right-side-container');
+	const img = burgerIcon.querySelector('img');
 
 	function toggleRightSideContent() {
 		if (window.innerWidth <= 1080) {
 			rightSideContent.style.display = 'none';
 			burgerIcon.style.display = 'block';
+			img.src = '../../src/burgericon.png';
 		} else {
 			rightSideContent.style.display = 'block';
 			burgerIcon.style.display = 'none';
@@ -126,8 +129,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function toggleIcon() {
-		const img = burgerIcon.querySelector('img');
-
 		if (img.src.includes('burgericon.png')) {
 			img.src = '../../src/burgericon_active.png';
 		} else {
