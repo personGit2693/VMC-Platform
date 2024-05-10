@@ -1,0 +1,1 @@
+export const passwordInput = document.getElementById(inputId);

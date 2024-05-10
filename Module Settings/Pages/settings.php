@@ -194,51 +194,51 @@
 					<!--Login Credentials Reset-->
 					<div id="SettingsTitle_id">Change Username & Password</div>
 					<div class="cusInputs_RoClass">					
-						<input type="text" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+						<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
 						<div class="placeholdme_RoClass">Old Username</div>
 					</div>
 
 					<div class="passwordAndCheckPasswordWrap_Class">
 						<div class="cusInputs_RoClass">					
-							<input id="inputPassword-id" type="password" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+							<input id="inputPassword1" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
 							<div class="placeholdme_RoClass">Old Password</div>	
 						</div>
 						<div class="checkPasswordBtn_Class">
-							<button class="iconBtn_RoClass" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
+							<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword1')"></button>
 						</div>
 					</div>
 
 					<div class="cusInputs_RoClass">					
-						<input type="text" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+						<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
 						<div class="placeholdme_RoClass">New Username</div>
 					</div>
 
 					<div class="passwordAndCheckPasswordWrap_Class">
 						<div class="cusInputs_RoClass">					
-							<input id="inputPassword-id" type="password" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+							<input id="inputPassword2" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
 							<div class="placeholdme_RoClass">New Password</div>	
 						</div>
 						<div class="checkPasswordBtn_Class">
-							<button class="iconBtn_RoClass" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
+							<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword2')"></button>
 						</div>
 					</div>
 
 					<div class="passwordAndCheckPasswordWrap_Class">
 						<div class="cusInputs_RoClass">					
-							<input id="inputPassword-id" type="password" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+							<input id="inputPassword3" type="password" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
 							<div class="placeholdme_RoClass">Confirm New Password</div>	
 						</div>
 						<div class="checkPasswordBtn_Class">
-							<button class="iconBtn_RoClass" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
+							<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword3')"></button>
 						</div>
 					</div>
 
 					<div class="cusInputs_RoClass">					
-						<input type="text" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
+						<input type="text" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
 						<div class="placeholdme_RoClass">Associated Email Address</div>
 					</div>
 
-					<!--Reset Button-->
+					<!--Reset Button-->		
 					<div>
 						<div id="changeCredentials_id"><button class="normButton_RoClass">Change Username and Password</button></div>
 					</div>
@@ -321,7 +321,26 @@
 			<!--End Footer-->				
 		</div> 
 	</div>
-<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
-<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+
+<!--Javascripts-->
+
+	<!--_Dependencies-->
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+	<!--_Dependencies-->
+
+	<!--_Hector JS-->
+	<script src="../Client Side/Module_Settings.js"></script>
+	<!--_Hector JS-->
+
+	<!--_Controllers--
+	<script type="module" src="../Client Side/Controller_Btn_togglePasswordVisibility.js"></script>
+	_Controllers-->
+
+	<!--_Executor-->
+	<!--_Executor-->
+
+<!--Javascripts-->
+
 </body>
 </html>
