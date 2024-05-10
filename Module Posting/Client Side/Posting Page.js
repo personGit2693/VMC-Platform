@@ -22,13 +22,16 @@ toggleModeButton.addEventListener('click', () => {
 /*For Dark / Light Mode toggle*/
 
 /*For textarea auto resize*/
+/*
 function autoResizeTextarea(textarea) {
 	textarea.style.height = 'auto';
 	textarea.style.height = (textarea.scrollHeight) + 'px';
 }
+*/
 /*For textarea auto resize*/
 
 /*For handling file selection*/
+/*
 document.getElementById('file-upload-id').addEventListener('change', function(event) {
 	const file = event.target.files[0];
 	const fileReader = new FileReader();
@@ -63,12 +66,14 @@ document.getElementById('file-upload-id').addEventListener('change', function(ev
 		});
 
 		filePreviewContainer.appendChild(previewElement);
-		filePreviewContainer.appendChild(removeButton);
-	};
+		filePreviewContainer.appendChild(removeButton);		
+	};	
 
 	fileReader.readAsDataURL(file);
 });
+*/
 
+/*
 function removeFilePreview() {
 	const fileInput = document.getElementById('file-upload-id');
 	const filePreviewContainer = document.getElementById('file-preview-container-id');
@@ -77,9 +82,11 @@ function removeFilePreview() {
 
 	filePreviewContainer.innerHTML = '';
 }
+*/
 /*For handling file selection*/
 
 /*Show / Hide toggle for comment section*/
+/*
 function toggleCommentSection() {
 	const commentSection = document.getElementById("comment-section-id");
 
@@ -89,7 +96,8 @@ function toggleCommentSection() {
 		commentSection.style.display = "none";
 	}
 }
-
+*/
+/*
 function toggleModalCommentSection() {
 	const modalCommentSection = document.getElementById("modal-comment-section-id");
 
@@ -99,17 +107,21 @@ function toggleModalCommentSection() {
 		modalCommentSection.style.display = "none";
 	}
 }
+*/
 /*Show / Hide toggle for comment section*/
 
 /*For right side content controls / functions*/
+/*
 window.addEventListener('DOMContentLoaded', () => {
 	const burgerIcon = document.querySelector('.burger-icon');
 	const rightSideContent = document.querySelector('.right-side-container');
+	const img = burgerIcon.querySelector('img');
 
 	function toggleRightSideContent() {
 		if (window.innerWidth <= 1080) {
 			rightSideContent.style.display = 'none';
 			burgerIcon.style.display = 'block';
+			img.src = '../../src/burgericon.png';
 		} else {
 			rightSideContent.style.display = 'block';
 			burgerIcon.style.display = 'none';
@@ -117,8 +129,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function toggleIcon() {
-		const img = burgerIcon.querySelector('img');
-
 		if (img.src.includes('burgericon.png')) {
 			img.src = '../../src/burgericon_active.png';
 		} else {
@@ -140,7 +150,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	window.addEventListener('resize', toggleRightSideContent);
 });
+*/
 /*For right side content controls / functions*/
+
 
 /*Show / Hide toggle for chat container*/
 document.querySelector('.chat-toggle-button').addEventListener('click', function() {
@@ -274,7 +286,7 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-input-container">
 				<div class="textarea-chat-container">
-					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+					<textarea class="chat-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Type your message..."></textarea>
 				</div>
 				
 				<button class="chat-send-button">Send</button>
@@ -376,7 +388,7 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-input-container">
 				<div class="textarea-chat-container">
-					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+					<textarea class="chat-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Type your message..."></textarea>
 				</div>
 				
 				<button class="chat-send-button">Send</button>
@@ -478,7 +490,7 @@ function getSampleChatHistory(contactName) {
 
 			<div class="chat-input-container">
 				<div class="textarea-chat-container">
-					<textarea class="chat-input" rows="1" oninput="autoResizeTextarea(this)" placeholder="Type your message..."></textarea>
+					<textarea class="chat-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Type your message..."></textarea>
 				</div>
 				
 				<button class="chat-send-button">Send</button>
