@@ -22,7 +22,7 @@
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
 			<div class="user-profile">
-				<img src="../../src/ernesto.webp">
+				<img id="profilePic-id1" src="../../src/ernesto.webp">
 			</div>
 		</div>
 	</div>
@@ -141,14 +141,17 @@
 						<div id="picAndbuttonwrap_id">
 							<div id="imgWrapper_id"><img id="profilePic-id" src="../../src/ernesto.webp"></div>
 							<div id="changeProfilePicBtn_id">
-								<button class="normButton_RoClass">Change Profile Picture </button>
+								<button class="normButton_RoClass" type="button" onclick="openFileSelector()">
+									Change Profile Picture 
+								</button>
+								<input type="file" id="fileInput" style="display:none;" accept="image/*">
 							</div>
 						</div>
 						<!--Profile Picture and Change Button-->
 
 						<div class="nameAndTitle-Wrap">
 							<div class="nameEditWrap_class">
-								<div id="nameDisplay-id">Ernesto Dela Cruz</div>
+								<div id="nameDisplay-id" contenteditable="false">Ernesto Dela Cruz</div>
 								<div id="changeNameimgWrapper_id"><img id="changeNamePic-id" src="../../src/edit icon pen.png"></div>
 							</div>
 							<div id="changePositionDisplay_id">
