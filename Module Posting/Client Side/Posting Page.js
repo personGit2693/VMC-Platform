@@ -155,6 +155,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 /*Show / Hide toggle for chat container*/
+/*
 document.querySelector('.chat-toggle-button').addEventListener('click', function() {
 	var chatContainer = document.querySelector('.chat-container');
 
@@ -164,9 +165,11 @@ document.querySelector('.chat-toggle-button').addEventListener('click', function
 		chatContainer.style.display = 'none';
 	}
 });
+*/
 /*Show / Hide toggle for chat container*/
 
 /*Function for toggling the chat box container*/
+/*
 function toggleChatBox(contactName) {
 	var chatBox = document.querySelector('.chat-box-container');
 
@@ -184,13 +187,16 @@ function scrollChatBoxToBottom() {
 	var chatBox = document.querySelector('.chat-box');
 	chatBox.scrollTop = chatBox.scrollHeight;
 }
-
+*/
+/*
 function closeChatBox() {
 	var chatBox = document.querySelector('.chat-box-container');
 	chatBox.style.visibility = 'hidden';
 }
+*/
 
 // Sample chat history for demonstration purposes
+/*
 function getSampleChatHistory(contactName) {
 
 	if (contactName === 'Angelo Arellano') {
@@ -501,4 +507,5 @@ function getSampleChatHistory(contactName) {
 		`;
 	}
 }
+*/
 /*Function for toggling the chat box container*/

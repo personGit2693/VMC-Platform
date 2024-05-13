@@ -7,3 +7,5 @@ export const modalCommentSection = document.getElementById("modal-comment-sectio
 export const burgerIcon = document.querySelector('.burger-icon');
 export const rightSideContent = document.querySelector('.right-side-container');
 export const img = burgerIcon.querySelector('img');
+export const chatBox = document.querySelector('.chat-box-container');
+export const chatContainer = document.querySelector('.chat-container');
