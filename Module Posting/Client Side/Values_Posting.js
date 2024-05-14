@@ -9,7 +9,6 @@ import {fileInput} from "./Elements_Page_Posting.js"
 
 
 /*Prep export variables*/
-var isLightMode = localStorage.getItem('isLightMode') === 'true';
 const fileReader = new FileReader();
 var chatContactName = "";
 /*Prep export variables*/
@@ -23,13 +22,6 @@ function assignChatContactName(chatContactName_Param){
 /*_Assign chatContactName*/
 
 
-/*_Assign isLightMode*/
-function assignIsLightMode(newMode){
-	isLightMode = newMode;
-}
-/*_Assign isLightMode*/
-
-
 /*_Reset fileInput*/
 function resetFileInput(){
 	fileInput.value = '';
@@ -40,8 +32,6 @@ function resetFileInput(){
 
 /*Export*/
 export {
-	isLightMode,
-	assignIsLightMode,
 	fileReader,
 	resetFileInput,
 	chatContactName,

@@ -6587,7 +6587,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 @font-face {
   font-family: 'Binance PLEX';
-  src: url(../Fonts/Binance-PLEX.ttf); }
+  src: url("../../Global Fonts/Binance-PLEX.ttf"); }
 ::-webkit-scrollbar {
   width: 7px; }
 

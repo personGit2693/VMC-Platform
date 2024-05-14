@@ -1,6 +1,6 @@
 /*Import*/
-import {body} from "./Elements_Page_Posting.js";
-import {isLightMode, assignIsLightMode} from "./Values_Posting.js";
+import {body} from "./Elements_Global.js";
+import {isLightMode, assignIsLightMode} from "./Values_Global.js";
 import controller_Docs_SetMode from './Controller_Docs_SetMode.js';
 /*Import*/
 

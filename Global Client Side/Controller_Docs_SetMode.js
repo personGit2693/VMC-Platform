@@ -1,6 +1,6 @@
 /*Import*/
-import {body, toggleModeButton} from "./Elements_Page_Posting.js";
-import {isLightMode} from "./Values_Posting.js";
+import {body, toggleModeButton} from "./Elements_Global.js";
+import {isLightMode} from "./Values_Global.js";
 /*Import*/
 
 

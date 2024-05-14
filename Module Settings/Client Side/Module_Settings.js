@@ -54,6 +54,7 @@ nameDisplay.addEventListener('blur', function(){
 /*Edit Name*/
 
 /*Darkmode and Lightmode*/
+/*
 const toggleModeButton = document.getElementById('toggle-mode-id');
 const body = document.body;
 
@@ -72,3 +73,4 @@ toggleModeButton.addEventListener('click', () => {
 	setMode(newMode);
 	localStorage.setItem('isLightMode', newMode);
 });
+*/

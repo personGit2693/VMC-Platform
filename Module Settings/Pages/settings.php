@@ -18,11 +18,11 @@
 		</div>
 
 		<div class="top-right-menu">
-			<button class="toggle-mode-class" id="toggle-mode-id">Light Mode</button>
+			<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>			
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
 			<div class="user-profile">
-				<img id="profilePic-id1" src="../../src/ernesto.webp">
+				<img src="../../src/cat-profile.png">
 			</div>
 		</div>
 	</div>
@@ -114,21 +114,22 @@
 			</div>
 		</div>
 		<!---Side Menu---->
-
-		<!--Burger-->
+		
 		<div class="mainmecha_RoClass">
 			<!--Header-->
 			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:var(--bg-color-1); ">
+				<!--Burger-->
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
+				<!--Burger-->
 	
 				<!--Settings Content-Title-->
 				<div class="projTitleAndUserLogin_RoClass">
 					<div class="projTitleTxt_RoClass"><p class="setting_Title_Class">Settings</p></div>	
 				</div>
-				<!--End title-->
+				<!--Settings Content-Title-->
 				
 			</div>
-			<!--End Header--> 
+			<!--Header--> 
 
 			<div class="mainmechaCon_RoClass" style="color:var(--text-color-1);">
 				<!--Settings Content-->
@@ -156,7 +157,7 @@
 							</div>
 						</div>
 					</div>
-					<!--End Account Details-->
+					<!--Account Details-->
 
 					<!--Login Credentials Reset-->
 					<div class="changeCredentialsWrap_class">
@@ -211,11 +212,11 @@
 							<div>
 								<div id="changeCredentials_id"><button class="normButton_RoClass">Change Username and Password</button></div>
 							</div>
-						<!--End Reset Button-->
+						<!--Reset Button-->
 						</div>
 					</div>
 
-					<!--End Login Credentials Reset-->
+					<!--Login Credentials Reset-->
 					<!--2nd Div-->
 					<div class="settingsSeconddiv_Class">
 						<!--Preferences--->
@@ -254,7 +255,7 @@
 								</div>
 
 							</div><br><br>
-							<!---End Searches Preferences-->
+							<!--Searches Preferences-->
 							<div class="preferencesOptions_Class" style="margin-bottom:10px;">
 								<div><p class="notificationTitle_class">Notifications</p></div>
 								<div class="checkboxesNotification_Class">
@@ -277,23 +278,24 @@
 								</div>
 							</div>
 						</div>
-						<!--End Preferences-->	
+						<!--Preferences-->	
 					</div>
-					<!--End 2nd Div-->
+					<!--2nd Div-->
 				</div>
-				<!--End Settings Content-->
+				<!--Settings Content-->
 			</div>
-			<!---End Main Body-->
+			<!--Main Body-->
+
 			<!--Footer-->
 			<hr class="linethis_RoClass">
 			<div class=footerWrap_RoClass id="footerWrap_RoId">
 				<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 HRIS. All rights reserved.</span>
 			</div>
-			<!--End Footer-->				
+			<!--Footer-->				
 		</div> 
 	</div>
 
-<!--Javascripts-->
+	<!--Javascripts-->
 
 	<!--_Dependencies-->
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
@@ -304,14 +306,15 @@
 	<script src="../Client Side/Module_Settings.js"></script>
 	<!--_Hector JS-->
 
-	<!--_Controllers--
-	<script type="module" src="../Client Side/Controller_Btn_togglePasswordVisibility.js"></script>
-	--_Controllers-->
+	<!--_Controllers-->
+	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>	
+	<!--_Controllers-->
 
 	<!--_Executor-->
+	<script type="module" src="../Client Side/Executor_Page_Settings.js"></script>
 	<!--_Executor-->
 
-<!--Javascripts-->
+	<!--Javascripts-->
 
 </body>
 </html>
