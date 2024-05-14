@@ -116,9 +116,9 @@
 		<!---Side Menu---->
 
 		<!--Burger-->
-		<div class="mainmecha_RoClass" style=" --mainBodyBgColor:transparent; ">
+		<div class="mainmecha_RoClass">
 			<!--Header-->
-			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:#181919; ">
+			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:var(--bg-color-1); ">
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
 	
 				<!--Settings Content-Title-->
@@ -130,7 +130,7 @@
 			</div>
 			<!--End Header--> 
 
-			<div class="mainmechaCon_RoClass" style="color:white;">
+			<div class="mainmechaCon_RoClass" style="color:var(--text-color-1);">
 				<!--Settings Content-->
 				<div class="SettingsClass">
 					<!--Account Details-->
@@ -154,110 +154,75 @@
 								<div id="nameDisplay-id" contenteditable="false">Ernesto Dela Cruz</div>
 								<div id="changeNameimgWrapper_id"><img id="changeNamePic-id" src="../../src/edit icon pen.png"></div>
 							</div>
-							<div id="changePositionDisplay_id">
-								<div class="selectDropdownWrap_RoClass">
-									<input type="hidden" class="selectedOptValue_RoClass">
-									<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
-										<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_white.png');"></div>
-										<div class="displayedSelectedText_RoClass">Select Your Position</div>
-										<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/Chevron Down.png', 'Select Your Position')"></div>
-										<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
-									</div>
-									<!--Position Dropdown Options-->
-									<div class="selectDropdownOptionsWrap_RoClass">
-										<input type="text" placeholder="Search for your Position" class="searchOpts_RoClass">
-										<div class="selectDropdownOptsArea_RoClass">
-											<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
-												<input type="hidden" class="optValue_RoClass" value="Opt1">
-												<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
-												<div class="optText_RoClass">CEO</div>
-											</div>
-											<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
-												<input type="hidden" class="optValue_RoClass" value="Opt2">
-												<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon.png');"></div>
-												<div class="optText_RoClass">Vice President of the Marketing Department</div>
-											</div>
-											<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
-												<input type="hidden" class="optValue_RoClass" value="Opt2">
-												<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_white.png');"></div>
-												<div class="optText_RoClass">Videographer</div>
-											</div>
-											<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
-												<input type="hidden" class="optValue_RoClass" value="Opt2">
-												<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_white.png');"></div>
-												<div class="optText_RoClass">Assistant Coordinator</div>
-											</div>
-										</div>
-									</div>
-									<!--End Position Dropdown Options-->
-
-								</div>
-							</div>
 						</div>
 					</div>
 					<!--End Account Details-->
 
 					<!--Login Credentials Reset-->
-					<div id="SettingsTitle_id">Change Username & Password</div>
-					<div class="cusInputs_RoClass">					
-						<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-						<div class="placeholdme_RoClass">Old Username</div>
-					</div>
+					<div class="changeCredentialsWrap_class">
+						<div id="SettingsTitle_id">Change Username & Password</div>
+						<div class="inputBoxesWrap_class">
+							<div class="cusInputs_RoClass">					
+								<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
+								<div class="placeholdme_RoClass">Old Username</div>
+							</div>
 
-					<div class="passwordAndCheckPasswordWrap_Class">
-						<div class="cusInputs_RoClass">					
-							<input id="inputPassword1" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-							<div class="placeholdme_RoClass">Old Password</div>	
-						</div>
-						<div class="checkPasswordBtn_Class">
-							<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword1')"></button>
-						</div>
-					</div>
+							<div class="passwordAndCheckPasswordWrap_Class">
+								<div class="cusInputs_RoClass">					
+									<input id="inputPassword1" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
+									<div class="placeholdme_RoClass">Old Password</div>	
+								</div>
+								<div class="checkPasswordBtn_Class">
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword1')"></button>
+								</div>
+							</div>
 
-					<div class="cusInputs_RoClass">					
-						<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-						<div class="placeholdme_RoClass">New Username</div>
-					</div>
+							<div class="cusInputs_RoClass">					
+								<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
+								<div class="placeholdme_RoClass">New Username</div>
+							</div>
 
-					<div class="passwordAndCheckPasswordWrap_Class">
-						<div class="cusInputs_RoClass">					
-							<input id="inputPassword2" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-							<div class="placeholdme_RoClass">New Password</div>	
-						</div>
-						<div class="checkPasswordBtn_Class">
-							<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword2')"></button>
-						</div>
-					</div>
+							<div class="passwordAndCheckPasswordWrap_Class">
+								<div class="cusInputs_RoClass">					
+									<input id="inputPassword2" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
+									<div class="placeholdme_RoClass">New Password</div>	
+								</div>
+								<div class="checkPasswordBtn_Class">
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword2')"></button>
+								</div>
+							</div>
 
-					<div class="passwordAndCheckPasswordWrap_Class">
-						<div class="cusInputs_RoClass">					
-							<input id="inputPassword3" type="password" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
-							<div class="placeholdme_RoClass">Confirm New Password</div>	
-						</div>
-						<div class="checkPasswordBtn_Class">
-							<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword3')"></button>
-						</div>
-					</div>
+							<div class="passwordAndCheckPasswordWrap_Class">
+								<div class="cusInputs_RoClass">					
+									<input id="inputPassword3" type="password" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
+									<div class="placeholdme_RoClass">Confirm New Password</div>	
+								</div>
+								<div class="checkPasswordBtn_Class">
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword3')"></button>
+								</div>
+							</div>
 
-					<div class="cusInputs_RoClass">					
-						<input type="text" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
-						<div class="placeholdme_RoClass">Associated Email Address</div>
-					</div>
+							<div class="cusInputs_RoClass">					
+								<input type="text" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
+								<div class="placeholdme_RoClass">Associated Email Address</div>
+							</div>
 
-					<!--Reset Button-->		
-					<div>
-						<div id="changeCredentials_id"><button class="normButton_RoClass">Change Username and Password</button></div>
+							<!--Reset Button-->		
+							<div>
+								<div id="changeCredentials_id"><button class="normButton_RoClass">Change Username and Password</button></div>
+							</div>
+						<!--End Reset Button-->
+						</div>
 					</div>
-					<!--End Reset Button-->
 
 					<!--End Login Credentials Reset-->
 					<!--2nd Div-->
 					<div class="settingsSeconddiv_Class">
 						<!--Preferences--->
 						<div class="settingsPreferencesControl_Class">Preferences</div><br>
-							<!---Light and Dark Mode-->
+							<!---Searches Preferences-->
 							<div class="preferencesOptions_Class">
-								<div style="color:yellow;">Keep Searches For</div>
+								<div><p class="radioChoicesTitle">Keep Searches For</p></div>
 								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
 									<label for=" circleRadioBtn1 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
 									<input type="radio" id=" circleRadioBtn1 " name="circlesample" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' yellow ')" autocomplete="off">
@@ -289,9 +254,9 @@
 								</div>
 
 							</div><br><br>
-							<!---End Light and Dark Mode-->
+							<!---End Searches Preferences-->
 							<div class="preferencesOptions_Class" style="margin-bottom:10px;">
-								<div style="color:yellow;">Notifications</div>
+								<div><p class="notificationTitle_class">Notifications</p></div>
 								<div class="checkboxesNotification_Class">
 							
 									<div class="cusCheckBoxPaper_RoClass">
@@ -341,7 +306,7 @@
 
 	<!--_Controllers--
 	<script type="module" src="../Client Side/Controller_Btn_togglePasswordVisibility.js"></script>
-	_Controllers-->
+	--_Controllers-->
 
 	<!--_Executor-->
 	<!--_Executor-->

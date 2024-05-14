@@ -4,14 +4,14 @@
 
 	--normBtnPadding: 1px;
 	--normBtnBorderWidth: 1px;
-	--normBtnBorderColor: white;
+	--normBtnBorderColor: var(--text-color-4); /*white*/;
 	--normBtnRadius: 6px;
 	--normBtnFWeight: 500px;
 	--normBtnBgColor: #2058B2;
 	--normBtnHovActFColor: red;
 	--normBtnHovActBgColor: white;
 
-	--customInputColor: var(--text-color-1);
+	--customInputColor: var(--text-color-4); /*white*/
 	--customInputFSize: 10px;
 	--customInputAnimFSize: 10px;
 
@@ -23,12 +23,12 @@
 
 	--selectDropdownWidth: auto; 		
 	--selectDropdownBorderWidth: 1px;
-	--selectDropdownBorderColor: var(--bg-color-1);
+	--selectDropdownBorderColor: var(--bg-color-10); /*gray*/
 	--selectDropdownBorderRadius: 99px;
-	--selectDropdownBgColor:var(--bg-color-1);		
+	--selectDropdownBgColor:var(--bg-color-11); /*black*/		
 	--selectDropdownIconSize:14px;
 	--selectDropdownFSize: auto;
-	--selectDropdownFColor: var(--text-color-1);
+	--selectDropdownFColor: var(--text-color-4); /*white*/
 	--selectDropdownChevronSize: 20px;
 	--searchOptsBgColor: white;
 	--searchOptsFColor: black;
@@ -39,16 +39,16 @@
 	--selectDropdownResetBtnSize: 20px;
 
 	--cusRadioBorderWidth: 1px;
-	--cusRadioBorderColor: white;
+	--cusRadioBorderColor: var(--border-color-1);
 	--cusRadioWidthHeight: 10px;
 	--cusRadioBgColor: gray;	
 	--cusRadioFWeight: 200px;
 	--cusRadioFsize: 15px;
-	--cusRadioFColor: var(--text-color-1);
+	--cusRadioFColor: var(--text-color-4);
 
 	--cusCheckboxFWeight: 500;
 	--custCheckboxFSize: 17px;
-	--cusCheckboxColor: var(--text-color-1);
+	--cusCheckboxColor: var(--text-color-4);
 	--cusCheckboxWidthHeight: 15px;
 	--cusCheckboxBorderWidth: 1px;
 	--cusCheckboxBorderColor: gray;
@@ -60,36 +60,36 @@
 }
 
 @mixin dark-mode {
-	--bg-color-4: #242526;
-	--bg-color-10: #303031;
-	--bg-color-11: #5D5E61;
-	--bg-color-12: #161617;
-	--text-color-3: #CDD1D5;
-	--text-color-4: #ADB1B3;
-	--text-color-5: #E3E5E9;
-	--border-color-2: #121413;
-	--border-color-3: #18191A;
-	--border-color-4: #444749;
-	--border-color-5: #353637;
-	--border-color-6: #242526;
+	--bg-color-4:#ffffff; /*white*/
+	--bg-color-10:#808080; /*gray*/
+	--bg-color-11:#000000; /*black*/
+	--bg-color-12:#a9a9a9; /*lightgray*/
+	--text-color-3:
+	--text-color-4:#ffffff; /*white*/
+	--text-color-5:#ffff00; /*yellow*/
+	--border-color-2:
+	--border-color-3:
+	--border-color-4:#ffffff; /*white*/
+	--border-color-5:
+	--border-color-6:
 }
 
 /*Root*/
 /*************************************************************************************/
 /*General*/
 @mixin light-mode {
-	--bg-color-4: #FFFFFF;
-	--bg-color-10: #E4E6E8;
-	--bg-color-11: #FFFFFF;
-	--bg-color-12: #999999;
-	--text-color-3: #5F6266;
-	--text-color-4: #6E6F72;
-	--text-color-5: #000000;
-	--border-color-2: #E2E4E7;
-	--border-color-3: #F0F2F5;
-	--border-color-4: #CED0D4;
-	--border-color-5: #E4E4E4;
-	--border-color-6: #FFFFFF;
+	--bg-color-4: #000000; /*black*/
+	--bg-color-10:#a9a9a9; /*darkgray*/
+	--bg-color-11: #ffffff; /*white*/
+	--bg-color-12:#808080; /*gray*/
+	--text-color-3: 
+	--text-color-4:#000000; /*black*/ 
+	--text-color-5: #0000ff; /*blue*/
+	--border-color-2:
+	--border-color-3: 
+	--border-color-4:#808080; /*gray*/
+	--border-color-5:
+	--border-color-6:
 }
 
 @mixin font-face{
@@ -102,14 +102,22 @@
 	overflow: auto;
 }
 
+@mixin projTitleAndUserLogin_RoClass{
+	background-color: var(--bg-color-1);
+}
+
 @mixin setting_Title_Class {
-	color:var(--text-color-1);
+	color:var(--text-color-1); /*white*/
 	font-size:30px;
 }
 
 @mixin userLoginDetails_RoClass {
 	font-size:20px;
 	font-family: myOwnFont;
+}
+
+@mixin mainmechaCon_RoClass{
+	color:var(--text-color-4); /*white*/
 }
 
 @mixin SettingsClass{
@@ -120,6 +128,7 @@
 }
 
 @mixin SettingsTitle_id{
+	color:var(--text-color-4);
 	width:100%;
 	margin-bottom:5px;
 }
@@ -147,7 +156,7 @@
 	flex-direction:column;
 	align-items: center;
 	height:10%;
-	border-bottom:1px solid violet;
+	margin-bottom:10px;
 }
 
 @mixin picAndbuttonwrap_id{
@@ -161,7 +170,7 @@
 @mixin imgWrapper_id{
 	width:60%;
 	height:80%;
-	border:2px solid white;
+	border:2px solid var(--border-color-7);
 	border-radius:6px;
 }
 
@@ -220,7 +229,7 @@
 
 @mixin selectDropdownOptionsWrap_RoClass{
 	z-index: 99;
-	border:1px solid gray;
+	border:1px solid var(--bg-color-11);
 }
 
 @mixin displayedSelectedText_RoClass{
@@ -248,9 +257,21 @@
 	margin-top:10px;
 }
 
+@mixin changeCredentialsWrap_class{
+	display:flex;
+	flex-direction:column;
+	padding:10px;
+	box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
+}
+
+@mixin inputBoxesWrap_class{
+	display:flex;
+	flex-direction:column;
+}
+
 @mixin cusInputs_RoClass{
 	margin:10px;
-	width:60%;
+	width:600px;
 	display:flex;
 	flex-direction:row;
 }
@@ -258,17 +279,17 @@
 @mixin changeCredentials_id{
 	margin:10px;
 	padding-bottom:10px;
-	border-bottom:1px solid violet;
 }
 
 @mixin placeholdme_RoClass{
-	width: 60%;
+	width: 200px;
 }
 
 @mixin settingsSeconddiv_Class{
 	height:auto;
-	border:1px solid white;
+	border:1px solid var(--border-color-7);
 	border-radius:6px;
+	box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
 	padding:auto;
 }
 
@@ -293,9 +314,18 @@
 	margin:auto;
 	width:40%;
 	padding:10px;
-	border:1px solid gray;
+	border:1px solid var(--bg-color-11);
+	box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
 	border-radius:6px;
 	justify-content: space-around;
+}
+
+@mixin radioChoicesTitle{
+	color:var(--text-color-5);
+}
+
+@mixin notificationTitle_class{
+	color:var(--text-color-5);
 }
 
 /*************************************************************************************/
@@ -331,4 +361,23 @@
 	font-size:10px;
 	text-align:center;
 	overflow:visible;
+}
+
+@mixin mobile_changeCredentialsWrap_class{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	margin-bottom:10px;
+	align-items: center;
+	border:1px solid var(--border-color-7);
+	border-radius:6px;
+	box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
+
+}
+
+@mixin mobile_cusInputs_RoClass{
+	margin:10px;
+	width:200px;
+	display:flex;
+	flex-direction:row;
 }

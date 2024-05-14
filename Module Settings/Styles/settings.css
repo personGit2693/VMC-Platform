@@ -3260,13 +3260,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 :root {
   --normBtnPadding: 1px;
   --normBtnBorderWidth: 1px;
-  --normBtnBorderColor: white;
+  --normBtnBorderColor: var(--text-color-4);
+  /*white*/
   --normBtnRadius: 6px;
   --normBtnFWeight: 500px;
   --normBtnBgColor: #2058B2;
   --normBtnHovActFColor: red;
   --normBtnHovActBgColor: white;
-  --customInputColor: var(--text-color-1);
+  --customInputColor: var(--text-color-4);
+  /*white*/
   --customInputFSize: 10px;
   --customInputAnimFSize: 10px;
   --iconBtnWidth: 200px;
@@ -3276,12 +3278,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --iconBtnHeight: 30px;
   --selectDropdownWidth: auto;
   --selectDropdownBorderWidth: 1px;
-  --selectDropdownBorderColor: var(--bg-color-1);
+  --selectDropdownBorderColor: var(--bg-color-10);
+  /*gray*/
   --selectDropdownBorderRadius: 99px;
-  --selectDropdownBgColor:var(--bg-color-1);
+  --selectDropdownBgColor:var(--bg-color-11);
+  /*black*/
   --selectDropdownIconSize:14px;
   --selectDropdownFSize: auto;
-  --selectDropdownFColor: var(--text-color-1);
+  --selectDropdownFColor: var(--text-color-4);
+  /*white*/
   --selectDropdownChevronSize: 20px;
   --searchOptsBgColor: white;
   --searchOptsFColor: black;
@@ -3291,15 +3296,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --optWrapThumbBgColor: red;
   --selectDropdownResetBtnSize: 20px;
   --cusRadioBorderWidth: 1px;
-  --cusRadioBorderColor: white;
+  --cusRadioBorderColor: var(--border-color-1);
   --cusRadioWidthHeight: 10px;
   --cusRadioBgColor: gray;
   --cusRadioFWeight: 200px;
   --cusRadioFsize: 15px;
-  --cusRadioFColor: var(--text-color-1);
+  --cusRadioFColor: var(--text-color-4);
   --cusCheckboxFWeight: 500;
   --custCheckboxFSize: 17px;
-  --cusCheckboxColor: var(--text-color-1);
+  --cusCheckboxColor: var(--text-color-4);
   --cusCheckboxWidthHeight: 15px;
   --cusCheckboxBorderWidth: 1px;
   --cusCheckboxBorderColor: gray;
@@ -3607,13 +3612,21 @@ body {
   font-family: myOwnFont;
   overflow: auto; }
 
+.projTitleAndUserLogin_RoClass {
+  background-color: var(--bg-color-1); }
+
 .setting_Title_Class {
   color: var(--text-color-1);
+  /*white*/
   font-size: 30px; }
 
 .userLogin_RoClass .userLoginDetails_RoClass {
   font-size: 20px;
   font-family: myOwnFont; }
+
+.mainmechaCon_RoClass {
+  color: var(--text-color-4);
+  /*white*/ }
 
 .mainmechaCon_RoClass .SettingsClass {
   display: flex;
@@ -3622,6 +3635,7 @@ body {
   margin: 10px; }
 
 .SettingsClass #SettingsTitle_id {
+  color: var(--text-color-4);
   width: 100%;
   margin-bottom: 5px; }
 
@@ -3645,7 +3659,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 10%;
-  border-bottom: 1px solid violet; }
+  margin-bottom: 10px; }
 
 #profilePic-Wrap #profilePic-id {
   width: 100%;
@@ -3662,7 +3676,7 @@ body {
 #picAndbuttonwrap_id #imgWrapper_id {
   width: 60%;
   height: 80%;
-  border: 2px solid white;
+  border: 2px solid var(--border-color-7);
   border-radius: 6px; }
 
 #imgWrapper_id #profilePic-id {
@@ -3712,7 +3726,7 @@ body {
 
 .selectDropdownOptionsWrap_RoClass {
   z-index: 99;
-  border: 1px solid gray; }
+  border: 1px solid var(--bg-color-11); }
 
 .selectDropdownWrap_RoClass .displayedSelectedText_RoClass {
   font-size: 20px;
@@ -3737,22 +3751,28 @@ body {
 
 .SettingsClass .cusInputs_RoClass {
   margin: 10px;
-  width: 60%;
+  width: 600px;
   display: flex;
   flex-direction: row; }
 
+.changeCredentialsWrap_class {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9; }
+
 .SettingsClass #changeCredentials_id {
   margin: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid violet; }
+  padding-bottom: 10px; }
 
 .placeholdme_RoClass {
-  width: 60%; }
+  width: 200px; }
 
 .settingsSeconddiv_Class {
   height: auto;
-  border: 1px solid white;
+  border: 1px solid var(--border-color-7);
   border-radius: 6px;
+  box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
   padding: auto; }
 
 .checkboxesNotification_Class {
@@ -3773,9 +3793,16 @@ body {
   margin: auto;
   width: 40%;
   padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid var(--bg-color-11);
+  box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
   border-radius: 6px;
   justify-content: space-around; }
+
+.radioChoicesTitle {
+  color: var(--text-color-5); }
+
+.notificationTitle_class {
+  color: var(--text-color-5); }
 
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3813,7 +3840,27 @@ body {
   .selectDropdownWrap_RoClass .displayedSelectedText_RoClass {
     font-size: 10px;
     text-align: center;
-    overflow: visible; } }
+    overflow: visible; }
+
+  .changeCredentialsWrap_class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 1px solid var(--border-color-7);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9; }
+
+  .changeCredentialsWrap_class .inputBoxesWrap_class {
+    display: flex;
+    flex-direction: column; }
+
+  .SettingsClass .cusInputs_RoClass {
+    margin: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: row; } }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

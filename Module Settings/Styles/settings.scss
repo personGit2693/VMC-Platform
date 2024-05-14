@@ -232,12 +232,20 @@ body{
 	@include body;
 }
 
+.projTitleAndUserLogin_RoClass{
+	@include projTitleAndUserLogin_RoClass;
+}
+
 .setting_Title_Class{
 	@include setting_Title_Class;
 }
 
 .userLogin_RoClass .userLoginDetails_RoClass{
 	@include userLoginDetails_RoClass;
+}
+
+.mainmechaCon_RoClass{
+	@include mainmechaCon_RoClass;
 }
 
 .mainmechaCon_RoClass .SettingsClass{
@@ -335,6 +343,10 @@ body{
 	@include cusInputs_RoClass;
 	
 }
+
+.changeCredentialsWrap_class{
+	@include changeCredentialsWrap_class;
+}
 .SettingsClass #changeCredentials_id{
 	@include changeCredentials_id;
 }
@@ -362,6 +374,14 @@ body{
 
 .preferencesOptions_Class{
 	@include preferencesOptions_Class;
+}
+
+.radioChoicesTitle{
+	@include radioChoicesTitle;
+}
+
+.notificationTitle_class{
+	@include notificationTitle_class;
 }
 
 /***********************************************************************************************************************************************************************************************************/
@@ -403,6 +423,19 @@ body{
 .selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
 	@include mobile_displayedSelectedText_RoClass;
 
+}
+
+.changeCredentialsWrap_class{
+	@include mobile_changeCredentialsWrap_class;
+}
+
+.changeCredentialsWrap_class .inputBoxesWrap_class{
+	@include inputBoxesWrap_class;
+
+}
+
+.SettingsClass .cusInputs_RoClass{
+	@include mobile_cusInputs_RoClass;
 }
 
 }

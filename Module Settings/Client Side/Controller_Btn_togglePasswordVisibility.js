@@ -6,7 +6,7 @@ import controller_Docs_SetMode from './Controller_Docs_SetMode.js';
 
 
 /*Controller*/
-function togglePasswordVisibility(inputId) {
+function controller_Btn_togglePasswordVisibility(inputId) {
 	const passwordInput = document.getElementById(inputId);
 
 	if (passwordInput.type === "password"){

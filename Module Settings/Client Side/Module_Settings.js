@@ -52,3 +52,23 @@ nameDisplay.addEventListener('blur', function(){
 	nameDisplay.contentEditable = false;
 });
 /*Edit Name*/
+
+/*Darkmode and Lightmode*/
+const toggleModeButton = document.getElementById('toggle-mode-id');
+const body = document.body;
+
+function setMode(isLightMode) {
+	body.classList.toggle('light-mode', isLightMode);
+	toggleModeButton.textContent = isLightMode ? 'Dark Mode' : 'Light Mode';
+}
+
+const isLightMode = localStorage.getItem('isLightMode') === 'true';
+
+setMode(isLightMode);
+
+toggleModeButton.addEventListener('click', () => {
+	const newMode = !body.classList.contains('light-mode');
+
+	setMode(newMode);
+	localStorage.setItem('isLightMode', newMode);
+});
