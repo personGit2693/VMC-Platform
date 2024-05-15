@@ -1,7 +1,7 @@
 /*Import*/
 import {passwordInput} from "./Elements_Page_Setttings.js";
 import {passwordInput} from "./Values_Settings.js";
-import controller_Docs_SetMode from './Controller_Docs_SetMode.js';
+import controller_Btn_togglePasswordVisibility from './Controller_Btn_togglePasswordVisibility.js;
 /*Import*/
 
 
