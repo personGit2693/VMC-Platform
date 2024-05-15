@@ -6,7 +6,7 @@ import controller_Docs_DisplaySelectedFile from "./Controller_Docs_DisplaySelect
 
 
 /*Controller*/
-function controller_Btn_UploadFile(inputFile){
+function controller_InputFile_UploadFile(inputFile){
 
 	const file = inputFile.files[0];
 
@@ -20,10 +20,10 @@ function controller_Btn_UploadFile(inputFile){
 
 
 /*Declare Global*/
-window.controller_Btn_UploadFile = controller_Btn_UploadFile;
+window.controller_InputFile_UploadFile = controller_InputFile_UploadFile;
 /*Declare Global*/
 
 
 /*Export*/
-export default controller_Btn_UploadFile;
+export default controller_InputFile_UploadFile;
 /*Export*/

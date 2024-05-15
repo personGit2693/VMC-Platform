@@ -43,7 +43,7 @@
 				</div>
 
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-					<a href="http://localhost/VMC Platform/Module Access/Pages/Access Page.php" target="_blank" class="subNavMenu_RoClass">				
+					<a href="http://localhost/VMC Platform/Module Registration/Pages/Page_Access.php" target="_blank" class="subNavMenu_RoClass">				
 						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
@@ -127,7 +127,7 @@
 						</div>
 						
 						<label for="file-upload-id" class="custom-file-upload">Add a Photo or Video (optional)</label>
-						<input id="file-upload-id" type="file" style="display: none;" onchange="controller_Btn_UploadFile(this)">
+						<input id="file-upload-id" type="file" style="display: none;" onchange="controller_InputFile_UploadFile(this)">
 
 						<div class="file-preview-container-class" id="file-preview-container-id"></div>
 
@@ -1413,7 +1413,6 @@
 	<!--_Modal Post-->
 	<!--Modals-->
 
-
 	<!--Javascripts-->
 	<!--_Dependencies-->
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
@@ -1427,7 +1426,7 @@
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
 	<script type="module" src="../Client Side/Controller_Textarea_ResizeTextArea.js"></script>
-	<script type="module" src="../Client Side/Controller_Btn_UploadFile.js"></script>
+	<script type="module" src="../Client Side/Controller_InputFile_UploadFile.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_ToggleComments.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_ToggleModalComments.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_DisplayRightSideContent.js"></script>
