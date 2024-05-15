@@ -18,7 +18,7 @@ function togglePasswordVisibility(inputId) {
 
 /*change profile pic*/
 
-function openFileSelector(){
+function controller_Btn_OpenFileSelector(){
 	document.getElementById('fileInput').click();
 }
 
@@ -42,6 +42,7 @@ if (fileInput){
 /*change profile pic*/
 
 /*Edit Name*/
+/*
 const nameDisplay = document.getElementById('nameDisplay-id');
 const changeNamePic = document.getElementById('changeNamePic-id');
 
@@ -53,6 +54,8 @@ changeNamePic.addEventListener('click', function(){
 nameDisplay.addEventListener('blur', function(){
 	nameDisplay.contentEditable = false;
 });
+
+*/
 /*Edit Name*/
 
 /*Darkmode and Lightmode*/

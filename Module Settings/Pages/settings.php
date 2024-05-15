@@ -142,7 +142,7 @@
 						<div id="picAndbuttonwrap_id">
 							<div id="imgWrapper_id"><img id="profilePic-id" src="../../src/ernesto.webp"></div>
 							<div id="changeProfilePicBtn_id">
-								<button class="normButton_RoClass" type="button" onclick="openFileSelector()">
+								<button class="normButton_RoClass" type="button" onclick="controller_Btn_OpenFileSelector()">
 									Change Profile Picture 
 								</button>
 								<input type="file" id="fileInput" style="display:none;" accept="image/*">
@@ -294,7 +294,8 @@
 
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
-	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>	
+	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
+	<!--script type="module" src="../Client Side/Controller_Btn_OpenFileSelector.js"></script-->	
 	<!--_Controllers-->
 
 	<!--_Executor-->
