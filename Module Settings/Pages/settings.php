@@ -140,12 +140,15 @@
 
 						<!--Profile Picture and Change Button-->
 						<div id="picAndbuttonwrap_id">
-							<div id="imgWrapper_id"><img id="profilePic-id" src="../../src/ernesto.webp"></div>
+							<div id="imgWrapper_id"><label for="fileInput"><img id="profilePic-id" src="../../src/ernesto.webp"></label></div>
 							<div id="changeProfilePicBtn_id">
-								<button class="normButton_RoClass" type="button" onclick="controller_Btn_OpenFileSelector()">
+								<!--
+								<button class="normButton_RoClass" type="button">
 									Change Profile Picture 
 								</button>
-								<input type="file" id="fileInput" style="display:none;" accept="image/*">
+								-->
+								<label for="fileInput">Change Profile Picture</label>
+								<input type="file" id="fileInput" style="display:none;" accept="image/*" onchange="controller_InputFile_ChangeProfilePic(this)">
 							</div>
 						</div>
 						<!--Profile Picture and Change Button-->
@@ -203,12 +206,12 @@
 					</div>
 
 					<!--Login Credentials Reset-->
-					<!--2nd Div-->
+					<!--2nd Div
 					<div class="settingsSeconddiv_Class">
-						<!--Preferences--->
+						
 						<div class="settingsPreferencesControl_Class">Preferences</div><br>
-							<!---Searches Preferences-->
-							<!--<div class="preferencesOptions_Class">
+							
+							<div class="preferencesOptions_Class">
 								<div><p class="radioChoicesTitle">Keep Searches For</p></div>
 								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
 									<label for=" circleRadioBtn1 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
@@ -240,8 +243,9 @@
 									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">Default(See all searches for the whole year)</div>
 								</div>
 
-							</div><br><br>-->
-							<!--Searches Preferences-->
+							</div>
+							<br><br>
+							
 							<div class="preferencesOptions_Class" style="margin-bottom:10px;">
 								<div><p class="notificationTitle_class">Notifications</p></div>
 								<div class="checkboxesNotification_Class">
@@ -260,13 +264,13 @@
 										<label for="checkBoxBrowser_id">Receive Browser Notification:<div class="boxme_RoClass"><img src="../../src/DoneIcon.png"></div></label>
 										<input type="checkbox" id="checkBoxBrowser_id" onchange="checkCusCheckBox(this)" autocomplete="off">
 									</div>
-
 								</div>
 							</div>
+							
 						</div>
-						<!--Preferences-->	
+							
 					</div>
-					<!--2nd Div-->
+					2nd Div-->
 				</div>
 				<!--Settings Content-->
 			</div>
@@ -289,13 +293,13 @@
 	<!--_Dependencies-->
 
 	<!--_Hector JS-->
-	<script src="../Client Side/Module_Settings.js"></script>
+	<!--<script src="../Client Side/Module_Settings.js"></script>-->
 	<!--_Hector JS-->
 
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
-	<!--script type="module" src="../Client Side/Controller_Btn_OpenFileSelector.js"></script-->	
+	<script type="module" src="../Client Side/Controller_InputFile_ChangeProfilePic.js"></script>
 	<!--_Controllers-->
 
 	<!--_Executor-->

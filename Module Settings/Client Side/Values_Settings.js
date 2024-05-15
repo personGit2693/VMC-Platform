@@ -1,5 +1,5 @@
 /*Import*/
-import {passwordInput} from "./Elements_Page_Settings.js"
+
 /*Import*/
 
 
@@ -9,19 +9,17 @@ import {passwordInput} from "./Elements_Page_Settings.js"
 
 
 /*Prep export variables*/
-const passwordInput = document.getElementById(inputId);
+const fileReader = new FileReader();
 /*Prep export variables*/
 
 
 /*Assign, Reset, Populate*/
-/*_Assign passwordInput*/
-const passwordInput = document.getElementById(inputId);
-/*_Assign passwordInput*/
+
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
-	passwordInput
+	fileReader
 };
 /*Export*/

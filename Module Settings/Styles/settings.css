@@ -3369,7 +3369,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --footerFColor: #FFFFFF;
   /*Dark Mode (Default Style)*/ }
 
-/*Root End*/
+/*Root*/
 /*General Start*/
 .light-mode {
   --bg-color-1: #F0F2F5;
@@ -3511,7 +3511,7 @@ video {
   border: 1px solid var(--border-color-2);
   cursor: pointer; }
 
-/*Top Section End*/
+/*Top Section*/
 /*Mid Section Start*/
 #rolayout_RoId {
   height: calc(100% - 80px); }
@@ -3553,7 +3553,7 @@ video {
   background-color: white;
   border-radius: 50%; }
 
-/*Left Content End*/
+/*Left Content*/
 /*Mid Content Start*/
 .mainmecha_RoClass #burger_RoId {
   width: 40px;
@@ -3562,8 +3562,8 @@ video {
   border-radius: 10px;
   background-color: var(--bg-color-8); }
 
-/*Mid Content End*/
-/*Mid Section End*/
+/*Mid Content*/
+/*Mid Section*/
 /*Bottom Section / Footer Start*/
 #footerWrap_RoId {
   padding: 1px;
@@ -3577,8 +3577,8 @@ video {
   --footerFSize: 13px;
   font-weight: bold; }
 
-/*Bottom Section / Footer End*/
-/*General End*/
+/*Bottom Section / Footer*/
+/*General*/
 /*Mobile and Tablet Start*/
 @media (min-width: 0px) and (max-width: 1080px) {
   #rolayout_RoId {
@@ -3586,7 +3586,7 @@ video {
 
   #footerWrap_RoId {
     height: 50px; } }
-/*Mobile and Tablet End*/
+/*Mobile and Tablet*/
 /*Mobile Start*/
 @media all and (max-width: 641px) {
   .top-section .searchInput_RoClass {
@@ -3599,16 +3599,12 @@ video {
   .top-right-menu .toggle-mode-class {
     width: 50px;
     font-size: 12px; } }
-/*Mobile End*/
-/*Global Codes to Copy End*/
+/*Mobile*/
+/*Global Codes to Copy*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
-@font-face {
-  font-family: myOwnFont;
-  src: url("../../Global Fonts/Binance-PLEX.ttf"); }
 body {
   height: 100%;
-  font-family: myOwnFont;
   overflow: auto; }
 
 .projTitleAndUserLogin_RoClass {
@@ -3620,8 +3616,7 @@ body {
   font-size: 30px; }
 
 .userLogin_RoClass .userLoginDetails_RoClass {
-  font-size: 20px;
-  font-family: myOwnFont; }
+  font-size: 20px; }
 
 .mainmechaCon_RoClass {
   color: var(--text-color-4);

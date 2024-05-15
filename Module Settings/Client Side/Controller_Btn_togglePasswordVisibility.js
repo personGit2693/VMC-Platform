@@ -1,4 +1,5 @@
 /*Import*/
+
 /*Import*/
 
 
@@ -9,8 +10,7 @@ function controller_Btn_TogglePasswordVisibility(inputId){
 
 	if (passwordInput.type === "password"){
 		passwordInput.type = "text";
-	}
-	else{
+	}else{
 		passwordInput.type ="password";
 	}
 }

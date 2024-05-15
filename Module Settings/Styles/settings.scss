@@ -25,7 +25,7 @@
 	@include global_dark-mode;
 	/*Dark Mode (Default Style)*/
 }
-/*Root End*/
+/*Root*/
 
 /*General Start*/
 .light-mode {
@@ -130,7 +130,7 @@ video {
 .user-profile img {
 	@include global_user-profile-img;
 }
-/*Top Section End*/
+/*Top Section*/
 
 /*Mid Section Start*/
 #rolayout_RoId {
@@ -170,14 +170,14 @@ video {
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
 	@include global_chevronIconWrap_RoClass;
 }
-/*Left Content End*/
+/*Left Content*/
 
 /*Mid Content Start*/
 .mainmecha_RoClass #burger_RoId {
 	@include global_burger_RoId;
 }
-/*Mid Content End*/
-/*Mid Section End*/
+/*Mid Content*/
+/*Mid Section*/
 
 /*Bottom Section / Footer Start*/
 #footerWrap_RoId {
@@ -187,8 +187,8 @@ video {
 .footerWrap_RoClass #footerTxt_RoId {
 	@include global_footerTxt_RoId;
 }
-/*Bottom Section / Footer End*/
-/*General End*/
+/*Bottom Section / Footer*/
+/*General*/
 
 /*Mobile and Tablet Start*/
 @media (min-width:0px) and (max-width:1080px) {
@@ -200,7 +200,7 @@ video {
 		@include global_footerWrap_RoId_MobTab;	
 	}
 }
-/*Mobile and Tablet End*/
+/*Mobile and Tablet*/
 
 /*Mobile Start*/
 @media all and (max-width:641px) {
@@ -216,17 +216,13 @@ video {
 		@include global_toggle-mode-class_Mobile;
 	}
 }
-/*Mobile End*/
-/*Global Codes to Copy End*/
+/*Mobile*/
+/*Global Codes to Copy*/
 
 /***********************************************************************************************************************************************************************************************************/
 
 
 /***********************************************************************************************************************************************************************************************************/
-
-@font-face{
-	@include font-face;
-}
 
 body{
 	@include body;
