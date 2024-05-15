@@ -1,18 +1,15 @@
 /*Import*/
-import {passwordInput} from "./Elements_Page_Setttings.js";
-import {passwordInput} from "./Values_Settings.js";
-import controller_Btn_togglePasswordVisibility from './Controller_Btn_togglePasswordVisibility.js;
 /*Import*/
 
 
 /*Controller*/
-function controller_Btn_togglePasswordVisibility(inputId) {
+function controller_Btn_TogglePasswordVisibility(inputId){
+
 	const passwordInput = document.getElementById(inputId);
 
 	if (passwordInput.type === "password"){
 		passwordInput.type = "text";
 	}
-
 	else{
 		passwordInput.type ="password";
 	}
@@ -21,10 +18,10 @@ function controller_Btn_togglePasswordVisibility(inputId) {
 
 
 /*Declare Global*/
-window.controller_Btn_togglePasswordVisibility = controller_Btn_togglePasswordVisibility;
+window.controller_Btn_TogglePasswordVisibility = controller_Btn_TogglePasswordVisibility;
 /*Declare Global*/
 
 
 /*Export*/
-export default controller_Btn_togglePasswordVisibility;
+export default controller_Btn_TogglePasswordVisibility;
 /*Export*/

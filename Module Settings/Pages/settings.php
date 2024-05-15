@@ -22,7 +22,7 @@
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
 			<div class="user-profile">
-				<img src="../../src/cat-profile.png">
+				<img id="profilePic-id1" src="../../src/cat-profile.png">
 			</div>
 		</div>
 	</div>
@@ -153,7 +153,7 @@
 						<div class="nameAndTitle-Wrap">
 							<div class="nameEditWrap_class">
 								<div id="nameDisplay-id" contenteditable="false">Ernesto Dela Cruz</div>
-								<div id="changeNameimgWrapper_id"><img id="changeNamePic-id" src="../../src/edit icon pen.png"></div>
+								<!--<div id="changeNameimgWrapper_id"><img id="changeNamePic-id" src="../../src/edit icon pen.png"></div>-->
 							</div>
 						</div>
 					</div>
@@ -161,26 +161,17 @@
 
 					<!--Login Credentials Reset-->
 					<div class="changeCredentialsWrap_class">
-						<div id="SettingsTitle_id">Change Username & Password</div>
+						<div id="SettingsTitle_id">Change Password</div>
 						<div class="inputBoxesWrap_class">
-							<div class="cusInputs_RoClass">					
-								<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-								<div class="placeholdme_RoClass">Old Username</div>
-							</div>
-
+							
 							<div class="passwordAndCheckPasswordWrap_Class">
 								<div class="cusInputs_RoClass">					
 									<input id="inputPassword1" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
 									<div class="placeholdme_RoClass">Old Password</div>	
 								</div>
 								<div class="checkPasswordBtn_Class">
-									<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword1')"></button>
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1')" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
 								</div>
-							</div>
-
-							<div class="cusInputs_RoClass">					
-								<input type="text" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-								<div class="placeholdme_RoClass">New Username</div>
 							</div>
 
 							<div class="passwordAndCheckPasswordWrap_Class">
@@ -189,7 +180,7 @@
 									<div class="placeholdme_RoClass">New Password</div>	
 								</div>
 								<div class="checkPasswordBtn_Class">
-									<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword2')"></button>
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword2')" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
 								</div>
 							</div>
 
@@ -199,18 +190,13 @@
 									<div class="placeholdme_RoClass">Confirm New Password</div>	
 								</div>
 								<div class="checkPasswordBtn_Class">
-									<button class="iconBtn_RoClass" id="togglePasswordBtn" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')" onclick="togglePasswordVisibility('inputPassword3')"></button>
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword3')" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
 								</div>
-							</div>
-
-							<div class="cusInputs_RoClass">					
-								<input type="text" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
-								<div class="placeholdme_RoClass">Associated Email Address</div>
 							</div>
 
 							<!--Reset Button-->		
 							<div>
-								<div id="changeCredentials_id"><button class="normButton_RoClass">Change Username and Password</button></div>
+								<div id="changeCredentials_id"><button class="normButton_RoClass">Update Password</button></div>
 							</div>
 						<!--Reset Button-->
 						</div>
@@ -222,7 +208,7 @@
 						<!--Preferences--->
 						<div class="settingsPreferencesControl_Class">Preferences</div><br>
 							<!---Searches Preferences-->
-							<div class="preferencesOptions_Class">
+							<!--<div class="preferencesOptions_Class">
 								<div><p class="radioChoicesTitle">Keep Searches For</p></div>
 								<div class="radioCircleFlex_RoClass" id="radoption1-id">						
 									<label for=" circleRadioBtn1 " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
@@ -254,7 +240,7 @@
 									<div class="radioCircleTxtLabel_RoClass" id="radoption1Font-id">Default(See all searches for the whole year)</div>
 								</div>
 
-							</div><br><br>
+							</div><br><br>-->
 							<!--Searches Preferences-->
 							<div class="preferencesOptions_Class" style="margin-bottom:10px;">
 								<div><p class="notificationTitle_class">Notifications</p></div>
@@ -307,7 +293,8 @@
 	<!--_Hector JS-->
 
 	<!--_Controllers-->
-	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>	
+	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>	
 	<!--_Controllers-->
 
 	<!--_Executor-->

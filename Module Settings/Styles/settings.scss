@@ -339,6 +339,14 @@ body{
 	@include normButton_RoClass;
 }
 
+.normButton_RoClass:hover{
+	@include normButton_RoClass-hover;
+}
+
+.normButton_RoClass:active{
+	@include normButton_RoClass-active;
+}
+
 .SettingsClass .cusInputs_RoClass{
 	@include cusInputs_RoClass;
 	
@@ -398,12 +406,21 @@ body{
 @media all and (max-width:641px){
 
 .normButton_RoClass{
-		--normBtnWidth: 140px;
-		--normBtnFSize: 80%;
+		--normBtnWidth: 100px;
+		--normBtnFSize: 60%;
 }
 
 .setting_Title_Class{
 	@include mobile_setting_Title_Class;
+}
+
+#picAndbuttonwrap_id #imgWrapper_id{
+	@include mobile_imgWrapper_id;
+
+}
+
+#imgWrapper_id #profilePic-id{
+	@include mobile_profilePic-id;
 }
 
 .nameAndTitle-Wrap #nameDisplay-id{

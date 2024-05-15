@@ -1,5 +1,5 @@
 /*toggle password visibility*/
-
+/*
 function togglePasswordVisibility(inputId) {
 	const passwordInput = document.getElementById(inputId);
 
@@ -11,6 +11,8 @@ function togglePasswordVisibility(inputId) {
 		passwordInput.type ="password";
 	}
 }
+
+*/
 
 /*toggle password visibility*/
 

@@ -3264,9 +3264,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*white*/
   --normBtnRadius: 6px;
   --normBtnFWeight: 500px;
-  --normBtnBgColor: #2058B2;
-  --normBtnHovActFColor: red;
-  --normBtnHovActBgColor: white;
+  --normBtnBgColor: #639FFF;
+  --normBtnHovActBgColor: #639FFF;
   --customInputColor: var(--text-color-4);
   /*white*/
   --customInputFSize: 10px;
@@ -3663,8 +3662,10 @@ body {
 
 #profilePic-Wrap #profilePic-id {
   width: 100%;
-  height: 100%;
-  object-fit: cover; }
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid white; }
 
 #picAndbuttonwrap_id {
   width: 40%;
@@ -3674,15 +3675,16 @@ body {
   flex-direction: column; }
 
 #picAndbuttonwrap_id #imgWrapper_id {
-  width: 60%;
-  height: 80%;
-  border: 2px solid var(--border-color-7);
-  border-radius: 6px; }
+  max-width: 400px;
+  max-height: 400px;
+  margin-bottom: 0px; }
 
 #imgWrapper_id #profilePic-id {
   width: 100%;
-  height: 100%;
-  object-fit: cover; }
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid white; }
 
 #picAndbuttonwrap_id .nameAndTitle-Wrap {
   display: flex;
@@ -3747,7 +3749,20 @@ body {
   justify-content: center; }
 
 .normButton_RoClass {
-  margin-top: 10px; }
+  margin-top: 10px;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 3px;
+  display: block;
+  background-color: #2176FF;
+  color: #FFFFFF;
+  cursor: pointer; }
+
+.normButton_RoClass:hover {
+  opacity: .7; }
+
+.normButton_RoClass:active {
+  opacity: .5; }
 
 .SettingsClass .cusInputs_RoClass {
   margin: 10px;
@@ -3759,7 +3774,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9; }
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7); }
 
 .SettingsClass #changeCredentials_id {
   margin: 10px;
@@ -3772,7 +3789,7 @@ body {
   height: auto;
   border: 1px solid var(--border-color-7);
   border-radius: 6px;
-  box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
+  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7);
   padding: auto; }
 
 .checkboxesNotification_Class {
@@ -3787,22 +3804,27 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  padding-top: 10px; }
 
 .preferencesOptions_Class {
   margin: auto;
-  width: 40%;
+  width: 80%;
   padding: 10px;
   border: 1px solid var(--bg-color-11);
-  box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9;
+  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7);
   border-radius: 6px;
   justify-content: space-around; }
 
 .radioChoicesTitle {
-  color: var(--text-color-5); }
+  text-align: center;
+  color: var(--text-color-1);
+  background-color: var(--bg-color-2); }
 
 .notificationTitle_class {
-  color: var(--text-color-5); }
+  text-align: center;
+  color: var(--text-color-1);
+  background-color: var(--bg-color-2); }
 
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3812,11 +3834,21 @@ body {
 /*Mobile*/
 @media all and (max-width: 641px) {
   .normButton_RoClass {
-    --normBtnWidth: 140px;
-    --normBtnFSize: 80%; }
+    --normBtnWidth: 100px;
+    --normBtnFSize: 60%; }
 
   .setting_Title_Class {
     font-size: 20px; }
+
+  #picAndbuttonwrap_id #imgWrapper_id {
+    max-width: 120px;
+    max-height: 120px; }
+
+  #imgWrapper_id #profilePic-id {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px; }
 
   .nameAndTitle-Wrap #nameDisplay-id {
     margin-left: auto;
@@ -3850,7 +3882,7 @@ body {
     align-items: center;
     border: 1px solid var(--border-color-7);
     border-radius: 6px;
-    box-shadow: 0 2px 4px 0 #ffffff, 0 4px 12px 0 #a9a9a9; }
+    box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7); }
 
   .changeCredentialsWrap_class .inputBoxesWrap_class {
     display: flex;
