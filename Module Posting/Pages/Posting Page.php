@@ -43,7 +43,7 @@
 				</div>
 
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-					<a href="" class="subNavMenu_RoClass">					
+					<a href="http://localhost/VMC Platform/Module Access/Pages/Access Page.php" target="_blank" class="subNavMenu_RoClass">				
 						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>

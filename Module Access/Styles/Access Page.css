@@ -1,0 +1,182 @@
+/************************************************************************************************************/
+/*Import Mixins*/
+/************************************************************************************************************/
+/*General*/
+/*General*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile @media (max-width:641px)*/
+/*Mobile @media (max-width:641px)*/
+/************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+/*Search Box*/
+/*Search Box*/
+/*Side Apps Main Menu*/
+/*Side Apps Main Menu*/
+/*Side Apps Sub Menu*/
+/*Side Apps Sub Menu*/
+/*Dark Mode (Default Style)*/
+/*Dark Mode (Default Style)*/
+/*Light Mode*/
+/*Light Mode*/
+/*Binance Font*/
+/*Binance Font*/
+/*Webkit*/
+/*Webkit*/
+/*Asterisk*/
+/*Asterisk*/
+/*Body Background*/
+/*Body Background*/
+/*Input and Textarea Style*/
+/*Input and Textarea Style*/
+/*Top Section*/
+/*Top Section*/
+/*Mid Section Height*/
+/*Mid Section Height*/
+/*Left Content*/
+/*Left Content*/
+/*Burger*/
+/*Burger*/
+/*Footer*/
+/*Footer*/
+/*Mid Section Height Mobtab*/
+/*Mid Section Height Mobtab*/
+/*Footer MobTab*/
+/*Footer MobTab*/
+/*Mobile Top Section*/
+/*Mobile Top Section*/
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+/************************************************************************************************************/
+@font-face {
+  font-family: 'Binance PLEX';
+  src: url("../../Global Fonts/Binance-PLEX.ttf"); }
+/*General Start*/
+html, body {
+  height: 100%;
+  margin: 0; }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Binance PLEX'; }
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.access-container {
+  background-color: #F1F3F4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.access-container .access-box {
+  padding: 15px;
+  margin-top: 80px; }
+
+.access-box .lock-icon-container {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.access-box .lock-icon-container img {
+  width: 150px;
+  height: 150px; }
+
+.access-box .permission-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px; }
+
+.access-box .access-invitation {
+  margin-bottom: 10px; }
+
+.access-box .user-status {
+  margin-bottom: 20px; }
+
+.access-box .textarea-container {
+  padding: 7px;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  margin-bottom: 20px; }
+
+.textarea-container .message-input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  resize: none;
+  min-height: 50px;
+  max-height: 90px; }
+
+.message-input::-webkit-scrollbar {
+  width: 7px; }
+
+.message-input::-webkit-scrollbar-thumb {
+  background-color: #BCC0C4;
+  border-radius: 10px;
+  visibility: hidden; }
+
+.message-input:hover::-webkit-scrollbar-thumb {
+  visibility: visible; }
+
+.access-box .request-button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 3px;
+  background-color: #2176FF;
+  color: #FFFFFF;
+  cursor: pointer; }
+
+.access-box .request-button:hover {
+  opacity: .7; }
+
+.access-box .request-button:active {
+  opacity: .5; }
+
+/*General End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Other Media Queries Start*/
+/*Other Media Queries End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile and Tablet Start*/
+/*Mobile and Tablet End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile Start*/
+@media all and (max-width: 641px) {
+  .access-container .access-box {
+    margin-top: 50px; }
+
+  .access-box .permission-message {
+    font-size: 18px; }
+
+  .access-box .access-invitation,
+  .access-box .user-status,
+  .textarea-container .message-input {
+    font-size: 14px; } }
+/*Mobile End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Tablet Start*/
+/*Tablet End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Laptop Start*/
+/*Laptop End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Desktop Start*/
+/*Desktop End*/
+/************************************************************************************************************/
+
+/*# sourceMappingURL=Access%20Page.css.map */

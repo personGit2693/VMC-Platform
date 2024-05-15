@@ -1,0 +1,123 @@
+/************************************************************************************************************/
+/*General*/
+@mixin html-body {
+	height: 100%;
+	margin: 0;
+}
+
+@mixin asterisk {
+	box-sizing: border-box;
+	font-family: 'Binance PLEX';
+}
+
+@mixin img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+@mixin access-container {
+	background-color: #F1F3F4;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@mixin access-box {
+	padding: 15px;
+	margin-top: 80px;
+}
+
+@mixin lock-icon-container {
+	margin-bottom: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+@mixin lock-icon-container-img {
+	width: 150px;
+	height: 150px;
+}
+
+@mixin permission-message {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+@mixin access-invitation {
+	margin-bottom: 10px;
+}
+
+@mixin user-status {
+	margin-bottom: 20px;
+}
+
+@mixin textarea-container {
+	padding: 7px;
+	border-radius: 7px;
+	background-color: #FFFFFF;
+	margin-bottom: 20px;
+}
+
+@mixin message-input {
+	width: 100%;
+	display: block;
+	border: none;
+	outline: none;
+	resize: none;
+	min-height: 50px;
+	max-height: 90px;
+}
+
+@mixin message-input-scrollbar {
+	width: 7px;
+}
+
+@mixin message-input-sb-thumb {
+	background-color: #BCC0C4;
+	border-radius: 10px;
+	visibility: hidden;
+}
+
+@mixin message-input-hover-sb-thumb {
+	visibility: visible;
+}
+
+@mixin request-button {
+	border: none;
+	padding: 8px 14px;
+	border-radius: 3px;
+	background-color: #2176FF;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+@mixin request-button-hover {
+	opacity: .7;
+}
+
+@mixin request-button-active {
+	opacity: .5;
+}
+/*General*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile @media (max-width:641px)*/
+@mixin access-box_Mobile {
+	margin-top: 50px;
+}
+
+@mixin permission-message_Mobile {
+	font-size: 18px;
+}
+
+@mixin access-invitation_Mobile {
+	font-size: 14px;
+}
+/*Mobile @media (max-width:641px)*/
+/************************************************************************************************************/
+
+
