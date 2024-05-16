@@ -105,7 +105,7 @@
 				<div class="projectTitle_RoClass" id="projectTitle_RoId">CREATE A POST</div>
 
 				<div class="post-form">
-					<form class="create-post-form" enctype="multipart/form-data">
+					<form class="create-post-form">
 						<label class="post-category-label" for="post-category-id">Category:</label>
 						
 						<select class="post-category-class" id="post-category-id" required>
@@ -140,12 +140,12 @@
 					<div class="recent-posts">RECENT POSTS</div>
 
 					<div class="post-list">
-						<div class="user-profile">
+						<div class="user-profile-box user-profile">
 							<img src="../../src/cat-profile.png">
-							<div>John Smith</div>
+							<div class="user-name">John Smith</div>
+							<div class="chosen-category">Category 1</div>
 						</div>
 						
-						<div class="chosen-category">Category: Category 1</div>
 						<div class="post-title-class">Grab Car Saver</div>
 
 						<div class="post-content-class">
@@ -892,7 +892,6 @@
 	<div class="chat-box-container" style="visibility: hidden;"></div>
 	<!--Chat Section-->
 
-
 	<!--Modals-->
 	<!--_Modal Post-->
 	<div class="modalmeCon_RoClass" style="--topOnBlurrer: 2;">
@@ -919,10 +918,10 @@
 
 					<div class="user-profile user-profile-modal">
 						<img src="../../src/cat-profile.png">
-						<div>John Smith</div>
+						<div class="user-name-modal">John Smith</div>
+						<div class="chosen-category-modal">Category 1</div>
 					</div>
 
-					<div class="chosen-category">Category: Category 1</div>
 					<div class="posted-title">Grab Car Saver</div>
 
 					<div class="posted-content">

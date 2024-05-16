@@ -76,8 +76,8 @@ function ChatHistoryDiv(){
 		<button class="chat-send-button">Send</button>
 	</div>
 
-	<button class="buzz-chat-button"><img src="../../src/buzz-icon.png"></button>
-	<button class="close-chat-button" onclick="controller_Btn_CloseChatbox()">X</button>`;
+	<button class="buzz-chat-button"><img src="../../src/announcementiconwhite.png"></button>
+	<button class="close-chat-button" onclick="controller_Btn_CloseChatbox()"><img src="../../src/closeModIcon.png"></button>`;
 
 	return chatHistoryDiv;
 }

@@ -9,7 +9,7 @@
 @mixin dark-mode {
 	--bg-color-4: #242526;
 	--bg-color-10: #303031;
-	--bg-color-11: #5D5E61;
+	--bg-color-11: #5D5E61; // unused
 	--bg-color-12: #161617;
 	--text-color-3: #CDD1D5;
 	--text-color-4: #ADB1B3;
@@ -28,7 +28,7 @@
 @mixin light-mode {
 	--bg-color-4: #FFFFFF;
 	--bg-color-10: #E4E6E8;
-	--bg-color-11: #FFFFFF;
+	--bg-color-11: #FFFFFF; // unused
 	--bg-color-12: #999999;
 	--text-color-3: #5F6266;
 	--text-color-4: #6E6F72;
@@ -120,15 +120,9 @@
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	padding: 7px 15px;
+	padding-inline: 14px;
 	margin-top: 8px;
 	color: var(--text-color-1);
-}
-
-@mixin chosen-category-modal {
-	font-size: 12px;
-	color: var(--text-color-1);
-	padding-left: 15px;
 }
 
 @mixin posted-title {
@@ -239,8 +233,8 @@
 }
 
 @mixin post-category-label {
-	margin: 5px 5px 10px 0px;
-	display: inline-block;
+	margin-bottom: 10px;
+	display: block;
 }
 
 @mixin post-category-class {
@@ -248,6 +242,7 @@
 	outline: 2px solid #808080;
 	border-radius: 5px;
 	padding: 3px;
+	margin-bottom: 10px;
 	max-width: 100%;
 	cursor: pointer;
 }
@@ -351,7 +346,7 @@
 	padding: 7px 15px;
 	border-radius: 3px;
 	display: block;
-	background-color: #2176FF;
+	background-color: #3C746B;
 	color: #FFFFFF;
 	cursor: pointer;
 }
@@ -372,7 +367,7 @@
 	justify-content: center;
 	padding: 10px;
 	border-radius: 10px;
-	background-color: #3C746B;
+	background-color: #096B6C;
 	color: #FFFFFF;
 	font-size: 14px;
 	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
@@ -386,14 +381,27 @@
 	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
 }
 
-@mixin post-list-user-profile {
+@mixin user-profile-box {
+	margin-bottom: 10px;
+}
+
+@mixin user-profile {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
+@mixin user-name {
+	flex-shrink: 0;
+}
+
 @mixin chosen-category {
-	padding-block: 10px;
+	padding: 5px 7px;
+	margin-left: 3px;
+	font-size: 11px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	background-color: rgba(#096B6C, .8);
 }
 
 @mixin posts-buttons {
@@ -651,20 +659,18 @@
 	right: 15px;
 	width: 50px;
 	height: 50px;
-	background-color: var(--bg-color-11);
-	border: 1px solid var(--border-color-2);
 	border-radius: 50%;
-	cursor: pointer;
+	background-color: #3C746B;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1px 1px 0px 0px;
+	cursor: pointer;
 }
 
 @mixin chat-toggle-button-img {
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 }
 
 @mixin chat-container {
@@ -792,6 +798,10 @@
 	cursor: pointer;
 }
 
+@mixin contact-pic-container-small-hover {
+	background-color: var(--bg-color-3);
+}
+
 @mixin contact-picture-small {
 	width: 32px;
 	height: 32px;
@@ -823,7 +833,7 @@
 @mixin contact-name {
 	font-size: 14px;
 	color: var(--text-color-1);
-	max-width: 185px;
+	max-width: 182px;
 }
 
 @mixin chat-box {
@@ -905,7 +915,7 @@
 	padding: 8px 11px;
 	border-radius: 16px;
 	font-size: 13px;
-	background-color: #0084FF;
+	background-color: #096B6C;
 	color: #FFFFFF;
 }
 
@@ -974,21 +984,29 @@
 	padding: 10px;
 	border-radius: 10px;
 	border: none;
-	background-color: #2176FF;
+	background-color: #3C746B;
 	color: #FFFFFF;
 	cursor: pointer;
 }
 
 @mixin buzz-chat-button {
 	position: absolute;
-	right: 42px;
+	right: 44px;
 	top: 10px;
 	border-radius: 10px;
 	border: none;
-	background-color: transparent;
+	background-color: #3C746B;
 	width: 40px;
 	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
+}
+
+@mixin buzz-chat-button-img {
+	width: 20px;
+	height: 20px;
 }
 
 @mixin close-chat-button {
@@ -997,21 +1015,18 @@
 	top: 10px;
 	border-radius: 50%;
 	border: none;
-	background-color: transparent;
+	background-color: #3C746B;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 18px;
-	color: #0084FF;
-	font-weight: bold;
 	width: 30px;
 	height: 30px;
-	padding-bottom: 3px;
 	cursor: pointer;
 }
 
-@mixin close-chat-button-hover {
-	background-color: var(--bg-color-3);
+@mixin close-chat-button-img {
+	width: 25px;
+	height: 25px;
 }
 /*Chat Section*/
 /*General*/

@@ -43,7 +43,7 @@
 	--bg-color-6: #FFFFFF;
 	--bg-color-7: #3A3B3C;
 	--bg-color-8: #3A3B3C;
-	--bg-color-9: #3A3B3C;
+	--bg-color-9: #3A3B3C; // unused
 	--text-color-1: #FFFFFF;
 	--text-color-2: #000000;
 	--text-color-6: #BCBFC4;
@@ -71,9 +71,9 @@
 	--bg-color-3: #F0F2F5;
 	--bg-color-5: #BCC0C4;
 	--bg-color-6: #3A3B3C;
-	--bg-color-7: #C62417;
-	--bg-color-8: #7AC4B2;
-	--bg-color-9: #7ABCF4;
+	--bg-color-7: #096B6C;
+	--bg-color-8: #3C746B;
+	--bg-color-9: #7ABCF4; // unused
 	--text-color-1: #000000;
 	--text-color-2: #FFFFFF;
 	--text-color-6: #000000;
@@ -219,7 +219,7 @@
 }
 
 @mixin global_gear-icon {
-	background-color: var(--bg-color-9);
+	background-color: var(--bg-color-7);
 }
 
 @mixin global_user-profile {

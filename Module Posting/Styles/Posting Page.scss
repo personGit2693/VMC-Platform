@@ -288,8 +288,12 @@ video {
 	@include user-profile-modal;
 }
 
-.posted-info-container .chosen-category {
-	@include chosen-category-modal;
+.user-profile-modal .user-name-modal {
+	@include user-name;
+}
+
+.user-profile-modal .chosen-category-modal {
+	@include chosen-category;
 }
 
 .posted-info-container .posted-title {
@@ -383,6 +387,8 @@ video {
 .posts button:hover,
 .chat-toggle-button:hover,
 .chat-input-container .chat-send-button:hover,
+.chat-box-container .buzz-chat-button:hover,
+.chat-box-container .close-chat-button:hover,
 .modalme_RoClass .home-logo img:hover,
 .posted-info-container button:hover,
 .modalHeadClose_RoClass:hover {
@@ -475,11 +481,19 @@ video {
 	@include post-list;
 }
 
-.post-list .user-profile {
-	@include post-list-user-profile;
+.post-list .user-profile-box {
+	@include user-profile-box;
 }
 
-.post-list .chosen-category {
+.post-list .user-profile {
+	@include user-profile;
+}
+
+.user-profile-box .user-name {
+	@include user-name;
+}
+
+.user-profile-box .chosen-category {
 	@include chosen-category;
 }
 
@@ -704,6 +718,10 @@ video {
 	@include contact-pic-container-small;
 }
 
+.contact-profile-container-small .contact-pic-container-small:hover {
+	@include contact-pic-container-small-hover;
+}
+
 .contact-pic-container-small .contact-picture-small {
 	@include contact-picture-small;
 }
@@ -804,14 +822,16 @@ video {
 	@include buzz-chat-button;
 }
 
+.chat-box-container .buzz-chat-button img {
+	@include buzz-chat-button-img;
+}
+
 .chat-box-container .close-chat-button {
 	@include close-chat-button;
 }
 
-.chat-box-container .close-chat-button:hover,
-.contact-pic-container-small:hover,
-.chat-box-container .buzz-chat-button:hover {
-	@include close-chat-button-hover;
+.chat-box-container .close-chat-button img {
+	@include close-chat-button-img;
 }
 /*Chat Section End*/
 /*General End*/
