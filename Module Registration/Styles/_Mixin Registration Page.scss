@@ -1,0 +1,75 @@
+/************************************************************************************************************/
+/*Root*/
+:root{
+/*Textbox Input*/	
+--customInputColor: black;
+--customInputFSize: 20px;
+--customInputAnimFSize: 10px;
+/*Textbox Input*/	
+
+
+/*Dropdown*/	
+--selectDropdownWidth: auto; 		
+--selectDropdownBorderWidth: 1px;
+--selectDropdownBorderColor: black;
+--selectDropdownBorderRadius: 6px;
+--selectDropdownBgColor: transparent;		
+--selectDropdownIconSize: 14px;
+--selectDropdownFSize: 20px;
+--selectDropdownFColor: black;
+--selectDropdownChevronSize: 20px;
+--searchOptsBgColor: white;
+--searchOptsFColor: black;
+--hoverOptBgColor: gray;
+--hoverOptFColor: white;
+--selectDropdownScrollSize: 10px;
+--optWrapThumbBgColor: blue;		
+--selectDropdownResetBtnSize: 20px;
+/*Dropdown*/
+}
+/*Root*/
+/************************************************************************************************************/
+/*General*/
+/***********************************************************************************************************************************************************************************************************/
+/*General*/
+@mixin body {
+	height: 100%;
+	margin: 0;
+	background-image:url("../../src/bg2.png");
+	background-size:cover;
+}
+
+@mixin asterisk {
+	box-sizing: border-box;
+	font-family: 'Binance PLEX';
+}
+
+@mixin formTitle_class{
+	font-size:50px;
+	text-align: center;
+	margin:20px;
+	font-weight:500;
+}
+
+@mixin formBody_class{
+	width:80%;
+	background-color:white;
+	border:2px solid black;
+	border-radius:6px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@mixin cusInputs_RoClass{
+	margin:10px;
+}
+
+@mixin selectDropdownWrap_RoClass{
+	margin:10px;
+}
+
+@mixin selectDropdownOptsArea_RoClass{
+	border:1px solid black;
+	z-index:1;
+	background-color:white;
+}
