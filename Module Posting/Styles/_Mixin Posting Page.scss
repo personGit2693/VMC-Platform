@@ -40,159 +40,6 @@
 	--border-color-6: #FFFFFF;
 }
 
-/*Modal*/
-@mixin modalmeCon_RoClass {
-	border: none;
-}
-
-@mixin modalme_RoClass {
-	width: 100%;
-	height: 100%;
-	border-radius: 0px;
-}
-
-@mixin modalHeadClose_RoClass {
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	top: 8px;
-	left: 18px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	z-index: 1;
-	background-color: #161617;
-}
-
-@mixin close-mod-icon {
-	width: 35px;
-	height: 35px;
-}
-
-@mixin home-logo-img {
-	width: 40px;
-	height: 40px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: #3A3B3C;
-	position: absolute;
-	top: 8px;
-	left: 66px;
-	z-index: 1;
-}
-
-@mixin modalBody_RoClass {
-	height: 100%;
-	padding: 0px;
-	display: flex;
-}
-
-@mixin posted-file-container {
-	flex: 1;
-	background-color: #000000;
-}
-
-@mixin posted-file {
-	object-fit: contain;
-}
-
-@mixin posted-info-container {
-	width: 365px;
-	overflow-y: scroll;
-	padding: 0px 3px 10px 0px;
-	background-color: var(--bg-color-4);
-	flex-shrink: 0;
-}
-
-@mixin modal-menu-container {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 8px;
-	padding-right: 18px;
-	height: 55px;
-	border-bottom: 1px solid var(--border-color-1);
-}
-
-@mixin user-profile-modal {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	padding-inline: 14px;
-	margin-top: 8px;
-	color: var(--text-color-1);
-}
-
-@mixin posted-title {
-	color: var(--text-color-1);
-	margin-top: 10px;
-	padding-left: 15px;
-}
-
-@mixin posted-content {
-	color: var(--text-color-1);
-	font-size: 14px;
-	padding-inline: 15px;
-}
-
-@mixin posted-reactions {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	margin-top: 30px;
-	color: var(--text-color-3);
-}
-
-@mixin reactions-container-modal {
-	display: flex;
-	gap: 15px;
-	padding-left: 10px;
-	flex-wrap: wrap;
-}
-
-@mixin reaction-count {
-	font-size: 14px;
-}
-
-@mixin comment-count-modal {
-	font-size: 15px;
-	cursor: pointer;
-	margin-left: auto;
-	margin-right: 10px;
-}
-
-@mixin posted-actions {
-	display: flex;
-	gap: 10px;
-	padding-inline: 15px;
-	margin-top: 5px;
-	border-top: 1px solid var(--border-color-4);
-}
-
-@mixin date-posted-modal {
-	font-size: 12px;
-	padding: 5px 15px;
-	color: var(--text-color-4);
-}
-
-@mixin modal-comment-section-class {
-	color: var(--text-color-1);
-	font-size: 14px;
-	max-height: 450px;
-	overflow-y: scroll;
-}
-
-@mixin comment-modal {
-	padding-left: 7px;
-}
-
-@mixin comment-profile-container {
-	padding-inline: 7px;
-}
-/*Modal*/
-
 /*Mid Section Start*/
 @mixin rolayout_RoId {
 	display: flex;
@@ -410,7 +257,6 @@
 	border: none;
 	padding: 2px 8px;
 	background-color: var(--bg-color-3);
-	color: var(--text-color-1);
 }
 
 @mixin post-list-post-title-class {
@@ -631,11 +477,10 @@
 }
 
 @mixin side-content-content {
-	margin-bottom: 25px;
+	margin: 10px 0px 25px 0px;
 }
 
 @mixin content-title {
-	margin-top: 10px;
 	font-size: 14px;
 	font-weight: bold;
 	color: var(--text-color-4);
@@ -648,6 +493,23 @@
 
 @mixin pinned-posts-wrapper-a {
 	color: inherit;
+}
+
+@mixin my-post-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+@mixin delete-post {
+	margin-right: 50px;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 3px;
+	padding: 1px 7px;
+	border: none;
+	color: var(--text-color-4);
+	background-color: var(--bg-color-3);
+	cursor: pointer;
 }
 /*Right Content*/
 /*Mid Section End*/
@@ -1029,10 +891,187 @@
 	height: 25px;
 }
 /*Chat Section*/
+
+/*Modal Post*/
+@mixin modalmeCon_RoClass {
+	border: none;
+}
+
+@mixin modalme_RoClass {
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+}
+
+@mixin modalHeadClose_RoClass {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 8px;
+	left: 18px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	z-index: 1;
+	background-color: #161617;
+}
+
+@mixin close-mod-icon {
+	width: 35px;
+	height: 35px;
+}
+
+@mixin home-logo-img {
+	width: 40px;
+	height: 40px;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: #3A3B3C;
+	position: absolute;
+	top: 8px;
+	left: 66px;
+	z-index: 1;
+}
+
+@mixin modalBody_RoClass {
+	height: 100%;
+	padding: 0px;
+	display: flex;
+}
+
+@mixin posted-file-container {
+	flex: 1;
+	background-color: #000000;
+}
+
+@mixin posted-file {
+	object-fit: contain;
+}
+
+@mixin posted-info-container {
+	width: 365px;
+	overflow-y: scroll;
+	padding: 0px 3px 10px 0px;
+	background-color: var(--bg-color-4);
+	flex-shrink: 0;
+}
+
+@mixin modal-menu-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 8px;
+	padding-right: 18px;
+	height: 55px;
+	border-bottom: 1px solid var(--border-color-1);
+}
+
+@mixin user-profile-modal {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding-inline: 14px;
+	margin-top: 8px;
+	color: var(--text-color-1);
+}
+
+@mixin posted-title {
+	color: var(--text-color-1);
+	margin-top: 10px;
+	padding-left: 15px;
+}
+
+@mixin posted-content {
+	color: var(--text-color-1);
+	font-size: 14px;
+	padding-inline: 15px;
+}
+
+@mixin posted-reactions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 30px;
+	color: var(--text-color-3);
+}
+
+@mixin reactions-container-modal {
+	display: flex;
+	gap: 15px;
+	padding-left: 10px;
+	flex-wrap: wrap;
+}
+
+@mixin reaction-count {
+	font-size: 14px;
+}
+
+@mixin comment-count-modal {
+	font-size: 15px;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+@mixin posted-actions {
+	display: flex;
+	gap: 10px;
+	padding-inline: 15px;
+	margin-top: 5px;
+	border-top: 1px solid var(--border-color-4);
+}
+
+@mixin date-posted-modal {
+	font-size: 12px;
+	padding: 5px 15px;
+	color: var(--text-color-4);
+}
+
+@mixin modal-comment-section-class {
+	color: var(--text-color-1);
+	font-size: 14px;
+	max-height: 450px;
+	overflow-y: scroll;
+}
+
+@mixin comment-modal {
+	padding-left: 7px;
+}
+
+@mixin comment-profile-container {
+	padding-inline: 7px;
+}
+/*Modal Post*/
 /*General*/
 /*************************************************************************************/
 /*************************************************************************************/
 /*Other Media Queries*/
+@mixin mainmechaCon_RoId_OMQ {
+	max-width: 450px;
+}
+
+@mixin post-reactions_OMQ {
+	flex-direction: column;
+	gap: 10px;
+}
+
+@mixin chat-toggle-button_OMQ {
+	top: 110px;
+}
+
+@mixin contact-text_OMQ {
+	visibility: hidden;
+}
+
+@mixin chat-box-container_OMQ {
+	width: 300px;
+	left: 0;
+	right: 0;
+	margin-inline: auto;
+}
+
 @mixin modalHeadClose_RoClass_OMQ {
 	background-color: var(--bg-color-12);
 }
@@ -1062,30 +1101,6 @@
 	width: 100%;
 	background-color: var(--bg-color-2);
 	border-bottom: 1px solid var(--border-color-1);
-}
-
-@mixin mainmechaCon_RoId_OMQ {
-	max-width: 450px;
-}
-
-@mixin post-reactions_OMQ {
-	flex-direction: column;
-	gap: 10px;
-}
-
-@mixin chat-toggle-button_OMQ {
-	top: 110px;
-}
-
-@mixin contact-text_OMQ {
-	visibility: hidden;
-}
-
-@mixin chat-box-container_OMQ {
-	width: 300px;
-	left: 0;
-	right: 0;
-	margin-inline: auto;
 }
 /*Other Media Queries*/
 /*************************************************************************************/

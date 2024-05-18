@@ -6471,8 +6471,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Root*/
 /*************************************************************************************/
 /*General*/
-/*Modal*/
-/*Modal*/
 /*Mid Section Start*/
 /*Mid Content*/
 /*Mid Content*/
@@ -6481,6 +6479,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Mid Section End*/
 /*Chat Section*/
 /*Chat Section*/
+/*Modal Post*/
+/*Modal Post*/
 /*General*/
 /*************************************************************************************/
 /*************************************************************************************/
@@ -6730,7 +6730,8 @@ video {
 .sidemechaCon_RoClass .company-logo img {
   width: 140px;
   height: 140px;
-  cursor: pointer; }
+  border-radius: 50%;
+  object-fit: contain; }
 
 .sidemechaCon_RoClass .mainNavMenu_RoClass,
 .sidemechaCon_RoClass .subNavMenu_RoClass {
@@ -6834,165 +6835,6 @@ video {
   --border-color-5: #E4E4E4;
   --border-color-6: #FFFFFF; }
 
-/*Modal*/
-.modalmeCon_RoClass {
-  border: none; }
-
-.modalmeCon_RoClass .modalme_RoClass {
-  width: 100%;
-  height: 100%;
-  border-radius: 0px; }
-
-.modalme_RoClass .modalHeadClose_RoClass {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 8px;
-  left: 18px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1;
-  background-color: #161617; }
-
-.modalHeadClose_RoClass .close-mod-icon {
-  width: 35px;
-  height: 35px; }
-
-.modalme_RoClass .home-logo img {
-  width: 40px;
-  height: 40px;
-  padding: 7px;
-  border-radius: 10px;
-  background-color: #3A3B3C;
-  position: absolute;
-  top: 8px;
-  left: 66px;
-  z-index: 1; }
-
-.modalme_RoClass .modalBody_RoClass {
-  height: 100%;
-  padding: 0px;
-  display: flex; }
-
-.modalme_RoClass .posted-file-container {
-  flex: 1;
-  background-color: #000000; }
-
-.posted-file-container .posted-file {
-  object-fit: contain; }
-
-.modalme_RoClass .posted-info-container {
-  width: 365px;
-  overflow-y: scroll;
-  padding: 0px 3px 10px 0px;
-  background-color: var(--bg-color-4);
-  flex-shrink: 0; }
-
-.posted-info-container button {
-  cursor: pointer;
-  border-radius: 3px;
-  border: none;
-  padding: 2px 8px;
-  background-color: var(--bg-color-3);
-  color: var(--text-color-1); }
-
-.posted-info-container .modal-menu-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-  padding-right: 18px;
-  height: 55px;
-  border-bottom: 1px solid var(--border-color-1); }
-
-.posted-info-container .user-profile-modal {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-inline: 14px;
-  margin-top: 8px;
-  color: var(--text-color-1); }
-
-.user-profile-modal .user-name-modal {
-  flex-shrink: 0; }
-
-.user-profile-modal .chosen-category-modal {
-  padding: 5px 7px;
-  margin-left: 3px;
-  font-size: 11px;
-  border-radius: 5px;
-  color: #FFFFFF;
-  background-color: rgba(9, 107, 108, 0.8); }
-
-.posted-info-container .posted-title {
-  color: var(--text-color-1);
-  margin-top: 10px;
-  padding-left: 15px; }
-
-.posted-info-container .posted-content {
-  color: var(--text-color-1);
-  font-size: 14px;
-  padding-inline: 15px; }
-
-.posted-info-container .posted-reactions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 30px;
-  color: var(--text-color-3); }
-
-.posted-reactions .reactions-container {
-  display: flex;
-  gap: 15px;
-  padding-left: 10px;
-  flex-wrap: wrap; }
-
-.posted-reactions .reaction-icon-container,
-.modal-comment-section-class .reaction-icon-container {
-  display: flex;
-  align-items: center;
-  gap: 2px; }
-
-.posted-reactions .reaction-count {
-  font-size: 14px; }
-
-.posted-reactions .comment-count {
-  font-size: 15px;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 10px; }
-
-.posted-reactions .comment-count:hover {
-  text-decoration: underline; }
-
-.posted-info-container .posted-actions {
-  display: flex;
-  gap: 10px;
-  padding-inline: 15px;
-  margin-top: 5px;
-  border-top: 1px solid var(--border-color-4); }
-
-.posted-info-container .date-posted {
-  font-size: 12px;
-  padding: 5px 15px;
-  color: var(--text-color-4); }
-
-.posted-info-container .modal-comment-section-class {
-  color: var(--text-color-1);
-  font-size: 14px;
-  max-height: 450px;
-  overflow-y: scroll; }
-
-.modal-comment-section-class .comment {
-  padding-left: 7px; }
-
-.posted-info-container .comment-profile-container {
-  padding-inline: 7px; }
-
-/*Modal*/
 /*Mid Section Start*/
 #rolayout_RoId {
   display: flex;
@@ -7051,7 +6893,8 @@ video {
 .chat-box-container .close-chat-button:hover,
 .modalme_RoClass .home-logo img:hover,
 .posted-info-container button:hover,
-.modalHeadClose_RoClass:hover {
+.modalHeadClose_RoClass:hover,
+.my-post-info .delete-post:hover {
   opacity: .7; }
 
 .create-post-form .custom-file-upload:active,
@@ -7067,7 +6910,8 @@ video {
 .contact-pic-container-small:active,
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
-.posted-info-container button:active {
+.posted-info-container button:active,
+.my-post-info .delete-post:active {
   opacity: .5; }
 
 .create-post-form .post-title-class,
@@ -7214,8 +7058,7 @@ video {
   border-radius: 3px;
   border: none;
   padding: 2px 8px;
-  background-color: var(--bg-color-3);
-  color: var(--text-color-1); }
+  background-color: var(--bg-color-3); }
 
 .post-list .post-title-class {
   margin-bottom: 7px;
@@ -7406,10 +7249,9 @@ video {
   border-bottom: 1px solid var(--border-color-4); }
 
 .side-content-wrapper .side-content-content {
-  margin-bottom: 25px; }
+  margin: 10px 0px 25px 0px; }
 
 .side-content-content .content-title {
-  margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
   color: var(--text-color-4); }
@@ -7421,6 +7263,21 @@ video {
 .pinned-posts-wrapper a,
 .my-posts-wrapper a {
   color: inherit; }
+
+.side-content-content .my-post-info {
+  display: flex;
+  justify-content: space-between; }
+
+.my-post-info .delete-post {
+  margin-right: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 1px 7px;
+  border: none;
+  color: var(--text-color-4);
+  background-color: var(--bg-color-3);
+  cursor: pointer; }
 
 /*Right Content End*/
 /*Mid Section End*/
@@ -7756,10 +7613,187 @@ video {
   height: 25px; }
 
 /*Chat Section End*/
+/*Modal*/
+.modalmeCon_RoClass {
+  border: none; }
+
+.modalmeCon_RoClass .modalme_RoClass {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px; }
+
+.modalme_RoClass .modalHeadClose_RoClass {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  background-color: #161617; }
+
+.modalHeadClose_RoClass .close-mod-icon {
+  width: 35px;
+  height: 35px; }
+
+.modalme_RoClass .home-logo img {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: #3A3B3C;
+  position: absolute;
+  top: 8px;
+  left: 66px;
+  z-index: 1; }
+
+.modalme_RoClass .modalBody_RoClass {
+  height: 100%;
+  padding: 0px;
+  display: flex; }
+
+.modalme_RoClass .posted-file-container {
+  flex: 1;
+  background-color: #000000; }
+
+.posted-file-container .posted-file {
+  object-fit: contain; }
+
+.modalme_RoClass .posted-info-container {
+  width: 365px;
+  overflow-y: scroll;
+  padding: 0px 3px 10px 0px;
+  background-color: var(--bg-color-4);
+  flex-shrink: 0; }
+
+.posted-info-container button {
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  padding: 2px 8px;
+  background-color: var(--bg-color-3); }
+
+.posted-info-container .modal-menu-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding-right: 18px;
+  height: 55px;
+  border-bottom: 1px solid var(--border-color-1); }
+
+.posted-info-container .user-profile-modal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 14px;
+  margin-top: 8px;
+  color: var(--text-color-1); }
+
+.user-profile-modal .user-name-modal {
+  flex-shrink: 0; }
+
+.user-profile-modal .chosen-category-modal {
+  padding: 5px 7px;
+  margin-left: 3px;
+  font-size: 11px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: rgba(9, 107, 108, 0.8); }
+
+.posted-info-container .posted-title {
+  color: var(--text-color-1);
+  margin-top: 10px;
+  padding-left: 15px; }
+
+.posted-info-container .posted-content {
+  color: var(--text-color-1);
+  font-size: 14px;
+  padding-inline: 15px; }
+
+.posted-info-container .posted-reactions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  color: var(--text-color-3); }
+
+.posted-reactions .reactions-container {
+  display: flex;
+  gap: 15px;
+  padding-left: 10px;
+  flex-wrap: wrap; }
+
+.posted-reactions .reaction-icon-container,
+.modal-comment-section-class .reaction-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 2px; }
+
+.posted-reactions .reaction-count {
+  font-size: 14px; }
+
+.posted-reactions .comment-count {
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px; }
+
+.posted-reactions .comment-count:hover {
+  text-decoration: underline; }
+
+.posted-info-container .posted-actions {
+  display: flex;
+  gap: 10px;
+  padding-inline: 15px;
+  margin-top: 5px;
+  border-top: 1px solid var(--border-color-4); }
+
+.posted-info-container .date-posted {
+  font-size: 12px;
+  padding: 5px 15px;
+  color: var(--text-color-4); }
+
+.posted-info-container .modal-comment-section-class {
+  color: var(--text-color-1);
+  font-size: 14px;
+  max-height: 450px;
+  overflow-y: scroll; }
+
+.modal-comment-section-class .comment {
+  padding-left: 7px; }
+
+.posted-info-container .comment-profile-container {
+  padding-inline: 7px; }
+
+/*Modal*/
 /*General End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Queries Start*/
+@media (min-width: 1081px) and (max-width: 1250px) {
+  .mainmecha_RoClass #mainmechaCon_RoId {
+    max-width: 450px; } }
+@media (max-width: 641px), (min-width: 1081px) and (max-width: 1250px) {
+  .post-list .post-reactions {
+    flex-direction: column;
+    gap: 10px; } }
+@media (max-width: 400px) {
+  .contacts .contact-text {
+    visibility: hidden; }
+
+  .chat-toggle-button {
+    top: 110px; }
+
+  .chat-box-container {
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin-inline: auto; } }
 @media (max-width: 900px) {
   .modalme_RoClass .modalHeadClose_RoClass {
     background-color: var(--bg-color-12); }
@@ -7785,25 +7819,6 @@ video {
     width: 100%;
     background-color: var(--bg-color-2);
     border-bottom: 1px solid var(--border-color-1); } }
-@media (min-width: 1081px) and (max-width: 1250px) {
-  .mainmecha_RoClass #mainmechaCon_RoId {
-    max-width: 450px; } }
-@media (max-width: 641px), (min-width: 1081px) and (max-width: 1250px) {
-  .post-list .post-reactions {
-    flex-direction: column;
-    gap: 10px; } }
-@media (max-width: 400px) {
-  .contacts .contact-text {
-    visibility: hidden; }
-
-  .chat-toggle-button {
-    top: 110px; }
-
-  .chat-box-container {
-    width: 300px;
-    left: 0;
-    right: 0;
-    margin-inline: auto; } }
 /*Other Media Queries End*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

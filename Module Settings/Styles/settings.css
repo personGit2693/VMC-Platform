@@ -3539,7 +3539,8 @@ video {
 .sidemechaCon_RoClass .company-logo img {
   width: 140px;
   height: 140px;
-  cursor: pointer; }
+  border-radius: 50%;
+  object-fit: contain; }
 
 .sidemechaCon_RoClass .mainNavMenu_RoClass,
 .sidemechaCon_RoClass .subNavMenu_RoClass {

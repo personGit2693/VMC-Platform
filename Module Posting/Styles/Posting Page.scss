@@ -239,117 +239,6 @@ video {
 	@include light-mode;
 }
 
-/*Modal*/
-.modalmeCon_RoClass {
-	@include modalmeCon_RoClass;
-}
-
-.modalmeCon_RoClass .modalme_RoClass {
-	@include modalme_RoClass;
-}
-
-.modalme_RoClass .modalHeadClose_RoClass {
-	@include modalHeadClose_RoClass;
-}
-
-.modalHeadClose_RoClass .close-mod-icon {
-	@include close-mod-icon;
-}
-
-.modalme_RoClass .home-logo img {
-	@include home-logo-img;
-}
-
-.modalme_RoClass .modalBody_RoClass {
-	@include modalBody_RoClass;
-}
-
-.modalme_RoClass .posted-file-container {
-	@include posted-file-container;
-}
-
-.posted-file-container .posted-file {
-	@include posted-file;
-}
-
-.modalme_RoClass .posted-info-container {
-	@include posted-info-container;
-}
-
-.posted-info-container button {
-	@include posts-buttons;
-}
-
-.posted-info-container .modal-menu-container {
-	@include modal-menu-container;
-}
-
-.posted-info-container .user-profile-modal {
-	@include user-profile-modal;
-}
-
-.user-profile-modal .user-name-modal {
-	@include user-name;
-}
-
-.user-profile-modal .chosen-category-modal {
-	@include chosen-category;
-}
-
-.posted-info-container .posted-title {
-	@include posted-title;
-}
-
-.posted-info-container .posted-content {
-	@include posted-content;
-}
-
-.posted-info-container .posted-reactions {
-	@include posted-reactions;
-}
-
-.posted-reactions .reactions-container {
-	@include reactions-container-modal;
-}
-
-.posted-reactions .reaction-icon-container,
-.modal-comment-section-class .reaction-icon-container {
-	@include reaction-icon-container;
-}
-
-.posted-reactions .reaction-count {
-	@include reaction-count;
-}
-
-.posted-reactions .comment-count {
-	@include comment-count-modal;
-}
-
-.posted-reactions .comment-count:hover {
-	@include comment-count-hover;
-}
-
-.posted-info-container .posted-actions {
-	@include posted-actions;
-}
-
-.posted-info-container .date-posted {
-	@include date-posted-modal;
-}
-
-.posted-info-container .modal-comment-section-class {
-	@include modal-comment-section-class;
-}
-
-.modal-comment-section-class .comment {
-	@include comment-modal;
-}
-
-.posted-info-container .comment-profile-container {
-	@include comment-profile-container;
-}
-/*Modal*/
-
 /*Mid Section Start*/
 #rolayout_RoId {
 	@include rolayout_RoId;
@@ -391,7 +280,8 @@ video {
 .chat-box-container .close-chat-button:hover,
 .modalme_RoClass .home-logo img:hover,
 .posted-info-container button:hover,
-.modalHeadClose_RoClass:hover {
+.modalHeadClose_RoClass:hover,
+.my-post-info .delete-post:hover {
 	@include hover-opacity;
 }
 
@@ -408,7 +298,8 @@ video {
 .contact-pic-container-small:active,
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
-.posted-info-container button:active {
+.posted-info-container button:active,
+.my-post-info .delete-post:active {
 	@include active-opacity;
 }
 
@@ -650,6 +541,14 @@ video {
 .my-posts-wrapper a {
 	@include pinned-posts-wrapper-a;
 }
+
+.side-content-content .my-post-info {
+	@include my-post-info;
+}
+
+.my-post-info .delete-post {
+	@include delete-post;
+}
 /*Right Content End*/
 /*Mid Section End*/
 
@@ -834,37 +733,122 @@ video {
 	@include close-chat-button-img;
 }
 /*Chat Section End*/
+
+/*Modal*/
+.modalmeCon_RoClass {
+	@include modalmeCon_RoClass;
+}
+
+.modalmeCon_RoClass .modalme_RoClass {
+	@include modalme_RoClass;
+}
+
+.modalme_RoClass .modalHeadClose_RoClass {
+	@include modalHeadClose_RoClass;
+}
+
+.modalHeadClose_RoClass .close-mod-icon {
+	@include close-mod-icon;
+}
+
+.modalme_RoClass .home-logo img {
+	@include home-logo-img;
+}
+
+.modalme_RoClass .modalBody_RoClass {
+	@include modalBody_RoClass;
+}
+
+.modalme_RoClass .posted-file-container {
+	@include posted-file-container;
+}
+
+.posted-file-container .posted-file {
+	@include posted-file;
+}
+
+.modalme_RoClass .posted-info-container {
+	@include posted-info-container;
+}
+
+.posted-info-container button {
+	@include posts-buttons;
+}
+
+.posted-info-container .modal-menu-container {
+	@include modal-menu-container;
+}
+
+.posted-info-container .user-profile-modal {
+	@include user-profile-modal;
+}
+
+.user-profile-modal .user-name-modal {
+	@include user-name;
+}
+
+.user-profile-modal .chosen-category-modal {
+	@include chosen-category;
+}
+
+.posted-info-container .posted-title {
+	@include posted-title;
+}
+
+.posted-info-container .posted-content {
+	@include posted-content;
+}
+
+.posted-info-container .posted-reactions {
+	@include posted-reactions;
+}
+
+.posted-reactions .reactions-container {
+	@include reactions-container-modal;
+}
+
+.posted-reactions .reaction-icon-container,
+.modal-comment-section-class .reaction-icon-container {
+	@include reaction-icon-container;
+}
+
+.posted-reactions .reaction-count {
+	@include reaction-count;
+}
+
+.posted-reactions .comment-count {
+	@include comment-count-modal;
+}
+
+.posted-reactions .comment-count:hover {
+	@include comment-count-hover;
+}
+
+.posted-info-container .posted-actions {
+	@include posted-actions;
+}
+
+.posted-info-container .date-posted {
+	@include date-posted-modal;
+}
+
+.posted-info-container .modal-comment-section-class {
+	@include modal-comment-section-class;
+}
+
+.modal-comment-section-class .comment {
+	@include comment-modal;
+}
+
+.posted-info-container .comment-profile-container {
+	@include comment-profile-container;
+}
+/*Modal*/
 /*General End*/
 /***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
 /*Other Media Queries Start*/
-@media (max-width:900px) {
-	.modalme_RoClass .modalHeadClose_RoClass {
-		@include modalHeadClose_RoClass_OMQ;
-	}
-
-	.modalme_RoClass .home-logo img {
-		@include home-logo-img_OMQ;
-	}
-
-	.modalme_RoClass .modalBody_RoClass {
-		@include modalBody_RoClass_OMQ;
-	}
-
-	.modalme_RoClass .posted-file-container {
-		@include posted-file-container_OMQ;
-	}
-
-	.modalme_RoClass .posted-info-container {
-		@include posted-info-container_OMQ;
-	}
-
-	.posted-info-container .modal-menu-container {
-		@include modal-menu-container_OMQ;
-	}
-}
-
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
 		@include mainmechaCon_RoId_OMQ;
@@ -888,6 +872,32 @@ video {
 
 	.chat-box-container {
 		@include chat-box-container_OMQ;
+	}
+}
+
+@media (max-width:900px) {
+	.modalme_RoClass .modalHeadClose_RoClass {
+		@include modalHeadClose_RoClass_OMQ;
+	}
+
+	.modalme_RoClass .home-logo img {
+		@include home-logo-img_OMQ;
+	}
+
+	.modalme_RoClass .modalBody_RoClass {
+		@include modalBody_RoClass_OMQ;
+	}
+
+	.modalme_RoClass .posted-file-container {
+		@include posted-file-container_OMQ;
+	}
+
+	.modalme_RoClass .posted-info-container {
+		@include posted-info-container_OMQ;
+	}
+
+	.posted-info-container .modal-menu-container {
+		@include modal-menu-container_OMQ;
 	}
 }
 /*Other Media Queries End*/

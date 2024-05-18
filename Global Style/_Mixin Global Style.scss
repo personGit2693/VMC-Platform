@@ -268,7 +268,8 @@
 @mixin global_company-logo-img {
 	width: 140px;
 	height: 140px;
-	cursor: pointer;
+	border-radius: 50%;
+	object-fit: contain;
 }
 
 @mixin global_mainNavMenu_RoClass {
