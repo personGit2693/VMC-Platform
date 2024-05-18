@@ -27,9 +27,20 @@ html, body {
 }
 
 .cusInputs_RoClass{
-	@include cusInputs_RoClass
+	@include cusInputs_RoClass;
 }
 
+.placeholdme_RoClass{
+	@include placeholdme_RoClass;
+}
+
+.textBoxImgWrap_class{
+	@include textBoxImgWrap_class;
+}
+
+.textBoxImg_class{
+	@include textBoxImg_class;
+}
 
 .selectDropdownWrap_RoClass{
 	@include selectDropdownWrap_RoClass;
@@ -55,6 +66,14 @@ html, body {
 	@include selectDropdownOptsArea_RoClass;
 }
 
+#togglePasswordBtn1{
+	@include togglePasswordBtn1;
+}
+
+#togglePasswordBtn2{
+	@include togglePasswordBtn1;
+}
+
 .normButton_RoClass{
 	@include normButton_RoClass;
 }
@@ -62,6 +81,14 @@ html, body {
 
 .normButton_RoClass:hover{
 	@include normButton_RoClasshover;
+}
+
+.alreadyHaveAccount_class{
+	@include alreadyHaveAccount_class;
+}
+
+.linethis_RoClass{
+	@include footerWrap_RoClass;
 }
 /*General*/
 /************************************************************************************************************/

@@ -40,6 +40,13 @@
 --normBtnHovActFColor: white;
 --normBtnHovActBgColor: #FCC64F;
 /*Submit Button*/
+
+/*Footer*/
+--footerBgColor: #39AB5B;
+--footerFSize: 15px;
+--footerFColor: #FCC64F;
+/*Footer*/
+
 }
 /*Root*/
 /************************************************************************************************************/
@@ -59,16 +66,17 @@
 }
 
 @mixin formTitle_class{
-	font-size:50px;
+	font-size:30px;
 	text-align: center;
-	margin:20px;
+	margin:10px;
 	font-weight:500;
 }
 
 @mixin formBody_class{
+	padding-top:10px;
 	width:50%;
-	background-color:rgba(170, 209, 231, 0.6);
-	border:2px solid rgb(170, 209, 231);
+	background-color:rgba(170, 209, 231, 0.7);
+	border:2px solid #39AB5B;
 	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px;
 	border-radius:9px;
 	margin-left:auto;
@@ -76,12 +84,32 @@
 }
 
 @mixin cusInputs_RoClass{
-	margin:10px;
-	border-radius: 50px;
+	margin:10px;	
+	border-radius: 50px !important;
+	display:flex;
+	flex-direction:row;
+}
+
+@mixin placeholdme_RoClass{
+	display:flex !important;
+	flex-direction:row !important;
+}
+
+@mixin textBoxImgWrap_class{
+	width:15px;
+	height:15px;
+	margin-right:5px;
+}
+
+@mixin textBoxImg_class{
+	width:100%;
+	object-fit:contain;
 }
 
 @mixin selectDropdownWrap_RoClass{
 	margin:10px;
+	padding-top:10px;
+	padding-bottom:10px;
 	z-index:1;
 }
 
@@ -106,6 +134,16 @@
 	background-color:rgb(170, 209, 231);
 }
 
+@mixin togglePasswordBtn1{
+	--iconBtnWidth: 40px;		
+	--iconBtnHeight: 30px;
+	--iconBtnBgColor: 0;
+	--iconBtnBgSize: 20px;
+	--iconBtnBorderWidth: 0;
+	--iconBtnBorderColor: transparent;
+	--iconBtnBorderRadius: 0;
+}
+
 @mixin normButton_RoClass{
 	margin-left:auto;
 	margin-right:auto;
@@ -115,4 +153,13 @@
 
 @mixin normButton_RoClasshover{
 	opacity:0.8;
+}
+
+@mixin alreadyHaveAccount_class{
+	text-align: center;
+	margin-bottom:20px;
+}
+
+@mixin footerWrap_RoClass{
+	margin-top:50px;
 }

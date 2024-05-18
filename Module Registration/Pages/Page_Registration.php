@@ -10,33 +10,35 @@
 	<!--Page Title-->
 	<div class="formTitle_class">Create Account</div>
 	<!--Page Title-->
+
+	<!--Form Body-->
 	<div class="formBody_class">
 
 		<!--Employee ID-->
 		<div class="cusInputs_RoClass">				
 			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-			<div class="placeholdme_RoClass">Employee ID</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Employee ID</div>
 		</div>
 		<!--Employee ID-->
 
 		<!--First Name-->
 		<div class="cusInputs_RoClass">					
 			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-			<div class="placeholdme_RoClass">First Name</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>First Name</div>
 		</div>
 		<!--First Name-->
 
 		<!--Middle Name-->
 		<div class="cusInputs_RoClass">					
 			<input type="text" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray" required>
-			<div class="placeholdme_RoClass">Middle Name</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Middle Name</div>
 		</div>
 		<!--Middle Name-->
 
 		<!--Last Name-->
 		<div class="cusInputs_RoClass">					
 			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-			<div class="placeholdme_RoClass">Last Name</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Last Name</div>
 		</div>
 		<!--Last Name-->
 
@@ -44,8 +46,8 @@
 		<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id">
 			<input type="hidden" class="selectedOptValue_RoClass">
 			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
+				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
 				<div class="displayedSelectedText_RoClass">Suffix(if applicable)</div>
-				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/closeModIcon_Failed.png');"></div>
 				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/Chevron Down.png', 'Suffix(if applicable)')"></div>
 				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 			</div>
@@ -87,11 +89,13 @@
 		<div class="selectDropdownWrap_RoClass" id="AreaDropdown_id">
 			<input type="hidden" class="selectedOptValue_RoClass">
 			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
+				<div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>
 				<div class="displayedSelectedText_RoClass">Select your Area</div>
 				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/closeModIcon_Failed.png');"></div>
 				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/Chevron Down.png', 'Select your Area')"></div>
 				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 			</div>
+
 			<!--Area Dropdown Options-->
 			<div class="selectDropdownOptionsWrap_RoClass">
 				<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
@@ -128,15 +132,21 @@
 
 		<!--Password-->
 		<div class="cusInputs_RoClass">					
-			<input type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-			<div class="placeholdme_RoClass">Password</div>
+			<input id="inputPassword1" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Password</div>
+			<div class="checkPasswordBtn_Class">
+				<button class="iconBtn_RoClass" id="togglePasswordBtn1" onclick="controller_Btn_TogglePasswordVisibility1('inputPassword1')" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
+			</div>
 		</div>
 		<!--Password-->
 
 		<!--Password-->
 		<div class="cusInputs_RoClass">					
-			<input type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-			<div class="placeholdme_RoClass">Confirm your Password</div>
+			<input id="inputPassword2" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Confirm Password</div>
+			<div class="checkPasswordBtn_Class">
+				<button class="iconBtn_RoClass" id="togglePasswordBtn2" onclick="controller_Btn_TogglePasswordVisibility2('inputPassword2')" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
+			</div>
 		</div>
 		<!--Password-->
 
@@ -146,9 +156,20 @@
 		<!--Submit Button-->
 		<button class="normButton_RoClass">Create Account</button>
 		<!--Submit Button-->
+		<div class="alreadyHaveAccount_class">Already have an account? <a href="">Login</a></div>
+	</div>
+	<!--Form Body-->
+	<hr class="linethis_RoClass">
+	<div class=footerWrap_RoClass>
+		<span class="footerTxt_RoClass">&copy; 2024 HRIS. All rights reserved. All rights reserved.</span>
 	</div>
 <!--_Dependencies-->
 <script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 <!--_Dependencies-->
+
+<!--_Controllers-->
+<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility1.js"></script>
+<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility2.js"></script>
+<!--_Controllers-->
 </body>
 </html>
