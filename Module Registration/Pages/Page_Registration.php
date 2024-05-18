@@ -8,20 +8,20 @@
 </head>
 <body>
 	<!--Page Title-->
-	<div class="formTitle_class">Sign Up</div>
+	<div class="formTitle_class">Create Account</div>
 	<!--Page Title-->
 	<div class="formBody_class">
 
 		<!--Employee ID-->
-		<div class="cusInputs_RoClass">					
-			<input type="text" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+		<div class="cusInputs_RoClass">				
+			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
 			<div class="placeholdme_RoClass">Employee ID</div>
 		</div>
 		<!--Employee ID-->
 
 		<!--First Name-->
 		<div class="cusInputs_RoClass">					
-			<input type="text" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
 			<div class="placeholdme_RoClass">First Name</div>
 		</div>
 		<!--First Name-->
@@ -35,13 +35,13 @@
 
 		<!--Last Name-->
 		<div class="cusInputs_RoClass">					
-			<input type="text" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
 			<div class="placeholdme_RoClass">Last Name</div>
 		</div>
 		<!--Last Name-->
 
 		<!--Suffix Dropdown-->
-		<div class="selectDropdownWrap_RoClass">
+		<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id">
 			<input type="hidden" class="selectedOptValue_RoClass">
 			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
 				<div class="displayedSelectedText_RoClass">Suffix(if applicable)</div>
@@ -49,7 +49,7 @@
 				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/Chevron Down.png', 'Suffix(if applicable)')"></div>
 				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 			</div>
-			<!--Position Dropdown Options-->
+			<!--Suffix Dropdown Options-->
 			<div class="selectDropdownOptionsWrap_RoClass">
 				<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
 				<div class="selectDropdownOptsArea_RoClass">
@@ -84,7 +84,7 @@
 		<!--Suffix Dropdown-->
 
 		<!--Area Dropdown-->
-		<div class="selectDropdownWrap_RoClass">
+		<div class="selectDropdownWrap_RoClass" id="AreaDropdown_id">
 			<input type="hidden" class="selectedOptValue_RoClass">
 			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
 				<div class="displayedSelectedText_RoClass">Select your Area</div>
@@ -92,7 +92,7 @@
 				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/Chevron Down.png', 'Select your Area')"></div>
 				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 			</div>
-			<!--Position Dropdown Options-->
+			<!--Area Dropdown Options-->
 			<div class="selectDropdownOptionsWrap_RoClass">
 				<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
 				<div class="selectDropdownOptsArea_RoClass">
@@ -128,17 +128,24 @@
 
 		<!--Password-->
 		<div class="cusInputs_RoClass">					
-			<input type="password" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+			<input type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
 			<div class="placeholdme_RoClass">Password</div>
 		</div>
 		<!--Password-->
 
 		<!--Password-->
 		<div class="cusInputs_RoClass">					
-			<input type="password" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
+			<input type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
 			<div class="placeholdme_RoClass">Confirm your Password</div>
 		</div>
 		<!--Password-->
+
+		<!--Terms and Conditions Agreement-->
+		<!--Terms and Conditions Agreement-->
+
+		<!--Submit Button-->
+		<button class="normButton_RoClass">Create Account</button>
+		<!--Submit Button-->
 	</div>
 <!--_Dependencies-->
 <script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>

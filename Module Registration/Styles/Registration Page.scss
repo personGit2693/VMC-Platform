@@ -2,7 +2,7 @@
 /*Import Mixins*/
 @import "./Mixin Registration Page";
 @import "../../Global Style/Global Style";
-@import "../../Rogrid/Styles/RoStrap_Mixin";
+@import "../../Global Style/Rostrap Global";
 /*Import Mixins*/
 /************************************************************************************************************/
 /*General*/
@@ -27,15 +27,41 @@ html, body {
 }
 
 .cusInputs_RoClass{
-	@include cusInputs_RoClass;
+	@include cusInputs_RoClass
 }
+
 
 .selectDropdownWrap_RoClass{
 	@include selectDropdownWrap_RoClass;
 }
 
+#suffixDropdown_id{
+	@include suffixDropdown_id;
+}
+
+#AreaDropdown_id{
+	@include AreaDropdown_id;
+}
+
+.selectDropdownOptionsWrap_RoClass{
+	@include selectDropdownOptionsWrap_RoClass;
+}
+
+.searchOpts_RoClass{
+	@include searchOpts_RoClass;
+}
+
 .selectDropdownOptsArea_RoClass{
 	@include selectDropdownOptsArea_RoClass;
+}
+
+.normButton_RoClass{
+	@include normButton_RoClass;
+}
+
+
+.normButton_RoClass:hover{
+	@include normButton_RoClasshover;
 }
 /*General*/
 /************************************************************************************************************/
