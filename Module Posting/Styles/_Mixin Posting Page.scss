@@ -495,20 +495,15 @@
 	color: inherit;
 }
 
-@mixin my-post-info {
-	display: flex;
-	justify-content: space-between;
-}
-
 @mixin delete-post {
-	margin-right: 50px;
+	margin-top: 3px;
 	font-size: 12px;
 	font-weight: bold;
 	border-radius: 3px;
-	padding: 1px 7px;
+	padding: 3px 7px;
 	border: none;
-	color: var(--text-color-4);
-	background-color: var(--bg-color-3);
+	color: #6E6F72;
+	background-color: #FCC64F;
 	cursor: pointer;
 }
 /*Right Content*/

@@ -6894,7 +6894,7 @@ video {
 .modalme_RoClass .home-logo img:hover,
 .posted-info-container button:hover,
 .modalHeadClose_RoClass:hover,
-.my-post-info .delete-post:hover {
+.side-content-content .delete-post:hover {
   opacity: .7; }
 
 .create-post-form .custom-file-upload:active,
@@ -6911,7 +6911,7 @@ video {
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
 .posted-info-container button:active,
-.my-post-info .delete-post:active {
+.side-content-content .delete-post:active {
   opacity: .5; }
 
 .create-post-form .post-title-class,
@@ -7264,19 +7264,15 @@ video {
 .my-posts-wrapper a {
   color: inherit; }
 
-.side-content-content .my-post-info {
-  display: flex;
-  justify-content: space-between; }
-
-.my-post-info .delete-post {
-  margin-right: 50px;
+.side-content-content .delete-post {
+  margin-top: 3px;
   font-size: 12px;
   font-weight: bold;
   border-radius: 3px;
-  padding: 1px 7px;
+  padding: 3px 7px;
   border: none;
-  color: var(--text-color-4);
-  background-color: var(--bg-color-3);
+  color: #6E6F72;
+  background-color: #FCC64F;
   cursor: pointer; }
 
 /*Right Content End*/

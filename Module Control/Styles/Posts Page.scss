@@ -1,0 +1,233 @@
+/************************************************************************************************************/
+/*Import Mixins*/
+@import "./Mixin Posts Page";
+@import "../../Global Style/Global Style";
+/*Import Mixins*/
+/************************************************************************************************************/
+@font-face {
+	@include global_font-face;
+}
+/*General Start*/
+html, body {
+	@include html-body;
+}
+
+*, *::before, *::after {
+	@include asterisk;
+}
+
+img {
+	@include img;
+}
+
+body::-webkit-scrollbar {
+	width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #BCC0C4;
+	border-radius: 10px;
+}
+
+.posts-container {
+	font-size: 14px;
+}
+
+.posts-container .post-status-summary {
+	margin: 8px 8px 0px 8px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
+	display: flex;
+	gap: 10px;
+}
+
+.post-status-summary .status-item {
+	font-size: 15px;
+	padding: 7px 10px;
+	border-radius: 5px;
+	color: #000000;
+}
+
+.post-status-summary .pending-approval-count,
+.action-buttons .pending-approval,
+.action-buttons .approve-button {
+	background-color: #39AB5B;
+}
+
+.post-status-summary .pending-removal-count,
+.action-buttons .pending-removal,
+.action-buttons .decline-button {
+	background-color: #FCC64F;
+}
+
+.posts-container .post-box {
+	padding: 8px;
+}
+
+.post-box .post-list {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
+}
+
+.post-list .action-buttons {
+	padding: 5px 0px 15px 0px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #CED0D4;
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.action-buttons .post-status {
+	font-size: 14px;
+	margin-right: auto;
+	padding: 7px 10px;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+.action-buttons button {
+	padding: 7px 15px;
+	border-radius: 5px;
+	border: none;
+	font-size: 14px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.action-buttons button:hover {
+	opacity: .7;
+}
+
+.action-buttons button:active {
+	opacity: .5;
+}
+
+.post-list .user-profile-box {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.post-list .user-profile-box img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #E2E4E7;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.user-profile-box .user-name {
+	flex-shrink: 0;
+}
+
+.user-profile-box .chosen-category {
+	padding: 5px 7px;
+	margin-left: 3px;
+	font-size: 11px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	background-color: rgba(#39AB5B, .8);
+}
+
+.post-list .post-title-class {
+	margin-bottom: 7px;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #F0F2F5;
+}
+
+.post-list .post-content-class {
+	width: 100%;
+	white-space: normal;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #F0F2F5;
+}
+
+.post-list .file-preview-container-class {
+	border: 1px solid #CED0D4;
+	margin-top: 10px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.file-preview-container-class .file-preview-element {
+	border-radius: 10px;
+	margin: 8px;
+	width: calc(100% - 16px);
+	max-height: 550px;
+	min-height: 250px;
+	object-fit: contain;
+	background-color: #000000;
+}
+/*General End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Other Media Queries Start*/
+@media (max-width:400px) {
+	.posts-container .post-status-summary {
+		justify-content: space-between;
+	}
+
+	.post-status-summary .status-item {
+		font-size: 12px;
+	}
+
+	.post-list .action-buttons {
+		gap: 7px;
+	}
+
+	.action-buttons .post-status {
+		font-size: 11px;
+	}
+
+	.action-buttons button {
+		padding-inline: 10px;
+		font-size: 11px;
+	}
+}
+/*Other Media Queries End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile and Tablet Start*/
+@media (max-width:1080px) {
+	
+}
+/*Mobile and Tablet End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile Start*/
+@media all and (max-width:641px) {
+	
+}
+/*Mobile End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Tablet Start*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	
+}
+/*Tablet End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Laptop Start*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+	
+}
+/*Laptop End*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Desktop Start*/
+@media all and (min-width:1601px) {
+	
+}
+/*Desktop End*/
+/************************************************************************************************************/

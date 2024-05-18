@@ -719,57 +719,39 @@
 				<div class="side-content-title">My Posts</div>
 
 				<div class="side-content-content">
-					<div class="my-post-info">
-						<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
-						<button class="delete-post">Delete</button>
-					</div>
-
+					<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
 					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+					<button class="delete-post">Delete</button>
 				</div>
 
 				<div class="side-content-content">
-					<div class="my-post-info">
-						<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
-						<button class="delete-post">Delete</button>
-					</div>
-
+					<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
 					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+					<button class="delete-post">Delete</button>
 				</div>
 
 				<div class="side-content-content">
-					<div class="my-post-info">
-						<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
-						<button class="delete-post">Delete</button>
-					</div>
-
+					<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
 					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+					<button class="delete-post">Delete</button>
 				</div>
 
 				<div class="side-content-content">
-					<div class="my-post-info">
-						<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
-						<button class="delete-post">Delete</button>
-					</div>
-
+					<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
 					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+					<button class="delete-post">Delete</button>
 				</div>
 
 				<div class="side-content-content">
-					<div class="my-post-info">
-						<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
-						<button class="delete-post">Delete</button>
-					</div>
-
+					<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
 					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+					<button class="delete-post">Delete</button>
 				</div>
 
 				<div class="side-content-content">
-					<div class="my-post-info">
-						<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
-						<button class="delete-post">Delete</button>
-					</div>
-					
+					<div class="content-title"><a href="#" onclick="showMyMod('modalme_RoClass', 0)">Grab Car Saver</a></div>
 					<div class="date">Date Posted: 4/19/2024, 8:39:45 PM</div>
+					<button class="delete-post">Delete</button>
 				</div>
 			</div>
 			<!--Side Content 3-->

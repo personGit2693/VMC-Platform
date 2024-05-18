@@ -281,7 +281,7 @@ video {
 .modalme_RoClass .home-logo img:hover,
 .posted-info-container button:hover,
 .modalHeadClose_RoClass:hover,
-.my-post-info .delete-post:hover {
+.side-content-content .delete-post:hover {
 	@include hover-opacity;
 }
 
@@ -299,7 +299,7 @@ video {
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
 .posted-info-container button:active,
-.my-post-info .delete-post:active {
+.side-content-content .delete-post:active {
 	@include active-opacity;
 }
 
@@ -542,11 +542,7 @@ video {
 	@include pinned-posts-wrapper-a;
 }
 
-.side-content-content .my-post-info {
-	@include my-post-info;
-}
-
-.my-post-info .delete-post {
+.side-content-content .delete-post {
 	@include delete-post;
 }
 /*Right Content End*/
