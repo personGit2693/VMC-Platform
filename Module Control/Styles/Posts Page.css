@@ -5,8 +5,8 @@
 /*General*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Mobile @media (max-width:641px)*/
-/*Mobile @media (max-width:641px)*/
+/*Other Media Queries*/
+/*Other Media Queries*/
 /************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
@@ -176,7 +176,6 @@ body::-webkit-scrollbar-thumb {
 
 .post-list .post-content-class {
   width: 100%;
-  white-space: normal;
   padding: 10px;
   border-radius: 10px;
   background-color: #F0F2F5; }
@@ -184,8 +183,7 @@ body::-webkit-scrollbar-thumb {
 .post-list .file-preview-container-class {
   border: 1px solid #CED0D4;
   margin-top: 10px;
-  border-radius: 10px;
-  position: relative; }
+  border-radius: 10px; }
 
 .file-preview-container-class .file-preview-element {
   border-radius: 10px;

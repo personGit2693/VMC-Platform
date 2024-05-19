@@ -6568,8 +6568,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --bg-color-3: #F0F2F5;
   --bg-color-5: #BCC0C4;
   --bg-color-6: #3A3B3C;
-  --bg-color-7: #096B6C;
-  --bg-color-8: #3C746B;
+  --bg-color-7: #39AB5B;
+  --bg-color-8: #FCC64F;
   --bg-color-9: #7ABCF4;
   --text-color-1: #000000;
   --text-color-2: #FFFFFF;
@@ -6827,7 +6827,7 @@ video {
   --bg-color-11: #FFFFFF;
   --bg-color-12: #999999;
   --text-color-3: #5F6266;
-  --text-color-4: #6E6F72;
+  --text-color-4: #808080;
   --text-color-5: #000000;
   --border-color-2: #E2E4E7;
   --border-color-3: #F0F2F5;
@@ -6858,8 +6858,8 @@ video {
   padding: 10px;
   border-radius: 10px;
   white-space: nowrap;
-  background-color: #096B6C;
-  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7); }
+  background-color: #39AB5B;
+  box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7); }
 
 .mainmechaCon_RoClass .post-form {
   margin-top: 10px;
@@ -6867,7 +6867,7 @@ video {
   border-radius: 10px;
   color: var(--text-color-1);
   background-color: var(--bg-color-2);
-  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7); }
+  box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7); }
 
 .create-post-form .post-category-label {
   margin-bottom: 10px;
@@ -6963,7 +6963,7 @@ video {
   border-radius: 10px;
   margin-top: 10px;
   font-size: 14px;
-  background-color: #8ED770;
+  background-color: #FCC64F;
   color: #808080;
   cursor: pointer; }
 
@@ -7004,8 +7004,8 @@ video {
   padding: 7px 15px;
   border-radius: 3px;
   display: block;
-  background-color: #3C746B;
-  color: #FFFFFF;
+  background-color: #FCC64F;
+  color: #808080;
   cursor: pointer; }
 
 .create-post-form .create-post-button:active {
@@ -7022,17 +7022,17 @@ video {
   justify-content: center;
   padding: 10px;
   border-radius: 10px;
-  background-color: #096B6C;
+  background-color: #39AB5B;
   color: #FFFFFF;
   font-size: 14px;
-  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7); }
+  box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7); }
 
 .posts .post-list {
   margin-top: 10px;
   padding: 10px;
   border-radius: 10px;
   background-color: var(--bg-color-2);
-  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7); }
+  box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7); }
 
 .post-list .user-profile-box {
   margin-bottom: 10px; }
@@ -7051,7 +7051,7 @@ video {
   font-size: 11px;
   border-radius: 5px;
   color: #FFFFFF;
-  background-color: rgba(9, 107, 108, 0.8); }
+  background-color: rgba(57, 171, 91, 0.8); }
 
 .posts button {
   cursor: pointer;
@@ -7271,7 +7271,7 @@ video {
   border-radius: 3px;
   padding: 3px 7px;
   border: none;
-  color: #6E6F72;
+  color: #808080;
   background-color: #FCC64F;
   cursor: pointer; }
 
@@ -7285,7 +7285,7 @@ video {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3C746B;
+  background-color: #39AB5B;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -7508,7 +7508,7 @@ video {
   padding: 8px 11px;
   border-radius: 16px;
   font-size: 13px;
-  background-color: #096B6C;
+  background-color: #39AB5B;
   color: #FFFFFF; }
 
 .chat-box .left-chat-container {
@@ -7568,7 +7568,7 @@ video {
   padding: 10px;
   border-radius: 10px;
   border: none;
-  background-color: #3C746B;
+  background-color: #39AB5B;
   color: #FFFFFF;
   cursor: pointer; }
 
@@ -7578,7 +7578,7 @@ video {
   top: 10px;
   border-radius: 10px;
   border: none;
-  background-color: #3C746B;
+  background-color: #39AB5B;
   width: 40px;
   height: 30px;
   display: flex;
@@ -7596,7 +7596,7 @@ video {
   top: 10px;
   border-radius: 50%;
   border: none;
-  background-color: #3C746B;
+  background-color: #39AB5B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7699,7 +7699,7 @@ video {
   font-size: 11px;
   border-radius: 5px;
   color: #FFFFFF;
-  background-color: rgba(9, 107, 108, 0.8); }
+  background-color: rgba(57, 171, 91, 0.8); }
 
 .posted-info-container .posted-title {
   color: var(--text-color-1);
