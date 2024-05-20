@@ -21,152 +21,95 @@ img {
 }
 
 body::-webkit-scrollbar {
-	width: 7px;
+	@include body-scrollbar;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #BCC0C4;
-	border-radius: 10px;
+	@include body-sb-thumb;
 }
 
 .posts-container {
-	font-size: 14px;
+	@include posts-container;
 }
 
 .posts-container .post-status-summary {
-	margin: 8px 8px 0px 8px;
-	padding: 10px;
-	border-radius: 10px;
-	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
-	display: flex;
-	gap: 10px;
+	@include post-status-summary;
 }
 
 .post-status-summary .status-item {
-	font-size: 15px;
-	padding: 7px 10px;
-	border-radius: 5px;
-	color: #000000;
+	@include status-item;
 }
 
 .post-status-summary .pending-approval-count,
 .action-buttons .pending-approval,
 .action-buttons .approve-button {
-	background-color: #39AB5B;
+	@include pending-approval-count;
 }
 
 .post-status-summary .pending-removal-count,
 .action-buttons .pending-removal,
 .action-buttons .decline-button {
-	background-color: #FCC64F;
+	@include pending-removal-count;
 }
 
 .posts-container .post-box {
-	padding: 8px;
+	@include post-box;
 }
 
 .post-box .post-list {
-	padding: 10px;
-	border-radius: 10px;
-	background-color: #FFFFFF;
-	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
+	@include post-list;
 }
 
 .post-list .action-buttons {
-	padding: 5px 0px 15px 0px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #CED0D4;
-	display: flex;
-	gap: 10px;
-	justify-content: flex-end;
-	align-items: center;
+	@include action-buttons;
 }
 
 .action-buttons .post-status {
-	font-size: 14px;
-	margin-right: auto;
-	padding: 7px 10px;
-	border-radius: 5px;
-	color: #FFFFFF;
+	@include post-status;
 }
 
 .action-buttons button {
-	padding: 7px 15px;
-	border-radius: 5px;
-	border: none;
-	font-size: 14px;
-	color: #FFFFFF;
-	cursor: pointer;
+	@include action-buttons-button;
 }
 
 .action-buttons button:hover {
-	opacity: .7;
+	@include action-buttons-button-hover;
 }
 
 .action-buttons button:active {
-	opacity: .5;
+	@include action-buttons-button-active;
 }
 
 .post-list .user-profile-box {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	margin-bottom: 10px;
+	@include user-profile-box;
 }
 
 .post-list .user-profile-box img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 1px solid #E2E4E7;
-	object-fit: cover;
-	cursor: pointer;
+	@include user-profile-box-img;
 }
 
 .user-profile-box .user-name {
-	flex-shrink: 0;
+	@include user-name;
 }
 
 .user-profile-box .chosen-category {
-	padding: 5px 7px;
-	margin-left: 3px;
-	font-size: 11px;
-	border-radius: 5px;
-	color: #FFFFFF;
-	background-color: rgba(#39AB5B, .8);
+	@include chosen-category;
 }
 
 .post-list .post-title-class {
-	margin-bottom: 7px;
-	font-size: 16px;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: #F0F2F5;
+	@include post-title-class;
 }
 
 .post-list .post-content-class {
-	width: 100%;
-	white-space: normal;
-	padding: 10px;
-	border-radius: 10px;
-	background-color: #F0F2F5;
+	@include post-content-class;
 }
 
 .post-list .file-preview-container-class {
-	border: 1px solid #CED0D4;
-	margin-top: 10px;
-	border-radius: 10px;
-	position: relative;
+	@include file-preview-container-class;
 }
 
 .file-preview-container-class .file-preview-element {
-	border-radius: 10px;
-	margin: 8px;
-	width: calc(100% - 16px);
-	max-height: 550px;
-	min-height: 250px;
-	object-fit: contain;
-	background-color: #000000;
+	@include file-preview-element;
 }
 /*General End*/
 /************************************************************************************************************/
@@ -174,24 +117,23 @@ body::-webkit-scrollbar-thumb {
 /*Other Media Queries Start*/
 @media (max-width:400px) {
 	.posts-container .post-status-summary {
-		justify-content: space-between;
+		@include post-status-summary_OMQ;
 	}
 
 	.post-status-summary .status-item {
-		font-size: 12px;
+		@include status-item_OMQ;
 	}
 
 	.post-list .action-buttons {
-		gap: 7px;
+		@include action-buttons_OMQ;
 	}
 
 	.action-buttons .post-status {
-		font-size: 11px;
+		@include post-status_OMQ;
 	}
 
 	.action-buttons button {
-		padding-inline: 10px;
-		font-size: 11px;
+		@include action-buttons-button_OMQ;
 	}
 }
 /*Other Media Queries End*/
