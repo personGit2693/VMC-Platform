@@ -1,6 +1,6 @@
 /************************************************************************************************************/
 /*Import Mixins*/
-@import "./Mixin Registration Page";
+@import "./Mixin Page Registration";
 @import "../../Global Style/Global Style";
 @import "../../Global Style/Rostrap Global";
 /*Import Mixins*/
@@ -14,8 +14,16 @@ html, body {
 	@include body;
 }
 
+.backgroundContainer_class{
+	@include backgroundContainer_class;
+}
+
 *, *::before, *::after {
 	@include asterisk;
+}
+
+.TitleandFormWrap_class{
+	@include TitleandFormWrap_class;
 }
 
 .formTitle_class{
@@ -87,14 +95,36 @@ html, body {
 	@include alreadyHaveAccount_class;
 }
 
-.linethis_RoClass{
-	@include footerWrap_RoClass;
+.alreadyHaveAccount_class a{
+	@include linkToLogin;
 }
+
 /*General*/
 /************************************************************************************************************/
 
 /*Mobile*/
 @media all and (max-width:641px){
+
+html, body {
+	@include body;
+}
+
+.backgroundContainer_class {
+	@include backgroundContainer_class_mobile;
+}
+
+.formBody_class{
+	@include formBody_class_mobile;
+}
+
+.cusInputs_RoClass{
+	@include cusInputs_RoClass_mobile;
+}
+
+.selectDropdownWrap_RoClass{
+	@include selectDropdownWrap_RoClass_mobile;
+}
+
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -104,6 +134,26 @@ html, body {
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 
+html, body {
+	@include body;
+}
+
+.backgroundContainer_class {
+	@include backgroundContainer_class_tablet;
+}
+
+.formBody_class{
+	@include formBody_class_mobile;
+}
+
+.cusInputs_RoClass{
+	@include cusInputs_RoClass_mobile;
+}
+
+.selectDropdownWrap_RoClass{
+	@include selectDropdownWrap_RoClass_mobile;
+}
+
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -112,6 +162,13 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+html, body {
+	@include body;
+}
+
+.backgroundContainer_class{
+	@include backgroundContainer_class;
+}
 	
 }
 /*Laptop*/
@@ -121,5 +178,9 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
+.backgroundContainer_class {
+	@include backgroundContainer_class_pc;
+}
+
 }
 /*Desktop*/

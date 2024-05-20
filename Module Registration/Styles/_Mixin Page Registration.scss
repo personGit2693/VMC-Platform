@@ -14,7 +14,7 @@
 --selectDropdownBorderColor: black;
 --selectDropdownBorderRadius: 50px;
 --selectDropdownBgColor: transparent;		
---selectDropdownIconSize: 14px;
+--selectDropdownIconSize: 10px;
 --selectDropdownFSize: 20px;
 --selectDropdownFColor: black;
 --selectDropdownChevronSize: 20px;
@@ -44,7 +44,7 @@
 /*Footer*/
 --footerBgColor: #39AB5B;
 --footerFSize: 15px;
---footerFColor: #FCC64F;
+--footerFColor: white;
 /*Footer*/
 
 }
@@ -54,15 +54,45 @@
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
 @mixin body {
-	height: 100%;
 	margin: 0;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+@mixin backgroundContainer_class{
+	height:100vh;
 	background-image:url("../../src/bg2.png");
+	background-size: cover;
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+
+@mixin backgroundContainer_class_mobile{
+	background-size:cover;
+}
+
+@mixin backgroundContainer_class_tablet{
+	background-size:cover;
+}
+
+@mixin backgroundContainer_class_pc{
 	background-size:cover;
 }
 
 @mixin asterisk {
 	box-sizing: border-box;
 	font-family: 'Binance PLEX';
+}
+
+@mixin TitleandFormWrap_class{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	margin-top:auto;
+	margin-bottom:auto;
 }
 
 @mixin formTitle_class{
@@ -75,29 +105,45 @@
 @mixin formBody_class{
 	padding-top:10px;
 	width:50%;
-	background-color:rgba(170, 209, 231, 0.7);
+	border-radius:9px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@mixin formBody_class_mobile{
+	padding-top:10px;
+	width:99%;
 	border:2px solid #39AB5B;
 	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px;
+	box-shadow: 0 0 10px #39AB5B, 0 0 20px #39AB5B, 0 0 30px #39AB5B;
 	border-radius:9px;
 	margin-left:auto;
 	margin-right:auto;
 }
 
 @mixin cusInputs_RoClass{
-	margin:10px;	
+	margin:10px;
+	background-color:rgba(170, 209, 231, 0.7);	
 	border-radius: 50px !important;
 	display:flex;
 	flex-direction:row;
 }
 
+@mixin cusInputs_RoClass_mobile{
+	--customInputFSize: 10px;
+	--customInputAnimFSize: 5px;
+
+}
+
 @mixin placeholdme_RoClass{
 	display:flex !important;
 	flex-direction:row !important;
+	margin-left:10px !important;
 }
 
 @mixin textBoxImgWrap_class{
-	width:15px;
-	height:15px;
+	width:10px;
+	height:10px;
 	margin-right:5px;
 }
 
@@ -110,7 +156,13 @@
 	margin:10px;
 	padding-top:10px;
 	padding-bottom:10px;
+	background-color:rgba(170, 209, 231, 0.7);	
 	z-index:1;
+	padding-left:10px !important;
+}
+
+@mixin selectDropdownWrap_RoClass_mobile{
+	--selectDropdownFSize: 10px;
 }
 
 @mixin suffixDropdown_id{
@@ -158,8 +210,9 @@
 @mixin alreadyHaveAccount_class{
 	text-align: center;
 	margin-bottom:20px;
+	color: yellow;
 }
 
-@mixin footerWrap_RoClass{
-	margin-top:50px;
+@mixin linkToLogin{
+	color: yellow !important;		
 }
