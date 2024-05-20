@@ -169,6 +169,11 @@
 	width:555px !important;
 }
 
+@mixin selectDropdownOptionsWrap_RoClass_mobile{
+	z-index:1;
+	width:350px !important;
+}
+
 @mixin selectDropdownOptsArea_RoClass{
 	border:1px solid black;
 	background-color:rgb(170, 209, 231);

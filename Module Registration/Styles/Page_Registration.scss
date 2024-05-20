@@ -119,6 +119,11 @@ html, body {
 	@include selectDropdownWrap_RoClass_mobile;
 }
 
+.selectDropdownOptionsWrap_RoClass{
+	@include selectDropdownOptionsWrap_RoClass_mobile;
+
+}
+
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -142,6 +147,10 @@ html, body {
 
 .selectDropdownWrap_RoClass{
 	@include selectDropdownWrap_RoClass_mobile;
+}
+
+.selectDropdownOptionsWrap_RoClass{
+	@include selectDropdownOptionsWrap_RoClass_mobile;
 }
 
 }
