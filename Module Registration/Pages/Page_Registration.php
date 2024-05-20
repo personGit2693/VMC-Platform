@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../Styles/Page Registration.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/Page_Registration.css">
 	<title>Registration Page</title>
 </head>
 <body>
-	<div class="TitleandFormWrap_class">	
+	<div class="titleandFormWrap_class">	
 		<!--Page Title-->
-		<div class="formTitle_class">Create Account</div>
+		<div class="formTitle_class">Create New Account</div>
 		<!--Page Title-->
 
 		<!--Form Body-->
@@ -87,7 +87,7 @@
 			<!--Suffix Dropdown-->
 
 			<!--Area Dropdown-->
-			<div class="selectDropdownWrap_RoClass" id="AreaDropdown_id">
+			<div class="selectDropdownWrap_RoClass" id="areaDropdown_id">
 				<input type="hidden" class="selectedOptValue_RoClass">
 				<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
 					<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>

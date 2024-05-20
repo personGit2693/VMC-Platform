@@ -101,6 +101,13 @@
 }
 /*Binance Font*/
 
+/*Comfortaa Font*/
+@mixin global_font-face1 {
+	font-family: 'Comfortaa';
+	src: url("../../Global Fonts/Comfortaa-VariableFont_wght.ttf");
+}
+/*Comfortaa Font*/
+
 /*Webkit*/
 @mixin global_scrollbar {
 	width: 7px;

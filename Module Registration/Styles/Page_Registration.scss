@@ -1,6 +1,7 @@
 /************************************************************************************************************/
 /*Import Mixins*/
-@import "./Mixin Page Registration";
+@import "./Mixin_Page_Registration";
+@import "../../Global Style/Mixin Global Style";
 @import "../../Global Style/Global Style";
 @import "../../Global Style/Rostrap Global";
 /*Import Mixins*/
@@ -8,6 +9,7 @@
 /*General*/
 @font-face {
 	@include global_font-face;
+	@include global_font-face1;
 }
 /*General Start*/
 html, body {
@@ -18,8 +20,8 @@ html, body {
 	@include asterisk;
 }
 
-.TitleandFormWrap_class{
-	@include TitleandFormWrap_class;
+.titleandFormWrap_class{
+	@include titleandFormWrap_class;
 }
 
 .formTitle_class{
@@ -55,7 +57,7 @@ html, body {
 }
 
 #AreaDropdown_id{
-	@include AreaDropdown_id;
+	@include areaDropdown_id;
 }
 
 .selectDropdownOptionsWrap_RoClass{
