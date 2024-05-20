@@ -2,7 +2,7 @@
 /*Root*/
 :root{
 /*Textbox Input*/	
---customInputColor: black;
+--customInputColor: rgb(255, 255, 247);
 --customInputFSize: 20px;
 --customInputAnimFSize: 10px;
 /*Textbox Input*/	
@@ -11,12 +11,12 @@
 /*Dropdown*/	
 --selectDropdownWidth: auto; 		
 --selectDropdownBorderWidth: 1px;
---selectDropdownBorderColor: black;
+--selectDropdownBorderColor: rgb(255, 255, 247);
 --selectDropdownBorderRadius: 50px;
 --selectDropdownBgColor: transparent;		
 --selectDropdownIconSize: 10px;
 --selectDropdownFSize: 20px;
---selectDropdownFColor: black;
+--selectDropdownFColor: rgb(255, 255, 247);
 --selectDropdownChevronSize: 20px;
 --searchOptsBgColor: white;
 --searchOptsFColor: black;
@@ -106,7 +106,7 @@
 
 @mixin cusInputs_RoClass{
 	margin:10px;
-	background-color:rgba(170, 209, 231, 0.7)/*transparent*/;	
+	background-color:rgba(77, 81, 69, 0.4)/*transparent*/;	
 	border-radius: 50px !important;
 	display:flex;
 	flex-direction:row;
@@ -139,7 +139,7 @@
 	margin:10px;
 	padding-top:10px;
 	padding-bottom:10px;
-	background-color:rgba(170, 209, 231, 0.7)/*transparent*/;	
+	background-color:rgba(77, 81, 69, 0.4)/*transparent*/;	
 	z-index:1;
 	padding-left:10px !important;
 }
