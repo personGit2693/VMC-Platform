@@ -14,10 +14,6 @@ html, body {
 	@include body;
 }
 
-.backgroundContainer_class{
-	@include backgroundContainer_class;
-}
-
 *, *::before, *::after {
 	@include asterisk;
 }
@@ -109,10 +105,6 @@ html, body {
 	@include body;
 }
 
-.backgroundContainer_class {
-	@include backgroundContainer_class_mobile;
-}
-
 .formBody_class{
 	@include formBody_class_mobile;
 }
@@ -138,10 +130,6 @@ html, body {
 	@include body;
 }
 
-.backgroundContainer_class {
-	@include backgroundContainer_class_tablet;
-}
-
 .formBody_class{
 	@include formBody_class_mobile;
 }
@@ -162,14 +150,7 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-html, body {
-	@include body;
-}
 
-.backgroundContainer_class{
-	@include backgroundContainer_class;
-}
-	
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -178,9 +159,6 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-.backgroundContainer_class {
-	@include backgroundContainer_class_pc;
-}
 
 }
 /*Desktop*/
