@@ -1,11 +1,14 @@
-/************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 @import "./Mixin_Page_Registration";
 @import "../../Global Style/Mixin Global Style";
 @import "../../Global Style/Global Style";
 @import "../../Global Style/Rostrap Global";
 /*Import Mixins*/
-/************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*General*/
 @font-face {
 	@include global_font-face;
@@ -32,32 +35,7 @@ html, body {
 	@include formBody_class;
 }
 
-.cusInputs_RoClass{
-	@include inputFields_General_Style;
-	@include cusInputs_RoClass;
-}
-
-.cusInputs_RoClass input{	
-	@include cusInputs_Inputs;
-}
-
-.placeholdme_RoClass{
-	@include placeholdme_RoClass;
-}
-
-.textBoxImgWrap_class{
-	@include textBoxImgWrap_class;
-}
-
-.textBoxImg_class{
-	@include textBoxImg_class;
-}
-
-.selectDropdownWrap_RoClass{
-	@include inputFields_General_Style;
-	@include selectDropdownWrap_RoClass;
-}
-
+/*
 #suffixDropdown_id{
 	@include suffixDropdown_id;
 }
@@ -65,18 +43,7 @@ html, body {
 #AreaDropdown_id{
 	@include areaDropdown_id;
 }
-
-.selectDropdownOptionsWrap_RoClass{
-	@include selectDropdownOptionsWrap_RoClass;
-}
-
-.searchOpts_RoClass{
-	@include searchOpts_RoClass;
-}
-
-.selectDropdownOptsArea_RoClass{
-	@include selectDropdownOptsArea_RoClass;
-}
+*/
 
 #togglePasswordBtn1{
 	@include togglePasswordBtn1;
@@ -90,7 +57,6 @@ html, body {
 	@include normButton_RoClass;
 }
 
-
 .normButton_RoClass:hover{
 	@include normButton_RoClasshover;
 }
@@ -103,32 +69,131 @@ html, body {
 	@include linkToLogin;
 }
 
-/*General*/
-/************************************************************************************************************/
-
-/*Mobile*/
-@media all and (max-width:641px){
-
-html, body {
-	@include body;
-}
-
-.formBody_class{
-	@include formBody_class_mobile;
-}
-
+/*_cusInputs_RoClass General*/
 .cusInputs_RoClass{
-	@include cusInputs_RoClass_mobile;
+	@include inputFields_General_Style;
+	@include cusInputs_General_Style;
+}
+/*_cusInputs_RoClass General*/
+
+
+/*_Input text General*/
+.cusInputs_RoClass .placeholdme_RoClass{
+	@include placeholdme_General_Style;
 }
 
+.placeholdme_RoClass .textBoxImgWrap_class{
+	@include textBoxImgWrap_General_Style;
+}
+
+.textBoxImgWrap_class img{
+	@include textBoxImg_General_Style;
+}
+/*_Input text General*/
+
+
+/*_Input password General*/
+.cusInputs_RoClass .checkPasswordBtn_Class{	
+	@include checkPasswordBtn_General_Style;
+}
+/*_Input password General*/
+
+
+/*_Select dropdown General*/
 .selectDropdownWrap_RoClass{
-	@include selectDropdownWrap_RoClass_mobile;
+	@include inputFields_General_Style;
+	@include selectDropdownWrap_General_Style;
+	@include selectDropdownBorderColor_General_Style;	
+}
+
+.searchOpts_RoClass{
+	@include selectDropdownBorderColor_General_Style;
+	@include searchOpts_General_Style;
+}
+
+.displayedSelectedFlex_RoClass,{
+	@include selectDropdownBgColor_General_Style;
 }
 
 .selectDropdownOptionsWrap_RoClass{
-	@include selectDropdownOptionsWrap_RoClass_mobile;
-
+	@include selectDropdownBgColor_General_Style;
+	@include selectDropdownOptionsWrap_General_Style;
 }
+
+.displayedSelectedText_RoClass, .optText_RoClass{
+	@include selectDropdownFColor_General_Style;
+}
+
+.selectDropdownOpt_RoClass{
+	@include selectDropdownOpt_General_Style;
+}
+/*_Select dropdown General*/
+
+/*General*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+
+	html, body {
+		@include body;
+	}
+
+	.formBody_class{
+		@include formBody_class_mobile;
+	}
+
+	/*Input text*/
+	/*_Input text animation for icons*/
+	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Mobile_Style;
+	}
+
+	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Mobile_Style;
+	}
+
+	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrapAnimate_Mobile_Style;
+	}
+	/*_Input text animation for icons*/
+
+	.cusInputs_RoClass input{
+		@include cusInputField_Mobile_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass{
+		@include placeholdme_Mobile_Style;
+	}
+
+	.placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrap_Mobile_Style;
+	}	
+	/*Input text*/
+
+
+	/*Select dropdown*/
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_Mobile_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass{
+		@include selectDropdownFSize_Mobile_Style;		
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_Mobile_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Mobile_Style;
+	}
+	/*Select dropdown*/		
 
 }
 /*Mobile*/
@@ -139,26 +204,63 @@ html, body {
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 
-html, body {
-	@include body;
-}
+	html, body {
+		@include body;
+	}
 
-.formBody_class{
-	@include formBody_class_mobile;
-}
+	.formBody_class{
+		@include formBody_class_mobile;
+	}
 
-.cusInputs_RoClass{
-	@include cusInputs_RoClass_mobile;
-}
+	/*Input text*/
+	/*_Input text animation for icons*/
+	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Tablet_Style;
+	}
 
-.selectDropdownWrap_RoClass{
-	@include selectDropdownWrap_RoClass_mobile;
-}
+	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Tablet_Style;
+	}
 
-.selectDropdownOptionsWrap_RoClass{
-	@include selectDropdownOptionsWrap_RoClass_mobile;
-}
+	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrapAnimate_Tablet_Style;
+	}
+	/*_Input text animation for icons*/
 
+	.cusInputs_RoClass input{
+		@include cusInputField_Tablet_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass{
+		@include placeholdme_Tablet_Style;
+	}
+
+	.placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrap_Tablet_Style;
+	}	
+	/*Input text*/
+
+
+	/*Select dropdown*/
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_Tablet_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass{
+		@include selectDropdownFSize_Tablet_Style;		
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_Tablet_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Tablet_Style;
+	}
+	/*Select dropdown*/	
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -167,6 +269,56 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+
+	/*Input text*/
+	/*_Input text animation for icons*/
+	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Laptop_Style;
+	}
+
+	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Laptop_Style;
+	}
+
+	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrapAnimate_Laptop_Style;
+	}
+	/*_Input text animation for icons*/
+
+	.cusInputs_RoClass input{
+		@include cusInputField_Laptop_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass{
+		@include placeholdme_Laptop_Style;
+	}
+
+	.placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrap_Laptop_Style;
+	}	
+	/*Input text*/
+
+
+	/*Select dropdown*/
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_Laptop_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass{
+		@include selectDropdownFSize_Laptop_Style;		
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_Laptop_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Laptop_Style;
+	}
+	/*Select dropdown*/	
 
 }
 /*Laptop*/
@@ -177,5 +329,55 @@ html, body {
 /*Desktop*/
 @media all and (min-width:1601px){
 
+	/*Input text*/
+	/*_Input text animation for icons*/
+	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Desktop_Style;
+	}
+
+	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class{		
+		@include textBoxImgWrapAnimate_Desktop_Style;
+	}
+
+	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrapAnimate_Desktop_Style;
+	}
+	/*_Input text animation for icons*/
+
+	.cusInputs_RoClass input{
+		@include cusInputField_Desktop_Style;
+	}
+
+	.cusInputs_RoClass .placeholdme_RoClass{
+		@include placeholdme_Desktop_Style;
+	}
+
+	.placeholdme_RoClass .textBoxImgWrap_class{
+		@include textBoxImgWrap_Desktop_Style;
+	}	
+	/*Input text*/
+
+
+	/*Select dropdown*/
+	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
+		@include selectDropdownIconSize_Desktop_Style;
+	}
+
+	.displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass{
+		@include selectDropdownFSize_Desktop_Style;		
+	}
+
+	.displayedSelectedChevron_RoClass{
+		@include selectDropdownChevronSize_Desktop_Style;
+	}
+
+	.displayedSelectedResetBtn_RoClass{
+		@include selectDropdownResetBtnSize_Desktop_Style;
+	}
+	/*Select dropdown*/
 }
 /*Desktop*/
+/***********************************************************************************************************************************************************************************************************/

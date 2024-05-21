@@ -1,19 +1,17 @@
-/************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
   /*Textbox Input*/
   --customInputColor: rgb(255, 255, 247);
-  --customInputFSize: 20px;
-  --customInputAnimFSize: 10px;
   /*Textbox Input*/
   /*Dropdown*/
+  /*
   --selectDropdownWidth: auto;
   --selectDropdownBorderWidth: 1px;
-  --selectDropdownBorderColor: rgb(255, 255, 247);
-  --selectDropdownBorderRadius: 50px;
-  --selectDropdownBgColor: transparent;
+  --selectDropdownBorderColor: #ffffff;
+  --selectDropdownBgColor: transparent;	
   --selectDropdownIconSize: 9px;
   --selectDropdownFSize: 20px;
   --selectDropdownFColor: rgb(255, 255, 247);
@@ -23,8 +21,9 @@
   --hoverOptBgColor: gray;
   --hoverOptFColor: white;
   --selectDropdownScrollSize: 10px;
-  --optWrapThumbBgColor: blue;
+  --optWrapThumbBgColor: blue;		
   --selectDropdownResetBtnSize: 20px;
+  */
   /*Dropdown*/
   /*Submit Button*/
   --normBtnWidth: 200px;
@@ -49,7 +48,79 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*
+@mixin selectDropdownWrap_RoClass_mobile{
+	--selectDropdownFSize: 10px;
+}
+
+@mixin suffixDropdown_id{
+	z-index:3;
+}
+
+@mixin areaDropdown_id{
+	z-index:2;
+}
+
+@mixin searchOpts_RoClass{
+	z-index:1;
+}
+
+@mixin selectDropdownOptionsWrap_RoClass{
+	z-index:1;
+	width:555px !important;
+}
+
+@mixin selectDropdownOptionsWrap_RoClass_mobile{
+	z-index:1;
+	width:350px !important;
+}
+
+@mixin selectDropdownOptsArea_RoClass{
+	border:1px solid black;
+	background-color:rgb(170, 209, 231);
+}
+*/
+/*_Input fields General*/
+/*_Input fields General*/
+/*_cusInputs_RoClass General*/
+/*_cusInputs_RoClass General*/
+/*_Input text General*/
+/*_Input text General*/
+/*_Input password General*/
+/*_Input password General*/
+/*_Select dropdown General*/
+/*_ _Mixin for selectDropdownWrap_RoClass*/
+/*_ _Mixin for selectDropdownWrap_RoClass*/
+/*_ _Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
+/*_ _Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
+/*_ _Mixin for displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass*/
+/*_ _Mixin for displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass*/
+/*_ _Mixin for displayedSelectedText_RoClass, optText_RoClass*/
+/*_ _Mixin for displayedSelectedText_RoClass, optText_RoClass*/
+/*_ _Mixin for searchOpts_RoClass*/
+/*_ _Mixin for searchOpts_RoClass*/
+/*_ _Mixin for selectDropdownOpt_RoClass*/
+/*_ _Mixin for selectDropdownOpt_RoClass*/
+/*_ _Mixin for selectDropdownOptionsWrap_RoClass*/
+/*_ _Mixin for selectDropdownOptionsWrap_RoClass*/
+/*_Select dropdown General*/
 /*General*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Input text*/
+/*Input text*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/*_Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
+/*_Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
+/*_Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
+/*_Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
+/*_Mixin for displayedSelectedChevron_RoClass*/
+/*_Mixin for displayedSelectedChevron_RoClass*/
+/*_Mixin for displayedSelectedResetBtn_RoClass*/
+/*_Mixin for displayedSelectedResetBtn_RoClass*/
+/*Select Dropdown*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Search Box*/
@@ -3349,7 +3420,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
-/************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*General*/
 @font-face {
   font-family: 'Binance PLEX';
@@ -3395,63 +3467,15 @@ html, body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
   box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; }
 
-.cusInputs_RoClass {
-  background-color: #434C49;
-  /*rgba(77, 81, 69, 0.6)*/
-  /*transparent*/
-  opacity: 0.8;
-  margin: 10px;
-  border-radius: 50px !important;
-  display: flex;
-  flex-direction: row; }
+/*
+#suffixDropdown_id{
+	@include suffixDropdown_id;
+}
 
-.cusInputs_RoClass input {
-  margin-left: 15px !important; }
-
-.placeholdme_RoClass {
-  display: flex !important;
-  flex-direction: row !important;
-  margin-left: 15px !important; }
-
-.textBoxImgWrap_class {
-  width: 9px;
-  height: 9px;
-  margin-right: 5px; }
-
-.textBoxImg_class {
-  width: 100%;
-  object-fit: contain;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-bottom: 2.5px; }
-
-.selectDropdownWrap_RoClass {
-  background-color: #434C49;
-  /*rgba(77, 81, 69, 0.6)*/
-  /*transparent*/
-  opacity: 0.8;
-  margin: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px !important; }
-
-#suffixDropdown_id {
-  z-index: 3; }
-
-#AreaDropdown_id {
-  z-index: 2; }
-
-.selectDropdownOptionsWrap_RoClass {
-  z-index: 1;
-  width: 555px !important; }
-
-.searchOpts_RoClass {
-  z-index: 1; }
-
-.selectDropdownOptsArea_RoClass {
-  border: 1px solid black;
-  background-color: #aad1e7; }
-
+#AreaDropdown_id{
+	@include areaDropdown_id;
+}
+*/
 #togglePasswordBtn1 {
   --iconBtnWidth: 40px;
   --iconBtnHeight: 30px;
@@ -3487,8 +3511,83 @@ html, body {
 .alreadyHaveAccount_class a {
   color: yellow !important; }
 
+/*_cusInputs_RoClass General*/
+.cusInputs_RoClass {
+  background-color: #434C49;
+  /*rgba(77, 81, 69, 0.6)*/
+  /*transparent*/
+  opacity: 0.8;
+  padding-left: 10px !important;
+  margin: 10px;
+  border-radius: 50px !important;
+  display: flex;
+  flex-direction: row; }
+
+/*_cusInputs_RoClass General*/
+/*_Input text General*/
+.cusInputs_RoClass .placeholdme_RoClass {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  align-items: center; }
+
+.placeholdme_RoClass .textBoxImgWrap_class {
+  transition: width 0.1s linear 0s, height 0.1s linear 0s; }
+
+.textBoxImgWrap_class img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*_Input text General*/
+/*_Input password General*/
+.cusInputs_RoClass .checkPasswordBtn_Class {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%); }
+
+/*_Input password General*/
+/*_Select dropdown General*/
+.selectDropdownWrap_RoClass {
+  background-color: #434C49;
+  /*rgba(77, 81, 69, 0.6)*/
+  /*transparent*/
+  opacity: 0.8;
+  padding-left: 10px !important;
+  margin: 10px;
+  border-radius: 50px !important;
+  --selectDropdownWidth: auto;
+  --selectDropdownBorderWidth: 1px;
+  /*--selectDropdownBorderRadius: value;*/
+  --selectDropdownBorderColor: #ffffff; }
+
+.searchOpts_RoClass {
+  --selectDropdownBorderColor: #ffffff;
+  --searchOptsBgColor: transparent;
+  --searchOptsFColor: #ffffff; }
+
+.displayedSelectedFlex_RoClass {
+  --selectDropdownBgColor: transparent; }
+
+.selectDropdownOptionsWrap_RoClass {
+  --selectDropdownBgColor: transparent;
+  --selectDropdownScrollSize: 7px;
+  --optWrapThumbBgColor: #FCC64F; }
+
+.displayedSelectedText_RoClass, .optText_RoClass {
+  --selectDropdownFColor: #ffffff; }
+
+.selectDropdownOpt_RoClass {
+  --hoverOptBgColor: #434C49;
+  --hoverOptFColor: #ffffff; }
+
+/*_Select dropdown General*/
 /*General*/
-/************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
   html, body {
@@ -3509,16 +3608,63 @@ html, body {
     box-shadow: none;
     border: 0px; }
 
-  .cusInputs_RoClass {
-    --customInputFSize: 10px;
-    --customInputAnimFSize: 5px; }
+  /*Input text*/
+  /*_Input text animation for icons*/
+  div.cusInputs_RoClass > input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 10px;
+    /*To be changed*/
+    height: 10px;
+    /*To be changed*/ }
 
-  .selectDropdownWrap_RoClass {
-    --selectDropdownFSize: 10px; }
+  div.cusInputs_RoClass > input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class {
+    width: 10px;
+    /*To be changed*/
+    height: 10px;
+    /*To be changed*/ }
 
-  .selectDropdownOptionsWrap_RoClass {
-    z-index: 1;
-    width: 350px !important; } }
+  div.cusInputs_RoClass > select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 10px;
+    /*To be changed*/
+    height: 10px;
+    /*To be changed*/ }
+
+  /*_Input text animation for icons*/
+  .cusInputs_RoClass input {
+    --customInputFSize: 16px;
+    /*To be changed*/ }
+
+  .cusInputs_RoClass .placeholdme_RoClass {
+    --customInputAnimFSize: 10px;
+    /*To be changed*/ }
+
+  .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 16px;
+    /*To be changed*/
+    height: 16px;
+    /*To be changed*/ }
+
+  /*Input text*/
+  /*Select dropdown*/
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass {
+    --selectDropdownFSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 16px;
+    /*To be changed*/ }
+
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 15px;
+    /*To be changed*/ }
+
+  /*Select dropdown*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3542,24 +3688,188 @@ html, body {
     box-shadow: none;
     border: 0px; }
 
-  .cusInputs_RoClass {
-    --customInputFSize: 10px;
-    --customInputAnimFSize: 5px; }
+  /*Input text*/
+  /*_Input text animation for icons*/
+  div.cusInputs_RoClass > input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 11px;
+    /*changed*/
+    height: 11px;
+    /*changed*/ }
 
-  .selectDropdownWrap_RoClass {
-    --selectDropdownFSize: 10px; }
+  div.cusInputs_RoClass > input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class {
+    width: 11px;
+    /*changed*/
+    height: 11px;
+    /*changed*/ }
 
-  .selectDropdownOptionsWrap_RoClass {
-    z-index: 1;
-    width: 350px !important; } }
+  div.cusInputs_RoClass > select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 11px;
+    /*changed*/
+    height: 11px;
+    /*changed*/ }
+
+  /*_Input text animation for icons*/
+  .cusInputs_RoClass input {
+    --customInputFSize: 17px;
+    /*changed*/ }
+
+  .cusInputs_RoClass .placeholdme_RoClass {
+    --customInputAnimFSize: 11px;
+    /*changed*/ }
+
+  .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 17px;
+    /*changed*/
+    height: 17px;
+    /*changed*/ }
+
+  /*Input text*/
+  /*Select dropdown*/
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 17px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass {
+    --selectDropdownFSize: 17px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 17px;
+    /*changed*/ }
+
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 16px;
+    /*changed*/ }
+
+  /*Select dropdown*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Input text*/
+  /*_Input text animation for icons*/
+  div.cusInputs_RoClass > input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 12px;
+    /*changed*/
+    height: 12px;
+    /*changed*/ }
+
+  div.cusInputs_RoClass > input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class {
+    width: 12px;
+    /*changed*/
+    height: 12px;
+    /*changed*/ }
+
+  div.cusInputs_RoClass > select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 12px;
+    /*changed*/
+    height: 12px;
+    /*changed*/ }
+
+  /*_Input text animation for icons*/
+  .cusInputs_RoClass input {
+    --customInputFSize: 19px;
+    /*changed*/ }
+
+  .cusInputs_RoClass .placeholdme_RoClass {
+    --customInputAnimFSize: 12px;
+    /*changed*/ }
+
+  .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 19px;
+    /*changed*/
+    height: 19px;
+    /*changed*/ }
+
+  /*Input text*/
+  /*Select dropdown*/
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 19px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass {
+    --selectDropdownFSize: 19px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 19px;
+    /*changed*/ }
+
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 18px;
+    /*changed*/ }
+
+  /*Select dropdown*/ }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Input text*/
+  /*_Input text animation for icons*/
+  div.cusInputs_RoClass > input:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 13px;
+    /*changed*/
+    height: 13px;
+    /*changed*/ }
+
+  div.cusInputs_RoClass > input:focus + .upPlaceholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > input:not(:focus):valid + .upPlaceholdme_RoClass .textBoxImgWrap_class {
+    width: 13px;
+    /*changed*/
+    height: 13px;
+    /*changed*/ }
+
+  div.cusInputs_RoClass > select:focus + .placeholdme_RoClass .textBoxImgWrap_class,
+  div.cusInputs_RoClass > select:not(:focus):valid + .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 13px;
+    /*changed*/
+    height: 13px;
+    /*changed*/ }
+
+  /*_Input text animation for icons*/
+  .cusInputs_RoClass input {
+    --customInputFSize: 20px;
+    /*changed*/ }
+
+  .cusInputs_RoClass .placeholdme_RoClass {
+    --customInputAnimFSize: 13px;
+    /*changed*/ }
+
+  .placeholdme_RoClass .textBoxImgWrap_class {
+    width: 20px;
+    /*changed*/
+    height: 20px;
+    /*changed*/ }
+
+  /*Input text*/
+  /*Select dropdown*/
+  .displayedSelectedIcon_RoClass, .optIcon_RoClass {
+    --selectDropdownIconSize: 20px;
+    /*changed*/ }
+
+  .displayedSelectedText_RoClass, .optText_RoClass, .searchOpts_RoClass {
+    --selectDropdownFSize: 20px;
+    /*changed*/ }
+
+  .displayedSelectedChevron_RoClass {
+    --selectDropdownChevronSize: 20px;
+    /*changed*/ }
+
+  .displayedSelectedResetBtn_RoClass {
+    --selectDropdownResetBtnSize: 19px;
+    /*changed*/ }
+
+  /*Select dropdown*/ }
 /*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Page_Registration.css.map */

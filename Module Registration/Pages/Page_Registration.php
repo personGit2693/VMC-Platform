@@ -17,34 +17,34 @@
 
 			<!--Employee ID-->
 			<div class="cusInputs_RoClass">				
-				<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Employee ID</div>
+				<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
+				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Employee ID</div>
 			</div>
 			<!--Employee ID-->
 
 			<!--First Name-->
 			<div class="cusInputs_RoClass">					
-				<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>First Name</div>
+				<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
+				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>First Name</div>
 			</div>
 			<!--First Name-->
 
 			<!--Middle Name-->
 			<div class="cusInputs_RoClass">					
-				<input type="text" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray" required>
-				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Middle Name</div>
+				<input type="text" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, gray" required>
+				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Middle Name</div>
 			</div>
 			<!--Middle Name-->
 
 			<!--Last Name-->
 			<div class="cusInputs_RoClass">					
-				<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Last Name</div>
+				<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
+				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Last Name</div>
 			</div>
 			<!--Last Name-->
 
 			<!--Suffix Dropdown-->
-			<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id">
+			<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id" style="z-index: 1;">
 				<input type="hidden" class="selectedOptValue_RoClass">
 				<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
 					<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
@@ -132,8 +132,8 @@
 
 			<!--Password-->
 			<div class="cusInputs_RoClass">					
-				<input id="inputPassword1" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Password</div>
+				<input id="inputPassword1" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
+				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Password</div>
 				<div class="checkPasswordBtn_Class">
 					<button class="iconBtn_RoClass" id="togglePasswordBtn1" onclick="controller_Btn_TogglePasswordVisibility1('inputPassword1')" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 				</div>
@@ -142,8 +142,8 @@
 
 			<!--Password-->
 			<div class="cusInputs_RoClass">					
-				<input id="inputPassword2" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, black)" onfocus="highlightInWrap(this, gray)" required>
-				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img class="textBoxImg_class" src="../../src/avataricon_purple.png"></div>Confirm Password</div>
+				<input id="inputPassword2" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
+				<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Confirm Password</div>
 				<div class="checkPasswordBtn_Class">
 					<button class="iconBtn_RoClass" id="togglePasswordBtn2" onclick="controller_Btn_TogglePasswordVisibility2('inputPassword2')" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 				</div>
