@@ -33,7 +33,12 @@ html, body {
 }
 
 .cusInputs_RoClass{
+	@include inputFields_General_Style;
 	@include cusInputs_RoClass;
+}
+
+.cusInputs_RoClass input{	
+	@include cusInputs_Inputs;
 }
 
 .placeholdme_RoClass{
@@ -49,6 +54,7 @@ html, body {
 }
 
 .selectDropdownWrap_RoClass{
+	@include inputFields_General_Style;
 	@include selectDropdownWrap_RoClass;
 }
 
