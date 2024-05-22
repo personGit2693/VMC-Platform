@@ -3523,21 +3523,11 @@ html, body {
   color: yellow !important; }
 
 /*_Form General*/
-.titleandFormWrap_class {
-  position: relative;
-  display: flex;
-  box-sizing: border-box;
-  overflow: visible;
-  align-items: center;
-  flex-flow: column nowrap;
-  width: 100%;
-  height: 100%; }
-
 .formBody_class {
-  position: relative;
+  position: absolute;
   border-radius: 9px;
   padding: 7px;
-  flex-shrink: 0; }
+  height: fit-content; }
 
 /*_Form General*/
 /*_cusInputs_RoClass General*/
@@ -3636,10 +3626,6 @@ html, body {
     background-size: cover; }
 
   /*Form*/
-  .titleandFormWrap_class {
-    justify-content: flex-start;
-    /*To be changed*/ }
-
   .formBody_class {
     width: 100%;
     /*To be changed*/
@@ -3728,13 +3714,9 @@ html, body {
     background-size: cover; }
 
   /*Form*/
-  .titleandFormWrap_class {
-    justify-content: flex-start;
-    /*To be changed*/ }
-
   .formBody_class {
-    width: 400px;
-    /*changed*/
+    width: 100%;
+    /*To be changed*/
     border: none;
     /*To be changed*/
     box-shadow: none;
@@ -3810,10 +3792,6 @@ html, body {
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
   /*Form*/
-  .titleandFormWrap_class {
-    justify-content: center;
-    /*To be changed*/ }
-
   .formBody_class {
     width: 450px;
     /*changed*/
@@ -3890,10 +3868,6 @@ html, body {
 /*Desktop*/
 @media all and (min-width: 1601px) {
   /*Form*/
-  .titleandFormWrap_class {
-    justify-content: center;
-    /*To be changed*/ }
-
   .formBody_class {
     width: 500px;
     /*changed*/
@@ -3965,6 +3939,30 @@ html, body {
 
   /*Select dropdown*/ }
 /*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Limited Height*/
+@media all and (max-height: 655px) {
+  .formBody_class {
+    top: auto;
+    /*To be changed*/
+    left: 50%;
+    /*To be changed*/
+    transform: translate(-50%, 0);
+    /*To be changed*/ } }
+/*Limited Height*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Standard Height*/
+@media all and (min-height: 656px) {
+  .formBody_class {
+    top: 50%;
+    /*changed*/
+    left: 50%;
+    /*changed*/
+    transform: translate(-50%, -50%);
+    /*changed*/ } }
+/*Standard Height*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*# sourceMappingURL=Page_Registration.css.map */

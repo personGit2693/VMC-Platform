@@ -72,10 +72,6 @@ html, body {
 
 
 /*_Form General*/
-.titleandFormWrap_class{
-	@include titleandFormWrap_General_Style;
-}
-
 .formBody_class{
 	@include formBody_General_Style;
 }
@@ -158,11 +154,7 @@ html, body {
 		@include body;
 	}
 
-	/*Form*/
-	.titleandFormWrap_class{
-		@include titleandFormWrap_Mobile_Style;
-	}
-
+	/*Form*/	
 	.formBody_class{
 		@include formBody_Mobile_Style;
 	}
@@ -232,11 +224,7 @@ html, body {
 		@include body;
 	}
 
-	/*Form*/
-	.titleandFormWrap_class{
-		@include titleandFormWrap_Tablet_Style;
-	}
-
+	/*Form*/	
 	.formBody_class{
 		@include formBody_Tablet_Style;
 	}
@@ -301,11 +289,7 @@ html, body {
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
 
-	/*Form*/
-	.titleandFormWrap_class{
-		@include titleandFormWrap_Laptop_Style;
-	}
-
+	/*Form*/	
 	.formBody_class{
 		@include formBody_Laptop_Style;
 	}
@@ -371,11 +355,7 @@ html, body {
 /*Desktop*/
 @media all and (min-width:1601px){
 
-	/*Form*/
-	.titleandFormWrap_class{
-		@include titleandFormWrap_Desktop_Style;
-	}
-
+	/*Form*/	
 	.formBody_class{
 		@include formBody_Desktop_Style;
 	}
@@ -434,4 +414,26 @@ html, body {
 	/*Select dropdown*/
 }
 /*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Limited Height*/
+@media all and (max-height:655px){
+	.formBody_class{
+		@include formBody_LimitedHeight_Style;
+	}
+}
+/*Limited Height*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Standard Height*/
+@media all and (min-height:656px){
+	.formBody_class{
+		@include formBody_StandardHeight_Style;
+	}
+}
+/*Standard Height*/
 /***********************************************************************************************************************************************************************************************************/
