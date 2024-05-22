@@ -55,48 +55,24 @@
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
 @mixin body{
-	margin: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	overflow: auto;
 	background-image:url("../../src/bg2.png");
 	background-position:center center;
 	background-repeat: no-repeat;
 	background-attachment:fixed;
-	background-size:cover;
+	background-size:cover;	
 }
 
 @mixin asterisk {
 	box-sizing: border-box;
-	font-family: 'Binance PLEX';
+	font-family: 'Binance PLEX' !important;
 }
 
-@mixin titleandFormWrap_class{
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	margin-top:auto;
-	margin-bottom:auto;
-}
-
-@mixin formTitle_class{
-	font-size:40px;
-	font-family: Helvetica;
-	color:black;		
-	text-align: center;
-	margin:10px;
-	font-weight:bold;
-	white-space: normal;
-}
-
-@mixin formBody_class{
-	padding-top:10px;
-	width:600px;
-	border-radius:9px;
-	margin-left:auto;
-	margin-right:auto;
-	border:2px solid gray;
-	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px;
-	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray;
-}
-
+/*
 @mixin formBody_class_mobile{
 	padding-top:10px;
 	width:400px;
@@ -108,7 +84,7 @@
 	border:0px;
 }
 
-/*
+
 @mixin selectDropdownWrap_RoClass_mobile{
 	--selectDropdownFSize: 10px;
 }
@@ -173,21 +149,58 @@
 }
 
 
+/*_Form General*/
+@mixin titleandFormWrap_General_Style{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;	
+	align-items: center;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin formTitle_class{
+	font-size: 22px;
+	font-family: Helvetica;
+	color:black;		
+	text-align: center;
+	margin:10px;
+	font-weight:bold;
+	white-space: normal;
+}
+
+@mixin formBody_General_Style{
+	position: relative;
+	border-radius:9px;
+	padding: 7px;
+	flex-shrink: 0;
+}
+/*_Form General*/
+
+
 /*_Input fields General*/
-@mixin inputFields_General_Style{
+@mixin inputFieldsWrapMargin_General_Style{		
+	margin:10px;	
+}
+
+@mixin inputFieldsWrapRadius_General_Style{		
+	border-radius: 50px !important;
+}
+
+@mixin inputFieldsBgcolor_General_Style{		
 	background-color: #434C49; /*rgba(77, 81, 69, 0.6)*//*transparent*/;	
 	opacity: 0.8;
 	padding-left: 10px !important;
-	margin:10px;
-	border-radius: 50px !important;
 }
 /*_Input fields General*/
 
 
 /*_cusInputs_RoClass General*/
-@mixin cusInputs_General_Style{	
+@mixin cusInputs_General_Style{
 	display:flex;
-	flex-direction:row;	
+	flex-direction:row;		
 }
 /*_cusInputs_RoClass General*/
 
@@ -195,6 +208,7 @@
 /*_Input text General*/
 @mixin textBoxImgWrap_General_Style{
 	transition: width 0.1s linear 0s, height 0.1s linear 0s;
+	margin-right: 4px;
 }
 
 @mixin textBoxImg_General_Style{
@@ -202,7 +216,7 @@
 	display: block;
 	box-sizing: border-box;	
 	width:100%;
-	height: 100%;
+	height: 100%;	
 }
 
 @mixin placeholdme_General_Style{
@@ -241,11 +255,13 @@
 /*_ _Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
 
 
-/*_ _Mixin for displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass*/
-@mixin selectDropdownBgColor_General_Style{
-	--selectDropdownBgColor: transparent;
+/*_ _Mixin for displayedSelectedFlex_RoClass*/
+@mixin displayedSelectedFlex_General_Style{
+	--selectDropdownBgColor: #434C49;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
 }
-/*_ _Mixin for displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass*/
+/*_ _Mixin for displayedSelectedFlex_RoClass*/
 
 
 /*_ _Mixin for displayedSelectedText_RoClass, optText_RoClass*/
@@ -265,7 +281,7 @@
 
 /*_ _Mixin for selectDropdownOpt_RoClass*/
 @mixin selectDropdownOpt_General_Style{
-	--hoverOptBgColor: #434C49;
+	--hoverOptBgColor: #39AB5B;
 	--hoverOptFColor: #ffffff;
 }
 /*_ _Mixin for selectDropdownOpt_RoClass*/
@@ -275,6 +291,7 @@
 @mixin selectDropdownOptionsWrap_General_Style{
 	--selectDropdownScrollSize: 7px;
 	--optWrapThumbBgColor: #FCC64F;
+	--selectDropdownBgColor: #434C49;
 }
 /*_ _Mixin for selectDropdownOptionsWrap_RoClass*/
 /*_Select dropdown General*/
@@ -284,23 +301,67 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Form*/
+@mixin titleandFormWrap_Mobile_Style{
+	justify-content: flex-start; /*To be changed*/
+}
+@mixin titleandFormWrap_Tablet_Style{
+	justify-content: flex-start; /*To be changed*/
+}
+@mixin titleandFormWrap_Laptop_Style{
+	justify-content: center; /*To be changed*/
+}
+@mixin titleandFormWrap_Desktop_Style{
+	justify-content: center; /*To be changed*/
+}
+
+@mixin formBody_Mobile_Style{
+	width: 100%; /*To be changed*/
+	border:none; /*To be changed*/
+	box-shadow:none; /*To be changed*/
+	box-shadow:none; /*To be changed*/	
+}
+@mixin formBody_Tablet_Style{
+	width: 400px; /*changed*/
+	border:none; /*To be changed*/
+	box-shadow:none; /*To be changed*/
+	box-shadow:none; /*To be changed*/
+	border:none; /*To be changed*/
+}
+@mixin formBody_Laptop_Style{
+	width: 450px; /*changed*/
+	border:2px solid gray; /*changed*/
+	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px; /*changed*/
+	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; /*changed*/
+}
+@mixin formBody_Desktop_Style{
+	width: 500px; /*changed*/
+	border:2px solid gray; /*changed*/
+	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px; /*changed*/
+	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; /*changed*/
+}
+/*Form*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Input text*/
 
 @mixin textBoxImgWrap_Mobile_Style{	
-	width: 16px; /*To be changed*/
-	height: 16px; /*To be changed*/
+	width: 14px; /*To be changed*/
+	height: 14px; /*To be changed*/
 }
 @mixin textBoxImgWrap_Tablet_Style{	
+	width: 15px; /*changed*/
+	height: 15px; /*changed*/	
+}
+@mixin textBoxImgWrap_Laptop_Style{	
 	width: 17px; /*changed*/
 	height: 17px; /*changed*/	
 }
-@mixin textBoxImgWrap_Laptop_Style{	
-	width: 19px; /*changed*/
-	height: 19px; /*changed*/	
-}
 @mixin textBoxImgWrap_Desktop_Style{	
-	width: 20px; /*changed*/
-	height: 20px; /*changed*/
+	width: 18px; /*changed*/
+	height: 18px; /*changed*/
 }
 
 @mixin textBoxImgWrapAnimate_Mobile_Style{	
@@ -312,12 +373,12 @@
 	height: 11px; /*changed*/	
 }
 @mixin textBoxImgWrapAnimate_Laptop_Style{	
-	width: 12px; /*changed*/
-	height: 12px; /*changed*/	
-}
-@mixin textBoxImgWrapAnimate_Desktop_Style{	
 	width: 13px; /*changed*/
 	height: 13px; /*changed*/	
+}
+@mixin textBoxImgWrapAnimate_Desktop_Style{	
+	width: 14px; /*changed*/
+	height: 14px; /*changed*/	
 }
 
 @mixin placeholdme_Mobile_Style{
@@ -327,23 +388,23 @@
 	--customInputAnimFSize: 11px; /*changed*/
 }
 @mixin placeholdme_Laptop_Style{
-	--customInputAnimFSize: 12px; /*changed*/
+	--customInputAnimFSize: 13px; /*changed*/
 }
 @mixin placeholdme_Desktop_Style{
-	--customInputAnimFSize: 13px; /*changed*/
+	--customInputAnimFSize: 14px; /*changed*/
 }
 
 @mixin cusInputField_Mobile_Style{
-	--customInputFSize: 16px; /*To be changed*/	
+	--customInputFSize: 14px; /*To be changed*/	
 }
 @mixin cusInputField_Tablet_Style{
-	--customInputFSize: 17px; /*changed*/
+	--customInputFSize: 15px; /*changed*/
 }
 @mixin cusInputField_Laptop_Style{
-	--customInputFSize: 19px; /*changed*/ 
+	--customInputFSize: 17px; /*changed*/ 
 }
 @mixin cusInputField_Desktop_Style{
-	--customInputFSize: 20px; /*changed*/	
+	--customInputFSize: 18px; /*changed*/	
 }
 /*Input text*/
 /***********************************************************************************************************************************************************************************************************/
@@ -353,64 +414,64 @@
 /*Select Dropdown*/
 /*_Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
 @mixin selectDropdownIconSize_Mobile_Style{
-	--selectDropdownIconSize: 16px; /*To be changed*/
+	--selectDropdownIconSize: 14px; /*To be changed*/
 }
 @mixin selectDropdownIconSize_Tablet_Style{
-	--selectDropdownIconSize: 17px; /*changed*/
+	--selectDropdownIconSize: 15px; /*changed*/
 }
 @mixin selectDropdownIconSize_Laptop_Style{
-	--selectDropdownIconSize: 19px; /*changed*/
+	--selectDropdownIconSize: 17px; /*changed*/
 }
 @mixin selectDropdownIconSize_Desktop_Style{
-	--selectDropdownIconSize: 20px; /*changed*/
+	--selectDropdownIconSize: 18px; /*changed*/
 }
 /*_Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
 
 
 /*_Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
 @mixin selectDropdownFSize_Mobile_Style{
-	--selectDropdownFSize: 16px; /*To be changed*/
+	--selectDropdownFSize: 14px; /*To be changed*/
 }
 @mixin selectDropdownFSize_Tablet_Style{
-	--selectDropdownFSize: 17px; /*changed*/
+	--selectDropdownFSize: 15px; /*changed*/
 }
 @mixin selectDropdownFSize_Laptop_Style{
-	--selectDropdownFSize: 19px; /*changed*/
+	--selectDropdownFSize: 17px; /*changed*/
 }
 @mixin selectDropdownFSize_Desktop_Style{
-	--selectDropdownFSize: 20px; /*changed*/
+	--selectDropdownFSize: 18px; /*changed*/
 }
 /*_Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
 
 
 /*_Mixin for displayedSelectedChevron_RoClass*/
 @mixin selectDropdownChevronSize_Mobile_Style{
-	--selectDropdownChevronSize: 16px; /*To be changed*/
+	--selectDropdownChevronSize: 14px; /*To be changed*/
 }
 @mixin selectDropdownChevronSize_Tablet_Style{
-	--selectDropdownChevronSize: 17px; /*changed*/
+	--selectDropdownChevronSize: 15px; /*changed*/
 }
 @mixin selectDropdownChevronSize_Laptop_Style{
-	--selectDropdownChevronSize: 19px; /*changed*/
+	--selectDropdownChevronSize: 17px; /*changed*/
 }
 @mixin selectDropdownChevronSize_Desktop_Style{
-	--selectDropdownChevronSize: 20px; /*changed*/
+	--selectDropdownChevronSize: 18px; /*changed*/
 }
 /*_Mixin for displayedSelectedChevron_RoClass*/
 
 
 /*_Mixin for displayedSelectedResetBtn_RoClass*/
 @mixin selectDropdownResetBtnSize_Mobile_Style{
-	--selectDropdownResetBtnSize: 15px; /*To be changed*/
+	--selectDropdownResetBtnSize: 14px; /*To be changed*/
 }
 @mixin selectDropdownResetBtnSize_Tablet_Style{
-	--selectDropdownResetBtnSize: 16px; /*changed*/
+	--selectDropdownResetBtnSize: 15px; /*changed*/
 }
 @mixin selectDropdownResetBtnSize_Laptop_Style{
-	--selectDropdownResetBtnSize: 18px; /*changed*/
+	--selectDropdownResetBtnSize: 17px; /*changed*/
 }
 @mixin selectDropdownResetBtnSize_Desktop_Style{
-	--selectDropdownResetBtnSize: 19px; /*changed*/
+	--selectDropdownResetBtnSize: 18px; /*changed*/
 }
 /*_Mixin for displayedSelectedResetBtn_RoClass*/
 /*Select Dropdown*/

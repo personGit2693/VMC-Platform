@@ -7,13 +7,14 @@
 	<title>Registration Page</title>
 </head>
 <body>
-	<div class="titleandFormWrap_class">	
-		<!--Page Title-->
-		<div class="formTitle_class">Create New Account</div>
-		<!--Page Title-->
 
+	<div class="titleandFormWrap_class">			
 		<!--Form Body-->
 		<div class="formBody_class">
+
+			<!--Page Title-->
+			<div class="formTitle_class">Create New Account</div>
+			<!--Page Title-->
 
 			<!--Employee ID-->
 			<div class="cusInputs_RoClass">				
@@ -44,7 +45,7 @@
 			<!--Last Name-->
 
 			<!--Suffix Dropdown-->
-			<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id" style="z-index: 1;">
+			<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id" style="z-index: 2;">
 				<input type="hidden" class="selectedOptValue_RoClass">
 				<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
 					<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
@@ -87,7 +88,7 @@
 			<!--Suffix Dropdown-->
 
 			<!--Area Dropdown-->
-			<div class="selectDropdownWrap_RoClass" id="areaDropdown_id">
+			<div class="selectDropdownWrap_RoClass" id="areaDropdown_id" style="z-index: 1;">
 				<input type="hidden" class="selectedOptValue_RoClass">
 				<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
 					<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
@@ -158,23 +159,26 @@
 			<!--Submit Button-->
 			<div class="alreadyHaveAccount_class">Already have an account? <a href="">Login</a></div>
 		</div>
-		<!--Form Body-->
-		<hr class="linethis_RoClass">
-		<div class=footerWrap_RoClass>
-			<span class="footerTxt_RoClass">&copy; 2024 HRIS. All rights reserved. All rights reserved.</span>
-		</div>
-	</div>	
-<!--_Dependencies-->
-<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-<!--_Dependencies-->
+		<!--Form Body-->		
+	</div>
 
-<!--_Controllers-->
-<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility1.js"></script>
-<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility2.js"></script>
-<!--_Controllers-->
+	<hr class="linethis_RoClass">
+	<div class=footerWrap_RoClass>
+		<span class="footerTxt_RoClass">&copy; 2024 HRIS. All rights reserved. All rights reserved.</span>
+	</div>
 
-<!--_Executor-->
-<script type="module" src="../Client Side/Executor_Page_Registration.js"></script>
-<!--_Executor-->
+
+	<!--_Dependencies-->
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+	<!--_Dependencies-->
+
+	<!--_Controllers-->
+	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility1.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility2.js"></script>
+	<!--_Controllers-->
+
+	<!--_Executor-->
+	<script type="module" src="../Client Side/Executor_Page_Registration.js"></script>
+	<!--_Executor-->
 </body>
 </html>

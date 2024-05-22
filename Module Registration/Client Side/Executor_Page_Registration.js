@@ -4,7 +4,5 @@
 
 
 /*Dependencies*/
-window.document.body.addEventListener("click", closeSelectDropdownOpts, true);
+document.body.addEventListener("click", closeSelectDropdownOpts, true);
 /*Dependencies*/
-
-
