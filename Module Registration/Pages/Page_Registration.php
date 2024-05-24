@@ -134,7 +134,7 @@
 			<input id="inputPassword1" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
 			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Password</div>
 			<div class="checkPasswordBtn_Class">
-				<button class="iconBtn_RoClass" id="togglePasswordBtn1" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
+				<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 			</div>
 		</div>
 		<!--Password-->
@@ -152,6 +152,7 @@
 		<!--Submit Button-->
 		<button class="normButton_RoClass">Create Account</button>
 		<!--Submit Button-->
+		
 		<div class="alreadyHaveAccount_class">Already have an account? <a href="">Login</a></div>
 	</div>
 	<!--Form Body-->		

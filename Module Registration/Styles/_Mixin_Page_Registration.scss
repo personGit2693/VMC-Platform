@@ -1,45 +1,6 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-/*Textbox Input*/	
---customInputColor: rgb(255, 255, 247);
-/*Textbox Input*/	
-
-
-/*Dropdown*/	
-/*
---selectDropdownWidth: auto;
---selectDropdownBorderWidth: 1px;
---selectDropdownBorderColor: #ffffff;
---selectDropdownBgColor: transparent;	
---selectDropdownIconSize: 9px;
---selectDropdownFSize: 20px;
---selectDropdownFColor: rgb(255, 255, 247);
---selectDropdownChevronSize: 20px;
---searchOptsBgColor: white;
---searchOptsFColor: black;
---hoverOptBgColor: gray;
---hoverOptFColor: white;
---selectDropdownScrollSize: 10px;
---optWrapThumbBgColor: blue;		
---selectDropdownResetBtnSize: 20px;
-*/
-
-/*Dropdown*/
-
-/*Submit Button*/
---normBtnWidth: 200px;
---normBtnPadding: 10px;
---normBtnBorderWidth: 1px;
---normBtnBorderColor:0;
---normBtnRadius: 50px;
---normBtnFWeight: 500;
---normBtnFSize: 20px;
---normBtnBgColor:#FCC64F;
---normBtnFcolor: white;
---normBtnHovActFColor: white;
---normBtnHovActBgColor: #FCC64F;
-/*Submit Button*/
 
 /*Footer*/
 --footerBgColor: #39AB5B;
@@ -72,52 +33,43 @@
 	font-family: 'Binance PLEX' !important;
 }
 
-/*
-@mixin formBody_class_mobile{
-	padding-top:10px;
-	width:400px;
-	border-radius:9px;
+
+/*_Already have account General*/
+@mixin alreadyHaveAccount_General_Style{
+	text-align: center;
+	margin-bottom:20px;
+	color: #4D443D;
+	font-weight: bold;
+	text-shadow: -1px 0 #39AB5B, 0 1px #39AB5B, 1px 0 #39AB5B, 0 -1px #39AB5B;
+}
+@mixin alreadyHaveAccountLink_General_Style{	
+	color: #FAB142;
+}
+/*_Already have account General*/
+
+
+/*_Submit Button General*/
+@mixin normButton_General_Style{
 	margin-left:auto;
 	margin-right:auto;
-	box-shadow:none;
-	box-shadow:none;
-	border:0px;
+	margin-bottom:10px;
+	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px;
+	--normBtnPadding: 10px;
+	--normBtnBorderWidth: 0px;
+	--normBtnBorderColor: none;
+	--normBtnRadius: 50px;
+	--normBtnFWeight: bold;
+	--normBtnBgColor: #39AB5B;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	--normBtnHovActBgColor: #0ABE50;
+	--normBtnWidth: 200px;
 }
+/*_Submit Button General*/
 
 
-@mixin selectDropdownWrap_RoClass_mobile{
-	--selectDropdownFSize: 10px;
-}
-
-@mixin suffixDropdown_id{
-	z-index:3;
-}
-
-@mixin areaDropdown_id{
-	z-index:2;
-}
-
-@mixin searchOpts_RoClass{
-	z-index:1;
-}
-
-@mixin selectDropdownOptionsWrap_RoClass{
-	z-index:1;
-	width:555px !important;
-}
-
-@mixin selectDropdownOptionsWrap_RoClass_mobile{
-	z-index:1;
-	width:350px !important;
-}
-
-@mixin selectDropdownOptsArea_RoClass{
-	border:1px solid black;
-	background-color:rgb(170, 209, 231);
-}
-*/
-
-@mixin togglePasswordBtn1{
+/*_Toggle Password Button General*/
+@mixin togglePasswordBtn_General_Style{
 	--iconBtnWidth: 40px;		
 	--iconBtnHeight: 30px;
 	--iconBtnBgColor: 0;
@@ -126,27 +78,7 @@
 	--iconBtnBorderColor: transparent;
 	--iconBtnBorderRadius: 0;
 }
-
-@mixin normButton_RoClass{
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:10px;
-	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px;
-}
-
-@mixin normButton_RoClasshover{
-	opacity:0.8;
-}
-
-@mixin alreadyHaveAccount_class{
-	text-align: center;
-	margin-bottom:20px;
-	color: yellow;
-}
-
-@mixin linkToLogin{
-	color: yellow !important;		
-}
+/*_Toggle Password Button General*/
 
 
 /*_Form General*/
@@ -189,7 +121,8 @@
 /*_cusInputs_RoClass General*/
 @mixin cusInputs_General_Style{
 	display:flex;
-	flex-direction:row;		
+	flex-direction:row;
+	--customInputColor: rgb(255, 255, 247);		
 }
 /*_cusInputs_RoClass General*/
 
@@ -290,28 +223,44 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Submit Button*/
+@mixin normButton_Mobile_Style{	
+	--normBtnFSize: 15px;
+}
+@mixin normButton_Tablet_Style{	
+	--normBtnFSize: 16px;
+}
+@mixin normButton_Laptop_Style{	
+	--normBtnFSize: 18px;
+}
+@mixin normButton_Desktop_Style{	
+	--normBtnFSize: 19px;
+}
+/*Submit Button*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Form*/
 @mixin formBody_Mobile_Style{
-	width: 100%; /*To be changed*/
-	border:none; /*To be changed*/
-	box-shadow:none; /*To be changed*/
+	width: 100%; 
+	border:none; 
+	box-shadow:none;
 }
 @mixin formBody_Tablet_Style{
-	width: 100%; /*To be changed*/
-	border:none; /*To be changed*/
-	box-shadow:none; /*To be changed*/
+	width: 100%; 
+	border:none; 
+	box-shadow:none; 
 }
 @mixin formBody_Laptop_Style{
-	width: 450px; /*changed*/
-	border:2px solid gray; /*changed*/
-	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px; /*changed*/
-	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; /*changed*/
+	width: 450px; 
+	border:2px solid gray; /*New*/
+	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; 
 }
 @mixin formBody_Desktop_Style{
-	width: 500px; /*changed*/
-	border:2px solid gray; /*changed*/
-	box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px; /*changed*/
-	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; /*changed*/
+	width: 500px;
+	border:2px solid gray; /*New*/
+	box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray;
 }
 
 @mixin formBody_LimitedHeight_Style{

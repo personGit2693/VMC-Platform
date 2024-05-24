@@ -3300,41 +3300,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  /*Textbox Input*/
-  --customInputColor: rgb(255, 255, 247);
-  /*Textbox Input*/
-  /*Dropdown*/
-  /*
-  --selectDropdownWidth: auto;
-  --selectDropdownBorderWidth: 1px;
-  --selectDropdownBorderColor: #ffffff;
-  --selectDropdownBgColor: transparent;	
-  --selectDropdownIconSize: 9px;
-  --selectDropdownFSize: 20px;
-  --selectDropdownFColor: rgb(255, 255, 247);
-  --selectDropdownChevronSize: 20px;
-  --searchOptsBgColor: white;
-  --searchOptsFColor: black;
-  --hoverOptBgColor: gray;
-  --hoverOptFColor: white;
-  --selectDropdownScrollSize: 10px;
-  --optWrapThumbBgColor: blue;		
-  --selectDropdownResetBtnSize: 20px;
-  */
-  /*Dropdown*/
-  /*Submit Button*/
-  --normBtnWidth: 200px;
-  --normBtnPadding: 10px;
-  --normBtnBorderWidth: 1px;
-  --normBtnBorderColor:0;
-  --normBtnRadius: 50px;
-  --normBtnFWeight: 500;
-  --normBtnFSize: 20px;
-  --normBtnBgColor:#FCC64F;
-  --normBtnFcolor: white;
-  --normBtnHovActFColor: white;
-  --normBtnHovActBgColor: #FCC64F;
-  /*Submit Button*/
   /*Footer*/
   --footerBgColor: #39AB5B;
   --footerFSize: 15px;
@@ -3345,50 +3310,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
-/*
-@mixin formBody_class_mobile{
-	padding-top:10px;
-	width:400px;
-	border-radius:9px;
-	margin-left:auto;
-	margin-right:auto;
-	box-shadow:none;
-	box-shadow:none;
-	border:0px;
-}
-
-
-@mixin selectDropdownWrap_RoClass_mobile{
-	--selectDropdownFSize: 10px;
-}
-
-@mixin suffixDropdown_id{
-	z-index:3;
-}
-
-@mixin areaDropdown_id{
-	z-index:2;
-}
-
-@mixin searchOpts_RoClass{
-	z-index:1;
-}
-
-@mixin selectDropdownOptionsWrap_RoClass{
-	z-index:1;
-	width:555px !important;
-}
-
-@mixin selectDropdownOptionsWrap_RoClass_mobile{
-	z-index:1;
-	width:350px !important;
-}
-
-@mixin selectDropdownOptsArea_RoClass{
-	border:1px solid black;
-	background-color:rgb(170, 209, 231);
-}
-*/
+/*_Already have account General*/
+/*_Already have account General*/
+/*_Submit Button General*/
+/*_Submit Button General*/
+/*_Toggle Password Button General*/
+/*_Toggle Password Button General*/
 /*_Form General*/
 /*_Form General*/
 /*_Input fields General*/
@@ -3416,6 +3343,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*_ _Mixin for selectDropdownOptionsWrap_RoClass*/
 /*_Select dropdown General*/
 /*General*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Submit Button*/
+/*Submit Button*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Form*/
@@ -3464,6 +3395,57 @@ html, body {
   box-sizing: border-box;
   font-family: 'Binance PLEX' !important; }
 
+/*_Already have account General*/
+.alreadyHaveAccount_class {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4D443D;
+  font-weight: bold;
+  text-shadow: -1px 0 #39AB5B, 0 1px #39AB5B, 1px 0 #39AB5B, 0 -1px #39AB5B; }
+
+.alreadyHaveAccount_class a:link {
+  color: #FAB142; }
+
+.alreadyHaveAccount_class a:visited {
+  color: #FAB142; }
+
+.alreadyHaveAccount_class a:hover {
+  color: #FAB142; }
+
+.alreadyHaveAccount_class a:active {
+  color: #FAB142; }
+
+/*_Already have account General*/
+/*_Submit Button General*/
+.normButton_RoClass {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+  --normBtnPadding: 10px;
+  --normBtnBorderWidth: 0px;
+  --normBtnBorderColor: none;
+  --normBtnRadius: 50px;
+  --normBtnFWeight: bold;
+  --normBtnBgColor: #39AB5B;
+  --normBtnFcolor: #ffffff;
+  --normBtnHovActFColor: #ffffff;
+  --normBtnHovActBgColor: #0ABE50;
+  --normBtnWidth: 200px; }
+
+/*_Submit Button General*/
+/*_Toggle Password Button General*/
+.checkPasswordBtn_Class button {
+  --iconBtnWidth: 40px;
+  --iconBtnHeight: 30px;
+  --iconBtnBgColor: 0;
+  --iconBtnBgSize: 20px;
+  --iconBtnBorderWidth: 0;
+  --iconBtnBorderColor: transparent;
+  --iconBtnBorderRadius: 0; }
+
+/*_Toggle Password Button General*/
+/*_Form General*/
 .formTitle_class {
   font-size: 22px;
   font-family: Helvetica;
@@ -3473,56 +3455,6 @@ html, body {
   font-weight: bold;
   white-space: normal; }
 
-/*
-.formBody_class{
-	@include formBody_class;
-}
-*/
-/*
-#suffixDropdown_id{
-	@include suffixDropdown_id;
-}
-
-#AreaDropdown_id{
-	@include areaDropdown_id;
-}
-*/
-#togglePasswordBtn1 {
-  --iconBtnWidth: 40px;
-  --iconBtnHeight: 30px;
-  --iconBtnBgColor: 0;
-  --iconBtnBgSize: 20px;
-  --iconBtnBorderWidth: 0;
-  --iconBtnBorderColor: transparent;
-  --iconBtnBorderRadius: 0; }
-
-#togglePasswordBtn2 {
-  --iconBtnWidth: 40px;
-  --iconBtnHeight: 30px;
-  --iconBtnBgColor: 0;
-  --iconBtnBgSize: 20px;
-  --iconBtnBorderWidth: 0;
-  --iconBtnBorderColor: transparent;
-  --iconBtnBorderRadius: 0; }
-
-.normButton_RoClass {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px; }
-
-.normButton_RoClass:hover {
-  opacity: 0.8; }
-
-.alreadyHaveAccount_class {
-  text-align: center;
-  margin-bottom: 20px;
-  color: yellow; }
-
-.alreadyHaveAccount_class a {
-  color: yellow !important; }
-
-/*_Form General*/
 .formBody_class {
   position: absolute;
   border-radius: 9px;
@@ -3540,7 +3472,8 @@ html, body {
   opacity: 0.8;
   padding-left: 10px !important;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  --customInputColor: rgb(255, 255, 247); }
 
 /*_cusInputs_RoClass General*/
 /*_Input text General*/
@@ -3613,26 +3546,16 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  html, body {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    overflow: auto;
-    background-image: url("../../src/bg2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; }
+  /*Submit Button*/
+  .normButton_RoClass {
+    --normBtnFSize: 15px; }
 
+  /*Submit Button*/
   /*Form*/
   .formBody_class {
     width: 100%;
-    /*To be changed*/
     border: none;
-    /*To be changed*/
-    box-shadow: none;
-    /*To be changed*/ }
+    box-shadow: none; }
 
   /*Form*/
   /*Input text*/
@@ -3699,26 +3622,16 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  html, body {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    overflow: auto;
-    background-image: url("../../src/bg2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; }
+  /*Submit Button*/
+  .normButton_RoClass {
+    --normBtnFSize: 15px; }
 
+  /*Submit Button*/
   /*Form*/
   .formBody_class {
     width: 100%;
-    /*To be changed*/
     border: none;
-    /*To be changed*/
-    box-shadow: none;
-    /*To be changed*/ }
+    box-shadow: none; }
 
   /*Form*/
   /*Input text*/
@@ -3785,16 +3698,17 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Submit Button*/
+  .normButton_RoClass {
+    --normBtnFSize: 18px; }
+
+  /*Submit Button*/
   /*Form*/
   .formBody_class {
     width: 450px;
-    /*changed*/
     border: 2px solid gray;
-    /*changed*/
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
-    /*changed*/
-    box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray;
-    /*changed*/ }
+    /*New*/
+    box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; }
 
   /*Form*/
   /*Input text*/
@@ -3861,16 +3775,17 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Submit Button*/
+  .normButton_RoClass {
+    --normBtnFSize: 19px; }
+
+  /*Submit Button*/
   /*Form*/
   .formBody_class {
-    width: 500px;
-    /*changed*/
+    width: 450px;
     border: 2px solid gray;
-    /*changed*/
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
-    /*changed*/
-    box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray;
-    /*changed*/ }
+    /*New*/
+    box-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray; }
 
   /*Form*/
   /*Input text*/

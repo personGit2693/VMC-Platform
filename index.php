@@ -22,8 +22,12 @@ require_once "./Global PHP/Connection.php";
 
 
 /*Prep Variables*/
+/*
 $dbConnection = connectToDb("doctracking");
 echo print_r($dbConnection);
+*/
+
+echo $_SERVER['HTTP_HOST'];
 /*Prep Variables*/
 
 ?>

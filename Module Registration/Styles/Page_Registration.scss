@@ -26,52 +26,46 @@ html, body {
 	@include asterisk;
 }
 
+
+/*_Already have account General*/
+.alreadyHaveAccount_class{
+	@include alreadyHaveAccount_General_Style;
+}
+
+.alreadyHaveAccount_class a:link{
+	@include alreadyHaveAccountLink_General_Style;
+}
+.alreadyHaveAccount_class a:visited{
+	@include alreadyHaveAccountLink_General_Style;
+}
+.alreadyHaveAccount_class a:hover{
+	@include alreadyHaveAccountLink_General_Style;
+}
+.alreadyHaveAccount_class a:active{
+	@include alreadyHaveAccountLink_General_Style;
+}
+/*_Already have account General*/
+
+
+/*_Submit Button General*/
+.normButton_RoClass{
+	@include normButton_General_Style;
+}
+/*_Submit Button General*/
+
+
+/*_Toggle Password Button General*/
+.checkPasswordBtn_Class button{
+	@include togglePasswordBtn_General_Style;
+}
+/*_Toggle Password Button General*/
+
+
+/*_Form General*/
 .formTitle_class{
 	@include formTitle_class;
 }
 
-/*
-.formBody_class{
-	@include formBody_class;
-}
-*/
-
-/*
-#suffixDropdown_id{
-	@include suffixDropdown_id;
-}
-
-#AreaDropdown_id{
-	@include areaDropdown_id;
-}
-*/
-
-#togglePasswordBtn1{
-	@include togglePasswordBtn1;
-}
-
-#togglePasswordBtn2{
-	@include togglePasswordBtn1;
-}
-
-.normButton_RoClass{
-	@include normButton_RoClass;
-}
-
-.normButton_RoClass:hover{
-	@include normButton_RoClasshover;
-}
-
-.alreadyHaveAccount_class{
-	@include alreadyHaveAccount_class;
-}
-
-.alreadyHaveAccount_class a{
-	@include linkToLogin;
-}
-
-
-/*_Form General*/
 .formBody_class{
 	@include formBody_General_Style;
 }
@@ -150,9 +144,11 @@ html, body {
 /*Mobile*/
 @media all and (max-width:641px){
 
-	html, body {
-		@include body;
+	/*Submit Button*/
+	.normButton_RoClass{
+		@include normButton_Mobile_Style;
 	}
+	/*Submit Button*/
 
 	/*Form*/	
 	.formBody_class{
@@ -192,7 +188,6 @@ html, body {
 	}	
 	/*Input text*/
 
-
 	/*Select dropdown*/
 	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
 		@include selectDropdownIconSize_Mobile_Style;
@@ -210,7 +205,6 @@ html, body {
 		@include selectDropdownResetBtnSize_Mobile_Style;
 	}
 	/*Select dropdown*/		
-
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -220,9 +214,11 @@ html, body {
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 
-	html, body {
-		@include body;
+	/*Submit Button*/
+	.normButton_RoClass{
+		@include normButton_Mobile_Style;
 	}
+	/*Submit Button*/
 
 	/*Form*/	
 	.formBody_class{
@@ -262,7 +258,6 @@ html, body {
 	}	
 	/*Input text*/
 
-
 	/*Select dropdown*/
 	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
 		@include selectDropdownIconSize_Tablet_Style;
@@ -288,6 +283,12 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+
+	/*Submit Button*/
+	.normButton_RoClass{
+		@include normButton_Laptop_Style;
+	}
+	/*Submit Button*/
 
 	/*Form*/	
 	.formBody_class{
@@ -327,7 +328,6 @@ html, body {
 	}	
 	/*Input text*/
 
-
 	/*Select dropdown*/
 	.displayedSelectedIcon_RoClass, .optIcon_RoClass{
 		@include selectDropdownIconSize_Laptop_Style;
@@ -353,14 +353,19 @@ html, body {
 
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
-@media all and (min-width:1601px){
+@media all and (min-width:1601px){	
+
+	/*Submit Button*/
+	.normButton_RoClass{
+		@include normButton_Desktop_Style;
+	}
+	/*Submit Button*/
 
 	/*Form*/	
 	.formBody_class{
-		@include formBody_Desktop_Style;
+		@include formBody_Laptop_Style;
 	}
 	/*Form*/
-
 
 	/*Input text*/
 	/*_Input text animation for icons*/
