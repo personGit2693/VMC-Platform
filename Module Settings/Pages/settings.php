@@ -274,19 +274,19 @@
 				</div>
 				<!--Settings Content-->
 			</div>
-			<!--Main Body-->
-
-			<!--Footer-->
-			<hr class="linethis_RoClass">
-			<div class=footerWrap_RoClass id="footerWrap_RoId">
-				<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 HRIS. All rights reserved.</span>
-			</div>
-			<!--Footer-->				
+			<!--Main Body-->						
 		</div> 
 	</div>
 
-	<!--Javascripts-->
+	<!--Bottom Section / Footer-->
+	<hr class="linethis_RoClass">
+	<div class="footerWrap_RoClass" id="footerWrap_RoId">
+		<!--<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>-->
+	</div>
+	<!--Bottom Section / Footer-->
 
+
+	<!--Javascripts-->
 	<!--_Dependencies-->
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
@@ -304,8 +304,8 @@
 
 	<!--_Executor-->
 	<script type="module" src="../Client Side/Executor_Page_Settings.js"></script>
+	<script type="module" src="../../Global Client Side/Executor_Global.js"></script>
 	<!--_Executor-->
-
 	<!--Javascripts-->
 
 </body>

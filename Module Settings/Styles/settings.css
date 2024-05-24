@@ -3216,6 +3216,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
+/*Body General*/
+/*Body General*/
 /*Search Box*/
 /*Search Box*/
 /*Side Apps Main Menu*/
@@ -3367,8 +3369,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --subNavMenuFColor: #FFFFFF;
   --hoverSubNavMenuBgColor: #303031;
   --hoverSubNavMenuFColor: #FFFFFF;
-  --footerBgColor: #242526;
-  --footerFColor: #FFFFFF;
   /*Dark Mode (Default Style)*/ }
 
 /*Root*/
@@ -3392,9 +3392,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --hoverMainNavMenuFColor: #000000;
   --subNavMenuFColor: #000000;
   --hoverSubNavMenuBgColor: #E4E6E8;
-  --hoverSubNavMenuFColor: #000000;
-  --footerBgColor: #FFFFFF;
-  --footerFColor: #000000; }
+  --hoverSubNavMenuFColor: #000000; }
 
 @font-face {
   font-family: 'Binance PLEX';
@@ -3575,11 +3573,13 @@ video {
   height: 25px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  --footerBgColor: #FCC64F; }
 
 .footerWrap_RoClass #footerTxt_RoId {
   --footerFSize: 13px;
-  font-weight: bold; }
+  font-weight: bold;
+  --footerFColor: #535F80; }
 
 /*Bottom Section / Footer*/
 /*General*/

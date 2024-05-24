@@ -763,7 +763,7 @@
 	<!--Bottom Section / Footer-->
 	<hr class="linethis_RoClass">
 	<div class="footerWrap_RoClass" id="footerWrap_RoId">
-		<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>
+		<!--<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>-->
 	</div>
 	<!--Bottom Section / Footer-->
 
@@ -1442,6 +1442,7 @@
 
 	<!--_Executor-->
 	<script type="module" src="../Client Side/Executor_Page_Posting.js"></script>
+	<script type="module" src="../../Global Client Side/Executor_Global.js"></script>
 	<!--_Executor-->
 	<!--Javascripts-->
 </body>

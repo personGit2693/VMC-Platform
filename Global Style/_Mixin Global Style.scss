@@ -1,4 +1,33 @@
 /***********************************************************************************************************************************************************************************************************/
+/*Body General*/
+@mixin global_Mobile_BodyWoTop{
+	height: calc(100% - 50px);
+}
+@mixin global_Tablet_BodyWoTop{
+	height: calc(100% - 50px);
+}
+@mixin global_Laptop_BodyWoTop{
+	height: calc(100% - 25px);
+}
+@mixin global_Desktop_BodyWoTop{
+	height: calc(100% - 25px);
+}
+
+
+@mixin global_Mobile_BodyWithTop{
+	height: calc(100% - 105px);
+}
+@mixin global_Tablet_BodyWithTop{
+	height: calc(100% - 105px);
+}
+@mixin global_Laptop_BodyWithTop{
+	height: calc(100% - 80px);
+}
+@mixin global_Desktop_BodyWithTop{
+	height: calc(100% - 80px);
+}
+/*Body General*/
+
 /*Search Box*/
 @mixin global_top-searchbox {
 	--inputSearchWidth: 250px;
@@ -59,8 +88,7 @@
 	--hoverSubNavMenuBgColor: #303031;
 	--hoverSubNavMenuFColor: #FFFFFF;
 
-	--footerBgColor: #242526;
-	--footerFColor: #FFFFFF;
+	
 }
 /*Dark Mode (Default Style)*/
 
@@ -88,9 +116,6 @@
 	--subNavMenuFColor: #000000;
 	--hoverSubNavMenuBgColor: #E4E6E8;
 	--hoverSubNavMenuFColor: #000000;
-
-	--footerBgColor: #FFFFFF;
-	--footerFColor: #000000;
 }
 /*Light Mode*/
 
@@ -313,11 +338,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	--footerBgColor: #FCC64F;	
 }
 
 @mixin global_footerTxt_RoId {
 	--footerFSize: 13px;
 	font-weight: bold;
+	--footerFColor: #535F80;
 }
 /*Footer*/
 

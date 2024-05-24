@@ -157,10 +157,12 @@
 	</div>
 	<!--Form Body-->		
 
+	<!--Bottom Section / Footer-->
 	<hr class="linethis_RoClass">
-	<div class=footerWrap_RoClass>
-		<span class="footerTxt_RoClass">&copy; 2024 HRIS. All rights reserved. All rights reserved.</span>
+	<div class="footerWrap_RoClass" id="footerWrap_RoId">
+		<!--<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>-->
 	</div>
+	<!--Bottom Section / Footer-->
 
 
 	<!--_Dependencies-->
@@ -173,6 +175,7 @@
 
 	<!--_Executor-->
 	<script type="module" src="../Client Side/Executor_Page_Registration.js"></script>
+	<script type="module" src="../../Global Client Side/Executor_Global.js"></script>
 	<!--_Executor-->
 </body>
 </html>

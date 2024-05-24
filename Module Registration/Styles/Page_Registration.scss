@@ -1,6 +1,5 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
-@import "../../Global Style/Mixin Global Style";
 @import "../../Global Style/Global Style";
 @import "../../Global Style/Rostrap Global";
 @import "./Mixin_Page_Registration";
@@ -18,13 +17,34 @@
 	@include global_font-face1;
 }
 /*General Start*/
+
+/*Body General*/
 html, body {
-	@include body;
+	@include body;	
 }
+/*Body General*/
 
 *, *::before, *::after {
 	@include asterisk;
 }
+
+/*Bottom Section / Footer Start*/
+#footerWrap_RoId {
+	@include global_footerWrap_RoId;
+}
+
+.footerWrap_RoClass #footerTxt_RoId {
+	@include global_footerTxt_RoId;
+}
+/*Bottom Section / Footer End*/
+
+/*Mobile and Tablet Start*/
+@media (max-width:1080px) {
+	#footerWrap_RoId {
+		@include global_footerWrap_RoId_MobTab;	
+	}
+}
+/*Mobile and Tablet End*/
 
 
 /*_Already have account General*/
@@ -144,6 +164,13 @@ html, body {
 /*Mobile*/
 @media all and (max-width:641px){
 
+	/*Body*/
+	body{
+		@include global_Mobile_BodyWoTop;
+	}
+	/*Body*/
+
+
 	/*Submit Button*/
 	.normButton_RoClass{
 		@include normButton_Mobile_Style;
@@ -213,6 +240,13 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
+
+	/*Body*/
+	body{
+		@include global_Tablet_BodyWoTop;
+	}
+	/*Body*/
+
 
 	/*Submit Button*/
 	.normButton_RoClass{
@@ -284,6 +318,12 @@ html, body {
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
 
+	/*Body*/
+	body{
+		@include global_Laptop_BodyWoTop;
+	}
+	/*Body*/
+
 	/*Submit Button*/
 	.normButton_RoClass{
 		@include normButton_Laptop_Style;
@@ -354,6 +394,12 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){	
+
+	/*Body*/
+	body{
+		@include global_Desktop_BodyWoTop;
+	}
+	/*Body*/
 
 	/*Submit Button*/
 	.normButton_RoClass{

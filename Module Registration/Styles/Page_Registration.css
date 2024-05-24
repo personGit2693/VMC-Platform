@@ -1,48 +1,10 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
-/*Search Box*/
-/*Search Box*/
-/*Side Apps Main Menu*/
-/*Side Apps Main Menu*/
-/*Side Apps Sub Menu*/
-/*Side Apps Sub Menu*/
-/*Dark Mode (Default Style)*/
-/*Dark Mode (Default Style)*/
-/*Light Mode*/
-/*Light Mode*/
-/*Binance Font*/
-/*Binance Font*/
-/*Comfortaa Font*/
-/*Comfortaa Font*/
-/*Webkit*/
-/*Webkit*/
-/*Asterisk*/
-/*Asterisk*/
-/*Body Background*/
-/*Body Background*/
-/*Input and Textarea Style*/
-/*Input and Textarea Style*/
-/*Top Section*/
-/*Top Section*/
-/*Mid Section Height*/
-/*Mid Section Height*/
-/*Left Content*/
-/*Left Content*/
-/*Burger*/
-/*Burger*/
-/*Footer*/
-/*Footer*/
-/*Mid Section Height Mobtab*/
-/*Mid Section Height Mobtab*/
-/*Footer MobTab*/
-/*Footer MobTab*/
-/*Mobile Top Section*/
-/*Mobile Top Section*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
+/*Body General*/
+/*Body General*/
 /*Search Box*/
 /*Search Box*/
 /*Side Apps Main Menu*/
@@ -3299,13 +3261,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
-:root {
-  /*Footer*/
-  --footerBgColor: #39AB5B;
-  --footerFSize: 15px;
-  --footerFColor: white;
-  /*Footer*/ }
-
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3379,6 +3334,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-family: 'Comfortaa';
   src: url("../../Global Fonts/Comfortaa-VariableFont_wght.ttf"); }
 /*General Start*/
+/*Body General*/
 html, body {
   position: relative;
   width: 100%;
@@ -3391,10 +3347,32 @@ html, body {
   background-attachment: fixed;
   background-size: cover; }
 
+/*Body General*/
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Binance PLEX' !important; }
 
+/*Bottom Section / Footer Start*/
+#footerWrap_RoId {
+  padding: 1px;
+  border-top: 1px solid var(--border-color-1);
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --footerBgColor: #FCC64F; }
+
+.footerWrap_RoClass #footerTxt_RoId {
+  --footerFSize: 13px;
+  font-weight: bold;
+  --footerFColor: #535F80; }
+
+/*Bottom Section / Footer End*/
+/*Mobile and Tablet Start*/
+@media (max-width: 1080px) {
+  #footerWrap_RoId {
+    height: 50px; } }
+/*Mobile and Tablet End*/
 /*_Already have account General*/
 .alreadyHaveAccount_class {
   text-align: center;
@@ -3546,6 +3524,11 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Body*/
+  body {
+    height: calc(100% - 50px); }
+
+  /*Body*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 15px; }
@@ -3622,6 +3605,11 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Body*/
+  body {
+    height: calc(100% - 50px); }
+
+  /*Body*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 15px; }
@@ -3698,6 +3686,11 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Body*/
+  body {
+    height: calc(100% - 25px); }
+
+  /*Body*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 18px; }
@@ -3775,6 +3768,11 @@ html, body {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Body*/
+  body {
+    height: calc(100% - 25px); }
+
+  /*Body*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 19px; }

@@ -1,7 +1,8 @@
 /************************************************************************************************************/
 /*Import Mixins*/
-@import "./Mixin Access Page";
 @import "../../Global Style/Global Style";
+@import "../../Global Style/Rostrap Global";
+@import "./Mixin Access Page";
 /*Import Mixins*/
 /************************************************************************************************************/
 @font-face {
@@ -18,6 +19,48 @@ html, body {
 
 img {
 	@include img;
+}
+
+/*Bottom Section / Footer Start*/
+#footerWrap_RoId {
+	@include global_footerWrap_RoId;
+}
+
+.footerWrap_RoClass #footerTxt_RoId {
+	@include global_footerTxt_RoId;
+}
+/*Bottom Section / Footer End*/
+
+/*Mobile and Tablet Start*/
+@media (max-width:1080px) {
+	#footerWrap_RoId {
+		@include global_footerWrap_RoId_MobTab;	
+	}
+}
+/*Mobile and Tablet End*/
+
+body{
+	@include bodyitself_RoStyle;
+}
+
+/* width */
+.access-container::-webkit-scrollbar {
+	@include bodyScrollBar_RoStyle;
+}
+
+/* Track */
+.access-container::-webkit-scrollbar-track {
+	@include bodyTrack_RoStyle;
+}
+
+/* Handle */
+.access-container::-webkit-scrollbar-thumb {
+	@include bodyHandle_RoStyle;
+}
+
+/* Handle on hover */
+.access-container::-webkit-scrollbar-thumb:hover {
+	@include bodyHandleHover_RoStyle;
 }
 
 .access-container {
@@ -81,11 +124,15 @@ img {
 }
 /*General End*/
 /************************************************************************************************************/
+
+
 /************************************************************************************************************/
 /*Other Media Queries Start*/
 
 /*Other Media Queries End*/
 /************************************************************************************************************/
+
+
 /************************************************************************************************************/
 /*Mobile and Tablet Start*/
 @media (max-width:1080px) {
@@ -93,9 +140,18 @@ img {
 }
 /*Mobile and Tablet End*/
 /************************************************************************************************************/
+
+
 /************************************************************************************************************/
 /*Mobile Start*/
 @media all and (max-width:641px) {
+
+	/*Body*/
+	.access-container{
+		@include global_Mobile_BodyWoTop;
+	}
+	/*Body*/
+
 	.access-container .access-box {
 		@include access-box_Mobile;
 	}
@@ -112,24 +168,42 @@ img {
 }
 /*Mobile End*/
 /************************************************************************************************************/
+
+
 /************************************************************************************************************/
 /*Tablet Start*/
 @media all and (min-width:642px) and (max-width:1080px) {
-	
+	/*Body*/
+	.access-container{
+		@include global_Tablet_BodyWoTop;
+	}
+	/*Body*/
 }
 /*Tablet End*/
 /************************************************************************************************************/
+
+
 /************************************************************************************************************/
 /*Laptop Start*/
 @media all and (min-width:1081px) and (max-width:1600px) {
-	
+	/*Body*/
+	.access-container{
+		@include global_Laptop_BodyWoTop;
+	}
+	/*Body*/
 }
 /*Laptop End*/
 /************************************************************************************************************/
+
+
 /************************************************************************************************************/
 /*Desktop Start*/
 @media all and (min-width:1601px) {
-	
+	/*Body*/
+	.access-container{
+		@include global_Desktop_BodyWoTop;
+	}
+	/*Body*/
 }
 /*Desktop End*/
 /************************************************************************************************************/
