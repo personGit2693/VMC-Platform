@@ -5,9 +5,12 @@
 @import "./Mixin Setting Page";
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
-/*Global Codes to Copy Start*/
 
-/*Root Start*/
+
+/************************************************************************************************************/
+/*Global Codes*/
+
+/*Root*/
 :root {
 	/*Search Box*/
 	@include global_top-searchbox;
@@ -27,7 +30,15 @@
 }
 /*Root*/
 
-/*General Start*/
+/*General*/
+html, body {
+	@include global_html-body_Style;
+}
+
+body {
+	@include global_General_BodyWithTop;
+}
+
 .light-mode {
 	@include global_light-mode;
 }
@@ -68,7 +79,7 @@ video {
 	@include global_img-video;
 }
 
-/*Top Section Start*/
+/*Top Section*/
 .top-section {
 	@include global_top-section;
 }
@@ -132,12 +143,12 @@ video {
 }
 /*Top Section*/
 
-/*Mid Section Start*/
+/*Mid Section*/
 #rolayout_RoId {
 	@include global_rolayout_RoId;
 }
 
-/*Left Content Start*/
+/*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
 	@include global_sidemecha_RoId;
 }
@@ -172,14 +183,14 @@ video {
 }
 /*Left Content*/
 
-/*Mid Content Start*/
+/*Mid Content*/
 .mainmecha_RoClass #burger_RoId {
 	@include global_burger_RoId;
 }
 /*Mid Content*/
 /*Mid Section*/
 
-/*Bottom Section / Footer Start*/
+/*Footer*/
 #footerWrap_RoId {
 	@include global_footerWrap_RoId;
 }
@@ -187,23 +198,21 @@ video {
 .footerWrap_RoClass #footerTxt_RoId {
 	@include global_footerTxt_RoId;
 }
-/*Bottom Section / Footer*/
+/*Footer*/
+
 /*General*/
+/************************************************************************************************************/
 
-/*Mobile and Tablet Start*/
-@media (min-width:0px) and (max-width:1080px) {
-	#rolayout_RoId {
-		@include global_rolayout_RoId_MobTab;
-	}
 
-	#footerWrap_RoId {
-		@include global_footerWrap_RoId_MobTab;	
-	}
-}
-/*Mobile and Tablet*/
-
-/*Mobile Start*/
+/************************************************************************************************************/
+/*Mobile*/
 @media all and (max-width:641px) {
+	/*Body Height*/
+	body {
+		@include global_Mobile_BodyWithTop;
+	}
+	/*Body Height*/
+
 	.top-section .searchInput_RoClass {
 		@include global_searchInput_RoClass_Mobile;
 	}
@@ -215,18 +224,77 @@ video {
 	.top-right-menu .toggle-mode-class {
 		@include global_toggle-mode-class_Mobile;
 	}
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Mobile_footerHeight;
+	}
+	/*Footer Height*/
 }
 /*Mobile*/
-/*Global Codes to Copy*/
-
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 
 
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	/*Body Height*/
+	body {
+		@include global_Tablet_BodyWithTop;
+	}
+	/*Body Height*/
 
-body{
-	@include body;
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Tablet_footerHeight;
+	}
+	/*Footer Height*/
 }
+/*Tablet*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+	/*Body Height*/
+	body {
+		@include global_Laptop_BodyWithTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Laptop_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Laptop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px) {
+	/*Body Height*/
+	body {
+		@include global_Desktop_BodyWithTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Desktop_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Desktop*/
+
+/*Global Codes*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 
 .projTitleAndUserLogin_RoClass{
 	@include projTitleAndUserLogin_RoClass;
@@ -250,7 +318,6 @@ body{
 
 .SettingsClass #SettingsTitle_id{
 	@include SettingsTitle_id;
-
 }
 
 .passwordAndCheckPasswordWrap_Class{
@@ -279,7 +346,6 @@ body{
 
 #picAndbuttonwrap_id #imgWrapper_id{
 	@include imgWrapper_id;
-
 }
 
 #imgWrapper_id #profilePic-id{
@@ -292,7 +358,6 @@ body{
 }
 .nameAndTitle-Wrap #nameDisplay-id{
 	@include nameDisplay-id;
-
 }
 
 .nameEditWrap_class{
@@ -321,8 +386,8 @@ body{
 
 .selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
 	@include displayedSelectedText_RoClass;
-
 }
+
 .nameAndTitle-Wrap #positionDisplay-id{
 	@include positionDisplay-id;
 }
@@ -345,7 +410,6 @@ body{
 
 .SettingsClass .cusInputs_RoClass{
 	@include cusInputs_RoClass;
-	
 }
 
 .changeCredentialsWrap_class{
@@ -388,128 +452,113 @@ body{
 	@include notificationTitle_class;
 }
 
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 
 
-/***********************************************************************************************************************************************************************************************************/
-
-
-/***********************************************************************************************************************************************************************************************************/
-/*Section Comment Name*/
-
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-
-.normButton_RoClass{
+	.normButton_RoClass{
 		--normBtnWidth: 100px;
 		--normBtnFSize: 60%;
+	}
+
+	.setting_Title_Class{
+		@include mobile_setting_Title_Class;
+	}
+
+	#picAndbuttonwrap_id #imgWrapper_id{
+		@include mobile_imgWrapper_id;
+
+	}
+
+	#imgWrapper_id #profilePic-id{
+		@include mobile_profilePic-id;
+	}
+
+	.nameAndTitle-Wrap #nameDisplay-id{
+		@include mobile_nameDisplay-id;
+
+	}
+
+	#changeNameimgWrapper_id{
+		@include mobile_changeNameimgWrapper_id;
+	}
+
+	#changePositionDisplay_id .selectDropdownWrap_RoClass{
+		@include mobile_selectDropdownWrap_RoClass;
+
+	} 
+
+	.selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
+		@include mobile_displayedSelectedText_RoClass;
+
+	}
+
+	.changeCredentialsWrap_class{
+		@include mobile_changeCredentialsWrap_class;
+	}
+
+	.changeCredentialsWrap_class .inputBoxesWrap_class{
+		@include inputBoxesWrap_class;
+
+	}
+
+	.SettingsClass .cusInputs_RoClass{
+		@include mobile_cusInputs_RoClass;
+	}
+
 }
-
-.setting_Title_Class{
-	@include mobile_setting_Title_Class;
-}
-
-#picAndbuttonwrap_id #imgWrapper_id{
-	@include mobile_imgWrapper_id;
-
-}
-
-#imgWrapper_id #profilePic-id{
-	@include mobile_profilePic-id;
-}
-
-.nameAndTitle-Wrap #nameDisplay-id{
-	@include mobile_nameDisplay-id;
-
-}
-
-#changeNameimgWrapper_id{
-	@include mobile_changeNameimgWrapper_id;
-}
-
-#changePositionDisplay_id .selectDropdownWrap_RoClass{
-	@include mobile_selectDropdownWrap_RoClass;
-
-} 
-
-.selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
-	@include mobile_displayedSelectedText_RoClass;
-
-}
-
-.changeCredentialsWrap_class{
-	@include mobile_changeCredentialsWrap_class;
-}
-
-.changeCredentialsWrap_class .inputBoxesWrap_class{
-	@include inputBoxesWrap_class;
-
-}
-
-.SettingsClass .cusInputs_RoClass{
-	@include mobile_cusInputs_RoClass;
-}
-
-}
-
 /*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 
 
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	
-
-.normButton_RoClass{
+	.normButton_RoClass{
 		--normBtnWidth: 140px;
 		--normBtnFSize: 85%;
-}
+	}
 
-.setting_Title_Class{
-	@include mobile_setting_Title_Class;
-}
+	.setting_Title_Class{
+		@include mobile_setting_Title_Class;
+	}
 
-.nameAndTitle-Wrap #nameDisplay-id{
-	@include mobile_nameDisplay-id;
+	.nameAndTitle-Wrap #nameDisplay-id{
+		@include mobile_nameDisplay-id;
 
-}
+	}
 
-#changePositionDisplay_id .selectDropdownWrap_RoClass{
-	@include mobile_selectDropdownWrap_RoClass;
+	#changePositionDisplay_id .selectDropdownWrap_RoClass{
+		@include mobile_selectDropdownWrap_RoClass;
 
-} 
+	}
 
 }
 /*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 
 
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-
-.normButton_RoClass{
+	.normButton_RoClass{
 		--normBtnWidth: 150px;
 		--normBtnFSize: 90%;
-}
+	}
 }
 /*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 
 
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-
 	.normButton_RoClass{
 		--normBtnWidth: 160px;
 		--normBtnFSize: 95%;
 	}
 }
 /*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/*Section Comment Name*/
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/

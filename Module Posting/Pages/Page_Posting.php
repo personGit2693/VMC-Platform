@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../Styles/Posting Page.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/Page_Posting.css">
 	<title>Posting Page</title>
 </head>
-<body>	
+<body>
 	<!--Top Section-->
 	<div class="top-section">
 		<div class="top-left-menu">
@@ -760,12 +760,12 @@
 	</div>
 	<!--Mid Section-->
 
-	<!--Bottom Section / Footer-->
+	<!--Footer-->
 	<hr class="linethis_RoClass">
 	<div class="footerWrap_RoClass" id="footerWrap_RoId">
 		<!--<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>-->
 	</div>
-	<!--Bottom Section / Footer-->
+	<!--Footer-->
 
 	<!--Chat Section-->
 	<div class="chat-toggle-button" onclick="controller_Div_ToggleContacts();"><img src="../../src/chat-icon.png"></div>
@@ -900,7 +900,7 @@
 
 	<!--Modals-->
 	<!--_Modal Post-->
-	<div class="modalmeCon_RoClass" style="--topOnBlurrer: 1;">
+	<div class="modalmeCon_RoClass" style="--topOnBlurrer: 2;">
 		<div class="modalme_RoClass">
 			<div class="modalHeadClose_RoClass" onclick="closeMyMod('modalme_RoClass', 0)">
 				<img class="close-mod-icon" src="../../src/closeModIcon.png">

@@ -1,32 +1,13 @@
-/***********************************************************************************************************************************************************************************************************/
-/*Body General*/
-@mixin global_Mobile_BodyWoTop{
-	height: calc(100% - 50px);
-}
-@mixin global_Tablet_BodyWoTop{
-	height: calc(100% - 50px);
-}
-@mixin global_Laptop_BodyWoTop{
-	height: calc(100% - 25px);
-}
-@mixin global_Desktop_BodyWoTop{
-	height: calc(100% - 25px);
+/************************************************************************************************************/
+/*General*/
+@mixin global_html-body_Style {
+	height: 100%;
+	overflow: auto;
 }
 
-
-@mixin global_Mobile_BodyWithTop{
-	height: calc(100% - 105px);
+@mixin global_General_BodyWithTop {
+	margin-top: 55px;
 }
-@mixin global_Tablet_BodyWithTop{
-	height: calc(100% - 105px);
-}
-@mixin global_Laptop_BodyWithTop{
-	height: calc(100% - 80px);
-}
-@mixin global_Desktop_BodyWithTop{
-	height: calc(100% - 80px);
-}
-/*Body General*/
 
 /*Search Box*/
 @mixin global_top-searchbox {
@@ -87,8 +68,6 @@
 	--subNavMenuFColor: #FFFFFF;
 	--hoverSubNavMenuBgColor: #303031;
 	--hoverSubNavMenuFColor: #FFFFFF;
-
-	
 }
 /*Dark Mode (Default Style)*/
 
@@ -187,6 +166,10 @@
 	gap: 5px;
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 @mixin global_top-left-menu {
@@ -270,7 +253,7 @@
 
 /*Mid Section Height*/
 @mixin global_rolayout_RoId {
-	height: calc(100% - 80px);
+	position: relative;
 }
 /*Mid Section Height*/
 
@@ -333,12 +316,10 @@
 /*Footer*/
 @mixin global_footerWrap_RoId {
 	padding: 1px;
-	border-top: 1px solid var(--border-color-1);
-	height: 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	--footerBgColor: #FCC64F;	
+	--footerBgColor: #FCC64F;
 }
 
 @mixin global_footerTxt_RoId {
@@ -348,15 +329,68 @@
 }
 /*Footer*/
 
-/*Mid Section Height Mobtab*/
-@mixin global_rolayout_RoId_MobTab {
+/*General*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Body*/
+/*Body Height Without Top Section*/
+@mixin global_Mobile_BodyWoTop{
+	height: calc(100% - 50px);
+}
+@mixin global_Tablet_BodyWoTop{
+	height: calc(100% - 50px);
+}
+@mixin global_Laptop_BodyWoTop{
+	height: calc(100% - 25px);
+}
+@mixin global_Desktop_BodyWoTop{
+	height: calc(100% - 25px);
+}
+/*Body Height Without Top Section*/
+
+
+/*Body Height With Top Section*/
+@mixin global_Mobile_BodyWithTop{
 	height: calc(100% - 105px);
 }
-/*Mid Section Height Mobtab*/
+@mixin global_Tablet_BodyWithTop{
+	height: calc(100% - 105px);
+}
+@mixin global_Laptop_BodyWithTop{
+	height: calc(100% - 80px);
+}
+@mixin global_Desktop_BodyWithTop{
+	height: calc(100% - 80px);
+}
+/*Body Height With Top Section*/
+/*Body*/
+/************************************************************************************************************/
 
+
+/************************************************************************************************************/
+/*Footer Height*/
+@mixin global_Mobile_footerHeight {
+	height: 50px;
+}
+@mixin global_Tablet_footerHeight {
+	height: 50px;
+}
+@mixin global_Laptop_footerHeight {
+	height: 25px;
+}
+@mixin global_Desktop_footerHeight {
+	height: 25px;
+}
+/*Footer Height*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Footer MobTab*/
 @mixin global_footerWrap_RoId_MobTab {
-	height: 50px;
+	// height: 50px;
 }
 /*Footer MobTab*/
 
@@ -376,4 +410,4 @@
 }
 /*Mobile Top Section*/
 
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/

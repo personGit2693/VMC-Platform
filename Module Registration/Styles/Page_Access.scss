@@ -1,0 +1,317 @@
+/************************************************************************************************************/
+/*Import Mixins*/
+@import "../../Global Style/Global Style";
+@import "../../Global Style/Rostrap Global";
+@import "./Mixin_Page_Access";
+/*Import Mixins*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Global Codes*/
+
+/*General*/
+html, body {
+	@include global_html-body_Style;
+}
+
+/*Font Family*/
+@font-face {
+	@include global_font-face;
+}
+/*Font Family*/
+
+/*Footer*/
+#footerWrap_RoId {
+	@include global_footerWrap_RoId;
+}
+
+.footerWrap_RoClass #footerTxt_RoId {
+	@include global_footerTxt_RoId;
+}
+/*Footer*/
+
+/*General*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px) {
+	/*Body Height*/
+	body {
+		@include global_Mobile_BodyWoTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Mobile_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Mobile*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	/*Body Height*/
+	body {
+		@include global_Tablet_BodyWoTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Tablet_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Tablet*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+	/*Body Height*/
+	body {
+		@include global_Laptop_BodyWoTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Laptop_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Laptop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px) {
+	/*Body Height*/
+	body {
+		@include global_Desktop_BodyWoTop;
+	}
+	/*Body Height*/
+	
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Desktop_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Desktop*/
+
+/*Global Codes*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*General*/
+body {
+	@include bodyitself_Style;
+}
+
+*, *::before, *::after {
+	@include asterisk_Style;
+}
+
+img {
+	@include img_Style;
+}
+
+.access-box {
+	@include access-box;
+}
+
+.access-box .lock-icon-container {
+	@include lock-icon-container;
+}
+
+.access-box .permission-message {
+	@include permission-message;
+}
+
+.access-box .access-invitation {
+	@include access-invitation;
+}
+
+.access-box .user-status {
+	@include user-status;
+}
+
+.access-box .textarea-container {
+	@include textarea-container;
+}
+
+.textarea-container .message-input {
+	@include message-input;
+}
+
+.message-input::-webkit-scrollbar {
+	@include message-input-scrollbar;
+}
+
+.message-input::-webkit-scrollbar-thumb {
+	@include message-input-sb-thumb;
+}
+
+.message-input:hover::-webkit-scrollbar-thumb {
+	@include message-input-hover-sb-thumb;
+}
+
+.access-box .request-button {
+	@include request-button;
+}
+
+.access-box .request-button:hover {
+	@include request-button-hover;
+}
+
+.access-box .request-button:active {
+	@include request-button-active;
+}
+/*General*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px) {
+
+	/*Lock Icon Width and Height*/
+	.access-box .lock-icon-container img {
+		@include lock-icon-container-img_Mobile;
+	}
+	/*Lock Icon Width and Height*/
+
+	/*Permission Message Font Size*/
+	.access-box .permission-message {
+		@include permission-message_Mobile;
+	}
+	/*Permission Message Font Size*/
+
+	/*Access Invitation Font Size*/
+	.access-box .access-invitation,
+	.access-box .user-status,
+	.textarea-container .message-input {
+		@include access-invitation_Mobile;
+	}
+	/*Access Invitation Font Size*/
+}
+/*Mobile*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	
+	/*Lock Icon Width and Height*/
+	.access-box .lock-icon-container img {
+		@include lock-icon-container-img_Tablet;
+	}
+	/*Lock Icon Width and Height*/
+
+	/*Permission Message Font Size*/
+	.access-box .permission-message {
+		@include permission-message_Tablet;
+	}
+	/*Permission Message Font Size*/
+
+	/*Access Invitation Font Size*/
+	.access-box .access-invitation,
+	.access-box .user-status,
+	.textarea-container .message-input {
+		@include access-invitation_Tablet;
+	}
+	/*Access Invitation Font Size*/
+}
+/*Tablet*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+
+	/*Lock Icon Width and Height*/
+	.access-box .lock-icon-container img {
+		@include lock-icon-container-img_Laptop;
+	}
+	/*Lock Icon Width and Height*/
+
+	/*Permission Message Font Size*/
+	.access-box .permission-message {
+		@include permission-message_Laptop;
+	}
+	/*Permission Message Font Size*/
+
+	/*Access Invitation Font Size*/
+	.access-box .access-invitation,
+	.access-box .user-status,
+	.textarea-container .message-input {
+		@include access-invitation_Laptop;
+	}
+	/*Access Invitation Font Size*/
+}
+/*Laptop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px) {
+
+	/*Lock Icon Width and Height*/
+	.access-box .lock-icon-container img {
+		@include lock-icon-container-img_Desktop;
+	}
+	/*Lock Icon Width and Height*/
+
+	/*Permission Message Font Size*/
+	.access-box .permission-message {
+		@include permission-message_Desktop;
+	}
+	/*Permission Message Font Size*/
+
+	/*Access Invitation Font Size*/
+	.access-box .access-invitation,
+	.access-box .user-status,
+	.textarea-container .message-input {
+		@include access-invitation_Desktop;
+	}
+	/*Access Invitation Font Size*/
+}
+/*Desktop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Other Media Queries*/
+
+/*Limited Height*/
+@media (max-height:655px) {
+	body {
+		@include body_LimitedHeight_OMQ;
+	}
+}
+/*Limited Height*/
+
+/*Standard Height*/
+@media (min-height:656px){
+	body {
+		@include body_StandardHeight_OMQ;
+	}
+}
+/*Standard Height*/
+
+/*Other Media Queries*/
+/************************************************************************************************************/

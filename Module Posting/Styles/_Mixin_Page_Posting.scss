@@ -193,8 +193,9 @@
 	padding: 7px 15px;
 	border-radius: 3px;
 	display: block;
-	background-color: #FCC64F;
-	color: #808080;
+	background-color: #3C746B ;
+	box-shadow: 0px 0px 4px rgba(#3C746B, .7);
+	color: #FFFFFF;
 	cursor: pointer;
 }
 
@@ -498,12 +499,12 @@
 @mixin delete-post {
 	margin-top: 3px;
 	font-size: 12px;
-	font-weight: bold;
 	border-radius: 3px;
 	padding: 3px 7px;
 	border: none;
-	color: #808080;
-	background-color: #FCC64F;
+	color: #FFFFFF;
+	background-color: #FF0000;
+	background-color: #B53737;
 	cursor: pointer;
 }
 /*Right Content*/
@@ -518,7 +519,8 @@
 	height: 50px;
 	border-radius: 50%;
 	background-color: #39AB5B;
-	z-index: 1;
+	border: 2px solid #FCC64F;
+	z-index: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -539,6 +541,7 @@
 	background-color: var(--bg-color-1);
 	padding: 0px 10px 10px 10px;
 	overflow: auto;
+	z-index: 1;
 }
 
 @mixin contacts {
@@ -634,6 +637,7 @@
 	border-bottom: none;
 	display: flex;
 	flex-direction: column;
+	z-index: 1;
 }
 
 @mixin contact-profile-container-small {
@@ -1042,64 +1046,6 @@
 /*General*/
 /*************************************************************************************/
 /*************************************************************************************/
-/*Other Media Queries*/
-@mixin mainmechaCon_RoId_OMQ {
-	max-width: 450px;
-}
-
-@mixin post-reactions_OMQ {
-	flex-direction: column;
-	gap: 10px;
-}
-
-@mixin chat-toggle-button_OMQ {
-	top: 110px;
-}
-
-@mixin contact-text_OMQ {
-	visibility: hidden;
-}
-
-@mixin chat-box-container_OMQ {
-	width: 300px;
-	left: 0;
-	right: 0;
-	margin-inline: auto;
-}
-
-@mixin modalHeadClose_RoClass_OMQ {
-	background-color: var(--bg-color-12);
-}
-
-@mixin home-logo-img_OMQ {
-	background-color: var(--bg-color-7);
-}
-
-@mixin modalBody_RoClass_OMQ {
-	flex-direction: column;
-	padding-top: 55px;
-}
-
-@mixin posted-file-container_OMQ {
-	max-height: 55%;
-	flex: 2;
-}
-
-@mixin posted-info-container_OMQ {
-	width: auto;
-	flex: 1;
-}
-
-@mixin modal-menu-container_OMQ {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background-color: var(--bg-color-2);
-	border-bottom: 1px solid var(--border-color-1);
-}
-/*Other Media Queries*/
-/*************************************************************************************/
-/*************************************************************************************/
 /*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
 @mixin right-side-container_MobTab {
 	width: 100%;
@@ -1166,4 +1112,62 @@
 	font-size: 18px
 }
 /*Desktop @media (min-width:1601px)*/
+/*************************************************************************************/
+/*************************************************************************************/
+/*Other Media Queries*/
+@mixin mainmechaCon_RoId_OMQ {
+	max-width: 450px;
+}
+
+@mixin post-reactions_OMQ {
+	flex-direction: column;
+	gap: 10px;
+}
+
+@mixin chat-toggle-button_OMQ {
+	top: 110px;
+}
+
+@mixin contact-text_OMQ {
+	visibility: hidden;
+}
+
+@mixin chat-box-container_OMQ {
+	width: 300px;
+	left: 0;
+	right: 0;
+	margin-inline: auto;
+}
+
+@mixin modalHeadClose_RoClass_OMQ {
+	background-color: var(--bg-color-12);
+}
+
+@mixin home-logo-img_OMQ {
+	background-color: var(--bg-color-7);
+}
+
+@mixin modalBody_RoClass_OMQ {
+	flex-direction: column;
+	padding-top: 55px;
+}
+
+@mixin posted-file-container_OMQ {
+	max-height: 55%;
+	flex: 2;
+}
+
+@mixin posted-info-container_OMQ {
+	width: auto;
+	flex: 1;
+}
+
+@mixin modal-menu-container_OMQ {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: var(--bg-color-2);
+	border-bottom: 1px solid var(--border-color-1);
+}
+/*Other Media Queries*/
 /*************************************************************************************/

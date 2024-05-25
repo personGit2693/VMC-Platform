@@ -1,12 +1,16 @@
-/***********************************************************************************************************************************************************************************************************/
+/************************************************************************************************************/
 /*Import Mixins*/
 @import "../../Global Style/Rostrap Global";
 @import "../../Global Style/Global Style";
-@import "./Mixin Posting Page";
+@import "./Mixin_Page_Posting";
 /*Import Mixins*/
-/***********************************************************************************************************************************************************************************************************/
-/*Global Codes to Copy Start*/
-/*Root Start*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Global Codes*/
+
+/*Root*/
 :root {
 	/*Search Box*/
 	@include global_top-searchbox;
@@ -24,9 +28,17 @@
 	@include global_dark-mode;
 	/*Dark Mode (Default Style)*/
 }
-/*Root End*/
+/*Root*/
 
-/*General Start*/
+/*General*/
+html, body {
+	@include global_html-body_Style;
+}
+
+body {
+	@include global_General_BodyWithTop;
+}
+
 .light-mode {
 	@include global_light-mode;
 }
@@ -67,7 +79,7 @@ video {
 	@include global_img-video;
 }
 
-/*Top Section Start*/
+/*Top Section*/
 .top-section {
 	@include global_top-section;
 }
@@ -129,14 +141,14 @@ video {
 .user-profile img {
 	@include global_user-profile-img;
 }
-/*Top Section End*/
+/*Top Section*/
 
-/*Mid Section Start*/
+/*Mid Section*/
 #rolayout_RoId {
 	@include global_rolayout_RoId;
 }
 
-/*Left Content Start*/
+/*Left Content*/
 .rolayout_RoClass #sidemecha_RoId {
 	@include global_sidemecha_RoId;
 }
@@ -169,16 +181,16 @@ video {
 .mainNavMenu_RoClass .chevronIconWrap_RoClass {
 	@include global_chevronIconWrap_RoClass;
 }
-/*Left Content End*/
+/*Left Content*/
 
-/*Mid Content Start*/
+/*Mid Content*/
 .mainmecha_RoClass #burger_RoId {
 	@include global_burger_RoId;
 }
-/*Mid Content End*/
-/*Mid Section End*/
+/*Mid Content*/
+/*Mid Section*/
 
-/*Bottom Section / Footer Start*/
+/*Footer*/
 #footerWrap_RoId {
 	@include global_footerWrap_RoId;
 }
@@ -186,23 +198,21 @@ video {
 .footerWrap_RoClass #footerTxt_RoId {
 	@include global_footerTxt_RoId;
 }
-/*Bottom Section / Footer End*/
-/*General End*/
+/*Footer*/
 
-/*Mobile and Tablet Start*/
-@media (min-width:0px) and (max-width:1080px) {
-	#rolayout_RoId {
-		@include global_rolayout_RoId_MobTab;
-	}
+/*General*/
+/************************************************************************************************************/
 
-	#footerWrap_RoId {
-		@include global_footerWrap_RoId_MobTab;	
-	}
-}
-/*Mobile and Tablet End*/
 
-/*Mobile Start*/
+/************************************************************************************************************/
+/*Mobile*/
 @media all and (max-width:641px) {
+	/*Body Height*/
+	body {
+		@include global_Mobile_BodyWithTop;
+	}
+	/*Body Height*/
+
 	.top-section .searchInput_RoClass {
 		@include global_searchInput_RoClass_Mobile;
 	}
@@ -214,12 +224,78 @@ video {
 	.top-right-menu .toggle-mode-class {
 		@include global_toggle-mode-class_Mobile;
 	}
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Mobile_footerHeight;
+	}
+	/*Footer Height*/
 }
-/*Mobile End*/
-/*Global Codes to Copy End*/
-/***********************************************************************************************************************************************************************************************************/
-/***********************************************************************************************************************************************************************************************************/
-/*Root Start*/
+/*Mobile*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	/*Body Height*/
+	body {
+		@include global_Tablet_BodyWithTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Tablet_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Tablet*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+	/*Body Height*/
+	body {
+		@include global_Laptop_BodyWithTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Laptop_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Laptop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px) {
+	/*Body Height*/
+	body {
+		@include global_Desktop_BodyWithTop;
+	}
+	/*Body Height*/
+
+	/*Footer Height*/
+	#footerWrap_RoId {
+		@include global_Desktop_footerHeight;
+	}
+	/*Footer Height*/
+}
+/*Desktop*/
+
+/*Global Codes*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Root*/
 :root {
 	/*Project Title*/
 	@include project-title;
@@ -229,21 +305,22 @@ video {
 	@include dark-mode;
 	/*Dark Mode (Default Style)*/
 }
-/*Root End*/
-/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+/************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*General Start*/
+
+/************************************************************************************************************/
+/*General*/
 .light-mode {
 	@include light-mode;
 }
 
-/*Mid Section Start*/
+/*Mid Section*/
 #rolayout_RoId {
 	@include rolayout_RoId;
 }
 
-/*Mid Content Start*/
+/*Mid Content*/
 .rolayout_RoClass #mainmecha_RoId {
 	@include mainmecha_RoId;
 }
@@ -499,9 +576,9 @@ video {
 .textarea-comment-container .comment-input {
 	@include comment-input;
 }
-/*Mid Content End*/
+/*Mid Content*/
 
-/*Right Content Start*/
+/*Right Content*/
 .rolayout_RoClass .right-side-container {
 	@include right-side-container;
 }
@@ -544,10 +621,10 @@ video {
 .side-content-content .delete-post {
 	@include delete-post;
 }
-/*Right Content End*/
-/*Mid Section End*/
+/*Right Content*/
+/*Mid Section*/
 
-/*Chat Section Start*/
+/*Chat Section*/
 .chat-toggle-button {
 	@include chat-toggle-button;
 }
@@ -727,7 +804,7 @@ video {
 .chat-box-container .close-chat-button img {
 	@include close-chat-button-img;
 }
-/*Chat Section End*/
+/*Chat Section*/
 
 /*Modal*/
 .modalmeCon_RoClass {
@@ -839,11 +916,97 @@ video {
 	@include comment-profile-container;
 }
 /*Modal*/
-/*General End*/
-/***********************************************************************************************************************************************************************************************************/
+/*General*/
+/************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Other Media Queries Start*/
+
+/************************************************************************************************************/
+/*Mobile and Tablet*/
+@media (max-width:1080px) {
+	.rolayout_RoClass .right-side-container {
+		@include right-side-container_MobTab;
+	}
+
+	.rolayout_RoClass #mainmecha_RoId {
+		@include mainmecha_RoId_MobTab;
+	}
+
+	.mainmecha_RoClass #mainmechaCon_RoId {
+		@include mainmechaCon_RoId_MobTab;
+	}
+
+	.chat-toggle-button {
+		@include chat-toggle-button_MobTab;
+	}
+
+	.chat-container {
+		@include chat-container_MobTab;
+	}
+
+	.chat-box-container {
+		@include chat-box-container_MobTab;
+	}
+}
+/*Mobile and Tablet*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px) {
+	.chat-container {
+		@include chat-container_Mobile;
+	}
+}
+/*Mobile*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px) {
+	
+}
+/*Tablet*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px) {
+	.mainmecha_RoClass .projectTitle_RoClass {
+		@include projectTitle_RoClass_Laptop;
+	}
+
+	.posts .recent-posts {
+		@include recent-posts_Laptop;
+	}
+}
+/*Laptop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px) {
+	.mainmecha_RoClass #mainmechaCon_RoId {
+		@include mainmechaCon_RoId_Desktop;
+	}
+
+	.mainmecha_RoClass .projectTitle_RoClass {
+		@include projectTitle_RoClass_Desktop;
+	}
+
+	.posts .recent-posts {
+		@include recent-posts_Desktop;
+	}
+}
+/*Desktop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Other Media Queries*/
 @media (min-width:1081px) and (max-width:1250px) {
 	.mainmecha_RoClass #mainmechaCon_RoId {
 		@include mainmechaCon_RoId_OMQ;
@@ -895,85 +1058,8 @@ video {
 		@include modal-menu-container_OMQ;
 	}
 }
-/*Other Media Queries End*/
-/***********************************************************************************************************************************************************************************************************/
+/*Other Media Queries*/
+/************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile and Tablet Start*/
-@media (min-width:0px) and (max-width:1080px) {
-	.rolayout_RoClass .right-side-container {
-		@include right-side-container_MobTab;
-	}
 
-	.rolayout_RoClass #mainmecha_RoId {
-		@include mainmecha_RoId_MobTab;
-	}
 
-	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_MobTab;
-	}
-
-	.chat-toggle-button {
-		@include chat-toggle-button_MobTab;
-	}
-
-	.chat-container {
-		@include chat-container_MobTab;
-	}
-
-	.chat-box-container {
-		@include chat-box-container_MobTab;
-	}
-}
-/*Mobile and Tablet End*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile Start*/
-@media all and (max-width:641px) {
-	.chat-container {
-		@include chat-container_Mobile;
-	}
-}
-/*Mobile End*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet Start*/
-@media all and (min-width:642px) and (max-width:1080px) {
-	
-}
-/*Tablet End*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop Start*/
-@media all and (min-width:1081px) and (max-width:1600px) {
-	.mainmecha_RoClass .projectTitle_RoClass {
-		@include projectTitle_RoClass_Laptop;
-	}
-
-	.posts .recent-posts {
-		@include recent-posts_Laptop;
-	}
-}
-/*Laptop End*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop Start*/
-@media all and (min-width:1601px) {
-	.mainmecha_RoClass #mainmechaCon_RoId {
-		@include mainmechaCon_RoId_Desktop;
-	}
-
-	.mainmecha_RoClass .projectTitle_RoClass {
-		@include projectTitle_RoClass_Desktop;
-	}
-
-	.posts .recent-posts {
-		@include recent-posts_Desktop;
-	}
-}
-/*Desktop End*/
-/***********************************************************************************************************************************************************************************************************/
