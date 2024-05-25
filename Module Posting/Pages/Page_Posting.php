@@ -13,7 +13,7 @@
 			<a class="home-logo" href=""><img src="../../src/homeiconwhite.png"></a>
 
 			<!--Search Textbox-->
-			<input type="text" class="searchInput_RoClass" id="searchInput_RoId" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
+			<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
 			<!--Search Textbox-->
 		</div>
 

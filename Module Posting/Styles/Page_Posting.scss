@@ -10,12 +10,8 @@
 /************************************************************************************************************/
 /*Global Codes*/
 
-/*Root*/
+/*General*/
 :root {
-	/*Search Box*/
-	@include global_top-searchbox;
-	/*Search Box*/
-
 	/*Side Apps Main Menu*/
 	@include global_side-app-main;
 	/*Side Apps Main Menu*/
@@ -28,14 +24,13 @@
 	@include global_dark-mode;
 	/*Dark Mode (Default Style)*/
 }
-/*Root*/
 
-/*General*/
 html, body {
 	@include global_html-body_Style;
 }
 
 body {
+	@include global_body-bg;
 	@include global_General_BodyWithTop;
 }
 
@@ -61,10 +56,6 @@ body {
 
 * {
 	@include global_asterisk;
-}
-
-body {
-	@include global_body-bg;
 }
 
 input,
@@ -110,12 +101,8 @@ video {
 	@include global_home-logo-img;
 }
 
-.top-left-menu #searchInput_RoId {
-	@include global_searchInput_RoId;
-}
-
-#searchInput_RoId::placeholder {
-	@include global_searchInput_RoId-placeholder;
+.top-left-menu .searchInput_RoClass {
+	@include global_searchInput_RoClass;
 }
 
 .top-section .top-right-menu {
@@ -213,17 +200,21 @@ video {
 	}
 	/*Body Height*/
 
-	.top-section .searchInput_RoClass {
+	/*Search Box*/
+	.top-left-menu .searchInput_RoClass {
 		@include global_searchInput_RoClass_Mobile;
 	}
 
-	#searchInput_RoId::placeholder {
+	.top-left-menu .searchInput_RoClass::placeholder {
 		@include global_searchInput-placeholder_Mobile;
 	}
+	/*Search Box*/
 
+	/*Mode Button*/
 	.top-right-menu .toggle-mode-class {
 		@include global_toggle-mode-class_Mobile;
 	}
+	/*Mode Button*/
 
 	/*Footer Height*/
 	#footerWrap_RoId {
@@ -244,6 +235,22 @@ video {
 	}
 	/*Body Height*/
 
+	/*Search Box*/
+	.top-left-menu .searchInput_RoClass {
+		@include global_searchInput_RoClass_Tablet;
+	}
+
+	.top-left-menu .searchInput_RoClass::placeholder {
+		@include global_searchInput-placeholder_Tablet;
+	}
+	/*Search Box*/
+
+	/*Mode Button*/
+	.top-right-menu .toggle-mode-class {
+		@include global_toggle-mode-class_Tablet;
+	}
+	/*Mode Button*/
+
 	/*Footer Height*/
 	#footerWrap_RoId {
 		@include global_Tablet_footerHeight;
@@ -263,6 +270,22 @@ video {
 	}
 	/*Body Height*/
 
+	/*Search Box*/
+	.top-left-menu .searchInput_RoClass {
+		@include global_searchInput_RoClass_Laptop;
+	}
+
+	.top-left-menu .searchInput_RoClass::placeholder {
+		@include global_searchInput-placeholder_Laptop;
+	}
+	/*Search Box*/
+
+	/*Mode Button*/
+	.top-right-menu .toggle-mode-class {
+		@include global_toggle-mode-class_Laptop;
+	}
+	/*Mode Button*/
+
 	/*Footer Height*/
 	#footerWrap_RoId {
 		@include global_Laptop_footerHeight;
@@ -281,6 +304,22 @@ video {
 		@include global_Desktop_BodyWithTop;
 	}
 	/*Body Height*/
+
+	/*Search Box*/
+	.top-left-menu .searchInput_RoClass {
+		@include global_searchInput_RoClass_Desktop;
+	}
+
+	.top-left-menu .searchInput_RoClass::placeholder {
+		@include global_searchInput-placeholder_Desktop;
+	}
+	/*Search Box*/
+
+	/*Mode Button*/
+	.top-right-menu .toggle-mode-class {
+		@include global_toggle-mode-class_Desktop;
+	}
+	/*Mode Button*/
 
 	/*Footer Height*/
 	#footerWrap_RoId {

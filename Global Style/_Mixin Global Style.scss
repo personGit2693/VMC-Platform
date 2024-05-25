@@ -1,27 +1,5 @@
 /************************************************************************************************************/
 /*General*/
-@mixin global_html-body_Style {
-	height: 100%;
-	overflow: auto;
-}
-
-@mixin global_General_BodyWithTop {
-	margin-top: 55px;
-}
-
-/*Search Box*/
-@mixin global_top-searchbox {
-	--inputSearchWidth: 250px;
-	--inputSearchTopPadding: 0px;
-	--inputSearchRightPadding: 0px;
-	--inputSearchBottomPadding: 2px;
-	--inputSearchLeftPadding: 30px;
-	--inputSearchBorderColor: transparent;
-	--inputSearchBorderRadius: 30px;
-	--inputSearchIconHori: 12px;
-	--inputSearchIconSize: 16px;
-}
-/*Search Box*/
 
 /*Side Apps Main Menu*/
 @mixin global_side-app-main {
@@ -70,6 +48,23 @@
 	--hoverSubNavMenuFColor: #FFFFFF;
 }
 /*Dark Mode (Default Style)*/
+
+/*HTML and Body*/
+@mixin global_html-body_Style {
+	height: 100%;
+	overflow: auto;
+}
+/*HTML and Body*/
+
+/*Body*/
+@mixin global_body-bg {
+	background-color: var(--bg-color-1);
+}
+
+@mixin global_General_BodyWithTop {
+	margin-top: 55px;
+}
+/*Body*/
 
 /*Light Mode*/
 @mixin global_light-mode {
@@ -134,12 +129,6 @@
 }
 /*Asterisk*/
 
-/*Body Background*/
-@mixin global_body-bg {
-	background-color: var(--bg-color-1);
-}
-/*Body Background*/
-
 /*Input and Textarea Style*/
 @mixin global_input-textarea-style {
 	border: none;
@@ -148,13 +137,13 @@
 	font-size: 13px;
 	display: block;
 }
+/*Input and Textarea Style*/
 
 @mixin global_img-video {
 	width: 100%;
 	height: 100%;
 	display: block;
 }
-/*Input and Textarea Style*/
 
 /*Top Section*/
 @mixin global_top-section {
@@ -198,15 +187,14 @@
 	height: 100%;
 }
 
-@mixin global_searchInput_RoId {
+@mixin global_searchInput_RoClass {
+	--inputSearchIconHori: 12px;
+	padding-left: 30px;
+	background-size: 16px;
 	background-color: var(--bg-color-3);
 	border: none;
 	height: 40px;
 	font-size: 14px;
-}
-
-@mixin global_searchInput_RoId-placeholder {
-	color: var(--text-color-6);
 }
 
 @mixin global_top-right-menu {
@@ -215,7 +203,6 @@
 }
 
 @mixin global_toggle-mode-class {
-	width: 100px;
 	font-weight: bold;
 	border: none;
 	border-radius: 10px;
@@ -251,11 +238,10 @@
 }
 /*Top Section*/
 
-/*Mid Section Height*/
+/*Mid Section*/
 @mixin global_rolayout_RoId {
 	position: relative;
 }
-/*Mid Section Height*/
 
 /*Left Content*/
 @mixin global_sidemecha_RoId {
@@ -303,7 +289,7 @@
 }
 /*Left Content*/
 
-/*Burger*/
+/*Mid Content*/
 @mixin global_burger_RoId {
 	width: 40px;
 	height: 40px;
@@ -311,7 +297,8 @@
 	border-radius: 10px;
 	background-color: var(--bg-color-8);
 }
-/*Burger*/
+/*Mid Content*/
+/*Mid Section*/
 
 /*Footer*/
 @mixin global_footerWrap_RoId {
@@ -370,6 +357,64 @@
 
 
 /************************************************************************************************************/
+/*Search Box*/
+@mixin global_searchInput_RoClass_Mobile {
+	width: 40px;
+	border-radius: 50%;
+}
+@mixin global_searchInput_RoClass_Tablet {
+	width: 250px;
+	border-radius: 30px;
+}
+@mixin global_searchInput_RoClass_Laptop {
+	width: 250px;
+	border-radius: 30px;
+}
+@mixin global_searchInput_RoClass_Desktop {
+	width: 250px;
+	border-radius: 30px;
+}
+
+
+@mixin global_searchInput-placeholder_Mobile {
+	color: transparent;
+}
+@mixin global_searchInput-placeholder_Tablet {
+	color: var(--text-color-6);
+}
+@mixin global_searchInput-placeholder_Laptop {
+	color: var(--text-color-6);
+}
+@mixin global_searchInput-placeholder_Desktop {
+	color: var(--text-color-6);
+}
+/*Search Box*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Mode Button*/
+@mixin global_toggle-mode-class_Mobile {
+	width: 50px;
+	font-size: 12px;
+}
+@mixin global_toggle-mode-class_Tablet {
+	width: 100px;
+	font-size: 14px;
+}
+@mixin global_toggle-mode-class_Laptop {
+	width: 100px;
+	font-size: 14px;
+}
+@mixin global_toggle-mode-class_Desktop {
+	width: 100px;
+	font-size: 14px;
+}
+/*Mode Button*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Footer Height*/
 @mixin global_Mobile_footerHeight {
 	height: 50px;
@@ -384,30 +429,4 @@
 	height: 25px;
 }
 /*Footer Height*/
-/************************************************************************************************************/
-
-
-/************************************************************************************************************/
-/*Footer MobTab*/
-@mixin global_footerWrap_RoId_MobTab {
-	// height: 50px;
-}
-/*Footer MobTab*/
-
-/*Mobile Top Section*/
-@mixin global_searchInput_RoClass_Mobile {
-	--inputSearchWidth: 40px;
-	border-radius: 50%;
-}
-
-@mixin global_searchInput-placeholder_Mobile {
-	color: transparent;
-}	
-
-@mixin global_toggle-mode-class_Mobile {
-	width: 50px;
-	font-size: 12px;
-}
-/*Mobile Top Section*/
-
 /************************************************************************************************************/

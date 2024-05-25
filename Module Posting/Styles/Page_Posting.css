@@ -3217,14 +3217,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import Mixins*/
 /************************************************************************************************************/
 /*General*/
-/*Search Box*/
-/*Search Box*/
 /*Side Apps Main Menu*/
 /*Side Apps Main Menu*/
 /*Side Apps Sub Menu*/
 /*Side Apps Sub Menu*/
 /*Dark Mode (Default Style)*/
 /*Dark Mode (Default Style)*/
+/*HTML and Body*/
+/*HTML and Body*/
+/*Body*/
+/*Body*/
 /*Light Mode*/
 /*Light Mode*/
 /*Binance Font*/
@@ -3235,18 +3237,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Webkit*/
 /*Asterisk*/
 /*Asterisk*/
-/*Body Background*/
-/*Body Background*/
 /*Input and Textarea Style*/
 /*Input and Textarea Style*/
 /*Top Section*/
 /*Top Section*/
-/*Mid Section Height*/
-/*Mid Section Height*/
+/*Mid Section*/
 /*Left Content*/
 /*Left Content*/
-/*Burger*/
-/*Burger*/
+/*Mid Content*/
+/*Mid Content*/
+/*Mid Section*/
 /*Footer*/
 /*Footer*/
 /*General*/
@@ -3260,14 +3260,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Body*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Footer Height*/
-/*Footer Height*/
+/*Search Box*/
+/*Search Box*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Footer MobTab*/
-/*Footer MobTab*/
-/*Mobile Top Section*/
-/*Mobile Top Section*/
+/*Mode Button*/
+/*Mode Button*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Footer Height*/
+/*Footer Height*/
 /************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3318,19 +3320,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /************************************************************************************************************/
 /************************************************************************************************************/
 /*Global Codes*/
-/*Root*/
+/*General*/
 :root {
-  /*Search Box*/
-  --inputSearchWidth: 250px;
-  --inputSearchTopPadding: 0px;
-  --inputSearchRightPadding: 0px;
-  --inputSearchBottomPadding: 2px;
-  --inputSearchLeftPadding: 30px;
-  --inputSearchBorderColor: transparent;
-  --inputSearchBorderRadius: 30px;
-  --inputSearchIconHori: 12px;
-  --inputSearchIconSize: 16px;
-  /*Search Box*/
   /*Side Apps Main Menu*/
   --generalNavMenuPadding: 10px;
   --mainNavMenuIconSize: 30px;
@@ -3366,13 +3357,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --hoverSubNavMenuFColor: #FFFFFF;
   /*Dark Mode (Default Style)*/ }
 
-/*Root*/
-/*General*/
 html, body {
   height: 100%;
   overflow: auto; }
 
 body {
+  background-color: var(--bg-color-1);
   margin-top: 55px; }
 
 .light-mode {
@@ -3412,9 +3402,6 @@ body {
 * {
   font-family: 'Binance PLEX' !important;
   box-sizing: border-box; }
-
-body {
-  background-color: var(--bg-color-1); }
 
 input,
 input:focus,
@@ -3474,21 +3461,20 @@ video {
   width: 100%;
   height: 100%; }
 
-.top-left-menu #searchInput_RoId {
+.top-left-menu .searchInput_RoClass {
+  --inputSearchIconHori: 12px;
+  padding-left: 30px;
+  background-size: 16px;
   background-color: var(--bg-color-3);
   border: none;
   height: 40px;
   font-size: 14px; }
-
-#searchInput_RoId::placeholder {
-  color: var(--text-color-6); }
 
 .top-section .top-right-menu {
   display: flex;
   gap: 5px; }
 
 .top-right-menu .toggle-mode-class {
-  width: 100px;
   font-weight: bold;
   border: none;
   border-radius: 10px;
@@ -3596,17 +3582,21 @@ video {
     height: calc(100% - 105px); }
 
   /*Body Height*/
-  .top-section .searchInput_RoClass {
-    --inputSearchWidth: 40px;
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 40px;
     border-radius: 50%; }
 
-  #searchInput_RoId::placeholder {
+  .top-left-menu .searchInput_RoClass::placeholder {
     color: transparent; }
 
+  /*Search Box*/
+  /*Mode Button*/
   .top-right-menu .toggle-mode-class {
     width: 50px;
     font-size: 12px; }
 
+  /*Mode Button*/
   /*Footer Height*/
   #footerWrap_RoId {
     height: 50px; }
@@ -3622,6 +3612,21 @@ video {
     height: calc(100% - 105px); }
 
   /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 250px;
+    border-radius: 30px; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: var(--text-color-6); }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 100px;
+    font-size: 14px; }
+
+  /*Mode Button*/
   /*Footer Height*/
   #footerWrap_RoId {
     height: 50px; }
@@ -3637,6 +3642,21 @@ video {
     height: calc(100% - 80px); }
 
   /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 250px;
+    border-radius: 30px; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: var(--text-color-6); }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 100px;
+    font-size: 14px; }
+
+  /*Mode Button*/
   /*Footer Height*/
   #footerWrap_RoId {
     height: 25px; }
@@ -3652,6 +3672,21 @@ video {
     height: calc(100% - 80px); }
 
   /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 250px;
+    border-radius: 30px; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: var(--text-color-6); }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 100px;
+    font-size: 14px; }
+
+  /*Mode Button*/
   /*Footer Height*/
   #footerWrap_RoId {
     height: 25px; }
