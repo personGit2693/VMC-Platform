@@ -10,12 +10,12 @@
 /*Side Apps Sub Menu*/
 /*Dark Mode (Default Style)*/
 /*Dark Mode (Default Style)*/
+/*Light Mode*/
+/*Light Mode*/
 /*HTML and Body*/
 /*HTML and Body*/
 /*Body*/
 /*Body*/
-/*Light Mode*/
-/*Light Mode*/
 /*Binance Font*/
 /*Binance Font*/
 /*Comfortaa Font*/
@@ -36,6 +36,8 @@
 /*Mid Section*/
 /*Footer*/
 /*Footer*/
+/*Chat Section*/
+/*Chat Section*/
 /*General*/
 /************************************************************************************************************/
 /************************************************************************************************************/
@@ -58,101 +60,4182 @@
 /*Footer Height*/
 /*Footer Height*/
 /************************************************************************************************************/
+/************************************************************************************************************/
+/*Chat Toggle Button*/
+/*Chat Toggle Button*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Chat Container*/
+/*Chat Container*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Chat Box Container*/
+/*Chat Box Container*/
+/************************************************************************************************************/
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+/*From another mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*Image itself Style Rogrid Mixin*/
+/*Image itself Style Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Body Style Rogrid Mixin*/
+/*_Body itself*/
+/*_Body itself*/
+/*_Body scrollbar*/
+/*_Body scrollbar*/
+/*_Body track*/
+/*_Body track*/
+/*_Body handle*/
+/*_Body handle*/
+/*_Body handle hover*/
+/*_Body handle hover*/
+/*Body Style Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Inputs Wrapper, Placeholder & Inputs itself Rogrid Mixin*/
+/*_Custom Inputs Wrapper*/
+/*_Custom Inputs Wrapper*/
+/*_Inputs themselves*/
+/*_Inputs themselves*/
+/*_Default Placehoder properties*/
+/*_Default Placehoder properties*/
+/*_Default Placehoder(For Date & Drowpdown) properties*/
+/*_Default Placehoder(For Date & Dropdown) properties*/
+/*_Animated Placeholder*/
+/*_Animated Placeholder*/
+/*Custom Inputs Wrapper, Placeholder & Inputs itself Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Current Date Rogrid Mixin*/
+/*Current Date Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom checkbox Rogrid Mixin*/
+/*Custom checkbox Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Modal and Blurrer Rogrid Mixin*/
+/*_Blurrer*/
+/*_Blurrer*/
+/*_Modal*/
+/*_Modal*/
+/*Custom Modal and Blurrer Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Spinner Loading RoGrid Mixin*/
+/*Spinner Loading RoGrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Search Input with Style RoGrid Mixin*/
+/*Search Input with Style RoGrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Notification Box Rogrid Mixin*/
+/*Notification Box Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Customized Normal Button Rogrid Mixin*/
+/*Customized Normal Button Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Icon Only Button Rogrid Mixin*/
+/*For Icon Only Button Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Gridbox Rogrid Mixin*/
+/*_For flexbox with hori space between and center for mobile/tablet*/
+/*_For flexbox with hori space between and center for mobile/tablet*/
+/*_For flexbox wrap item with hori flex start and center for mobile/table*/
+/*_For flexbox wrap item with hori flex start and center for mobile/table*/
+/*_For flexbox with hori center and center for mobile/tablet*/
+/*_For flexbox with hori center and center for mobile/tablet*/
+/*_For flexbox with hori flex start for mobile to desktop and flow column when mobile and tablet*/
+/*_For flexbox with hori flex start for mobile to desktop and flow column when mobile and tablet*/
+/*For Gridbox Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Custom Radio Button Rogrid Mixin*/
+/*For Custom Radio Button Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Calendar Lite Rogrid Mixin*/
+/*For Calendar Lite Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*For Custom Dropdown Button List Rogrid Mixin*/
+/*For Custom Dropdown Button List Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Layout one made Rogrid Mixin*/
+/*_Flex Items wrapper*/
+/*_Flex Items wrapper*/
+/*_Left Side Wrapper*/
+/*_Left Side Wrapper*/
+/*_Main Side Wrapper*/
+/*_Main Side Wrapper*/
+/*_Left side Content*/
+/*_Left side Content*/
+/*_Navigation Menu*/
+/*_Navigation Menu*/
+/*_Navigation Menus From Collapse or Sub Menu*/
+/*_Navigation Menus From Collapse or Sub Menu*/
+/*_Burger*/
+/*_Burger*/
+/*_Navigation Menu Icon*/
+/*_Navigation Menu Icon*/
+/*_Main side content*/
+/*_Main side content*/
+/*_Main side project title*/
+/*_Main side project title*/
+/*_Project Title and Login User Details*/
+/*_Project Title and Login User Details*/
+/*Layout one Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Footer Rogrid Mixin*/
+/*Footer Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*From another mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Body Style RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto; }
+
+/* width */
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; }
+
+/* Track */
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px; }
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #57DBFF;
+  border-radius: 10px; }
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #91DBFF; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Body Style RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Inputs RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+div.cusInputs_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  width: auto;
+  padding: 15px 5px 5px 5px;
+  border-radius: 7px;
+  border-color: var(--customInputColor);
+  /*To be changed animation*/
+  border-width: 1px;
+  border-style: solid;
+  z-index: 0; }
+
+div.cusInputs_RoClass > input {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: calibri;
+  font-weight: normal;
+  font-style: normal;
+  font-size: var(--customInputFSize);
+  background: transparent;
+  color: var(--customInputColor); }
+
+div.cusInputs_RoClass > select {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: calibri;
+  font-weight: normal;
+  font-style: normal;
+  font-size: var(--customInputFSize);
+  background: transparent;
+  color: var(--customInputColor); }
+
+div.cusInputs_RoClass > .placeholdme_RoClass {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
+  top: 50%;
+  /*To be changed animation*/
+  transform: translateY(-50%);
+  /*To be changed animation*/
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--customInputFSize);
+  /*To be changed animation*/
+  color: var(--customInputColor);
+  /*To be changed animation*/
+  z-index: -1;
+  transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
+  text-overflow: ellipsis; }
+
+div.cusInputs_RoClass > .upPlaceholdme_RoClass {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
+  top: 33%;
+  /*To be changed animation*/
+  /*To be changed*/
+  transform: translateY(-50%);
+  /*To be changed animation*/
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--customInputFSize);
+  /*To be changed animation*/
+  color: var(--customInputColor);
+  /*To be changed animation*/
+  z-index: -1;
+  transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
+  text-overflow: ellipsis; }
+
+div.cusInputs_RoClass > input:focus + .placeholdme_RoClass,
+div.cusInputs_RoClass > input:not(:focus):valid + .placeholdme_RoClass {
+  top: 0px;
+  /*changed animation*/
+  transform: none;
+  /*changed animation*/
+  font-size: var(--customInputAnimFSize);
+  /*changed animation*/ }
+
+div.cusInputs_RoClass > input:focus + .upPlaceholdme_RoClass,
+div.cusInputs_RoClass > input:not(:focus):valid + .upPlaceholdme_RoClass {
+  top: 0px;
+  /*changed animation*/
+  transform: none;
+  /*changed animation*/
+  font-size: var(--customInputAnimFSize);
+  /*changed animation*/ }
+
+div.cusInputs_RoClass > select:focus + .placeholdme_RoClass,
+div.cusInputs_RoClass > select:not(:focus):valid + .placeholdme_RoClass {
+  top: 0px;
+  /*changed animation*/
+  transform: none;
+  /*changed animation*/
+  font-size: var(--customInputAnimFSize);
+  /*changed animation*/ }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Inputs RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Current Date RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.currentDate_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  word-break: keep-all;
+  font-style: var(--currDateFStyle);
+  font-weight: var(--currDateFWeight);
+  font-size: var(--currDateFsize);
+  font-family: calibri;
+  color: var(--currDateFColor); }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Current Date RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Checkbox RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.cusCheckBoxPaper_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  width: auto; }
+
+.cusCheckBoxPaper_RoClass > label {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  width: auto;
+  white-space: normal;
+  cursor: pointer;
+  font-family: calibri;
+  font-style: var(--cusCheckboxFStyle);
+  font-weight: var(--cusCheckboxFWeight);
+  font-size: var(--custCheckboxFSize);
+  color: var(--cusCheckboxColor); }
+
+.cusCheckBoxPaper_RoClass > input {
+  position: absolute;
+  visibility: hidden; }
+
+.cusCheckBoxPaper_RoClass > label > div.boxme_RoClass {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: visible;
+  width: var(--cusCheckboxWidthHeight);
+  height: var(--cusCheckboxWidthHeight);
+  margin-left: 4px;
+  border-width: var(--cusCheckboxBorderWidth);
+  border-style: solid;
+  border-color: var(--cusCheckboxBorderColor);
+  vertical-align: bottom; }
+
+.cusCheckBoxPaper_RoClass > label > div.boxme_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  visibility: hidden; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Checkbox RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Modal RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General media*/
+/*Blurrer*/
+.thisIsJapan_RoClass {
+  position: fixed;
+  display: none;
+  box-sizing: border-box;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.5;
+  z-index: var(--putOnTop); }
+
+/*Blurrer*/
+/*Modal Container*/
+.modalmeCon_RoClass {
+  position: fixed;
+  display: none;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  background-color: rgba(237, 231, 225, 0.5);
+  z-index: var(--topOnBlurrer);
+  flex-flow: column nowrap;
+  align-items: center;
+  transition: width 0.5s ease-out 0s, height 0.5s ease-out 1s; }
+
+/*Modal Container*/
+/*Custom Modal itself*/
+.modalme_RoClass {
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: var(--modalWidth);
+  height: var(--modalHeight);
+  top: var(--modalTop);
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--modalBorderColor);
+  background-color: var(--modalBodyBgColor);
+  transition: top 0.5s ease-out 0s;
+  flex-shrink: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease-out 1.5s; }
+
+.modalme_RoClass > .modalHeader_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  width: auto;
+  top: 0px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: var(--modalHeaderBgColor); }
+
+.modalme_RoClass > .modalBody_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: auto;
+  width: auto;
+  padding: 8px; }
+
+/* width */
+.modalBody_RoClass::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; }
+
+/* Track */
+.modalBody_RoClass::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px; }
+
+/* Handle */
+.modalBody_RoClass::-webkit-scrollbar-thumb {
+  background: #57DBFF;
+  border-radius: 10px; }
+
+/* Handle on hover */
+.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
+  background: #91DBFF; }
+
+.modalme_RoClass > .modalHeader_RoClass > .modalHeadTxt_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+  width: 100%;
+  flex-shrink: 1;
+  flex-grow: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--modalHeaderFSize);
+  font-family: calibri;
+  color: var(--modalHeaderFColor);
+  text-align: center;
+  align-self: center; }
+
+.modalme_RoClass > .modalHeader_RoClass > .modalHeadClose_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: nowrap;
+  width: var(--modalCloseIconSize);
+  height: var(--modalCloseIconSize);
+  align-self: flex-start;
+  flex-shrink: 0;
+  flex-grow: 0;
+  cursor: pointer; }
+
+.modalme_RoClass > .modalHeader_RoClass > .modalHeadClose_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*Custom Modal itself*/
+/*General media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Modal RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Spinner Loading RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Medial*/
+.spinnerLoad_RoClass {
+  position: fixed;
+  display: none;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--topSpinBlurrer);
+  width: var(--spinnerWidthHeight);
+  height: var(--spinnerWidthHeight); }
+
+.spinnerLoad_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*General Medial*/
+/***********************************************************************************************************************************************************************************************************/
+/*Spinner Loading RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Search Input with Style RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+input.searchInput_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: var(--inputSearchWidth);
+  padding-top: var(--inputSearchTopPadding);
+  padding-right: var(--inputSearchRightPadding);
+  padding-bottom: var(--inputSearchBottomPadding);
+  padding-left: var(--inputSearchLeftPadding);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--inputSearchBorderColor);
+  border-radius: var(--inputSearchBorderRadius);
+  outline: none;
+  background: transparent var(--inputSearchIcon) var(--inputSearchIconHori) center no-repeat;
+  background-size: var(--inputSearchIconSize);
+  background-origin: padding-box;
+  font-style: normal;
+  font-weight: normal;
+  font-family: calibri;
+  font-size: var(--inputSearchFSize);
+  color: var(--inputSearchFColor); }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Search Input with Style RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Notification Box RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+/*_Success Notification Box*/
+.notifyFlex_Suc_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  width: auto;
+  padding: 7px;
+  margin: 4px;
+  background-color: #DFF0D8; }
+
+.notifyFlex_Suc_RoClass > .notifyMessItem_Suc_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  word-break: keep-all;
+  flex-shrink: 1;
+  width: 100%;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--notiFSize);
+  color: #3C763D; }
+
+.notifyFlex_Suc_RoClass > .notifyCloseItem_Suc_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-shrink: 0;
+  width: var(--notiCloseIconWidthHeight);
+  height: var(--notiCloseIconWidthHeight);
+  cursor: pointer; }
+
+.notifyFlex_Suc_RoClass > .notifyCloseItem_Suc_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*_Success Notification Box*/
+/*_Failed Notification Box*/
+.notifyFlex_Failed_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  width: auto;
+  padding: 7px;
+  margin: 4px;
+  background-color: #F2DEDE; }
+
+.notifyFlex_Failed_RoClass > .notifyMessItem_Failed_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  word-break: keep-all;
+  flex-shrink: 1;
+  width: 100%;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--notiFSize);
+  color: #A94442; }
+
+.notifyFlex_Failed_RoClass > .notifyCloseItem_Failed_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-shrink: 0;
+  width: var(--notiCloseIconWidthHeight);
+  height: var(--notiCloseIconWidthHeight);
+  cursor: pointer; }
+
+.notifyFlex_Failed_RoClass > .notifyCloseItem_Failed_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*_Failed Notification Box*/
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Notification Box RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Normal Custom Button RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Medial*/
+.normButton_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  word-break: keep-all;
+  width: var(--normBtnWidth);
+  padding: var(--normBtnPadding);
+  border-style: solid;
+  border-width: var(--normBtnBorderWidth);
+  border-color: var(--normBtnBorderColor);
+  border-radius: var(--normBtnRadius);
+  outline: none;
+  font-style: normal;
+  font-weight: var(--normBtnFWeight);
+  font-family: calibri;
+  font-size: var(--normBtnFSize);
+  background-color: var(--normBtnBgColor);
+  color: var(--normBtnFcolor);
+  cursor: pointer; }
+
+.normButton_RoClass:hover {
+  color: var(--normBtnHovActFColor);
+  background-color: var(--normBtnHovActBgColor); }
+
+.normButton_RoClass:active {
+  color: var(--normBtnHovActFColor);
+  background-color: var(--normBtnHovActBgColor); }
+
+/*General Medial*/
+/***********************************************************************************************************************************************************************************************************/
+/*Normal Custom Button RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Icon Button Only RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+button.iconBtn_RoClass {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: var(--iconBtnWidth);
+  height: var(--iconBtnHeight);
+  background-color: var(--iconBtnBgColor);
+  background-image: var(--iconBtnBgIcon);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--iconBtnBgSize);
+  background-origin: padding-box;
+  border-style: solid;
+  border-width: var(--iconBtnBorderWidth);
+  border-color: var(--iconBtnBorderColor);
+  border-radius: var(--iconBtnBorderRadius);
+  outline: none;
+  cursor: pointer;
+  vertical-align: top; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Icon Button Only RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Radio Button RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+/*_Radio Button Circle Type*/
+.radioCircleFlex_RoClass {
+  position: relative;
+  display: flex;
+  overflow: visible;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto; }
+
+.radioCircleFlex_RoClass > label.customRadioCircle_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-style: solid;
+  border-width: var(--cusRadioBorderWidth);
+  border-color: var(--cusRadioBorderColor);
+  width: var(--cusRadioWidthHeight);
+  height: var(--cusRadioWidthHeight);
+  padding: 3px;
+  border-radius: 50%;
+  box-shadow: none;
+  /*box-shadow: 0px 0px 15px #00fafa; in JS*/
+  background-color: var(--cusRadioBgColor);
+  cursor: pointer; }
+
+.radioCircleFlex_RoClass > label.customRadioCircle_RoClass > span.innerCircle_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%; }
+
+.radioCircleFlex_RoClass > input {
+  position: absolute;
+  visibility: hidden;
+  top: 0px; }
+
+.radioCircleFlex_RoClass > .radioCircleTxtLabel_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+  width: 100%;
+  padding: 4px;
+  font-style: normal;
+  font-weight: var(--cusRadioFWeight);
+  font-size: var(--cusRadioFsize);
+  font-family: calibri;
+  color: var(--cusRadioFColor); }
+
+.radioCircleFlex_RoClass > .radioCircleIconLabel_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+  width: var(--radioIconLabelWidthHeight);
+  height: var(--radioIconLabelWidthHeight); }
+
+.radioCircleFlex_RoClass > .radioCircleIconLabel_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*_Radio Button Circle Type*/
+/*_Radio Button Check Type*/
+.radioCheckFlex_RoClass {
+  position: relative;
+  display: flex;
+  overflow: visible;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto; }
+
+.radioCheckFlex_RoClass > label.customRadioCheck_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-style: solid;
+  border-width: var(--cusRadioBorderWidth);
+  border-color: var(--cusRadioBorderColor);
+  width: var(--cusRadioWidthHeight);
+  height: var(--cusRadioWidthHeight);
+  background-color: var(--cusRadioBgColor);
+  cursor: pointer; }
+
+.radioCheckFlex_RoClass > label.customRadioCheck_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  visibility: hidden; }
+
+.radioCheckFlex_RoClass > input {
+  position: absolute;
+  visibility: hidden;
+  top: 0px; }
+
+.radioCheckFlex_RoClass > .radioCheckTxtLabel_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+  width: 100%;
+  padding: 4px;
+  font-style: normal;
+  font-weight: var(--cusRadioFWeight);
+  font-size: var(--cusRadioFsize);
+  font-family: calibri;
+  color: var(--cusRadioFColor); }
+
+.radioCheckFlex_RoClass > .radioCheckIconLabel_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+  width: var(--radioIconLabelWidthHeight);
+  height: var(--radioIconLabelWidthHeight); }
+
+.radioCheckFlex_RoClass > .radioCheckIconLabel_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*_Radio Button Check Type*/
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Radio Button RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Calendar Lite RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.calLite_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  background-color: #ffffff; }
+
+.calLite_RoClass > .calLiteHead_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 1px solid transparent;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px #5DA9DD; }
+
+.calLite_RoClass > .calLiteHead_RoClass > .calLiteMonthHead_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 1px solid transparent;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.calLite_RoClass > .calLiteHead_RoClass > .calLiteYearHead_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 1px solid transparent;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.calLite_RoClass > .calLiteHead_RoClass > .calLiteMonthHead_RoClass > .calLiteMonthText_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--calendarHeadTxtFSize);
+  color: #06a685; }
+
+.calLite_RoClass > .calLiteHead_RoClass > .calLiteYearHead_RoClass > .calLiteYearText_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--calendarHeadTxtFSize);
+  color: #06a685; }
+
+.calLiteButton_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 1px solid transparent;
+  width: var(--calendarHeadBtnWidthHeight);
+  height: var(--calendarHeadBtnWidthHeight);
+  cursor: pointer;
+  flex-shrink: 0; }
+
+.calLiteButton_RoClass > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+.calLite_RoClass > .calLiteDaysTxt_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap;
+  justify-content: space-around; }
+
+.calLite_RoClass > .calLiteDaysTxt_RoClass > div {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  width: 70px;
+  /*To be changed*/
+  padding: 4px;
+  text-align: center;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--calendarDayTxtFSize); }
+
+.calLite_RoClass > .calLiteDaysIndex_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap;
+  justify-content: space-around; }
+
+.calLite_RoClass > .calLiteDaysIndex_RoClass > div {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  width: 70px;
+  /*To be changed*/
+  padding: 4px;
+  text-align: center;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--calendarDayTxtFSize); }
+
+.calLite_RoClass > .calLiteDaysIndex_RoClass > div > div {
+  margin: 5px; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Calendar Lite RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Dropdown Button List*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.cusDroplistBtn_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: var(--droplistBtnWidth);
+  border-width: var(--droplistBtnBorderWidth);
+  border-style: solid;
+  border-color: var(--droplistBtnBorderColor);
+  background-color: var(--droplistBtnBgColor);
+  border-radius: var(--dropListBorderRadius); }
+
+.cusDroplistBtn_RoClass > .masterBtnWrap_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  width: auto;
+  background-color: transparent;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.cusDroplistBtn_RoClass > .masterBtnWrap_RoClass > button {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  cursor: pointer;
+  padding: var(--droplistBtnPadding);
+  color: var(--droplistBtnFColor);
+  font-style: normal;
+  font-weight: bold;
+  font-family: calibri;
+  font-size: var(--dropListBtnFSize); }
+
+.cusDroplistBtn_RoClass > .masterBtnWrap_RoClass > div {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: transparent;
+  width: var(--dropListBtnIconSize);
+  height: var(--dropListBtnIconSize);
+  flex-shrink: 0;
+  cursor: pointer; }
+
+.cusDroplistBtn_RoClass > .masterBtnWrap_RoClass > div > img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+.cusDroplistBtn_RoClass > .droplistWrap_RoClass {
+  position: relative;
+  display: none;
+  overflow: visible;
+  box-sizing: border-box; }
+
+.cusDroplistBtn_RoClass > .droplistWrap_RoClass > .listBtn_RoClass {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  white-space: normal;
+  width: 100%;
+  border-width: var(--listBtnBorderWidth);
+  border-style: solid;
+  border-color: var(--listBtnBorderColor);
+  font-style: normal;
+  font-weight: bold;
+  font-family: calibri;
+  font-size: var(--dropListBtnFSize);
+  color: var(--droplistBtnFColor);
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: var(--droplistBtnPadding); }
+
+.cusDroplistBtn_RoClass > .droplistWrap_RoClass > .listBtn_RoClass:hover {
+  background-color: var(--listBtnBgColorha);
+  color: var(--listBtnFColorha); }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Custom Dropdown Button List*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.chartWrap_RoClass {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-width: var(--chartWrapBorderWidth);
+  border-style: var(--chartWrapBorderStyle);
+  border-color: var(--chartWrapBorderColor);
+  border-radius: var(--chartWrapBorderRadius);
+  width: var(--chartWrapWidth);
+  height: var(--chartWrapHeight); }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.dateRangeWrap_RoClass {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 0px solid transparent;
+  width: auto; }
+
+.dateRange_RoClass {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: var(--dateRangeBorderRadius);
+  border-width: var(--dateRangeBorderWidth);
+  border-style: solid;
+  border-color: var(--dateRangeBorderColor);
+  width: auto;
+  cursor: pointer; }
+
+.dateRangeDetails_RoClass {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: var(--dateRangePadding); }
+
+.dateRangeIcon_RoClass {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  width: var(--dateRangeIconSize);
+  height: var(--dateRangeIconSize);
+  background-color: transparent;
+  background-image: var(--dateRangeIcon);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0; }
+
+.dateRangeText_RoClass {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-family: calibri;
+  font-size: var(--dateRangeFSize);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--dateRangeFColor); }
+
+.dateRangeTooltipArrow_RoClass {
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  border-width: 7px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: var(--dateRangeTooltipColor);
+  border-left-color: transparent;
+  width: 10px; }
+
+.dateRangeCalLite_RoClass {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--dateRangeCalLiteBorderColor); }
+
+/*General Media*/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    flex-flow: column nowrap;
+    /*To be changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    /*changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    /*changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  .dateRangeCalLiteWrap_RoClass {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    /*changed*/
+    width: var(--dateRangeCalLiteWrapWidth);
+    max-height: 0px;
+    top: var(--dateRangeCalLiteWrapTop);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; } }
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.selectDropdownWrap_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  border-width: var(--selectDropdownBorderWidth);
+  border-style: solid;
+  border-color: var(--selectDropdownBorderColor);
+  border-radius: var(--selectDropdownBorderRadius);
+  width: var(--selectDropdownWidth);
+  cursor: pointer; }
+
+.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--selectDropdownBgColor); }
+
+.selectDropdownWrap_RoClass .displayedSelectedIcon_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--optIcon);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownIconSize);
+  height: var(--selectDropdownIconSize);
+  flex-shrink: 0; }
+
+.selectDropdownWrap_RoClass .displayedSelectedText_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--selectDropdownFSize);
+  color: var(--selectDropdownFColor);
+  margin-left: 4px; }
+
+.selectDropdownWrap_RoClass .displayedSelectedResetBtn_RoClass {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--selectDropdownResetBtnIcon);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownResetBtnSize);
+  height: var(--selectDropdownResetBtnSize);
+  flex-shrink: 0; }
+
+.selectDropdownWrap_RoClass .displayedSelectedChevron_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--selectDropdownChevron);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownChevronSize);
+  height: var(--selectDropdownChevronSize);
+  flex-shrink: 0;
+  transform: rotateX(0deg);
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s; }
+
+.selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass {
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  overflow: auto;
+  max-height: 0;
+  width: 100%;
+  background-color: var(--selectDropdownBgColor);
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s; }
+
+.selectDropdownWrap_RoClass .searchOpts_RoClass {
+  position: sticky;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--searchOptsBgColor);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--selectDropdownBorderColor);
+  top: 0;
+  z-index: 1;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--selectDropdownFSize);
+  color: var(--searchOptsFColor);
+  padding: 7px; }
+
+.selectDropdownWrap_RoClass .selectDropdownOpt_RoClass {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--selectDropdownBgColor); }
+
+.selectDropdownWrap_RoClass .optIcon_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-image: var(--optIcon);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  width: var(--selectDropdownIconSize);
+  height: var(--selectDropdownIconSize);
+  flex-shrink: 0; }
+
+.selectDropdownWrap_RoClass .optText_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-family: calibri;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--selectDropdownFSize);
+  color: var(--selectDropdownFColor);
+  margin-left: 4px; }
+
+.selectDropdownWrap_RoClass .selectDropdownOpt_RoClass:hover, .selectDropdownOpt_RoClass:hover .optText_RoClass {
+  background-color: var(--hoverOptBgColor);
+  color: var(--hoverOptFColor); }
+
+.selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar {
+  width: var(--selectDropdownScrollSize);
+  height: var(--selectDropdownScrollSize); }
+
+.selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px; }
+
+.selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-thumb {
+  background-color: var(--optWrapThumbBgColor);
+  border-radius: 10px; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Select Dropdown*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+.boxLoaderWrap_RoClass {
+  position: relative;
+  display: none;
+  /*JS Change to flex*/
+  box-sizing: border-box;
+  overflow: hidden;
+  width: auto;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.boxLoaderWrap_RoClass .boxLoaderIcon_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  width: var(--boxLoaderIconSize);
+  height: var(--boxLoaderIconSize); }
+
+.boxLoaderIcon_RoClass img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Style Here*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Style Here*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Style Here*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Layout one design RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Layout itself*/
+  div.rolayout_RoClass {
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%; }
+
+  /*Left Side Item*/
+  div.rolayout_RoClass > div.sidemecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    direction: rtl;
+    width: 0px;
+    /*180px To be changed (JS)*/
+    height: 100%;
+    flex-shrink: 0;
+    background: var(--naviBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+    background: #4DAF4F;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #4DAF4F; }
+
+  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: ltr;
+    width: auto;
+    height: auto;
+    background: none; }
+
+  /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
+  /*Main Side*/
+  div.rolayout_RoClass > div.mainmecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    background-color: var(--mainBodyBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+    background: #03fce3;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #03fce3; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: auto; }
+
+  /*_Burger*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass {
+    position: relative;
+    display: inline-block;
+    /*To be changed*/
+    box-sizing: border-box;
+    overflow: visible;
+    width: 25px;
+    /*To be changed*/
+    height: 25px;
+    /*To be changed*/
+    cursor: pointer; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass > img.burgerIcon_RoClass {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*_Burger*/
+  /*_Project Title*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .layoutOneHead_RoClass {
+    padding: 8px;
+    white-space: nowrap;
+    background-color: var(--projectTitle_BgColor); }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
+    position: relative;
+    display: block;
+    /*To be changed*/
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: normal;
+    word-break: keep-all;
+    padding-right: 5px;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    vertical-align: top; }
+
+  /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: column wrap;
+    /*To be changed*/
+    align-items: center;
+    justify-content: flex-start;
+    /*To be changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
+  /*Main Side*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Layout itself*/
+  div.rolayout_RoClass {
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%; }
+
+  /*Layout itself*/
+  /*Left Side Item*/
+  div.rolayout_RoClass > div.sidemecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    direction: rtl;
+    width: 0px;
+    /*200px changed (JS)*/
+    height: 100%;
+    flex-shrink: 0;
+    background: var(--naviBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+    background: #4DAF4F;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #4DAF4F; }
+
+  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: ltr;
+    width: auto;
+    height: auto;
+    background: none; }
+
+  /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
+  /*Main Side*/
+  div.rolayout_RoClass > div.mainmecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    background-color: var(--mainBodyBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+    background: #03fce3;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #03fce3; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > div.mainmechaCon_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: auto; }
+
+  /*_Burger*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass {
+    position: relative;
+    display: inline-block;
+    /*To be changed*/
+    box-sizing: border-box;
+    overflow: visible;
+    width: 25px;
+    /*To be changed*/
+    height: 25px;
+    /*To be changed*/
+    cursor: pointer; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass > img.burgerIcon_RoClass {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*_Burger*/
+  /*_Project Title*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .layoutOneHead_RoClass {
+    padding: 8px;
+    white-space: nowrap;
+    background-color: var(--projectTitle_BgColor); }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
+    position: relative;
+    display: inline-block;
+    /*changed*/
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: normal;
+    word-break: keep-all;
+    padding-right: 5px;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    vertical-align: top; }
+
+  /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    align-items: center;
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
+  /*Main Side*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Layout itself*/
+  div.rolayout_RoClass {
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%; }
+
+  /*Layout itself*/
+  /*Left Side Item*/
+  div.rolayout_RoClass > div.sidemecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    direction: rtl;
+    width: 250px;
+    /*250px changed (JS)*/
+    height: 100%;
+    flex-shrink: 0;
+    background: var(--naviBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+    background: #4DAF4F;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #4DAF4F; }
+
+  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: ltr;
+    width: auto;
+    height: auto;
+    background: none; }
+
+  /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
+  /*Main Side*/
+  div.rolayout_RoClass > div.mainmecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    background-color: var(--mainBodyBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+    background: #03fce3;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #03fce3; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > div.mainmechaCon_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: auto; }
+
+  /*_Burger*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass {
+    position: relative;
+    display: none;
+    /*changed*/
+    box-sizing: border-box;
+    overflow: visible;
+    width: 28px;
+    /*changed*/
+    height: 28px;
+    /*changed*/
+    cursor: pointer; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass > img.burgerIcon_RoClass {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*_Burger*/
+  /*_Project Title*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .layoutOneHead_RoClass {
+    padding: 8px;
+    white-space: nowrap;
+    background-color: var(--projectTitle_BgColor); }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
+    position: relative;
+    display: inline-block;
+    /*changed*/
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: normal;
+    word-break: keep-all;
+    padding-right: 5px;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    vertical-align: top; }
+
+  /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    align-items: center;
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
+  /*Main Side*/ }
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Dekstop*/
+@media all and (min-width: 1601px) {
+  /*Layout itself*/
+  div.rolayout_RoClass {
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%; }
+
+  /*Layout itself*/
+  /*Left Side Item*/
+  div.rolayout_RoClass > div.sidemecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    direction: rtl;
+    width: 270px;
+    /*270px changed (JS)*/
+    height: 100%;
+    flex-shrink: 0;
+    background: var(--naviBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb {
+    background: #4DAF4F;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.sidemecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #4DAF4F; }
+
+  div.rolayout_RoClass > div.sidemecha_RoClass > div.sidemechaCon_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: ltr;
+    width: auto;
+    height: auto;
+    background: none; }
+
+  /*Left Side Item*/
+  /*Navigation Menu*/
+  .mainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--mainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--mainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeMainNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverMainNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--mainNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverMainNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .mainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--mainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeMainNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--mainNavMenuIconSize);
+    height: var(--mainNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeMainNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .mainNavMenu_RoClass:hover {
+    background-color: var(--hoverMainNavMenuBgColor);
+    color: var(--hoverMainNavMenuFColor); }
+
+  .mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass {
+    background-image: var(--activeMainNavMenuIcon); }
+
+  .generalNavMenuText_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    white-space: normal;
+    font-family: calibri;
+    width: 100%;
+    margin-left: 7px; }
+
+  .chevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .chevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .activeChevronIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--chevronIconSize);
+    height: var(--chevronIconSize);
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+    -webkit-transition: transform 0.1s; }
+
+  .activeChevronIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*Navigation Menu*/
+  /*Navigation Menus From Collapse or Sub Menu*/
+  .subNavMenuWrap_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--subNavMenuWrapBgColor);
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s; }
+
+  .subNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--subNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--subNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .activeSubNavMenu_RoClass {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: visible;
+    width: auto;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--hoverSubNavMenuBgColor);
+    border-radius: 3px;
+    font-size: var(--subNavMenuFSize);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--hoverSubNavMenuFColor);
+    padding: var(--generalNavMenuPadding);
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+
+  .subNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--subNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .activeSubNavMenuIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    width: var(--subNavMenuIconSize);
+    height: var(--subNavMenuIconSize);
+    flex-shrink: 0;
+    background-color: transparent;
+    background-image: var(--activeSubNavMenuIcon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+  .subNavMenu_RoClass:hover {
+    background-color: var(--hoverSubNavMenuBgColor);
+    color: var(--hoverSubNavMenuFColor); }
+
+  .subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass {
+    background-image: var(--activeSubNavMenuIcon); }
+
+  /*Navigation Menus From Collapse Or Sub Menu*/
+  /*Main Side*/
+  div.rolayout_RoClass > div.mainmecha_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    background-color: var(--mainBodyBgColor); }
+
+  /* width */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar {
+    width: 7px;
+    height: 7px; }
+
+  /* Track */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px; }
+
+  /* Handle */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb {
+    background: #03fce3;
+    border-radius: 10px; }
+
+  /* Handle on hover */
+  div.rolayout_RoClass > div.mainmecha_RoClass::-webkit-scrollbar-thumb:hover {
+    background: #03fce3; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > div.mainmechaCon_RoClass {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal;
+    width: auto; }
+
+  /*_Burger*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass {
+    position: relative;
+    display: none;
+    /*changed*/
+    box-sizing: border-box;
+    overflow: visible;
+    width: 32px;
+    /*changed*/
+    height: 32px;
+    /*changed*/
+    cursor: pointer; }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > div.burger_RoClass > img.burgerIcon_RoClass {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  /*_Burger*/
+  /*_Project Title*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .layoutOneHead_RoClass {
+    padding: 8px;
+    white-space: nowrap;
+    background-color: var(--projectTitle_BgColor); }
+
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
+    position: relative;
+    display: inline-block;
+    /*changed*/
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: normal;
+    word-break: keep-all;
+    padding-right: 5px;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    vertical-align: top; }
+
+  /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    align-items: center;
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
+  /*Main Side*/ }
+/*Dekstop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Layout one design RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Footer RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Medial*/
+hr.linethis_RoClass {
+  visibility: hidden; }
+
+div.footerWrap_RoClass {
+  position: fixed;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+  bottom: 0px;
+  left: 0px;
+  background: var(--footerBgColor);
+  width: 100%;
+  text-align: center; }
+
+div.footerWrap_RoClass > span.footerTxt_RoClass {
+  font-style: normal;
+  font-weight: normal;
+  font-family: calibri;
+  font-size: var(--footerFSize);
+  color: var(--footerFColor); }
+
+/*General Medial*/
+/***********************************************************************************************************************************************************************************************************/
+/*Footer RoStrap Mixin*/
+/***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /************************************************************************************************************/
 /*General*/
+/*Mid Section*/
+/*Mid Content*/
+/*Mid Content*/
+/*Mid Section*/
 /*General*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Other Media Queries*/
-/*Other Media Queries*/
+/*Post Status*/
+/*Post Status*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Action Buttons*/
+/*Action Buttons*/
 /************************************************************************************************************/
 /*Import Mixins*/
 /************************************************************************************************************/
+/************************************************************************************************************/
+/*Global Codes*/
+/*General*/
+:root {
+  /*Side Apps Main Menu*/
+  --generalNavMenuPadding: 10px;
+  --mainNavMenuIconSize: 30px;
+  --mainNavMenuFSize: 16px;
+  --mainNavMenuBgColor: transparent;
+  /*Side Apps Main Menu*/
+  /*Side Apps Sub Menu*/
+  --subNavMenuIconSize: 30px;
+  --subNavMenuWrapBgColor: transparent;
+  --subNavMenuBgColor: transparent;
+  --subNavMenuFSize: 16px;
+  --chevronIconSize: 16px;
+  /*Side Apps Sub Menu*/
+  /*Dark Mode (Default Style)*/
+  --bg-color-1: #18191A;
+  --bg-color-2: #242526;
+  --bg-color-3: #3A3B3C;
+  --bg-color-4: #242526;
+  --bg-color-5: #666667;
+  --bg-color-6: #FFFFFF;
+  --bg-color-7: #3A3B3C;
+  --bg-color-8: #3A3B3C;
+  --bg-color-9: #3A3B3C;
+  --bg-color-10: #303031;
+  --bg-color-11: #5D5E61;
+  --bg-color-12: #161617;
+  --text-color-1: #FFFFFF;
+  --text-color-2: #000000;
+  --text-color-3: #CDD1D5;
+  --text-color-4: #ADB1B3;
+  --text-color-5: #E3E5E9;
+  --text-color-6: #BCBFC4;
+  --border-color-1: #3D3E3F;
+  --border-color-2: #121413;
+  --border-color-3: #18191A;
+  --border-color-4: #444749;
+  --border-color-5: #353637;
+  --border-color-6: #242526;
+  --inputSearchFColor: #FFFFFF;
+  --mainNavMenuFColor: #FFFFFF;
+  --hoverMainNavMenuBgColor: #303031;
+  --hoverMainNavMenuFColor: #FFFFFF;
+  --subNavMenuFColor: #FFFFFF;
+  --hoverSubNavMenuBgColor: #303031;
+  --hoverSubNavMenuFColor: #FFFFFF;
+  /*Dark Mode (Default Style)*/ }
+
+.light-mode {
+  --bg-color-1: #F0F2F5;
+  --bg-color-2: #FFFFFF;
+  --bg-color-3: #F0F2F5;
+  --bg-color-4: #FFFFFF;
+  --bg-color-5: #BCC0C4;
+  --bg-color-6: #3A3B3C;
+  --bg-color-7: #39AB5B;
+  --bg-color-8: #FCC64F;
+  --bg-color-9: #7ABCF4;
+  --bg-color-10: #E4E6E8;
+  --bg-color-11: #FFFFFF;
+  --bg-color-12: #999999;
+  --text-color-1: #000000;
+  --text-color-2: #FFFFFF;
+  --text-color-3: #5F6266;
+  --text-color-4: #808080;
+  --text-color-5: #000000;
+  --text-color-6: #000000;
+  --border-color-1: #DCDEE1;
+  --border-color-2: #E2E4E7;
+  --border-color-3: #F0F2F5;
+  --border-color-4: #CED0D4;
+  --border-color-5: #E4E4E4;
+  --border-color-6: #FFFFFF;
+  --inputSearchFColor: #000000;
+  --mainNavMenuFColor: #000000;
+  --hoverMainNavMenuBgColor: #E4E6E8;
+  --hoverMainNavMenuFColor: #000000;
+  --subNavMenuFColor: #000000;
+  --hoverSubNavMenuBgColor: #E4E6E8;
+  --hoverSubNavMenuFColor: #000000; }
+
+html, body {
+  height: 100%;
+  overflow: auto; }
+
+body {
+  background-color: var(--bg-color-1);
+  margin-top: 55px; }
+
 @font-face {
   font-family: 'Binance PLEX';
   src: url("../../Global Fonts/Binance-PLEX.ttf"); }
-/*General Start*/
-html, body {
-  height: 100%;
-  margin: 0; }
+::-webkit-scrollbar {
+  width: 7px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color-5) !important;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-track {
+  display: none; }
 
 *, *::before, *::after {
-  box-sizing: border-box;
-  font-family: 'Binance PLEX'; }
+  font-family: 'Binance PLEX' !important;
+  box-sizing: border-box; }
 
-img {
+input,
+input:focus,
+textarea,
+textarea:focus {
+  border: none;
+  outline: none;
+  color: var(--text-color-1);
+  font-size: 13px;
+  display: block; }
+
+img,
+video {
   width: 100%;
   height: 100%;
   display: block; }
 
-body::-webkit-scrollbar {
-  width: 7px; }
+/*Top Section*/
+.top-section {
+  height: 55px;
+  background-color: var(--bg-color-2);
+  border-bottom: 1px solid var(--border-color-1);
+  padding: 5px 15px;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
 
-body::-webkit-scrollbar-thumb {
-  background-color: #BCC0C4;
-  border-radius: 10px; }
+.top-section .top-left-menu {
+  display: flex;
+  gap: 5px; }
 
-.posts-container {
-  font-size: 14px; }
+.top-left-menu .home-logo {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--bg-color-7); }
 
-.posts-container .post-status-summary {
-  margin: 8px 8px 0px 8px;
+.top-left-menu .home-logo:hover,
+.top-right-menu .toggle-mode-class:hover,
+.topMenus:hover,
+.user-profile img:hover,
+.chat-toggle-button:hover,
+.chat-input-container .chat-send-button:hover,
+.chat-box-container .buzz-chat-button:hover,
+.chat-box-container .close-chat-button:hover {
+  opacity: .7; }
+
+.top-left-menu .home-logo:active,
+.top-right-menu .toggle-mode-class:active,
+.topMenus:active,
+.user-profile img:active,
+.chat-toggle-button:active,
+.chat-input-container .chat-send-button:active,
+.chat-box-container .buzz-chat-button:active,
+.chat-box-container .close-chat-button:active,
+.contact-pic-container-small:active {
+  opacity: .5; }
+
+.top-left-menu .home-logo img {
+  width: 100%;
+  height: 100%; }
+
+.top-left-menu .searchInput_RoClass {
+  --inputSearchIconHori: 12px;
+  padding-left: 30px;
+  background-size: 16px;
+  font-size: 14px;
+  background-color: var(--bg-color-3);
+  border: none;
+  height: 40px; }
+
+.top-section .top-right-menu {
+  display: flex;
+  gap: 5px; }
+
+.top-right-menu .toggle-mode-class {
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--bg-color-6);
+  color: var(--text-color-2);
+  cursor: pointer; }
+
+.topMenus {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--bg-color-8);
+  cursor: pointer; }
+
+.gear-icon {
+  background-color: var(--bg-color-7); }
+
+.top-right-menu .user-profile {
+  margin-left: 5px; }
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color-2);
+  object-fit: cover;
+  cursor: pointer; }
+
+/*Top Section*/
+/*Mid Section*/
+#rolayout_RoId {
+  position: relative; }
+
+/*Left Content*/
+.rolayout_RoClass #sidemecha_RoId {
+  padding-block: 8px;
+  direction: ltr;
+  background-color: var(--bg-color-1);
+  z-index: 1;
+  overflow-y: scroll; }
+
+#sidemecha_RoId::-webkit-scrollbar-thumb,
+.chat-container::-webkit-scrollbar-thumb {
+  visibility: hidden; }
+
+#sidemecha_RoId:hover::-webkit-scrollbar-thumb,
+.chat-container:hover::-webkit-scrollbar-thumb {
+  visibility: visible; }
+
+.sidemechaCon_RoClass .company-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; }
+
+.sidemechaCon_RoClass .company-logo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: contain; }
+
+.sidemechaCon_RoClass .mainNavMenu_RoClass,
+.sidemechaCon_RoClass .subNavMenu_RoClass {
+  transition: all 0s; }
+
+.mainNavMenu_RoClass .generalNavMenuText_RoClass {
+  font-weight: bold; }
+
+.mainNavMenu_RoClass .chevronIconWrap_RoClass {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%; }
+
+/*Left Content*/
+/*Mid Content*/
+.mainmecha_RoClass #burger_RoId {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--bg-color-8); }
+
+/*Mid Content*/
+/*Mid Section*/
+/*Footer*/
+#footerWrap_RoId {
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --footerBgColor: #FCC64F; }
+
+.footerWrap_RoClass #footerTxt_RoId {
+  --footerFSize: 13px;
+  font-weight: bold;
+  --footerFColor: #535F80; }
+
+/*Footer*/
+/*Chat Section*/
+.chat-toggle-button {
+  position: fixed;
+  bottom: 38px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #39AB5B;
+  border: 2px solid #FCC64F;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.chat-toggle-button img {
+  width: 20px;
+  height: 20px; }
+
+.chat-container {
+  position: fixed;
+  bottom: 25px;
+  right: 0px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background-color: var(--bg-color-1);
+  padding: 0px 10px 10px 10px;
+  overflow: auto;
+  z-index: 1; }
+
+.chat-container .contacts {
+  font-weight: bold;
+  padding-block: 10px;
+  color: var(--text-color-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.contacts #search-contact-id {
+  --inputSearchIconHori: 10px;
+  background-size: 14px;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+  padding-left: 22px;
+  cursor: pointer;
+  border: 1px solid transparent; }
+
+.contacts #search-contact-id:hover {
+  background-color: var(--bg-color-10);
+  border: 1px solid var(--border-color-2); }
+
+.chat-container .contact-container {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.chat-container .contact-container:hover {
+  background-color: var(--bg-color-10); }
+
+.contact-container .profile-img-container {
+  width: 40px;
+  height: 40px;
+  position: relative; }
+
+.profile-img-container .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
+
+.profile-img-container .online-indicator-small {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2E9A48;
+  border: 2px solid var(--border-color-3); }
+
+.profile-img-container .offline-indicator-small {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #808080;
+  border: 2px solid var(--border-color-3); }
+
+.contact-container .profile-name {
+  color: var(--text-color-5);
+  font-size: 15px; }
+
+.chat-box-container {
+  width: 320px;
+  height: 430px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  position: absolute;
+  bottom: 25px;
+  right: 80px;
+  background-color: var(--bg-color-2);
+  border: 1px solid var(--border-color-2);
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+
+.chat-box-container .contact-profile-container-small {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-bottom: 1px solid var(--border-color-1); }
+
+.contact-profile-container-small .contact-pic-container-small {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer; }
+
+.contact-profile-container-small .contact-pic-container-small:hover {
+  background-color: var(--bg-color-3); }
+
+.contact-pic-container-small .contact-picture-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; }
+
+.contact-pic-container-small .online-indicator-medium {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: #2E9A48;
+  border: 2px solid var(--border-color-6); }
+
+.contact-pic-container-small .offline-indicator-medium {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: #808080;
+  border: 2px solid var(--border-color-6); }
+
+.contact-profile-container-small .contact-name {
+  font-size: 14px;
+  color: var(--text-color-1);
+  max-width: 182px; }
+
+.chat-box-container .chat-box {
+  width: 100%;
+  overflow: auto;
+  padding: 5px 0px 10px 0px; }
+
+.chat-box .contact-profile-container-big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-block: 34px; }
+
+.contact-profile-container-big .contact-pic-container-big {
+  position: relative; }
+
+.contact-pic-container-big .contact-picture-big {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; }
+
+.contact-pic-container-big .online-indicator-big {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2E9A48;
+  border: 2px solid var(--border-color-6); }
+
+.contact-pic-container-big .offline-indicator-big {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #808080;
+  border: 2px solid var(--border-color-6); }
+
+.contact-profile-container-big .contact-name-big {
+  font-size: 17px;
+  color: var(--text-color-1); }
+
+.chat-box .right-chat-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 5px;
+  padding-right: 8px; }
+
+.right-chat-container .chat-and-date-right {
+  margin-top: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.chat-box .chat-date-sent {
+  font-size: 11px;
+  border-radius: 10px;
+  padding: 0px 5px 0px 5px;
+  color: var(--text-color-4); }
+
+.chat-and-date-right .right-chat {
+  margin-top: 3px;
+  padding: 8px 11px;
+  border-radius: 16px;
+  font-size: 13px;
+  background-color: #39AB5B;
+  color: #FFFFFF; }
+
+.chat-box .left-chat-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  padding-left: 8px; }
+
+.left-chat-container .chat-and-date-left {
+  margin-top: 5px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.chat-and-date-left .left-chat-pic-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px; }
+
+.left-chat-pic-container .left-chat-pic {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%; }
+
+.left-chat-pic-container .left-chat {
+  margin-top: 3px;
+  padding: 8px 11px;
+  border-radius: 16px;
+  font-size: 13px;
+  background-color: var(--bg-color-3);
+  color: var(--text-color-1); }
+
+.chat-box-container .chat-input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+  padding: 10px; }
+
+.chat-input-container .textarea-chat-container {
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 7px;
+  background-color: var(--bg-color-3);
+  border: 1px solid var(--border-color-1); }
+
+.textarea-chat-container .chat-input {
+  width: 100%;
+  resize: none;
+  background-color: transparent;
+  max-height: 100px;
+  overflow: auto; }
+
+.chat-input-container .chat-send-button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #39AB5B;
+  color: #FFFFFF;
+  cursor: pointer; }
+
+.chat-box-container .buzz-chat-button {
+  position: absolute;
+  right: 44px;
+  top: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #39AB5B;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.chat-box-container .buzz-chat-button img {
+  width: 20px;
+  height: 20px; }
+
+.chat-box-container .close-chat-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #39AB5B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer; }
+
+.chat-box-container .close-chat-button img {
+  width: 25px;
+  height: 25px; }
+
+/*Chat Section*/
+/*General*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Body Height*/
+  body {
+    height: calc(100% - 105px); }
+
+  /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 40px;
+    border-radius: 50%; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: transparent; }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 50px;
+    font-size: 12px; }
+
+  /*Mode Button*/
+  /*Footer Height*/
+  #footerWrap_RoId {
+    height: 50px; }
+
+  /*Footer Height*/
+  /*Chat Toggle Button*/
+  .chat-toggle-button {
+    bottom: 63px; }
+
+  /*Chat Toggle Button*/
+  /*Chat Container*/
+  .chat-container {
+    width: 100%;
+    bottom: 50px;
+    height: calc(100% - 105px); }
+
+  /*Chat Container*/
+  /*Chat Box Container*/
+  .chat-box-container {
+    bottom: 50px; }
+
+  /*Chat Box Container*/ }
+/*Mobile*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Body Height*/
+  body {
+    height: calc(100% - 105px); }
+
+  /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 250px;
+    border-radius: 30px; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: var(--text-color-6); }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 100px;
+    font-size: 14px; }
+
+  /*Mode Button*/
+  /*Footer Height*/
+  #footerWrap_RoId {
+    height: 50px; }
+
+  /*Footer Height*/
+  /*Chat Toggle Button*/
+  .chat-toggle-button {
+    bottom: 63px; }
+
+  /*Chat Toggle Button*/
+  /*Chat Container*/
+  .chat-container {
+    width: 350px;
+    bottom: 50px;
+    height: calc(100% - 105px); }
+
+  /*Chat Container*/
+  /*Chat Box Container*/
+  .chat-box-container {
+    bottom: 50px; }
+
+  /*Chat Box Container*/ }
+/*Tablet*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Body Height*/
+  body {
+    height: calc(100% - 80px); }
+
+  /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 250px;
+    border-radius: 30px; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: var(--text-color-6); }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 100px;
+    font-size: 14px; }
+
+  /*Mode Button*/
+  /*Footer Height*/
+  #footerWrap_RoId {
+    height: 25px; }
+
+  /*Footer Height*/
+  /*Chat Toggle Button*/
+  .chat-toggle-button {
+    bottom: 38px; }
+
+  /*Chat Toggle Button*/
+  /*Chat Container*/
+  .chat-container {
+    width: 350px;
+    bottom: 25px;
+    height: calc(100% - 80px); }
+
+  /*Chat Container*/
+  /*Chat Box Container*/
+  .chat-box-container {
+    bottom: 25px; }
+
+  /*Chat Box Container*/ }
+/*Laptop*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Body Height*/
+  body {
+    height: calc(100% - 80px); }
+
+  /*Body Height*/
+  /*Search Box*/
+  .top-left-menu .searchInput_RoClass {
+    width: 250px;
+    border-radius: 30px; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    color: var(--text-color-6); }
+
+  /*Search Box*/
+  /*Mode Button*/
+  .top-right-menu .toggle-mode-class {
+    width: 100px;
+    font-size: 14px; }
+
+  /*Mode Button*/
+  /*Footer Height*/
+  #footerWrap_RoId {
+    height: 25px; }
+
+  /*Footer Height*/
+  /*Chat Toggle Button*/
+  .chat-toggle-button {
+    bottom: 38px; }
+
+  /*Chat Toggle Button*/
+  /*Chat Container*/
+  .chat-container {
+    width: 350px;
+    bottom: 25px;
+    height: calc(100% - 80px); }
+
+  /*Chat Container*/
+  /*Chat Box Container*/
+  .chat-box-container {
+    bottom: 25px; }
+
+  /*Chat Box Container*/ }
+/*Desktop*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Other Media Queries*/
+@media (max-width: 400px) {
+  /*Chat Toggle Button*/
+  .chat-toggle-button {
+    top: 110px; }
+
+  /*Chat Toggle Button*/
+  /*Chat Box Container*/
+  .chat-box-container {
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin-inline: auto; }
+
+  /*Chat Box Container*/ }
+/*Other Media Queries*/
+/*Global Codes*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*General*/
+/*Mid Section*/
+/*Mid Content*/
+.mainmechaCon_RoClass .post-status-summary {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7);
   display: flex;
-  gap: 10px; }
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-color-2); }
 
-.post-status-summary .status-item {
-  font-size: 15px;
-  padding: 7px 10px;
-  border-radius: 5px;
-  color: #000000; }
-
-.post-status-summary .pending-approval-count,
-.action-buttons .pending-approval,
-.action-buttons .approve-button {
-  background-color: #39AB5B; }
-
-.post-status-summary .pending-removal-count,
-.action-buttons .pending-removal,
-.action-buttons .decline-button {
-  background-color: #FCC64F; }
-
-.posts-container .post-box {
-  padding: 8px; }
-
-.post-box .post-list {
-  padding: 10px;
+.post-status-summary .pending-info-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px;
   border-radius: 10px;
   background-color: #FFFFFF;
+  border: 2px solid #FCC64F;
+  box-shadow: 0px 0px 8px rgba(252, 198, 79, 0.7);
+  position: relative;
+  justify-content: flex-start; }
+
+.post-status-summary .pending-info-container img {
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  border: 2px solid #39AB5B;
+  border-radius: 50%; }
+
+.pending-info-container .pending-info {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000; }
+
+.pending-info-container .pending-count {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  background-color: #E41E3F;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: bold;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.mainmechaCon_RoClass .posts {
+  color: var(--text-color-1);
+  margin-top: 10px;
+  font-size: 14px; }
+
+.posts .post-list {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--bg-color-2);
   box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7); }
+
+.post-list .date-submitted {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-color-4); }
 
 .post-list .action-buttons {
   padding: 5px 0px 15px 0px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #CED0D4;
+  border-bottom: 1px solid var(--border-color-1);
   display: flex;
   gap: 10px;
   justify-content: flex-end;
   align-items: center; }
 
 .action-buttons .post-status {
-  font-size: 14px;
-  margin-right: auto;
+  font-weight: bold;
   padding: 7px 10px;
+  margin-right: auto;
   border-radius: 5px;
-  color: #FFFFFF; }
+  color: #808080;
+  background-color: #FCC64F;
+  box-shadow: 0px 0px 8px rgba(252, 198, 79, 0.7); }
 
 .action-buttons button {
-  padding: 7px 15px;
   border-radius: 5px;
   border: none;
-  font-size: 14px;
   color: #FFFFFF;
   cursor: pointer; }
+
+.action-buttons .approve-button {
+  background-color: #39AB5B; }
+
+.action-buttons .decline-button {
+  background-color: #DE3A3B; }
 
 .action-buttons button:hover {
   opacity: .7; }
@@ -161,18 +4244,10 @@ body::-webkit-scrollbar-thumb {
   opacity: .5; }
 
 .post-list .user-profile-box {
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px; }
-
-.post-list .user-profile-box img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #E2E4E7;
-  object-fit: cover;
-  cursor: pointer; }
+  gap: 10px; }
 
 .user-profile-box .user-name {
   flex-shrink: 0; }
@@ -190,18 +4265,20 @@ body::-webkit-scrollbar-thumb {
   font-size: 16px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #F0F2F5; }
+  background-color: var(--bg-color-3); }
 
 .post-list .post-content-class {
   width: 100%;
+  white-space: normal;
   padding: 10px;
   border-radius: 10px;
-  background-color: #F0F2F5; }
+  background-color: var(--bg-color-3); }
 
 .post-list .file-preview-container-class {
-  border: 1px solid #CED0D4;
+  border: 1px solid var(--border-color-4);
   margin-top: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  position: relative; }
 
 .file-preview-container-class .file-preview-element {
   border-radius: 10px;
@@ -212,47 +4289,77 @@ body::-webkit-scrollbar-thumb {
   object-fit: contain;
   background-color: #000000; }
 
-/*General End*/
+/*Mid Content*/
+/*Mid Section*/
+/*General*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Other Media Queries Start*/
-@media (max-width: 400px) {
-  .posts-container .post-status-summary {
-    justify-content: space-between; }
-
-  .post-status-summary .status-item {
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Post Status*/
+  .action-buttons .post-status {
     font-size: 12px; }
 
-  .post-list .action-buttons {
-    gap: 7px; }
-
-  .action-buttons .post-status {
-    font-size: 11px; }
-
+  /*Post Status*/
+  /*Action Buttons*/
   .action-buttons button {
-    padding-inline: 10px;
-    font-size: 11px; } }
-/*Other Media Queries End*/
+    font-size: 12px;
+    padding: 7px 10px; }
+
+  /*Action Buttons*/ }
+/*Mobile*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Mobile and Tablet Start*/
-/*Mobile and Tablet End*/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Post Status*/
+  .action-buttons .post-status {
+    font-size: 14px; }
+
+  /*Post Status*/
+  /*Action Buttons*/
+  .action-buttons button {
+    font-size: 14px;
+    padding: 7px 15px; }
+
+  /*Action Buttons*/ }
+/*Tablet*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Mobile Start*/
-/*Mobile End*/
+/*Laptop*/
+@media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Post Status*/
+  .action-buttons .post-status {
+    font-size: 14px; }
+
+  /*Post Status*/
+  /*Action Buttons*/
+  .action-buttons button {
+    font-size: 14px;
+    padding: 7px 15px; }
+
+  /*Action Buttons*/ }
+/*Laptop*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Tablet Start*/
-/*Tablet End*/
+/*Desktop*/
+@media all and (min-width: 1601px) {
+  /*Post Status*/
+  .action-buttons .post-status {
+    font-size: 15px; }
+
+  /*Post Status*/
+  /*Action Buttons*/
+  .action-buttons button {
+    font-size: 15px;
+    padding: 7px 15px; }
+
+  /*Action Buttons*/ }
+/*Desktop*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Laptop Start*/
-/*Laptop End*/
-/************************************************************************************************************/
-/************************************************************************************************************/
-/*Desktop Start*/
-/*Desktop End*/
+/*Other Media Queries*/
+/*Other Media Queries*/
 /************************************************************************************************************/
 
 /*# sourceMappingURL=Page_Management_Post.css.map */

@@ -1,5 +1,5 @@
 /*Import*/
-import {assignChatContactName} from "./Values_Posting.js";
+import {assignChatContactName} from "./Values_Global.js";
 import outputChatHistoryDiv from "./Output_ChatHistoryDiv.js";
 import controller_Docs_ScrollChatToBottom from "./Controller_Docs_ScrollChatToBottom.js";
 /*Import*/

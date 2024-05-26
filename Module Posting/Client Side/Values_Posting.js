@@ -10,18 +10,10 @@ import {fileInput} from "./Elements_Page_Posting.js"
 
 /*Prep export variables*/
 const fileReader = new FileReader();
-var chatContactName = "";
 /*Prep export variables*/
 
 
 /*Assign, Reset, Populate*/
-/*_Assign chatContactName*/
-function assignChatContactName(chatContactName_Param){
-	chatContactName = chatContactName_Param;
-}
-/*_Assign chatContactName*/
-
-
 /*_Reset fileInput*/
 function resetFileInput(){
 	fileInput.value = '';
@@ -33,8 +25,6 @@ function resetFileInput(){
 /*Export*/
 export {
 	fileReader,
-	resetFileInput,
-	chatContactName,
-	assignChatContactName
+	resetFileInput
 };
 /*Export*/

@@ -285,6 +285,136 @@
 	</div>
 	<!--Bottom Section / Footer-->
 
+	<!--Chat Section-->
+	<div class="chat-toggle-button" onclick="controller_Div_ToggleContacts();"><img src="../../src/chat-icon.png"></div>
+
+	<div class="chat-container" style="display: none;">
+		<div class="contacts">
+			<div class="contact-text">Contacts</div>
+
+			<input type="text" class="searchInput_RoClass" id="search-contact-id" style="--inputSearchIcon: url('../../src/searchIcon.png')">
+		</div>
+
+		<div class="contact-container" onclick="controller_Div_DisplayChatbox('Angelo Arellano')">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="online-indicator-small"></div>
+			</div>
+			
+			<div class="profile-name">Angelo Arellano</div>
+		</div>
+
+		<div class="contact-container" onclick="controller_Div_DisplayChatbox('Jane Luna')">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="online-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">Jane Luna</div>
+		</div>
+
+		<div class="contact-container" onclick="controller_Div_DisplayChatbox('Richard Bautista')">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">Richard Baustista</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+
+		<div class="contact-container">
+			<div class="profile-img-container">
+				<img class="profile-img" src="../../src/cat-profile.png">
+				<div class="offline-indicator-small"></div>
+			</div>
+
+			<div class="profile-name">First Last</div>
+		</div>
+	</div>
+
+	<div class="chat-box-container" style="visibility: hidden;"></div>
+	<!--Chat Section-->
 
 	<!--Javascripts-->
 	<!--_Dependencies-->
@@ -298,6 +428,9 @@
 
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Div_ToggleContacts.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Div_DisplayChatbox.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Btn_CloseChatbox.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
 	<script type="module" src="../Client Side/Controller_InputFile_ChangeProfilePic.js"></script>
 	<!--_Controllers-->

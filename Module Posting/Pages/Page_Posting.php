@@ -762,9 +762,7 @@
 
 	<!--Footer-->
 	<hr class="linethis_RoClass">
-	<div class="footerWrap_RoClass" id="footerWrap_RoId">
-		<!--<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>-->
-	</div>
+	<div class="footerWrap_RoClass" id="footerWrap_RoId"></div>
 	<!--Footer-->
 
 	<!--Chat Section-->
@@ -1424,20 +1422,16 @@
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 	<!--_Dependencies-->
 
-	<!--_Mike JS-->
-	<!--<script type="text/javascript" src="../Client Side/Posting Page.js"></script>-->
-	<!--_Mike JS-->
-
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Div_ToggleContacts.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Div_DisplayChatbox.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Btn_CloseChatbox.js"></script>
 	<script type="module" src="../Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<script type="module" src="../Client Side/Controller_InputFile_UploadFile.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_ToggleComments.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_ToggleModalComments.js"></script>
 	<script type="module" src="../Client Side/Controller_Div_DisplayRightSideContent.js"></script>
-	<script type="module" src="../Client Side/Controller_Div_DisplayChatbox.js"></script>
-	<script type="module" src="../Client Side/Controller_Btn_CloseChatbox.js"></script>
-	<script type="module" src="../Client Side/Controller_Div_ToggleContacts.js"></script>
 	<!--_Controllers-->
 
 	<!--_Executor-->

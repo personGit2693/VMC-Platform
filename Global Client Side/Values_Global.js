@@ -10,6 +10,7 @@
 
 /*Prep export variables*/
 var isLightMode = localStorage.getItem('isLightMode') === 'true';
+var chatContactName = "";
 /*Prep export variables*/
 
 
@@ -19,12 +20,20 @@ function assignIsLightMode(newMode){
 	isLightMode = newMode;
 }
 /*_Assign isLightMode*/
+
+/*_Assign chatContactName*/
+function assignChatContactName(chatContactName_Param){
+	chatContactName = chatContactName_Param;
+}
+/*_Assign chatContactName*/
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
 	isLightMode,
-	assignIsLightMode
+	assignIsLightMode,
+	chatContactName,
+	assignChatContactName
 };
 /*Export*/

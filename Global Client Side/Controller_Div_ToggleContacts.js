@@ -1,5 +1,5 @@
 /*Import*/
-import {chatContainer} from "./Elements_Page_Posting.js";
+import {chatContainer} from "./Elements_Global.js";
 /*Import*/
 
 

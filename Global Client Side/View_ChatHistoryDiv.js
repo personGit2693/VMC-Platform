@@ -1,5 +1,5 @@
 /*Import*/
-import {chatBox} from "./Elements_Page_Posting.js";
+import {chatBox} from "./Elements_Global.js";
 import ChatHistoryDiv from "./Component_ChatHistoryDiv.js";
 /*Import*/
 

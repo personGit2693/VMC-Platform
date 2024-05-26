@@ -22,9 +22,7 @@
 
 	<!--Footer-->
 	<hr class="linethis_RoClass">
-	<div class="footerWrap_RoClass" id="footerWrap_RoId">
-		<!--<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>-->
-	</div>
+	<div class="footerWrap_RoClass" id="footerWrap_RoId"></div>
 	<!--Footer-->
 
 	<!--Javascripts-->

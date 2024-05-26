@@ -1,73 +1,84 @@
 /************************************************************************************************************/
 /*General*/
-@mixin html-body {
-	height: 100%;
-	margin: 0;
-}
 
-@mixin asterisk {
-	box-sizing: border-box;
-	font-family: 'Binance PLEX';
-}
+/*Mid Section*/
 
-@mixin img {
-	width: 100%;
-	height: 100%;
-	display: block;
-}
-
-@mixin body-scrollbar {
-	width: 7px;
-}
-
-@mixin body-sb-thumb {
-	background-color: #BCC0C4;
-	border-radius: 10px;
-}
-
-@mixin posts-container {
-	font-size: 14px;
-}
-
+/*Mid Content*/
 @mixin post-status-summary {
-	margin: 8px 8px 0px 8px;
 	padding: 10px;
 	border-radius: 10px;
 	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
 	display: flex;
+	flex-direction: column;
 	gap: 10px;
+	background-color: var(--bg-color-2);
 }
 
-@mixin status-item {
-	font-size: 15px;
-	padding: 7px 10px;
-	border-radius: 5px;
+@mixin pending-info-container {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 3px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	border: 2px solid #FCC64F;
+	box-shadow: 0px 0px 8px rgba(#FCC64F, .7);
+	position: relative;
+}
+
+@mixin pending-info-container-img {
+	width: 30px;
+	height: 30px;
+	background-color: #FFFFFF;
+	border: 2px solid #39AB5B;
+	border-radius: 50%;
+}
+
+@mixin pending-info {
+	font-size: 14px;
+	font-weight: bold;
 	color: #000000;
 }
 
-@mixin pending-approval-count {
-	background-color: #39AB5B;
+@mixin pending-count {
+	position: absolute;
+	top: -7px;
+	left: -7px;
+	background-color: #E41E3F;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-@mixin pending-removal-count {
-	background-color: #FCC64F;
-}
-
-@mixin post-box {
-	padding: 8px;
+@mixin posts {
+	color: var(--text-color-1);
+	margin-top: 10px;
+	font-size: 14px;
 }
 
 @mixin post-list {
 	padding: 10px;
 	border-radius: 10px;
-	background-color: #FFFFFF;
+	background-color: var(--bg-color-2);
 	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
+}
+
+@mixin date-submitted {
+	font-size: 12px;
+	font-weight: bold;
+	color: var(--text-color-4);
 }
 
 @mixin action-buttons {
 	padding: 5px 0px 15px 0px;
 	margin-bottom: 10px;
-	border-bottom: 1px solid #CED0D4;
+	border-bottom: 1px solid var(--border-color-1);
 	display: flex;
 	gap: 10px;
 	justify-content: flex-end;
@@ -75,44 +86,43 @@
 }
 
 @mixin post-status {
-	font-size: 14px;
-	margin-right: auto;
+	font-weight: bold;
 	padding: 7px 10px;
+	margin-right: auto;
 	border-radius: 5px;
-	color: #FFFFFF;
+	color: #808080;
+	background-color: #FCC64F;
+	box-shadow: 0px 0px 8px rgba(#FCC64F, .7);
 }
 
 @mixin action-buttons-button {
-	padding: 7px 15px;
 	border-radius: 5px;
 	border: none;
-	font-size: 14px;
 	color: #FFFFFF;
 	cursor: pointer;
 }
 
-@mixin action-buttons-button-hover {
+@mixin approve-button {
+	background-color: #39AB5B;
+}
+
+@mixin decline-button {
+	background-color: #DE3A3B;
+}
+
+@mixin hover-opacity {
 	opacity: .7;
 }
 
-@mixin action-buttons-button-active {
+@mixin active-opacity {
 	opacity: .5;
 }
 
 @mixin user-profile-box {
+	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	margin-bottom: 10px;
-}
-
-@mixin user-profile-box-img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 1px solid #E2E4E7;
-	object-fit: cover;
-	cursor: pointer;
 }
 
 @mixin user-name {
@@ -128,25 +138,27 @@
 	background-color: rgba(#39AB5B, .8);
 }
 
-@mixin post-title-class {
+@mixin post-list-post-title-class {
 	margin-bottom: 7px;
 	font-size: 16px;
 	padding: 10px;
 	border-radius: 10px;
-	background-color: #F0F2F5;
+	background-color: var(--bg-color-3);
 }
 
 @mixin post-content-class {
 	width: 100%;
+	white-space: normal;
 	padding: 10px;
 	border-radius: 10px;
-	background-color: #F0F2F5;
+	background-color: var(--bg-color-3);
 }
 
 @mixin file-preview-container-class {
-	border: 1px solid #CED0D4;
+	border: 1px solid var(--border-color-4);
 	margin-top: 10px;
 	border-radius: 10px;
+	position: relative;
 }
 
 @mixin file-preview-element {
@@ -158,31 +170,50 @@
 	object-fit: contain;
 	background-color: #000000;
 }
+/*Mid Content*/
+
+/*Mid Section*/
+
 /*General*/
 /************************************************************************************************************/
-/************************************************************************************************************/
-/*Other Media Queries*/
-@mixin post-status-summary_OMQ {
-	justify-content: space-between;
-}
 
-@mixin status-item_OMQ {
+
+/************************************************************************************************************/
+/*Post Status*/
+@mixin post-status_Mobile {
 	font-size: 12px;
 }
-
-@mixin action-buttons_OMQ {
-	gap: 7px;
+@mixin post-status_Tablet {
+	font-size: 14px;
 }
-
-@mixin post-status_OMQ {
-	font-size: 11px;
+@mixin post-status_Laptop {
+	font-size: 14px;
 }
-
-@mixin action-buttons-button_OMQ {
-	padding-inline: 10px;
-	font-size: 11px;
+@mixin post-status_Desktop {
+	font-size: 15px;
 }
-/*Other Media Queries*/
+/*Post Status*/
 /************************************************************************************************************/
 
+
+/************************************************************************************************************/
+/*Action Buttons*/
+@mixin action-buttons-button_Mobile {
+	font-size: 12px;
+	padding: 7px 10px;
+}
+@mixin action-buttons-button_Tablet {
+	font-size: 14px;
+	padding: 7px 15px;
+}
+@mixin action-buttons-button_Laptop {
+	font-size: 14px;
+	padding: 7px 15px;
+}
+@mixin action-buttons-button_Desktop {
+	font-size: 15px;
+	padding: 7px 15px;
+}
+/*Action Buttons*/
+/************************************************************************************************************/
 

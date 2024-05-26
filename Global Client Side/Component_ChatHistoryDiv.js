@@ -1,5 +1,5 @@
 /*Import*/
-import {chatContactName} from "./Values_Posting.js";
+import {chatContactName} from "./Values_Global.js";
 /*Import*/
 
 

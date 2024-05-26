@@ -25,6 +25,10 @@
 	/*Dark Mode (Default Style)*/
 }
 
+.light-mode {
+	@include global_light-mode;
+}
+
 html, body {
 	@include global_html-body_Style;
 }
@@ -32,10 +36,6 @@ html, body {
 body {
 	@include global_body-bg;
 	@include global_General_BodyWithTop;
-}
-
-.light-mode {
-	@include global_light-mode;
 }
 
 @font-face {
@@ -54,7 +54,7 @@ body {
 	@include global_scrollbar-track;
 }
 
-* {
+*, *::before, *::after {
 	@include global_asterisk;
 }
 
@@ -86,14 +86,23 @@ video {
 .top-left-menu .home-logo:hover,
 .top-right-menu .toggle-mode-class:hover,
 .topMenus:hover,
-.user-profile img:hover {
+.user-profile img:hover,
+.chat-toggle-button:hover,
+.chat-input-container .chat-send-button:hover,
+.chat-box-container .buzz-chat-button:hover,
+.chat-box-container .close-chat-button:hover {
 	@include global_hover-opacity;
 }
 
 .top-left-menu .home-logo:active,
 .top-right-menu .toggle-mode-class:active,
 .topMenus:active,
-.user-profile img:active {
+.user-profile img:active,
+.chat-toggle-button:active,
+.chat-input-container .chat-send-button:active,
+.chat-box-container .buzz-chat-button:active,
+.chat-box-container .close-chat-button:active,
+.contact-pic-container-small:active {
 	@include global_active-opacity;
 }
 
@@ -140,11 +149,13 @@ video {
 	@include global_sidemecha_RoId;
 }
 
-#sidemecha_RoId::-webkit-scrollbar-thumb {
+#sidemecha_RoId::-webkit-scrollbar-thumb,
+.chat-container::-webkit-scrollbar-thumb {
 	@include global_sb-thumb-visibility;
 }
 
-#sidemecha_RoId:hover::-webkit-scrollbar-thumb {
+#sidemecha_RoId:hover::-webkit-scrollbar-thumb,
+.chat-container:hover::-webkit-scrollbar-thumb {
 	@include global_hover-sb-thumb-visibility;
 }
 
@@ -187,6 +198,188 @@ video {
 }
 /*Footer*/
 
+/*Chat Section*/
+.chat-toggle-button {
+	@include global_chat-toggle-button;
+}
+
+.chat-toggle-button img {
+	@include global_chat-toggle-button-img;
+}
+
+.chat-container {
+	@include global_chat-container;
+}
+
+.chat-container .contacts {
+	@include global_contacts;
+}
+
+.contacts #search-contact-id {
+	@include global_search-contact-id;
+}
+
+.contacts #search-contact-id:hover {
+	@include global_search-contact-id-hover;
+}
+
+.chat-container .contact-container {
+	@include global_contact-container;
+}
+
+.chat-container .contact-container:hover {
+	@include global_contact-container-hover;
+}
+
+.contact-container .profile-img-container {
+	@include global_profile-img-container;
+}
+
+.profile-img-container .profile-img {
+	@include global_profile-img;
+}
+
+.profile-img-container .online-indicator-small {
+	@include global_online-indicator-small;
+}
+
+.profile-img-container .offline-indicator-small {
+	@include global_offline-indicator-small;
+}
+
+.contact-container .profile-name {
+	@include global_profile-name;
+}
+
+.chat-box-container {
+	@include global_chat-box-container;
+}
+
+.chat-box-container .contact-profile-container-small {
+	@include global_contact-profile-container-small;
+}
+
+.contact-profile-container-small .contact-pic-container-small {
+	@include global_contact-pic-container-small;
+}
+
+.contact-profile-container-small .contact-pic-container-small:hover {
+	@include global_contact-pic-container-small-hover;
+}
+
+.contact-pic-container-small .contact-picture-small {
+	@include global_contact-picture-small;
+}
+
+.contact-pic-container-small .online-indicator-medium {
+	@include global_online-indicator-medium;
+}
+
+.contact-pic-container-small .offline-indicator-medium {
+	@include global_offline-indicator-medium;
+}
+
+.contact-profile-container-small .contact-name {
+	@include global_contact-name;
+}
+
+.chat-box-container .chat-box {
+	@include global_chat-box;
+}
+
+.chat-box .contact-profile-container-big {
+	@include global_contact-profile-container-big;
+}
+
+.contact-profile-container-big .contact-pic-container-big {
+	@include global_contact-pic-container-big;
+}
+
+.contact-pic-container-big .contact-picture-big {
+	@include global_contact-picture-big;
+}
+
+.contact-pic-container-big .online-indicator-big {
+	@include global_online-indicator-big;
+}
+
+.contact-pic-container-big .offline-indicator-big {
+	@include global_offline-indicator-big;
+}
+
+.contact-profile-container-big .contact-name-big {
+	@include global_contact-name-big;
+}
+
+.chat-box .right-chat-container {
+	@include global_right-chat-container;
+}
+
+.right-chat-container .chat-and-date-right {
+	@include global_chat-and-date-right;
+}
+
+.chat-box .chat-date-sent {
+	@include global_chat-date-sent;
+}
+
+.chat-and-date-right .right-chat {
+	@include global_right-chat;
+}
+
+.chat-box .left-chat-container {
+	@include global_left-chat-container;
+}
+
+.left-chat-container .chat-and-date-left {
+	@include global_chat-and-date-left;
+}
+
+.chat-and-date-left .left-chat-pic-container {
+	@include global_left-chat-pic-container;
+}
+
+.left-chat-pic-container .left-chat-pic {
+	@include global_left-chat-pic;	
+}
+
+.left-chat-pic-container .left-chat {
+	@include global_left-chat;
+}
+
+.chat-box-container .chat-input-container {
+	@include global_chat-input-container;
+}
+
+.chat-input-container .textarea-chat-container {
+	@include global_textarea-chat-container;
+}
+
+.textarea-chat-container .chat-input {
+	@include global_chat-input;
+}
+
+.chat-input-container .chat-send-button {
+	@include global_chat-send-button;
+}
+
+.chat-box-container .buzz-chat-button {
+	@include global_buzz-chat-button;
+}
+
+.chat-box-container .buzz-chat-button img {
+	@include global_buzz-chat-button-img;
+}
+
+.chat-box-container .close-chat-button {
+	@include global_close-chat-button;
+}
+
+.chat-box-container .close-chat-button img {
+	@include global_close-chat-button-img;
+}
+/*Chat Section*/
+
 /*General*/
 /************************************************************************************************************/
 
@@ -221,6 +414,24 @@ video {
 		@include global_Mobile_footerHeight;
 	}
 	/*Footer Height*/
+
+	/*Chat Toggle Button*/
+	.chat-toggle-button {
+		@include global_chat-toggle-button_Mobile;
+	}
+	/*Chat Toggle Button*/
+
+	/*Chat Container*/
+	.chat-container {
+		@include global_chat-container_Mobile;
+	}
+	/*Chat Container*/
+
+	/*Chat Box Container*/
+	.chat-box-container {
+		@include global_chat-box-container_Mobile;
+	}
+	/*Chat Box Container*/
 }
 /*Mobile*/
 /************************************************************************************************************/
@@ -256,6 +467,24 @@ video {
 		@include global_Tablet_footerHeight;
 	}
 	/*Footer Height*/
+
+	/*Chat Toggle Button*/
+	.chat-toggle-button {
+		@include global_chat-toggle-button_Tablet;
+	}
+	/*Chat Toggle Button*/
+
+	/*Chat Container*/
+	.chat-container {
+		@include global_chat-container_Tablet;
+	}
+	/*Chat Container*/
+
+	/*Chat Box Container*/
+	.chat-box-container {
+		@include global_chat-box-container_Tablet;
+	}
+	/*Chat Box Container*/
 }
 /*Tablet*/
 /************************************************************************************************************/
@@ -291,6 +520,24 @@ video {
 		@include global_Laptop_footerHeight;
 	}
 	/*Footer Height*/
+
+	/*Chat Toggle Button*/
+	.chat-toggle-button {
+		@include global_chat-toggle-button_Laptop;
+	}
+	/*Chat Toggle Button*/
+
+	/*Chat Container*/
+	.chat-container {
+		@include global_chat-container_Laptop;
+	}
+	/*Chat Container*/
+
+	/*Chat Box Container*/
+	.chat-box-container {
+		@include global_chat-box-container_Laptop;
+	}
+	/*Chat Box Container*/
 }
 /*Laptop*/
 /************************************************************************************************************/
@@ -326,15 +573,51 @@ video {
 		@include global_Desktop_footerHeight;
 	}
 	/*Footer Height*/
+
+	/*Chat Toggle Button*/
+	.chat-toggle-button {
+		@include global_chat-toggle-button_Desktop;
+	}
+	/*Chat Toggle Button*/
+
+	/*Chat Container*/
+	.chat-container {
+		@include global_chat-container_Desktop;
+	}
+	/*Chat Container*/
+
+	/*Chat Box Container*/
+	.chat-box-container {
+		@include global_chat-box-container_Desktop;
+	}
+	/*Chat Box Container*/
 }
 /*Desktop*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Other Media Queries*/
+@media (max-width:400px) {
+	/*Chat Toggle Button*/
+	.chat-toggle-button {
+		@include global_chat-toggle-button_OMQ;
+	}
+	/*Chat Toggle Button*/
+
+	/*Chat Box Container*/
+	.chat-box-container {
+		@include global_chat-box-container_OMQ;
+	}
+	/*Chat Box Container*/
+}
+/*Other Media Queries*/
 
 /*Global Codes*/
 /************************************************************************************************************/
 
 
 /************************************************************************************************************/
-
 .projTitleAndUserLogin_RoClass{
 	@include projTitleAndUserLogin_RoClass;
 }
@@ -395,6 +678,7 @@ video {
 	@include nameAndTitle-Wrap;
 
 }
+
 .nameAndTitle-Wrap #nameDisplay-id{
 	@include nameDisplay-id;
 }
@@ -454,13 +738,13 @@ video {
 .changeCredentialsWrap_class{
 	@include changeCredentialsWrap_class;
 }
+
 .SettingsClass #changeCredentials_id{
 	@include changeCredentials_id;
 }
 
 .placeholdme_RoClass{
 	@include placeholdme_RoClass;
-
 }
 
 .settingsSeconddiv_Class{
@@ -508,7 +792,6 @@ video {
 
 	#picAndbuttonwrap_id #imgWrapper_id{
 		@include mobile_imgWrapper_id;
-
 	}
 
 	#imgWrapper_id #profilePic-id{
@@ -517,7 +800,6 @@ video {
 
 	.nameAndTitle-Wrap #nameDisplay-id{
 		@include mobile_nameDisplay-id;
-
 	}
 
 	#changeNameimgWrapper_id{
@@ -526,12 +808,10 @@ video {
 
 	#changePositionDisplay_id .selectDropdownWrap_RoClass{
 		@include mobile_selectDropdownWrap_RoClass;
-
 	} 
 
 	.selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
 		@include mobile_displayedSelectedText_RoClass;
-
 	}
 
 	.changeCredentialsWrap_class{
@@ -540,7 +820,6 @@ video {
 
 	.changeCredentialsWrap_class .inputBoxesWrap_class{
 		@include inputBoxesWrap_class;
-
 	}
 
 	.SettingsClass .cusInputs_RoClass{
@@ -566,12 +845,10 @@ video {
 
 	.nameAndTitle-Wrap #nameDisplay-id{
 		@include mobile_nameDisplay-id;
-
 	}
 
 	#changePositionDisplay_id .selectDropdownWrap_RoClass{
 		@include mobile_selectDropdownWrap_RoClass;
-
 	}
 
 }

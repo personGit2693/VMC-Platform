@@ -1,46 +1,14 @@
-/*************************************************************************************/
+/************************************************************************************************************/
 /*Root*/
 @mixin project-title {
 	--projectTitleTextFSize: 14px;
 	--projectTitleTextFColor: #FFFFFF;
 }
-
-/*Dark Mode (Default Style)*/
-@mixin dark-mode {
-	--bg-color-4: #242526;
-	--bg-color-10: #303031;
-	--bg-color-11: #5D5E61; // unused
-	--bg-color-12: #161617;
-	--text-color-3: #CDD1D5;
-	--text-color-4: #ADB1B3;
-	--text-color-5: #E3E5E9;
-	--border-color-2: #121413;
-	--border-color-3: #18191A;
-	--border-color-4: #444749;
-	--border-color-5: #353637;
-	--border-color-6: #242526;
-}
-/*Dark Mode (Default Style)*/
-
 /*Root*/
-/*************************************************************************************/
+/************************************************************************************************************/
 /*General*/
-@mixin light-mode {
-	--bg-color-4: #FFFFFF;
-	--bg-color-10: #E4E6E8;
-	--bg-color-11: #FFFFFF; // unused
-	--bg-color-12: #999999;
-	--text-color-3: #5F6266;
-	--text-color-4: #808080;
-	--text-color-5: #000000;
-	--border-color-2: #E2E4E7;
-	--border-color-3: #F0F2F5;
-	--border-color-4: #CED0D4;
-	--border-color-5: #E4E4E4;
-	--border-color-6: #FFFFFF;
-}
 
-/*Mid Section Start*/
+/*Mid Section*/
 @mixin rolayout_RoId {
 	display: flex;
 	justify-content: space-between;
@@ -231,9 +199,6 @@
 
 @mixin user-profile-box {
 	margin-bottom: 10px;
-}
-
-@mixin user-profile {
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -508,388 +473,7 @@
 	cursor: pointer;
 }
 /*Right Content*/
-/*Mid Section End*/
-
-/*Chat Section*/
-@mixin chat-toggle-button {
-	position: fixed;
-	bottom: 38px;
-	right: 15px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: #39AB5B;
-	border: 2px solid #FCC64F;
-	z-index: 2;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-
-@mixin chat-toggle-button-img {
-	width: 20px;
-	height: 20px;
-}
-
-@mixin chat-container {
-	position: fixed;
-	bottom: 25px;
-	right: 0px;
-	width: 350px;
-	height: calc(100% - 80px);
-	background-color: var(--bg-color-1);
-	padding: 0px 10px 10px 10px;
-	overflow: auto;
-	z-index: 1;
-}
-
-@mixin contacts {
-	font-weight: bold;
-	padding-block: 10px;
-	color: var(--text-color-4);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-@mixin search-contact-id {
-	--inputSearchIconHori: 10px;
-	--inputSearchIconSize: 14px;
-	--inputSearchFSize: 12px;
-	width: 36px;
-	height: 36px;
-	margin-right: 15px;
-	padding-left: 22px;
-	cursor: pointer;
-	border: 1px solid transparent;
-
-}
-
-@mixin search-contact-id-hover {
-	background-color: var(--bg-color-10);
-	border: 1px solid var(--border-color-2);
-}
-
-@mixin contact-container {
-	display: flex;
-	align-items: center;
-	gap: 13px;
-	padding: 6px;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-@mixin contact-container-hover {
-	background-color: var(--bg-color-10);
-}
-
-@mixin profile-img-container {
-	width: 40px;
-	height: 40px;
-	position: relative;
-}
-
-@mixin profile-img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-}
-
-@mixin online-indicator-small {
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background-color: #2E9A48;
-	border: 2px solid var(--border-color-3);
-}
-
-@mixin offline-indicator-small {
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background-color: #808080;
-	border: 2px solid var(--border-color-3);
-}
-
-@mixin profile-name {
-	color: var(--text-color-5);
-	font-size: 15px;
-}
-
-@mixin chat-box-container {
-	width: 320px;
-	height: 430px;
-	border-radius: 10px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	position: absolute;
-	bottom: 25px;
-	right: 80px;
-	background-color: var(--bg-color-2);
-	border: 1px solid var(--border-color-2);
-	border-bottom: none;
-	display: flex;
-	flex-direction: column;
-	z-index: 1;
-}
-
-@mixin contact-profile-container-small {
-	display: flex;
-	align-items: center;
-	gap: 2px;
-	padding: 2px;
-	border-bottom: 1px solid var(--border-color-1);
-}
-
-@mixin contact-pic-container-small {
-	width: 44px;
-	height: 44px;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	cursor: pointer;
-}
-
-@mixin contact-pic-container-small-hover {
-	background-color: var(--bg-color-3);
-}
-
-@mixin contact-picture-small {
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-}
-
-@mixin online-indicator-medium {
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 6px;
-	right: 6px;
-	background-color: #2E9A48;
-	border: 2px solid var(--border-color-6);
-}
-
-@mixin offline-indicator-medium {
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 6px;
-	right: 6px;
-	background-color: #808080;
-	border: 2px solid var(--border-color-6);
-}
-
-@mixin contact-name {
-	font-size: 14px;
-	color: var(--text-color-1);
-	max-width: 182px;
-}
-
-@mixin chat-box {
-	width: 100%;
-	overflow: auto;
-	padding: 5px 0px 10px 0px;
-}
-
-@mixin contact-profile-container-big {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 8px;
-	padding-block: 34px;
-}
-
-@mixin contact-pic-container-big {
-	position: relative;
-}
-
-@mixin online-indicator-big {
-	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background-color: #2E9A48;
-	border: 2px solid var(--border-color-6);
-}
-
-@mixin offline-indicator-big {
-	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background-color: #808080;
-	border: 2px solid var(--border-color-6);
-}
-
-@mixin contact-picture-big {
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;	
-}
-
-@mixin contact-name-big {
-	font-size: 17px;
-	color: var(--text-color-1);
-}
-
-@mixin right-chat-container {
-	display: flex;
-	align-items: flex-end;
-	flex-direction: column;
-	margin-top: 5px;
-	padding-right: 8px;
-}
-
-@mixin chat-and-date-right {
-	margin-top: 5px;
-	width: 200px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-
-@mixin chat-date-sent {
-	font-size: 11px;
-	border-radius: 10px;
-	padding: 0px 5px 0px 5px;
-	color: var(--text-color-4);
-}
-
-@mixin right-chat {
-	margin-top: 3px;
-	padding: 8px 11px;
-	border-radius: 16px;
-	font-size: 13px;
-	background-color: #39AB5B;
-	color: #FFFFFF;
-}
-
-@mixin left-chat-container {
-	display: flex;
-	flex-direction: column;
-	margin-top: 5px;
-	padding-left: 8px;
-}
-
-@mixin chat-and-date-left {
-	margin-top: 5px;
-	width: 210px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-@mixin left-chat-pic-container {
-	display: flex;
-	align-items: flex-end;
-	gap: 8px;
-}
-
-@mixin left-chat-pic {
-	width: 26px;
-	height: 26px;
-	border-radius: 50%;
-}
-
-@mixin left-chat {
-	margin-top: 3px;
-	padding: 8px 11px;
-	border-radius: 16px;
-	font-size: 13px;
-	background-color: var(--bg-color-3);
-	color: var(--text-color-1);
-}
-
-@mixin chat-input-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	gap: 10px;
-	width: 100%;
-	padding: 10px;
-}
-
-@mixin textarea-chat-container {
-	width: 100%;
-	border-radius: 10px;
-	padding: 5px 7px;
-	background-color: var(--bg-color-3);
-	border: 1px solid var(--border-color-1);
-}
-
-@mixin chat-input {
-	width: 100%;
-	resize: none;
-	background-color: transparent;
-	max-height: 100px;
-	overflow: auto;
-}
-
-@mixin chat-send-button {
-	padding: 10px;
-	border-radius: 10px;
-	border: none;
-	background-color: #39AB5B;
-	color: #FFFFFF;
-	cursor: pointer;
-}
-
-@mixin buzz-chat-button {
-	position: absolute;
-	right: 44px;
-	top: 10px;
-	border-radius: 10px;
-	border: none;
-	background-color: #39AB5B;
-	width: 40px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-
-@mixin buzz-chat-button-img {
-	width: 20px;
-	height: 20px;
-}
-
-@mixin close-chat-button {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	border-radius: 50%;
-	border: none;
-	background-color: #39AB5B;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-}
-
-@mixin close-chat-button-img {
-	width: 25px;
-	height: 25px;
-}
-/*Chat Section*/
+/*Mid Section*/
 
 /*Modal Post*/
 @mixin modalmeCon_RoClass {
@@ -1044,15 +628,11 @@
 }
 /*Modal Post*/
 /*General*/
-/*************************************************************************************/
-/*************************************************************************************/
-/*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
-@mixin right-side-container_MobTab {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
+/************************************************************************************************************/
 
+
+/************************************************************************************************************/
+/*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
 @mixin mainmecha_RoId_MobTab {
 	position: relative;
 }
@@ -1061,33 +641,30 @@
 	max-width: 100%;
 }
 
-@mixin chat-toggle-button_MobTab {
-	bottom: 63px;
-}
-
-@mixin chat-container_MobTab {
-	bottom: 50px;
-	height: calc(100% - 105px);
-}
-
-@mixin chat-box-container_MobTab {
-	bottom: 50px;
+@mixin right-side-container_MobTab {
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
 /*Mobile and Tablet @media (min-width:0px) and (max-width:1080px)*/
-/*************************************************************************************/
-/*************************************************************************************/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Mobile @media (max-width:641px)*/
-@mixin chat-container_Mobile {
-	width: 100%;
-}
+
 /*Mobile @media (max-width:641px)*/
-/*************************************************************************************/
-/*************************************************************************************/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Tablet @media (min-width:642px) and (max-width:1080px)*/
 
 /*Tablet @media (min-width:642px) and (max-width:1080px)*/
-/*************************************************************************************/
-/*************************************************************************************/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Laptop @media (min-width:1081px) and (max-width:1600px)*/
 @mixin projectTitle_RoClass_Laptop {
 	--projectTitleTextFSize: 16px;
@@ -1097,8 +674,10 @@
 	font-size: 16px
 }
 /*Laptop @media (min-width:1081px) and (max-width:1600px)*/
-/*************************************************************************************/
-/*************************************************************************************/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Desktop @media (min-width:1601px)*/
 @mixin mainmechaCon_RoId_Desktop {
 	max-width: 650px;
@@ -1112,8 +691,10 @@
 	font-size: 18px
 }
 /*Desktop @media (min-width:1601px)*/
-/*************************************************************************************/
-/*************************************************************************************/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
 /*Other Media Queries*/
 @mixin mainmechaCon_RoId_OMQ {
 	max-width: 450px;
@@ -1122,21 +703,6 @@
 @mixin post-reactions_OMQ {
 	flex-direction: column;
 	gap: 10px;
-}
-
-@mixin chat-toggle-button_OMQ {
-	top: 110px;
-}
-
-@mixin contact-text_OMQ {
-	visibility: hidden;
-}
-
-@mixin chat-box-container_OMQ {
-	width: 300px;
-	left: 0;
-	right: 0;
-	margin-inline: auto;
 }
 
 @mixin modalHeadClose_RoClass_OMQ {
@@ -1170,4 +736,4 @@
 	border-bottom: 1px solid var(--border-color-1);
 }
 /*Other Media Queries*/
-/*************************************************************************************/
+/************************************************************************************************************/
