@@ -4158,11 +4158,8 @@ video {
   gap: 5px;
   padding: 3px;
   border-radius: 10px;
-  background-color: #FFFFFF;
-  border: 2px solid #FCC64F;
-  box-shadow: 0px 0px 8px rgba(252, 198, 79, 0.7);
-  position: relative;
-  justify-content: flex-start; }
+  background-color: #096B6C;
+  position: relative; }
 
 .post-status-summary .pending-info-container img {
   width: 30px;
@@ -4174,12 +4171,12 @@ video {
 .pending-info-container .pending-info {
   font-size: 14px;
   font-weight: bold;
-  color: #000000; }
+  color: #FFFFFF; }
 
 .pending-info-container .pending-count {
   position: absolute;
   top: -7px;
-  left: -7px;
+  right: -7px;
   background-color: #E41E3F;
   color: #FFFFFF;
   font-size: 11px;

@@ -629,7 +629,6 @@ video {
 
 .post-status-summary .pending-info-container {
 	@include pending-info-container;
-	justify-content: flex-start;
 }
 
 .post-status-summary .pending-info-container img {

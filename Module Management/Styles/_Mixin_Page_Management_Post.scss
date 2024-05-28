@@ -20,9 +20,7 @@
 	gap: 5px;
 	padding: 3px;
 	border-radius: 10px;
-	background-color: #FFFFFF;
-	border: 2px solid #FCC64F;
-	box-shadow: 0px 0px 8px rgba(#FCC64F, .7);
+	background-color: #096B6C;
 	position: relative;
 }
 
@@ -37,13 +35,13 @@
 @mixin pending-info {
 	font-size: 14px;
 	font-weight: bold;
-	color: #000000;
+	color: #FFFFFF;
 }
 
 @mixin pending-count {
 	position: absolute;
 	top: -7px;
-	left: -7px;
+	right: -7px;
 	background-color: #E41E3F;
 	color: #FFFFFF;
 	font-size: 11px;

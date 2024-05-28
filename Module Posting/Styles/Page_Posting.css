@@ -4226,10 +4226,6 @@ video {
 .file-preview-container-class .remove-file-button:hover,
 .create-post-form .create-post-button:hover,
 .posts button:hover,
-.chat-toggle-button:hover,
-.chat-input-container .chat-send-button:hover,
-.chat-box-container .buzz-chat-button:hover,
-.chat-box-container .close-chat-button:hover,
 .modalme_RoClass .home-logo img:hover,
 .posted-info-container button:hover,
 .modalHeadClose_RoClass:hover,
@@ -4241,10 +4237,6 @@ video {
 .create-post-form .create-post-button:active,
 .posts button:active,
 .emoji-container img:active,
-.chat-toggle-button:active,
-.chat-input-container .chat-send-button:active,
-.chat-box-container .buzz-chat-button:active,
-.chat-box-container .close-chat-button:active,
 .contact-pic-container-small:active,
 .modalHeadClose_RoClass:active,
 .modalme_RoClass .home-logo img:active,
@@ -4280,14 +4272,12 @@ video {
 
 #post-content-id::-webkit-scrollbar-thumb,
 .comment-section-class::-webkit-scrollbar-thumb,
-.chat-container::-webkit-scrollbar-thumb,
 .posted-info-container::-webkit-scrollbar-thumb,
 .modal-comment-section-class::-webkit-scrollbar-thumb {
   visibility: hidden; }
 
 #post-content-id:hover::-webkit-scrollbar-thumb,
 .comment-section-class:hover::-webkit-scrollbar-thumb,
-.chat-container:hover::-webkit-scrollbar-thumb,
 .posted-info-container:hover::-webkit-scrollbar-thumb,
 .modal-comment-section-class:hover::-webkit-scrollbar-thumb {
   visibility: visible; }
