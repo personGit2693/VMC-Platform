@@ -190,11 +190,15 @@
 	gap: 5px;
 }
 
-@mixin global_home-logo {
+@mixin global_topMenus {
 	width: 40px;
 	height: 40px;
-	padding: 7px;
+	padding: 8px;
 	border-radius: 10px;
+	cursor: pointer;
+}
+
+@mixin global_home-logo {
 	background-color: var(--bg-color-7);
 }
 
@@ -204,11 +208,6 @@
 
 @mixin global_active-opacity {
 	opacity: .5;
-}
-
-@mixin global_home-logo-img {
-	width: 100%;
-	height: 100%;
 }
 
 @mixin global_searchInput_RoClass {
@@ -232,20 +231,9 @@
 	border-radius: 10px;
 	background-color: var(--bg-color-6);
 	color: var(--text-color-2);
-	cursor: pointer;
-}
-
-@mixin global_topMenus {
-	width: 40px;
+	white-space: wrap;
 	height: 40px;
-	padding: 7px;
-	border-radius: 10px;
-	background-color: var(--bg-color-8);
 	cursor: pointer;
-}
-
-@mixin global_gear-icon {
-	background-color: var(--bg-color-7);
 }
 
 @mixin global_user-profile {
@@ -315,11 +303,12 @@
 
 /*Mid Content*/
 @mixin global_burger_RoId {
-	width: 40px;
-	height: 40px;
-	padding: 7px;
-	border-radius: 10px;
 	background-color: var(--bg-color-8);
+}
+
+@mixin toggle-mode-new {
+	display: inline-block;
+	vertical-align: top;
 }
 /*Mid Content*/
 /*Mid Section*/
@@ -341,27 +330,6 @@
 /*Footer*/
 
 /*Chat Section*/
-@mixin global_chat-toggle-button {
-	position: fixed;
-	bottom: 38px;
-	right: 15px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: #39AB5B;
-	border: 2px solid #FCC64F;
-	z-index: 2;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-
-@mixin global_chat-toggle-button-img {
-	width: 20px;
-	height: 20px;
-}
-
 @mixin global_chat-container {
 	position: fixed;
 	bottom: 25px;
@@ -834,27 +802,6 @@
 	height: 25px;
 }
 /*Footer Height*/
-/************************************************************************************************************/
-
-
-/************************************************************************************************************/
-/*Chat Toggle Button*/
-@mixin global_chat-toggle-button_Mobile {
-	bottom: 63px;
-}
-@mixin global_chat-toggle-button_Tablet {
-	bottom: 63px;
-}
-@mixin global_chat-toggle-button_Laptop {
-	bottom: 38px;
-}
-@mixin global_chat-toggle-button_Desktop {
-	bottom: 38px;
-}
-@mixin global_chat-toggle-button_OMQ {
-	top: 110px;
-}
-/*Chat Toggle Button*/
 /************************************************************************************************************/
 
 

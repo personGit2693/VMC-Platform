@@ -8,6 +8,12 @@
 /************************************************************************************************************/
 /*General*/
 
+/*Top Section*/
+@mixin burger-icon {
+	background-color: var(--bg-color-8);
+}
+/*Top Section*/
+
 /*Mid Section*/
 @mixin rolayout_RoId {
 	display: flex;

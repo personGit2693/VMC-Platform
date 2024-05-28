@@ -1,5 +1,5 @@
 /*Import*/
-import {img, burgerIcon ,rightSideContent} from "./Elements_Page_Posting.js";
+import {img, burgerIcon, rightSideContent} from "./Elements_Page_Posting.js";
 /*Import*/
 
 

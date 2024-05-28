@@ -61,10 +61,6 @@
 /*Footer Height*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Chat Toggle Button*/
-/*Chat Toggle Button*/
-/************************************************************************************************************/
-/************************************************************************************************************/
 /*Chat Container*/
 /*Chat Container*/
 /************************************************************************************************************/
@@ -3296,6 +3292,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*General*/
 /************************************************************************************************************/
 /************************************************************************************************************/
+/*Page Title*/
+/*Page Title*/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/*Post Status Summary*/
+/*Post Status Summary*/
+/************************************************************************************************************/
+/************************************************************************************************************/
 /*Post Status*/
 /*Post Status*/
 /************************************************************************************************************/
@@ -3449,37 +3453,39 @@ video {
   display: flex;
   gap: 5px; }
 
-.top-left-menu .home-logo {
+.topMenus,
+.mainmechaCon_RoClass #burger_RoId {
   width: 40px;
   height: 40px;
-  padding: 7px;
+  padding: 8px;
   border-radius: 10px;
+  cursor: pointer; }
+
+.top-left-menu .home-logo,
+.top-right-menu .chat-toggle-button,
+.gear-icon {
   background-color: var(--bg-color-7); }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode-class:hover,
+.toggle-mode-class:hover,
 .topMenus:hover,
 .user-profile img:hover,
-.chat-toggle-button:hover,
+.top-right-menu .chat-toggle-button:hover,
 .chat-input-container .chat-send-button:hover,
 .chat-box-container .buzz-chat-button:hover,
 .chat-box-container .close-chat-button:hover {
   opacity: .7; }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode-class:active,
+.toggle-mode-class:active,
 .topMenus:active,
 .user-profile img:active,
-.chat-toggle-button:active,
+.top-right-menu .chat-toggle-button:active,
 .chat-input-container .chat-send-button:active,
 .chat-box-container .buzz-chat-button:active,
 .chat-box-container .close-chat-button:active,
 .contact-pic-container-small:active {
   opacity: .5; }
-
-.top-left-menu .home-logo img {
-  width: 100%;
-  height: 100%; }
 
 .top-left-menu .searchInput_RoClass {
   --inputSearchIconHori: 12px;
@@ -3494,24 +3500,15 @@ video {
   display: flex;
   gap: 5px; }
 
-.top-right-menu .toggle-mode-class {
+.toggle-mode-class {
   font-weight: bold;
   border: none;
   border-radius: 10px;
   background-color: var(--bg-color-6);
   color: var(--text-color-2);
-  cursor: pointer; }
-
-.topMenus {
-  width: 40px;
+  white-space: wrap;
   height: 40px;
-  padding: 7px;
-  border-radius: 10px;
-  background-color: var(--bg-color-8);
   cursor: pointer; }
-
-.gear-icon {
-  background-color: var(--bg-color-7); }
 
 .top-right-menu .user-profile {
   margin-left: 5px; }
@@ -3571,12 +3568,12 @@ video {
 
 /*Left Content*/
 /*Mid Content*/
-.mainmecha_RoClass #burger_RoId {
-  width: 40px;
-  height: 40px;
-  padding: 7px;
-  border-radius: 10px;
+.mainmechaCon_RoClass #burger_RoId {
   background-color: var(--bg-color-8); }
+
+.mainmechaCon_RoClass .toggle-mode-new {
+  display: inline-block;
+  vertical-align: top; }
 
 /*Mid Content*/
 /*Mid Section*/
@@ -3595,25 +3592,6 @@ video {
 
 /*Footer*/
 /*Chat Section*/
-.chat-toggle-button {
-  position: fixed;
-  bottom: 38px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #39AB5B;
-  border: 2px solid #FCC64F;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; }
-
-.chat-toggle-button img {
-  width: 20px;
-  height: 20px; }
-
 .chat-container {
   position: fixed;
   bottom: 25px;
@@ -3950,7 +3928,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 50px;
     font-size: 12px; }
 
@@ -3960,11 +3938,6 @@ video {
     height: 50px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 63px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 100%;
@@ -3997,7 +3970,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 100px;
     font-size: 14px; }
 
@@ -4007,11 +3980,6 @@ video {
     height: 50px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 63px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 350px;
@@ -4044,7 +4012,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 100px;
     font-size: 14px; }
 
@@ -4054,11 +4022,6 @@ video {
     height: 25px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 38px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 350px;
@@ -4091,7 +4054,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 100px;
     font-size: 14px; }
 
@@ -4101,11 +4064,6 @@ video {
     height: 25px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 38px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 350px;
@@ -4123,11 +4081,6 @@ video {
 /************************************************************************************************************/
 /*Other Media Queries*/
 @media (max-width: 400px) {
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    top: 110px; }
-
-  /*Chat Toggle Button*/
   /*Chat Box Container*/
   .chat-box-container {
     width: 300px;
@@ -4143,14 +4096,18 @@ video {
 /*General*/
 /*Mid Section*/
 /*Mid Content*/
+.mainmechaCon_RoClass .page-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color-1);
+  padding: 8px; }
+
 .mainmechaCon_RoClass .post-status-summary {
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 4px rgba(57, 171, 91, 0.7);
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: var(--bg-color-2); }
+  flex-wrap: wrap;
+  gap: 10px; }
 
 .post-status-summary .pending-info-container {
   display: flex;
@@ -4159,7 +4116,8 @@ video {
   padding: 3px;
   border-radius: 10px;
   background-color: #096B6C;
-  position: relative; }
+  position: relative;
+  width: 170px; }
 
 .post-status-summary .pending-info-container img {
   width: 30px;
@@ -4175,8 +4133,8 @@ video {
 
 .pending-info-container .pending-count {
   position: absolute;
-  top: -7px;
-  right: -7px;
+  top: -9px;
+  right: -9px;
   background-color: #E41E3F;
   color: #FFFFFF;
   font-size: 11px;
@@ -4293,6 +4251,16 @@ video {
 /************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Page Title*/
+  .mainmechaCon_RoClass .page-title {
+    text-align: center; }
+
+  /*Page Title*/
+  /*Post Status Summary*/
+  .mainmechaCon_RoClass .post-status-summary {
+    justify-content: center; }
+
+  /*Post Status Summary*/
   /*Post Status*/
   .action-buttons .post-status {
     font-size: 12px; }
@@ -4309,6 +4277,16 @@ video {
 /************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Page Title*/
+  .mainmechaCon_RoClass .page-title {
+    text-align: left; }
+
+  /*Page Title*/
+  /*Post Status Summary*/
+  .mainmechaCon_RoClass .post-status-summary {
+    justify-content: flex-start; }
+
+  /*Post Status Summary*/
   /*Post Status*/
   .action-buttons .post-status {
     font-size: 14px; }
@@ -4325,6 +4303,16 @@ video {
 /************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Page Title*/
+  .mainmechaCon_RoClass .page-title {
+    text-align: left; }
+
+  /*Page Title*/
+  /*Post Status Summary*/
+  .mainmechaCon_RoClass .post-status-summary {
+    justify-content: flex-start; }
+
+  /*Post Status Summary*/
   /*Post Status*/
   .action-buttons .post-status {
     font-size: 14px; }
@@ -4341,6 +4329,16 @@ video {
 /************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Page Title*/
+  .mainmechaCon_RoClass .page-title {
+    text-align: left; }
+
+  /*Page Title*/
+  /*Post Status Summary*/
+  .mainmechaCon_RoClass .post-status-summary {
+    justify-content: flex-start; }
+
+  /*Post Status Summary*/
   /*Post Status*/
   .action-buttons .post-status {
     font-size: 15px; }
@@ -4353,10 +4351,6 @@ video {
 
   /*Action Buttons*/ }
 /*Desktop*/
-/************************************************************************************************************/
-/************************************************************************************************************/
-/*Other Media Queries*/
-/*Other Media Queries*/
 /************************************************************************************************************/
 
 /*# sourceMappingURL=Page_Management_Post.css.map */

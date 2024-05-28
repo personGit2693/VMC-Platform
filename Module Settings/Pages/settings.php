@@ -10,7 +10,7 @@
 	<!--Top Section-->
 	<div class="top-section">
 		<div class="top-left-menu">
-			<a class="home-logo" href=""><img src="../../src/homeiconwhite.png"></a>
+			<a class="topMenus home-logo" href=""><img src="../../src/homeiconwhite.png"></a>
 
 			<!--Search Textbox-->
 			<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
@@ -18,7 +18,14 @@
 		</div>
 
 		<div class="top-right-menu">
-			<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>			
+			<div class="toggle-mode-original">
+				<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>
+			</div>
+
+			<div class="topMenus chat-toggle-button" onclick="controller_Div_ToggleContacts();">
+				<img src="../../src/chat-icon.png">
+			</div>
+
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
 			<div class="user-profile">
@@ -29,11 +36,11 @@
 	<!--Top Section-->
 
 	<div class="rolayout_RoClass" id="rolayout_RoId">
-
-		<!---Side Menu---->
+		<!--Left Side Content-->
 		<div class="sidemecha_RoClass" id="sidemecha_RoId" style="--naviBgColor:transparent;">
 			<div class="sidemechaCon_RoClass">
 				<div class="company-logo"><img src="../../src/vmclogo.png"></div>
+
 				<!--With Sub Menus-->
 				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/sccc icon green.png'); --activeMainNavMenuIcon:url('../../src/sccc icon green.png')"></div>
@@ -41,79 +48,59 @@
 				</div>
 
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+					<a href="http://localhost/VMC Platform/Module Registration/Pages/Page_Access.php" target="_blank" class="subNavMenu_RoClass">				
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 
 					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Application</span>
-					</a>
-
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Application</span>
-					</a>
-
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Application</span>
-					</a>
-
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon white.png'); --activeSubNavMenuIcon:url('../../src/sccc icon white.png')"></div>
-						<span class="generalNavMenuText_RoClass">Application</span>
-					</a>
-
-					<a href="" class="subNavMenu_RoClass">					
-						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/sccc icon green.png'); --activeSubNavMenuIcon:url('../../src/sccc icon green.png')"></div>
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('../../src/rounded heart.png'); --activeSubNavMenuIcon:url('../../src/rounded heart.png')"></div>
 						<span class="generalNavMenuText_RoClass">Application</span>
 					</a>
 				</div>
 			</div>
 		</div>
-		<!---Side Menu---->
+		<!--Left Side Content-->
 		
 		<div class="mainmecha_RoClass">
 			<!--Header-->
@@ -121,6 +108,8 @@
 				<!--Burger-->
 				<div class="burger_RoClass" id="burger_RoId"><img class="burgerIcon_RoClass"></div>
 				<!--Burger-->
+
+				<div class="toggle-mode-new"></div>
 	
 				<!--Settings Content-Title-->
 				<div class="projTitleAndUserLogin_RoClass">
@@ -286,8 +275,6 @@
 	<!--Bottom Section / Footer-->
 
 	<!--Chat Section-->
-	<div class="chat-toggle-button" onclick="controller_Div_ToggleContacts();"><img src="../../src/chat-icon.png"></div>
-
 	<div class="chat-container" style="display: none;">
 		<div class="contacts">
 			<div class="contact-text">Contacts</div>

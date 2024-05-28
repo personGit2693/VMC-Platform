@@ -4,14 +4,19 @@
 /*Mid Section*/
 
 /*Mid Content*/
+@mixin page-title {
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--text-color-1);
+	padding: 8px;
+}
+
 @mixin post-status-summary {
 	padding: 10px;
 	border-radius: 10px;
-	box-shadow: 0px 0px 4px rgba(#39AB5B, .7);
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 10px;
-	background-color: var(--bg-color-2);
 }
 
 @mixin pending-info-container {
@@ -22,6 +27,7 @@
 	border-radius: 10px;
 	background-color: #096B6C;
 	position: relative;
+	width: 170px;
 }
 
 @mixin pending-info-container-img {
@@ -40,8 +46,8 @@
 
 @mixin pending-count {
 	position: absolute;
-	top: -7px;
-	right: -7px;
+	top: -9px;
+	right: -9px;
 	background-color: #E41E3F;
 	color: #FFFFFF;
 	font-size: 11px;
@@ -173,6 +179,42 @@
 /*Mid Section*/
 
 /*General*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Page Title*/
+@mixin page-title_Mobile {
+	text-align: center;
+}
+@mixin page-title_Tablet {
+	text-align: left;
+}
+@mixin page-title_Laptop {
+	text-align: left;
+}
+@mixin page-title_Desktop {
+	text-align: left;
+}
+/*Page Title*/
+/************************************************************************************************************/
+
+
+/************************************************************************************************************/
+/*Post Status Summary*/
+@mixin post-status-summary_Mobile {
+	justify-content: center;
+}
+@mixin post-status-summary_Tablet {
+	justify-content: flex-start;
+}
+@mixin post-status-summary_Laptop {
+	justify-content: flex-start;
+}
+@mixin post-status-summary_Desktop {
+	justify-content: flex-start;
+}
+/*Post Status Summary*/
 /************************************************************************************************************/
 
 

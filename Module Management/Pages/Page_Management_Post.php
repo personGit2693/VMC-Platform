@@ -10,7 +10,7 @@
 	<!--Top Section-->
 	<div class="top-section">
 		<div class="top-left-menu">
-			<a class="home-logo" href=""><img src="../../src/homeiconwhite.png"></a>
+			<a class="topMenus home-logo" href=""><img src="../../src/homeiconwhite.png"></a>
 
 			<!--Search Textbox-->
 			<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
@@ -18,8 +18,14 @@
 		</div>
 
 		<div class="top-right-menu">
-			<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>
-			
+			<div class="toggle-mode-original">
+				<button class="toggle-mode-class" id="toggle-mode-id" onclick="controller_Btn_ChangeMode()">Light Mode</button>
+			</div>
+
+			<div class="topMenus chat-toggle-button" onclick="controller_Div_ToggleContacts();">
+				<img src="../../src/chat-icon.png">
+			</div>
+
 			<a class="topMenus gear-icon" href=""><img src=../../src/gear_white.png></a>
 
 			<div class="user-profile">
@@ -101,6 +107,10 @@
 		<div class="mainmecha_RoClass" id="mainmecha_RoId" style="--mainBodyBgColor:transparent;">
 			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" id="mainmechaCon_RoId" style="--projectTitle_BgColor:transparent;">
 				<div class="burger_RoClass" id="burger_RoId"><img class="burgerIcon_RoClass"></div>
+
+				<div class="toggle-mode-new"></div>
+				
+				<div class="page-title">Post Management</div>
 
 				<div class="post-status-summary">
 					<div class="pending-info-container">
@@ -209,8 +219,6 @@
 	<!--Footer-->
 
 	<!--Chat Section-->
-	<div class="chat-toggle-button" onclick="controller_Div_ToggleContacts();"><img src="../../src/chat-icon.png"></div>
-
 	<div class="chat-container" style="display: none;">
 		<div class="contacts">
 			<div class="contact-text">Contacts</div>

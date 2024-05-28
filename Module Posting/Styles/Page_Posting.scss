@@ -79,15 +79,22 @@ video {
 	@include global_top-left-menu;
 }
 
-.top-left-menu .home-logo {
+.topMenus,
+.mainmechaCon_RoClass #burger_RoId {
+	@include global_topMenus;
+}
+
+.top-left-menu .home-logo,
+.top-right-menu .chat-toggle-button,
+.gear-icon {
 	@include global_home-logo;
 }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode-class:hover,
+.toggle-mode-class:hover,
 .topMenus:hover,
 .user-profile img:hover,
-.chat-toggle-button:hover,
+.top-right-menu .chat-toggle-button:hover,
 .chat-input-container .chat-send-button:hover,
 .chat-box-container .buzz-chat-button:hover,
 .chat-box-container .close-chat-button:hover {
@@ -95,19 +102,15 @@ video {
 }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode-class:active,
+.toggle-mode-class:active,
 .topMenus:active,
 .user-profile img:active,
-.chat-toggle-button:active,
+.top-right-menu .chat-toggle-button:active,
 .chat-input-container .chat-send-button:active,
 .chat-box-container .buzz-chat-button:active,
 .chat-box-container .close-chat-button:active,
 .contact-pic-container-small:active {
 	@include global_active-opacity;
-}
-
-.top-left-menu .home-logo img {
-	@include global_home-logo-img;
 }
 
 .top-left-menu .searchInput_RoClass {
@@ -118,16 +121,8 @@ video {
 	@include global_top-right-menu;
 }
 
-.top-right-menu .toggle-mode-class {
+.toggle-mode-class {
 	@include global_toggle-mode-class;
-}
-
-.topMenus {
-	@include global_topMenus;
-}
-
-.gear-icon {
-	@include global_gear-icon;
 }
 
 .top-right-menu .user-profile {
@@ -182,8 +177,12 @@ video {
 /*Left Content*/
 
 /*Mid Content*/
-.mainmecha_RoClass #burger_RoId {
+.mainmechaCon_RoClass #burger_RoId {
 	@include global_burger_RoId;
+}
+
+.mainmechaCon_RoClass .toggle-mode-new {
+	@include toggle-mode-new;
 }
 /*Mid Content*/
 /*Mid Section*/
@@ -199,14 +198,6 @@ video {
 /*Footer*/
 
 /*Chat Section*/
-.chat-toggle-button {
-	@include global_chat-toggle-button;
-}
-
-.chat-toggle-button img {
-	@include global_chat-toggle-button-img;
-}
-
 .chat-container {
 	@include global_chat-container;
 }
@@ -404,7 +395,7 @@ video {
 	/*Search Box*/
 
 	/*Mode Button*/
-	.top-right-menu .toggle-mode-class {
+	.toggle-mode-class {
 		@include global_toggle-mode-class_Mobile;
 	}
 	/*Mode Button*/
@@ -414,12 +405,6 @@ video {
 		@include global_Mobile_footerHeight;
 	}
 	/*Footer Height*/
-
-	/*Chat Toggle Button*/
-	.chat-toggle-button {
-		@include global_chat-toggle-button_Mobile;
-	}
-	/*Chat Toggle Button*/
 
 	/*Chat Container*/
 	.chat-container {
@@ -457,7 +442,7 @@ video {
 	/*Search Box*/
 
 	/*Mode Button*/
-	.top-right-menu .toggle-mode-class {
+	.toggle-mode-class {
 		@include global_toggle-mode-class_Tablet;
 	}
 	/*Mode Button*/
@@ -467,12 +452,6 @@ video {
 		@include global_Tablet_footerHeight;
 	}
 	/*Footer Height*/
-
-	/*Chat Toggle Button*/
-	.chat-toggle-button {
-		@include global_chat-toggle-button_Tablet;
-	}
-	/*Chat Toggle Button*/
 
 	/*Chat Container*/
 	.chat-container {
@@ -510,7 +489,7 @@ video {
 	/*Search Box*/
 
 	/*Mode Button*/
-	.top-right-menu .toggle-mode-class {
+	.toggle-mode-class {
 		@include global_toggle-mode-class_Laptop;
 	}
 	/*Mode Button*/
@@ -520,12 +499,6 @@ video {
 		@include global_Laptop_footerHeight;
 	}
 	/*Footer Height*/
-
-	/*Chat Toggle Button*/
-	.chat-toggle-button {
-		@include global_chat-toggle-button_Laptop;
-	}
-	/*Chat Toggle Button*/
 
 	/*Chat Container*/
 	.chat-container {
@@ -563,7 +536,7 @@ video {
 	/*Search Box*/
 
 	/*Mode Button*/
-	.top-right-menu .toggle-mode-class {
+	.toggle-mode-class {
 		@include global_toggle-mode-class_Desktop;
 	}
 	/*Mode Button*/
@@ -573,12 +546,6 @@ video {
 		@include global_Desktop_footerHeight;
 	}
 	/*Footer Height*/
-
-	/*Chat Toggle Button*/
-	.chat-toggle-button {
-		@include global_chat-toggle-button_Desktop;
-	}
-	/*Chat Toggle Button*/
 
 	/*Chat Container*/
 	.chat-container {
@@ -599,12 +566,6 @@ video {
 /************************************************************************************************************/
 /*Other Media Queries*/
 @media (max-width:400px) {
-	/*Chat Toggle Button*/
-	.chat-toggle-button {
-		@include global_chat-toggle-button_OMQ;
-	}
-	/*Chat Toggle Button*/
-
 	/*Chat Box Container*/
 	.chat-box-container {
 		@include global_chat-box-container_OMQ;
@@ -630,6 +591,12 @@ video {
 
 /************************************************************************************************************/
 /*General*/
+
+/*Top Section*/
+.top-right-menu .burger-icon {
+	@include burger-icon;
+}
+/*Top Section*/
 
 /*Mid Section*/
 #rolayout_RoId {

@@ -3274,10 +3274,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Footer Height*/
 /************************************************************************************************************/
 /************************************************************************************************************/
-/*Chat Toggle Button*/
-/*Chat Toggle Button*/
-/************************************************************************************************************/
-/************************************************************************************************************/
 /*Chat Container*/
 /*Chat Container*/
 /************************************************************************************************************/
@@ -3292,6 +3288,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Root*/
 /************************************************************************************************************/
 /*General*/
+/*Top Section*/
+/*Top Section*/
 /*Mid Section*/
 /*Mid Content*/
 /*Mid Content*/
@@ -3472,37 +3470,39 @@ video {
   display: flex;
   gap: 5px; }
 
-.top-left-menu .home-logo {
+.topMenus,
+.mainmechaCon_RoClass #burger_RoId {
   width: 40px;
   height: 40px;
-  padding: 7px;
+  padding: 8px;
   border-radius: 10px;
+  cursor: pointer; }
+
+.top-left-menu .home-logo,
+.top-right-menu .chat-toggle-button,
+.gear-icon {
   background-color: var(--bg-color-7); }
 
 .top-left-menu .home-logo:hover,
-.top-right-menu .toggle-mode-class:hover,
+.toggle-mode-class:hover,
 .topMenus:hover,
 .user-profile img:hover,
-.chat-toggle-button:hover,
+.top-right-menu .chat-toggle-button:hover,
 .chat-input-container .chat-send-button:hover,
 .chat-box-container .buzz-chat-button:hover,
 .chat-box-container .close-chat-button:hover {
   opacity: .7; }
 
 .top-left-menu .home-logo:active,
-.top-right-menu .toggle-mode-class:active,
+.toggle-mode-class:active,
 .topMenus:active,
 .user-profile img:active,
-.chat-toggle-button:active,
+.top-right-menu .chat-toggle-button:active,
 .chat-input-container .chat-send-button:active,
 .chat-box-container .buzz-chat-button:active,
 .chat-box-container .close-chat-button:active,
 .contact-pic-container-small:active {
   opacity: .5; }
-
-.top-left-menu .home-logo img {
-  width: 100%;
-  height: 100%; }
 
 .top-left-menu .searchInput_RoClass {
   --inputSearchIconHori: 12px;
@@ -3517,24 +3517,15 @@ video {
   display: flex;
   gap: 5px; }
 
-.top-right-menu .toggle-mode-class {
+.toggle-mode-class {
   font-weight: bold;
   border: none;
   border-radius: 10px;
   background-color: var(--bg-color-6);
   color: var(--text-color-2);
-  cursor: pointer; }
-
-.topMenus {
-  width: 40px;
+  white-space: wrap;
   height: 40px;
-  padding: 7px;
-  border-radius: 10px;
-  background-color: var(--bg-color-8);
   cursor: pointer; }
-
-.gear-icon {
-  background-color: var(--bg-color-7); }
 
 .top-right-menu .user-profile {
   margin-left: 5px; }
@@ -3594,12 +3585,12 @@ video {
 
 /*Left Content*/
 /*Mid Content*/
-.mainmecha_RoClass #burger_RoId {
-  width: 40px;
-  height: 40px;
-  padding: 7px;
-  border-radius: 10px;
+.mainmechaCon_RoClass #burger_RoId {
   background-color: var(--bg-color-8); }
+
+.mainmechaCon_RoClass .toggle-mode-new {
+  display: inline-block;
+  vertical-align: top; }
 
 /*Mid Content*/
 /*Mid Section*/
@@ -3618,25 +3609,6 @@ video {
 
 /*Footer*/
 /*Chat Section*/
-.chat-toggle-button {
-  position: fixed;
-  bottom: 38px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #39AB5B;
-  border: 2px solid #FCC64F;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; }
-
-.chat-toggle-button img {
-  width: 20px;
-  height: 20px; }
-
 .chat-container {
   position: fixed;
   bottom: 25px;
@@ -3973,7 +3945,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 50px;
     font-size: 12px; }
 
@@ -3983,11 +3955,6 @@ video {
     height: 50px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 63px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 100%;
@@ -4020,7 +3987,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 100px;
     font-size: 14px; }
 
@@ -4030,11 +3997,6 @@ video {
     height: 50px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 63px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 350px;
@@ -4067,7 +4029,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 100px;
     font-size: 14px; }
 
@@ -4077,11 +4039,6 @@ video {
     height: 25px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 38px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 350px;
@@ -4114,7 +4071,7 @@ video {
 
   /*Search Box*/
   /*Mode Button*/
-  .top-right-menu .toggle-mode-class {
+  .toggle-mode-class {
     width: 100px;
     font-size: 14px; }
 
@@ -4124,11 +4081,6 @@ video {
     height: 25px; }
 
   /*Footer Height*/
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    bottom: 38px; }
-
-  /*Chat Toggle Button*/
   /*Chat Container*/
   .chat-container {
     width: 350px;
@@ -4146,11 +4098,6 @@ video {
 /************************************************************************************************************/
 /*Other Media Queries*/
 @media (max-width: 400px) {
-  /*Chat Toggle Button*/
-  .chat-toggle-button {
-    top: 110px; }
-
-  /*Chat Toggle Button*/
   /*Chat Box Container*/
   .chat-box-container {
     width: 300px;
@@ -4174,6 +4121,11 @@ video {
 /************************************************************************************************************/
 /************************************************************************************************************/
 /*General*/
+/*Top Section*/
+.top-right-menu .burger-icon {
+  background-color: var(--bg-color-8); }
+
+/*Top Section*/
 /*Mid Section*/
 #rolayout_RoId {
   display: flex;
