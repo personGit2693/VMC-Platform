@@ -3857,6 +3857,22 @@ video {
     left: 0;
     right: 0;
     margin-inline: auto; } }
+@media (max-width: 500px) {
+  .top-section {
+    gap: 0px;
+    padding-inline: 5px; }
+
+  .top-left-menu .searchInput_RoClass {
+    font-size: 12px;
+    padding-left: 16px;
+    background-size: 10px;
+    background-position: 4px center; }
+
+  .top-left-menu .searchInput_RoClass::placeholder {
+    font-size: 11px; }
+
+  #footerTxt_RoId {
+    font-size: 11px; } }
 /*Media Queries*/
 /************************************************************************************************************/
 /************************************************************************************************************/
