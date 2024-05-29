@@ -6,9 +6,9 @@ function connectToDb(string $connectionName){
 	$connectToDb_Obj = new stdClass();
 	$connectToDb_Obj->serverConnection = null;
 	$connectToDb_Obj->selectedPdoConn = null;
-
-	$selectedPdoConn = null;
+	
 	$serverConnection = null;
+	$selectedPdoConn = null;
 	/*Prep Response*/
 
 	try{
