@@ -3837,7 +3837,14 @@ video {
   .chat-box-container {
     bottom: 50px; } }
 @media (max-width: 400px) {
+  .chat-box-container {
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin-inline: auto; } }
+@media (max-width: 500px) {
   .top-section {
+    gap: 0px;
     padding-inline: 5px; }
 
   .top-left-menu .searchInput_RoClass {
@@ -3850,13 +3857,7 @@ video {
     font-size: 11px; }
 
   #footerTxt_RoId {
-    font-size: 11px; }
-
-  .chat-box-container {
-    width: 300px;
-    left: 0;
-    right: 0;
-    margin-inline: auto; } }
+    font-size: 11px; } }
 /*Media Queries*/
 /************************************************************************************************************/
 /************************************************************************************************************/

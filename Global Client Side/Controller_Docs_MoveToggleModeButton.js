@@ -6,7 +6,7 @@ import {toggleModeButton, toggleModeNewLocation, toggleModeOrigLocation} from ".
 /*Controller*/
 function controller_Docs_MoveToggleModeButton(){
 
-	if (window.innerWidth <= 400) {
+	if (window.innerWidth <= 500) {
 		
 		if (!toggleModeNewLocation.contains(toggleModeButton)) {
 			toggleModeNewLocation.appendChild(toggleModeButton);
