@@ -359,6 +359,7 @@
 	<script type="module" src="../../Global Client Side/Controller_Btn_ChangeMode.js"></script>
 	<script type="module" src="../../Global Client Side/Controller_Div_ToggleContacts.js"></script>
 	<script type="module" src="../../Global Client Side/Controller_Div_DisplayChatbox.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<script type="module" src="../../Global Client Side/Controller_Btn_CloseChatbox.js"></script>
 	<!--_Controllers-->
 

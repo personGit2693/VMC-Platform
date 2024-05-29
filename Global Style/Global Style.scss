@@ -608,11 +608,13 @@ video {
 }
 
 .chat-input {
+	font-size: 13px;
 	width: 100%;
 	resize: none;
 	background-color: transparent;
 	max-height: 100px;
 	overflow: auto;
+	color: var(--text-color-1);
 }
 
 .chat-send-button {
@@ -684,6 +686,12 @@ video {
 	.chat-container {
 		width: 100%;
 	}
+
+	.chat-box-container {
+		width: 280px;
+		height: 400px;
+		right: 10px;
+	}
 }
 
 @media (max-width:1080px) {
@@ -698,15 +706,6 @@ video {
 
 	.chat-box-container {
 		bottom: 50px;
-	}
-}
-
-@media (max-width:400px) {
-	.chat-box-container {
-		width: 300px;
-		left: 0;
-		right: 0;
-		margin-inline: auto;
 	}
 }
 
