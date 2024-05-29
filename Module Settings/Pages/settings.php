@@ -162,7 +162,7 @@
 									<div class="placeholdme_RoClass">Old Password</div>	
 								</div>
 								<div class="checkPasswordBtn_Class">
-									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1')" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 								</div>
 							</div>
 
@@ -172,7 +172,7 @@
 									<div class="placeholdme_RoClass">New Password</div>	
 								</div>
 								<div class="checkPasswordBtn_Class">
-									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword2')" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword2',this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 								</div>
 							</div>
 
@@ -182,7 +182,7 @@
 									<div class="placeholdme_RoClass">Confirm New Password</div>	
 								</div>
 								<div class="checkPasswordBtn_Class">
-									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword3')" style="--iconBtnBgIcon: url('../../src/passwordcheck.webp')"></button>
+									<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword3', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 								</div>
 							</div>
 
