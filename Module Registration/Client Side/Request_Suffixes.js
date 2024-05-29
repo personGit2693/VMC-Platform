@@ -1,20 +1,15 @@
-/*Import*/
-import token from "../../Global Client Side/Token.js";
-/*Import*/
-
-
 /*Prep variables*/
 
 /*Prep variables*/
 
 
 /*Export variables*/
-var csmRespondentsDetails_Array = null;
+var suffixDetails_Array = null;
 /*Export variables*/
 
 
-/*Get Suffix Details*/
-async function requestCsmRespondentDetails(internal_clientTypeId, office_id, dateFrom, dateTo){
+/*Get Suffixes Details*/
+async function requestSuffixes(){
 	
 	const requestPromise = new Promise(function(resolve){
 		
@@ -29,7 +24,7 @@ async function requestCsmRespondentDetails(internal_clientTypeId, office_id, dat
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_CsmRespondentsDetails.php", {method: "POST", body: fData})
+		fetch("../Server Side/Response_Suffixes.php", {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {
 
@@ -51,7 +46,7 @@ async function requestCsmRespondentDetails(internal_clientTypeId, office_id, dat
 
 			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
 
-				csmRespondentsDetails_Array = parseObj.csmRespondentsDetails_Array;
+				suffixDetails_Array = parseObj.suffixDetails_Array;
 
 				resolve(true);
 			}
@@ -67,5 +62,5 @@ async function requestCsmRespondentDetails(internal_clientTypeId, office_id, dat
 
 
 /*Export*/
-export {requestCsmRespondentDetails, csmRespondentsDetails_Array};
+export {requestSuffixes, suffixDetails_Array};
 /*Export*/

@@ -1,33 +1,14 @@
-<?php
-/*Dependency PHP Codes*/
-declare(strict_types=1);
-date_default_timezone_set('Asia/Manila');
-$currentDateTime = date("Y-m-d H:i:s", time());
-session_start();
-/*Dependency PHP Codes*/
-
-/*Global Required Files*/
-require_once "./Global PHP/Connection.php";
-/*Global Required Files*/
-
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>	
+</head>
+<body>
 	
-/*Required Files*/
+	<button onclick="controller_Btn_Login()">test hack</button>
 
-/*Required Files*/
-
-
-/*Query string*/
-
-/*Query string*/
-
-
-/*Prep Variables*/
-/*
-$dbConnection = connectToDb("doctracking");
-echo print_r($dbConnection);
-*/
-
-echo $_SERVER['HTTP_HOST'];
-/*Prep Variables*/
-
-?>
+	<script type="module" src="../VMC CSAT/Module Login/Client Side/Controller_Btn_Login.js"></script>
+</body>
+</html>
