@@ -110,7 +110,7 @@
 
 				<div class="toggle-mode-new"></div>
 				
-				<div class="page-title">Post Management</div>
+				<div class="pending-notification">Pending Notification</div>
 
 				<div class="post-status-summary">
 					<div class="pending-info-container">
@@ -133,6 +133,9 @@
 				</div>
 
 				<!--Post Approval Box-->
+
+				<div class="post-review">Posts for Review</div>
+
 				<div class="post-approval-box posts">
 					<div class="post-list">
 						<div class="date-submitted">Date Submitted: 4/19/2024, 8:39:45 PM</div>
@@ -223,7 +226,7 @@
 		<div class="contacts">
 			<div class="contact-text">Contacts</div>
 
-			<input type="text" class="searchInput_RoClass" id="search-contact-id" style="--inputSearchIcon: url('../../src/searchIcon.png')">
+			<input type="text" class="searchInput_RoClass" id="search-contact-id" placeholder="Enter Name" style="--inputSearchIcon: url('../../src/searchIcon.png')">
 		</div>
 
 		<div class="contact-container" onclick="controller_Div_DisplayChatbox('Angelo Arellano')">

@@ -84,10 +84,11 @@
 
 @mixin post-title-id {
 	width: 100%;
-	padding: 7px;
+	padding: 10px;
 	border-radius: 10px;
-	background-color: var(--bg-color-3);
 	font-size: 16px;
+	color: var(--text-color-1);
+	background-color: var(--bg-color-3);
 }
 
 @mixin textarea-container {
@@ -103,6 +104,8 @@
 	resize: none;
 	background-color: transparent;
 	display: block;
+	font-size: 14px;
+	color: var(--text-color-1);
 }
 
 @mixin sb-thumb-visibility {
@@ -403,6 +406,8 @@
 	resize: none;
 	max-height: 250px;
 	background-color: transparent;
+	font-size: 14px;
+	color: var(--text-color-1);
 }
 /*Mid Content*/
 

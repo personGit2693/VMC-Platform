@@ -279,7 +279,7 @@
 		<div class="contacts">
 			<div class="contact-text">Contacts</div>
 
-			<input type="text" class="searchInput_RoClass" id="search-contact-id" style="--inputSearchIcon: url('../../src/searchIcon.png')">
+			<input type="text" class="searchInput_RoClass" id="search-contact-id" placeholder="Enter Name" style="--inputSearchIcon: url('../../src/searchIcon.png')">
 		</div>
 
 		<div class="contact-container" onclick="controller_Div_DisplayChatbox('Angelo Arellano')">

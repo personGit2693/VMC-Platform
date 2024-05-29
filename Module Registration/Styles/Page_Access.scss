@@ -1,7 +1,7 @@
 /************************************************************************************************************/
 /*Import Mixins*/
-@import "../../Global Style/Global Style";
 @import "../../Global Style/Rostrap Global";
+@import "../../Global Style/Global Style";
 @import "./Mixin_Page_Access";
 /*Import Mixins*/
 /************************************************************************************************************/
@@ -11,103 +11,21 @@
 /*Global Codes*/
 
 /*General*/
-html, body {
-	@include global_html-body_Style;
+body {
+	@include global_BodyWoTopHeight;
 }
-
-/*Font Family*/
-@font-face {
-	@include global_font-face;
-}
-/*Font Family*/
-
-/*Footer*/
-#footerWrap_RoId {
-	@include global_footerWrap_RoId;
-}
-
-.footerWrap_RoClass #footerTxt_RoId {
-	@include global_footerTxt_RoId;
-}
-/*Footer*/
-
 /*General*/
 /************************************************************************************************************/
 
 
 /************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px) {
-	/*Body Height*/
+/*Other Media Queries*/
+@media (max-width:1080px) {
 	body {
-		@include global_Mobile_BodyWoTop;
+		@include global_BodyWoTopHeight_OMQ;
 	}
-	/*Body Height*/
-
-	/*Footer Height*/
-	#footerWrap_RoId {
-		@include global_Mobile_footerHeight;
-	}
-	/*Footer Height*/
 }
-/*Mobile*/
-/************************************************************************************************************/
-
-
-/************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px) {
-	/*Body Height*/
-	body {
-		@include global_Tablet_BodyWoTop;
-	}
-	/*Body Height*/
-
-	/*Footer Height*/
-	#footerWrap_RoId {
-		@include global_Tablet_footerHeight;
-	}
-	/*Footer Height*/
-}
-/*Tablet*/
-/************************************************************************************************************/
-
-
-/************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px) {
-	/*Body Height*/
-	body {
-		@include global_Laptop_BodyWoTop;
-	}
-	/*Body Height*/
-
-	/*Footer Height*/
-	#footerWrap_RoId {
-		@include global_Laptop_footerHeight;
-	}
-	/*Footer Height*/
-}
-/*Laptop*/
-/************************************************************************************************************/
-
-
-/************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px) {
-	/*Body Height*/
-	body {
-		@include global_Desktop_BodyWoTop;
-	}
-	/*Body Height*/
-	
-	/*Footer Height*/
-	#footerWrap_RoId {
-		@include global_Desktop_footerHeight;
-	}
-	/*Footer Height*/
-}
-/*Desktop*/
+/*Other Media Queries*/
 
 /*Global Codes*/
 /************************************************************************************************************/

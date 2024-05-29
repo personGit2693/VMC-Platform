@@ -4,11 +4,11 @@
 /*Mid Section*/
 
 /*Mid Content*/
-@mixin page-title {
-	font-size: 18px;
+@mixin pending-notification {
+	font-size: 16px;
 	font-weight: bold;
 	color: var(--text-color-1);
-	padding: 8px;
+	padding: 11px;
 }
 
 @mixin post-status-summary {
@@ -80,13 +80,13 @@
 }
 
 @mixin action-buttons {
-	padding: 5px 0px 15px 0px;
+	padding-block: 8px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid var(--border-color-1);
 	display: flex;
-	gap: 10px;
+	flex-wrap: wrap;
+	gap: 7px;
 	justify-content: flex-end;
-	align-items: center;
 }
 
 @mixin post-status {
@@ -100,9 +100,11 @@
 }
 
 @mixin action-buttons-button {
+	padding-block: 7px;
 	border-radius: 5px;
 	border: none;
 	color: #FFFFFF;
+	text-align: center;
 	cursor: pointer;
 }
 
@@ -184,16 +186,16 @@
 
 /************************************************************************************************************/
 /*Page Title*/
-@mixin page-title_Mobile {
+@mixin pending-notification_Mobile {
 	text-align: center;
 }
-@mixin page-title_Tablet {
+@mixin pending-notification_Tablet {
 	text-align: left;
 }
-@mixin page-title_Laptop {
+@mixin pending-notification_Laptop {
 	text-align: left;
 }
-@mixin page-title_Desktop {
+@mixin pending-notification_Desktop {
 	text-align: left;
 }
 /*Page Title*/
@@ -240,19 +242,19 @@
 /*Action Buttons*/
 @mixin action-buttons-button_Mobile {
 	font-size: 12px;
-	padding: 7px 10px;
+	width: 60px;
 }
 @mixin action-buttons-button_Tablet {
+	width: 70px;
 	font-size: 14px;
-	padding: 7px 15px;
 }
 @mixin action-buttons-button_Laptop {
+	width: 80px;
 	font-size: 14px;
-	padding: 7px 15px;
 }
 @mixin action-buttons-button_Desktop {
+	width: 90px;
 	font-size: 15px;
-	padding: 7px 15px;
 }
 /*Action Buttons*/
 /************************************************************************************************************/
