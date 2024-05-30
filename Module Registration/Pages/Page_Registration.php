@@ -46,15 +46,16 @@
 		<div class="selectDropdownWrap_RoClass" id="suffixDropdown_id" style="z-index: 2;">
 			<input type="hidden" class="selectedOptValue_RoClass">
 			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '1000px')">
-				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 				<div class="displayedSelectedText_RoClass">Suffix(if applicable)</div>
 				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon_Failed.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/avataricon_purple.png', 'Suffix(if applicable)')"></div>
 				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 			</div>
 			<!--Suffix Dropdown Options-->
 			<div class="selectDropdownOptionsWrap_RoClass">
-				<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
-				<div class="selectDropdownOptsArea_RoClass">
+				<input type="text" placeholder="Search Here" class="searchOpts_RoClass" onkeyup="controller_InputText_GetSuffixes(this)">
+				<div class="selectDropdownOptsArea_RoClass">					
+					<!--Component
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt1">
 						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
@@ -80,6 +81,7 @@
 						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
 						<div class="optText_RoClass">III</div>
 					</div>
+					-->
 				</div>
 			</div>
 		</div>
@@ -171,6 +173,7 @@
 
 	<!--_Controllers-->
 	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
+	<script type="module" src="../Client Side/Controller_InputText_GetSuffixes.js"></script>
 	<!--_Controllers-->
 
 	<!--_Executor-->

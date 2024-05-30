@@ -160,6 +160,13 @@ html, body {
 /************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
+
+	/*Box Loader*/
+	.boxLoaderIcon_RoClass{
+		@include boxLoaderIcon_Mobile_Style;		
+	}
+	/*Box Loader*/
+
 	/*Submit Button*/
 	.normButton_RoClass{
 		@include normButton_Mobile_Style;
@@ -220,7 +227,7 @@ html, body {
 	.displayedSelectedResetBtn_RoClass{
 		@include selectDropdownResetBtnSize_Mobile_Style;
 	}
-	/*Select dropdown*/		
+	/*Select dropdown*/	
 }
 /*Mobile*/
 /************************************************************************************************************/
@@ -229,6 +236,13 @@ html, body {
 /************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
+	
+	/*Box Loader*/
+	.boxLoaderIcon_RoClass{
+		@include boxLoaderIcon_Tablet_Style;		
+	}
+	/*Box Loader*/
+
 	/*Submit Button*/
 	.normButton_RoClass{
 		@include normButton_Mobile_Style;
@@ -298,6 +312,13 @@ html, body {
 /************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
+	
+	/*Box Loader*/
+	.boxLoaderIcon_RoClass{
+		@include boxLoaderIcon_Laptop_Style;		
+	}
+	/*Box Loader*/
+
 	/*Submit Button*/
 	.normButton_RoClass{
 		@include normButton_Laptop_Style;
@@ -367,6 +388,13 @@ html, body {
 /************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){	
+	
+	/*Box Loader*/
+	.boxLoaderIcon_RoClass{
+		@include boxLoaderIcon_Desktop_Style;		
+	}
+	/*Box Loader*/
+
 	/*Submit Button*/
 	.normButton_RoClass{
 		@include normButton_Desktop_Style;

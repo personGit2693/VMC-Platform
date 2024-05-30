@@ -214,6 +214,23 @@
 /***********************************************************************************************************************************************************************************************************/
 
 
+/*Box Loader*/
+@mixin boxLoaderIcon_Mobile_Style{
+	--boxLoaderIconSize: 30px;
+}
+@mixin boxLoaderIcon_Tablet_Style{
+	--boxLoaderIconSize: 32px;
+}
+@mixin boxLoaderIcon_Laptop_Style{
+	--boxLoaderIconSize: 34px;
+}
+@mixin boxLoaderIcon_Desktop_Style{
+	--boxLoaderIconSize: 36px;
+}
+/*Box Loader*/
+
+
+
 /***********************************************************************************************************************************************************************************************************/
 /*Submit Button*/
 @mixin normButton_Mobile_Style{	

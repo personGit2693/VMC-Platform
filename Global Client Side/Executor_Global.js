@@ -5,8 +5,8 @@ import outputFooter from "./Output_Footer.js";
 
 
 /*Dependencies*/
-window.addEventListener('resize', controller_Docs_MoveToggleModeButton);
-window.addEventListener('load', controller_Docs_MoveToggleModeButton);
+//window.addEventListener('resize', controller_Docs_MoveToggleModeButton);
+//window.addEventListener('load', controller_Docs_MoveToggleModeButton);
 /*Dependencies*/
 
 

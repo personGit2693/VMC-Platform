@@ -28,7 +28,7 @@ function checkAppKey(object $selectedPdoConn, string $secretKey_Param){
 
 	/*_Execute query*/
 	$checkAppKey_QueryObj = $selectedPdoConn->prepare($checkAppKey_Query);
-	$checkAppKey_QueryObj->bindValue(':token_value', $secretKey_Param, PDO::PARAM_STR);	
+	$checkAppKey_QueryObj->bindValue(':secretKey_Param', $secretKey_Param, PDO::PARAM_STR);	
 	$execution = $checkAppKey_QueryObj->execute();
 	/*_Execute query*/
 

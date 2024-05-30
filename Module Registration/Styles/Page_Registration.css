@@ -3901,6 +3901,8 @@ video {
 /*_Select dropdown General*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
+/*Box Loader*/
+/*Box Loader*/
 /***********************************************************************************************************************************************************************************************************/
 /*Submit Button*/
 /*Submit Button*/
@@ -4111,6 +4113,11 @@ html, body {
 /************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Box Loader*/
+  .boxLoaderIcon_RoClass {
+    --boxLoaderIconSize: 30px; }
+
+  /*Box Loader*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 15px; }
@@ -4187,6 +4194,11 @@ html, body {
 /************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Box Loader*/
+  .boxLoaderIcon_RoClass {
+    --boxLoaderIconSize: 32px; }
+
+  /*Box Loader*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 15px; }
@@ -4263,6 +4275,11 @@ html, body {
 /************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
+  /*Box Loader*/
+  .boxLoaderIcon_RoClass {
+    --boxLoaderIconSize: 34px; }
+
+  /*Box Loader*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 18px; }
@@ -4340,6 +4357,11 @@ html, body {
 /************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
+  /*Box Loader*/
+  .boxLoaderIcon_RoClass {
+    --boxLoaderIconSize: 36px; }
+
+  /*Box Loader*/
   /*Submit Button*/
   .normButton_RoClass {
     --normBtnFSize: 19px; }

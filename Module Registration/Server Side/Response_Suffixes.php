@@ -13,7 +13,7 @@ require_once "../../Global PHP/CheckAppKey.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["secretKey"])){
+if(isset($_POST["secretKey"]) && isset($_POST["searchSuffix"])){
 	
 	/*Required Files*/
 	
@@ -21,7 +21,8 @@ if(isset($_POST["secretKey"])){
 
 
 	/*Query string*/
-	$secretKey = $_POST["secretKey"];	
+	$secretKey = $_POST["secretKey"];
+	$searchSuffix = $_POST["searchSuffix"];	
 	/*Query string*/
 
 
@@ -94,11 +95,22 @@ if(isset($_POST["secretKey"])){
 				
 		/*Get Suffixes Details*/
 		/*_Prep query*/
-		$suffixes_Query = "SELECT * FROM suffixes_tab ORDER BY suffix_text;";				
+		$suffixes_Query = "SELECT * FROM suffixes_tab ";
+
+		if(!empty($searchSuffix)){
+			$suffixes_Query .= "WHERE suffix_text LIKE :searchSuffix ";
+		}
+
+		$suffixes_Query .= "ORDER BY suffix_text;";
 		/*_Prep query*/
 
 		/*_Execute query*/
 		$suffixes_QueryObj = $dbConnection->selectedPdoConn->prepare($suffixes_Query);
+
+		if(!empty($searchSuffix)){
+			$suffixes_QueryObj->bindValue(':searchSuffix', '%'.$searchSuffix.'%', PDO::PARAM_STR);
+		}		
+
 		$execution = $suffixes_QueryObj->execute();		
 		/*_Execute query*/
 
@@ -126,7 +138,7 @@ if(isset($_POST["secretKey"])){
 	echo json_encode($suffixes_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 
-}else if(!isset($_POST["secretKey"])){
+}else if(!isset($_POST["secretKey"]) || !isset($_POST["searchSuffix"])){
 	
 	$suffixes_Resp = new stdClass();
 	$suffixes_Resp->validAccess = false;

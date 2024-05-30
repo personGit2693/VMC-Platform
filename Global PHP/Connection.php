@@ -55,13 +55,13 @@ function connectToDb(string $connectionName){
 			/*Connect to EDTS DB*/
 		}else if($connectionName === "vmc_platform"){
 
-			/*Connect to EDTS DB*/
+			/*Connect to VMC Platform*/
 			$connString = "mysql:host=localhost;dbname=vmc_platform;";
 			$serverUsername = "root";
 			$serverPassword = "";		
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
-			/*Connect to EDTS DB*/
+			/*Connect to VMC Platform*/
 		}
 		/*Connect to DB*/
 

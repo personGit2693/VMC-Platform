@@ -1,5 +1,5 @@
 /*Prep variables*/
-
+var secretKey = null;
 /*Prep variables*/
 
 
@@ -9,50 +9,54 @@ var suffixDetails_Array = null;
 
 
 /*Get Suffixes Details*/
-async function requestSuffixes(){
+async function requestSuffixes(searchSuffix){
 	
-	const requestPromise = new Promise(function(resolve){
-		
-		/*Form data*/
-		const fData = new FormData(); 
-		fData.append("token", token);
-		fData.append("internal_clientTypeId", internal_clientTypeId);
-		fData.append("office_id", office_id);
-		fData.append("dateFrom", dateFrom);
-		fData.append("dateTo", dateTo);
-		/*Form data*/
-
+	const requestPromise = new Promise(function(resolve){		
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_Suffixes.php", {method: "POST", body: fData})
-		.then(res => res.json())
-		.then(parseObj => {
+		fetch("../../Global PHP/Secret Key.txt")
+		.then(res => res.text())
+		.then(skey => {
 
-			if(parseObj.validAccess !== true){
+			/*_Prep Data*/
+			secretKey = skey;			
 
-				console.log("Invalid Access!");
+			const fData = new FormData(); 
+			fData.append("secretKey", secretKey);
+			fData.append("searchSuffix", searchSuffix);
+			/*_Prep Data*/
 
-			}else if(parseObj.serverConnection !== null){
+			/*_Submit Data to Server Side*/
+			fetch("../Server Side/Response_Suffixes.php", {method: "POST", body: fData})
+			.then(res => res.json())
+			.then(parseObj => {
 
-				console.log("Connection Lost!");
+				if(parseObj.validAccess !== true){
 
-			}else if(parseObj.validToken !== null){
+					console.log("Invalid Access!");
 
-				console.log("Invalid Token!");
+				}else if(parseObj.serverConnection !== null){
 
-			}else if(parseObj.execution !== true){
+					console.log("Connection Lost!");
 
-				console.log("Execution Problem in Request CSM Respondent Details!");
+				}else if(parseObj.validToken !== null){
 
-			}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
+					console.log("Invalid Token!");
 
-				suffixDetails_Array = parseObj.suffixDetails_Array;
+				}else if(parseObj.execution !== true){
 
-				resolve(true);
-			}
+					console.log("Execution Problem in Request Suffixes!");
+
+				}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
+
+					suffixDetails_Array = parseObj.suffixDetails_Array;
+
+					resolve(true);
+				}				
+			});
+			/*_Submit Data to Server Side*/
 		});
 		/*Fetch method*/
-		
 	});
 
 
