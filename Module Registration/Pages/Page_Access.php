@@ -28,7 +28,7 @@
 	<!--Javascripts-->
 	
 	<!--_Controllers-->
-	<script type="module" src="../Client Side/Controller_Textarea_ResizeTextArea.js"></script>
+	<script type="module" src="../../Global Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_RequestAccess.js"></script>
 	<!--_Controllers-->
 
