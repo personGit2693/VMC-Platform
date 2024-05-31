@@ -4,12 +4,12 @@ var secretKey = null;
 
 
 /*Export variables*/
-var suffixDetails_Array = null;
+var jobTitleDetails_Array = null;
 /*Export variables*/
 
 
-/*Get Suffixes Details*/
-async function requestSuffixes(searchSuffix){
+/*Get Job Title Details*/
+async function requestJobTitles(searchJobTitle){
 	
 	const requestPromise = new Promise(function(resolve){		
 
@@ -23,11 +23,11 @@ async function requestSuffixes(searchSuffix){
 
 			const fData = new FormData(); 
 			fData.append("secretKey", secretKey);
-			fData.append("searchSuffix", searchSuffix);
+			fData.append("searchJobTitle", searchJobTitle);
 			/*_Prep Data*/
 
 			/*_Submit Data to Server Side*/
-			fetch("../Server Side/Response_Suffixes.php", {method: "POST", body: fData})
+			fetch("../Server Side/Response_JobTitles.php", {method: "POST", body: fData})
 			.then(res => res.json())
 			.then(parseObj => {
 
@@ -35,7 +35,7 @@ async function requestSuffixes(searchSuffix){
 
 					console.log("Invalid Access!");
 
-				}else if(parseObj.serverConnection !== null){
+				}else if(parseObj.mms_Connection !== null || parseObj.platform_Connection !== null){
 
 					console.log("Connection Lost!");
 
@@ -45,11 +45,11 @@ async function requestSuffixes(searchSuffix){
 
 				}else if(parseObj.execution !== true){
 
-					console.log("Execution Problem in Request Suffixes!");
+					console.log("Execution Problem in Request Job Titles!");
 
-				}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
+				}else if(parseObj.validAccess === true && parseObj.mms_Connection === null && parseObj.platform_Connection === null && parseObj.validToken === null && parseObj.execution === true){
 
-					suffixDetails_Array = parseObj.suffixDetails_Array;
+					jobTitleDetails_Array = parseObj.jobTitleDetails_Array;
 
 					resolve(true);
 				}				
@@ -66,5 +66,5 @@ async function requestSuffixes(searchSuffix){
 
 
 /*Export*/
-export {requestSuffixes, suffixDetails_Array};
+export {requestJobTitles, jobTitleDetails_Array};
 /*Export*/

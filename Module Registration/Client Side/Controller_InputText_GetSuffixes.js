@@ -1,6 +1,6 @@
 /*Import*/
 import {submitSuffixes} from "./Submit_Suffixes.js";
-import outputSuffixDiv from "./Output_SuffixDiv.js";
+import outputSuffixOpt from "./Output_SuffixOpt.js";
 import outputSuffixLoaderDiv from "./Output_SuffixLoaderDiv.js";
 /*Import*/
 
@@ -8,7 +8,7 @@ import outputSuffixLoaderDiv from "./Output_SuffixLoaderDiv.js";
 /*Controller*/
 function controller_InputText_GetSuffixes(elem){	
 
-	submitSuffixes(outputSuffixDiv, outputSuffixLoaderDiv, "suffixDropdownLoader-id", elem.value);
+	submitSuffixes(outputSuffixOpt, outputSuffixLoaderDiv, "suffixLoader-id", elem.value);
 }
 /*Controller*/
 

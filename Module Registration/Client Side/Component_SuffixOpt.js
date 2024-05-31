@@ -4,9 +4,9 @@ import {suffixDetails_Array} from "./Request_Suffixes.js";
 
 
 /*Component*/
-function SuffixDiv(){
+function SuffixOpt(){
 
-	let suffixDiv = ``;
+	let suffixOpt = ``;
 
 	for(let index=0; index < suffixDetails_Array.length; index++){
 
@@ -14,18 +14,23 @@ function SuffixDiv(){
 		let suffix_icon = `../../src/${suffixDetails_Array[index].suffix_icon}`;
 		let elemValue = btoa(unescape(encodeURIComponent(JSON.stringify(suffixDetails_Array[index]))));
 
-		suffixDiv += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
+		suffixOpt += `<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 			<input type="hidden" class="optValue_RoClass" value="${elemValue}">
 			<div class="optIcon_RoClass" style="--optIcon: url('${suffix_icon}');"></div>
 			<div class="optText_RoClass">${suffix_text}</div>
 		</div>`;
 	}
 
-	return suffixDiv;
+
+	if(suffixDetails_Array.length == 0){
+		suffixOpt = `<span style="color: #ffffff;">No Result</span>`;
+	}
+
+	return suffixOpt;
 }
 /*Component*/
 
 
 /*Export*/
-export default SuffixDiv;
+export default SuffixOpt;
 /*Export*/

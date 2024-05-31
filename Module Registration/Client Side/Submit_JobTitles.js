@@ -1,5 +1,5 @@
 /*Import*/
-import gatewaySuffixes from "./Gateway_Suffixes.js";
+import gatewayJobTitles from "./Gateway_JobTitles.js";
 /*Import*/
 
 
@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitSuffixes(output, boxLoader, boxLoader_Id, searchSuffix){
+function submitJobTitles(output, boxLoader, boxLoader_Id, searchJobTitle){
 
 	if(blockRequest === false){
 
@@ -17,7 +17,7 @@ function submitSuffixes(output, boxLoader, boxLoader_Id, searchSuffix){
 
 		boxLoader();
 
-		gatewaySuffixes(searchSuffix)
+		gatewayJobTitles(searchJobTitle)
 		.then(gatewayPromise => {
 
 			if(document.getElementById(boxLoader_Id) !== null){					
@@ -37,10 +37,10 @@ function submitSuffixes(output, boxLoader, boxLoader_Id, searchSuffix){
 
 
 /*Declare global*/
-window.submitSuffixes = submitSuffixes;
+window.submitJobTitles = submitJobTitles;
 /*Declare global*/
 
 
 /*Export*/
-export {submitSuffixes, blockRequest};
+export {submitJobTitles, blockRequest};
 /*Export*/

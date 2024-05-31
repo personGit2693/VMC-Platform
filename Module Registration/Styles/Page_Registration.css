@@ -4081,7 +4081,7 @@ html, body {
 
 .searchOpts_RoClass {
   --selectDropdownBorderColor: #ffffff;
-  --searchOptsBgColor: transparent;
+  --searchOptsBgColor: #434C49;
   --searchOptsFColor: #ffffff; }
 
 .displayedSelectedFlex_RoClass {
