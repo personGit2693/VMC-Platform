@@ -1,6 +1,6 @@
 /*Import*/
 import controller_Docs_GetSuffixes from "./Controller_Docs_GetSuffixes.js";
-import controller_Docs_GetJobTitle from "./Controller_Docs_GetJobTitle.js";
+import controller_Docs_GetSections from "./Controller_Docs_GetSections.js";
 /*Import*/
 
 
@@ -14,5 +14,5 @@ controller_Docs_GetSuffixes();
 
 
 /*Populate dropdown for job title*/
-controller_Docs_GetJobTitle();
+controller_Docs_GetSections();
 /*Populate dropdown for job title*/

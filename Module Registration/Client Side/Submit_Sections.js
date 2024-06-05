@@ -1,5 +1,5 @@
 /*Import*/
-import gatewayJobTitles from "./Gateway_JobTitles.js";
+import {requestSections} from "./Request_Sections.js";
 /*Import*/
 
 
@@ -9,7 +9,7 @@ var blockRequest = false;
 
 
 /*Submit Function*/
-function submitJobTitles(output, boxLoader, boxLoader_Id, searchJobTitle){
+function submitSections(output, boxLoader, boxLoader_Id, searchSection){
 
 	if(blockRequest === false){
 
@@ -17,15 +17,15 @@ function submitJobTitles(output, boxLoader, boxLoader_Id, searchJobTitle){
 
 		boxLoader();
 
-		gatewayJobTitles(searchJobTitle)
-		.then(gatewayPromise => {
+		requestSections(searchSection)
+		.then(requestPromise => {
 
 			if(document.getElementById(boxLoader_Id) !== null){					
 				document.getElementById(boxLoader_Id).remove();
 			}
 
 			
-			if(gatewayPromise === true){												
+			if(requestPromise === true){												
 				output();				
 			}
 
@@ -37,10 +37,10 @@ function submitJobTitles(output, boxLoader, boxLoader_Id, searchJobTitle){
 
 
 /*Declare global*/
-window.submitJobTitles = submitJobTitles;
+window.submitSections = submitSections;
 /*Declare global*/
 
 
 /*Export*/
-export {submitJobTitles, blockRequest};
+export {submitSections, blockRequest};
 /*Export*/

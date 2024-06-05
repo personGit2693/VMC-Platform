@@ -62,6 +62,15 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to VMC Platform*/
+		}else if($connectionName === "webhosting"){
+
+			/*Connect to web hosting*/
+			$connString = "mysql:host=68.183.224.113;dbname=valmed_medical_record;";
+			$serverUsername = "valmed_vmcdevs";
+			$serverPassword = "@vmcdbadmin";		
+
+			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
+			/*Connect to web hosting*/
 		}
 		/*Connect to DB*/
 

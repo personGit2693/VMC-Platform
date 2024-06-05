@@ -4,12 +4,12 @@ var secretKey = null;
 
 
 /*Export variables*/
-var jobTitleDetails_Array = null;
+var sections_Array = null;
 /*Export variables*/
 
 
 /*Get Job Title Details*/
-async function requestJobTitles(searchJobTitle){
+async function requestSections(searchSection){
 	
 	const requestPromise = new Promise(function(resolve){		
 
@@ -23,11 +23,11 @@ async function requestJobTitles(searchJobTitle){
 
 			const fData = new FormData(); 
 			fData.append("secretKey", secretKey);
-			fData.append("searchJobTitle", searchJobTitle);
+			fData.append("searchSection", searchSection);
 			/*_Prep Data*/
 
 			/*_Submit Data to Server Side*/
-			fetch("../Server Side/Response_JobTitles.php", {method: "POST", body: fData})
+			fetch("../Server Side/Response_Sections.php", {method: "POST", body: fData})
 			.then(res => res.json())
 			.then(parseObj => {
 
@@ -35,7 +35,7 @@ async function requestJobTitles(searchJobTitle){
 
 					console.log("Invalid Access!");
 
-				}else if(parseObj.mms_Connection !== null || parseObj.platform_Connection !== null){
+				}else if(parseObj.serverConnection !== null){
 
 					console.log("Connection Lost!");
 
@@ -45,11 +45,11 @@ async function requestJobTitles(searchJobTitle){
 
 				}else if(parseObj.execution !== true){
 
-					console.log("Execution Problem in Request Job Titles!");
+					console.log("Execution Problem in Request Sections!");
 
-				}else if(parseObj.validAccess === true && parseObj.mms_Connection === null && parseObj.platform_Connection === null && parseObj.validToken === null && parseObj.execution === true){
+				}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
 
-					jobTitleDetails_Array = parseObj.jobTitleDetails_Array;
+					sections_Array = parseObj.sections_Array;
 
 					resolve(true);
 				}				
@@ -66,5 +66,5 @@ async function requestJobTitles(searchJobTitle){
 
 
 /*Export*/
-export {requestJobTitles, jobTitleDetails_Array};
+export {requestSections, sections_Array};
 /*Export*/

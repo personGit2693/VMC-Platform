@@ -99,7 +99,7 @@
 
 			<!--Area Dropdown Options-->
 			<div class="selectDropdownOptionsWrap_RoClass">
-				<input type="text" placeholder="Search Here" class="searchOpts_RoClass" onkeyup="controller_InputText_GetJobTitle(this)">
+				<input type="text" placeholder="Search Here" class="searchOpts_RoClass" onkeyup="controller_InputText_GetSections(this)">
 				<div class="selectDropdownOptsArea_RoClass">
 					<!--
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
@@ -176,7 +176,7 @@
 	<!--_Controllers-->
 	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
 	<script type="module" src="../Client Side/Controller_InputText_GetSuffixes.js"></script>
-	<script type="module" src="../Client Side/Controller_InputText_GetJobTitle.js"></script>
+	<script type="module" src="../Client Side/Controller_InputText_GetSections.js"></script>
 	<!--_Controllers-->
 
 	<!--_Executor-->

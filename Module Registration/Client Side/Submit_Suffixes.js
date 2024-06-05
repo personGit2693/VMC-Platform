@@ -1,5 +1,5 @@
 /*Import*/
-import gatewaySuffixes from "./Gateway_Suffixes.js";
+import {requestSuffixes} from "./Request_Suffixes.js";
 /*Import*/
 
 
@@ -17,7 +17,7 @@ function submitSuffixes(output, boxLoader, boxLoader_Id, searchSuffix){
 
 		boxLoader();
 
-		gatewaySuffixes(searchSuffix)
+		requestSuffixes(searchSuffix)
 		.then(gatewayPromise => {
 
 			if(document.getElementById(boxLoader_Id) !== null){					
