@@ -65,7 +65,7 @@ function connectToDb(string $connectionName){
 		}else if($connectionName === "webhosting"){
 
 			/*Connect to web hosting*/
-			$connString = "mysql:host=68.183.224.113;dbname=valmed_medical_record;";
+			$connString = "mysql:host=194.233.70.98;dbname=valmed_medical_record;";
 			$serverUsername = "valmed_vmcdevs";
 			$serverPassword = "@vmcdbadmin";		
 

@@ -22,7 +22,7 @@ require_once "./Global PHP/Connection.php";
 
 
 /*Prep Variables*/
-$dbConnection = connectToDb("vmc_platform");
+$dbConnection = connectToDb("webhosting");
 echo print_r($dbConnection);
 
 /*echo $_SERVER['HTTP_HOST'];*/
