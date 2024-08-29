@@ -26,7 +26,7 @@
 }
 
 
-/*_Already have account General*/
+/**Already have account General*/
 @mixin alreadyHaveAccount_General_Style{
 	text-align: center;
 	margin-bottom:20px;
@@ -37,10 +37,10 @@
 @mixin alreadyHaveAccountLink_General_Style{	
 	color: #FAB142;
 }
-/*_Already have account General*/
+/**Already have account General*/
 
 
-/*_Submit Button General*/
+/**Submit Button General*/
 @mixin normButton_General_Style{
 	margin-left:auto;
 	margin-right:auto;
@@ -57,10 +57,10 @@
 	--normBtnHovActBgColor: #0ABE50;
 	--normBtnWidth: 200px;
 }
-/*_Submit Button General*/
+/**Submit Button General*/
 
 
-/*_Toggle Password Button General*/
+/**Toggle Password Button General*/
 @mixin togglePasswordBtn_General_Style{
 	--iconBtnWidth: 40px;		
 	--iconBtnHeight: 30px;
@@ -70,10 +70,10 @@
 	--iconBtnBorderColor: transparent;
 	--iconBtnBorderRadius: 0;
 }
-/*_Toggle Password Button General*/
+/**Toggle Password Button General*/
 
 
-/*_Form General*/
+/**Form General*/
 @mixin formTitle_class{
 	font-size: 22px;
 	font-family: Helvetica;
@@ -90,10 +90,10 @@
 	padding: 7px;	
 	height: fit-content;
 }
-/*_Form General*/
+/**Form General*/
 
 
-/*_Input fields General*/
+/**Input fields General*/
 @mixin inputFieldsWrapMargin_General_Style{		
 	margin:10px;	
 }
@@ -107,19 +107,19 @@
 	opacity: 0.8;
 	padding-left: 10px !important;
 }
-/*_Input fields General*/
+/**Input fields General*/
 
 
-/*_cusInputs_RoClass General*/
+/**cusInputs_RoClass General*/
 @mixin cusInputs_General_Style{
 	display:flex;
 	flex-direction:row;
 	--customInputColor: rgb(255, 255, 247);		
 }
-/*_cusInputs_RoClass General*/
+/**cusInputs_RoClass General*/
 
 
-/*_Input text General*/
+/**Input text General*/
 @mixin textBoxImgWrap_General_Style{
 	transition: width 0.1s linear 0s, height 0.1s linear 0s;
 	margin-right: 4px;
@@ -139,81 +139,81 @@
 	flex-wrap: nowrap;
 	align-items: center;
 }
-/*_Input text General*/
+/**Input text General*/
 
 
-/*_Input password General*/
+/**Input password General*/
 @mixin checkPasswordBtn_General_Style{
 	position: absolute; 
 	right: 5px; 
 	top: 50%;
   	transform: translateY(-50%);
 }
-/*_Input password General*/
+/**Input password General*/
 
 
-/*_Select dropdown General*/
-/*_ _Mixin for selectDropdownWrap_RoClass*/
+/**Select dropdown General*/
+/***Mixin for selectDropdownWrap_RoClass*/
 @mixin selectDropdownWrap_General_Style{
 	 --selectDropdownWidth: auto;
 	 --selectDropdownBorderWidth: 1px;
 	 /*--selectDropdownBorderRadius: value;*/
 }
-/*_ _Mixin for selectDropdownWrap_RoClass*/
+/***Mixin for selectDropdownWrap_RoClass*/
 
 
-/*_ _Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
+/***Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
 @mixin selectDropdownBorderColor_General_Style{
 	--selectDropdownBorderColor:  #ffffff;	
 }
-/*_ _Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
+/***Mixin for selectDropdownWrap_RoClass, searchOpts_RoClass*/
 
 
-/*_ _Mixin for displayedSelectedFlex_RoClass*/
+/***Mixin for displayedSelectedFlex_RoClass*/
 @mixin displayedSelectedFlex_General_Style{
 	--selectDropdownBgColor: #434C49;
 	padding-top: 10px !important;
 	padding-bottom: 10px !important;
 }
-/*_ _Mixin for displayedSelectedFlex_RoClass*/
+/***Mixin for displayedSelectedFlex_RoClass*/
 
 
-/*_ _Mixin for displayedSelectedText_RoClass, optText_RoClass*/
+/***Mixin for displayedSelectedText_RoClass, optText_RoClass*/
 @mixin selectDropdownFColor_General_Style{
 	--selectDropdownFColor: #ffffff;
 }
-/*_ _Mixin for displayedSelectedText_RoClass, optText_RoClass*/
+/***Mixin for displayedSelectedText_RoClass, optText_RoClass*/
 
 
-/*_ _Mixin for searchOpts_RoClass*/
+/***Mixin for searchOpts_RoClass*/
 @mixin searchOpts_General_Style{
 	--searchOptsBgColor: #434C49;
 	--searchOptsFColor: #ffffff;
 }
-/*_ _Mixin for searchOpts_RoClass*/
+/***Mixin for searchOpts_RoClass*/
 
 
-/*_ _Mixin for selectDropdownOpt_RoClass*/
+/***Mixin for selectDropdownOpt_RoClass*/
 @mixin selectDropdownOpt_General_Style{
 	--hoverOptBgColor: #39AB5B;
 	--hoverOptFColor: #ffffff;
 }
-/*_ _Mixin for selectDropdownOpt_RoClass*/
+/***Mixin for selectDropdownOpt_RoClass*/
 
 
-/*_ _Mixin for selectDropdownOptionsWrap_RoClass*/
+/***Mixin for selectDropdownOptionsWrap_RoClass*/
 @mixin selectDropdownOptionsWrap_General_Style{
 	--selectDropdownScrollSize: 7px;
 	--optWrapThumbBgColor: #FCC64F;
 	--selectDropdownBgColor: #434C49;
 }
-/*_ _Mixin for selectDropdownOptionsWrap_RoClass*/
-/*_Select dropdown General*/
+/***Mixin for selectDropdownOptionsWrap_RoClass*/
+/**Select dropdown General*/
 
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
-
+/***********************************************************************************************************************************************************************************************************/
 /*Box Loader*/
 @mixin boxLoaderIcon_Mobile_Style{
 	--boxLoaderIconSize: 30px;
@@ -228,8 +228,7 @@
 	--boxLoaderIconSize: 36px;
 }
 /*Box Loader*/
-
-
+/***********************************************************************************************************************************************************************************************************/
 
 /***********************************************************************************************************************************************************************************************************/
 /*Submit Button*/
@@ -247,7 +246,6 @@
 }
 /*Submit Button*/
 /***********************************************************************************************************************************************************************************************************/
-
 
 /***********************************************************************************************************************************************************************************************************/
 /*Form*/
@@ -284,7 +282,6 @@
 }
 /*Form*/
 /***********************************************************************************************************************************************************************************************************/
-
 
 /***********************************************************************************************************************************************************************************************************/
 /*Input text*/
@@ -351,10 +348,9 @@
 /*Input text*/
 /***********************************************************************************************************************************************************************************************************/
 
-
 /***********************************************************************************************************************************************************************************************************/
 /*Select Dropdown*/
-/*_Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
+/**Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
 @mixin selectDropdownIconSize_Mobile_Style{
 	--selectDropdownIconSize: 14px; /*To be changed*/
 }
@@ -367,10 +363,10 @@
 @mixin selectDropdownIconSize_Desktop_Style{
 	--selectDropdownIconSize: 18px; /*changed*/
 }
-/*_Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
+/**Mixin for displayedSelectedIcon_RoClass, optIcon_RoClass*/
 
 
-/*_Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
+/**Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
 @mixin selectDropdownFSize_Mobile_Style{
 	--selectDropdownFSize: 14px; /*To be changed*/
 }
@@ -383,10 +379,10 @@
 @mixin selectDropdownFSize_Desktop_Style{
 	--selectDropdownFSize: 18px; /*changed*/
 }
-/*_Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
+/**Mixin for displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass*/
 
 
-/*_Mixin for displayedSelectedChevron_RoClass*/
+/**Mixin for displayedSelectedChevron_RoClass*/
 @mixin selectDropdownChevronSize_Mobile_Style{
 	--selectDropdownChevronSize: 14px; /*To be changed*/
 }
@@ -399,10 +395,10 @@
 @mixin selectDropdownChevronSize_Desktop_Style{
 	--selectDropdownChevronSize: 18px; /*changed*/
 }
-/*_Mixin for displayedSelectedChevron_RoClass*/
+/**Mixin for displayedSelectedChevron_RoClass*/
 
 
-/*_Mixin for displayedSelectedResetBtn_RoClass*/
+/**Mixin for displayedSelectedResetBtn_RoClass*/
 @mixin selectDropdownResetBtnSize_Mobile_Style{
 	--selectDropdownResetBtnSize: 14px; /*To be changed*/
 }
@@ -415,6 +411,6 @@
 @mixin selectDropdownResetBtnSize_Desktop_Style{
 	--selectDropdownResetBtnSize: 18px; /*changed*/
 }
-/*_Mixin for displayedSelectedResetBtn_RoClass*/
+/**Mixin for displayedSelectedResetBtn_RoClass*/
 /*Select Dropdown*/
 /***********************************************************************************************************************************************************************************************************/

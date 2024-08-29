@@ -1,14 +1,13 @@
 <?php 
-
 function checkAppKey(object $selectedPdoConn, string $secretKey_Param){
 	
 	/*Prep return*/
-	$checkAppKey_Resp = new stdClass();
-	$checkAppKey_Resp->counted = 0;
-	$checkAppKey_Resp->execution = null;
-
 	$counted = 0;
 	$execution = null;
+
+	$checkAppKey_Resp = new stdClass();
+	$checkAppKey_Resp->counted = $counted;
+	$checkAppKey_Resp->execution = $execution;	
 	/*Prep return*/
 
 
@@ -47,5 +46,4 @@ function checkAppKey(object $selectedPdoConn, string $secretKey_Param){
 	return $checkAppKey_Resp;
 	/*Return response*/
 }
-
 ?>

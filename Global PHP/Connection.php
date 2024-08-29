@@ -1,18 +1,17 @@
 <?php
-
 function connectToDb(string $connectionName){
 
 	/*Prep Response*/
-	$connectToDb_Obj = new stdClass();
-	$connectToDb_Obj->serverConnection = null;
-	$connectToDb_Obj->selectedPdoConn = null;
-	
 	$serverConnection = null;
 	$selectedPdoConn = null;
+
+	$connectToDb_Obj = new stdClass();
+	$connectToDb_Obj->serverConnection = $serverConnection;
+	$connectToDb_Obj->selectedPdoConn = $selectedPdoConn;
+	
 	/*Prep Response*/
 
 	try{
-
 		/*Connect to DB*/
 		if($connectionName === "vmc_csat"){
 
@@ -23,7 +22,6 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to VMC CSAT DB*/
-
 		}else if($connectionName === "MMSdb"){
 			
 			/*Connect to MMS DB*/
@@ -33,7 +31,6 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to MMS DB*/
-
 		}else if($connectionName === "service_request"){
 
 			/*Connect to ESRS DB*/
@@ -43,7 +40,6 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to ESRS DB*/
-
 		}else if($connectionName === "doctracking"){
 
 			/*Connect to EDTS DB*/
@@ -53,7 +49,7 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to EDTS DB*/
-		}else if($connectionName === "vmc_platform"){
+		}else if($connectionName === "valmed_platform"){
 
 			/*Connect to VMC Platform*/
 			$connString = "mysql:host=localhost;dbname=vmc_platform;";
