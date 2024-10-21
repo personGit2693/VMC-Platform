@@ -14,10 +14,13 @@
 			</div>
 		</div>
 		<div class="mainmecha_RoClass lightMode">
+			<!--Page Header and Burger-->
 			<div class="mainmechaCon_RoClass layoutOneHead_RoClass lightMode">
+				<!---Burger-->
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
+				<!---Burger-->
 
-				<!--Header-->
+				<!---Header-->
 				<div class="projTitleAndUserLogin_RoClass">
 					<div class="projTitleTxt_RoClass">VMC Platform</div>
 					<div class="userLogin_RoClass">
@@ -25,16 +28,26 @@
 						<div class="userLoginDetails_RoClass">Account Details</div>
 					</div>
 				</div>
-				<!--Header-->
-			</div>			
+				<!---Header-->
+			</div>
+			<!--Page Header and Burger-->			
 
+
+			<!--Page Body-->
 			<div class="mainmechaCon_RoClass" id="pageContentsWrap">
-				<!--Featured wrap for smart only-->
-				<div class="mainmechaCon_RoClass" id="featuredWrap">
-					
+				<!---Left Side or Contents Area-->
+				<div class="mainmechaCon_RoClass" id="mainContentWrap">
+					right side
 				</div>
-				<!--Featured wrap for smart only-->
-			</div>				
+				<!---Left Side or Contents Area-->
+
+				<!---Right Side or Chat Area-->
+				<div class="mainmechaCon_RoClass" id="chatContentWrap">
+					Chat side
+				</div>
+				<!---Right Side or Chat Area-->
+			</div>
+			<!--Page Body-->				
 		</div> 
 	</div>
 
