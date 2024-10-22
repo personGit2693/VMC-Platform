@@ -6429,6 +6429,20 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Root*/
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*General*/
+/*General*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Media Queries*/
+/*Right Side or Chat Area*/
+/*Right Side or Chat Area*/
+/*Media Queries*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 /*Root*/
@@ -6448,7 +6462,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitle_BgColor:#0F143C;
   --projectTitleTextFColor: #ffffff;
   /***Header*/
-  /**Rogrid*/ }
+  /**Rogrid*/
+  /**Right Side or Chat Area*/
+  --chatArea_BgColor: #252331;
+  /**Right Side or Chat Area*/ }
 
 .lightMode {
   /**Rogrid*/
@@ -6462,7 +6479,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitle_BgColor:#39AB5B;
   --projectTitleTextFColor: #ffffff;
   /***Header*/
-  /**Rogrid*/ }
+  /**Rogrid*/
+  --chatArea_BgColor: #ffffff; }
 
 /*Dark Mode and light mode*/
 /*Rogrid*/
@@ -6481,16 +6499,45 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /**Header*/
 /*Rogrid*/
+/*Right Side or Chat Area*/
+#chatContentWrap {
+  overflow: auto;
+  flex-shrink: 0;
+  height: 100%;
+  width: clamp(180px, 40vw, 250px);
+  background-color: var(--chatArea_BgColor);
+  display: none;
+  border: 1px solid red; }
+
+/*Right Side or Chat Area*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
+@media all and (max-width: 641px) {
+  /*Right Side or Chat Area*/
+  #chatContentWrap {
+    position: absolute;
+    /*added*/
+    right: 0;
+    /*added*/ }
+
+  /*Right Side or Chat Area*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Right Side or Chat Area*/
+  #chatContentWrap {
+    position: absolute;
+    /*added*/
+    right: 0;
+    /*added*/ }
+
+  /*Right Side or Chat Area*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6505,8 +6552,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/
-/*Right Side or Chat Area*/
-/*Right Side or Chat Area*/
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
@@ -6527,26 +6572,80 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  height: var(--pageContentsWrap_Height_Smart);
   border: 1px solid yellow; }
 
 /*Page Body*/
 /*Left Side or Contents Area*/
 #mainContentWrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
   border: 1px solid red; }
 
 /*Left Side or Contents Area*/
-/*Right Side or Chat Area*/
-#chatContentWrap {
-  overflow: auto;
+/*Smart only features controller*/
+#featuresControlsWrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
-  height: 100%;
-  width: clamp(180px, 40vw, 250px);
   border: 1px solid blue; }
 
-/*Right Side or Chat Area*/
+/*Smart only features controller*/
+/*Page Features*/
+#featuresWrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid blue; }
+
+.featuresControls {
+  display: flex;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 85px;
+  border: 2px solid #39AB5B;
+  margin: 15px;
+  border-radius: 15px; }
+
+.featuresIcon {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background: #39AB5B url("../../src/event.png") center center no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  border: 2px solid gray; }
+
+.featuresTextWrap {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 75px;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  border: 1px solid gray; }
+
+.featuresTextTitle {
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid yellow; }
+
+.featuresTextDefinition {
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid yellow; }
+
+/*Page Features*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6558,15 +6657,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #pageContentsWrap {
     height: var(--pageContentsWrap_Height_Mobile); }
 
-  /*Page Body*/
-  /*Right Side or Chat Area*/
-  #chatContentWrap {
-    position: absolute;
-    /*added*/
-    right: 0;
-    /*added*/ }
-
-  /*Right Side or Chat Area*/ }
+  /*Page Body*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6576,15 +6667,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #pageContentsWrap {
     height: var(--pageContentsWrap_Height_Tablet); }
 
-  /*Page Body*/
-  /*Right Side or Chat Area*/
-  #chatContentWrap {
-    position: absolute;
-    /*added*/
-    right: 0;
-    /*added*/ }
-
-  /*Right Side or Chat Area*/ }
+  /*Page Body*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

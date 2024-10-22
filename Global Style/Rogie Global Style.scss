@@ -1,6 +1,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
 @import "./Rogie Rostrap Global";
+@import "./Mixin Rogie Global Style";
 /***********************************************************************************************************************************************************************************************************/
 
 
@@ -24,17 +25,20 @@
 	--naviBgColor:#0F143C;
 	/***Side Navigation*/		
 
-
 	/***Main Body*/
 	--mainBodyBgColor:#3B3B3B;
 	/***Main Body*/
-
 
 	/***Header*/
 	--projectTitle_BgColor:#0F143C;
 	--projectTitleTextFColor: #ffffff;
 	/***Header*/
 	/**Rogrid*/
+
+
+	/**Right Side or Chat Area*/
+	--chatArea_BgColor: #252331;
+	/**Right Side or Chat Area*/
 }
 
 .lightMode{
@@ -43,17 +47,18 @@
 	--naviBgColor:#ffffff;
 	/***Side Navigation*/
 
-
 	/***Main Body*/
 	--mainBodyBgColor:#E1EAF4;
 	/***Main Body*/
-
 
 	/***Header*/
 	--projectTitle_BgColor:#39AB5B;
 	--projectTitleTextFColor: #ffffff;
 	/***Header*/
 	/**Rogrid*/
+
+
+	--chatArea_BgColor: #ffffff;
 }
 /*Dark Mode and light mode*/
 
@@ -76,6 +81,20 @@
 }
 /**Header*/
 /*Rogrid*/
+
+
+/*Right Side or Chat Area*/
+#chatContentWrap{
+	overflow: auto;
+	flex-shrink: 0;
+	height: 100%;		
+	width: clamp(180px, 40vw, 250px);
+	background-color: var(--chatArea_BgColor);
+
+	display: none;
+	border: 1px solid red;
+}
+/*Right Side or Chat Area*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -87,7 +106,11 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	
+	/*Right Side or Chat Area*/
+	#chatContentWrap{
+		@include chatContentWrap_Smart;
+	}
+	/*Right Side or Chat Area*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -96,7 +119,11 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	
+	/*Right Side or Chat Area*/
+	#chatContentWrap{
+		@include chatContentWrap_Smart;
+	}
+	/*Right Side or Chat Area*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
