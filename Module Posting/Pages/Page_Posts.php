@@ -8,14 +8,14 @@
 </head>
 <body>
 	<div class="rolayout_RoClass">
-		<div class="sidemecha_RoClass lightMode">
+		<div class="sidemecha_RoClass darkMode">
 			<div class="sidemechaCon_RoClass">
 				My Content
 			</div>
 		</div>
-		<div class="mainmecha_RoClass lightMode">
+		<div class="mainmecha_RoClass darkMode">
 			<!--Page Header and Burger-->
-			<div class="mainmechaCon_RoClass layoutOneHead_RoClass lightMode">
+			<div class="mainmechaCon_RoClass layoutOneHead_RoClass darkMode">
 				<!--Burger-->
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
 				<!--Burger-->
@@ -41,36 +41,49 @@
 					<div class="mainmechaCon_RoClass" id="featuresControlsWrap">
 						<!--Event feature controller-->
 						<div class="mainmechaCon_RoClass featuresControls">							
-							<div class="mainmechaCon_RoClass featuresIcon"></div>
+							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/event-white.png')"></div>
 							<div class="mainmechaCon_RoClass featuresTextWrap">
-								<div class="mainmechaCon_RoClass featuresTextTitle">Event</div>
+								<div class="mainmechaCon_RoClass featuresTextTitle">Events</div>
 								<div class="mainmechaCon_RoClass featuresTextDefinition">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
 							</div>							
-						</div>	
-						<!--Event feature controller-->
-
-						<!--Event feature controller-->
+						</div>
+						<!--Event feature controller-->	
+						
+						<!--Committees feature controller-->
 						<div class="mainmechaCon_RoClass featuresControls">							
-							<div class="mainmechaCon_RoClass featuresIcon"></div>
+							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/Committees-White.png')"></div>
 							<div class="mainmechaCon_RoClass featuresTextWrap">
-								<div class="mainmechaCon_RoClass featuresTextTitle">Event</div>
-								<div class="mainmechaCon_RoClass featuresTextDefinition">lorem ipsum lorem ipsum lorem ipsum</div>
+								<div class="mainmechaCon_RoClass featuresTextTitle darkMode">Committees</div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition darkMode">lorem ipsum lorem ipsum lorem ipsum</div>
 							</div>							
 						</div>	
-						<!--Event feature controller-->					
+						<!--Committees feature controller-->
+
+
+						<!--Pinned Post feature controller-->
+						<div class="mainmechaCon_RoClass featuresControls">							
+							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/Pin-White.png')"></div>
+							<div class="mainmechaCon_RoClass featuresTextWrap">
+								<div class="mainmechaCon_RoClass featuresTextTitle darkMode">Pinned Post</div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+							</div>							
+						</div>	
+						<!--Pinned Post feature controller-->					
 					</div>
 					<!--Smart only features controller-->
 
 					<!--Page Features-->
 					<div class="mainmechaCon_RoClass" id="featuresWrap">
-						Page features
+						<div class="mainmechaCon_RoClass" style="border: 2px solid green; width: 100%;">
+							
+						</div>
 					</div>
 					<!--Page Features-->
 				</div>
 				<!--Left Side or Contents Area-->
 
 				<!--Right Side or Chat Area-->
-				<div class="mainmechaCon_RoClass lightMode" id="chatContentWrap">
+				<div class="mainmechaCon_RoClass darkMode" id="chatContentWrap">
 					Chat side
 				</div>
 				<!--Right Side or Chat Area-->

@@ -49,27 +49,13 @@
 /*Smart only features controller*/
 #featuresControlsWrap{
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 	flex-shrink: 0;
 
 	border: 1px solid blue;
 }
-/*Smart only features controller*/
-
-
-/*Page Features*/
-#featuresWrap{
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-
-	border: 1px solid blue;	
-}
-
 
 .featuresControls{
 	display: flex;
@@ -78,47 +64,61 @@
 	justify-content: space-around;
 	align-items: center;
 	width: 250px;
-	height: 85px;	
+	height: auto;	
 	border: 2px solid #39AB5B;
 	margin: 15px;
 	border-radius: 15px;
+	background-color: var(--featuresControls_BgColor);;
 }
 
 .featuresIcon{
 	overflow: hidden;
-	width: 50px;
-	height: 50px;
+	width: clamp(30px, 7vw, 40px);
+	height: clamp(30px, 7vw, 40px);
 	flex-shrink: 0;	
-	background: #39AB5B url("../../src/event.png") center center no-repeat;
+	background: #39AB5B var(--featureIconSrc) center center no-repeat;
 	background-size: contain;
 	border-radius: 50%;
-
-	border: 2px solid gray;
+	margin-left: 5px;
 }
 
 .featuresTextWrap{
 	display: flex;
 	overflow: hidden;
-	width: 100%;
-	height: 75px;
+	width: 100%;	
 	flex-flow: column nowrap;
-	justify-content: flex-start;
-
-	border: 1px solid gray;
+	justify-content: flex-start;	
+	font-family: "binanceFont";
+	margin-left: 5px;
 }
 
 .featuresTextTitle{
 	overflow: hidden;
 	flex-shrink: 0;
-
-	border: 1px solid yellow;
+	font-weight: bold;
+	font-size: clamp(12px, 2.5vw, 16px);
+	padding: 2px;
+	color: var(--featuresConTxtColor);	
 }
 
 .featuresTextDefinition{
 	overflow: hidden;
 	height: 100%;
+	padding: 4px;
+	font-size: clamp(12px, 1.5vw, 16px);
+	color: var(--featuresConTxtColor);
+}
+/*Smart only features controller*/
 
-	border: 1px solid yellow;
+
+/*Page Features*/
+#featuresWrap{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	height: 100%;
+
+	border: 1px solid blue;	
 }
 /*Page Features*/
 /*General*/
