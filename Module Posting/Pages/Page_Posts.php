@@ -59,7 +59,6 @@
 						</div>	
 						<!--Committees feature controller-->
 
-
 						<!--Pinned Post feature controller-->
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/Pin-White.png')"></div>
@@ -73,10 +72,33 @@
 					<!--Smart only features controller-->
 
 					<!--Page Features-->
-					<div class="mainmechaCon_RoClass" id="featuresWrap">
-						<div class="mainmechaCon_RoClass" style="border: 2px solid green; width: 100%;">
+					<div class="mainmechaCon_RoClass" id="featuresWrap" style="border: 2px solid blue;">
+						<!--What is new posts-->
+						<div class="mainmechaCon_RoClass" id="whatIsNewSection" style="border: 2px solid green;">
+							<div class="mainmechaCon_RoClass sectionsLabel darkMode">What's New</div>
 							
+							<!--Posted Section-->
+							<div class="mainmechaCon_RoClass" id="postsWrap">
+								<!--Per Post-->
+								<div class="mainmechaCon_RoClass posts">
+									<div class="mainmechaCon_RoClass postsHeader">
+										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
+											<img class="postsDp" src="../../src/MySampleDp.png"/>
+											<div class="mainmechaCon_RoClass postsHeaderDetails">
+												<div class="mainmechaCon_RoClass postsEmpName">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
+													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
+													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
+												</div>
+											</div>											
+										</div>
+									</div>
+								</div>
+								<!--Per Post-->
+							</div>
+							<!--Posted Section-->
 						</div>
+						<!--What is new posts-->
 					</div>
 					<!--Page Features-->
 				</div>

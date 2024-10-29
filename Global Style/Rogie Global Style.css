@@ -3259,7 +3259,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Smart only features controller*/
   --featuresControls_BgColor: #0F143C;
   --featuresConTxtColor: #ffffff;
-  /**Smart only features controller*/ }
+  /**Smart only features controller*/
+  /**Sections Label*/
+  --sectionsLabelColor: #ffffff;
+  /**Sections Label*/ }
 
 .lightMode {
   /**Rogrid*/
@@ -3280,7 +3283,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Smart only features controller*/
   --featuresControls_BgColor: #ffffff;
   --featuresConTxtColor: black;
-  /**Smart only features controller*/ }
+  /**Smart only features controller*/
+  /**Sections Label*/
+  --sectionsLabelColor: black;
+  /**Sections Label*/ }
 
 /*Dark Mode and light mode*/
 /*Rogrid*/
@@ -3312,8 +3318,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Right Side or Chat Area*/
 /*Sections Label*/
 .sectionsLabel {
-  font-family: binanceFont;
-  font-size: clamp(12px, 2.5vw, 22px); }
+  font-family: "binanceFont";
+  font-size: clamp(14px, 3vw, 18px);
+  overflow: hidden;
+  color: var(--sectionsLabelColor);
+  font-weight: bold;
+  padding: 14px; }
 
 /*Sections Label*/
 /*General*/

@@ -6474,7 +6474,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Smart only features controller*/
   --featuresControls_BgColor: #0F143C;
   --featuresConTxtColor: #ffffff;
-  /**Smart only features controller*/ }
+  /**Smart only features controller*/
+  /**Sections Label*/
+  --sectionsLabelColor: #ffffff;
+  /**Sections Label*/ }
 
 .lightMode {
   /**Rogrid*/
@@ -6495,7 +6498,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Smart only features controller*/
   --featuresControls_BgColor: #ffffff;
   --featuresConTxtColor: black;
-  /**Smart only features controller*/ }
+  /**Smart only features controller*/
+  /**Sections Label*/
+  --sectionsLabelColor: black;
+  /**Sections Label*/ }
 
 /*Dark Mode and light mode*/
 /*Rogrid*/
@@ -6527,8 +6533,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Right Side or Chat Area*/
 /*Sections Label*/
 .sectionsLabel {
-  font-family: binanceFont;
-  font-size: clamp(12px, 2.5vw, 22px); }
+  font-family: "binanceFont";
+  font-size: clamp(14px, 3vw, 18px);
+  overflow: hidden;
+  color: var(--sectionsLabelColor);
+  font-weight: bold;
+  padding: 14px; }
 
 /*Sections Label*/
 /*General*/
@@ -6582,7 +6592,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 :root {
   --pageContentsWrap_Height_Mobile: calc(100% - clamp(14px, 3vw, 18px) - clamp(50px, 5vw, 65px) - 68px);
   --pageContentsWrap_Height_Tablet: calc(100% - clamp(14px, 3vw, 18px) - clamp(50px, 5vw, 65px) - 32px);
-  --pageContentsWrap_Height_Pc: calc(100% - clamp(14px, 3vw, 18px) - clamp(50px, 5vw, 65px) - 3px); }
+  --pageContentsWrap_Height_Pc: calc(100% - clamp(14px, 3vw, 18px) - clamp(50px, 5vw, 65px) - 3px);
+  --whatIsNewSection_Width_Smart: 100%;
+  --whatIsNewSection_Width_Pc: 420px;
+  --featuresIconSize: clamp(30px, 7vw, 40px);
+  --postsDpSize: clamp(30px, 6vw, 55px); }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6593,6 +6607,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
+  overflow: auto;
   border: 1px solid yellow; }
 
 /*Page Body*/
@@ -6602,7 +6617,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-flow: column nowrap;
   justify-content: flex-start;
   width: 100%;
-  height: 100%;
   border: 1px solid red; }
 
 /*Left Side or Contents Area*/
@@ -6626,12 +6640,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   border: 2px solid #39AB5B;
   margin: 15px;
   border-radius: 15px;
-  background-color: var(--featuresControls_BgColor); }
+  background-color: var(--featuresControls_BgColor);
+  cursor: pointer; }
 
 .featuresIcon {
   overflow: hidden;
-  width: clamp(30px, 7vw, 40px);
-  height: clamp(30px, 7vw, 40px);
+  width: var(--featuresIconSize);
+  height: var(--featuresIconSize);
   flex-shrink: 0;
   background: #39AB5B var(--featureIconSrc) center center no-repeat;
   background-size: contain;
@@ -6668,9 +6683,64 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  height: 100%;
-  border: 1px solid blue; }
+  height: 100%; }
 
+/**What is new posts*/
+#whatIsNewSection {
+  overflow: hidden; }
+
+/***Posted Section*/
+#postsWrap {
+  overflow: auto; }
+
+.posts {
+  overflow: hidden;
+  margin: 14px;
+  background-color: #0F143C; }
+
+.postsHeader {
+  overflow: hidden; }
+
+.postsHeaderDetailsWrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.postsDp {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: var(--postsDpSize);
+  height: var(--postsDpSize);
+  object-fit: contain;
+  border: 2px solid #ffffff;
+  margin: 7px; }
+
+.postsHeaderDetails {
+  width: 100%; }
+
+.postsEmpName {
+  font-family: "binanceFont";
+  font-size: clamp(14px, 1vw, 18px);
+  padding: 7px;
+  font-weight: bold;
+  color: #ffffff; }
+
+.postsCatNTimeWrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+
+.postsCatNTimeTxt {
+  font-family: "binanceFont";
+  font-size: clamp(12px, 1vw, 16px);
+  color: #97A0A8;
+  padding: 0px 7px; }
+
+/***Posted Section*/
+/**What is new posts*/
 /*Page Features*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6683,7 +6753,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #pageContentsWrap {
     height: var(--pageContentsWrap_Height_Mobile); }
 
-  /*Page Body*/ }
+  /*Page Body*/
+  /*Page Features*/
+  /**What is new posts*/
+  #whatIsNewSection {
+    width: var(--whatIsNewSection_Width_Smart); }
+
+  /**What is new posts*/
+  /*Page Features*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6693,7 +6770,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #pageContentsWrap {
     height: var(--pageContentsWrap_Height_Tablet); }
 
-  /*Page Body*/ }
+  /*Page Body*/
+  /*Page Features*/
+  /**What is new posts*/
+  #whatIsNewSection {
+    width: var(--whatIsNewSection_Width_Smart); }
+
+  /**What is new posts*/
+  /*Page Features*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6703,7 +6787,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   #pageContentsWrap {
     height: var(--pageContentsWrap_Height_Pc); }
 
-  /*Page Body*/ }
+  /*Page Body*/
+  /*Page Features*/
+  /**What is new posts*/
+  #whatIsNewSection {
+    width: var(--whatIsNewSection_Width_Pc); }
+
+  /**What is new posts*/
+  /*Page Features*/ }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/
