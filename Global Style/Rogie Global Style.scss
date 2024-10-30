@@ -57,6 +57,14 @@
 	/**Sections Label*/
 	--sectionsLabelColor: #ffffff;
 	/**Sections Label*/
+
+
+	/**Posted Section*/
+	--postsBoxShadow: 0px 0px 10px #0F143C;
+	--postsBgColor: #0F143C;
+	--postTextsColor: #ffffff;
+	--postsSeenTxtsColor: #ffffff;
+	/**Posted Section*/
 }
 
 .lightMode{
@@ -75,6 +83,7 @@
 	/***Header*/
 	/**Rogrid*/
 
+
 	/**Right Side or Chat Area*/
 	--chatArea_BgColor: #ffffff;
 	/**Right Side or Chat Area*/
@@ -89,6 +98,13 @@
 	/**Sections Label*/
 	--sectionsLabelColor: black;
 	/**Sections Label*/
+
+
+	/**Posted Section*/
+	--postsBoxShadow: 0px 0px 10px black;
+	--postsBgColor: #ffffff;
+	--postTextsColor: black;
+	/**Posted Section*/
 }
 /*Dark Mode and light mode*/
 
@@ -122,7 +138,6 @@
 	background-color: var(--chatArea_BgColor);
 
 	display: none;
-	border: 1px solid red;
 }
 /*Right Side or Chat Area*/
 

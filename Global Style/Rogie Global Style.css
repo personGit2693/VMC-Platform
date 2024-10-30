@@ -3262,7 +3262,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Smart only features controller*/
   /**Sections Label*/
   --sectionsLabelColor: #ffffff;
-  /**Sections Label*/ }
+  /**Sections Label*/
+  /**Posted Section*/
+  --postsBoxShadow: 0px 0px 10px #0F143C;
+  --postsBgColor: #0F143C;
+  --postTextsColor: #ffffff;
+  --postsSeenTxtsColor: #ffffff;
+  /**Posted Section*/ }
 
 .lightMode {
   /**Rogrid*/
@@ -3286,7 +3292,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Smart only features controller*/
   /**Sections Label*/
   --sectionsLabelColor: black;
-  /**Sections Label*/ }
+  /**Sections Label*/
+  /**Posted Section*/
+  --postsBoxShadow: 0px 0px 10px black;
+  --postsBgColor: #ffffff;
+  --postTextsColor: black;
+  /**Posted Section*/ }
 
 /*Dark Mode and light mode*/
 /*Rogrid*/
@@ -3312,8 +3323,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   height: 100%;
   width: clamp(180px, 40vw, 250px);
   background-color: var(--chatArea_BgColor);
-  display: none;
-  border: 1px solid red; }
+  display: none; }
 
 /*Right Side or Chat Area*/
 /*Sections Label*/

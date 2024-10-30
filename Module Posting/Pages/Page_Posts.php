@@ -72,20 +72,21 @@
 					<!--Smart only features controller-->
 
 					<!--Page Features-->
-					<div class="mainmechaCon_RoClass" id="featuresWrap" style="border: 2px solid blue;">
+					<div class="mainmechaCon_RoClass" id="featuresWrap">
 						<!--What is new posts-->
-						<div class="mainmechaCon_RoClass" id="whatIsNewSection" style="border: 2px solid green;">
+						<div class="mainmechaCon_RoClass" id="whatIsNewSection">
 							<div class="mainmechaCon_RoClass sectionsLabel darkMode">What's New</div>
 							
 							<!--Posted Section-->
 							<div class="mainmechaCon_RoClass" id="postsWrap">
 								<!--Per Post-->
-								<div class="mainmechaCon_RoClass posts">
+								<div class="mainmechaCon_RoClass posts darkMode">
+									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
 											<img class="postsDp" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
-												<div class="mainmechaCon_RoClass postsEmpName">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
@@ -93,6 +94,48 @@
 											</div>											
 										</div>
 									</div>
+									<!--Post Header-->
+
+									<!--Post Body-->
+									<div class="mainmechaCon_RoClass postsBody">
+										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle darkMode">Downfall of government salary</div>
+										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
+											<div class="mainmechaCon_RoClass postsSeenIcon"></div>
+											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
+										</div>
+									</div>
+									<!--Post Body-->
+								</div>
+								<!--Per Post-->
+
+								<!--Per Post-->
+								<div class="mainmechaCon_RoClass posts darkMode">
+									<!--Post Header-->
+									<div class="mainmechaCon_RoClass postsHeader">
+										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
+											<img class="postsDp" src="../../src/MySampleDp.png"/>
+											<div class="mainmechaCon_RoClass postsHeaderDetails">
+												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
+													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
+													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
+												</div>
+											</div>											
+										</div>
+									</div>
+									<!--Post Header-->
+
+									<!--Post Body-->
+									<div class="mainmechaCon_RoClass postsBody">
+										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle darkMode">Downfall of government salary</div>
+										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
+											<div class="mainmechaCon_RoClass postsSeenIcon"></div>
+											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
+										</div>
+									</div>
+									<!--Post Body-->
 								</div>
 								<!--Per Post-->
 							</div>
@@ -105,7 +148,7 @@
 				<!--Left Side or Contents Area-->
 
 				<!--Right Side or Chat Area-->
-				<div class="mainmechaCon_RoClass darkMode" id="chatContentWrap">
+				<div class="mainmechaCon_RoClass darkMode" id="chatContentWrap" style="border: 1px solid red;">
 					Chat side
 				</div>
 				<!--Right Side or Chat Area-->
