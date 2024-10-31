@@ -34,11 +34,11 @@
 
 
 			<!--Page Body-->
-			<div class="mainmechaCon_RoClass" id="pageContentsWrap">
+			<div class="mainmechaCon_RoClass" id="pageContentsWrap" style="border: 2px solid yellow;">
 				<!--Left Side or Contents Area-->
-				<div class="mainmechaCon_RoClass" id="mainContentWrap">
+				<div class="mainmechaCon_RoClass" id="mainContentWrap" style="border: 2px solid red;">
 					<!--Smart only features controller-->
-					<div class="mainmechaCon_RoClass" id="featuresControlsWrap">
+					<div class="mainmechaCon_RoClass" id="featuresControlsWrap" style="border: 2px solid blue; display: none;">
 						<!--Event feature controller-->
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/event-white.png')"></div>
@@ -72,9 +72,9 @@
 					<!--Smart only features controller-->
 
 					<!--Page Features-->
-					<div class="mainmechaCon_RoClass" id="featuresWrap">
+					<div class="mainmechaCon_RoClass" id="featuresWrap" style="border: 2px solid blue; ">
 						<!--What is new posts-->
-						<div class="mainmechaCon_RoClass" id="whatIsNewSection">
+						<div class="mainmechaCon_RoClass" id="whatIsNewSection" style="border: 2px solid green;">
 							<div class="mainmechaCon_RoClass sectionsLabel darkMode">What's New</div>
 							
 							<!--Posted Section-->
@@ -128,8 +128,9 @@
 
 									<!--Post Body-->
 									<div class="mainmechaCon_RoClass postsBody">
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-										<div class="mainmechaCon_RoClass postsTitle darkMode">Downfall of government salary</div>
+										<div class="mainmechaCon_RoClass postsBodyDetails darkMode"><img src="./../../src/rally post.jpg"/></div>
+										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle darkMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
 											<div class="mainmechaCon_RoClass postsSeenIcon"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
@@ -137,18 +138,28 @@
 									</div>
 									<!--Post Body-->
 								</div>
-								<!--Per Post-->
+								<!--Per Post-->								
 							</div>
 							<!--Posted Section-->
 						</div>
 						<!--What is new posts-->
+
+						<!--Events-->
+						<div class="mainmechaCon_RoClass" id="eventsSection" style="border: 2px solid green;">
+							<div class="mainmechaCon_RoClass sectionsLabel darkMode">Events and Schedules</div>
+
+							<div class="mainmechaCon_RoClass" id="calendarWrap">
+								
+							</div>
+						</div>
+						<!--Events-->
 					</div>
 					<!--Page Features-->
 				</div>
 				<!--Left Side or Contents Area-->
 
 				<!--Right Side or Chat Area-->
-				<div class="mainmechaCon_RoClass darkMode" id="chatContentWrap" style="border: 1px solid red;">
+				<div class="mainmechaCon_RoClass darkMode" id="chatContentWrap" style="border: 2px solid red;">
 					Chat side
 				</div>
 				<!--Right Side or Chat Area-->

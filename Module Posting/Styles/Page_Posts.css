@@ -6695,7 +6695,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /**What is new posts*/
 #whatIsNewSection {
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 1px solid #97A0A8; }
 
 #postsWrap {
   overflow: auto; }
@@ -6756,6 +6757,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-size: var(--postsBodyDetailsFsize);
   color: var(--postTextsColor); }
 
+.postsBodyDetails img {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: clamp(200px, 40vw, 250px);
+  object-fit: cover; }
+
 .postsTitle {
   overflow: hidden;
   font-family: "binanceFont";
@@ -6787,6 +6796,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   margin-left: 5px; }
 
 /**What is new posts*/
+/**Events*/
+.eventsSection {
+  overflow: hidden; }
+
+/**Events*/
 /*Page Features*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
