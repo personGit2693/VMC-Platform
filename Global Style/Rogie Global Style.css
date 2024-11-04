@@ -3263,11 +3263,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: #ffffff;
   /**Sections Label*/
+  /**Page Features*/
+  --highlightedTextsColor: #ffffff;
+  /**Page Features*/
+  /**Events and Activities*/
+  --eventsBgColor: #0F143C;
+  --eventsBoxShadow: 0px 0px 10px #0F143C;
+  /**Events and Activities*/
   /**Posted Section*/
   --postsBoxShadow: 0px 0px 10px #0F143C;
   --postsBgColor: #0F143C;
-  --postTextsColor: #ffffff;
-  --postsSeenTxtsColor: #ffffff;
   /**Posted Section*/ }
 
 .lightMode {
@@ -3293,10 +3298,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: black;
   /**Sections Label*/
+  /**Page Features*/
+  --highlightedTextsColor: black;
+  /**Page Features*/
+  /**Events and Activities*/
+  --eventsBgColor: #ffffff;
+  --eventsBoxShadow: 0px 0px 10px black;
+  /**Events and Activities*/
   /**Posted Section*/
   --postsBoxShadow: 0px 0px 10px black;
   --postsBgColor: #ffffff;
-  --postTextsColor: black;
   /**Posted Section*/ }
 
 /*Dark Mode and light mode*/

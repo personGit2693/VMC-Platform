@@ -6478,11 +6478,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: #ffffff;
   /**Sections Label*/
+  /**Page Features*/
+  --highlightedTextsColor: #ffffff;
+  /**Page Features*/
+  /**Events and Activities*/
+  --eventsBgColor: #0F143C;
+  --eventsBoxShadow: 0px 0px 10px #0F143C;
+  /**Events and Activities*/
   /**Posted Section*/
   --postsBoxShadow: 0px 0px 10px #0F143C;
   --postsBgColor: #0F143C;
-  --postTextsColor: #ffffff;
-  --postsSeenTxtsColor: #ffffff;
   /**Posted Section*/ }
 
 .lightMode {
@@ -6508,10 +6513,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: black;
   /**Sections Label*/
+  /**Page Features*/
+  --highlightedTextsColor: black;
+  /**Page Features*/
+  /**Events and Activities*/
+  --eventsBgColor: #ffffff;
+  --eventsBoxShadow: 0px 0px 10px black;
+  /**Events and Activities*/
   /**Posted Section*/
   --postsBoxShadow: 0px 0px 10px black;
   --postsBgColor: #ffffff;
-  --postTextsColor: black;
   /**Posted Section*/ }
 
 /*Dark Mode and light mode*/
@@ -6602,8 +6613,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 :root {
   --whatIsNewSection_Width_Smart: 100%;
   --whatIsNewSection_Width_Pc: 420px;
+  --articleMargins: 14px 14px 50px 14px;
   --featuresIconSize: clamp(30px, 7vw, 40px);
-  --postsDpSize: clamp(30px, 6vw, 55px);
+  --dpSize: clamp(30px, 6vw, 55px);
   --postsBodyDetailsFsize: clamp(13px, 1vw, 17px);
   --postsSeenIconSize: clamp(20px, 1vw, 25px);
   --postsSeenFsize: clamp(11px, 1vw, 16px); }
@@ -6617,7 +6629,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 /*Page Body*/
 /*Left Side or Contents Area*/
@@ -6627,7 +6640,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  overflow: auto; }
+  overflow: hidden; }
 
 /*Left Side or Contents Area*/
 /*Smart only features controller*/
@@ -6636,7 +6649,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-  flex-shrink: 0; }
+  height: 100%; }
 
 .featuresControls {
   display: flex;
@@ -6691,19 +6704,105 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 #featuresWrap {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center; }
+  justify-content: center;
+  height: 100%;
+  overflow: hidden; }
 
+.perFeature {
+  display: flex;
+  overflow: hidden;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  height: 100%; }
+
+.perFeature .sectionsLabel {
+  flex-shrink: 0; }
+
+.perFeature .sectionsWrap {
+  overflow: auto;
+  height: 100%; }
+
+/**Events and Activities*/
+#eventsSection {
+  width: 100%;
+  /*To be changed*/ }
+
+.events {
+  display: flex;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--eventsBgColor);
+  box-shadow: var(--eventsBoxShadow);
+  margin: var(--articleMargins); }
+
+.eventsDp {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: var(--dpSize);
+  height: var(--dpSize);
+  object-fit: contain;
+  border: 2px solid #ffffff;
+  margin: 7px; }
+
+.eventsDetailsWrap {
+  overflow: hidden;
+  width: 100%; }
+
+.eventsTitle {
+  font-family: "binanceFont";
+  font-size: clamp(14px, 1vw, 18px);
+  padding: 7px;
+  font-weight: bold;
+  color: var(--highlightedTextsColor); }
+
+.eventsDetailsTxts {
+  font-family: "binanceFont";
+  font-size: clamp(12px, 1vw, 16px);
+  color: #97A0A8;
+  padding: 0px 7px; }
+
+.eventsOngoing {
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: center;
+  font-family: "binanceFont";
+  font-size: clamp(13px, 1.5vw, 17px);
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 7px;
+  color: #ffffff;
+  border: 1.5px solid #39AB5B;
+  background-color: #39AB5B; }
+
+.eventsUpcoming {
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: center;
+  font-family: "binanceFont";
+  font-size: clamp(13px, 1.5vw, 17px);
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 7px;
+  background-color: #ffffff;
+  color: black;
+  border: 1.5px solid #97A0A8; }
+
+/**Events and Activities*/
 /**What is new posts*/
 #whatIsNewSection {
-  overflow: hidden;
-  border-top: 1px solid #97A0A8; }
-
-#postsWrap {
-  overflow: auto; }
+  width: 100%;
+  /*To be changed*/ }
 
 .posts {
   overflow: hidden;
-  margin: 14px 14px 50px 14px;
+  margin: var(--articleMargins);
   background-color: var(--postsBgColor);
   box-shadow: var(--postsBoxShadow); }
 
@@ -6721,8 +6820,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   border-radius: 50%;
   flex-shrink: 0;
-  width: var(--postsDpSize);
-  height: var(--postsDpSize);
+  width: var(--dpSize);
+  height: var(--dpSize);
   object-fit: contain;
   border: 2px solid #ffffff;
   margin: 7px; }
@@ -6735,7 +6834,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-size: clamp(14px, 1vw, 18px);
   padding: 7px;
   font-weight: bold;
-  color: var(--postTextsColor); }
+  color: var(--highlightedTextsColor); }
 
 .postsCatNTimeWrap {
   display: flex;
@@ -6755,7 +6854,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   font-family: "binanceFont";
   font-size: var(--postsBodyDetailsFsize);
-  color: var(--postTextsColor); }
+  color: var(--highlightedTextsColor); }
 
 .postsBodyDetails img {
   position: relative;
@@ -6769,7 +6868,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   font-family: "binanceFont";
   font-size: var(--postsBodyDetailsFsize);
-  color: var(--postTextsColor);
+  color: var(--highlightedTextsColor);
   font-weight: bold;
   margin-top: 7px; }
 
@@ -6790,17 +6889,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .postsSeenTxts {
   overflow: hidden;
-  color: var(--postTextsColor);
+  color: var(--highlightedTextsColor);
   font-family: "binanceFont";
   font-size: var(--postsSeenFsize);
   margin-left: 5px; }
 
 /**What is new posts*/
-/**Events*/
-.eventsSection {
-  overflow: hidden; }
-
-/**Events*/
 /*Page Features*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
