@@ -15,7 +15,7 @@
 	--whatIsNewSection_Width_Pc: 420px;
 
 	--articleMargins: 14px 14px 50px 14px;
-	
+
 	--featuresIconSize: clamp(30px, 7vw, 40px);
 
 	--dpSize: clamp(30px, 6vw, 55px);
@@ -30,13 +30,27 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+
+/*Rogrid*/
+/**Main Side*/
+.mainmecha_RoClass{
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.layoutOneHead_RoClass{
+	flex-shrink: 0;
+}
+/**Main Side*/
+/*Rogrid*/
+
+
 /*Page Body*/
 #pageContentsWrap{	
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: flex-start;
-	height: 100%;
-	overflow: hidden;	
+	height: 100%;	
 }
 /*Page Body*/
 
@@ -161,6 +175,7 @@
 	background-color: var(--eventsBgColor);
 	box-shadow: var(--eventsBoxShadow);
 	margin: var(--articleMargins);
+	flex-shrink: 0;
 }
 
 .eventsDp{
@@ -209,6 +224,7 @@
 	margin: var(--articleMargins);
 	background-color: var(--postsBgColor);
 	box-shadow: var(--postsBoxShadow);
+	flex-shrink: 0;
 }
 
 .postsHeader{	
@@ -297,6 +313,7 @@
 }
 /**What is new posts*/
 /*Page Features*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 

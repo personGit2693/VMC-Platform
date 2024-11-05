@@ -6624,13 +6624,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Rogrid*/
+/**Main Side*/
+.mainmecha_RoClass {
+  display: flex;
+  flex-flow: column nowrap; }
+
+.layoutOneHead_RoClass {
+  flex-shrink: 0; }
+
+/**Main Side*/
+/*Rogrid*/
 /*Page Body*/
 #pageContentsWrap {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 /*Page Body*/
 /*Left Side or Contents Area*/
@@ -6735,7 +6745,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   align-items: flex-start;
   background-color: var(--eventsBgColor);
   box-shadow: var(--eventsBoxShadow);
-  margin: var(--articleMargins); }
+  margin: var(--articleMargins);
+  flex-shrink: 0; }
 
 .eventsDp {
   position: relative;
@@ -6804,7 +6815,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   margin: var(--articleMargins);
   background-color: var(--postsBgColor);
-  box-shadow: var(--postsBoxShadow); }
+  box-shadow: var(--postsBoxShadow);
+  flex-shrink: 0; }
 
 .postsHeader {
   overflow: hidden; }

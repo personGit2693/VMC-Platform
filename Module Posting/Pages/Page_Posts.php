@@ -75,7 +75,7 @@
 					<!--Page Features-->
 					<div class="mainmechaCon_RoClass" id="featuresWrap" style="border: 2px solid blue;">
 						<!--Events and Activities-->
-						<div class="mainmechaCon_RoClass perFeature" id="eventsSection" style="border: 2px solid orange; display: block;">
+						<div class="mainmechaCon_RoClass perFeature" id="eventsSection" style="border: 2px solid orange; display: none;">
 							<div class="mainmechaCon_RoClass sectionsLabel lightMode" style="border: 2px solid gray;">Events and Activities</div>
 
 							<div class="mainmechaCon_RoClass sectionsWrap" id="eventsWrap" style="border: 2px solid gray;">
