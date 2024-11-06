@@ -39,6 +39,13 @@
 	border-radius: 8px;
 	margin: 7px;
 }
+
+@mixin pinnedPostAndCommittes_General{
+	display: flex;
+	overflow: hidden;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 

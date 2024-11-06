@@ -3344,7 +3344,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   color: var(--sectionsLabelColor);
   font-weight: bold;
-  padding: 14px; }
+  padding: 14px;
+  flex-shrink: 0; }
 
 /*Sections Label*/
 /*General*/
