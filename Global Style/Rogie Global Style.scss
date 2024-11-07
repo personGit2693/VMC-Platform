@@ -64,6 +64,11 @@
 	/**Page Features*/
 
 
+	/*DP Border Color*/
+	--dpBorderColor: #ffffff;
+	/*DP Border Color*/
+
+
 	/**Events and Activities*/
 	--eventsBgColor: #0F143C;
 	--eventsBoxShadow: 0px 0px 10px #0F143C;
@@ -74,6 +79,17 @@
 	--postsBoxShadow: 0px 0px 10px #0F143C;
 	--postsBgColor: #0F143C;
 	/**Posted Section*/
+
+
+	/**Pinned Posts and Committees*/
+	/***Pinned Posts*/
+	--pinnedPostBgColor: #0F143C;
+	/***Pinned Posts*/
+
+	/***Committees*/
+	--committeeBgColor: #0F143C;
+	/***Committees*/
+	/**Pinned Posts and Committees*/
 }
 
 .lightMode{
@@ -114,6 +130,11 @@
 	/**Page Features*/
 
 
+	/*DP Border Color*/
+	--dpBorderColor: #97A0A8;
+	/*DP Border Color*/
+
+
 	/**Events and Activities*/
 	--eventsBgColor: #ffffff;
 	--eventsBoxShadow: 0px 0px 10px black;
@@ -124,6 +145,12 @@
 	--postsBoxShadow: 0px 0px 10px black;
 	--postsBgColor: #ffffff;
 	/**Posted Section*/
+
+
+	/**Pinned Posts and Committees*/
+	--pinnedPostBgColor: #ffffff;
+	--committeeBgColor: #ffffff;
+	/**Pinned Posts and Committees*/
 }
 /*Dark Mode and light mode*/
 
@@ -155,8 +182,6 @@
 	height: 100%;		
 	width: clamp(180px, 40vw, 250px);
 	background-color: var(--chatArea_BgColor);
-
-	display: none;
 }
 /*Right Side or Chat Area*/
 
@@ -164,7 +189,7 @@
 /*Sections Label*/
 .sectionsLabel{
 	font-family: "binanceFont";
-	font-size: clamp(14px, 3vw, 18px);
+	font-size: clamp(13px, 1vw, 16px);
 	overflow: hidden;
 	color: var(--sectionsLabelColor);
 	font-weight: bold;

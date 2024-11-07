@@ -6481,6 +6481,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Page Features*/
   --highlightedTextsColor: #ffffff;
   /**Page Features*/
+  /*DP Border Color*/
+  --dpBorderColor: #ffffff;
+  /*DP Border Color*/
   /**Events and Activities*/
   --eventsBgColor: #0F143C;
   --eventsBoxShadow: 0px 0px 10px #0F143C;
@@ -6488,7 +6491,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Posted Section*/
   --postsBoxShadow: 0px 0px 10px #0F143C;
   --postsBgColor: #0F143C;
-  /**Posted Section*/ }
+  /**Posted Section*/
+  /**Pinned Posts and Committees*/
+  /***Pinned Posts*/
+  --pinnedPostBgColor: #0F143C;
+  /***Pinned Posts*/
+  /***Committees*/
+  --committeeBgColor: #0F143C;
+  /***Committees*/
+  /**Pinned Posts and Committees*/ }
 
 .lightMode {
   /**Rogrid*/
@@ -6516,6 +6527,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Page Features*/
   --highlightedTextsColor: black;
   /**Page Features*/
+  /*DP Border Color*/
+  --dpBorderColor: #97A0A8;
+  /*DP Border Color*/
   /**Events and Activities*/
   --eventsBgColor: #ffffff;
   --eventsBoxShadow: 0px 0px 10px black;
@@ -6523,7 +6537,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Posted Section*/
   --postsBoxShadow: 0px 0px 10px black;
   --postsBgColor: #ffffff;
-  /**Posted Section*/ }
+  /**Posted Section*/
+  /**Pinned Posts and Committees*/
+  --pinnedPostBgColor: #ffffff;
+  --committeeBgColor: #ffffff;
+  /**Pinned Posts and Committees*/ }
 
 /*Dark Mode and light mode*/
 /*Rogrid*/
@@ -6548,14 +6566,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-shrink: 0;
   height: 100%;
   width: clamp(180px, 40vw, 250px);
-  background-color: var(--chatArea_BgColor);
-  display: none; }
+  background-color: var(--chatArea_BgColor); }
 
 /*Right Side or Chat Area*/
 /*Sections Label*/
 .sectionsLabel {
   font-family: "binanceFont";
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: clamp(13px, 1vw, 16px);
   overflow: hidden;
   color: var(--sectionsLabelColor);
   font-weight: bold;
@@ -6612,14 +6629,22 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
+  --eventsSectionWidth_Smart: 100%;
+  --eventsSectionWidth_Pc: 350px;
   --whatIsNewSection_Width_Smart: 100%;
-  --whatIsNewSection_Width_Pc: 420px;
-  --articleMargins: 14px 14px 50px 14px;
+  --whatIsNewSection_Width_Pc: 100%;
+  --pinnedPostAndCommittesSection_Width_Smart: 100%;
+  --pinnedPostAndCommittesSection_Width_Pc: 350px;
+  --pinnedPostAndCommittes_Height_Smart: 100%;
+  --pinnedPostAndCommittes_Height_Pc: 50%;
+  --articleMargins: 18px;
   --featuresIconSize: clamp(30px, 7vw, 40px);
-  --dpSize: clamp(30px, 6vw, 55px);
-  --postsBodyDetailsFsize: clamp(13px, 1vw, 17px);
-  --postsSeenIconSize: clamp(20px, 1vw, 25px);
-  --postsSeenFsize: clamp(11px, 1vw, 16px); }
+  --dpSize: clamp(30px, 4vw, 45px);
+  --articlePaddingBottom: 7px;
+  --postsBodyDetailsFsize: clamp(11px, 1vw, 14px);
+  --postsSeenIconSize: clamp(12px, 1vw, 15px);
+  --postsSeenFsize: clamp(11px, 1vw, 14px);
+  --pinnedPostAndComm_BoxShadow: 0px 0px 3px gray; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6715,7 +6740,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Page Features*/
 #featuresWrap {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   height: 100%;
   overflow: hidden; }
@@ -6733,8 +6758,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /**Events and Activities*/
 #eventsSection {
-  width: 100%;
-  /*To be changed*/ }
+  flex-shrink: 0; }
 
 .events {
   display: flex;
@@ -6745,7 +6769,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   background-color: var(--eventsBgColor);
   box-shadow: var(--eventsBoxShadow);
   margin: var(--articleMargins);
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  padding-bottom: var(--articlePaddingBottom); }
 
 .eventsDp {
   position: relative;
@@ -6756,7 +6781,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   width: var(--dpSize);
   height: var(--dpSize);
   object-fit: contain;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--dpBorderColor);
   margin: 7px; }
 
 .eventsDetailsWrap {
@@ -6765,14 +6790,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .eventsTitle {
   font-family: "binanceFont";
-  font-size: clamp(14px, 1vw, 18px);
+  font-size: clamp(11px, 1vw, 14px);
   padding: 7px;
   font-weight: bold;
   color: var(--highlightedTextsColor); }
 
 .eventsDetailsTxts {
   font-family: "binanceFont";
-  font-size: clamp(12px, 1vw, 16px);
+  font-size: clamp(10px, 1vw, 13px);
   color: #97A0A8;
   padding: 0px 7px; }
 
@@ -6781,7 +6806,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   text-decoration: center;
   font-family: "binanceFont";
-  font-size: clamp(13px, 1.5vw, 17px);
+  font-size: clamp(11px, 1vw, 14px);
   font-weight: bold;
   padding: 4px;
   border-radius: 8px;
@@ -6795,7 +6820,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   text-decoration: center;
   font-family: "binanceFont";
-  font-size: clamp(13px, 1.5vw, 17px);
+  font-size: clamp(11px, 1vw, 14px);
   font-weight: bold;
   padding: 4px;
   border-radius: 8px;
@@ -6806,16 +6831,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /**Events and Activities*/
 /**What is new posts*/
-#whatIsNewSection {
-  width: 100%;
-  /*To be changed*/ }
-
 .posts {
   overflow: hidden;
   margin: var(--articleMargins);
   background-color: var(--postsBgColor);
-  box-shadow: var(--postsBoxShadow);
-  flex-shrink: 0; }
+  box-shadow: var(--postsBoxShadow); }
 
 .postsHeader {
   overflow: hidden; }
@@ -6834,7 +6854,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   width: var(--dpSize);
   height: var(--dpSize);
   object-fit: contain;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--dpBorderColor);
   margin: 7px; }
 
 .postsHeaderDetails {
@@ -6842,7 +6862,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .postsEmpName {
   font-family: "binanceFont";
-  font-size: clamp(14px, 1vw, 18px);
+  font-size: clamp(11px, 1vw, 14px);
   padding: 7px;
   font-weight: bold;
   color: var(--highlightedTextsColor); }
@@ -6854,7 +6874,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .postsCatNTimeTxt {
   font-family: "binanceFont";
-  font-size: clamp(12px, 1vw, 16px);
+  font-size: clamp(10px, 1vw, 13px);
   color: #97A0A8;
   padding: 0px 7px; }
 
@@ -6872,7 +6892,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  height: clamp(200px, 40vw, 250px);
+  height: clamp(160px, 40vw, 210px);
   object-fit: cover; }
 
 .postsTitle {
@@ -6915,28 +6935,95 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /**Pinned Posts and Committees*/
 #pinnedPostAndCommittesSection {
   width: 100%;
-  /*To be changed*/ }
+  /*To be changed*/
+  flex-shrink: 0; }
 
-/***Pinned Posts*/
-#pinnedPostSection {
+#pinnedPostSection, #committeesSection {
   display: flex;
   overflow: hidden;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  height: 100%;
-  /*To be changed*/ }
+  height: var(--pinnedPostAndCommittes_Height); }
 
-/***Pinned Posts*/
-/***Committees*/
-#committeesSection {
+.pinnedPost, .committee {
   display: flex;
   overflow: hidden;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  height: 100%;
-  /*To be changed*/ }
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: var(--pinnedPostAndComm_BoxShadow);
+  margin: var(--articleMargins);
+  background-color: var(--pinnedPostBgColor);
+  padding-bottom: var(--articlePaddingBottom);
+  cursor: pointer; }
 
-/***Committees*/
+.pinnedPostDp, .committeeDp {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: var(--dpSize);
+  height: var(--dpSize);
+  object-fit: contain;
+  border: 2px solid var(--dpBorderColor);
+  margin: 7px; }
+
+.pinnedPostDetailsWrap, .committeeDetailsWrap {
+  width: 100%;
+  overflow: hidden; }
+
+.pinnedPostTitle, .committeeTitle {
+  font-family: "binanceFont";
+  font-size: clamp(11px, 1vw, 14px);
+  padding: 7px;
+  font-weight: bold;
+  color: var(--highlightedTextsColor); }
+
+.pinnedPostTxts, .committeeMembersDetails {
+  overflow: hidden;
+  font-family: "binanceFont";
+  font-size: clamp(10px, 1vw, 13px);
+  color: #97A0A8;
+  padding: 0px 7px; }
+
+.committeeDetails {
+  display: flex;
+  overflow: hidden;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 7px; }
+
+.joinCommitteeBtn {
+  --normBtnWidth: clamp(70px, 10vw, 75px);
+  --normBtnPadding: 3px;
+  --normBtnBorderWidth: 0px;
+  --normBtnBorderColor: none;
+  --normBtnRadius: 4px;
+  --normBtnFWeight: bold;
+  --normBtnFSize: clamp(10px, 1vw, 12px);
+  --normBtnFcolor: #ffffff;
+  font-family: "binanceFont";
+  --normBtnBgColor: #39AB5B;
+  --normBtnHovActFColor: #ffffff;
+  --normBtnHovActBgColor: #13391E; }
+
+.leaveCommitteeBtn {
+  --normBtnWidth: clamp(70px, 10vw, 75px);
+  --normBtnPadding: 3px;
+  --normBtnBorderWidth: 0px;
+  --normBtnBorderColor: none;
+  --normBtnRadius: 4px;
+  --normBtnFWeight: bold;
+  --normBtnFSize: clamp(10px, 1vw, 12px);
+  --normBtnFcolor: #ffffff;
+  font-family: "binanceFont";
+  --normBtnBgColor: #BD212F;
+  --normBtnHovActFColor: #ffffff;
+  --normBtnHovActBgColor: #7E161F; }
+
+/**Pinned Posts and Committees*/
 /*Page Features*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6946,11 +7033,24 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Mobile*/
 @media all and (max-width: 641px) {
   /*Page Features*/
+  /**Events and Activities*/
+  #eventsSection {
+    width: var(--eventsSectionWidth_Smart); }
+
+  /**Events and Activities*/
   /**What is new posts*/
   #whatIsNewSection {
     width: var(--whatIsNewSection_Width_Smart); }
 
   /**What is new posts*/
+  /**Pinned Posts and Committees*/
+  #pinnedPostAndCommittesSection {
+    width: var(--pinnedPostAndCommittesSection_Width_Smart); }
+
+  #pinnedPostSection, #committeesSection {
+    height: var(--pinnedPostAndCommittes_Height_Smart); }
+
+  /**Pinned Posts and Committees*/
   /*Page Features*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6958,11 +7058,24 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
   /*Page Features*/
+  /**Events and Activities*/
+  #eventsSection {
+    width: var(--eventsSectionWidth_Smart); }
+
+  /**Events and Activities*/
   /**What is new posts*/
   #whatIsNewSection {
     width: var(--whatIsNewSection_Width_Smart); }
 
   /**What is new posts*/
+  /**Pinned Posts and Committees*/
+  #pinnedPostAndCommittesSection {
+    width: var(--pinnedPostAndCommittesSection_Width_Smart); }
+
+  #pinnedPostSection, #committeesSection {
+    height: var(--pinnedPostAndCommittes_Height_Smart); }
+
+  /**Pinned Posts and Committees*/
   /*Page Features*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6970,11 +7083,27 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Desktop*/
 @media all and (min-width: 1081px) {
   /*Page Features*/
+  /**Events and Activities*/
+  #eventsSection {
+    width: var(--eventsSectionWidth_Pc);
+    margin: 20px; }
+
+  /**Events and Activities*/
   /**What is new posts*/
   #whatIsNewSection {
-    width: var(--whatIsNewSection_Width_Pc); }
+    width: var(--whatIsNewSection_Width_Pc);
+    margin: 20px; }
 
   /**What is new posts*/
+  /**Pinned Posts and Committees*/
+  #pinnedPostAndCommittesSection {
+    width: var(--pinnedPostAndCommittesSection_Width_Pc);
+    margin: 20px; }
+
+  #pinnedPostSection, #committeesSection {
+    height: var(--pinnedPostAndCommittes_Height_Pc); }
+
+  /**Pinned Posts and Committees*/
   /*Page Features*/ }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/

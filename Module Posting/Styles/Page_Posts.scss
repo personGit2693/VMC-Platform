@@ -11,17 +11,30 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	--whatIsNewSection_Width_Smart: 100%;
-	--whatIsNewSection_Width_Pc: 420px;
+	--eventsSectionWidth_Smart: 100%;
+	--eventsSectionWidth_Pc: 350px;
 
-	--articleMargins: 14px 14px 50px 14px;
+	--whatIsNewSection_Width_Smart: 100%;
+	--whatIsNewSection_Width_Pc: 100%;
+
+	--pinnedPostAndCommittesSection_Width_Smart: 100%;
+	--pinnedPostAndCommittesSection_Width_Pc: 350px;
+	--pinnedPostAndCommittes_Height_Smart: 100%;
+	--pinnedPostAndCommittes_Height_Pc: 50%;
+
+	--articleMargins: 18px;
 
 	--featuresIconSize: clamp(30px, 7vw, 40px);
 
-	--dpSize: clamp(30px, 6vw, 55px);
-	--postsBodyDetailsFsize: clamp(13px, 1vw, 17px);
-	--postsSeenIconSize: clamp(20px, 1vw, 25px);
-	--postsSeenFsize: clamp(11px, 1vw, 16px);	
+	--dpSize: clamp(30px, 4vw, 45px);
+
+	--articlePaddingBottom: 7px;
+
+	--postsBodyDetailsFsize: clamp(11px, 1vw, 14px);
+	--postsSeenIconSize: clamp(12px, 1vw, 15px);
+	--postsSeenFsize: clamp(11px, 1vw, 14px);
+
+	--pinnedPostAndComm_BoxShadow: 0px 0px 3px gray;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -135,7 +148,7 @@
 /*Page Features*/
 #featuresWrap{
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	justify-content: center;
 	height: 100%;
 	overflow: hidden;
@@ -146,7 +159,7 @@
 	overflow: hidden;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	height: 100%;
+	height: 100%;	
 }
 
 .sectionsWrap{
@@ -156,7 +169,7 @@
 
 /**Events and Activities*/
 #eventsSection{
-	width: 100%; /*To be changed*/
+	flex-shrink: 0;
 }
 
 #eventsWrap{
@@ -173,6 +186,7 @@
 	box-shadow: var(--eventsBoxShadow);
 	margin: var(--articleMargins);
 	flex-shrink: 0;
+	padding-bottom: var(--articlePaddingBottom);
 }
 
 .eventsDp{
@@ -209,7 +223,7 @@
 
 /**What is new posts*/
 #whatIsNewSection{
-	width: 100%; /*To be changed*/
+	//Standing by
 }
 
 #postsWrap{
@@ -220,8 +234,7 @@
 	overflow: hidden;
 	margin: var(--articleMargins);
 	background-color: var(--postsBgColor);
-	box-shadow: var(--postsBoxShadow);
-	flex-shrink: 0;
+	box-shadow: var(--postsBoxShadow);	
 }
 
 .postsHeader{	
@@ -272,7 +285,7 @@
 	box-sizing: border-box;
 	display: block;
 	width: 100%;
-	height: clamp(200px, 40vw, 250px);
+	height: clamp(160px, 40vw, 210px);
 	object-fit: cover;
 }
 
@@ -322,29 +335,76 @@
 /**Pinned Posts and Committees*/
 #pinnedPostAndCommittesSection{
 	width: 100%; /*To be changed*/
+	flex-shrink: 0;
 }
 
-/***Pinned Posts*/
-#pinnedPostSection{
-	@include pinnedPostAndCommittes_General;
-	height: 100%; /*To be changed*/
+#pinnedPostSection, #committeesSection{
+	display: flex;
+	overflow: hidden;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	height: var(--pinnedPostAndCommittes_Height);
 }
 
-#pinnedPostsWrap{
+#pinnedPostsWrap, #committeesWrap{
 	//Standing By
 }
-/***Pinned Posts*/
 
-/***Committees*/
-#committeesSection{
-	@include pinnedPostAndCommittes_General;
-	height: 100%; /*To be changed*/
+.pinnedPost, .committee{
+	display: flex;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	box-shadow: var(--pinnedPostAndComm_BoxShadow);
+	margin: var(--articleMargins);
+	background-color: var(--pinnedPostBgColor);
+	padding-bottom: var(--articlePaddingBottom);
+	cursor: pointer;
 }
 
-#committeesWrap{
-	//Standing By
+.pinnedPostDp, .committeeDp{
+	@include dp_General;
 }
-/***Committees*/
+
+.pinnedPostDetailsWrap, .committeeDetailsWrap{
+	width: 100%;
+	overflow: hidden;
+}
+
+.pinnedPostTitle, .committeeTitle{
+	@include articlesHeaderTxt_General;
+}
+
+.pinnedPostTxts, .committeeMembersDetails{
+	overflow: hidden;
+	@include otherDetailsTxts_General;
+}
+
+.committeeDetails{
+	display: flex;
+	overflow: hidden;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 7px;
+}
+
+.joinCommitteeBtn{
+	@include committeeBtns_General;	
+	--normBtnBgColor: #39AB5B;	
+	--normBtnHovActFColor: #ffffff; 
+	--normBtnHovActBgColor: #13391E;
+	
+}
+
+.leaveCommitteeBtn{
+	@include committeeBtns_General;	
+	--normBtnBgColor: #BD212F;
+	--normBtnHovActFColor: #ffffff; 
+	--normBtnHovActBgColor: #7E161F;
+}
+/**Pinned Posts and Committees*/
 /*Page Features*/
 
 /*General*/
@@ -357,13 +417,29 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
-@media all and (max-width:641px){	
-	/*Page Features*/	
+@media all and (max-width:641px){
+	/*Page Features*/
+	/**Events and Activities*/
+	#eventsSection{
+		width: var(--eventsSectionWidth_Smart);
+	}
+	/**Events and Activities*/
+
 	/**What is new posts*/
 	#whatIsNewSection{
 		width: var(--whatIsNewSection_Width_Smart);
 	}	
 	/**What is new posts*/
+
+	/**Pinned Posts and Committees*/
+	#pinnedPostAndCommittesSection{
+		width: var(--pinnedPostAndCommittesSection_Width_Smart);
+	}
+
+	#pinnedPostSection, #committeesSection{		
+		height: var(--pinnedPostAndCommittes_Height_Smart);
+	}
+	/**Pinned Posts and Committees*/
 	/*Page Features*/
 }
 /*Mobile*/
@@ -372,13 +448,29 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
+@media all and (min-width:642px) and (max-width:1080px){	
 	/*Page Features*/	
+	/**Events and Activities*/
+	#eventsSection{
+		width: var(--eventsSectionWidth_Smart);
+	}
+	/**Events and Activities*/
+
 	/**What is new posts*/	
 	#whatIsNewSection{
 		width: var(--whatIsNewSection_Width_Smart);
 	}
 	/**What is new posts*/
+
+	/**Pinned Posts and Committees*/
+	#pinnedPostAndCommittesSection{
+		width: var(--pinnedPostAndCommittesSection_Width_Smart);
+	}
+
+	#pinnedPostSection, #committeesSection{		
+		height: var(--pinnedPostAndCommittes_Height_Smart);
+	}
+	/**Pinned Posts and Committees*/
 	/*Page Features*/
 }
 /*Tablet*/
@@ -389,11 +481,30 @@
 /*Desktop*/
 @media all and (min-width:1081px){
 	/*Page Features*/	
+	/**Events and Activities*/
+	#eventsSection{
+		width: var(--eventsSectionWidth_Pc);
+		margin: 20px;
+	}
+	/**Events and Activities*/
+
 	/**What is new posts*/	
 	#whatIsNewSection{
 		width: var(--whatIsNewSection_Width_Pc);
+		margin: 20px;
 	}
 	/**What is new posts*/
+
+	/**Pinned Posts and Committees*/
+	#pinnedPostAndCommittesSection{
+		width: var(--pinnedPostAndCommittesSection_Width_Pc);
+		margin: 20px;
+	}
+
+	#pinnedPostSection, #committeesSection{		
+		height: var(--pinnedPostAndCommittes_Height_Pc);
+	}
+	/**Pinned Posts and Committees*/
 	/*Page Features*/
 }
 /*Desktop*/

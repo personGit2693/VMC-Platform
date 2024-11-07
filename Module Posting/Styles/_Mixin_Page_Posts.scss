@@ -9,13 +9,13 @@
 	width: var(--dpSize);	
 	height: var(--dpSize);
 	object-fit: contain;
-	border: 2px solid #ffffff;
+	border: 2px solid var(--dpBorderColor);
 	margin: 7px;
 }
 
 @mixin articlesHeaderTxt_General{
 	font-family: "binanceFont";
-	font-size: clamp(14px, 1vw, 18px);	
+	font-size: clamp(11px, 1vw, 14px);	
 	padding: 7px;
 	font-weight: bold;
 	color: var(--highlightedTextsColor);
@@ -23,7 +23,7 @@
 
 @mixin otherDetailsTxts_General{
 	font-family: "binanceFont";
-	font-size: clamp(12px, 1vw, 16px);
+	font-size: clamp(10px, 1vw, 13px);
 	color: #97A0A8;
 	padding: 0px 7px;
 }
@@ -33,18 +33,24 @@
 	overflow: hidden;
 	text-decoration: center;
 	font-family: "binanceFont";
-	font-size: clamp(13px, 1.5vw, 17px);
+	font-size: clamp(11px, 1vw, 14px);
 	font-weight: bold;
 	padding: 4px;
 	border-radius: 8px;
 	margin: 7px;
 }
 
-@mixin pinnedPostAndCommittes_General{
-	display: flex;
-	overflow: hidden;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
+@mixin committeeBtns_General{
+	--normBtnWidth: clamp(70px, 10vw, 75px);
+	--normBtnPadding: 3px;
+	--normBtnBorderWidth: 0px;
+	--normBtnBorderColor: none;
+	--normBtnRadius: 4px;
+	--normBtnFWeight: bold;
+	--normBtnFSize: clamp(10px, 1vw, 12px);
+	--normBtnFcolor: #ffffff;
+	font-family: "binanceFont";
+
 }
 /*General*/
 /***********************************************************************************************************************************************************************************************************/

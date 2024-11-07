@@ -86,15 +86,15 @@
 
 
 					<!--Page Features-->
-					<div class="mainmechaCon_RoClass" id="featuresWrap" style="border: 2px solid blue; display: none;">
+					<div class="mainmechaCon_RoClass" id="featuresWrap" style="border: 2px solid blue;">
 						<!--Events and Activities-->
-						<div class="mainmechaCon_RoClass perFeature" id="eventsSection" style="border: 2px solid green; display: none;">
+						<div class="mainmechaCon_RoClass perFeature" id="eventsSection" style="border: 2px solid green;">
 							<div class="mainmechaCon_RoClass sectionsLabel darkMode" style="border: 2px solid gray;">Events and Activities</div>
 
 							<div class="mainmechaCon_RoClass sectionsWrap" id="eventsWrap" style="border: 2px solid gray;">
 								<!--Per event-->
 								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp"/>
+									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
 										<div class="mainmechaCon_RoClass eventsTitle darkMode">ISO Accreditation</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 4, 2024</div>
@@ -108,7 +108,7 @@
 
 								<!--Per event-->
 								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp"/>
+									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
 										<div class="mainmechaCon_RoClass eventsTitle darkMode">Coffee Vendor is back!</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 5, 2024</div>
@@ -122,7 +122,7 @@
 
 								<!--Per event-->
 								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp"/>
+									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
 										<div class="mainmechaCon_RoClass eventsTitle darkMode">Coffee Vendor is back!</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 5, 2024</div>
@@ -136,7 +136,7 @@
 
 								<!--Per event-->
 								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp"/>
+									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
 										<div class="mainmechaCon_RoClass eventsTitle darkMode">Coffee Vendor is back!</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 5, 2024</div>
@@ -153,7 +153,7 @@
 
 
 						<!--What is new posts-->
-						<div class="mainmechaCon_RoClass perFeature" id="whatIsNewSection" style="border: 2px solid green; display: none;">
+						<div class="mainmechaCon_RoClass perFeature" id="whatIsNewSection" style="border: 2px solid green;">
 							<div class="mainmechaCon_RoClass sectionsLabel darkMode" style="border: 2px solid gray;">What's New</div>
 							
 							<!--Posted Section-->
@@ -163,7 +163,7 @@
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp" src="../../src/MySampleDp.png"/>
+											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
 												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
@@ -193,7 +193,7 @@
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp" src="../../src/MySampleDp.png"/>
+											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
 												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
@@ -224,7 +224,7 @@
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp" src="../../src/MySampleDp.png"/>
+											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
 												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
@@ -255,7 +255,7 @@
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp" src="../../src/MySampleDp.png"/>
+											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
 												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
@@ -293,17 +293,251 @@
 								<div class="mainmechaCon_RoClass sectionsLabel darkMode" style="border: 2px solid yellow;">Pinned Posts</div>
 
 								<div class="mainmechaCon_RoClass sectionsWrap" id="pinnedPostsWrap" style="border: 2px solid yellow;">
-									
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
+
+									<!--Per Pinned Post-->
+									<div class="mainmechaCon_RoClass pinnedPost darkMode">
+										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
+											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Created by Juan Dela Cruz</div>
+											<div class="mainmechaCon_RoClass pinnedPostTxts">Posted on: 2024/11/07</div>
+										</div>
+									</div>
+									<!--Per Pinned Post-->
 								</div>
 							</div>
 							<!--Pinned Posts-->
 
 							<!--Committees-->
-							<div class="mainmechaCon_RoClass" id="committeesSection" style="border: 2px solid gray; display: none;">
+							<div class="mainmechaCon_RoClass" id="committeesSection" style="border: 2px solid gray;">
 								<div class="mainmechaCon_RoClass sectionsLabel darkMode" style="border: 2px solid yellow;">Committees</div>
 
 								<div class="mainmechaCon_RoClass sectionsWrap" id="committeesWrap" style="border: 2px solid yellow;">
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 35</div>
+												<button class="normButton_RoClass joinCommitteeBtn">Join</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
 
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 15</div>
+												<button class="normButton_RoClass leaveCommitteeBtn">Leave</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 35</div>
+												<button class="normButton_RoClass joinCommitteeBtn">Join</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 15</div>
+												<button class="normButton_RoClass leaveCommitteeBtn">Leave</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 35</div>
+												<button class="normButton_RoClass joinCommitteeBtn">Join</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 15</div>
+												<button class="normButton_RoClass leaveCommitteeBtn">Leave</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 35</div>
+												<button class="normButton_RoClass joinCommitteeBtn">Join</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 15</div>
+												<button class="normButton_RoClass leaveCommitteeBtn">Leave</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 35</div>
+												<button class="normButton_RoClass joinCommitteeBtn">Join</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
+
+									<!--Per Committee Post-->
+									<div class="mainmechaCon_RoClass committee darkMode">
+										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+										<div class="mainmechaCon_RoClass committeeDetailsWrap">
+											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
+											<div class="mainmechaCon_RoClass committeeDetails">
+												<div class="mainmechaCon_RoClass committeeMembersDetails">Members: 15</div>
+												<button class="normButton_RoClass leaveCommitteeBtn">Leave</button>
+											</div>
+										</div>
+									</div>
+									<!--Per Committee Post-->
 								</div>
 							</div>
 							<!--Committees-->
@@ -313,6 +547,7 @@
 					<!--Page Features-->
 				</div>
 				<!--Left Side or Contents Area-->
+
 
 				<!--Right Side or Chat Area-->
 				<div class="mainmechaCon_RoClass darkMode" id="chatContentWrap" style="border: 2px solid red;">
