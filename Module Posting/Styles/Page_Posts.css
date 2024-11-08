@@ -6600,6 +6600,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   background-color: var(--chatArea_BgColor);
   padding: 8px; }
 
+.chatUser {
+  display: flex;
+  overflow: hidden; }
+
 /*Right Side or Chat Area*/
 /*Sections Label*/
 .sectionsLabel {
