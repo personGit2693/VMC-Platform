@@ -15,7 +15,7 @@
 
 @mixin articlesHeaderTxt_General{
 	font-family: "binanceFont";
-	font-size: clamp(11px, 1vw, 14px);	
+	font-size: clamp(12px, 1vw, 14px);	
 	padding: 7px;
 	font-weight: bold;
 	color: var(--highlightedTextsColor);
@@ -23,7 +23,7 @@
 
 @mixin otherDetailsTxts_General{
 	font-family: "binanceFont";
-	font-size: clamp(10px, 1vw, 13px);
+	font-size: clamp(11px, 1vw, 13px);
 	color: #97A0A8;
 	padding: 0px 7px;
 }
@@ -33,7 +33,7 @@
 	overflow: hidden;
 	text-decoration: center;
 	font-family: "binanceFont";
-	font-size: clamp(11px, 1vw, 14px);
+	font-size: clamp(12px, 1vw, 15px);
 	font-weight: bold;
 	padding: 4px;
 	border-radius: 8px;
@@ -47,7 +47,7 @@
 	--normBtnBorderColor: none;
 	--normBtnRadius: 4px;
 	--normBtnFWeight: bold;
-	--normBtnFSize: clamp(10px, 1vw, 12px);
+	--normBtnFSize: clamp(11px, 1vw, 13px);
 	--normBtnFcolor: #ffffff;
 	font-family: "binanceFont";
 
@@ -59,7 +59,14 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/
-
+@mixin featuresWrap_Scroll_Smart{
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+@mixin featuresWrap_Scroll_Pc{
+	overflow-x: auto;
+	overflow-y: hidden;
+}
 
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/

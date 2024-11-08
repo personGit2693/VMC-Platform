@@ -6445,6 +6445,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+:root {
+  --scrollWebkit_Size: clamp(2.5px, 1vw, 5px); }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6456,6 +6459,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Fonts*/
 /*Dark Mode and light mode*/
 .darkMode {
+  /**Scroll Webkit*/
+  --scrollWebkit_ThumbColor: #97A0A8;
+  --scrollWebkit_ThumbColorHover: #646A70;
+  /**Scroll Webkit*/
   /**Rogrid*/
   /***Side Navigation*/
   --naviBgColor:#0F143C;
@@ -6499,9 +6506,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /***Committees*/
   --committeeBgColor: #0F143C;
   /***Committees*/
+  /***Search Input*/
+  --inputSearchFColor: #ffffff;
+  /***Search Input*/
   /**Pinned Posts and Committees*/ }
 
 .lightMode {
+  /**Scroll Webkit*/
+  --scrollWebkit_ThumbColor: #39AB5B;
+  --scrollWebkit_ThumbColorHover: #26723C;
+  /**Scroll Webkit*/
   /**Rogrid*/
   /***Side Navigation*/
   --naviBgColor:#ffffff;
@@ -6513,6 +6527,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitle_BgColor:#39AB5B;
   --projectTitleTextFColor: #ffffff;
   /***Header*/
+  /***Search Input*/
+  --inputSearchFColor: black;
+  /***Search Input*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #ffffff;
@@ -6547,10 +6564,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Rogrid*/
 /**Header*/
 .projectTitle_RoClass, .projTitleTxt_RoClass, .userLoginDetails_RoClass {
-  --projectTitleTextFSize: clamp(14px, 3vw, 18px); }
+  --projectTitleTextFSize: clamp(15px, 1vw, 18px); }
 
 .userLoginIconWrap_RoClass {
-  --projectTitleUserIconSize: clamp(50px, 5vw, 65px);
+  --projectTitleUserIconSize: clamp(55px, 1vw, 57px);
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #ffffff; }
@@ -6559,14 +6576,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   align-items: center; }
 
 /**Header*/
+/**Search Input*/
+#searchChatInput {
+  --inputSearchWidth: 100%;
+  --inputSearchTopPadding: 7px;
+  --inputSearchRightPadding: 7px;
+  --inputSearchBottomPadding: 7px;
+  --inputSearchLeftPadding: 25px;
+  --inputSearchBorderColor: #97A0A8;
+  --inputSearchBorderRadius: 4px;
+  --inputSearchIconHori: 7px;
+  --inputSearchIconSize: clamp(12px, 1vw, 15px);
+  --inputSearchFSize: clamp(12px, 1vw, 15px); }
+
+/**Search Input*/
 /*Rogrid*/
 /*Right Side or Chat Area*/
 #chatContentWrap {
   overflow: auto;
   flex-shrink: 0;
   height: 100%;
-  width: clamp(180px, 40vw, 250px);
-  background-color: var(--chatArea_BgColor); }
+  width: clamp(180px, 20.3vw, 220px);
+  background-color: var(--chatArea_BgColor);
+  padding: 8px; }
 
 /*Right Side or Chat Area*/
 /*Sections Label*/
@@ -6580,6 +6612,27 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-shrink: 0; }
 
 /*Sections Label*/
+/*Scroll Webkit*/
+/* width */
+.scrollWebkit::-webkit-scrollbar {
+  width: var(--scrollWebkit_Size);
+  height: var(--scrollWebkit_Size); }
+
+/* Track */
+.scrollWebkit::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px; }
+
+/* Handle */
+.scrollWebkit::-webkit-scrollbar-thumb {
+  background-color: var(--scrollWebkit_ThumbColor);
+  border-radius: 10px; }
+
+/* Handle on hover */
+.scrollWebkit::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollWebkit_ThumbColorHover); }
+
+/*Scroll Webkit*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -6629,21 +6682,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
+  --perFeatures_SideMargin_Smart: 0px;
+  --perFeatures_SideMargin_Pc: 0px 20px;
   --eventsSectionWidth_Smart: 100%;
-  --eventsSectionWidth_Pc: 350px;
+  --eventsSectionWidth_Pc: 300px;
   --whatIsNewSection_Width_Smart: 100%;
-  --whatIsNewSection_Width_Pc: 100%;
+  --whatIsNewSection_Width_Pc: 520px;
   --pinnedPostAndCommittesSection_Width_Smart: 100%;
-  --pinnedPostAndCommittesSection_Width_Pc: 350px;
+  --pinnedPostAndCommittesSection_Width_Pc: 300px;
   --pinnedPostAndCommittes_Height_Smart: 100%;
   --pinnedPostAndCommittes_Height_Pc: 50%;
   --articleMargins: 18px;
   --featuresIconSize: clamp(30px, 7vw, 40px);
-  --dpSize: clamp(30px, 4vw, 45px);
+  --dpSize: clamp(40px, 4vw, 45px);
   --articlePaddingBottom: 7px;
-  --postsBodyDetailsFsize: clamp(11px, 1vw, 14px);
+  --postsBodyDetailsFsize: clamp(12px, 1vw, 14px);
   --postsSeenIconSize: clamp(12px, 1vw, 15px);
-  --postsSeenFsize: clamp(11px, 1vw, 14px);
+  --postsSeenFsize: clamp(12px, 1vw, 14px);
   --pinnedPostAndComm_BoxShadow: 0px 0px 3px gray; }
 
 /*Root*/
@@ -6741,9 +6796,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 #featuresWrap {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  height: 100%;
-  overflow: hidden; }
+  justify-content: space-between;
+  height: 100%; }
 
 .perFeature {
   display: flex;
@@ -6753,7 +6807,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   height: 100%; }
 
 .sectionsWrap {
-  overflow: auto;
+  overflow: scroll;
   height: 100%; }
 
 /**Events and Activities*/
@@ -6769,7 +6823,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   background-color: var(--eventsBgColor);
   box-shadow: var(--eventsBoxShadow);
   margin: var(--articleMargins);
-  flex-shrink: 0;
   padding-bottom: var(--articlePaddingBottom); }
 
 .eventsDp {
@@ -6790,14 +6843,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .eventsTitle {
   font-family: "binanceFont";
-  font-size: clamp(11px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 14px);
   padding: 7px;
   font-weight: bold;
   color: var(--highlightedTextsColor); }
 
 .eventsDetailsTxts {
   font-family: "binanceFont";
-  font-size: clamp(10px, 1vw, 13px);
+  font-size: clamp(11px, 1vw, 13px);
   color: #97A0A8;
   padding: 0px 7px; }
 
@@ -6806,7 +6859,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   text-decoration: center;
   font-family: "binanceFont";
-  font-size: clamp(11px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 15px);
   font-weight: bold;
   padding: 4px;
   border-radius: 8px;
@@ -6820,7 +6873,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   overflow: hidden;
   text-decoration: center;
   font-family: "binanceFont";
-  font-size: clamp(11px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 15px);
   font-weight: bold;
   padding: 4px;
   border-radius: 8px;
@@ -6831,6 +6884,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /**Events and Activities*/
 /**What is new posts*/
+#whatIsNewSection {
+  flex-shrink: 0; }
+
 .posts {
   overflow: hidden;
   margin: var(--articleMargins);
@@ -6862,7 +6918,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .postsEmpName {
   font-family: "binanceFont";
-  font-size: clamp(11px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 14px);
   padding: 7px;
   font-weight: bold;
   color: var(--highlightedTextsColor); }
@@ -6874,7 +6930,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .postsCatNTimeTxt {
   font-family: "binanceFont";
-  font-size: clamp(10px, 1vw, 13px);
+  font-size: clamp(11px, 1vw, 13px);
   color: #97A0A8;
   padding: 0px 7px; }
 
@@ -6893,7 +6949,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   display: block;
   width: 100%;
   height: clamp(160px, 40vw, 210px);
-  object-fit: cover; }
+  object-fit: cover;
+  border-radius: 7px; }
 
 .postsTitle {
   overflow: hidden;
@@ -6934,8 +6991,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /**What is new posts*/
 /**Pinned Posts and Committees*/
 #pinnedPostAndCommittesSection {
-  width: 100%;
-  /*To be changed*/
   flex-shrink: 0; }
 
 #pinnedPostSection, #committeesSection {
@@ -6975,7 +7030,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .pinnedPostTitle, .committeeTitle {
   font-family: "binanceFont";
-  font-size: clamp(11px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 14px);
   padding: 7px;
   font-weight: bold;
   color: var(--highlightedTextsColor); }
@@ -6983,7 +7038,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 .pinnedPostTxts, .committeeMembersDetails {
   overflow: hidden;
   font-family: "binanceFont";
-  font-size: clamp(10px, 1vw, 13px);
+  font-size: clamp(11px, 1vw, 13px);
   color: #97A0A8;
   padding: 0px 7px; }
 
@@ -7002,7 +7057,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --normBtnBorderColor: none;
   --normBtnRadius: 4px;
   --normBtnFWeight: bold;
-  --normBtnFSize: clamp(10px, 1vw, 12px);
+  --normBtnFSize: clamp(11px, 1vw, 13px);
   --normBtnFcolor: #ffffff;
   font-family: "binanceFont";
   --normBtnBgColor: #39AB5B;
@@ -7016,7 +7071,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --normBtnBorderColor: none;
   --normBtnRadius: 4px;
   --normBtnFWeight: bold;
-  --normBtnFSize: clamp(10px, 1vw, 12px);
+  --normBtnFSize: clamp(11px, 1vw, 13px);
   --normBtnFcolor: #ffffff;
   font-family: "binanceFont";
   --normBtnBgColor: #BD212F;
@@ -7033,6 +7088,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Mobile*/
 @media all and (max-width: 641px) {
   /*Page Features*/
+  #featuresWrap {
+    overflow-x: hidden;
+    overflow-y: hidden; }
+
+  .perFeature {
+    margin: var(--perFeatures_SideMargin_Smart); }
+
   /**Events and Activities*/
   #eventsSection {
     width: var(--eventsSectionWidth_Smart); }
@@ -7058,6 +7120,13 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
   /*Page Features*/
+  #featuresWrap {
+    overflow-x: hidden;
+    overflow-y: hidden; }
+
+  .perFeature {
+    margin: var(--perFeatures_SideMargin_Smart); }
+
   /**Events and Activities*/
   #eventsSection {
     width: var(--eventsSectionWidth_Smart); }
@@ -7083,22 +7152,26 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Desktop*/
 @media all and (min-width: 1081px) {
   /*Page Features*/
+  #featuresWrap {
+    overflow-x: auto;
+    overflow-y: hidden; }
+
+  .perFeature {
+    margin: var(--perFeatures_SideMargin_Pc); }
+
   /**Events and Activities*/
   #eventsSection {
-    width: var(--eventsSectionWidth_Pc);
-    margin: 20px; }
+    width: var(--eventsSectionWidth_Pc); }
 
   /**Events and Activities*/
   /**What is new posts*/
   #whatIsNewSection {
-    width: var(--whatIsNewSection_Width_Pc);
-    margin: 20px; }
+    width: var(--whatIsNewSection_Width_Pc); }
 
   /**What is new posts*/
   /**Pinned Posts and Committees*/
   #pinnedPostAndCommittesSection {
-    width: var(--pinnedPostAndCommittesSection_Width_Pc);
-    margin: 20px; }
+    width: var(--pinnedPostAndCommittesSection_Width_Pc); }
 
   #pinnedPostSection, #committeesSection {
     height: var(--pinnedPostAndCommittes_Height_Pc); }

@@ -3230,6 +3230,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+:root {
+  --scrollWebkit_Size: clamp(2.5px, 1vw, 5px); }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -3241,6 +3244,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Fonts*/
 /*Dark Mode and light mode*/
 .darkMode {
+  /**Scroll Webkit*/
+  --scrollWebkit_ThumbColor: #97A0A8;
+  --scrollWebkit_ThumbColorHover: #646A70;
+  /**Scroll Webkit*/
   /**Rogrid*/
   /***Side Navigation*/
   --naviBgColor:#0F143C;
@@ -3284,9 +3291,16 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /***Committees*/
   --committeeBgColor: #0F143C;
   /***Committees*/
+  /***Search Input*/
+  --inputSearchFColor: #ffffff;
+  /***Search Input*/
   /**Pinned Posts and Committees*/ }
 
 .lightMode {
+  /**Scroll Webkit*/
+  --scrollWebkit_ThumbColor: #39AB5B;
+  --scrollWebkit_ThumbColorHover: #26723C;
+  /**Scroll Webkit*/
   /**Rogrid*/
   /***Side Navigation*/
   --naviBgColor:#ffffff;
@@ -3298,6 +3312,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitle_BgColor:#39AB5B;
   --projectTitleTextFColor: #ffffff;
   /***Header*/
+  /***Search Input*/
+  --inputSearchFColor: black;
+  /***Search Input*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #ffffff;
@@ -3332,10 +3349,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Rogrid*/
 /**Header*/
 .projectTitle_RoClass, .projTitleTxt_RoClass, .userLoginDetails_RoClass {
-  --projectTitleTextFSize: clamp(14px, 3vw, 18px); }
+  --projectTitleTextFSize: clamp(15px, 1vw, 18px); }
 
 .userLoginIconWrap_RoClass {
-  --projectTitleUserIconSize: clamp(50px, 5vw, 65px);
+  --projectTitleUserIconSize: clamp(55px, 1vw, 57px);
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #ffffff; }
@@ -3344,14 +3361,29 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   align-items: center; }
 
 /**Header*/
+/**Search Input*/
+#searchChatInput {
+  --inputSearchWidth: 100%;
+  --inputSearchTopPadding: 7px;
+  --inputSearchRightPadding: 7px;
+  --inputSearchBottomPadding: 7px;
+  --inputSearchLeftPadding: 25px;
+  --inputSearchBorderColor: #97A0A8;
+  --inputSearchBorderRadius: 4px;
+  --inputSearchIconHori: 7px;
+  --inputSearchIconSize: clamp(12px, 1vw, 15px);
+  --inputSearchFSize: clamp(12px, 1vw, 15px); }
+
+/**Search Input*/
 /*Rogrid*/
 /*Right Side or Chat Area*/
 #chatContentWrap {
   overflow: auto;
   flex-shrink: 0;
   height: 100%;
-  width: clamp(180px, 40vw, 250px);
-  background-color: var(--chatArea_BgColor); }
+  width: clamp(180px, 20.3vw, 220px);
+  background-color: var(--chatArea_BgColor);
+  padding: 8px; }
 
 /*Right Side or Chat Area*/
 /*Sections Label*/
@@ -3365,6 +3397,27 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-shrink: 0; }
 
 /*Sections Label*/
+/*Scroll Webkit*/
+/* width */
+.scrollWebkit::-webkit-scrollbar {
+  width: var(--scrollWebkit_Size);
+  height: var(--scrollWebkit_Size); }
+
+/* Track */
+.scrollWebkit::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px; }
+
+/* Handle */
+.scrollWebkit::-webkit-scrollbar-thumb {
+  background-color: var(--scrollWebkit_ThumbColor);
+  border-radius: 10px; }
+
+/* Handle on hover */
+.scrollWebkit::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollWebkit_ThumbColorHover); }
+
+/*Scroll Webkit*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/

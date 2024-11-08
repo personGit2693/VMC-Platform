@@ -11,14 +11,17 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
+	--perFeatures_SideMargin_Smart: 0px;
+	--perFeatures_SideMargin_Pc: 0px 20px;
+
 	--eventsSectionWidth_Smart: 100%;
-	--eventsSectionWidth_Pc: 350px;
+	--eventsSectionWidth_Pc: 300px;
 
 	--whatIsNewSection_Width_Smart: 100%;
-	--whatIsNewSection_Width_Pc: 100%;
+	--whatIsNewSection_Width_Pc: 520px;
 
 	--pinnedPostAndCommittesSection_Width_Smart: 100%;
-	--pinnedPostAndCommittesSection_Width_Pc: 350px;
+	--pinnedPostAndCommittesSection_Width_Pc: 300px;
 	--pinnedPostAndCommittes_Height_Smart: 100%;
 	--pinnedPostAndCommittes_Height_Pc: 50%;
 
@@ -26,13 +29,13 @@
 
 	--featuresIconSize: clamp(30px, 7vw, 40px);
 
-	--dpSize: clamp(30px, 4vw, 45px);
+	--dpSize: clamp(40px, 4vw, 45px);
 
 	--articlePaddingBottom: 7px;
 
-	--postsBodyDetailsFsize: clamp(11px, 1vw, 14px);
+	--postsBodyDetailsFsize: clamp(12px, 1vw, 14px);
 	--postsSeenIconSize: clamp(12px, 1vw, 15px);
-	--postsSeenFsize: clamp(11px, 1vw, 14px);
+	--postsSeenFsize: clamp(12px, 1vw, 14px);
 
 	--pinnedPostAndComm_BoxShadow: 0px 0px 3px gray;
 }
@@ -149,9 +152,8 @@
 #featuresWrap{
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: center;
+	justify-content: space-between;
 	height: 100%;
-	overflow: hidden;
 }
 
 .perFeature{
@@ -163,7 +165,7 @@
 }
 
 .sectionsWrap{
-	overflow: auto;
+	overflow: scroll;
 	height: 100%;
 }
 
@@ -185,7 +187,7 @@
 	background-color: var(--eventsBgColor);
 	box-shadow: var(--eventsBoxShadow);
 	margin: var(--articleMargins);
-	flex-shrink: 0;
+	//flex-shrink: 0;
 	padding-bottom: var(--articlePaddingBottom);
 }
 
@@ -223,7 +225,7 @@
 
 /**What is new posts*/
 #whatIsNewSection{
-	//Standing by
+	flex-shrink: 0;
 }
 
 #postsWrap{
@@ -287,6 +289,7 @@
 	width: 100%;
 	height: clamp(160px, 40vw, 210px);
 	object-fit: cover;
+	border-radius: 7px;
 }
 
 .postsTitle{
@@ -334,7 +337,6 @@
 
 /**Pinned Posts and Committees*/
 #pinnedPostAndCommittesSection{
-	width: 100%; /*To be changed*/
 	flex-shrink: 0;
 }
 
@@ -419,6 +421,14 @@
 /*Mobile*/
 @media all and (max-width:641px){
 	/*Page Features*/
+	#featuresWrap{
+		@include featuresWrap_Scroll_Smart;
+	}
+
+	.perFeature{
+		margin: var(--perFeatures_SideMargin_Smart);
+	}
+
 	/**Events and Activities*/
 	#eventsSection{
 		width: var(--eventsSectionWidth_Smart);
@@ -450,6 +460,14 @@
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){	
 	/*Page Features*/	
+	#featuresWrap{
+		@include featuresWrap_Scroll_Smart;
+	}
+
+	.perFeature{
+		margin: var(--perFeatures_SideMargin_Smart);
+	}
+
 	/**Events and Activities*/
 	#eventsSection{
 		width: var(--eventsSectionWidth_Smart);
@@ -481,24 +499,30 @@
 /*Desktop*/
 @media all and (min-width:1081px){
 	/*Page Features*/	
+	#featuresWrap{
+		@include featuresWrap_Scroll_Pc;
+	}
+
+	.perFeature{
+		margin: var(--perFeatures_SideMargin_Pc);
+	}
+
 	/**Events and Activities*/
 	#eventsSection{
 		width: var(--eventsSectionWidth_Pc);
-		margin: 20px;
+		
 	}
 	/**Events and Activities*/
 
 	/**What is new posts*/	
 	#whatIsNewSection{
 		width: var(--whatIsNewSection_Width_Pc);
-		margin: 20px;
 	}
 	/**What is new posts*/
 
 	/**Pinned Posts and Committees*/
 	#pinnedPostAndCommittesSection{
 		width: var(--pinnedPostAndCommittesSection_Width_Pc);
-		margin: 20px;
 	}
 
 	#pinnedPostSection, #committeesSection{		
