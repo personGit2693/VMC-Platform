@@ -11,8 +11,8 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	--perFeatures_SideMargin_Smart: 0px;
-	--perFeatures_SideMargin_Pc: 0px 20px;
+	--perFeatures_Margin_Smart: 0px;
+	--perFeatures_Margin_Pc: 0px 20px;
 
 	--eventsSectionWidth_Smart: 100%;
 	--eventsSectionWidth_Pc: 300px;
@@ -58,6 +58,12 @@
 	flex-shrink: 0;
 }
 /**Main Side*/
+
+/**Date Range*/
+.calLiteMonthText_RoClass, .calLiteYearText_RoClass{
+
+}
+/**Date Range*/
 /*Rogrid*/
 
 
@@ -146,6 +152,40 @@
 	color: var(--featuresConTxtColor);
 }
 /*Smart only features controller*/
+
+
+/*Search Area*/
+#searchAreaWrap{
+	overflow: hidden;
+	padding: 8px 20px;
+	flex-shrink: 0;
+	background-color: var(--searchAreaWrap_BgColor);
+}
+
+#searchInputsWrap{
+	overflow: hidden;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+#searchContentInput{	
+	--inputSearchWidth: 250px;
+	--inputSearchTopPadding: 7px;
+	--inputSearchRightPadding: 7px;
+	--inputSearchBottomPadding: 7px;
+	--inputSearchLeftPadding: 25px;
+	--inputSearchBorderColor: #97A0A8; 
+	--inputSearchBorderRadius: 4px;
+	--inputSearchIconHori: 7px;
+	--inputSearchIconSize: clamp(12px, 1vw, 15px);
+	--inputSearchFSize: clamp(12px, 1vw, 15px);	
+	background-color: transparent;	
+	font-family: "binanceFont";
+}
+/*Search Area*/
 
 
 /*Page Features*/
@@ -419,14 +459,14 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
-@media all and (max-width:641px){
+@media all and (max-width:641px){	
 	/*Page Features*/
 	#featuresWrap{
 		@include featuresWrap_Scroll_Smart;
 	}
 
 	.perFeature{
-		margin: var(--perFeatures_SideMargin_Smart);
+		margin: var(--perFeatures_Margin_Smart);
 	}
 
 	/**Events and Activities*/
@@ -465,7 +505,7 @@
 	}
 
 	.perFeature{
-		margin: var(--perFeatures_SideMargin_Smart);
+		margin: var(--perFeatures_Margin_Smart);
 	}
 
 	/**Events and Activities*/
@@ -504,7 +544,7 @@
 	}
 
 	.perFeature{
-		margin: var(--perFeatures_SideMargin_Pc);
+		margin: var(--perFeatures_Margin_Pc);
 	}
 
 	/**Events and Activities*/

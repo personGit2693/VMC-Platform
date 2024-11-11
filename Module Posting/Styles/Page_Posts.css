@@ -6446,7 +6446,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --scrollWebkit_Size: clamp(2.5px, 1vw, 5px); }
+  --scrollWebkit_Size: clamp(2.5px, 1vw, 5px);
+  --chatDpSize: clamp(30px, 3vw, 35px); }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6485,6 +6486,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: #ffffff;
   /**Sections Label*/
+  /*Search Area*/
+  --searchAreaWrap_BgColor: #252331;
+  /*Search Area*/
   /**Page Features*/
   --highlightedTextsColor: #ffffff;
   /**Page Features*/
@@ -6541,6 +6545,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: black;
   /**Sections Label*/
+  /*Search Area*/
+  --searchAreaWrap_BgColor: #ffffff;
+  /*Search Area*/
   /**Page Features*/
   --highlightedTextsColor: black;
   /**Page Features*/
@@ -6578,6 +6585,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /**Header*/
 /**Search Input*/
 #searchChatInput {
+  position: sticky;
+  top: -8px;
+  z-index: 1;
   --inputSearchWidth: 100%;
   --inputSearchTopPadding: 7px;
   --inputSearchRightPadding: 7px;
@@ -6587,7 +6597,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --inputSearchBorderRadius: 4px;
   --inputSearchIconHori: 7px;
   --inputSearchIconSize: clamp(12px, 1vw, 15px);
-  --inputSearchFSize: clamp(12px, 1vw, 15px); }
+  --inputSearchFSize: clamp(12px, 1vw, 15px);
+  background-color: var(--chatArea_BgColor);
+  font-family: "binanceFont"; }
 
 /**Search Input*/
 /*Rogrid*/
@@ -6602,7 +6614,53 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .chatUser {
   display: flex;
-  overflow: hidden; }
+  overflow: hidden;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+  cursor: pointer; }
+
+.chatUserDp_Online {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: var(--chatDpSize);
+  height: var(--chatDpSize);
+  object-fit: contain;
+  margin: 4px;
+  border: 2px solid #39AB5B; }
+
+.chatUserDp_Offline {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: var(--chatDpSize);
+  height: var(--chatDpSize);
+  object-fit: contain;
+  margin: 4px;
+  border: 2px solid #97A0A8; }
+
+.chatUserDetailsWrap {
+  overflow: hidden;
+  width: 100%; }
+
+.chatUserName {
+  font-family: "binanceFont";
+  font-size: clamp(12px, 1vw, 14px);
+  padding: 7px;
+  font-weight: bold;
+  color: var(--highlightedTextsColor); }
+
+.chatUserNote {
+  font-family: "binanceFont";
+  font-size: clamp(11px, 1vw, 13px);
+  color: #97A0A8;
+  padding: 0px 7px; }
 
 /*Right Side or Chat Area*/
 /*Sections Label*/
@@ -6686,8 +6744,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --perFeatures_SideMargin_Smart: 0px;
-  --perFeatures_SideMargin_Pc: 0px 20px;
+  --perFeatures_Margin_Smart: 0px;
+  --perFeatures_Margin_Pc: 0px 20px;
   --eventsSectionWidth_Smart: 100%;
   --eventsSectionWidth_Pc: 300px;
   --whatIsNewSection_Width_Smart: 100%;
@@ -6719,6 +6777,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-shrink: 0; }
 
 /**Main Side*/
+/**Date Range*/
+/**Date Range*/
 /*Rogrid*/
 /*Page Body*/
 #pageContentsWrap {
@@ -6796,6 +6856,36 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   color: var(--featuresConTxtColor); }
 
 /*Smart only features controller*/
+/*Search Area*/
+#searchAreaWrap {
+  overflow: hidden;
+  padding: 8px 20px;
+  flex-shrink: 0;
+  background-color: var(--searchAreaWrap_BgColor); }
+
+#searchInputsWrap {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; }
+
+#searchContentInput {
+  --inputSearchWidth: 250px;
+  --inputSearchTopPadding: 7px;
+  --inputSearchRightPadding: 7px;
+  --inputSearchBottomPadding: 7px;
+  --inputSearchLeftPadding: 25px;
+  --inputSearchBorderColor: #97A0A8;
+  --inputSearchBorderRadius: 4px;
+  --inputSearchIconHori: 7px;
+  --inputSearchIconSize: clamp(12px, 1vw, 15px);
+  --inputSearchFSize: clamp(12px, 1vw, 15px);
+  background-color: transparent;
+  font-family: "binanceFont"; }
+
+/*Search Area*/
 /*Page Features*/
 #featuresWrap {
   display: flex;
@@ -7097,7 +7187,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow-y: hidden; }
 
   .perFeature {
-    margin: var(--perFeatures_SideMargin_Smart); }
+    margin: var(--perFeatures_Margin_Smart); }
 
   /**Events and Activities*/
   #eventsSection {
@@ -7129,7 +7219,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow-y: hidden; }
 
   .perFeature {
-    margin: var(--perFeatures_SideMargin_Smart); }
+    margin: var(--perFeatures_Margin_Smart); }
 
   /**Events and Activities*/
   #eventsSection {
@@ -7161,7 +7251,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     overflow-y: hidden; }
 
   .perFeature {
-    margin: var(--perFeatures_SideMargin_Pc); }
+    margin: var(--perFeatures_Margin_Pc); }
 
   /**Events and Activities*/
   #eventsSection {

@@ -10,6 +10,7 @@
 /*Root*/
 :root{
 	--scrollWebkit_Size: clamp(2.5px, 1vw, 5px);
+	--chatDpSize: clamp(30px, 3vw, 35px);
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -63,6 +64,11 @@
 	/**Sections Label*/
 	--sectionsLabelColor: #ffffff;
 	/**Sections Label*/
+
+
+	/*Search Area*/
+	--searchAreaWrap_BgColor: #252331;
+	/*Search Area*/
 
 
 	/**Page Features*/
@@ -145,6 +151,11 @@
 	/**Sections Label*/
 
 
+	/*Search Area*/
+	--searchAreaWrap_BgColor: #ffffff;
+	/*Search Area*/
+
+
 	/**Page Features*/
 	--highlightedTextsColor: black;
 	/**Page Features*/
@@ -195,6 +206,9 @@
 
 /**Search Input*/
 #searchChatInput{
+	position: sticky;
+	top: -8px;
+	z-index: 1;
 	--inputSearchWidth: 100%;
 	--inputSearchTopPadding: 7px;
 	--inputSearchRightPadding: 7px;
@@ -205,6 +219,8 @@
 	--inputSearchIconHori: 7px;
 	--inputSearchIconSize: clamp(12px, 1vw, 15px);
 	--inputSearchFSize: clamp(12px, 1vw, 15px);	
+	background-color: var(--chatArea_BgColor);	
+	font-family: "binanceFont";
 }
 /**Search Input*/
 /*Rogrid*/
@@ -223,6 +239,41 @@
 .chatUser{
 	display: flex;
 	overflow: hidden;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	margin: 15px 0px;
+	cursor: pointer;
+}
+
+.chatUserDp_Online{
+	@include chatUserDp_General;
+	border: 2px solid #39AB5B;
+}
+
+.chatUserDp_Offline{
+	@include chatUserDp_General;
+	border: 2px solid #97A0A8;
+}
+
+.chatUserDetailsWrap{
+	overflow: hidden;
+	width: 100%;
+}
+
+.chatUserName{
+	font-family: "binanceFont";
+	font-size: clamp(12px, 1vw, 14px);	
+	padding: 7px;
+	font-weight: bold;
+	color: var(--highlightedTextsColor);
+}
+
+.chatUserNote{
+	font-family: "binanceFont";
+	font-size: clamp(11px, 1vw, 13px);
+	color: #97A0A8;
+	padding: 0px 7px;
 }
 /*Right Side or Chat Area*/
 
