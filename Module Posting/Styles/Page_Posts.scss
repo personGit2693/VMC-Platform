@@ -59,9 +59,66 @@
 }
 /**Main Side*/
 
-/**Date Range*/
+/**Calendar Lite*/
 .calLiteMonthText_RoClass, .calLiteYearText_RoClass{
+	--calendarHeadTxtFSize: clamp(12px, 1vw, 15px);	
+	font-family: "binanceFont";	
+}
 
+.calLiteButton_RoClass{
+	--calendarHeadBtnWidthHeight: clamp(18px, 1vw, 20px);
+}
+
+.calLiteDaysTxt_RoClass, .calLiteDaysIndex_RoClass{
+	--calendarDayTxtFSize: clamp(12px, 1vw, 15px);
+	font-family: "binanceFont";
+}
+/**Calendar Lite*/
+
+/**Date Range*/
+.dateRangeWrap_RoClass{
+	flex-shrink: 0;
+}
+
+.dateRange_RoClass{
+	--dateRangeBorderColor: #97A0A8;
+	--dateRangeBorderRadius: 5px;
+	--dateRangeBorderWidth: 1px;	
+}
+
+.dateRangeDetails_RoClass{
+	--dateRangePadding: 2px;
+}
+
+.dateRangeIcon_RoClass{
+	--dateRangeIconSize: clamp(24px, 1vw, 28px);
+}
+
+.dateRangeIconLightMode{
+	background-image: url('./../../src/calendaricon.png');
+}
+
+.dateRangeIconDarkMode{
+	background-image: url('./../../src/calendaricon white.png');
+}
+
+.dateRangeText_RoClass{
+	--dateRangeFSize: clamp(12px, 1vw, 15px);	
+	font-family: "binanceFont";
+}
+
+.dateRangeTooltipArrow_RoClass{	
+	right: 0px;
+}
+
+.dateRangeCalLiteWrap_RoClass{
+	--dateRangeCalLiteWrapWidth: clamp(470px, 45vw, 650px);
+	--dateRangeCalLiteWrapTop: clamp(45px, 1vw, 50px);
+	right: 0px;
+}
+
+.dateRangeCalLite_RoClass{
+	--dateRangeCalLiteBorderColor: #8394B7;
 }
 /**Date Range*/
 /*Rogrid*/
@@ -156,23 +213,24 @@
 
 /*Search Area*/
 #searchAreaWrap{
-	overflow: hidden;
+	overflow: visible;
 	padding: 8px 20px;
 	flex-shrink: 0;
 	background-color: var(--searchAreaWrap_BgColor);
+	z-index: 1;
 }
 
 #searchInputsWrap{
-	overflow: hidden;
+	overflow: visible;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
 }
 
 #searchContentInput{	
-	--inputSearchWidth: 250px;
+	--inputSearchWidth: 300px;
 	--inputSearchTopPadding: 7px;
 	--inputSearchRightPadding: 7px;
 	--inputSearchBottomPadding: 7px;
@@ -459,7 +517,17 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
-@media all and (max-width:641px){	
+@media all and (max-width:641px){
+	/*Search Area*/
+	#searchInputsWrap{		
+		justify-content: flex-start;		
+	}
+
+	#searchContentInput{	
+		--inputSearchWidth: 100%;
+	}
+	/*Search Area*/
+
 	/*Page Features*/
 	#featuresWrap{
 		@include featuresWrap_Scroll_Smart;
@@ -489,7 +557,7 @@
 	#pinnedPostSection, #committeesSection{		
 		height: var(--pinnedPostAndCommittes_Height_Smart);
 	}
-	/**Pinned Posts and Committees*/
+	/**Pinned Posts and Committees*/	
 	/*Page Features*/
 }
 /*Mobile*/
@@ -498,7 +566,7 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){	
+@media all and (min-width:642px) and (max-width:1080px){		
 	/*Page Features*/	
 	#featuresWrap{
 		@include featuresWrap_Scroll_Smart;

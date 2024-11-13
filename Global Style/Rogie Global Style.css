@@ -3260,6 +3260,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitle_BgColor:#0F143C;
   --projectTitleTextFColor: #ffffff;
   /***Header*/
+  /***Date Range*/
+  --dateRangeFColor: #ffffff;
+  --dateRangeTooltipColor: #ffffff;
+  /***Date Range*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #252331;
@@ -3319,6 +3323,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /***Search Input*/
   --inputSearchFColor: black;
   /***Search Input*/
+  /***Date Range*/
+  --dateRangeFColor: black;
+  --dateRangeTooltipColor: black;
+  /***Date Range*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #ffffff;
