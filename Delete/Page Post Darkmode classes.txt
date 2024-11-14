@@ -1,0 +1,6 @@
+darkMode & lightMode
+dateRangeIconDarkMode & dateRangeIconLightMode
+calLite_BgColor_DarkMode & calLite_BgColor_LightMode
+calLiteButton_Left_DarkMode & calLiteButton_Left_LightMode
+calLiteButton_Right_DarkMode & calLiteButton_Right_LightMode
+calLiteBodyTxts_Color_DarkMode & calLiteBodyTxts_Color_LightMode

@@ -6479,6 +6479,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --dateRangeFColor: #ffffff;
   --dateRangeTooltipColor: #ffffff;
   /***Date Range*/
+  /***Checkbox*/
+  --cusCheckboxColor: #ffffff;
+  /***Checkbox*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #252331;
@@ -6542,6 +6545,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --dateRangeFColor: black;
   --dateRangeTooltipColor: black;
   /***Date Range*/
+  /***Checkbox*/
+  --cusCheckboxColor: black;
+  /***Checkbox*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #ffffff;
@@ -6575,6 +6581,42 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --committeeBgColor: #ffffff;
   /**Pinned Posts and Committees*/ }
 
+/**Calendar Lite*/
+.calLite_BgColor_DarkMode {
+  background-color: #0F143C; }
+
+.calLite_BgColor_LightMode {
+  background-color: #ffffff; }
+
+.calLiteButton_Right_DarkMode {
+  background: transparent url("./../../src/Chevron Right White.png") center no-repeat;
+  background-size: contain; }
+
+.calLiteButton_Right_LightMode {
+  background: transparent url("./../../src/Chevron Right Green.png") center no-repeat;
+  background-size: contain; }
+
+.calLiteButton_Left_DarkMode {
+  background: transparent url("./../../src/Chevron Left White.png") center no-repeat;
+  background-size: contain; }
+
+.calLiteButton_Left_LightMode {
+  background: transparent url("./../../src/Chevron Left Green.png") center no-repeat;
+  background-size: contain; }
+
+.calLiteHeadText_Color_DarkMode {
+  color: #ffffff !important; }
+
+.calLiteHeadText_Color_LightMode {
+  color: #39AB5B !important; }
+
+.calLiteBodyTxts_Color_DarkMode {
+  color: #ffffff !important; }
+
+.calLiteBodyTxts_Color_LightMode {
+  color: black !important; }
+
+/**Calendar Lite*/
 /*Dark Mode and light mode*/
 /*Rogrid*/
 /**Header*/
@@ -6785,56 +6827,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-shrink: 0; }
 
 /**Main Side*/
-/**Calendar Lite*/
-.calLiteMonthText_RoClass, .calLiteYearText_RoClass {
-  --calendarHeadTxtFSize: clamp(12px, 1vw, 15px);
-  font-family: "binanceFont"; }
-
-.calLiteButton_RoClass {
-  --calendarHeadBtnWidthHeight: clamp(18px, 1vw, 20px); }
-
-.calLiteDaysTxt_RoClass, .calLiteDaysIndex_RoClass {
-  --calendarDayTxtFSize: clamp(12px, 1vw, 15px);
-  font-family: "binanceFont"; }
-
-/**Calendar Lite*/
-/**Date Range*/
-.dateRangeWrap_RoClass {
-  flex-shrink: 0; }
-
-.dateRange_RoClass {
-  --dateRangeBorderColor: #97A0A8;
-  --dateRangeBorderRadius: 5px;
-  --dateRangeBorderWidth: 1px; }
-
-.dateRangeDetails_RoClass {
-  --dateRangePadding: 2px; }
-
-.dateRangeIcon_RoClass {
-  --dateRangeIconSize: clamp(24px, 1vw, 28px); }
-
-.dateRangeIconLightMode {
-  background-image: url("./../../src/calendaricon.png"); }
-
-.dateRangeIconDarkMode {
-  background-image: url("./../../src/calendaricon white.png"); }
-
-.dateRangeText_RoClass {
-  --dateRangeFSize: clamp(12px, 1vw, 15px);
-  font-family: "binanceFont"; }
-
-.dateRangeTooltipArrow_RoClass {
-  right: 0px; }
-
-.dateRangeCalLiteWrap_RoClass {
-  --dateRangeCalLiteWrapWidth: clamp(470px, 45vw, 650px);
-  --dateRangeCalLiteWrapTop: clamp(45px, 1vw, 50px);
-  right: 0px; }
-
-.dateRangeCalLite_RoClass {
-  --dateRangeCalLiteBorderColor: #8394B7; }
-
-/**Date Range*/
 /*Rogrid*/
 /*Page Body*/
 #pageContentsWrap {
@@ -6914,22 +6906,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Smart only features controller*/
 /*Search Area*/
 #searchAreaWrap {
-  overflow: visible;
-  padding: 8px 20px;
   flex-shrink: 0;
-  background-color: var(--searchAreaWrap_BgColor);
-  z-index: 1; }
+  background-color: var(--searchAreaWrap_BgColor); }
 
 #searchInputsWrap {
   overflow: visible;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center; }
+  display: flex; }
 
+/**Input Text Search*/
 #searchContentInput {
-  --inputSearchWidth: 300px;
   --inputSearchTopPadding: 7px;
   --inputSearchRightPadding: 7px;
   --inputSearchBottomPadding: 7px;
@@ -6942,6 +6927,79 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   background-color: transparent;
   font-family: "binanceFont"; }
 
+/**Input Text Search*/
+/**Date Range Content*/
+.dateRangeWrap_RoClass {
+  flex-shrink: 0; }
+
+.dateRange_RoClass {
+  --dateRangeBorderColor: #97A0A8;
+  --dateRangeBorderRadius: 5px;
+  --dateRangeBorderWidth: 1px; }
+
+.dateRangeDetails_RoClass {
+  --dateRangePadding: 2.3px; }
+
+.dateRangeIcon_RoClass {
+  --dateRangeIconSize: clamp(24px, 1vw, 28px); }
+
+.dateRangeIconLightMode {
+  background-image: url("./../../src/calendaricon.png"); }
+
+.dateRangeIconDarkMode {
+  background-image: url("./../../src/calendaricon white.png"); }
+
+.dateRangeText_RoClass {
+  --dateRangeFSize: clamp(12px, 1vw, 15px);
+  font-family: "binanceFont"; }
+
+.dateRangeTooltipArrow_RoClass {
+  right: 0px; }
+
+.dateRangeCalLiteWrap_RoClass {
+  --dateRangeCalLiteWrapTop: clamp(45px, 1vw, 50px);
+  right: 0px; }
+
+.dateRangeCalLite_RoClass {
+  --dateRangeCalLiteBorderColor: #8394B7; }
+
+.calLiteMonthText_RoClass, .calLiteYearText_RoClass {
+  --calendarHeadTxtFSize: clamp(12px, 1vw, 15px);
+  font-family: "binanceFont"; }
+
+.calLiteButton_RoClass {
+  --calendarHeadBtnWidthHeight: clamp(22px, 1vw, 25px); }
+
+.calLiteDaysTxt_RoClass, .calLiteDaysIndex_RoClass {
+  --calendarDayTxtFSize: clamp(12px, 1vw, 15px);
+  font-family: "binanceFont"; }
+
+/**Date Range Content*/
+/**Filter Content*/
+#filterContentWrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 3px; }
+
+.cusCheckBoxPaper_RoClass {
+  display: flex;
+  margin: 5px; }
+
+.cusCheckBoxPaper_RoClass label {
+  --cusCheckboxFStyle: normal;
+  --cusCheckboxFWeight: normal;
+  --custCheckboxFSize: clamp(12px, 1vw, 15px);
+  vertical-align: middle; }
+
+.boxme_RoClass {
+  --cusCheckboxWidthHeight: clamp(16px, 1vw, 19px);
+  --cusCheckboxBorderWidth: 1px;
+  --cusCheckboxBorderColor: #97A0A8; }
+
+/**Filter Content*/
 /*Search Area*/
 /*Page Features*/
 #featuresWrap {
@@ -7094,7 +7152,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-size: var(--postsBodyDetailsFsize);
   color: var(--highlightedTextsColor); }
 
-.postsBodyDetails img {
+.postsBodyDetails img, .postsBodyDetails video {
   position: relative;
   box-sizing: border-box;
   display: block;
@@ -7126,10 +7184,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   background-size: contain;
   flex-shrink: 0; }
 
-.postsSeenIconDarkmode {
+.postsSeenIconDarkMode {
   background-image: url("../../src/seen-white.png"); }
 
-.postsSeenIconLightmode {
+.postsSeenIconLightMode {
   background-image: url("../../src/seen-black.png"); }
 
 .postsSeenTxts {
@@ -7239,12 +7297,38 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Mobile*/
 @media all and (max-width: 641px) {
   /*Search Area*/
+  #searchAreaWrap {
+    display: flex;
+    padding: 0px;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: auto;
+    z-index: auto; }
+
   #searchInputsWrap {
-    justify-content: flex-start; }
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch; }
 
+  /**Input Text Search*/
   #searchContentInput {
-    --inputSearchWidth: 100%; }
+    --inputSearchWidth: auto;
+    margin: 5px; }
 
+  /**Input Text Search*/
+  /**Date Range Content*/
+  .dateRangeWrap_RoClass {
+    margin: 5px; }
+
+  .dateRange_RoClass {
+    width: 100%; }
+
+  .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 100%; }
+
+  /**Date Range Content*/
   /*Search Area*/
   /*Page Features*/
   #featuresWrap {
@@ -7278,6 +7362,40 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Search Area*/
+  #searchAreaWrap {
+    display: flex;
+    padding: 0px;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: auto;
+    z-index: auto; }
+
+  #searchInputsWrap {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch; }
+
+  /**Input Text Search*/
+  #searchContentInput {
+    --inputSearchWidth: auto;
+    margin: 5px; }
+
+  /**Input Text Search*/
+  /**Date Range Content*/
+  .dateRangeWrap_RoClass {
+    margin: 5px; }
+
+  .dateRange_RoClass {
+    width: 100%; }
+
+  .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: 100%; }
+
+  /**Date Range Content*/
+  /*Search Area*/
   /*Page Features*/
   #featuresWrap {
     overflow-x: hidden;
@@ -7310,6 +7428,37 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1081px) {
+  /*Search Area*/
+  #searchAreaWrap {
+    display: block;
+    padding: 8px 20px;
+    height: auto;
+    overflow: visible;
+    z-index: 1; }
+
+  #searchInputsWrap {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+
+  /**Input Text Search*/
+  #searchContentInput {
+    --inputSearchWidth: clamp(250px, 23vw, 300px);
+    margin: 0px; }
+
+  /**Input Text Search*/
+  /**Date Range Content*/
+  .dateRangeWrap_RoClass {
+    margin: 0px; }
+
+  .dateRange_RoClass {
+    width: 100%; }
+
+  .dateRangeCalLiteWrap_RoClass {
+    --dateRangeCalLiteWrapWidth: clamp(230px, 65vw, 650px); }
+
+  /**Date Range Content*/
+  /*Search Area*/
   /*Page Features*/
   #featuresWrap {
     overflow-x: auto;

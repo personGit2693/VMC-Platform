@@ -68,5 +68,67 @@
 	overflow-y: hidden;
 }
 
+
+@mixin searchAreaWrap_Smart{
+	display: flex;
+	padding: 0px;		
+	height: 100%;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	overflow: auto;
+	z-index: auto;
+
+}
+@mixin searchAreaWrap_Pc{
+	display: block;
+	padding: 8px 20px;
+	height: auto;
+	overflow: visible;
+	z-index: 1;
+}
+
+
+@mixin searchInputsWrap_Smart{
+	flex-flow: column nowrap;	
+	justify-content: center;		
+	align-items: stretch;
+}
+@mixin searchInputsWrap_Pc{
+	flex-flow: row nowrap;	
+	justify-content: space-between;
+	align-items: center;		
+}
+
+
+@mixin searchInputs_Smart{
+	margin: 5px;
+}
+@mixin searchInputs_Pc{
+	margin: 0px;
+}
+
+
+@mixin searchContentInput_Smart{
+	--inputSearchWidth: auto;
+}
+@mixin searchContentInput_Pc{
+	--inputSearchWidth: clamp(250px, 23vw, 300px);
+}
+
+
+@mixin dateRange_Smart{
+	width: 100%;
+}
+@mixin dateRange_Pc{
+	width: auto;
+}
+
+@mixin dateRangeCalLiteWrap_Smart{
+	--dateRangeCalLiteWrapWidth: 100%;
+}
+@mixin dateRangeCalLiteWrap_Pc{
+	--dateRangeCalLiteWrapWidth: clamp(230px, 65vw, 650px);
+}
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/

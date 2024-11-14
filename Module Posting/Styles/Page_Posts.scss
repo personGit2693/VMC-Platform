@@ -58,69 +58,6 @@
 	flex-shrink: 0;
 }
 /**Main Side*/
-
-/**Calendar Lite*/
-.calLiteMonthText_RoClass, .calLiteYearText_RoClass{
-	--calendarHeadTxtFSize: clamp(12px, 1vw, 15px);	
-	font-family: "binanceFont";	
-}
-
-.calLiteButton_RoClass{
-	--calendarHeadBtnWidthHeight: clamp(18px, 1vw, 20px);
-}
-
-.calLiteDaysTxt_RoClass, .calLiteDaysIndex_RoClass{
-	--calendarDayTxtFSize: clamp(12px, 1vw, 15px);
-	font-family: "binanceFont";
-}
-/**Calendar Lite*/
-
-/**Date Range*/
-.dateRangeWrap_RoClass{
-	flex-shrink: 0;
-}
-
-.dateRange_RoClass{
-	--dateRangeBorderColor: #97A0A8;
-	--dateRangeBorderRadius: 5px;
-	--dateRangeBorderWidth: 1px;	
-}
-
-.dateRangeDetails_RoClass{
-	--dateRangePadding: 2px;
-}
-
-.dateRangeIcon_RoClass{
-	--dateRangeIconSize: clamp(24px, 1vw, 28px);
-}
-
-.dateRangeIconLightMode{
-	background-image: url('./../../src/calendaricon.png');
-}
-
-.dateRangeIconDarkMode{
-	background-image: url('./../../src/calendaricon white.png');
-}
-
-.dateRangeText_RoClass{
-	--dateRangeFSize: clamp(12px, 1vw, 15px);	
-	font-family: "binanceFont";
-}
-
-.dateRangeTooltipArrow_RoClass{	
-	right: 0px;
-}
-
-.dateRangeCalLiteWrap_RoClass{
-	--dateRangeCalLiteWrapWidth: clamp(470px, 45vw, 650px);
-	--dateRangeCalLiteWrapTop: clamp(45px, 1vw, 50px);
-	right: 0px;
-}
-
-.dateRangeCalLite_RoClass{
-	--dateRangeCalLiteBorderColor: #8394B7;
-}
-/**Date Range*/
 /*Rogrid*/
 
 
@@ -212,25 +149,18 @@
 
 
 /*Search Area*/
-#searchAreaWrap{
-	overflow: visible;
-	padding: 8px 20px;
+#searchAreaWrap{	
 	flex-shrink: 0;
-	background-color: var(--searchAreaWrap_BgColor);
-	z-index: 1;
+	background-color: var(--searchAreaWrap_BgColor);	
 }
 
 #searchInputsWrap{
 	overflow: visible;
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: center;
 }
 
-#searchContentInput{	
-	--inputSearchWidth: 300px;
+/**Input Text Search*/
+#searchContentInput{
 	--inputSearchTopPadding: 7px;
 	--inputSearchRightPadding: 7px;
 	--inputSearchBottomPadding: 7px;
@@ -243,6 +173,97 @@
 	background-color: transparent;	
 	font-family: "binanceFont";
 }
+/**Input Text Search*/
+
+/**Date Range Content*/
+.dateRangeWrap_RoClass{
+	flex-shrink: 0;
+}
+
+.dateRange_RoClass{
+	--dateRangeBorderColor: #97A0A8;
+	--dateRangeBorderRadius: 5px;
+	--dateRangeBorderWidth: 1px;	
+}
+
+.dateRangeDetails_RoClass{
+	--dateRangePadding: 2.3px;
+}
+
+.dateRangeIcon_RoClass{
+	--dateRangeIconSize: clamp(24px, 1vw, 28px);
+}
+
+.dateRangeIconLightMode{
+	background-image: url('./../../src/calendaricon.png');
+}
+
+.dateRangeIconDarkMode{
+	background-image: url('./../../src/calendaricon white.png');
+}
+
+.dateRangeText_RoClass{
+	--dateRangeFSize: clamp(12px, 1vw, 15px);	
+	font-family: "binanceFont";
+}
+
+.dateRangeTooltipArrow_RoClass{	
+	right: 0px;
+}
+
+.dateRangeCalLiteWrap_RoClass{	
+	--dateRangeCalLiteWrapTop: clamp(45px, 1vw, 50px);
+	right: 0px;
+}
+
+.dateRangeCalLite_RoClass{
+	--dateRangeCalLiteBorderColor: #8394B7;
+}
+
+.calLiteMonthText_RoClass, .calLiteYearText_RoClass{
+	--calendarHeadTxtFSize: clamp(12px, 1vw, 15px);	
+	font-family: "binanceFont";	
+}
+
+.calLiteButton_RoClass{
+	--calendarHeadBtnWidthHeight: clamp(22px, 1vw, 25px);
+}
+
+.calLiteDaysTxt_RoClass, .calLiteDaysIndex_RoClass{
+	--calendarDayTxtFSize: clamp(12px, 1vw, 15px);
+	font-family: "binanceFont";
+}
+/**Date Range Content*/
+
+/**Filter Content*/
+#filterContentWrap{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	padding: 3px;
+
+}
+
+.cusCheckBoxPaper_RoClass{
+	display: flex;
+	margin: 5px;
+}
+
+.cusCheckBoxPaper_RoClass label{
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFSize: clamp(12px, 1vw, 15px);	
+	vertical-align: middle;
+}
+
+.boxme_RoClass{
+	--cusCheckboxWidthHeight: clamp(16px, 1vw, 19px);
+	--cusCheckboxBorderWidth: 1px;
+	--cusCheckboxBorderColor: #97A0A8;
+}
+/**Filter Content*/
 /*Search Area*/
 
 
@@ -380,7 +401,7 @@
 	color: var(--highlightedTextsColor);	
 }
 
-.postsBodyDetails img{
+.postsBodyDetails img, .postsBodyDetails video{
 	position: relative;
 	box-sizing: border-box;
 	display: block;
@@ -416,11 +437,11 @@
 	flex-shrink: 0;
 }
 
-.postsSeenIconDarkmode{
+.postsSeenIconDarkMode{
 	background-image: url('../../src/seen-white.png');
 }
 
-.postsSeenIconLightmode{
+.postsSeenIconLightMode{
 	background-image: url('../../src/seen-black.png');
 }
 
@@ -519,14 +540,36 @@
 /*Mobile*/
 @media all and (max-width:641px){
 	/*Search Area*/
-	#searchInputsWrap{		
-		justify-content: flex-start;		
+	#searchAreaWrap{
+		@include searchAreaWrap_Smart;		
 	}
 
-	#searchContentInput{	
-		--inputSearchWidth: 100%;
+	#searchInputsWrap{
+		@include searchInputsWrap_Smart;		
 	}
+
+	/**Input Text Search*/
+	#searchContentInput{
+		@include searchContentInput_Smart;
+		@include searchInputs_Smart;		
+	}
+	/**Input Text Search*/
+
+	/**Date Range Content*/
+	.dateRangeWrap_RoClass{
+		@include searchInputs_Smart;
+	}
+
+	.dateRange_RoClass{
+		@include dateRange_Smart;
+	}
+
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Smart;	
+	}
+	/**Date Range Content*/	
 	/*Search Area*/
+
 
 	/*Page Features*/
 	#featuresWrap{
@@ -567,6 +610,38 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){		
+	/*Search Area*/
+	#searchAreaWrap{
+		@include searchAreaWrap_Smart;
+	}
+
+	#searchInputsWrap{
+		@include searchInputsWrap_Smart;	
+	}
+
+	/**Input Text Search*/
+	#searchContentInput{
+		@include searchContentInput_Smart;
+		@include searchInputs_Smart;
+	}
+	/**Input Text Search*/
+
+	/**Date Range Content*/
+	.dateRangeWrap_RoClass{
+		@include searchInputs_Smart;
+	}
+
+	.dateRange_RoClass{
+		@include dateRange_Smart;
+	}
+
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Smart;	
+	}
+	/**Date Range Content*/
+	/*Search Area*/
+
+
 	/*Page Features*/	
 	#featuresWrap{
 		@include featuresWrap_Scroll_Smart;
@@ -606,6 +681,38 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1081px){
+	/*Search Area*/
+	#searchAreaWrap{
+		@include searchAreaWrap_Pc;
+	}
+
+	#searchInputsWrap{
+		@include searchInputsWrap_Pc;
+	}
+
+	/**Input Text Search*/
+	#searchContentInput{
+		@include searchContentInput_Pc;
+		@include searchInputs_Pc;
+	}
+	/**Input Text Search*/
+
+	/**Date Range Content*/
+	.dateRangeWrap_RoClass{
+		@include searchInputs_Pc;
+	}
+
+	.dateRange_RoClass{
+		@include dateRange_Smart;
+	}
+
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Pc;	
+	}
+	/**Date Range Content*/
+	/*Search Area*/
+
+
 	/*Page Features*/	
 	#featuresWrap{
 		@include featuresWrap_Scroll_Pc;

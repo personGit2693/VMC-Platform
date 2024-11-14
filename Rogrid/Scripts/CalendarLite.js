@@ -153,12 +153,12 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 		if(filteredDate.includes(perDate_Rogrid)){
 			/*Editable, change font color and bg color when perDate is on filtered date*/
 			dayTxtDiv_Rogrid.style.backgroundColor = "green";
-			dayTxtDiv_Rogrid.style.color = "#ffffff";
+			/*dayTxtDiv_Rogrid.style.color = "#ffffff";*/
 			/*Editable, change font color and bg color when perDate is on filtered date*/
 		}else if(!filteredDate.includes(perDate_Rogrid)){
 			/*Editable, change font color and bg color when perDate is not on filtered date*/
 			dayTxtDiv_Rogrid.style.backgroundColor = "transparent";
-			dayTxtDiv_Rogrid.style.color = "black";
+			/*dayTxtDiv_Rogrid.style.color = "black";*/
 			/*Editable, change font color and bg color when perDate is not on filtered date*/
 		}		
 
@@ -253,17 +253,17 @@ const getCalendarLiteValue = (calLiteYearVal_Param, calLiteMonth_Param, dayNumDi
 	for(let index=0; index<dayNumber_Rogrid_Coll.length; index++){
 		if(dayNumber_Rogrid_Coll[index] == dayNumDivElem_Param){
 			/*Editable, change font color and bg color of the selected date*/
-			dayNumber_Rogrid_Coll[index].style.backgroundColor = "#44D3A3"; 
-			dayNumber_Rogrid_Coll[index].style.color = "#ffffff";
+			dayNumber_Rogrid_Coll[index].style.backgroundColor = "#39AB5B"; 
+			/*dayNumber_Rogrid_Coll[index].style.color = "#ffffff";*/
 			/*Editable, change font color and bg color of the selected date*/
 		}else if(dayNumber_Rogrid_Coll[index] != dayNumDivElem_Param){
 			/*Editable, logic and action for not selected date*/
 			if(filteredDate.includes(dayNumber_Rogrid_Coll[index].getAttribute("data-dayDate"))){
 				dayNumber_Rogrid_Coll[index].style.backgroundColor = "green";
-				dayNumber_Rogrid_Coll[index].style.color = "#ffffff";
+				/*dayNumber_Rogrid_Coll[index].style.color = "#ffffff";*/
 			}else{
 				dayNumber_Rogrid_Coll[index].style.backgroundColor = "transparent";
-				dayNumber_Rogrid_Coll[index].style.color = "black";
+				/*dayNumber_Rogrid_Coll[index].style.color = "black";*/
 			}
 			/*Editable, logic and action for not selected date*/					
 		}

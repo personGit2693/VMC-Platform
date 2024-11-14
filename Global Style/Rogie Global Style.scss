@@ -46,12 +46,16 @@
 	/***Header*/
 	--projectTitle_BgColor:#0F143C;
 	--projectTitleTextFColor: #ffffff;
-	/***Header*/
+	/***Header*/	
 
 	/***Date Range*/	
 	--dateRangeFColor: #ffffff;
 	--dateRangeTooltipColor: #ffffff;
 	/***Date Range*/
+
+	/***Checkbox*/
+	--cusCheckboxColor: #ffffff;
+	/***Checkbox*/
 	/**Rogrid*/
 
 
@@ -142,6 +146,10 @@
 	--dateRangeFColor: black;
 	--dateRangeTooltipColor: black;
 	/***Date Range*/
+
+	/***Checkbox*/
+	--cusCheckboxColor: black;
+	/***Checkbox*/
 	/**Rogrid*/
 
 
@@ -193,6 +201,52 @@
 	--committeeBgColor: #ffffff;
 	/**Pinned Posts and Committees*/
 }
+
+/**Calendar Lite*/
+.calLite_BgColor_DarkMode{
+	background-color: #0F143C;
+}
+
+.calLite_BgColor_LightMode{
+	background-color: #ffffff;
+}
+
+.calLiteButton_Right_DarkMode{
+	background: transparent url("./../../src/Chevron Right White.png") center no-repeat;
+	background-size: contain;	
+}
+
+.calLiteButton_Right_LightMode{
+	background: transparent url("./../../src/Chevron Right Green.png") center no-repeat;
+	background-size: contain;
+}
+
+.calLiteButton_Left_DarkMode{
+	background: transparent url("./../../src/Chevron Left White.png") center no-repeat;
+	background-size: contain;
+}
+
+.calLiteButton_Left_LightMode{
+	background: transparent url("./../../src/Chevron Left Green.png") center no-repeat;
+	background-size: contain;
+}
+
+.calLiteHeadText_Color_DarkMode{
+	color: #ffffff !important;
+}
+
+.calLiteHeadText_Color_LightMode{
+	color: #39AB5B !important;
+}
+
+.calLiteBodyTxts_Color_DarkMode{
+	color: #ffffff !important;
+}
+
+.calLiteBodyTxts_Color_LightMode{
+	color: black !important;
+}
+/**Calendar Lite*/
 /*Dark Mode and light mode*/
 
 

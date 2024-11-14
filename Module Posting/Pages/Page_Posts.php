@@ -96,30 +96,30 @@
 							<div class="dateRangeWrap_RoClass">
 								<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
 									<div class="dateRangeDetails_RoClass">
-										<div class="dateRangeIcon_RoClass dateRangeIconLightMode" style="--dateRangeIcon: url('./../../src/calendaricon white.png');"></div>
+										<div class="dateRangeIcon_RoClass dateRangeIconLightMode"></div>
 										<div class="dateRangeText_RoClass lightMode"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
 									</div>
 									<div class="dateRangeTooltipArrow_RoClass lightMode"></div>					
 								</div>				
 								<div class="dateRangeCalLiteWrap_RoClass">
 									<!--Date Range Content From-->
-									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass" id="contentDateRangeFrom">
+									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass calLite_BgColor_LightMode" id="contentDateRangeFrom">
 										<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 										<div class="calLiteHead_RoClass">
 											<div class="calLiteMonthHead_RoClass">
 												<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'contentDateRangeFrom')"><img src="../../src/callite left.png"></div>
-												<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'contentDateRangeFrom')"><img src="../../src/callite right.png"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteMonth('minus', 'contentDateRangeFrom')"></div>
+												<div class="calLiteMonthText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteMonth('add', 'contentDateRangeFrom')"></div>
 											</div>
 											<div class="calLiteYearHead_RoClass">
 												<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'contentDateRangeFrom')"><img src="../../src/callite left.png"></div>
-												<div class="calLiteYearText_RoClass"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'contentDateRangeFrom')"><img src="../../src/callite right.png"></div>
-											</div>									
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteYear('minus', 'contentDateRangeFrom')"></div>
+												<div class="calLiteYearText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteYear('add', 'contentDateRangeFrom')"></div>
+											</div>						
 										</div>
-										<div class="calLiteDaysTxt_RoClass">
+										<div class="calLiteDaysTxt_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>Sun</div>
 											<div>Mon</div>
 											<div>Tue</div>
@@ -128,7 +128,7 @@
 											<div>Fri</div>
 											<div>Sat</div>
 										</div>
-										<div class="calLiteDaysIndex_RoClass">
+										<div class="calLiteDaysIndex_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>
 												<!--Print Here-->
 											</div>
@@ -155,23 +155,23 @@
 									<!--Date Range Content From-->
 
 									<!--Date Range Content To-->
-									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass" id="contentDateRangeTo">
+									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass calLite_BgColor_LightMode" id="contentDateRangeTo">
 										<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 										<div class="calLiteHead_RoClass">
 											<div class="calLiteMonthHead_RoClass">
 												<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'contentDateRangeTo')"><img src="../../src/callite left.png"></div>
-												<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'contentDateRangeTo')"><img src="../../src/callite right.png"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteMonth('minus', 'contentDateRangeTo')"></div>
+												<div class="calLiteMonthText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteMonth('add', 'contentDateRangeTo')"></div>
 											</div>
 											<div class="calLiteYearHead_RoClass">
 												<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'contentDateRangeTo')"><img src="../../src/callite left.png"></div>
-												<div class="calLiteYearText_RoClass"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'contentDateRangeTo')"><img src="../../src/callite right.png"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteYear('minus', 'contentDateRangeTo')"></div>
+												<div class="calLiteYearText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteYear('add', 'contentDateRangeTo')"></div>
 											</div>									
 										</div>
-										<div class="calLiteDaysTxt_RoClass">
+										<div class="calLiteDaysTxt_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>Sun</div>
 											<div>Mon</div>
 											<div>Tue</div>
@@ -180,7 +180,7 @@
 											<div>Fri</div>
 											<div>Sat</div>
 										</div>
-										<div class="calLiteDaysIndex_RoClass">
+										<div class="calLiteDaysIndex_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>
 												<!--Print Here-->
 											</div>
@@ -208,6 +208,28 @@
 								</div>
 							</div>
 							<!--Date Range Content-->
+						</div>
+
+						<div class="mainmechaCon_RoClass" id="filterContentWrap">
+							<div class="cusCheckBoxPaper_RoClass">
+								<label for="filter_Events">Events and Activities:<div class="boxme_RoClass"><img src="./../../src/checkIcon.png"></div></label>
+								<input type="checkbox" id="filter_Events" onchange="checkCusCheckBox(this)" autocomplete="off">
+							</div>
+
+							<div class="cusCheckBoxPaper_RoClass">
+								<label for="filter_Posts">What is New:<div class="boxme_RoClass"><img src="./../../src/checkIcon.png"></div></label>
+								<input type="checkbox" id="filter_Posts" onchange="checkCusCheckBox(this)" autocomplete="off">
+							</div>
+
+							<div class="cusCheckBoxPaper_RoClass">
+								<label for="filter_PinnedPosts">Pinned Posts:<div class="boxme_RoClass"><img src="./../../src/checkIcon.png"></div></label>
+								<input type="checkbox" id="filter_PinnedPosts" onchange="checkCusCheckBox(this)" autocomplete="off">
+							</div>
+
+							<div class="cusCheckBoxPaper_RoClass">
+								<label for="filter_Committees">Committees:<div class="boxme_RoClass"><img src="./../../src/checkIcon.png"></div></label>
+								<input type="checkbox" id="filter_Committees" onchange="checkCusCheckBox(this)" autocomplete="off">
+							</div>
 						</div>						
 					</div>
 					<!--Search Area-->
@@ -308,7 +330,7 @@
 										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
 										<div class="mainmechaCon_RoClass postsTitle lightMode">Downfall of government salary</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightmode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -339,7 +361,7 @@
 										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
 										<div class="mainmechaCon_RoClass postsTitle lightMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightmode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -370,7 +392,7 @@
 										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
 										<div class="mainmechaCon_RoClass postsTitle lightMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightmode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -397,11 +419,11 @@
 
 									<!--Post Body-->
 									<div class="mainmechaCon_RoClass postsBody">
-										<div class="mainmechaCon_RoClass postsBodyDetails lightMode"><img src="./../../src/rally post.jpg"/></div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode"><video src="./../../src/VMCQueueing.mp4" controls muted></video></div>
 										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
 										<div class="mainmechaCon_RoClass postsTitle lightMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightmode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
