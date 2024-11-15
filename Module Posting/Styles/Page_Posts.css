@@ -7152,14 +7152,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-size: var(--postsBodyDetailsFsize);
   color: var(--highlightedTextsColor); }
 
-.postsBodyDetails img, .postsBodyDetails video {
+.postsBodyDetails img {
   position: relative;
   box-sizing: border-box;
   display: block;
   width: 100%;
   height: clamp(160px, 40vw, 210px);
-  object-fit: cover;
-  border-radius: 7px; }
+  border-radius: 7px;
+  object-fit: cover; }
+
+.postsBodyDetails video {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: clamp(160px, 40vw, 210px);
+  border-radius: 7px;
+  object-fit: contain; }
 
 .postsTitle {
   overflow: hidden;

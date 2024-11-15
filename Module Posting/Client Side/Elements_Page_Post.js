@@ -1,1 +1,1 @@
-/*export const filePreviewContainer = document.getElementById('file-preview-container-id');*/
+export const testVideo = document.getElementById('testVideo');

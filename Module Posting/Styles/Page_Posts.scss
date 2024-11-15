@@ -401,14 +401,15 @@
 	color: var(--highlightedTextsColor);	
 }
 
-.postsBodyDetails img, .postsBodyDetails video{
-	position: relative;
-	box-sizing: border-box;
-	display: block;
-	width: 100%;
-	height: clamp(160px, 40vw, 210px);
-	object-fit: cover;
-	border-radius: 7px;
+.postsBodyDetails img{
+	@include postsBodyDetails_Media_General;
+	object-fit: cover;	
+}
+
+.postsBodyDetails video{
+	@include postsBodyDetails_Media_General;
+	object-fit: contain;
+	
 }
 
 .postsTitle{

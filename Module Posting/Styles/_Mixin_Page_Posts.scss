@@ -21,6 +21,15 @@
 	color: var(--highlightedTextsColor);
 }
 
+@mixin postsBodyDetails_Media_General{
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: clamp(160px, 40vw, 210px);
+	border-radius: 7px;
+}
+
 @mixin otherDetailsTxts_General{
 	font-family: "binanceFont";
 	font-size: clamp(11px, 1vw, 13px);
