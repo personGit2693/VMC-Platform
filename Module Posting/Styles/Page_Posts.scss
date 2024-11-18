@@ -11,6 +11,8 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
+	--featuresControlsWrap_Hide_Smart: none;
+
 	--perFeatures_Margin_Smart: 0px;
 	--perFeatures_Margin_Pc: 0px 20px;
 
@@ -540,9 +542,20 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
+	/*Smart only features controller*/
+	.featuresControlsWrap_Hide{
+		display: var(--featuresControlsWrap_Hide_Smart) !important;
+	}
+	/*Smart only features controller*/
+
+
 	/*Search Area*/
 	#searchAreaWrap{
 		@include searchAreaWrap_Smart;		
+	}
+
+	.searchAreaWrap_Hide{
+		@include searchAreaWrap_Hide_Smart;
 	}
 
 	#searchInputsWrap{
@@ -611,6 +624,13 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){		
+	/*Smart only features controller*/
+	.featuresControlsWrap_Hide{
+		display: var(--featuresControlsWrap_Hide_Smart) !important;
+	}
+	/*Smart only features controller*/
+
+
 	/*Search Area*/
 	#searchAreaWrap{
 		@include searchAreaWrap_Smart;
@@ -618,6 +638,10 @@
 
 	#searchInputsWrap{
 		@include searchInputsWrap_Smart;	
+	}
+
+	.searchAreaWrap_Hide{
+		@include searchAreaWrap_Hide_Smart;
 	}
 
 	/**Input Text Search*/
@@ -682,6 +706,12 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1081px){
+	/*Smart only features controller*/
+	#featuresControlsWrap{
+		display: none;
+	}
+	/*Smart only features controller*/
+
 	/*Search Area*/
 	#searchAreaWrap{
 		@include searchAreaWrap_Pc;
@@ -689,6 +719,10 @@
 
 	#searchInputsWrap{
 		@include searchInputsWrap_Pc;
+	}
+
+	.searchAreaWrap_Hide{
+		@include searchAreaWrap_Hide_Pc;
 	}
 
 	/**Input Text Search*/

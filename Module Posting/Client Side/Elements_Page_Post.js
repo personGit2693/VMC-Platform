@@ -1,1 +1,0 @@
-export const testVideo = document.getElementById('testVideo');

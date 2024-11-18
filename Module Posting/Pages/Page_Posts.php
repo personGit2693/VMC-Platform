@@ -38,7 +38,7 @@
 				<!--Left Side or Contents Area-->
 				<div class="mainmechaCon_RoClass" id="mainContentWrap">
 					<!--Smart only features controller-->
-					<div class="mainmechaCon_RoClass scrollWebkit lightMode" id="featuresControlsWrap" style="display: none;">
+					<div class="mainmechaCon_RoClass scrollWebkit lightMode" id="featuresControlsWrap">
 						<!--Event feature controller-->
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/event-white.png')"></div>
@@ -81,12 +81,24 @@
 							</div>							
 						</div>	
 						<!--Committees feature controller-->
+
+
+						<!--Search feature controller-->
+						<div class="mainmechaCon_RoClass featuresControls">							
+							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/searchIcon white.png')"></div>
+							<div class="mainmechaCon_RoClass featuresTextWrap">
+								<div class="mainmechaCon_RoClass featuresTextTitle lightMode"></div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition lightMode">Search Events, What is new, Pinned Post, Committees!</div>
+							</div>							
+						</div>	
+						<!--Search feature controller-->
 					</div>
 					<!--Smart only features controller-->
 
 
 					<!--Search Area-->
-					<div class="mainmechaCon_RoClass" id="searchAreaWrap">
+					<div class="mainmechaCon_RoClass searchAreaWrap_Hide" id="searchAreaWrap">
+						<!--Input Text and Date Range-->
 						<div class="mainmechaCon_RoClass" id="searchInputsWrap">
 							<!--Input Text Search-->
 							<input type="text" class="searchInput_RoClass lightMode" id="searchContentInput" placeholder="Search Content" style="--inputSearchIcon: url('./../../src/searchIcon.png')"/>
@@ -209,7 +221,9 @@
 							</div>
 							<!--Date Range Content-->
 						</div>
+						<!--Input Text and Date Range-->
 
+						<!--Filter Features-->
 						<div class="mainmechaCon_RoClass" id="filterContentWrap">
 							<div class="cusCheckBoxPaper_RoClass">
 								<label for="filter_Events">Events and Activities:<div class="boxme_RoClass"><img src="./../../src/checkIcon.png"></div></label>
@@ -230,15 +244,16 @@
 								<label for="filter_Committees">Committees:<div class="boxme_RoClass"><img src="./../../src/checkIcon.png"></div></label>
 								<input type="checkbox" id="filter_Committees" onchange="checkCusCheckBox(this)" autocomplete="off">
 							</div>
-						</div>						
+						</div>
+						<!--Filter Features-->						
 					</div>
 					<!--Search Area-->
 
 
 					<!--Page Features-->
-					<div class="mainmechaCon_RoClass scrollWebkit lightMode" id="featuresWrap">						
+					<div class="mainmechaCon_RoClass scrollWebkit lightMode" id="featuresWrap" style="display: none;">						
 						<!--Events and Activities-->
-						<div class="mainmechaCon_RoClass perFeature" id="eventsSection">
+						<div class="mainmechaCon_RoClass perFeature" id="eventsSection" style="display: none;">
 							<div class="mainmechaCon_RoClass sectionsLabel lightMode">Events and Activities</div>
 
 							<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit lightMode" id="eventsWrap">
@@ -303,7 +318,7 @@
 
 
 						<!--What is new posts-->
-						<div class="mainmechaCon_RoClass perFeature" id="whatIsNewSection">
+						<div class="mainmechaCon_RoClass perFeature" id="whatIsNewSection" style="display: none;">
 							<div class="mainmechaCon_RoClass sectionsLabel lightMode">What's New</div>
 							
 							<!--Posted Section-->
@@ -437,7 +452,7 @@
 
 
 						<!--Pinned Posts and Committees-->
-						<div class="mainmechaCon_RoClass perFeature" id="pinnedPostAndCommittesSection">
+						<div class="mainmechaCon_RoClass perFeature" id="pinnedPostAndCommittesSection" style="display: none;">
 							<!--Pinned Posts-->
 							<div class="mainmechaCon_RoClass" id="pinnedPostSection">
 								<div class="mainmechaCon_RoClass sectionsLabel lightMode">Pinned Posts</div>

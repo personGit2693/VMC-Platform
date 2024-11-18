@@ -6794,6 +6794,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
+  --featuresControlsWrap_Hide_Smart: none;
   --perFeatures_Margin_Smart: 0px;
   --perFeatures_Margin_Pc: 0px 20px;
   --eventsSectionWidth_Smart: 100%;
@@ -7305,16 +7306,24 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Smart only features controller*/
+  .featuresControlsWrap_Hide {
+    display: var(--featuresControlsWrap_Hide_Smart) !important; }
+
+  /*Smart only features controller*/
   /*Search Area*/
   #searchAreaWrap {
     display: flex;
     padding: 0px;
     height: 100%;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     overflow: auto;
     z-index: auto; }
+
+  .searchAreaWrap_Hide {
+    display: none !important; }
 
   #searchInputsWrap {
     flex-flow: column nowrap;
@@ -7371,13 +7380,18 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Smart only features controller*/
+  .featuresControlsWrap_Hide {
+    display: var(--featuresControlsWrap_Hide_Smart) !important; }
+
+  /*Smart only features controller*/
   /*Search Area*/
   #searchAreaWrap {
     display: flex;
     padding: 0px;
     height: 100%;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     overflow: auto;
     z-index: auto; }
@@ -7386,6 +7400,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: stretch; }
+
+  .searchAreaWrap_Hide {
+    display: none !important; }
 
   /**Input Text Search*/
   #searchContentInput {
@@ -7437,6 +7454,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1081px) {
+  /*Smart only features controller*/
+  #featuresControlsWrap {
+    display: none; }
+
+  /*Smart only features controller*/
   /*Search Area*/
   #searchAreaWrap {
     display: block;
@@ -7449,6 +7471,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center; }
+
+  .searchAreaWrap_Hide {
+    display: block; }
 
   /**Input Text Search*/
   #searchContentInput {

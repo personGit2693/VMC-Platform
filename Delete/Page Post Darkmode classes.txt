@@ -1,4 +1,5 @@
 darkMode & lightMode
+postsSeenIconDarkMode & postsSeenIconLightMode
 dateRangeIconDarkMode & dateRangeIconLightMode
 calLite_BgColor_DarkMode & calLite_BgColor_LightMode
 calLiteButton_Left_DarkMode & calLiteButton_Left_LightMode
