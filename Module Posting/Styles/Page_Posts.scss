@@ -11,7 +11,23 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
+	--smartCloseBtn_Size: clamp(20px, 10vw, 35px);
+
+	--smartFeatureCloseBtn_Smart: block;
+
 	--featuresControlsWrap_Hide_Smart: none;
+
+	--featuresWrap_Hide_Smart: none;
+
+	--eventsSection_Hide_Smart: none;
+
+	--whatIsNewSection_Hide_Smart: none;
+
+	--pinnedPostAndCommittesSection_Hide_Smart: none;
+
+	--pinnedPostSection_Hide_Smart: none;
+
+	--committeesSection_Hide_Smart: none;
 
 	--perFeatures_Margin_Smart: 0px;
 	--perFeatures_Margin_Pc: 0px 20px;
@@ -289,6 +305,31 @@
 	overflow: scroll;
 	height: 100%;
 }
+
+/**Close button for smart only*/
+.smartFeatureCloseBtnWrap{
+	z-index: 1;
+}
+
+.smartFeatureCloseBtn{
+	position: absolute;
+	overflow: hidden;
+	right: 0;	
+	width: var(--smartCloseBtn_Size);
+	height: var(--smartCloseBtn_Size);	
+	cursor: pointer;
+}
+
+.smartFeatureCloseBtn_DarkMode{
+	background: transparent url("./../../src/closeModIcon.png") no-repeat center;
+	background-size: contain;
+}
+
+.smartFeatureCloseBtn_LightMode{
+	background: transparent url("./../../src/closeModIcon_Suc.png") no-repeat center;
+	background-size: contain;
+}
+/**Close button for smart only*/
 
 /**Events and Activities*/
 #eventsSection{
@@ -590,20 +631,38 @@
 		@include featuresWrap_Scroll_Smart;
 	}
 
+	.featuresWrap_Hide{
+		display: var(--featuresWrap_Hide_Smart) !important;
+	}
+
 	.perFeature{
 		margin: var(--perFeatures_Margin_Smart);
 	}
 
+	/**Close button for smart only*/	
+	.smartFeatureCloseBtn{
+		display: var(--smartFeatureCloseBtn_Smart);		
+	}
+	/**Close button for smart only*/
+
 	/**Events and Activities*/
 	#eventsSection{
 		width: var(--eventsSectionWidth_Smart);
+	}
+
+	.eventsSection_Hide{
+		display: var(--eventsSection_Hide_Smart) !important;
 	}
 	/**Events and Activities*/
 
 	/**What is new posts*/
 	#whatIsNewSection{
 		width: var(--whatIsNewSection_Width_Smart);
-	}	
+	}
+
+	.whatIsNewSection_Hide{
+		display: var(--whatIsNewSection_Hide_Smart) !important;
+	}
 	/**What is new posts*/
 
 	/**Pinned Posts and Committees*/
@@ -611,8 +670,20 @@
 		width: var(--pinnedPostAndCommittesSection_Width_Smart);
 	}
 
+	.pinnedPostAndCommittesSection_Hide{
+		display: var(--pinnedPostAndCommittesSection_Hide_Smart) !important;
+	}
+
 	#pinnedPostSection, #committeesSection{		
 		height: var(--pinnedPostAndCommittes_Height_Smart);
+	}
+
+	.pinnedPostSection_Hide{
+		display: var(--pinnedPostSection_Hide_Smart) !important;
+	}
+
+	.committeesSection_Hide{
+		display: var(--committeesSection_Hide_Smart) !important;
 	}
 	/**Pinned Posts and Committees*/	
 	/*Page Features*/
@@ -634,6 +705,10 @@
 	/*Search Area*/
 	#searchAreaWrap{
 		@include searchAreaWrap_Smart;
+	}
+
+	.featuresWrap_Hide{
+		display: var(--featuresWrap_Hide_Smart) !important;
 	}
 
 	#searchInputsWrap{
@@ -676,15 +751,30 @@
 		margin: var(--perFeatures_Margin_Smart);
 	}
 
+	/**Close button for smart only*/	
+	.smartFeatureCloseBtn{
+		display: var(--smartFeatureCloseBtn_Smart);		
+	}
+	/**Close button for smart only*/
+
+
 	/**Events and Activities*/
 	#eventsSection{
 		width: var(--eventsSectionWidth_Smart);
+	}
+
+	.eventsSection_Hide{
+		display: var(--eventsSection_Hide_Smart) !important;
 	}
 	/**Events and Activities*/
 
 	/**What is new posts*/	
 	#whatIsNewSection{
 		width: var(--whatIsNewSection_Width_Smart);
+	}
+
+	.whatIsNewSection_Hide{
+		display: var(--whatIsNewSection_Hide_Smart) !important;
 	}
 	/**What is new posts*/
 
@@ -693,8 +783,20 @@
 		width: var(--pinnedPostAndCommittesSection_Width_Smart);
 	}
 
+	.pinnedPostAndCommittesSection_Hide{
+		display: var(--pinnedPostAndCommittesSection_Hide_Smart) !important;
+	}
+
 	#pinnedPostSection, #committeesSection{		
 		height: var(--pinnedPostAndCommittes_Height_Smart);
+	}
+
+	.pinnedPostSection_Hide{
+		display: var(--pinnedPostSection_Hide_Smart) !important;
+	}
+
+	.committeesSection_Hide{
+		display: var(--committeesSection_Hide_Smart) !important;
 	}
 	/**Pinned Posts and Committees*/
 	/*Page Features*/
@@ -712,9 +814,14 @@
 	}
 	/*Smart only features controller*/
 
+
 	/*Search Area*/
 	#searchAreaWrap{
 		@include searchAreaWrap_Pc;
+	}
+
+	.featuresWrap_Hide{
+		display: block;
 	}
 
 	#searchInputsWrap{
@@ -757,16 +864,30 @@
 		margin: var(--perFeatures_Margin_Pc);
 	}
 
+	/**Close button for smart only*/	
+	.smartFeatureCloseBtn{
+		display: none !important;		
+	}
+	/**Close button for smart only*/
+
 	/**Events and Activities*/
 	#eventsSection{
 		width: var(--eventsSectionWidth_Pc);
 		
 	}
+
+	.eventsSection_Hide{
+		display: flex;
+	}
 	/**Events and Activities*/
 
 	/**What is new posts*/	
 	#whatIsNewSection{
-		width: var(--whatIsNewSection_Width_Pc);
+		width: var(--whatIsNewSection_Width_Pc) !important;
+	}
+
+	.whatIsNewSection_Hide{
+		display: flex;
 	}
 	/**What is new posts*/
 
@@ -775,8 +896,20 @@
 		width: var(--pinnedPostAndCommittesSection_Width_Pc);
 	}
 
+	.pinnedPostAndCommittesSection_Hide{
+		display: flex;
+	}
+
 	#pinnedPostSection, #committeesSection{		
 		height: var(--pinnedPostAndCommittes_Height_Pc);
+	}
+
+	.pinnedPostSection_Hide{
+		display: flex;
+	}
+
+	.committeesSection_Hide{
+		display: flex;
 	}
 	/**Pinned Posts and Committees*/
 	/*Page Features*/
