@@ -27,5 +27,4 @@ echo print_r($dbConnection);
 
 /*echo $_SERVER['HTTP_HOST'];*/
 /*Prep Variables*/
-
 ?>

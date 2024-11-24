@@ -282,6 +282,26 @@
 	--cusCheckboxBorderColor: #97A0A8;
 }
 /**Filter Content*/
+
+/**Search Smart Btn*/
+#smartSearchBtnWrap{
+	overflow: hidden;
+}
+
+#smartSearchBtn{
+	--normBtnWidth: auto;
+	--normBtnPadding: 4px;	
+	--normBtnBorderWidth: 0px;
+	--normBtnBorderColor:  none;
+	--normBtnRadius: 4px;
+	--normBtnFWeight: bold;
+	--normBtnFSize: clamp(13px, 1vw, 16px);
+	--normBtnBgColor: #39AB5B;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	--normBtnHovActBgColor: #13391E;
+}
+/**Search Smart Btn*/
 /*Search Area*/
 
 

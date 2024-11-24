@@ -223,7 +223,9 @@
 							<!--Date Range Content-->
 
 							<!--Search Smart Btn-->
-							<button class="normButton_RoClass">Search</button>
+							<div class="mainmechaCon_RoClass" id="smartSearchBtnWrap" style="border: 2pxs solid yellow;">
+								<button class="normButton_RoClass" id="smartSearchBtn">Done</button>
+							</div>							
 							<!--Search Smart Btn-->
 						</div>
 						<!--Input Text and Date Range-->
@@ -250,7 +252,10 @@
 								<input type="checkbox" id="filter_Committees" onchange="checkCusCheckBox(this)" autocomplete="off">
 							</div>
 						</div>
-						<!--Filter Features-->						
+						<!--Filter Features-->
+
+						<!--Smart Search Area Button-->
+						<button class="normButton_RoClass">Button Text</button>						
 					</div>
 					<!--Search Area-->
 
