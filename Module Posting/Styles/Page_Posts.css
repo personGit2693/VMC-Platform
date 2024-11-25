@@ -6447,7 +6447,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /*Root*/
 :root {
   --scrollWebkit_Size: clamp(2.5px, 1vw, 5px);
-  --chatDpSize: clamp(30px, 3vw, 35px); }
+  --chatDpSize: clamp(30px, 3vw, 35px);
+  /*Per Section with max width of 1081px*/
+  --autoReponsiveSection_MaxWidth_Smart: auto;
+  /*Per Section with max width of 1081px*/ }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -6458,8 +6461,34 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-family: "binanceFont";
   src: url("../../Global Fonts/Binance-PLEX.ttf"); }
 /*Fonts*/
+/*Sub Text Font Color*/
+.sub-textFColor {
+  color: #97A0A8; }
+
+/*Sub Text Font Color*/
+/*Per Section with max width of 1081px*/
+.autoReponsiveSection {
+  margin: auto; }
+
+/*Per Section with max width of 1081px*/
+/*Link Button*/
+.link-Btn {
+  display: inline-block;
+  padding: 10px;
+  font-family: "binanceFont"; }
+
+/*Link Button*/
 /*Dark Mode and light mode*/
 .darkMode {
+  /**Main Font Text Color*/
+  --mainTextColor: #ffffff;
+  /**Main Font Text Color*/
+  /**Greetings Area*/
+  --greetingSection_BgColor: #3B3B3B;
+  /**Greetings Area*/
+  /**List of web applications*/
+  --webAppListSection_BgColor: #3B3B3B;
+  /**List of web applications*/
   /**Scroll Webkit*/
   --scrollWebkit_ThumbColor: #97A0A8;
   --scrollWebkit_ThumbColorHover: #646A70;
@@ -6523,6 +6552,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Pinned Posts and Committees*/ }
 
 .lightMode {
+  /**Main Font Text Color*/
+  --mainTextColor: black;
+  /**Main Font Text Color*/
+  /**Greetings Area*/
+  --greetingSection_BgColor: #ffffff;
+  /**Greetings Area*/
+  /**List of web applications*/
+  --webAppListSection_BgColor: #ffffff;
+  /**List of web applications*/
   /**Scroll Webkit*/
   --scrollWebkit_ThumbColor: #39AB5B;
   --scrollWebkit_ThumbColorHover: #26723C;
@@ -6752,6 +6790,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
+  /*Per Section with max width of 1081px*/
+  .autoReponsiveSection {
+    max-width: var(--autoReponsiveSection_MaxWidth_Smart); }
+
+  /*Per Section with max width of 1081px*/
   /*Right Side or Chat Area*/
   #chatContentWrap {
     position: absolute;
@@ -6765,6 +6808,11 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Per Section with max width of 1081px*/
+  .autoReponsiveSection {
+    max-width: var(--autoReponsiveSection_MaxWidth_Smart); }
+
+  /*Per Section with max width of 1081px*/
   /*Right Side or Chat Area*/
   #chatContentWrap {
     position: absolute;
@@ -6777,6 +6825,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
+@media all and (min-width: 1081px) {
+  /*Per Section with max width of 1081px*/
+  .autoReponsiveSection {
+    max-width: 1081px; }
+
+  /*Per Section with max width of 1081px*/ }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/

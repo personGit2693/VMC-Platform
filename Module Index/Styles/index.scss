@@ -1,0 +1,190 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+@import "../../Global Style/Rogie Rostrap Global";
+@import "../../Global Style/Rogie Global Style";
+@import "./Mixin_index";
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root{
+	/*Greetings Area*/
+	--greetingUserImage_Size: clamp(40px, 5vw, 50px);
+	--greetingWebApps_Size: clamp(225px, 15vw, 250px);
+	/*Greetings Area*/
+}
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*General*/
+
+/*Greetings Area*/
+#greetingSection{
+	display: flex;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--greetingSection_BgColor);	
+}
+
+#greetingWrap{
+	display: flex;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+#greetingUserImage{
+	display: inline-block;
+	width: var(--greetingUserImage_Size);
+	height: var(--greetingUserImage_Size);
+	object-fit: contain;
+	overflow: hidden;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+#greetingUserDetailsWrap{
+	width: 100%;
+	overflow: hidden;
+}
+
+#greetingUserFName, #greetingUserEmpNo{
+	font-family: "binanceFont";
+	font-size: clamp(14px, 1vw, 16px);	
+	padding: 5px;	
+}
+
+#greetingUserFName{
+	color: var(--mainTextColor);
+	font-weight: bold;
+}
+
+#greetingWebApps{	
+	width: var(--greetingWebApps_Size);
+	height: var(--greetingWebApps_Size);
+	background: transparent url("../../src/webapps.png") center no-repeat;
+	background-size: contain;
+}
+/*Greetings Area*/
+
+
+/*Banner*/
+#bannerWrap{	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	background: transparent url("../../src/bg2.png") center no-repeat;
+	background-size: cover;
+	height: clamp(175px, 30vw, 295px);	
+}
+
+#bannerDetailsWrap{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;	
+	overflow: hidden;
+	padding: 20px;	
+	background-color: rgba(22, 27, 34, 0.5);
+	height: 100%;
+}
+
+#bannerDetailsMainTxt, #bannerDetailsSubTxt{
+	text-align: center;
+	padding: 7px;
+	font-family: "binanceFont";
+	color: #ffffff;
+}
+
+#bannerDetailsMainTxt{
+	font-weight: bold;
+	font-size: clamp(16px, 5vw, 40px);
+}
+
+#bannerDetailsSubTxt{
+	font-size: clamp(12px, 2vw, 18px);
+}
+
+#bannerBtnGoToApp{
+	font-size: clamp(12px, 2vw, 18px);
+	align-self: center;
+	color: #ffffff;
+	background-color: #39AB5B;
+	text-decoration: none;
+	margin-top: 12px;
+	border-radius: 8px;
+}
+
+#bannerBtnGoToApp:hover{
+	background-color: #26723C;
+}
+/*Banner*/
+
+
+/*List of web applications*/
+#webAppListSection{
+	overflow: hidden;
+	background-color: var(--webAppListSection_BgColor);
+}
+
+#webAppList{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	overflow: hidden;
+	padding: 14px;
+}
+
+.perWebAppIcon_LightMode{
+	background-image: var(--perWebAppIcon_BgImage_LightMode);
+	background-position: center;
+}
+.perWebAppIcon_DarkMode{
+	background-image: var(--perWebAppIcon_BgImage_DarkMode);
+}
+/*List of web applications*/
+
+/*General*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Media Queries*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*PC*/
+@media all and (min-width:1081px){
+	
+}
+/*PC*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Media Queries*/
+/***********************************************************************************************************************************************************************************************************/
