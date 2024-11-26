@@ -3235,7 +3235,10 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --chatDpSize: clamp(30px, 3vw, 35px);
   /*Per Section with max width of 1081px*/
   --autoReponsiveSection_MaxWidth_Smart: auto;
-  /*Per Section with max width of 1081px*/ }
+  /*Per Section with max width of 1081px*/
+  /*Navigation*/
+  --navLogo_Size: clamp(60px, 8vw, 75px);
+  /*Navigation*/ }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -3263,8 +3266,43 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-family: "binanceFont"; }
 
 /*Link Button*/
+/*Navigation Logo*/
+#navLogoWrap {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px; }
+
+#navLogoWrap img {
+  display: block;
+  object-fit: contain;
+  width: var(--navLogo_Size);
+  height: var(--navLogo_Size); }
+
+#navLogoWrap span {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  font-family: "binanceFont";
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: bold;
+  color: var(--navLogo_FColor); }
+
+/*Navigation Logo*/
 /*Dark Mode and light mode*/
 .darkMode {
+  /**Navigation*/
+  --navLogo_FColor: #ffffff;
+  /**Navigation*/
+  /**List of web applications*/
+  --perWebAppName_FColor: #ffffff;
+  /**List of web applications*/
   /**Main Font Text Color*/
   --mainTextColor: #ffffff;
   /**Main Font Text Color*/
@@ -3296,6 +3334,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /***Checkbox*/
   --cusCheckboxColor: #ffffff;
   /***Checkbox*/
+  /***Footer*/
+  --footerBgColor: #0F143C;
+  /***Footer*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #252331;
@@ -3337,6 +3378,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Pinned Posts and Committees*/ }
 
 .lightMode {
+  /**Navigation*/
+  --navLogo_FColor: black;
+  /**Navigation*/
+  /**List of web applications*/
+  --perWebAppName_FColor: black;
+  /**List of web applications*/
   /**Main Font Text Color*/
   --mainTextColor: black;
   /**Main Font Text Color*/
@@ -3371,6 +3418,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /***Checkbox*/
   --cusCheckboxColor: black;
   /***Checkbox*/
+  /***Footer*/
+  --footerBgColor: #39AB5B;
+  /***Footer*/
   /**Rogrid*/
   /**Right Side or Chat Area*/
   --chatArea_BgColor: #ffffff;
@@ -3475,6 +3525,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   font-family: "binanceFont"; }
 
 /**Search Input*/
+/**Footer*/
+.footerTxt_RoClass {
+  --footerFSize: clamp(10px, 2vw, 14px);
+  --footerFColor: #ffffff; }
+
+/**Footer*/
 /*Rogrid*/
 /*Right Side or Chat Area*/
 #chatContentWrap {

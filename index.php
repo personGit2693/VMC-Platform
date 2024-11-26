@@ -10,7 +10,12 @@
 	<div class="rolayout_RoClass"> 
 		<div class="sidemecha_RoClass lightMode">
 			<div class="sidemechaCon_RoClass">
-				
+				<!--Navigation Logo-->
+				<div id="navLogoWrap">
+					<img src="./src/vmclogo.png" />
+					<span class="lightMode">VMC WAC</span>
+				</div>
+				<!--Navigation Logo-->
 			</div>
 		</div>
 		<div class="mainmecha_RoClass lightMode">
@@ -54,16 +59,46 @@
 
 
 			<!--List of web applications-->
-			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="webAppListSection" style="border: 2px solid yellow;">
-				<div class="mainmechaCon_RoClass sectionsLabel lightMode" style="border: 2px solid red;">List of Systems</div>
-				<div class="mainmechaCon_RoClass" id="webAppList" style="border: 2px solid red;">
+			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="webAppListSection">
+				<div class="mainmechaCon_RoClass sectionsLabel lightMode">List of Systems</div>
+				<div class="mainmechaCon_RoClass" id="webAppList">
 					<div class="mainmechaCon_RoClass perWebApp">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">System Name</div>
+						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/EMR_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/EMR_Black.png');"></div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">Online Request of Medical Records</div>
+					</div>
+
+					<div class="mainmechaCon_RoClass perWebApp">
+						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/ONLINESCHED_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/ONLINESCHED_Black.png');"></div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">OPD Online Scheduler</div>
+					</div>
+
+					<div class="mainmechaCon_RoClass perWebApp">
+						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/HCSS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/HCSS_Black.png');"></div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">VMC CSAT</div>
+					</div>
+
+					<div class="mainmechaCon_RoClass perWebApp">
+						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/PETRU_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/PETRU_Black.png');"></div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">Training Management</div>
+					</div>
+
+					<div class="mainmechaCon_RoClass perWebApp">
+						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/EDTS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/EDTS_Black.png');"></div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">Document Tracking</div>
+					</div>
+
+					<div class="mainmechaCon_RoClass perWebApp">
+						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/ESRS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/ESRS_Black.png');"></div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">Electronic Service Request</div>
 					</div>
 				</div>
 			</div>
 			<!--List of web applications-->
+
+			<hr class="linethis_RoClass">
+			<div class="footerWrap_RoClass lightMode">
+				<span class="footerTxt_RoClass">&copy; Valenzuela Medical Center</span>
+			</div>
 		</div> 
 	</div>
 

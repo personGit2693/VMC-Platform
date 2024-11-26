@@ -17,28 +17,28 @@
 		<!--Employee ID-->
 		<div class="cusInputs_RoClass">				
 			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
-			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Employee ID</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_black.png"></div>Employee ID</div>
 		</div>
 		<!--Employee ID-->
 
 		<!--First Name-->
 		<div class="cusInputs_RoClass">					
 			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
-			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>First Name</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_black.png"></div>First Name</div>
 		</div>
 		<!--First Name-->
 
 		<!--Middle Name-->
 		<div class="cusInputs_RoClass">					
 			<input type="text" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, gray" required>
-			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Middle Name</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_black.png"></div>Middle Name</div>
 		</div>
 		<!--Middle Name-->
 
 		<!--Last Name-->
 		<div class="cusInputs_RoClass">					
 			<input type="text" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
-			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Last Name</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_black.png"></div>Last Name</div>
 		</div>
 		<!--Last Name-->
 
@@ -58,27 +58,27 @@
 					<!--Component
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt1">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Jr.</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Sr.</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">I</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="pt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">II</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">III</div>
 					</div>
 					-->
@@ -104,27 +104,27 @@
 					<!--
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt1">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Oncology</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Radiology</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Opthalmology</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="pt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Neurology</div>
 					</div>
 					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '1000px')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
-						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_purple.png');"></div>
+						<div class="optIcon_RoClass" style="--optIcon: url('../../src/avataricon_black.png');"></div>
 						<div class="optText_RoClass">Pediatrics</div>
 					</div>
 					-->
@@ -136,7 +136,7 @@
 		<!--Password-->
 		<div class="cusInputs_RoClass">					
 			<input id="inputPassword1" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
-			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Password</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_black.png"></div>Password</div>
 			<div class="checkPasswordBtn_Class">
 				<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 			</div>
@@ -146,7 +146,7 @@
 		<!--Confirm Password-->
 		<div class="cusInputs_RoClass">					
 			<input id="inputPassword2" type="password" class="inputBox_class" onfocusout="lowlightInWrap(this, '#ffffff')" onfocus="highlightInWrap(this, '#ffffff')" required>
-			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_purple.png"></div>Confirm Password</div>
+			<div class="placeholdme_RoClass"><div class="textBoxImgWrap_class"><img src="../../src/avataricon_black.png"></div>Confirm Password</div>
 			<div class="checkPasswordBtn_Class">
 				<button class="iconBtn_RoClass" id="togglePasswordBtn2" onclick="controller_Btn_TogglePasswordVisibility('inputPassword2', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
 			</div>
