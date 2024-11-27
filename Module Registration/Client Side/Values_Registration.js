@@ -10,6 +10,7 @@
 
 /*Prep export variables*/
 var elemReference_GetSections = null;
+var elemReference_Registration = null;
 
 var value_SearchSection = "";
 var value_empId = "";
@@ -17,7 +18,7 @@ var value_empFname = "";
 var value_empMname = "";
 var value_empLname = "";
 var value_empSuffix = "";
-var value_empSection = "";
+var value_empSection = "test";
 var value_empPassword1 = "";
 var value_empPassword2 = "";
 var value_regValid = false;
@@ -25,6 +26,10 @@ var value_regValid = false;
 
 
 /*Assign, Reset, Populate*/
+function assignElemReference_Registration(newValue){
+	elemReference_Registration = newValue;
+}
+
 function assignValue_RegValid(newValue){
 	value_regValid = newValue;
 }
@@ -113,6 +118,8 @@ function resetValue_EmpSection(){
 
 /*Export*/
 export {
+	assignElemReference_Registration,
+	elemReference_Registration,
 	resetValue_RegValid,
 	assignValue_RegValid,
 	value_regValid,

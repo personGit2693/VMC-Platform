@@ -1,11 +1,15 @@
 /*Import*/
 import {submitRegistrationBtn, cusInputsEmpId, cusInputsEmpFname, cusInputsEmpMname, cusInputsEmpLname, suffixDropdown, sectionDropdown, cusInputsEmpPassword1, cusInputsEmpPassword2} from "./Elements_Page_Registration.js";
-import {resetValue_RegValid, assignValue_RegValid, value_regValid, value_empId, value_empFname, value_empMname, value_empLname, value_empSuffix, value_empSection, value_empPassword1, value_empPassword2} from "./Values_Registration.js";
+import {assignElemReference_Registration, resetValue_RegValid, assignValue_RegValid, value_regValid, value_empId, value_empFname, value_empMname, value_empLname, value_empSuffix, value_empSection, value_empPassword1, value_empPassword2} from "./Values_Registration.js";
+import {submitRegistration} from "./Submit_Registration.js";
 /*Import*/
 
 
 /*Controller*/
-function controller_Univ_ValidateRegistration(elem){	
+function controller_Univ_ValidateRegistration(elem){
+
+	assignElemReference_Registration(elem);
+
 	const registrationData_Array = [value_empId, value_empFname, value_empMname, value_empLname, value_empSuffix, value_empSection, value_empPassword1, value_empPassword2];
 	const registrationInputs_Array = [cusInputsEmpId, cusInputsEmpFname, cusInputsEmpMname, cusInputsEmpLname, suffixDropdown, sectionDropdown, cusInputsEmpPassword1, cusInputsEmpPassword2];
 
@@ -41,10 +45,17 @@ function controller_Univ_ValidateRegistration(elem){
 	/*Submit*/
 	if(elem === submitRegistrationBtn){		
 
+		submitRegistrationBtn.disabled = true;
+		submitRegistrationBtn.innerText = "Submitting";		
+
+		const dataObj = {empId:value_empId, empFname:value_empFname, empMname:value_empMname, empLname:value_empLname, empSuffix:value_empSuffix, empSection:value_empSection, empPassword:value_empPassword1};
+		const controllersObj = {};
+		const loaderObj = {};
+
 		if(value_regValid === true){
-			alert("success");
+			submitRegistration(controller_Univ_ValidateRegistration, dataObj, controllersObj, loaderObj);
 		}else if(value_regValid === false){
-			alert("incomplete");
+			submitRegistration(controller_Univ_ValidateRegistration, dataObj, controllersObj, loaderObj);
 		}			
 	}	
 	/*Submit*/

@@ -33,17 +33,17 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 	
 
 	/*Prep response*/
+	$validToken = null;
+	$execution = null;		
+	$sections_Array = array();	
+
 	$sections_Resp = new stdClass();
 	$sections_Resp->validAccess = true;	
 	$sections_Resp->vmcplatDbConnection = $vmcplatDbConnection;
 	$sections_Resp->mmsDbConnection = $mmsDbConnection;		
-	$sections_Resp->validToken = null;
-	$sections_Resp->execution = null;	
-	$sections_Resp->sections_Array = array();
-
-	$validToken = null;
-	$execution = null;		
-	$sections_Array = array();	
+	$sections_Resp->validToken = $validToken;
+	$sections_Resp->execution = $execution;	
+	$sections_Resp->sections_Array = $sections_Array;
 	/*Prep response*/
 
 

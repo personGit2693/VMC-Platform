@@ -1,6 +1,7 @@
 /*Import*/
-import {elemReference_GetSections} from "./Values_Registration.js";
-import {requestSections, sections_Array} from "./Request_Sections.js";
+import {submitRegistrationBtn} from "./Elements_Page_Registration.js";
+import {elemReference_Registration} from "./Values_Registration.js";
+import {requestRegistration, addedAccount} from "./Request_Registration.js";
 /*Import*/
 
 
@@ -11,7 +12,7 @@ var pendingSubmit = 0;
 
 
 /*Submit Function*/
-function submitSections(controller, dataObj, controllersObj, loaderObj){	
+function submitRegistration(controller, dataObj, controllersObj, loaderObj){	
 
 	if(blockRequest === false){
 
@@ -22,12 +23,19 @@ function submitSections(controller, dataObj, controllersObj, loaderObj){
 		/*Display Loader*/		
 
 
-		requestSections(dataObj)
+		requestRegistration(dataObj)
 		.then(requestPromise => {
 			
 			if(requestPromise === true){													
 
-				controllersObj.outputSectionOpt();
+				if(addedAccount != 0){
+					alert("Account Added");
+				}else if(addedAccount == 0){
+					alert("Account Not Added");
+				};
+
+				submitRegistrationBtn.innerText = "Create Account";
+				submitRegistrationBtn.disabled = false;
 
 				/*Remove loader*/
 				/*				
@@ -39,7 +47,7 @@ function submitSections(controller, dataObj, controllersObj, loaderObj){
 				/*Remove loader*/
 			}else{
 
-				console.log(`Submit_Sections Resolve ${requestPromise}`);
+				console.log(`Submit_Registration Resolve ${requestPromise}`);
 			}			
 
 			blockRequest = false;			
@@ -47,7 +55,7 @@ function submitSections(controller, dataObj, controllersObj, loaderObj){
 			if(pendingSubmit !== 0){
 
 				pendingSubmit--;				
-				controller(elemReference_GetSections);				
+				controller(elemReference_Registration);				
 			}			
 		});
 	}else if(blockRequest === true){
@@ -59,10 +67,10 @@ function submitSections(controller, dataObj, controllersObj, loaderObj){
 
 
 /*Declare global*/
-window.submitSections = submitSections;
+window.submitRegistration = submitRegistration;
 /*Declare global*/
 
 
 /*Export*/
-export {submitSections, blockRequest};
+export {submitRegistration, blockRequest};
 /*Export*/
