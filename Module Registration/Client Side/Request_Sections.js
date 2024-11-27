@@ -1,5 +1,10 @@
+/*Import*/
+import secretKey from "../../Global Client Side/Dummy.js";
+/*Import*/
+
+
 /*Prep variables*/
-var secretKey = null;
+
 /*Prep variables*/
 
 
@@ -8,61 +13,55 @@ var sections_Array = null;
 /*Export variables*/
 
 
-/*Get Job Title Details*/
-async function requestSections(searchSection){
+/*Get Monitoring*/
+async function requestSections(dataObj){
 	
-	const requestPromise = new Promise(function(resolve){		
+	const requestPromise = new Promise(function(resolve){
+		
+		/*Form data*/
+		const fData = new FormData(); 
+		fData.append("secretKey", secretKey);		
+		fData.append("searchSection", dataObj.searchSection);				
+		/*Form data*/
+
 
 		/*Fetch method*/
-		fetch("../../Security/Secret Key.php")
-		.then(res => res.text())
-		.then(skey => {
+		fetch("../Server Side/Response_Sections.php", {method: "POST", body: fData})
+		.then(res => res.json())
+		.then(parseObj => {			
 
-			/*_Prep Data*/
-			secretKey = skey;			
-
-			const fData = new FormData(); 
-			fData.append("secretKey", secretKey);
-			fData.append("searchSection", searchSection);
-			/*_Prep Data*/
-
-			/*_Submit Data to Server Side*/
-			fetch("../Server Side/Response_Sections.php", {method: "POST", body: fData})
-			.then(res => res.json())
-			.then(parseObj => {
-
-				if(parseObj.validAccess !== true){
-
-					console.log("Invalid Access!");
-
-				}else if(parseObj.serverConnection !== null){
-
-					console.log("Connection Lost!");
-
-				}else if(parseObj.validToken !== null){
-
-					console.log("Invalid Token!");
-
-				}else if(parseObj.execution !== true){
-
-					console.log("Execution Problem in Request Sections!");
-
-				}else if(parseObj.validAccess === true && parseObj.serverConnection === null && parseObj.validToken === null && parseObj.execution === true){
-
-					sections_Array = parseObj.sections_Array;
-
-					resolve(true);
-				}				
-			});
-			/*_Submit Data to Server Side*/
+			if(parseObj.validAccess !== true){
+				console.log("Invalid Access!");
+				resolve(false);
+			}else if(parseObj.vmcplatDbConnection.serverConnection !== null){
+				console.log("VMC Platform Connection Lost!");
+				resolve(false);
+			}else if(parseObj.vmcplatDbConnection.selectedPdoConn == null){
+				console.log("VMC Platform Object Connection Incorrect!");
+				resolve(false);
+			}else if(parseObj.mmsDbConnection.serverConnection !== null){
+				console.log("MMS DB Connection Lost!");
+				resolve(false);
+			}else if(parseObj.mmsDbConnection.selectedPdoConn == null){
+				console.log("MMS Object Connection Incorrect!");
+				resolve(false);
+			}else if(parseObj.execution === false){
+				console.log("Execution Problem in Request_Sections!");
+				resolve(false);
+			}else{
+				
+				sections_Array = parseObj.sections_Array;				
+				resolve(true);
+			}			
 		});
 		/*Fetch method*/
+		
 	});
 
 
 	return await requestPromise;
 };
-/*Get Suffix Details*/
+/*Get Monitoring*/
 
 
 /*Export*/

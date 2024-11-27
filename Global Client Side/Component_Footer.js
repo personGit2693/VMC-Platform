@@ -6,7 +6,7 @@
 /*Component*/
 function Footer(){
 
-	let footer = `<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; 2024 Human Resource Information System. All rights reserved.</span>`;
+	let footer = `<span class="footerTxt_RoClass" id="footerTxt_RoId">&copy; Valenzuela Medical Center.</span>`;
 
 	return footer;
 }

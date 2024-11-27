@@ -1,36 +1,58 @@
 /*Import*/
-import {requestSections} from "./Request_Sections.js";
+import {elemReference_GetSections} from "./Values_Registration.js";
+import {requestSections, sections_Array} from "./Request_Sections.js";
 /*Import*/
 
 
 /*Export variables*/
 var blockRequest = false;
+var pendingSubmit = 0;
 /*Export variables*/
 
 
 /*Submit Function*/
-function submitSections(output, boxLoader, boxLoader_Id, searchSection){
+function submitSections(controller, dataObj, controllersObj, loaderObj){	
 
 	if(blockRequest === false){
 
 		blockRequest = true;
 
-		boxLoader();
+		/*Display Loader*/
+		/*loaderObj.outputLoader();*/
+		/*Display Loader*/		
 
-		requestSections(searchSection)
+
+		requestSections(dataObj)
 		.then(requestPromise => {
-
-			if(document.getElementById(boxLoader_Id) !== null){					
-				document.getElementById(boxLoader_Id).remove();
-			}
-
 			
-			if(requestPromise === true){												
-				output();				
-			}
+			if(requestPromise === true){													
 
-			blockRequest = false;
+				controllersObj.outputSectionOpt();
+
+				/*Remove loader*/
+				/*				
+				if(document.getElementById(loaderObj.id) !== null){
+					
+					document.getElementById(loaderId).remove();
+				}
+				*/
+				/*Remove loader*/
+			}else{
+
+				console.log(`Submit_Sections Resolve ${requestPromise}`);
+			}			
+
+			blockRequest = false;			
+
+			if(pendingSubmit !== 0){
+
+				pendingSubmit--;				
+				controller(elemReference_GetSections);				
+			}			
 		});
+	}else if(blockRequest === true){
+
+		pendingSubmit++;
 	}
 }
 /*Submit Function*/

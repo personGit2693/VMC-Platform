@@ -1,14 +1,20 @@
 /*Import*/
 import {submitSections} from "./Submit_Sections.js";
-import outputJobTitleOpt from "./Output_JobTitleOpt.js";
-import outputJobTitleLoaderDiv from "./Output_JobTitleLoaderDiv.js";
+import outputSectionOpt from "./Output_SectionOpt.js";
+import {value_SearchSection, assignElemReference_GetSections} from "./Values_Registration.js";
 /*Import*/
 
 
 /*Controller*/
-function controller_Docs_GetSections(){	
+function controller_Docs_GetSections(elem){	
 
-	submitSections(outputJobTitleOpt, outputJobTitleLoaderDiv, "jobTitleLoader-id", "");
+	assignElemReference_GetSections(elem);
+
+	const dataObj = {searchSection:value_SearchSection};
+	const controllersObj = {outputSectionOpt};
+	const loaderObj = {};
+
+	submitSections(controller_Docs_GetSections, dataObj, controllersObj, loaderObj);
 }
 /*Controller*/
 

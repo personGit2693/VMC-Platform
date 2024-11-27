@@ -27,14 +27,16 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 
 
 	/*Prep variables*/
-	$dbConnection = connectToDb("vmc_platform");	
+	$vmcplatDbConnection = connectToDb("vmc_platform");
+	$mmsDbConnection = connectToDb("MMSdb");	
 	/*Prep variables*/
 	
 
 	/*Prep response*/
 	$sections_Resp = new stdClass();
 	$sections_Resp->validAccess = true;	
-	$sections_Resp->serverConnection = $dbConnection->serverConnection;	
+	$sections_Resp->vmcplatDbConnection = $vmcplatDbConnection;
+	$sections_Resp->mmsDbConnection = $mmsDbConnection;		
 	$sections_Resp->validToken = null;
 	$sections_Resp->execution = null;	
 	$sections_Resp->sections_Array = array();
@@ -46,20 +48,54 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 
 
 	/*Check connection*/
-	if($dbConnection->serverConnection != null){
+	/**MMS DB Connection*/
+	if($mmsDbConnection->serverConnection != null){
 		echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$vmcplatDbConnection = null;
+		$mmsDbConnection = null;
+		/*_Disconnect*/
+
+		return;
+	}else if($mmsDbConnection->selectedPdoConn == null){
+		echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$vmcplatDbConnection = null;
+		$mmsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
 	}
+	/**MMS DB Connection*/
+
+	/**VMC Platform DB Connection*/
+	if($vmcplatDbConnection->serverConnection != null){
+		echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$vmcplatDbConnection = null;
+		$mmsDbConnection = null;
+		/*_Disconnect*/
+
+		return;
+	}else if($vmcplatDbConnection->selectedPdoConn == null){
+		echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
+
+		/*_Disconnect*/
+		$vmcplatDbConnection = null;
+		$mmsDbConnection = null;
+		/*_Disconnect*/
+
+		return;
+	}
+	/**VMC Platform DB Connection*/
 	/*Check connection*/
 
 
 	/*Validate secret key*/
-	$validateGlobalToken_Obj = checkAppKey($dbConnection->selectedPdoConn, $secretKey);
+	$validateGlobalToken_Obj = checkAppKey($vmcplatDbConnection->selectedPdoConn, $secretKey);
 
 	if($validateGlobalToken_Obj->execution !== true){
 
@@ -69,7 +105,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 		echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$vmcplatDbConnection = null;
+		$mmsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
@@ -82,7 +119,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 		echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
-		$dbConnection = null;
+		$vmcplatDbConnection = null;
+		$mmsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
@@ -92,19 +130,19 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 
 	if($validToken === null){		
 				
-		/*Get Job Titles Details*/
+		/*Get Sections*/
 		/*_Prep query*/
-		$sections_Query = "SELECT * FROM sections_tab;";
+		$sections_Query = "SELECT * FROM table_locationCode ";
 
 		if(!empty($searchSection)){
-			$sections_Query .= "WHERE section_name LIKE :searchSection ";
+			$sections_Query .= "WHERE office LIKE :searchSection ";
 		}
 
-		$sections_Query .= "ORDER BY section_name;";
+		$sections_Query .= "ORDER BY office;";
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$sections_QueryObj = $dbConnection->selectedPdoConn->prepare($sections_Query);
+		$sections_QueryObj = $mmsDbConnection->selectedPdoConn->prepare($sections_Query);
 
 		if(!empty($searchSection)){
 			$sections_QueryObj->bindValue(':searchSection', '%'.$searchSection.'%', PDO::PARAM_STR);
@@ -120,12 +158,13 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 			}
 		}		
 		/*_Fetching*/
-		/*Get Job Titles Details*/		
+		/*Get Sections*/		
 	}
 	
 
 	/*Disconnect*/
-	$dbConnection = null;
+	$vmcplatDbConnection = null;
+	$mmsDbConnection = null;
 	/*Disconnect*/
 
 
@@ -140,10 +179,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["searchSection"])){
 	
 	$sections_Resp = new stdClass();
 	$sections_Resp->validAccess = false;
-	$sections_Resp->dbConnection = null;	
-	$sections_Resp->validToken = null;
-	$sections_Resp->execution = null;	
-	$sections_Resp->sections_Array = null;
+	
 
 	echo json_encode($sections_Resp, JSON_NUMERIC_CHECK);
 }

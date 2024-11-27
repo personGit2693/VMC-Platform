@@ -49,7 +49,7 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to EDTS DB*/
-		}else if($connectionName === "valmed_platform"){
+		}else if($connectionName === "vmc_platform"){
 
 			/*Connect to VMC Platform*/
 			$connString = "mysql:host=localhost;dbname=vmc_platform;";
