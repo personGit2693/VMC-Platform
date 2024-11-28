@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../Styles/Page_Registration.css">
+	<link rel="shortcut icon" href="../../src/vmclogo.png">
 	<title>Registration Page</title>
 </head>
 <body>	
@@ -155,7 +156,7 @@
 		<button class="normButton_RoClass" id="submitRegistrationBtn" onclick="controller_Univ_ValidateRegistration(this)">Create Account</button>
 		<!--Submit Button-->
 		
-		<div class="alreadyHaveAccount_class">Already have an account? <a href="">Login</a></div>
+		<div class="alreadyHaveAccount_class">Already have an account? <a href="../../Module Login/Pages/Page_Login.php">Login</a></div>
 	</div>
 	<!--Form Body-->		
 
@@ -167,11 +168,11 @@
 	<!--Bottom Section / Footer-->
 
 
-	<!--_Dependencies-->
+	<!---Dependencies-->
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
-	<!--_Dependencies-->
+	<!---Dependencies-->
 
-	<!--_Controllers-->
+	<!---Controllers-->
 	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
 	<script type="module" src="../Client Side/Controller_DivOpt_AssignSuffixValue.js"></script>
 	<script type="module" src="../Client Side/Controller_DivOpt_AssignSectionValue.js"></script>
@@ -185,11 +186,11 @@
 	<script type="module" src="../Client Side/Controller_Univ_ValidateRegistration.js"></script>
 	<script type="module" src="../Client Side/Controller_DivOpt_ResetSectionValue.js"></script>
 	<script type="module" src="../Client Side/Controller_DivOpt_ResetSuffixValue.js"></script>
-	<!--_Controllers-->
+	<!---Controllers-->
 
-	<!--_Executor-->
+	<!---Executor-->
 	<script type="module" src="../Client Side/Executor_Page_Registration.js"></script>
 	<script type="module" src="../../Global Client Side/Executor_Global.js"></script>
-	<!--_Executor-->
+	<!---Executor-->
 </body>
 </html>

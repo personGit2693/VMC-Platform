@@ -10,8 +10,8 @@ function controller_Univ_ValidateRegistration(elem){
 
 	assignElemReference_Registration(elem);
 
-	const registrationData_Array = [value_empId, value_empFname, value_empMname, value_empLname, value_empSuffix, value_empSection, value_empPassword1, value_empPassword2];
-	const registrationInputs_Array = [cusInputsEmpId, cusInputsEmpFname, cusInputsEmpMname, cusInputsEmpLname, suffixDropdown, sectionDropdown, cusInputsEmpPassword1, cusInputsEmpPassword2];
+	const registrationData_Array = [value_empId, value_empFname, value_empMname, value_empLname, value_empSection, value_empPassword1, value_empPassword2];
+	const registrationInputs_Array = [cusInputsEmpId, cusInputsEmpFname, cusInputsEmpMname, cusInputsEmpLname, sectionDropdown, cusInputsEmpPassword1, cusInputsEmpPassword2];
 
 	/*Check value per data input*/
 	for(let index=0; index < registrationData_Array.length; index++){
@@ -36,6 +36,7 @@ function controller_Univ_ValidateRegistration(elem){
 
 			if(value_empPassword1 !== value_empPassword2){
 				assignValue_RegValid(false);
+				break;
 			}
 		}
 	}
@@ -55,7 +56,16 @@ function controller_Univ_ValidateRegistration(elem){
 		if(value_regValid === true){
 			submitRegistration(controller_Univ_ValidateRegistration, dataObj, controllersObj, loaderObj);
 		}else if(value_regValid === false){
-			submitRegistration(controller_Univ_ValidateRegistration, dataObj, controllersObj, loaderObj);
+			
+			if(value_empPassword1 !== value_empPassword2){
+				alert("Password not match");					
+			}else{
+				alert("Please complete the details");
+			}			
+
+			submitRegistrationBtn.disabled = false;
+			submitRegistrationBtn.innerText = "Create Account";		
+			
 		}			
 	}	
 	/*Submit*/

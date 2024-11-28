@@ -1,7 +1,7 @@
 /*Import*/
 import {submitRegistrationBtn} from "./Elements_Page_Registration.js";
 import {elemReference_Registration} from "./Values_Registration.js";
-import {requestRegistration, addedAccount} from "./Request_Registration.js";
+import {endpoint, requestRegistration, addedAccount} from "./Request_Registration.js";
 /*Import*/
 
 
@@ -29,13 +29,10 @@ function submitRegistration(controller, dataObj, controllersObj, loaderObj){
 			if(requestPromise === true){													
 
 				if(addedAccount != 0){
-					alert("Account Added");
-				}else if(addedAccount == 0){
+					window.location.href = endpoint;
+				}else if(addedAccount == 0 || addedAccount === null){					
 					alert("Account Not Added");
-				};
-
-				submitRegistrationBtn.innerText = "Create Account";
-				submitRegistrationBtn.disabled = false;
+				};				
 
 				/*Remove loader*/
 				/*				
@@ -46,7 +43,7 @@ function submitRegistration(controller, dataObj, controllersObj, loaderObj){
 				*/
 				/*Remove loader*/
 			}else{
-
+				alert("Employee Number already taken");
 				console.log(`Submit_Registration Resolve ${requestPromise}`);
 			}			
 
@@ -56,7 +53,10 @@ function submitRegistration(controller, dataObj, controllersObj, loaderObj){
 
 				pendingSubmit--;				
 				controller(elemReference_Registration);				
-			}			
+			}
+
+			submitRegistrationBtn.innerText = "Create Account";
+			submitRegistrationBtn.disabled = false;			
 		});
 	}else if(blockRequest === true){
 

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,6MAA6M;AAC7M,oBAAoB;AAQpB,wBAAwB;AACxB,6MAA6M;AAQ7M,6MAA6M;AAC7M,oCAAoC;AA+VpC,wCAAwC;AACxC,6MAA6M",
+"sources": ["Mixin_Page_RegistrationSuccess.scss"],
+"names": [],
+"file": "Mixin_Page_RegistrationSuccess.css"
+}

@@ -13,6 +13,6 @@ document.body.addEventListener("click", closeSelectDropdownOpts, true);
 /*Populate dropdown for suffixes*/
 
 
-/*Populate dropdown for job title*/
+/*Populate dropdown for section*/
 controller_Docs_GetSections(window);
-/*Populate dropdown for job title*/
+/*Populate dropdown for section*/

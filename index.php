@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>VMC Platform</title>	
 	<link rel="stylesheet" type="text/css" href="./Module Index/Styles/index.css">
+	<link rel="shortcut icon" href="./src/vmclogo.png">
 </head>
 <body>
 	<div class="rolayout_RoClass"> 
@@ -25,7 +26,7 @@
 				<div class="projTitleAndUserLogin_RoClass">
 					<div class="projTitleTxt_RoClass">VMC Web Applications</div>
 					<div class="userLogin_RoClass">
-						<div class="userLoginIconWrap_RoClass"><img src="./src/MySampleDp.png"/></div>
+						<div class="userLoginIconWrap_RoClass"><img src="./src/actionofficericon.png"/></div>
 						<div class="userLoginDetails_RoClass">Juan Dela Cruz</div>
 					</div>
 				</div>
@@ -34,7 +35,7 @@
 			<!--Greetings Area--> 
 			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="greetingSection">
 				<div class="mainmechaCon_RoClass" id="greetingWrap">
-					<img id="greetingUserImage" src="./src/MySampleDp.png" />
+					<img id="greetingUserImage" src="./src/actionofficericon.png" />
 						
 					<div class="mainmechaCon_RoClass" id="greetingUserDetailsWrap">
 						<div class="mainmechaCon_RoClass lightMode" id="greetingUserFName">Hi! welcome back, Juan!</div>

@@ -9,33 +9,27 @@ import secretKey from "../../Global Client Side/Dummy.js";
 
 
 /*Export variables*/
-var addedAccount = null;
+var validEmpId = null;
+var validAccount = null;
 var endpoint = null;
 /*Export variables*/
 
 
 /*Get Monitoring*/
-async function requestRegistration(dataObj){
+async function requestLogin(dataObj){
 	
 	const requestPromise = new Promise(function(resolve){
 		
 		/*Form data*/
-		const sectionDetailsObj = JSON.parse(decodeURIComponent(atob(dataObj.empSection)));		
-
 		const fData = new FormData(); 
 		fData.append("secretKey", secretKey);		
-		fData.append("empId", dataObj.empId);				
-		fData.append("empFname", dataObj.empFname);
-		fData.append("empMname", dataObj.empMname);
-		fData.append("empLname", dataObj.empLname);
-		fData.append("empSuffix", dataObj.empSuffix);
-		fData.append("empSection", sectionDetailsObj.office);
-		fData.append("empPassword", dataObj.empPassword);
+		fData.append("empId", dataObj.empId);	
+		fData.append("password", dataObj.password);				
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_Registration.php", {method: "POST", body: fData})
+		fetch("../Server Side/Response_Login.php", {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {			
 			if(parseObj.validAccess !== true){
@@ -48,12 +42,13 @@ async function requestRegistration(dataObj){
 				console.log("VMC Platform Object Connection Incorrect!");
 				resolve(false);
 			}else if(parseObj.execution === false){
-				console.log("Execution Problem in Request_Registration!");
+				console.log("Execution Problem in Request_Login!");
 				resolve(false);
 			}else{
 				
-				addedAccount = parseObj.addedAccount;
-				endpoint = parseObj.endpoint;			
+				validEmpId = parseObj.validEmpId;				
+				validAccount = parseObj.validAccount;
+				endpoint = parseObj.endpoint;				
 				resolve(true);
 			}			
 		});
@@ -68,5 +63,5 @@ async function requestRegistration(dataObj){
 
 
 /*Export*/
-export {endpoint, requestRegistration, addedAccount};
+export {validEmpId, validAccount, endpoint, requestLogin};
 /*Export*/
