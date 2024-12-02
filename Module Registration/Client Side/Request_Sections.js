@@ -45,7 +45,10 @@ async function requestSections(dataObj){
 			}else if(parseObj.mmsDbConnection.selectedPdoConn == null){
 				console.log("MMS Object Connection Incorrect!");
 				resolve(false);
-			}else if(parseObj.execution === false){
+			}else if(parseObj.validToken){
+				console.log(parseObj.validToken);
+				resolve(false);				
+			}else if(parseObj.execution !== true){
 				console.log("Execution Problem in Request_Sections!");
 				resolve(false);
 			}else{

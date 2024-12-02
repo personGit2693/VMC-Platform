@@ -11,6 +11,7 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 require_once "../../Global PHP/Connection.php";
 require_once "../../Global PHP/CheckAppKey.php";
 require_once "../../Global PHP/GetIdentifier.php";
+require_once "../../Global PHP/CreateSessions.php";
 /*Global Required Files*/
 
 
@@ -38,6 +39,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["empId"]) && isset($_POST["passwor
 	$execution = null;		
 	$validEmpId = false;
 	$validAccount = false;
+	$accountDetails = new stdClass();
+	$correctPassword = null;
 
 	$login_Resp = new stdClass();
 	$login_Resp->validAccess = true;	
@@ -46,7 +49,9 @@ if(isset($_POST["secretKey"]) && isset($_POST["empId"]) && isset($_POST["passwor
 	$login_Resp->execution = $execution;	
 	$login_Resp->validEmpId = $validEmpId;
 	$login_Resp->validAccount = $validAccount;
-	$login_Resp->endpoint = "../../index.php";
+	$login_Resp->accountDetails = $accountDetails;	
+	$login_Resp->correctPassword = $correctPassword;
+	$login_Resp->endpoint = "../../index.php";	
 	/*Prep response*/
 
 
@@ -145,6 +150,13 @@ if(isset($_POST["secretKey"]) && isset($_POST["empId"]) && isset($_POST["passwor
 		if($execution){
 			if($loginAccount_QueryObj->rowCount() != 0){
 				$validAccount = true;
+
+				if($loginAccount_Assoc = $loginAccount_QueryObj->fetch(PDO::FETCH_ASSOC)){
+					$accountDetails = $loginAccount_Assoc;
+					$correctPassword = $password;
+
+					createSessions($accountDetails, $correctPassword);
+				}
 			}
 		}		
 		/*_Fetching*/
@@ -161,6 +173,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["empId"]) && isset($_POST["passwor
 	$login_Resp->execution = $execution;
 	$login_Resp->validEmpId = $validEmpId;
 	$login_Resp->validAccount = $validAccount;	
+	$login_Resp->accountDetails = $accountDetails;
+	$login_Resp->correctPassword = $correctPassword;
 
 	echo json_encode($login_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/

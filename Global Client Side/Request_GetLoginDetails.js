@@ -1,5 +1,5 @@
 /*Import*/
-import secretKey from "../../Global Client Side/Dummy.js";
+import secretKey from "./Dummy.js";
 /*Import*/
 
 
@@ -9,29 +9,24 @@ import secretKey from "../../Global Client Side/Dummy.js";
 
 
 /*Export variables*/
-var validEmpId = null;
 var validAccount = null;
-var accountDetails = null;
-var correctPassword = null;
-var endpoint = null;
+var globalKey = null;
 /*Export variables*/
 
 
-/*Login*/
-async function requestLogin(dataObj){
+/*Get Login Details*/
+async function requestGetLoginDetails(dataObj, serverPath){
 	
 	const requestPromise = new Promise(function(resolve){
 		
 		/*Form data*/
 		const fData = new FormData(); 
-		fData.append("secretKey", secretKey);		
-		fData.append("empId", dataObj.empId);	
-		fData.append("password", dataObj.password);				
+		fData.append("secretKey", secretKey);							
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_Login.php", {method: "POST", body: fData})
+		fetch(serverPath, {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {			
 			if(parseObj.validAccess !== true){
@@ -47,15 +42,12 @@ async function requestLogin(dataObj){
 				console.log(parseObj.validToken);
 				resolve(false);				
 			}else if(parseObj.execution !== true){
-				console.log("Execution Problem in Request_Login!");
+				console.log("Execution Problem in Request_GetLoginDetails!");
 				resolve(false);
 			}else{
+				validAccount = parseObj.validAccount;				
+				globalKey = parseObj.globalKey;				
 				
-				validEmpId = parseObj.validEmpId;				
-				validAccount = parseObj.validAccount;
-				accountDetails = parseObj.accountDetails;
-				correctPassword = parseObj.correctPassword;	
-				endpoint = parseObj.endpoint;						
 				resolve(true);
 			}			
 		});
@@ -66,9 +58,9 @@ async function requestLogin(dataObj){
 
 	return await requestPromise;
 };
-/*Login*/
+/*Get Login Details*/
 
 
 /*Export*/
-export {validEmpId, validAccount, endpoint, requestLogin};
+export {globalKey, validAccount, requestGetLoginDetails};
 /*Export*/

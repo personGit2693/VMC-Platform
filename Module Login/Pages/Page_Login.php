@@ -1,3 +1,18 @@
+<?php 
+/*Dependency PHP Codes*/
+declare(strict_types=1);
+date_default_timezone_set('Asia/Manila');
+session_start();
+$currentDateTime = date("Y-m-d H:i:s", time());
+$landingPage = "../../index.php";
+/*Dependency PHP Codes*/
+
+
+if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
+	header("location:".$landingPage);
+}else{
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,3 +82,6 @@
 	<!--Javascripts-->	
 </body>
 </html>
+<?php
+}
+?>
