@@ -67,6 +67,15 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to web hosting*/
+		}else if($connectionName === "LDNAS"){
+
+			/*Connect to web hosting*/
+			$connString = "mysql:host=194.233.70.98;dbname=valmed_medical_record;";
+			$serverUsername = "valmed_vmcdevs";
+			$serverPassword = "@vmcdbadmin";		
+
+			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
+			/*Connect to web hosting*/
 		}
 		/*Connect to DB*/
 

@@ -1,6 +1,6 @@
 /*Import*/
 import {assignElemReference_GetLoginDetails} from "../../Global Client Side/Values_Global.js";
-import {submitGetLoginDetails} from "../../Global Client Side//Submit_GetLoginDetails.js";
+import {submitGetLoginDetails} from "../../Global Client Side/Submit_GetLoginDetails.js";
 /*Import*/
 
 

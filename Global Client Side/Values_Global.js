@@ -11,7 +11,10 @@
 /*Prep export variables*/
 var elemReference_GetLoginDetails = null;
 
+var lightmode = "lightmode";
+var darkmode = "darkmode";
 var globalKey = null;
+var colorMode = "lightmode";
 
 var isLightMode = localStorage.getItem('isLightMode') === 'true';
 var chatContactName = "";
@@ -47,6 +50,9 @@ function assignChatContactName(chatContactName_Param){
 
 /*Export*/
 export {
+	darkmode,
+	lightmode,
+	colorMode,
 	elemReference_GetLoginDetails,
 	assignElemReference_GetLoginDetails,
 	resetGlobalKey,

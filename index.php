@@ -76,6 +76,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset(
 			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="webAppListSection">
 				<div class="mainmechaCon_RoClass sectionsLabel lightMode">List of Systems</div>
 				<div class="mainmechaCon_RoClass" id="webAppList">
+					<!--Components-->
 					<div class="mainmechaCon_RoClass perWebApp">
 						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/EMR_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/EMR_Black.png');"></div>
 						<div class="mainmechaCon_RoClass perWebAppName lightMode">Online Request of Medical Records</div>
@@ -91,7 +92,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset(
 						<div class="mainmechaCon_RoClass perWebAppName lightMode">VMC CSAT</div>
 					</div>
 
-					<div class="mainmechaCon_RoClass perWebApp">
+					<div class="mainmechaCon_RoClass perWebApp" onclick="controller_Div_LoginToApp('http://192.168.15.203:8000/')">
 						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/PETRU_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/PETRU_Black.png');"></div>
 						<div class="mainmechaCon_RoClass perWebAppName lightMode">Training Management</div>
 					</div>
@@ -101,9 +102,9 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset(
 						<div class="mainmechaCon_RoClass perWebAppName lightMode">Document Tracking</div>
 					</div>
 
-					<div class="mainmechaCon_RoClass perWebApp">
+					<div class="mainmechaCon_RoClass perWebApp" onclick="controller_Div_LoginToApp('http://192.168.14.83:82/Service Request System/Login Page/PHP/LoginEsrs.php')">
 						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/ESRS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/ESRS_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">Electronic Service Request</div>
+						<div class="mainmechaCon_RoClass perWebAppName lightMode">Electronic Service Request System</div>
 					</div>
 				</div>
 			</div>
@@ -121,6 +122,10 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset(
 	<!---Dependecies-->
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeLayOneNavScript_Index.js"></script>
 	<!---Dependecies-->
+
+	<!---Controllers-->
+	<script type="module" src="./Global Client Side/Controller_Div_LoginToApp.js"></script>
+	<!---Controllers-->
 
 	<!---Executor-->
 	<script type="module" src="./Module Index/Client Side/Executor_index.js"></script>
