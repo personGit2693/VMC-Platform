@@ -116,51 +116,49 @@ if(isset($_POST["secretKey"]) && isset($_POST["empId"]) && isset($_POST["passwor
 		$getIdentifier_Obj = getIdentifier($vmcplatDbConnection->selectedPdoConn, $empId);
 
 		if($getIdentifier_Obj->identifierFound == 0){
-			echo json_encode($login_Resp, JSON_NUMERIC_CHECK);
-
-			/*_Disconnect*/
-			$vmcplatDbConnection = null;
-			/*_Disconnect*/
-
-			return;
+			$validEmpId = false;
+			$execution = true;
 		}else if($getIdentifier_Obj->identifierFound != 0){
 			$validEmpId = true;
 		}
 		/*Check Identifier*/
 
-		/*Login*/
-		/*_Prep query*/
-		$loginAccount_Query = "
-			SELECT * 
-			FROM accounts_tab 
-			WHERE account_id = :empId 
-			AND account_password = :password
-			AND account_status = 1;
-		";		
-		/*_Prep query*/
 
-		/*_Execute query*/
-		$loginAccount_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($loginAccount_Query);
-		$loginAccount_QueryObj->bindValue(':empId', $empId, PDO::PARAM_STR);
-		$loginAccount_QueryObj->bindValue(':password', md5($password.$getIdentifier_Obj->identifier), PDO::PARAM_STR);		
-		$execution = $loginAccount_QueryObj->execute();		
-		/*_Execute query*/
+		if($validEmpId){
+			/*Login*/
+			/*_Prep query*/
+			$loginAccount_Query = "
+				SELECT * 
+				FROM accounts_tab 
+				WHERE account_id = :empId 
+				AND account_password = :password 
+				AND account_status = 1;
+			";		
+			/*_Prep query*/
 
-		/*_Fetching*/		
-		if($execution){
-			if($loginAccount_QueryObj->rowCount() != 0){
-				$validAccount = true;
+			/*_Execute query*/
+			$loginAccount_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($loginAccount_Query);
+			$loginAccount_QueryObj->bindValue(':empId', $empId, PDO::PARAM_STR);
+			$loginAccount_QueryObj->bindValue(':password', md5($password.$getIdentifier_Obj->identifier), PDO::PARAM_STR);		
+			$execution = $loginAccount_QueryObj->execute();		
+			/*_Execute query*/
 
-				if($loginAccount_Assoc = $loginAccount_QueryObj->fetch(PDO::FETCH_ASSOC)){
-					$accountDetails = $loginAccount_Assoc;
-					$correctPassword = $password;
+			/*_Fetching*/		
+			if($execution){
+				if($loginAccount_QueryObj->rowCount() != 0){
+					$validAccount = true;
 
-					createSessions($accountDetails, $correctPassword);
+					if($loginAccount_Assoc = $loginAccount_QueryObj->fetch(PDO::FETCH_ASSOC)){
+						$accountDetails = $loginAccount_Assoc;
+						$correctPassword = $password;
+
+						createSessions($accountDetails, $correctPassword);
+					}
 				}
-			}
-		}		
-		/*_Fetching*/
-		/*Login*/		
+			}		
+			/*_Fetching*/
+			/*Login*/
+		}
 	}
 	
 

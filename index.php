@@ -8,7 +8,7 @@ $logoutPath = "./Global PHP/DestroySessions.php";
 /*Dependency PHP Codes*/
 
 
-if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
+if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_suffix"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset(
 			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="webAppListSection">
 				<div class="mainmechaCon_RoClass sectionsLabel lightMode">List of Systems</div>
 				<div class="mainmechaCon_RoClass" id="webAppList">
-					<!--Components-->
+					<!--Components
 					<div class="mainmechaCon_RoClass perWebApp">
 						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/EMR_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/EMR_Black.png');"></div>
 						<div class="mainmechaCon_RoClass perWebAppName lightMode">Online Request of Medical Records</div>
@@ -106,6 +106,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset(
 						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/ESRS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/ESRS_Black.png');"></div>
 						<div class="mainmechaCon_RoClass perWebAppName lightMode">Electronic Service Request System</div>
 					</div>
+					-->
 				</div>
 			</div>
 			<!--List of web applications-->

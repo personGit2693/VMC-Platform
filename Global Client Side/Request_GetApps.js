@@ -1,5 +1,5 @@
 /*Import*/
-import secretKey from "../../Global Client Side/Dummy.js";
+import secretKey from "./Dummy.js";
 /*Import*/
 
 
@@ -9,27 +9,25 @@ import secretKey from "../../Global Client Side/Dummy.js";
 
 
 /*Export variables*/
-var sections_Array = null;
+var apps = null;
 /*Export variables*/
 
 
-/*Get Monitoring*/
-async function requestSections(dataObj){
+/*Get Apps*/
+async function requestGetApps(dataObj, serverPath){
 	
 	const requestPromise = new Promise(function(resolve){
 		
 		/*Form data*/
 		const fData = new FormData(); 
-		fData.append("secretKey", secretKey);		
-		fData.append("searchSection", dataObj.searchSection);				
+		fData.append("secretKey", secretKey);							
 		/*Form data*/
 
 
 		/*Fetch method*/
-		fetch("../Server Side/Response_Sections.php", {method: "POST", body: fData})
+		fetch(serverPath, {method: "POST", body: fData})
 		.then(res => res.json())
 		.then(parseObj => {			
-
 			if(parseObj.validAccess !== true){
 				console.log("Invalid Access!");
 				resolve(false);
@@ -39,21 +37,15 @@ async function requestSections(dataObj){
 			}else if(parseObj.vmcplatDbConnection.selectedPdoConn == null){
 				console.log("VMC Platform Object Connection Incorrect!");
 				resolve(false);
-			}else if(parseObj.mmsDbConnection.serverConnection !== null){
-				console.log("MMS DB Connection Lost!");
-				resolve(false);
-			}else if(parseObj.mmsDbConnection.selectedPdoConn == null){
-				console.log("MMS Object Connection Incorrect!");
-				resolve(false);
 			}else if(parseObj.validToken !== null){
 				console.log(parseObj.validToken);
 				resolve(false);				
 			}else if(parseObj.execution !== true){
-				console.log("Execution Problem in Request_Sections!");
+				console.log("Execution Problem in Request_GetApps!");
 				resolve(false);
 			}else{
+				apps = parseObj.apps;							
 				
-				sections_Array = parseObj.sections_Array;				
 				resolve(true);
 			}			
 		});
@@ -64,9 +56,9 @@ async function requestSections(dataObj){
 
 	return await requestPromise;
 };
-/*Get Monitoring*/
+/*Get Apps*/
 
 
 /*Export*/
-export {requestSections, sections_Array};
+export {apps, requestGetApps};
 /*Export*/

@@ -1,5 +1,5 @@
 /*Import*/
-
+import controller_Doc_GetLoginDetails from "./Controller_Doc_GetLoginDetails.js";
 /*Import*/
 
 
@@ -8,6 +8,6 @@
 /*Dependencies*/
 
 
-/*To output global footer*/
-
-/*To output global footer*/
+/*Get Login Details*/
+controller_Doc_GetLoginDetails(window);
+/*Get Login Details*/

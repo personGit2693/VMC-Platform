@@ -48,7 +48,7 @@ async function requestRegistration(dataObj){
 				console.log("VMC Platform Object Connection Incorrect!");
 				resolve(false);
 			}else if(parseObj.validToken){
-				console.log(parseObj.validToken);
+				console.log(parseObj.validToken !== null);
 				resolve(false);				
 			}else if(parseObj.execution !== true){
 				console.log("Execution Problem in Request_Registration!");

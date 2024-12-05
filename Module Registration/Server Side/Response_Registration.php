@@ -141,7 +141,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["empId"]) && isset($_POST["empFnam
 
 		/*_Execute query*/
 		$register_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($register_Query);
-		$register_QueryObj->bindValue(':empId', $empId, PDO::PARAM_STR);
+		$register_QueryObj->bindValue(':empId', trim($empId), PDO::PARAM_STR);
 		$register_QueryObj->bindValue(':empFname', trim(ucfirst($empFname)), PDO::PARAM_STR);
 		$register_QueryObj->bindValue(':empMname', trim(ucfirst($empMname)), PDO::PARAM_STR);
 		$register_QueryObj->bindValue(':empLname', trim(ucfirst($empLname)), PDO::PARAM_STR);

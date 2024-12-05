@@ -43,7 +43,7 @@ async function requestLogin(dataObj){
 			}else if(parseObj.vmcplatDbConnection.selectedPdoConn == null){
 				console.log("VMC Platform Object Connection Incorrect!");
 				resolve(false);
-			}else if(parseObj.validToken){
+			}else if(parseObj.validToken !== null){
 				console.log(parseObj.validToken);
 				resolve(false);				
 			}else if(parseObj.execution !== true){

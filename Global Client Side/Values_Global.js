@@ -9,12 +9,14 @@
 
 
 /*Prep export variables*/
+var elemReference_RegisterEsrs = null;
 var elemReference_GetLoginDetails = null;
+var elemReference_GetApps = null;
 
-var lightmode = "lightmode";
-var darkmode = "darkmode";
+var lightmode = "lightMode";
+var darkmode = "darkMode";
 var globalKey = null;
-var colorMode = "lightmode";
+var colormode = "lightMode";
 
 var isLightMode = localStorage.getItem('isLightMode') === 'true';
 var chatContactName = "";
@@ -22,6 +24,14 @@ var chatContactName = "";
 
 
 /*Assign, Reset, Populate*/
+function assignElemReference_RegisterEsrs(newValue){
+	elemReference_RegisterEsrs = newValue;
+}
+
+function assignElemReference_GetApps(newValue){
+	elemReference_GetApps = newValue;
+}
+
 function assignElemReference_GetLoginDetails(newValue){
 	elemReference_GetLoginDetails = newValue;
 }
@@ -50,9 +60,13 @@ function assignChatContactName(chatContactName_Param){
 
 /*Export*/
 export {
+	elemReference_RegisterEsrs,
+	assignElemReference_RegisterEsrs,
+	assignElemReference_GetApps,
+	elemReference_GetApps,
 	darkmode,
 	lightmode,
-	colorMode,
+	colormode,
 	elemReference_GetLoginDetails,
 	assignElemReference_GetLoginDetails,
 	resetGlobalKey,

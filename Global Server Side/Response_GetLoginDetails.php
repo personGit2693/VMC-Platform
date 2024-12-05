@@ -13,7 +13,7 @@ require_once "./../Global PHP/CheckAppKey.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
+if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_suffix"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
 	
 	/*Required Files*/
 	
@@ -131,11 +131,14 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 				$accountSession_Obj->account_fname = $_SESSION["account_fname"];
 				$accountSession_Obj->account_mname = $_SESSION["account_mname"];
 				$accountSession_Obj->account_lname = $_SESSION["account_lname"];
-				$accountSession_Obj->account_password = $_SESSION["account_password"];
+				$accountSession_Obj->account_suffix = $_SESSION["account_suffix"];
+				$accountSession_Obj->account_password = $_SESSION["account_password"];				
 				$accountSession_Obj->account_identifier = $_SESSION["account_identifier"];
-				$accountSession_Obj->account_status = $_SESSION["account_status"];
-				$accountSession_Obj->account_section = $_SESSION["account_section"];
+				/*
 				$accountSession_Obj->account_picture = $_SESSION["account_picture"];
+				$accountSession_Obj->account_status = $_SESSION["account_status"];
+				*/
+				$accountSession_Obj->account_section = $_SESSION["account_section"];				
 				$accountSession_Obj->correctPassword = $_SESSION["correctPassword"];
 
 				$globalKey = base64_encode(json_encode($accountSession_Obj, JSON_NUMERIC_CHECK));

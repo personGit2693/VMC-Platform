@@ -15,7 +15,7 @@ function getIdentifier(object $selectedPdoConn, string $empId){
 	/*_Prep query*/
 	$getIdentifier_Query = "
 		SELECT account_identifier 
-		FROM accounts_tab
+		FROM accounts_tab 
 		WHERE account_id = :empId;
 	";		
 	/*_Prep query*/

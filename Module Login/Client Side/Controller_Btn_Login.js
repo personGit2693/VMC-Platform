@@ -8,16 +8,21 @@ import {submitLogin} from "./Submit_Login.js";
 /*Controller*/
 function controller_Btn_Login(elem){
 	
-	assignElemReference_Login(elem);
+	if(value_EmpId !== "" && value_Password !== ""){
 
-	signInBtn.disabled = true;
-	signInBtn.innerText = "Logging in";		
+		assignElemReference_Login(elem);
 
-	const dataObj = {empId:value_EmpId, password:value_Password};
-	const controllersObj = {};
-	const loaderObj = {};	
+		signInBtn.disabled = true;
+		signInBtn.innerText = "Logging in";
 
-	submitLogin(controller_Btn_Login, dataObj, controllersObj, loaderObj);
+		const dataObj = {empId:value_EmpId, password:value_Password};
+		const controllersObj = {};
+		const loaderObj = {};
+
+		submitLogin(controller_Btn_Login, dataObj, controllersObj, loaderObj);
+	}else{
+		alert("Please provide your employee I.D and Password!");
+	}		
 }
 /*Controller*/
 
