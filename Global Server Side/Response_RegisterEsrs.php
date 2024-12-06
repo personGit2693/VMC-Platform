@@ -42,6 +42,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 	$validToken = null;
 	$execution = null;
 	$esrsAccountRegistered = null;
+	$esrsAccountRequested = null;
 	
 	$registerEsrs_Resp = new stdClass();	
 	$registerEsrs_Resp->validAccess = true;
@@ -50,6 +51,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 	$registerEsrs_Resp->validToken = $validToken;
 	$registerEsrs_Resp->execution = $execution;
 	$registerEsrs_Resp->esrsAccountRegistered = $esrsAccountRegistered;
+	$registerEsrs_Resp->esrsAccountRequested = $esrsAccountRequested;
 	/*Prep response*/
 
 
@@ -60,6 +62,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
+		$esrsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
@@ -68,6 +71,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
+		$esrsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
@@ -80,6 +84,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 		echo json_encode($registerEsrs_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
+		$vmcplatDbConnection = null;
 		$esrsDbConnection = null;
 		/*_Disconnect*/
 
@@ -88,6 +93,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 		echo json_encode($registerEsrs_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
+		$vmcplatDbConnection = null;
 		$esrsDbConnection = null;
 		/*_Disconnect*/
 
@@ -109,6 +115,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
+		$esrsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
@@ -122,6 +129,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
+		$esrsDbConnection = null;
 		/*_Disconnect*/
 
 		return;
@@ -176,6 +184,31 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 		}		
 		/*_Fetching*/
 		/*Register ESRS new account*/
+
+
+		/*Check username exist*/
+		/*_Prep query*/
+		$checkRegistration_Query = "SELECT account_empid 
+		FROM accounts_tab 
+		WHERE account_empid = :account_id";
+		/*_Prep query*/
+
+		/*_Execute query*/
+		$checkRegistration_QueryObj = $esrsDbConnection->selectedPdoConn->prepare($checkRegistration_Query);
+		$checkRegistration_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);
+		$execution = $checkRegistration_QueryObj->execute();
+		/*_Execute query*/
+
+		/*_Fetching*/
+		if($execution){
+			if($checkRegistration_QueryObj->rowCount() !== 0){
+				$esrsAccountRequested = true;
+			}else if($checkRegistration_QueryObj->rowCount() === 0){
+				$esrsAccountRequested = false;
+			}
+		}
+		/*_Fetching*/
+		/*Check username exist*/
 	}
 	
 
@@ -188,6 +221,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 	/*Return response*/
 	$registerEsrs_Resp->execution = $execution;
 	$registerEsrs_Resp->esrsAccountRegistered = $esrsAccountRegistered;
+	$registerEsrs_Resp->esrsAccountRequested = $esrsAccountRequested;
 
 	echo json_encode($registerEsrs_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/

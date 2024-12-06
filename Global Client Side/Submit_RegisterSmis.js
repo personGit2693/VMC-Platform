@@ -1,6 +1,6 @@
 /*Import*/
 import {pageRegistrationSuccessPath, elemReference_RegisterEsrs} from "./Values_Global.js";
-import {esrsAccountRequested, esrsAccountRegistered, requestRegisterEsrs} from "./Request_RegisterEsrs.js";
+import {smisAccountDetailsRegistered, smisAccountCredentialsRegistered, smisAccountRequested, requestRegisterSmis} from "./Request_RegisterSmis.js";
 /*Import*/
 
 
@@ -11,7 +11,7 @@ var pendingSubmit = 0;
 
 
 /*Submit Function*/
-function submitRegisterEsrs(controller, dataObj, controllersObj, loaderObj, serverPath){	
+function submitRegisterSmis(controller, dataObj, controllersObj, loaderObj, serverPath){	
 
 	if(blockRequest === false){
 
@@ -22,16 +22,16 @@ function submitRegisterEsrs(controller, dataObj, controllersObj, loaderObj, serv
 		/*Display Loader*/		
 
 
-		requestRegisterEsrs(dataObj, serverPath)
+		requestRegisterSmis(dataObj, serverPath)
 		.then(requestPromise => {
 			if(requestPromise === true){																	
 				
-				if(esrsAccountRegistered){
+				if(smisAccountDetailsRegistered === true && smisAccountCredentialsRegistered === true){
 					window.location.href = pageRegistrationSuccessPath;
-				}else if(esrsAccountRequested){
+				}else if(smisAccountRequested === true){
 					alert("Account Already registered! Contact IMISS for approval!");
 					window.location.href = pageRegistrationSuccessPath;
-				}else if(esrsAccountRegistered !== true && esrsAccountRequested !== true){
+				}else if((smisAccountDetailsRegistered !== true || smisAccountCredentialsRegistered !== true) && smisAccountRequested !== true){
 					console.log("Submit_RegisterEsrs Error occured!");
 				};
 
@@ -64,10 +64,10 @@ function submitRegisterEsrs(controller, dataObj, controllersObj, loaderObj, serv
 
 
 /*Declare global*/
-window.submitRegisterEsrs = submitRegisterEsrs;
+window.submitRegisterSmis = submitRegisterSmis;
 /*Declare global*/
 
 
 /*Export*/
-export {submitRegisterEsrs, blockRequest};
+export {submitRegisterSmis, blockRequest};
 /*Export*/

@@ -9,13 +9,14 @@ import secretKey from "./Dummy.js";
 
 
 /*Export variables*/
-var esrsAccountRegistered = null;
-var esrsAccountRequested = null;
+var smisAccountDetailsRegistered = null;
+var smisAccountCredentialsRegistered = null;
+var smisAccountRequested = null;
 /*Export variables*/
 
 
-/*Register ESRS new account*/
-async function requestRegisterEsrs(dataObj, serverPath){
+/*Register SMIS new account*/
+async function requestRegisterSmis(dataObj, serverPath){
 	
 	const requestPromise = new Promise(function(resolve){
 		
@@ -29,6 +30,7 @@ async function requestRegisterEsrs(dataObj, serverPath){
 		fData.append("account_lname", dataObj.globalKey.account_lname);
 		fData.append("account_suffix", dataObj.globalKey.account_suffix);
 		fData.append("account_identifier", dataObj.globalKey.account_identifier);
+		fData.append("account_section", dataObj.globalKey.account_section);
 		/*Form data*/
 
 
@@ -45,21 +47,22 @@ async function requestRegisterEsrs(dataObj, serverPath){
 			}else if(parseObj.vmcplatDbConnection.selectedPdoConn == null){
 				console.log("VMC Platform Object Connection Incorrect!");
 				resolve(false);
-			}else if(parseObj.esrsDbConnection.serverConnection !== null){
-				console.log("ESRS Connection Lost!");
+			}else if(parseObj.smisDbConnection.serverConnection !== null){
+				console.log("SMIS Connection Lost!");
 				resolve(false);
-			}else if(parseObj.esrsDbConnection.selectedPdoConn == null){
-				console.log("ESRS Connection Incorrect!");
+			}else if(parseObj.smisDbConnection.selectedPdoConn == null){
+				console.log("SMIS Connection Incorrect!");
 				resolve(false);
 			}else if(parseObj.validToken !== null){
 				console.log(parseObj.validToken);
 				resolve(false);				
 			}else if(parseObj.execution !== true){
-				console.log("Execution Problem in Request_RegisterEsrs!");
+				console.log("Execution Problem in Request_RegisterSmis!");
 				resolve(false);
 			}else{
-				esrsAccountRegistered = parseObj.esrsAccountRegistered;	
-				esrsAccountRequested = parseObj.esrsAccountRequested;							
+				smisAccountDetailsRegistered = parseObj.smisAccountDetailsRegistered;	
+				smisAccountCredentialsRegistered = parseObj.smisAccountCredentialsRegistered;
+				smisAccountRequested = parseObj.smisAccountRequested;							
 				
 				resolve(true);
 			}			
@@ -70,9 +73,9 @@ async function requestRegisterEsrs(dataObj, serverPath){
 
 	return await requestPromise;
 };
-/*Register ESRS new account*/
+/*Register SMIS new account*/
 
 
 /*Export*/
-export {esrsAccountRequested, esrsAccountRegistered, requestRegisterEsrs};
+export {smisAccountDetailsRegistered, smisAccountCredentialsRegistered, smisAccountRequested, requestRegisterSmis};
 /*Export*/

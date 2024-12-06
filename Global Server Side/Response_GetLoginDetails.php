@@ -26,7 +26,12 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 
 
 	/*Prep variables*/
-	$vmcplatDbConnection = connectToDb("vmc_platform");	
+	$vmcplatDbConnection = connectToDb("vmc_platform");
+
+	$endpoint = null;
+	if(isset($_SESSION["endpoint"])){
+		$endpoint = $_SESSION["endpoint"];
+	}	
 	/*Prep variables*/
 	
 
@@ -34,7 +39,8 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 	$validToken = null;
 	$execution = null;
 	$validAccount = null;
-	$globalKey = null;		
+	$globalKey = null;
+
 	
 	$getLoginDetails_Resp = new stdClass();	
 	$getLoginDetails_Resp->validAccess = true;
@@ -43,6 +49,7 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 	$getLoginDetails_Resp->execution = $execution;
 	$getLoginDetails_Resp->validAccount = $validAccount;
 	$getLoginDetails_Resp->globalKey = $globalKey;		
+	$getLoginDetails_Resp->endpoint = $endpoint;
 	/*Prep response*/
 
 

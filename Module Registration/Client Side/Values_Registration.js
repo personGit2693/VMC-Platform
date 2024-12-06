@@ -12,6 +12,8 @@
 var elemReference_GetSections = null;
 var elemReference_Registration = null;
 
+var registerToEndpoint = null;
+
 var value_SearchSection = "";
 var value_empId = "";
 var value_empFname = "";
@@ -26,6 +28,10 @@ var value_regValid = false;
 
 
 /*Assign, Reset, Populate*/
+function assignRegisterToEndpoint(newValue){
+	registerToEndpoint = newValue;
+}
+
 function assignElemReference_Registration(newValue){
 	elemReference_Registration = newValue;
 }
@@ -118,6 +124,8 @@ function resetValue_EmpSection(){
 
 /*Export*/
 export {
+	registerToEndpoint,
+	assignRegisterToEndpoint,
 	assignElemReference_Registration,
 	elemReference_Registration,
 	resetValue_RegValid,

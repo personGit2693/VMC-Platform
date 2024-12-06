@@ -11,6 +11,7 @@ import secretKey from "./Dummy.js";
 /*Export variables*/
 var validAccount = null;
 var globalKey = null;
+var endpoint = null;
 /*Export variables*/
 
 
@@ -46,7 +47,8 @@ async function requestGetLoginDetails(dataObj, serverPath){
 				resolve(false);
 			}else{
 				validAccount = parseObj.validAccount;				
-				globalKey = parseObj.globalKey;				
+				globalKey = parseObj.globalKey;	
+				endpoint = parseObj.endpoint;			
 				
 				resolve(true);
 			}			
@@ -62,5 +64,5 @@ async function requestGetLoginDetails(dataObj, serverPath){
 
 
 /*Export*/
-export {globalKey, validAccount, requestGetLoginDetails};
+export {endpoint, globalKey, validAccount, requestGetLoginDetails};
 /*Export*/

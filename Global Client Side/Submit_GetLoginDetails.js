@@ -1,6 +1,6 @@
 /*Import*/
 import {assignGlobalKey, elemReference_GetLoginDetails} from "./Values_Global.js";
-import {validAccount, globalKey, requestGetLoginDetails} from "./Request_GetLoginDetails.js";
+import {endpoint, validAccount, globalKey, requestGetLoginDetails} from "./Request_GetLoginDetails.js";
 /*Import*/
 
 
@@ -27,7 +27,12 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 			if(requestPromise === true){													
 
 				if(validAccount === true){
-					assignGlobalKey(globalKey);	
+					assignGlobalKey(globalKey);
+
+					if(Object.keys(controllersObj).length > 0){
+						controllersObj.assignRegisterToEndpoint(endpoint);
+						controllersObj.outputAccessBoxDetails();
+					}
 				}else{
 					window.location.href = logoutPath;
 				}

@@ -8,7 +8,8 @@ $logoutPath = "../../Global PHP/DestroySessions.php";
 /*Dependency PHP Codes*/
 
 
-if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_suffix"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
+if(isset($_GET["endpoint"]) && isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_suffix"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
+	$_SESSION["endpoint"] = $_GET["endpoint"];
 ?>
 
 <!DOCTYPE html>
@@ -20,17 +21,8 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<title>Access Page</title>
 </head>
 <body>
-	<div class="access-box">
-		<div class="lock-icon-container"><img src="../../src/lock-icon.webp"></div>
-		<div class="permission-message">You need permission to access this application</div>
-		<div class="access-invitation">Want in? Click the "Request Access" button below.</div>
-		<div class="user-status">You are logged in as <b>myemail@gmail.com</b>.</div>
-
-		<div class="textarea-container">
-			<textarea class="message-input" rows="1" oninput="controller_Textarea_ResizeTextArea(this)" placeholder="Message (optional)"></textarea>
-		</div>
-
-		<button class="request-button" onclick="controller_Btn_RegisterEsrs(window)">Request Access</button>
+	<div class="access-box" id="accessBoxWrap">
+		
 	</div>
 
 	<!--Footer-->
@@ -43,6 +35,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_RegisterEsrs.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_RegisterSmis.js"></script>
 	<!--_Controllers-->
 
 
