@@ -5,4 +5,3 @@ export const toggleModeOrigLocation = document.querySelector('.toggle-mode-origi
 export const footerWrap = document.getElementsByClassName("footerWrap_RoClass");
 export const chatContainer = document.querySelector('.chat-container');
 export const chatBox = document.querySelector('.chat-box-container');
-

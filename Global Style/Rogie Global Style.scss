@@ -70,6 +70,7 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: 4px;
+	margin-bottom: 30px;
 }
 
 #navLogoWrap img{
@@ -89,7 +90,7 @@
 	font-size: clamp(14px, 2vw, 16px);
 	font-weight: bold;
 	color: var(--navLogo_FColor);
-}
+}		
 /*Navigation Logo*/
 
 
@@ -127,6 +128,13 @@
 
 
 	/**Rogrid*/
+	/***Navigation*/
+	--mainNavMenuBgColor: #0F143C;
+	--mainNavMenuFColor: #ffffff;
+	--hoverMainNavMenuBgColor: #252331;
+	--hoverMainNavMenuFColor: #ffffff;
+	/***Navigation*/
+
 	/***Side Navigation*/	
 	--naviBgColor:#0F143C;
 	/***Side Navigation*/		
@@ -245,6 +253,13 @@
 
 
 	/**Rogrid*/
+	/***Navigation*/
+	--mainNavMenuBgColor: #ffffff;
+	--mainNavMenuFColor: black;
+	--hoverMainNavMenuBgColor: #39AB5B;
+	--hoverMainNavMenuFColor: #ffffff;
+	/***Navigation*/
+
 	/***Side Navigation*/
 	--naviBgColor:#ffffff;
 	/***Side Navigation*/
@@ -375,6 +390,21 @@
 
 
 /*Rogrid*/
+/**Navigation*/
+.mainNavMenuIconWrap_RoClass, .activeMainNavMenuIconWrap_RoClass{
+	--mainNavMenuIconSize: clamp(14px, 2vw, 16px);;
+}
+
+.mainNavMenu_RoClass, .subNavMenu_RoClass, .activeMainNavMenu_RoClass{
+	--generalNavMenuPadding: 8px;
+	--mainNavMenuFSize: clamp(14px, 2vw, 16px);	
+}
+
+.generalNavMenuText_RoClass{
+	font-family: "binanceFont";
+}
+/**Navigation*/
+
 /**Header*/
 .projectTitle_RoClass, .projTitleTxt_RoClass, .userLoginDetails_RoClass{
 	--projectTitleTextFSize: clamp(15px, 1vw, 18px);

@@ -59,13 +59,15 @@ async function requestRegisterSmis(dataObj, serverPath){
 			}else if(parseObj.execution !== true){
 				console.log("Execution Problem in Request_RegisterSmis!");
 				resolve(false);
-			}else{
+			}else{				
 				smisAccountDetailsRegistered = parseObj.smisAccountDetailsRegistered;	
 				smisAccountCredentialsRegistered = parseObj.smisAccountCredentialsRegistered;
 				smisAccountRequested = parseObj.smisAccountRequested;							
 				
 				resolve(true);
-			}			
+			}
+
+			console.log(parseObj);			
 		});
 		/*Fetch method*/
 	});

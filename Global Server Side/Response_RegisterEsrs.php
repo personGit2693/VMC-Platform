@@ -13,7 +13,7 @@ require_once "./../Global PHP/CheckAppKey.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["account_fname"]) && isset($_POST["account_mname"]) && isset($_POST["account_lname"]) && isset($_POST["account_suffix"]) && isset($_POST["account_password"]) && isset($_POST["account_identifier"])){
+if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POST["account_id"]) && isset($_POST["account_fname"]) && isset($_POST["account_mname"]) && isset($_POST["account_lname"]) && isset($_POST["account_suffix"]) && isset($_POST["account_password"]) && isset($_POST["account_identifier"])){
 	
 	/*Required Files*/
 	
@@ -29,6 +29,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 	$account_suffix = $_POST["account_suffix"];			
 	$account_password = $_POST["account_password"];
 	$account_identifier = $_POST["account_identifier"];	
+	$account_section = $_POST["account_section"];
 	/*Query string*/
 
 
@@ -149,7 +150,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 				account_mname, 
 				account_lname,
 				account_suffix, 								
-				account_identifier
+				account_identifier,
+				account_sectionname
 			) 
 			VALUES (
 				:account_id, 
@@ -158,7 +160,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 				:account_mname,
 				:account_lname,
 				:account_suffix,
-				:account_identifier				
+				:account_identifier,
+				:account_section				
 			);
 		";		
 		/*_Prep query*/
@@ -172,6 +175,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["ac
 		$registerEsrs_QueryObj->bindValue(':account_lname', $account_lname, PDO::PARAM_STR);		
 		$registerEsrs_QueryObj->bindValue(':account_suffix', $account_suffix, PDO::PARAM_STR);		
 		$registerEsrs_QueryObj->bindValue(':account_identifier', $account_identifier, PDO::PARAM_STR);		
+		$registerEsrs_QueryObj->bindValue(':account_section', $account_section, PDO::PARAM_STR);
 		$execution = $registerEsrs_QueryObj->execute();		
 		/*_Execute query*/
 

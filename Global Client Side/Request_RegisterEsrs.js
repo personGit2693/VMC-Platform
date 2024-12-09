@@ -29,6 +29,7 @@ async function requestRegisterEsrs(dataObj, serverPath){
 		fData.append("account_lname", dataObj.globalKey.account_lname);
 		fData.append("account_suffix", dataObj.globalKey.account_suffix);
 		fData.append("account_identifier", dataObj.globalKey.account_identifier);
+		fData.append("account_section", dataObj.globalKey.account_section);
 		/*Form data*/
 
 

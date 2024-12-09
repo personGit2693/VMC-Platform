@@ -28,6 +28,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 	$account_lname = trim($_POST["account_lname"]);
 	$account_suffix = $_POST["account_suffix"];			
 	$account_password = $_POST["account_password"];
+	$correctPassword = $_SESSION["correctPassword"];
 	$account_identifier = $_POST["account_identifier"];
 	$account_section = $_POST["account_section"];
 	/*Query string*/
@@ -195,6 +196,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 			/*Disconnect*/
 
 			return;
+			/*Return response*/
 		}
 		/*_Fetching*/
 		/*Check username exist*/
@@ -207,15 +209,18 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 				emp_id,
 				last_name,
 				first_name,
+				middle_name,
 				name_ext,
-				section_department
+				office_name				
 			)
         	VALUES(
         		:account_id,
         		:account_lname,
         		:account_fname,
+        		:account_mname,
         		:account_suffix,
-        		:account_section);
+        		:account_section
+        	);
 		";		
 		/*_Prep query*/
 
@@ -224,8 +229,9 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 		$registerSmisDetails_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);
 		$registerSmisDetails_QueryObj->bindValue(':account_lname', $account_lname, PDO::PARAM_STR);		
 		$registerSmisDetails_QueryObj->bindValue(':account_fname', $account_fname, PDO::PARAM_STR);		
-		$registerSmisDetails_QueryObj->bindValue(':account_suffix', $account_suffix, PDO::PARAM_STR);				
-		$registerSmisDetails_QueryObj->bindValue(':account_section', $account_section, PDO::PARAM_STR);
+		$registerSmisDetails_QueryObj->bindValue(':account_mname', $account_mname, PDO::PARAM_STR);
+		$registerSmisDetails_QueryObj->bindValue(':account_suffix', $account_suffix, PDO::PARAM_STR);						
+		$registerSmisDetails_QueryObj->bindValue(':account_section', $account_section, PDO::PARAM_STR);	
 		$execution = $registerSmisDetails_QueryObj->execute();		
 		/*_Execute query*/
 
@@ -251,6 +257,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 			/*Disconnect*/
 
 			return;
+			/*Return response*/
 		}		
 		/*_Fetching*/
 		/*Register SMIS new account details*/
@@ -258,40 +265,20 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 
 		/*Register SMIS new account credentials*/
 		/*_Prep query*/
-		$registerSmisCredentials_Query = "
-			INSERT INTO table_user (
-				empNo,
-				userName,
-				passWord,
-				Salt,
-				dateCreated,
-				status) 
-			VALUES (
-				:account_id,
-				:account_username,
-				:account_password,
-				:account_identifier,
-				GETDATE(),
-				'New'
-			);
-		";		
+		 $registerSmisCredentials_QueryObj = $smisDbConnection->selectedPdoConn->prepare("EXEC USER_REGISTRATION ?,?,?");
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$registerSmisCredentials_QueryObj = $smisDbConnection->selectedPdoConn->prepare($registerSmisCredentials_Query);
-		$registerSmisCredentials_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);
-		$registerSmisCredentials_QueryObj->bindValue(':account_username', $account_id, PDO::PARAM_STR);		
-		$registerSmisCredentials_QueryObj->bindValue(':account_password', $account_password, PDO::PARAM_STR);		
-		$registerSmisCredentials_QueryObj->bindValue(':account_identifier', $account_identifier, PDO::PARAM_STR);				
+		$registerSmisCredentials_QueryObj->bindParam(1, $account_id); 
+		$registerSmisCredentials_QueryObj->bindParam(2, $account_id);
+		$registerSmisCredentials_QueryObj->bindParam(3, $correctPassword);				
 		$execution = $registerSmisCredentials_QueryObj->execute();		
 		/*_Execute query*/
 
 		/*_Fetching*/		
-		if($execution){
+		if($execution){			
 
-			if($registerSmisCredentials_QueryObj->rowCount() != 0){	
-				$smisAccountCredentialsRegistered = true;				
-			}
+			$smisAccountCredentialsRegistered = true;
 		}else{
 			/*Return response*/
 			$registerSmis_Resp->execution = $execution;
@@ -308,6 +295,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_section"]) && isset($_POS
 			/*Disconnect*/
 
 			return;
+			/*Return response*/
 		}		
 		/*_Fetching*/
 		/*Register SMIS new account credentials*/

@@ -6490,7 +6490,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  padding-top: 4px; }
+  padding-top: 4px;
+  margin-bottom: 30px; }
 
 #navLogoWrap img {
   display: block;
@@ -6532,6 +6533,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --scrollWebkit_ThumbColorHover: #646A70;
   /**Scroll Webkit*/
   /**Rogrid*/
+  /***Navigation*/
+  --mainNavMenuBgColor: #0F143C;
+  --mainNavMenuFColor: #ffffff;
+  --hoverMainNavMenuBgColor: #252331;
+  --hoverMainNavMenuFColor: #ffffff;
+  /***Navigation*/
   /***Side Navigation*/
   --naviBgColor:#0F143C;
   /***Side Navigation*/
@@ -6613,6 +6620,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --scrollWebkit_ThumbColorHover: #26723C;
   /**Scroll Webkit*/
   /**Rogrid*/
+  /***Navigation*/
+  --mainNavMenuBgColor: #ffffff;
+  --mainNavMenuFColor: black;
+  --hoverMainNavMenuBgColor: #39AB5B;
+  --hoverMainNavMenuFColor: #ffffff;
+  /***Navigation*/
   /***Side Navigation*/
   --naviBgColor:#ffffff;
   /***Side Navigation*/
@@ -6707,6 +6720,18 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 /**Calendar Lite*/
 /*Dark Mode and light mode*/
 /*Rogrid*/
+/**Navigation*/
+.mainNavMenuIconWrap_RoClass, .activeMainNavMenuIconWrap_RoClass {
+  --mainNavMenuIconSize: clamp(14px, 2vw, 16px); }
+
+.mainNavMenu_RoClass, .subNavMenu_RoClass, .activeMainNavMenu_RoClass {
+  --generalNavMenuPadding: 8px;
+  --mainNavMenuFSize: clamp(14px, 2vw, 16px); }
+
+.generalNavMenuText_RoClass {
+  font-family: "binanceFont"; }
+
+/**Navigation*/
 /**Header*/
 .projectTitle_RoClass, .projTitleTxt_RoClass, .userLoginDetails_RoClass {
   --projectTitleTextFSize: clamp(15px, 1vw, 18px); }

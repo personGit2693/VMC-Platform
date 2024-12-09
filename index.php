@@ -30,6 +30,21 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<span class="lightMode">VMC WAC</span>
 				</div>
 				<!--Navigation Logo-->
+
+				<a href="" class="activeMainNavMenu_RoClass lightMode">					
+					<div class="activeMainNavMenuIconWrap_RoClass" style="--activeMainNavMenuIcon:url('../../src/homeiconblack.png')"></div>
+					<span class="generalNavMenuText_RoClass">Home</span>
+				</a>
+
+				<a href="" class="mainNavMenu_RoClass lightMode">					
+					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/gear_black.png'); --activeMainNavMenuIcon:url('../../src/gear_black.png')"></div>
+					<span class="generalNavMenuText_RoClass">Settings</span>
+				</a>
+
+				<a href="./Global PHP/DestroySessions.php lightMode" class="mainNavMenu_RoClass">					
+					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/logouticon black.png'); --activeMainNavMenuIcon:url('../../src/logouticon black.png')"></div>
+					<span class="generalNavMenuText_RoClass">Logout</span>
+				</a>
 			</div>
 		</div>
 		<div class="mainmecha_RoClass lightMode">
@@ -66,7 +81,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 				<div class="mainmechaCon_RoClass" id="bannerDetailsWrap">
 					<div class="mainmechaCon_RoClass" id="bannerDetailsMainTxt">Valenzuela Medical Center Web Applications Center</div>
 					<div class="mainmechaCon_RoClass" id="bannerDetailsSubTxt">VMC Web apps are now accessible from any device with a web browser and can be updated centrally</div>
-					<a class="link-Btn" href="" id="bannerBtnGoToApp">Go to Systems</a>
+					<a class="link-Btn" href="" id="bannerBtnGoToApp">Download our Guidelines</a>
 				</div>
 			</div>
 			<!--Banner-->

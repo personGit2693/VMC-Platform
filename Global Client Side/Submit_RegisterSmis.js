@@ -31,7 +31,7 @@ function submitRegisterSmis(controller, dataObj, controllersObj, loaderObj, serv
 				}else if(smisAccountRequested === true){
 					alert("Account Already registered! Contact IMISS for approval!");
 					window.location.href = pageRegistrationSuccessPath;
-				}else if((smisAccountDetailsRegistered !== true || smisAccountCredentialsRegistered !== true) && smisAccountRequested !== true){
+				}else if((smisAccountDetailsRegistered !== true || smisAccountCredentialsRegistered !== true) && smisAccountRequested !== true){					
 					console.log("Submit_RegisterEsrs Error occured!");
 				};
 
