@@ -10,8 +10,8 @@ function controller_Univ_ValidateRegistration(elem){
 
 	assignElemReference_Registration(elem);
 
-	const registrationData_Array = [value_empId, value_empFname, value_empMname, value_empLname, value_empSection, value_empPassword1, value_empPassword2];
-	const registrationInputs_Array = [cusInputsEmpId, cusInputsEmpFname, cusInputsEmpMname, cusInputsEmpLname, sectionDropdown, cusInputsEmpPassword1, cusInputsEmpPassword2];
+	const registrationData_Array = [value_empId, value_empFname, value_empLname, value_empSection, value_empPassword1, value_empPassword2];
+	const registrationInputs_Array = [cusInputsEmpId, cusInputsEmpFname, cusInputsEmpLname, sectionDropdown, cusInputsEmpPassword1, cusInputsEmpPassword2];
 
 	/*Check value per data input*/
 	for(let index=0; index < registrationData_Array.length; index++){

@@ -140,11 +140,9 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 				$accountSession_Obj->account_lname = $_SESSION["account_lname"];
 				$accountSession_Obj->account_suffix = $_SESSION["account_suffix"];
 				$accountSession_Obj->account_password = $_SESSION["account_password"];				
-				$accountSession_Obj->account_identifier = $_SESSION["account_identifier"];
-				/*
+				$accountSession_Obj->account_identifier = $_SESSION["account_identifier"];				
 				$accountSession_Obj->account_picture = $_SESSION["account_picture"];
-				$accountSession_Obj->account_status = $_SESSION["account_status"];
-				*/
+				$accountSession_Obj->account_status = $_SESSION["account_status"];				
 				$accountSession_Obj->account_section = $_SESSION["account_section"];				
 				$accountSession_Obj->correctPassword = $_SESSION["correctPassword"];
 

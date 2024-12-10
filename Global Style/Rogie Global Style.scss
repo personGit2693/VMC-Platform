@@ -148,6 +148,10 @@
 	--projectTitleTextFColor: #ffffff;
 	/***Header*/	
 
+	/***Search Input*/
+	--inputSearchFColor: #ffffff;
+	/***Search Input*/
+
 	/***Date Range*/	
 	--dateRangeFColor: #ffffff;
 	--dateRangeTooltipColor: #ffffff;
@@ -179,9 +183,9 @@
 	/**Sections Label*/
 
 
-	/*Search Area*/
+	/**Search Area*/
 	--searchAreaWrap_BgColor: #252331;
-	/*Search Area*/
+	/**Search Area*/
 
 
 	/**Page Features*/
@@ -189,9 +193,9 @@
 	/**Page Features*/
 
 
-	/*DP Border Color*/
+	/**DP Border Color*/
 	--dpBorderColor: #ffffff;
-	/*DP Border Color*/
+	/**DP Border Color*/
 
 
 	/**Events and Activities*/
@@ -213,11 +217,7 @@
 
 	/***Committees*/
 	--committeeBgColor: #0F143C;
-	/***Committees*/
-
-	/***Search Input*/
-	--inputSearchFColor: #ffffff;
-	/***Search Input*/
+	/***Committees*/	
 	/**Pinned Posts and Committees*/
 }
 
@@ -308,9 +308,9 @@
 	/**Sections Label*/
 
 
-	/*Search Area*/
+	/**Search Area*/
 	--searchAreaWrap_BgColor: #ffffff;
-	/*Search Area*/
+	/**Search Area*/
 
 
 	/**Page Features*/
@@ -318,9 +318,9 @@
 	/**Page Features*/
 
 
-	/*DP Border Color*/
+	/**DP Border Color*/
 	--dpBorderColor: #97A0A8;
-	/*DP Border Color*/
+	/**DP Border Color*/
 
 
 	/**Events and Activities*/
@@ -336,8 +336,13 @@
 
 
 	/**Pinned Posts and Committees*/
+	/***Pinned Posts*/
 	--pinnedPostBgColor: #ffffff;
+	/***Pinned Posts*/
+
+	/***Committees*/
 	--committeeBgColor: #ffffff;
+	/***Committees*/
 	/**Pinned Posts and Committees*/
 }
 
@@ -449,6 +454,63 @@
 }
 /**Footer*/
 /*Rogrid*/
+
+
+/*Path Guide*/
+.pathGuideWrap{
+	display: flex !important;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #ffffff;
+	padding-left: 12px;
+}
+
+.pathGuideWrap div{
+	margin: 0px 4px 0px 0px;
+}
+
+.pathName{
+	font-family: "binanceFont";
+	font-size: clamp(13px, 1vw, 24px);
+}
+
+.pathArrow{
+	overflow: hidden;
+	background: transparent url("../../src/right-arrow-black.png") center no-repeat;
+	background-size: contain;
+	width: clamp(17px, 1vw, 28px);
+	height: clamp(17px, 1vw, 28px);
+}
+/*Path Guide*/
+
+
+/*Page Big Title*/
+.pageBigTitle{
+	padding-left: 12px;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	background-color: #ffffff;
+	font-family: "binanceFont";
+	font-size: clamp(20px, 1vw, 30px);
+	font-weight: bold;
+
+}
+/*Page Big Title*/
+
+
+/*Search on table*/
+.searchOnTableLabel{
+	font-family: "binanceFont";
+	font-size: clamp(18px, 1vw, 25px);
+}
+
+.searchOnTableInputWrap{
+	overflow: hidden;
+	margin-top: 10px;
+}
+/*Search on table*/
 
 
 /*Right Side or Chat Area*/

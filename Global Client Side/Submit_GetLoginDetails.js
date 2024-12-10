@@ -27,11 +27,22 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 			if(requestPromise === true){													
 
 				if(validAccount === true){
-					assignGlobalKey(globalKey);
+					assignGlobalKey(globalKey);					
 
-					if(Object.keys(controllersObj).length > 0){
+					if("assignRegisterToEndpoint" in controllersObj){
 						controllersObj.assignRegisterToEndpoint(endpoint);
+					}
+
+					if("outputAccessBoxDetails" in controllersObj){
 						controllersObj.outputAccessBoxDetails();
+					}
+
+					if("outputUserLoginDetails" in controllersObj){
+						controllersObj.outputUserLoginDetails();
+					}
+
+					if("outputGreetingUserDetails" in controllersObj){
+						controllersObj.outputGreetingUserDetails();
 					}
 				}else{
 					window.location.href = logoutPath;

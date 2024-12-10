@@ -13,7 +13,7 @@ require_once "./../Global PHP/CheckAppKey.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_suffix"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
+if(isset($_POST["secretKey"]) && isset($_POST["searchApp"]) && isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset($_SESSION["account_mname"]) && isset($_SESSION["account_lname"]) && isset($_SESSION["account_suffix"]) && isset($_SESSION["account_password"]) && isset($_SESSION["account_identifier"]) && isset($_SESSION["account_status"]) && isset($_SESSION["account_section"]) && isset($_SESSION["account_picture"]) && isset($_SESSION["correctPassword"])){
 	
 	/*Required Files*/
 	
@@ -22,6 +22,7 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 
 	/*Query string*/
 	$secretKey = $_POST["secretKey"];	
+	$searchApp = $_POST["searchApp"];	
 	/*Query string*/
 
 
@@ -103,11 +104,25 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 				
 		/*Get apps details*/
 		/*_Prep query*/
-		$getAppsDetails_Query = "SELECT * FROM apps_tab ORDER BY app_nameid ASC;";		
+		$getAppsDetails_Query = "SELECT * FROM apps_tab ";
+
+		if(!empty($searchApp)){
+			$getAppsDetails_Query .= "
+				WHERE app_nameid LIKE :searchApp 
+				OR app_abbre LIKE :searchApp 
+			";
+		}
+
+		$getAppsDetails_Query .= "ORDER BY app_nameid ASC;";		
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$getAppsDetails_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($getAppsDetails_Query);		
+		$getAppsDetails_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($getAppsDetails_Query);
+
+		if(!empty($searchApp)){
+			$getAppsDetails_QueryObj->bindValue(':searchApp', '%'.$searchApp.'%', PDO::PARAM_STR);	
+		}
+
 		$execution = $getAppsDetails_QueryObj->execute();		
 		/*_Execute query*/
 

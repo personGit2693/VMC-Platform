@@ -6549,6 +6549,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --projectTitle_BgColor:#0F143C;
   --projectTitleTextFColor: #ffffff;
   /***Header*/
+  /***Search Input*/
+  --inputSearchFColor: #ffffff;
+  /***Search Input*/
   /***Date Range*/
   --dateRangeFColor: #ffffff;
   --dateRangeTooltipColor: #ffffff;
@@ -6570,15 +6573,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: #ffffff;
   /**Sections Label*/
-  /*Search Area*/
+  /**Search Area*/
   --searchAreaWrap_BgColor: #252331;
-  /*Search Area*/
+  /**Search Area*/
   /**Page Features*/
   --highlightedTextsColor: #ffffff;
   /**Page Features*/
-  /*DP Border Color*/
+  /**DP Border Color*/
   --dpBorderColor: #ffffff;
-  /*DP Border Color*/
+  /**DP Border Color*/
   /**Events and Activities*/
   --eventsBgColor: #0F143C;
   --eventsBoxShadow: 0px 0px 10px #0F143C;
@@ -6594,9 +6597,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /***Committees*/
   --committeeBgColor: #0F143C;
   /***Committees*/
-  /***Search Input*/
-  --inputSearchFColor: #ffffff;
-  /***Search Input*/
   /**Pinned Posts and Committees*/ }
 
 .lightMode {
@@ -6660,15 +6660,15 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /**Sections Label*/
   --sectionsLabelColor: black;
   /**Sections Label*/
-  /*Search Area*/
+  /**Search Area*/
   --searchAreaWrap_BgColor: #ffffff;
-  /*Search Area*/
+  /**Search Area*/
   /**Page Features*/
   --highlightedTextsColor: black;
   /**Page Features*/
-  /*DP Border Color*/
+  /**DP Border Color*/
   --dpBorderColor: #97A0A8;
-  /*DP Border Color*/
+  /**DP Border Color*/
   /**Events and Activities*/
   --eventsBgColor: #ffffff;
   --eventsBoxShadow: 0px 0px 10px black;
@@ -6678,8 +6678,12 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --postsBgColor: #ffffff;
   /**Posted Section*/
   /**Pinned Posts and Committees*/
+  /***Pinned Posts*/
   --pinnedPostBgColor: #ffffff;
+  /***Pinned Posts*/
+  /***Committees*/
   --committeeBgColor: #ffffff;
+  /***Committees*/
   /**Pinned Posts and Committees*/ }
 
 /**Calendar Lite*/
@@ -6772,6 +6776,52 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 /**Footer*/
 /*Rogrid*/
+/*Path Guide*/
+.pathGuideWrap {
+  display: flex !important;
+  overflow: hidden;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  padding-left: 12px; }
+
+.pathGuideWrap div {
+  margin: 0px 4px 0px 0px; }
+
+.pathName {
+  font-family: "binanceFont";
+  font-size: clamp(13px, 1vw, 24px); }
+
+.pathArrow {
+  overflow: hidden;
+  background: transparent url("../../src/right-arrow-black.png") center no-repeat;
+  background-size: contain;
+  width: clamp(17px, 1vw, 28px);
+  height: clamp(17px, 1vw, 28px); }
+
+/*Path Guide*/
+/*Page Big Title*/
+.pageBigTitle {
+  padding-left: 12px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  font-family: "binanceFont";
+  font-size: clamp(20px, 1vw, 30px);
+  font-weight: bold; }
+
+/*Page Big Title*/
+/*Search on table*/
+.searchOnTableLabel {
+  font-family: "binanceFont";
+  font-size: clamp(18px, 1vw, 25px); }
+
+.searchOnTableInputWrap {
+  overflow: hidden;
+  margin-top: 10px; }
+
+/*Search on table*/
 /*Right Side or Chat Area*/
 #chatContentWrap {
   overflow: auto;
@@ -7040,6 +7090,19 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
 
 .sectionsLabel {
   font-size: clamp(12px, 2vw, 18px); }
+
+.searchInput_RoClass {
+  display: inline-block !important;
+  --inputSearchWidth: clamp(150px, 20vw, 200px);
+  --inputSearchTopPadding: 7px;
+  --inputSearchRightPadding: 7px;
+  --inputSearchBottomPadding: 7px;
+  --inputSearchLeftPadding: 28px;
+  --inputSearchBorderColor: #97A0A8;
+  --inputSearchBorderRadius: 4px;
+  --inputSearchIconHori: 4px;
+  --inputSearchIconSize: 25px;
+  --inputSearchFSize: clamp(10px, 2vw, 14px); }
 
 #webAppList {
   display: flex;

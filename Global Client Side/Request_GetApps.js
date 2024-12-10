@@ -21,6 +21,7 @@ async function requestGetApps(dataObj, serverPath){
 		/*Form data*/
 		const fData = new FormData(); 
 		fData.append("secretKey", secretKey);							
+		fData.append("searchApp", dataObj.searchApp);
 		/*Form data*/
 
 

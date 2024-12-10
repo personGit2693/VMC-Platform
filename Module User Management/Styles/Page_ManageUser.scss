@@ -2,7 +2,7 @@
 /*Import Mixins*/
 @import "../../Global Style/Rogie Rostrap Global";
 @import "../../Global Style/Rogie Global Style";
-@import "./Mixin_index";
+@import "./Mixin_Page_ManageUser";
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -11,15 +11,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	/*List of web applications*/
-	--perWebAppIcon_Size: clamp(35px, 2vw, 70px);
-	/*List of web applications*/
-
-
-	/*Greetings Area*/
-	--greetingUserImage_Size: clamp(40px, 5vw, 50px);
-	--greetingWebApps_Size: clamp(225px, 15vw, 250px);
-	/*Greetings Area*/
+	
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -28,126 +20,16 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
-
-/*Greetings Area*/
-#greetingSection{
-	display: flex;
+#manageUserFeatureWrap{
 	overflow: hidden;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--greetingSection_BgColor);	
+	background-color: #ffffff;
+	padding: 12px;
+	margin-top: 7px;
 }
 
-#greetingWrap{
-	display: flex;
-	overflow: hidden;
-	flex-flow: row nowrap;
-	align-items: center;
-	margin-left: 14px;
-}
 
-#greetingUserImage{
-	display: inline-block;
-	width: var(--greetingUserImage_Size);
-	height: var(--greetingUserImage_Size);
-	object-fit: contain;
-	overflow: hidden;
-	border-radius: 50%;
-	flex-shrink: 0;
-}
-
-#greetingUserDetailsWrap{
-	width: 100%;
-	overflow: hidden;	
-}
-
-#greetingUserFName, #greetingUserEmpNo{
-	font-family: "binanceFont";
-	font-size: clamp(14px, 1vw, 16px);	
-	padding: 5px;	
-}
-
-#greetingUserFName{
-	color: var(--mainTextColor);
-	font-weight: bold;
-}
-
-#greetingWebApps{	
-	width: var(--greetingWebApps_Size);
-	height: var(--greetingWebApps_Size);
-	background: transparent url("../../src/webapps.png") center no-repeat;
-	background-size: contain;
-}
-/*Greetings Area*/
-
-
-/*Banner*/
-#bannerWrap{	
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	background: transparent url("../../src/bg2.png") center no-repeat;
-	background-size: cover;
-	height: auto;	
-}
-
-#bannerDetailsWrap{
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;	
-	overflow: hidden;
-	padding: 20px;	
-	background-color: rgba(22, 27, 34, 0.5);
-	height: 100%;
-}
-
-#bannerDetailsMainTxt, #bannerDetailsSubTxt{
-	text-align: center;
-	padding: 7px;
-	font-family: "binanceFont";
-	color: #ffffff;
-}
-
-#bannerDetailsMainTxt{
-	font-weight: bold;
-	font-size: clamp(16px, 5vw, 40px);
-}
-
-#bannerDetailsSubTxt{
-	font-size: clamp(12px, 2vw, 18px);
-}
-
-#bannerBtnGoToApp{
-	font-size: clamp(12px, 2vw, 18px);
-	align-self: center;
-	color: #ffffff;
-	background-color: #39AB5B;
-	text-decoration: none;
-	margin-top: 12px;
-	border-radius: 8px;
-}
-
-#bannerBtnGoToApp:hover{
-	background-color: #26723C;
-}
-/*Banner*/
-
-
-/*List of web applications*/
-#webAppListSection{
-	overflow: hidden;
-	background-color: var(--webAppListSection_BgColor);
-	margin-bottom: clamp(10px, 2vw, 14px);
-}
-
-.sectionsLabel{
-	font-size: clamp(12px, 2vw, 18px);
-}
-
-.searchInput_RoClass{
-	display: inline-block !important;
-	--inputSearchWidth: clamp(150px, 20vw, 200px);
+.searchInput_RoClass{	
+	--inputSearchWidth: 100%;
 	--inputSearchTopPadding: 7px;
 	--inputSearchRightPadding: 7px;
 	--inputSearchBottomPadding: 7px;
@@ -158,50 +40,6 @@
 	--inputSearchIconSize: 25px;
 	--inputSearchFSize: clamp(10px, 2vw, 14px);
 }
-
-#webAppList{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: flex-start;
-	overflow: hidden;
-	padding: 5px;	
-}
-
-.perWebApp{
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	width: 170px;
-	cursor: pointer;
-	margin: 0px 20px 20px 20px;
-	box-shadow: none;
-	transition: box-shadow 0.2s;
-}
-
-.perWebApp:hover{
-	box-shadow: 0px 0px 15px #39AB5B;
-}
-
-.perWebAppIcon_LightMode{
-	background-image: var(--perWebAppIcon_BgImage_LightMode);
-	@include perWebAppIcon_General;
-}
-.perWebAppIcon_DarkMode{
-	background-image: var(--perWebAppIcon_BgImage_DarkMode);
-	@include perWebAppIcon_General;
-}
-
-.perWebAppName{
-	overflow: hidden;
-	font-family: "binanceFont";
-	font-size: clamp(12px, 2vw, 18px);
-	color: var(--perWebAppName_FColor);
-	text-align: center;
-	padding: 5px;
-}
-/*List of web applications*/
-
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 

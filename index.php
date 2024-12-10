@@ -36,12 +36,17 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<span class="generalNavMenuText_RoClass">Home</span>
 				</a>
 
+				<a href="./Module User Management/Pages/Page_ManageUser.php" class="mainNavMenu_RoClass lightMode">					
+					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/user account management icon.png'); --activeMainNavMenuIcon:url('../../src/user account management icon.png')"></div>
+					<span class="generalNavMenuText_RoClass">Manage User Accounts</span>
+				</a>
+
 				<a href="" class="mainNavMenu_RoClass lightMode">					
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/gear_black.png'); --activeMainNavMenuIcon:url('../../src/gear_black.png')"></div>
 					<span class="generalNavMenuText_RoClass">Settings</span>
 				</a>
 
-				<a href="./Global PHP/DestroySessions.php lightMode" class="mainNavMenu_RoClass">					
+				<a href="./Global PHP/DestroySessions.php" class="mainNavMenu_RoClass lightMode">					
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/logouticon black.png'); --activeMainNavMenuIcon:url('../../src/logouticon black.png')"></div>
 					<span class="generalNavMenuText_RoClass">Logout</span>
 				</a>
@@ -53,9 +58,11 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 				
 				<div class="projTitleAndUserLogin_RoClass">
 					<div class="projTitleTxt_RoClass">VMC Web Applications</div>
-					<div class="userLogin_RoClass">
+					<div class="userLogin_RoClass" id="userLoginDetailsWrap">
+						<!--Component
 						<div class="userLoginIconWrap_RoClass"><img src="./src/actionofficericon.png"/></div>
 						<div class="userLoginDetails_RoClass">Juan Dela Cruz</div>
+						-->
 					</div>
 				</div>
 			</div>
@@ -66,8 +73,10 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<img id="greetingUserImage" src="./src/actionofficericon.png" />
 						
 					<div class="mainmechaCon_RoClass" id="greetingUserDetailsWrap">
+						<!--
 						<div class="mainmechaCon_RoClass lightMode" id="greetingUserFName">Hi! welcome back, Juan!</div>
 						<div class="mainmechaCon_RoClass sub-textFColor" id="greetingUserEmpNo">Employee number 2024-1136</div>
+						-->
 					</div>
 				</div>
 
@@ -89,39 +98,9 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 
 			<!--List of web applications-->
 			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="webAppListSection">
-				<div class="mainmechaCon_RoClass sectionsLabel lightMode">List of Systems</div>
+				<div class="mainmechaCon_RoClass sectionsLabel lightMode"><span>List of Systems:</span> <input type="text" class="searchInput_RoClass lightMode" onkeyup="controller_InputText_GetApps(this)" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')"/></div>
 				<div class="mainmechaCon_RoClass" id="webAppList">
-					<!--Components
-					<div class="mainmechaCon_RoClass perWebApp">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/EMR_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/EMR_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">Online Request of Medical Records</div>
-					</div>
-
-					<div class="mainmechaCon_RoClass perWebApp">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/ONLINESCHED_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/ONLINESCHED_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">OPD Online Scheduler</div>
-					</div>
-
-					<div class="mainmechaCon_RoClass perWebApp">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/HCSS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/HCSS_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">VMC CSAT</div>
-					</div>
-
-					<div class="mainmechaCon_RoClass perWebApp" onclick="controller_Div_LoginToApp('http://192.168.15.203:8000/')">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/PETRU_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/PETRU_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">Training Management</div>
-					</div>
-
-					<div class="mainmechaCon_RoClass perWebApp">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/EDTS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/EDTS_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">Document Tracking</div>
-					</div>
-
-					<div class="mainmechaCon_RoClass perWebApp" onclick="controller_Div_LoginToApp('http://192.168.14.83:82/Service Request System/Login Page/PHP/LoginEsrs.php')">
-						<div class="mainmechaCon_RoClass perWebAppIcon_LightMode" style="--perWebAppIcon_BgImage_DarkMode: url('../../src/ESRS_White.png'); --perWebAppIcon_BgImage_LightMode: url('../../src/ESRS_Black.png');"></div>
-						<div class="mainmechaCon_RoClass perWebAppName lightMode">Electronic Service Request System</div>
-					</div>
-					-->
+					<!--Components-->
 				</div>
 			</div>
 			<!--List of web applications-->
@@ -141,6 +120,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 
 	<!---Controllers-->
 	<script type="module" src="./Global Client Side/Controller_Div_LoginToApp.js"></script>
+	<script type="module" src="./Module Index/Client Side/Controller_InputText_GetApps.js"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

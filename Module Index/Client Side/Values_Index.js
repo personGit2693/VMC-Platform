@@ -9,24 +9,25 @@
 
 
 /*Prep export variables*/
-/*var elemReference_PageAccessedLoginDetails = null;*/
+var searchApp = "";
 /*Prep export variables*/
 
 
 /*Assign, Reset, Populate*/
-/*
-function assignElemReference_PageAccessedLoginDetails(newValue){
-	elemReference_PageAccessedLoginDetails = newValue;
+function resetSearchApp(){
+	searchApp = "";
 }
-*/
+
+function assignSearchApp(newValue){
+	searchApp = newValue;
+}
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
-	/*
-	assignElemReference_PageAccessedLoginDetails,
-	elemReference_PageAccessedLoginDetails
-	*/
+	resetSearchApp,
+	assignSearchApp,
+	searchApp
 };
 /*Export*/

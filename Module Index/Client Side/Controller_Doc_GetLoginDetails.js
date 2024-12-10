@@ -1,6 +1,8 @@
 /*Import*/
 import {assignElemReference_GetLoginDetails} from "../../Global Client Side/Values_Global.js";
 import {submitGetLoginDetails} from "../../Global Client Side/Submit_GetLoginDetails.js";
+import outputUserLoginDetails from "./Output_UserLoginDetails.js";
+import outputGreetingUserDetails from "./Output_GreetingUserDetails.js";
 /*Import*/
 
 
@@ -10,7 +12,10 @@ function controller_Doc_GetLoginDetails(elem){
 	assignElemReference_GetLoginDetails(elem);
 
 	const dataObj = {};
-	const controllersObj = {};
+	const controllersObj = {
+		outputUserLoginDetails,
+		outputGreetingUserDetails
+	};
 	const loaderObj = {};	
 
 	const serverPath = "./Global Server Side/Response_GetLoginDetails.php";
