@@ -397,7 +397,7 @@
 /*Rogrid*/
 /**Navigation*/
 .mainNavMenuIconWrap_RoClass, .activeMainNavMenuIconWrap_RoClass{
-	--mainNavMenuIconSize: clamp(14px, 2vw, 16px);;
+	--mainNavMenuIconSize: clamp(14px, 2vw, 16px);
 }
 
 .mainNavMenu_RoClass, .subNavMenu_RoClass, .activeMainNavMenu_RoClass{
@@ -447,12 +447,40 @@
 }
 /**Search Input*/
 
+/**Dropdown Button List*/
+.cusDroplistBtn_RoClass, .masterBtnWrap_RoClass>button, .listBtn_RoClass{
+	--droplistBtnWidth: auto;
+	--droplistBtnBorderWidth: 0px;
+	--droplistBtnBorderColor: none;
+	--droplistBtnBgColor: #1C5D96;
+	--dropListBorderRadius: 5px;
+	--droplistBtnPadding: 7px;
+	--droplistBtnFColor: #ffffff;
+	--dropListBtnFSize: clamp(12px, 1vw, 16px);
+	--dropListBtnIconSize: clamp(12px, 1vw, 16px);
+	--listBtnBorderWidth: 0px;
+	--listBtnBorderColor: none;
+	--listBtnBgColorha: #123E64;
+	--listBtnFColorha: #ffffff;
+}
+/**Dropdown Button List*/
+
 /**Footer*/
 .footerTxt_RoClass{
 	--footerFSize: clamp(10px, 2vw, 14px);
 	--footerFColor: #ffffff;
 }
 /**Footer*/
+
+/**Box Loader*/
+.boxLoaderWrap_RoClass{
+	display: flex;
+}
+
+.boxLoaderIcon_RoClass{
+	--boxLoaderIconSize: clamp(50px, 1vw, 60px);
+}
+/**Box Loader*/
 /*Rogrid*/
 
 
@@ -509,6 +537,49 @@
 .searchOnTableInputWrap{
 	overflow: hidden;
 	margin-top: 10px;
+}
+
+.tableWrap{
+	overflow: auto;
+	max-height: calc(680px - clamp(10px, 2vw, 14px));
+	margin-bottom: clamp(10px, 2vw, 14px);
+}
+
+table{
+	table-layout: fixed;
+	width: 100%;
+	font-family: "binanceFont";
+	font-size: clamp(12px, 1vw, 16px);
+	border-collapse: collapse;
+	margin-top: 15px;
+}
+
+table thead{
+	border-bottom: 1.5px solid black;
+}
+
+table thead tr th{
+	padding: 5px;
+}
+
+table tbody tr:nth-child(even){
+	background-color: #DBE2F1;
+}
+
+table tbody tr:hover{
+	color: #39AB5B;
+}
+
+table tbody tr td{
+	padding: 5px;
+}
+
+table tbody tr td img{
+	display: inline-block;
+	border-radius: 50%;
+	width: clamp(30px, 0.4vw, 35px);
+	height: clamp(30px, 0.4vw, 35px);
+	vertical-align: middle;
 }
 /*Search on table*/
 
@@ -627,6 +698,21 @@
 		@include chatContentWrap_Smart;
 	}
 	/*Right Side or Chat Area*/
+
+
+	/*Search on table*/
+	table thead{
+		@include tableThead_Smart;
+	}
+
+	table tbody tr td{
+		@include tableData_Smart;
+	}
+
+	table tbody tr td::before{
+		@include tableDataBefore_Smart;
+	}
+	/*Search on table*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -647,6 +733,21 @@
 		@include chatContentWrap_Smart;
 	}
 	/*Right Side or Chat Area*/
+
+
+	/*Search on table*/
+	table thead{
+		@include tableThead_Smart;
+	}
+
+	table tbody tr td{
+		@include tableData_Smart;
+	}
+
+	table tbody tr td::before{
+		@include tableDataBefore_Smart;
+	}
+	/*Search on table*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -660,6 +761,25 @@
 		max-width: 1081px;
 	}
 	/*Per Section with max width of 1081px*/
+
+
+	/*Search on table*/
+	table thead{
+		display: normal;
+	}
+
+	table tbody tr td{
+		display: normal;
+		text-align: center;
+	}
+
+	table tbody tr td::before{
+		float: none;
+		content: none;
+		font-weight: none;
+		padding-right: none;
+	}
+	/*Search on table*/
 }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/

@@ -34,5 +34,24 @@
 }
 /*Right Side or Chat Area*/
 
+
+/*Search on table*/
+@mixin tableThead_Smart{
+	display: none;
+}
+
+@mixin tableData_Smart{
+	display: block;
+	text-align: right;
+}
+
+@mixin tableDataBefore_Smart{
+	float: left;
+	content: attr(data-label);
+	font-weight: bold;
+	padding-right: 8px;
+}
+/*Search on table*/
+
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/

@@ -85,8 +85,46 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 			<div class="mainmechaCon_RoClass" id="manageUserFeatureWrap">
 				<div class="mainmechaCon_RoClass searchOnTableLabel">Search Accounts</div>
 				<div class="mainmechaCon_RoClass searchOnTableInputWrap">
-					<input type="text" class="searchInput_RoClass lightMode" onkeyup="controller_InputText_GetApps(this)" placeholder="Search..." style="--inputSearchIcon: url('../../src/searchIcon.png')">
+					<input type="text" class="searchInput_RoClass lightMode" onkeyup="" placeholder="Type Account Details" style="--inputSearchIcon: url('../../src/searchIcon.png')">
 				</div>
+
+				<div class="mainmechaCon_RoClass tableWrap scrollWebkit" id="accountsTableWrap">
+					<table>
+						<thead>
+							<tr>
+								<th>Employee Number</th>
+								<th>Employee Name</th>
+								<th>Account Status</th>
+								<th>Employee Location</th>
+								<th>Date Created</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="accountsTableBody">
+							<!--							
+							<tr>
+								<td data-label="Employee Number"><img src="../../src/actionofficericon.png"/>9999-2021</td>	
+								<td data-label="Employee Name">Test Test</td>
+								<td data-label="Account Status">Active</td>	
+								<td data-label="Account Status">Budget Office (BUD)</td>	
+								<td data-label="Date Created">2024-12-11 07:36:56</td>
+								<td data-label="Actions">
+									<div class="cusDroplistBtn_RoClass">
+										<div class="masterBtnWrap_RoClass" onclick="showActionButtons(this)">
+											<button>Actions</button>
+											<div><img src="../../src/Chevron Down.png"></div>
+										</div>					
+										<div class="droplistWrap_RoClass">
+											<button class="listBtn_RoClass">Reset Password</button>
+											<button class="listBtn_RoClass">Edit Details</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+							-->							
+						</tbody>
+					</table>
+				</div>				
 			</div>
 			<!--Page Manage User Main Feature-->
 			
@@ -102,6 +140,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!--JS Script-->
 	<!---Dependecies-->
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
 	<!---Dependecies-->
 
 	<!---Controllers-->
@@ -109,7 +148,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!---Controllers-->
 
 	<!---Executor-->
-	<!--<script type="module" src="../../Module Index/Client Side/Executor_Page_ManageUser.js"></script>-->
+	<script type="module" src="../Client Side/Executor_Page_ManageUser.js"></script>
 	<!---Executor-->		
 	<!--JS Script-->
 </body>
