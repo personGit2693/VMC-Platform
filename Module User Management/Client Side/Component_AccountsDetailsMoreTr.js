@@ -4,9 +4,9 @@ import {accounts} from "./Request_GetAccounts.js";
 
 
 /*Component*/
-function AccountsDetailsTr(){
+function AccountsDetailsMoreTr(){
 
-	let accountsDetailsTr = ``;
+	let accountsDetailsMoreTr = ``;
 		
 	for(let index=0; index<accounts.length; index++){
 
@@ -23,7 +23,7 @@ function AccountsDetailsTr(){
 			accountStatus = "Deactivated";
 		}
 
-		accountsDetailsTr += `
+		accountsDetailsMoreTr += `
 			<tr>
 				<td data-label="Employee Number"><img src="${accountPicture}"/>${accountId}</td>	
 				<td data-label="Employee Name">${accountFullname}</td>
@@ -45,11 +45,11 @@ function AccountsDetailsTr(){
 		`;
 	}	
 
-	return accountsDetailsTr;
+	return accountsDetailsMoreTr;
 }
 /*Component*/
 
 
 /*Export*/
-export default AccountsDetailsTr;
+export default AccountsDetailsMoreTr;
 /*Export*/

@@ -85,10 +85,10 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 			<div class="mainmechaCon_RoClass" id="manageUserFeatureWrap">
 				<div class="mainmechaCon_RoClass searchOnTableLabel">Search Accounts</div>
 				<div class="mainmechaCon_RoClass searchOnTableInputWrap">
-					<input type="text" class="searchInput_RoClass lightMode" onkeyup="" placeholder="Type Account Details" style="--inputSearchIcon: url('../../src/searchIcon.png')">
+					<input type="text" class="searchInput_RoClass lightMode" onkeyup="controller_InputText_SearchAccounts(this)" placeholder="Type Account Details" style="--inputSearchIcon: url('../../src/searchIcon.png')">
 				</div>
 
-				<div class="mainmechaCon_RoClass tableWrap scrollWebkit" id="accountsTableWrap">
+				<div class="mainmechaCon_RoClass tableWrap scrollWebkit" id="accountsTableWrap" onscroll="controller_Div_ListMoreAccountsTr(this)">
 					<table>
 						<thead>
 							<tr>
@@ -144,7 +144,8 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!---Dependecies-->
 
 	<!---Controllers-->
-	<!--<script type="module" src="../../Global Client Side/Controller_Div_LoginToApp.js"></script>-->
+	<script type="module" src="../Client Side/Controller_Div_ListMoreAccountsTr.js"></script>
+	<script type="module" src="../Client Side/Controller_InputText_SearchAccounts.js"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

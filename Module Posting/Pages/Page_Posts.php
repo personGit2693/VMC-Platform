@@ -8,14 +8,14 @@
 </head>
 <body>
 	<div class="rolayout_RoClass">
-		<div class="sidemecha_RoClass darkMode">
+		<div class="sidemecha_RoClass lightMode">
 			<div class="sidemechaCon_RoClass">
 				My Content
 			</div>
 		</div>
-		<div class="mainmecha_RoClass darkMode">
+		<div class="mainmecha_RoClass lightMode">
 			<!--Page Header and Burger-->
-			<div class="mainmechaCon_RoClass layoutOneHead_RoClass darkMode">
+			<div class="mainmechaCon_RoClass layoutOneHead_RoClass lightMode">
 				<!--Burger-->
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
 				<!--Burger-->
@@ -38,7 +38,7 @@
 				<!--Left Side or Contents Area-->
 				<div class="mainmechaCon_RoClass" id="mainContentWrap">
 					<!--Smart only features controller-->
-					<div class="mainmechaCon_RoClass scrollWebkit darkMode featuresControlsWrap_Hide" id="featuresControlsWrap">						
+					<div class="mainmechaCon_RoClass scrollWebkit lightMode featuresControlsWrap_Hide" id="featuresControlsWrap">						
 
 						<!--Event feature controller-->
 						<div class="mainmechaCon_RoClass featuresControls">							
@@ -55,8 +55,8 @@
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/newspaper_white.png')"></div>
 							<div class="mainmechaCon_RoClass featuresTextWrap">
-								<div class="mainmechaCon_RoClass featuresTextTitle darkMode">What's New</div>
-								<div class="mainmechaCon_RoClass featuresTextDefinition darkMode">A new post can refer to a variety of content, including short piece of content or message published on a platform.</div>
+								<div class="mainmechaCon_RoClass featuresTextTitle lightMode">What's New</div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition lightMode">A new post can refer to a variety of content, including short piece of content or message published on a platform.</div>
 							</div>							
 						</div>	
 						<!--What is new feature controller-->
@@ -66,8 +66,8 @@
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/Pin-White.png')"></div>
 							<div class="mainmechaCon_RoClass featuresTextWrap">
-								<div class="mainmechaCon_RoClass featuresTextTitle darkMode">Pinned Posts</div>
-								<div class="mainmechaCon_RoClass featuresTextDefinition darkMode">Highlighted important announcements, promotions, or other content.</div>
+								<div class="mainmechaCon_RoClass featuresTextTitle lightMode">Pinned Posts</div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition lightMode">Highlighted important announcements, promotions, or other content.</div>
 							</div>							
 						</div>	
 						<!--Pinned Post feature controller-->
@@ -77,8 +77,8 @@
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/Committees-White.png')"></div>
 							<div class="mainmechaCon_RoClass featuresTextWrap">
-								<div class="mainmechaCon_RoClass featuresTextTitle darkMode">Committees</div>
-								<div class="mainmechaCon_RoClass featuresTextDefinition darkMode">COMING SOON!</div>
+								<div class="mainmechaCon_RoClass featuresTextTitle lightMode">Committees</div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition lightMode">COMING SOON!</div>
 							</div>							
 						</div>	
 						<!--Committees feature controller-->
@@ -88,8 +88,8 @@
 						<div class="mainmechaCon_RoClass featuresControls">							
 							<div class="mainmechaCon_RoClass featuresIcon" style="--featureIconSrc:url('../../src/searchIcon white.png')"></div>
 							<div class="mainmechaCon_RoClass featuresTextWrap">
-								<div class="mainmechaCon_RoClass featuresTextTitle darkMode"></div>
-								<div class="mainmechaCon_RoClass featuresTextDefinition darkMode">Search Events, What is new, Pinned Post, Committees!</div>
+								<div class="mainmechaCon_RoClass featuresTextTitle lightMode"></div>
+								<div class="mainmechaCon_RoClass featuresTextDefinition lightMode">Search Events, What is new, Pinned Post, Committees!</div>
 							</div>							
 						</div>	
 						<!--Search feature controller-->
@@ -102,37 +102,37 @@
 						<!--Input Text and Date Range-->
 						<div class="mainmechaCon_RoClass" id="searchInputsWrap">							
 							<!--Input Text Search-->
-							<input type="text" class="searchInput_RoClass darkMode" id="searchContentInput" placeholder="Search Content" style="--inputSearchIcon: url('./../../src/searchIcon.png')"/>
+							<input type="text" class="searchInput_RoClass lightMode" id="searchContentInput" placeholder="Search Content" style="--inputSearchIcon: url('./../../src/searchIcon.png')"/>
 							<!--Input Text Search-->
 
 							<!--Date Range Content-->
 							<div class="dateRangeWrap_RoClass">
 								<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
 									<div class="dateRangeDetails_RoClass">
-										<div class="dateRangeIcon_RoClass dateRangeIconDarkMode"></div>
-										<div class="dateRangeText_RoClass darkMode"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
+										<div class="dateRangeIcon_RoClass dateRangeIconLightMode"></div>
+										<div class="dateRangeText_RoClass lightMode"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
 									</div>
-									<div class="dateRangeTooltipArrow_RoClass darkMode"></div>					
+									<div class="dateRangeTooltipArrow_RoClass lightMode"></div>					
 								</div>				
 								<div class="dateRangeCalLiteWrap_RoClass">
 									<!--Date Range Content From-->
-									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass calLite_BgColor_DarkMode" id="contentDateRangeFrom">
+									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass calLite_BgColor_LightMode" id="contentDateRangeFrom">
 										<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 										<div class="calLiteHead_RoClass">
 											<div class="calLiteMonthHead_RoClass">
 												<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
-												<div class="calLiteButton_RoClass calLiteButton_Left_DarkMode" onclick="changeCalLiteMonth('minus', 'contentDateRangeFrom')"></div>
-												<div class="calLiteMonthText_RoClass calLiteHeadText_Color_DarkMode"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass calLiteButton_Right_DarkMode" onclick="changeCalLiteMonth('add', 'contentDateRangeFrom')"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteMonth('minus', 'contentDateRangeFrom')"></div>
+												<div class="calLiteMonthText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteMonth('add', 'contentDateRangeFrom')"></div>
 											</div>
 											<div class="calLiteYearHead_RoClass">
 												<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
-												<div class="calLiteButton_RoClass calLiteButton_Left_DarkMode" onclick="changeCalLiteYear('minus', 'contentDateRangeFrom')"></div>
-												<div class="calLiteYearText_RoClass calLiteHeadText_Color_DarkMode"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass calLiteButton_Right_DarkMode" onclick="changeCalLiteYear('add', 'contentDateRangeFrom')"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteYear('minus', 'contentDateRangeFrom')"></div>
+												<div class="calLiteYearText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteYear('add', 'contentDateRangeFrom')"></div>
 											</div>						
 										</div>
-										<div class="calLiteDaysTxt_RoClass calLiteBodyTxts_Color_DarkMode">
+										<div class="calLiteDaysTxt_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>Sun</div>
 											<div>Mon</div>
 											<div>Tue</div>
@@ -141,7 +141,7 @@
 											<div>Fri</div>
 											<div>Sat</div>
 										</div>
-										<div class="calLiteDaysIndex_RoClass calLiteBodyTxts_Color_DarkMode">
+										<div class="calLiteDaysIndex_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>
 												<!--Print Here-->
 											</div>
@@ -168,23 +168,23 @@
 									<!--Date Range Content From-->
 
 									<!--Date Range Content To-->
-									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass calLite_BgColor_DarkMode" id="contentDateRangeTo">
+									<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass calLite_BgColor_LightMode" id="contentDateRangeTo">
 										<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 										<div class="calLiteHead_RoClass">
 											<div class="calLiteMonthHead_RoClass">
 												<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
-												<div class="calLiteButton_RoClass calLiteButton_Left_DarkMode" onclick="changeCalLiteMonth('minus', 'contentDateRangeTo')"></div>
-												<div class="calLiteMonthText_RoClass calLiteHeadText_Color_DarkMode"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass calLiteButton_Right_DarkMode" onclick="changeCalLiteMonth('add', 'contentDateRangeTo')"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteMonth('minus', 'contentDateRangeTo')"></div>
+												<div class="calLiteMonthText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteMonth('add', 'contentDateRangeTo')"></div>
 											</div>
 											<div class="calLiteYearHead_RoClass">
 												<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
-												<div class="calLiteButton_RoClass calLiteButton_Left_DarkMode" onclick="changeCalLiteYear('minus', 'contentDateRangeTo')"></div>
-												<div class="calLiteYearText_RoClass calLiteHeadText_Color_DarkMode"><!--Print Here--></div>
-												<div class="calLiteButton_RoClass calLiteButton_Right_DarkMode" onclick="changeCalLiteYear('add', 'contentDateRangeTo')"></div>
+												<div class="calLiteButton_RoClass calLiteButton_Left_LightMode" onclick="changeCalLiteYear('minus', 'contentDateRangeTo')"></div>
+												<div class="calLiteYearText_RoClass calLiteHeadText_Color_LightMode"><!--Print Here--></div>
+												<div class="calLiteButton_RoClass calLiteButton_Right_LightMode" onclick="changeCalLiteYear('add', 'contentDateRangeTo')"></div>
 											</div>									
 										</div>
-										<div class="calLiteDaysTxt_RoClass calLiteBodyTxts_Color_DarkMode">
+										<div class="calLiteDaysTxt_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>Sun</div>
 											<div>Mon</div>
 											<div>Tue</div>
@@ -193,7 +193,7 @@
 											<div>Fri</div>
 											<div>Sat</div>
 										</div>
-										<div class="calLiteDaysIndex_RoClass calLiteBodyTxts_Color_DarkMode">
+										<div class="calLiteDaysIndex_RoClass calLiteBodyTxts_Color_LightMode">
 											<div>
 												<!--Print Here-->
 											</div>
@@ -222,11 +222,12 @@
 							</div>
 							<!--Date Range Content-->
 
-							<!--Search Smart Btn-->
+							<!--Search Smart Btn
+
 							<div class="mainmechaCon_RoClass" id="smartSearchBtnWrap" style="border: 2pxs solid yellow;">
 								<button class="normButton_RoClass" id="smartSearchBtn">Done</button>
 							</div>							
-							<!--Search Smart Btn-->
+							Search Smart Btn-->
 						</div>
 						<!--Input Text and Date Range-->
 
@@ -255,29 +256,29 @@
 						<!--Filter Features-->
 
 						<!--Smart Search Area Button-->
-						<button class="normButton_RoClass">Button Text</button>						
+						<!--<button class="normButton_RoClass">Button Text</button>-->
 					</div>
 					<!--Search Area-->
 
 
 					<!--Page Features-->
-					<div class="mainmechaCon_RoClass scrollWebkit darkMode featuresWrap_Hide" id="featuresWrap">						
+					<div class="mainmechaCon_RoClass scrollWebkit lightMode featuresWrap_Hide" id="featuresWrap">						
 						<!--Events and Activities-->
 						<div class="mainmechaCon_RoClass perFeature eventsSection_Hide" id="eventsSection">
 							<!--Close button for smart only-->
 							<div class="mainmechaCon_RoClass smartFeatureCloseBtnWrap">
-								<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_DarkMode"><!--Bg Only--></div>
+								<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_LightMode"><!--Bg Only--></div>
 							</div>						
 							<!--Close button for smart only-->
 
-							<div class="mainmechaCon_RoClass sectionsLabel darkMode">Events and Activities</div>
+							<div class="mainmechaCon_RoClass sectionsLabel lightMode">Events and Activities</div>
 
-							<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit darkMode" id="eventsWrap">
+							<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit lightMode" id="eventsWrap">
 								<!--Per event-->
-								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
+								<div class="mainmechaCon_RoClass events lightMode">
+									<img src="../../src/MySampleDp.png" class="eventsDp lightMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
-										<div class="mainmechaCon_RoClass eventsTitle darkMode">ISO Accreditation</div>
+										<div class="mainmechaCon_RoClass eventsTitle lightMode">ISO Accreditation</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 4, 2024</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">Motorpool building</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">By HEPO Unit</div>
@@ -288,10 +289,10 @@
 								<!--Per event-->
 
 								<!--Per event-->
-								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
+								<div class="mainmechaCon_RoClass events lightMode">
+									<img src="../../src/MySampleDp.png" class="eventsDp lightMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
-										<div class="mainmechaCon_RoClass eventsTitle darkMode">Coffee Vendor is back!</div>
+										<div class="mainmechaCon_RoClass eventsTitle lightMode">Coffee Vendor is back!</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 5, 2024</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">Annex building</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">By HEPO Unit</div>
@@ -302,10 +303,10 @@
 								<!--Per event-->
 
 								<!--Per event-->
-								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
+								<div class="mainmechaCon_RoClass events lightMode">
+									<img src="../../src/MySampleDp.png" class="eventsDp lightMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
-										<div class="mainmechaCon_RoClass eventsTitle darkMode">Coffee Vendor is back!</div>
+										<div class="mainmechaCon_RoClass eventsTitle lightMode">Coffee Vendor is back!</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 5, 2024</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">Annex building</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">By HEPO Unit</div>
@@ -316,10 +317,10 @@
 								<!--Per event-->
 
 								<!--Per event-->
-								<div class="mainmechaCon_RoClass events darkMode">
-									<img src="../../src/MySampleDp.png" class="eventsDp darkMode"/>
+								<div class="mainmechaCon_RoClass events lightMode">
+									<img src="../../src/MySampleDp.png" class="eventsDp lightMode"/>
 									<div class="mainmechaCon_RoClass eventsDetailsWrap">
-										<div class="mainmechaCon_RoClass eventsTitle darkMode">Coffee Vendor is back!</div>
+										<div class="mainmechaCon_RoClass eventsTitle lightMode">Coffee Vendor is back!</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">November 5, 2024</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">Annex building</div>
 										<div class="mainmechaCon_RoClass eventsDetailsTxts">By HEPO Unit</div>
@@ -337,22 +338,22 @@
 						<div class="mainmechaCon_RoClass perFeature whatIsNewSection_Hide" id="whatIsNewSection">
 							<!--Close button for smart only-->
 							<div class="mainmechaCon_RoClass smartFeatureCloseBtnWrap">
-								<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_DarkMode"><!--Bg Only--></div>
+								<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_LightMode"><!--Bg Only--></div>
 							</div>						
 							<!--Close button for smart only-->
 
-							<div class="mainmechaCon_RoClass sectionsLabel darkMode">What's New</div>
+							<div class="mainmechaCon_RoClass sectionsLabel lightMode">What's New</div>
 							
 							<!--Posted Section-->
-							<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit darkMode" id="postsWrap">
+							<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit lightMode" id="postsWrap">
 								<!--Per Post-->
-								<div class="mainmechaCon_RoClass posts darkMode">
+								<div class="mainmechaCon_RoClass posts lightMode">
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
+											<img class="postsDp lightMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
-												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsEmpName lightMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
@@ -364,10 +365,10 @@
 
 									<!--Post Body-->
 									<div class="mainmechaCon_RoClass postsBody">
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-										<div class="mainmechaCon_RoClass postsTitle darkMode">Downfall of government salary</div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle lightMode">Downfall of government salary</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconDarkMode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -376,13 +377,13 @@
 								<!--Per Post-->
 
 								<!--Per Post-->
-								<div class="mainmechaCon_RoClass posts darkMode">
+								<div class="mainmechaCon_RoClass posts lightMode">
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
+											<img class="postsDp lightMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
-												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsEmpName lightMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
@@ -394,11 +395,11 @@
 
 									<!--Post Body-->
 									<div class="mainmechaCon_RoClass postsBody">
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode"><img src="./../../src/rally post.jpg"/></div>
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
-										<div class="mainmechaCon_RoClass postsTitle darkMode">Salary increase and corruption</div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode"><img src="./../../src/rally post.jpg"/></div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle lightMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconDarkMode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -407,13 +408,13 @@
 								<!--Per Post-->
 
 								<!--Per Post-->
-								<div class="mainmechaCon_RoClass posts darkMode">
+								<div class="mainmechaCon_RoClass posts lightMode">
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
+											<img class="postsDp lightMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
-												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsEmpName lightMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
@@ -425,11 +426,11 @@
 
 									<!--Post Body-->
 									<div class="mainmechaCon_RoClass postsBody">
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode"><img src="./../../src/pikachu.jpg"/></div>
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
-										<div class="mainmechaCon_RoClass postsTitle darkMode">Salary increase and corruption</div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode"><img src="./../../src/pikachu.jpg"/></div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle lightMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconDarkMode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -438,13 +439,13 @@
 								<!--Per Post-->	
 
 								<!--Per Post-->
-								<div class="mainmechaCon_RoClass posts darkMode">
+								<div class="mainmechaCon_RoClass posts lightMode">
 									<!--Post Header-->
 									<div class="mainmechaCon_RoClass postsHeader">
 										<div class="mainmechaCon_RoClass postsHeaderDetailsWrap">
-											<img class="postsDp darkMode" src="../../src/MySampleDp.png"/>
+											<img class="postsDp lightMode" src="../../src/MySampleDp.png"/>
 											<div class="mainmechaCon_RoClass postsHeaderDetails">
-												<div class="mainmechaCon_RoClass postsEmpName darkMode">Juan Dela Cruz</div>
+												<div class="mainmechaCon_RoClass postsEmpName lightMode">Juan Dela Cruz</div>
 												<div class="mainmechaCon_RoClass postsCatNTimeWrap">
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Category Here</div>
 													<div class="mainmechaCon_RoClass postsCatNTimeTxt">Just Now</div>
@@ -456,11 +457,11 @@
 
 									<!--Post Body-->
 									<div class="mainmechaCon_RoClass postsBody">
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode"><video src="./../../src/[BIDA] 120s DIGITAL HD.mp4" controls muted></video></div>
-										<div class="mainmechaCon_RoClass postsBodyDetails darkMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
-										<div class="mainmechaCon_RoClass postsTitle darkMode">Salary increase and corruption</div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode"><video src="./../../src/[BIDA] 120s DIGITAL HD.mp4" controls muted></video></div>
+										<div class="mainmechaCon_RoClass postsBodyDetails lightMode">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum</div>
+										<div class="mainmechaCon_RoClass postsTitle lightMode">Salary increase and corruption</div>
 										<div class="mainmechaCon_RoClass postsSeenDetailsWrap">
-											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconDarkMode"></div>
+											<div class="mainmechaCon_RoClass postsSeenIcon postsSeenIconLightMode"></div>
 											<div class="mainmechaCon_RoClass postsSeenTxts">100</div>
 										</div>
 									</div>
@@ -479,16 +480,16 @@
 							<div class="mainmechaCon_RoClass pinnedPostSection_Hide" id="pinnedPostSection">
 								<!--Close button for smart only-->
 								<div class="mainmechaCon_RoClass smartFeatureCloseBtnWrap">
-									<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_DarkMode"><!--Bg Only--></div>
+									<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_LightMode"><!--Bg Only--></div>
 								</div>						
 								<!--Close button for smart only-->
 
-								<div class="mainmechaCon_RoClass sectionsLabel darkMode">Pinned Posts</div>
+								<div class="mainmechaCon_RoClass sectionsLabel lightMode">Pinned Posts</div>
 
-								<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit darkMode" id="pinnedPostsWrap">
+								<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit lightMode" id="pinnedPostsWrap">
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -499,8 +500,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -511,8 +512,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -523,8 +524,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -535,8 +536,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -547,8 +548,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -559,8 +560,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -571,8 +572,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -583,8 +584,8 @@
 									<!--Per Pinned Post-->
 
 									<!--Per Pinned Post-->
-									<div class="mainmechaCon_RoClass pinnedPost darkMode">
-										<img class="pinnedPostDp darkMode" src="../../src/MySampleDp.png"/>
+									<div class="mainmechaCon_RoClass pinnedPost lightMode">
+										<img class="pinnedPostDp lightMode" src="../../src/MySampleDp.png"/>
 										<div class="mainmechaCon_RoClass pinnedPostDetailsWrap">
 											<div class="mainmechaCon_RoClass pinnedPostTitle">Pinned Post Title</div>
 											<div class="mainmechaCon_RoClass pinnedPostTxts">Category 1</div>
@@ -601,16 +602,16 @@
 							<div class="mainmechaCon_RoClass committeesSection_Hide" id="committeesSection">
 								<!--Close button for smart only-->
 								<div class="mainmechaCon_RoClass smartFeatureCloseBtnWrap">
-									<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_DarkMode"><!--Bg Only--></div>
+									<div class="mainmechaCon_RoClass smartFeatureCloseBtn smartFeatureCloseBtn_LightMode"><!--Bg Only--></div>
 								</div>						
 								<!--Close button for smart only-->
 
-								<div class="mainmechaCon_RoClass sectionsLabel darkMode">Committees</div>
+								<div class="mainmechaCon_RoClass sectionsLabel lightMode">Committees</div>
 
-								<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit darkMode" id="committeesWrap">
+								<div class="mainmechaCon_RoClass sectionsWrap scrollWebkit lightMode" id="committeesWrap">
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/ISO Logo.png"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -622,8 +623,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/Arta Logo.jpg"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -635,8 +636,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/ISO Logo.png"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -648,8 +649,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/Arta Logo.jpg"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -661,8 +662,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/ISO Logo.png"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -674,8 +675,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/Arta Logo.jpg"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -687,8 +688,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/ISO Logo.png"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -700,8 +701,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/Arta Logo.jpg"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -713,8 +714,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/ISO Logo.png"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/ISO Logo.png"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Internal Quality Audit Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -726,8 +727,8 @@
 									<!--Per Committee Post-->
 
 									<!--Per Committee Post-->
-									<div class="mainmechaCon_RoClass committee darkMode">
-										<img class="committeeDp darkMode" src="../../src/Arta Logo.jpg"/>
+									<div class="mainmechaCon_RoClass committee lightMode">
+										<img class="committeeDp lightMode" src="../../src/Arta Logo.jpg"/>
 										<div class="mainmechaCon_RoClass committeeDetailsWrap">
 											<div class="mainmechaCon_RoClass committeeTitle">Client Satisfaction Committee</div>
 											<div class="mainmechaCon_RoClass committeeDetails">
@@ -749,8 +750,8 @@
 
 
 				<!--Right Side or Chat Area-->
-				<div class="mainmechaCon_RoClass scrollWebkit darkMode" id="chatContentWrap" style="display: none;">
-					<input type="text" class="searchInput_RoClass darkMode" id="searchChatInput" placeholder="Search Personnel" style="--inputSearchIcon: url('./../../src/searchIcon.png')"/>
+				<div class="mainmechaCon_RoClass scrollWebkit lightMode" id="chatContentWrap">
+					<input type="text" class="searchInput_RoClass lightMode" id="searchChatInput" placeholder="Search Personnel" style="--inputSearchIcon: url('./../../src/searchIcon.png')"/>
 
 					<!--Per Chat users-->
 					<div class="mainmechaCon_RoClass chatUser">

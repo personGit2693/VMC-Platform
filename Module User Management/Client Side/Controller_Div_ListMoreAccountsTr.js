@@ -1,6 +1,6 @@
 /*Import*/
-import {assignStartRowIndex, displayRowNum, startRowIndex, sortAccountScending, sortAccountBy, searchAccount, assignElemReference_GetAccounts} from "./Values_UserManagement.js";
-import {submitGetAccounts} from "./Submit_GetAccounts.js";
+import {pageNumber, assignStartRowIndex, displayRowNum, startRowIndex, sortAccountScending, sortAccountBy, searchAccount, assignElemReference_GetAccounts} from "./Values_UserManagement.js";
+import {blockRequest, submitGetAccounts} from "./Submit_GetAccounts.js";
 import outputAccountsDetailsMoreTr from "./Output_AccountsDetailsMoreTr.js";
 import outputAccountsDetailsMoreLoader from "./Output_AccountsDetailsMoreLoader.js";
 /*Import*/
@@ -17,8 +17,8 @@ function controller_Div_ListMoreAccountsTr(elem){
 
 			assignStartRowIndex(true);
 
-			const dataObj = {displayRowNum, startRowIndex, sortAccountScending, sortAccountBy, searchAccount};
-			const controllersObj = {outputAccountsDetailsMoreTr};
+			const dataObj = {pageNumber, displayRowNum, startRowIndex, sortAccountScending, sortAccountBy, searchAccount};
+			const controllersObj = {outputAccountsDetailsMoreTr, assignStartRowIndex};
 			const loaderObj = {outputLoader: outputAccountsDetailsMoreLoader, id:"moreAccountsLoader"};				
 
 			submitGetAccounts(controller_Div_ListMoreAccountsTr, dataObj, controllersObj, loaderObj);

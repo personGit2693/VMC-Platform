@@ -1,4 +1,5 @@
 /*Import*/
+import {accountsTableWrap} from "./Elements_Page_ManageUser.js";
 import {elemReference_GetAccounts} from "./Values_UserManagement.js";
 import {accounts, requestGetAccounts} from "./Request_GetAccounts.js";
 /*Import*/
@@ -26,8 +27,16 @@ function submitGetAccounts(controller, dataObj, controllersObj, loaderObj){
 		.then(requestPromise => {
 			if(requestPromise === true){
 				
+				if(elemReference_GetAccounts === accountsTableWrap && dataObj.pageNumber > 1 && accounts.length == 0){
+					controllersObj.assignStartRowIndex(false);
+				}
+
 				if("outputAccountsDetailsTr" in controllersObj){
 					controllersObj.outputAccountsDetailsTr();
+				}
+
+				if("outputAccountsDetailsMoreTr" in controllersObj){
+					controllersObj.outputAccountsDetailsMoreTr();
 				}
 
 				/*Remove loader*/				
