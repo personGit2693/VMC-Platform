@@ -41,7 +41,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<span class="generalNavMenuText_RoClass">Manage User Accounts</span>
 				</a>
 
-				<a href="" class="mainNavMenu_RoClass lightMode">					
+				<a href="../../Module Settings/Pages/settings.php" class="mainNavMenu_RoClass lightMode">					
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/gear_black.png'); --activeMainNavMenuIcon:url('../../src/gear_black.png')"></div>
 					<span class="generalNavMenuText_RoClass">Settings</span>
 				</a>
@@ -61,7 +61,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<div class="userLogin_RoClass" id="userLoginDetailsWrap">
 						<!--Component-->
 						<div class="userLoginIconWrap_RoClass"><img src="../../src/actionofficericon.png"/></div>
-						<div class="userLoginDetails_RoClass">Juan Dela Cruz</div>
+						<div class="userLoginDetails_RoClass">Rogelio Cruz</div>
 					</div>
 				</div>
 			</div>
@@ -146,6 +146,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!---Controllers-->
 	<script type="module" src="../Client Side/Controller_Div_ListMoreAccountsTr.js"></script>
 	<script type="module" src="../Client Side/Controller_InputText_SearchAccounts.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_ResetPassword.js"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

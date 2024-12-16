@@ -44,7 +44,7 @@
 				<!--With Sub Menus-->
 				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">			
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/sccc icon green.png'); --activeMainNavMenuIcon:url('../../src/sccc icon green.png')"></div>
-					<span class="generalNavMenuText_RoClass">APPS</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png"/></div>
+					<span class="generalNavMenuText_RoClass">VMC APPS</span><div class="chevronIconWrap_RoClass"><img src="../../src/Chevron Right_hover.png"/></div>
 				</div>
 
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
@@ -129,7 +129,7 @@
 
 						<!--Profile Picture and Change Button-->
 						<div id="picAndbuttonwrap_id">
-							<div id="imgWrapper_id"><label for="fileInput"><img id="profilePic-id" src="../../src/ernesto.webp"></label></div>
+							<div id="imgWrapper_id"><label for="fileInput"><img id="profilePic-id" src="../../src/actionofficericon.png"></label></div>
 							<div id="changeProfilePicBtn_id">
 								<!--
 								<button class="normButton_RoClass" type="button">
@@ -144,7 +144,7 @@
 
 						<div class="nameAndTitle-Wrap">
 							<div class="nameEditWrap_class">
-								<div id="nameDisplay-id" contenteditable="false">Ernesto Dela Cruz</div>
+								<div id="nameDisplay-id" contenteditable="false">Rogelio Cruz Jr</div>
 								<!--<div id="changeNameimgWrapper_id"><img id="changeNamePic-id" src="../../src/edit icon pen.png"></div>-->
 							</div>
 						</div>

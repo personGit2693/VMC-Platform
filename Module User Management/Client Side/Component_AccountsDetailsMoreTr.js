@@ -28,7 +28,7 @@ function AccountsDetailsMoreTr(){
 				<td data-label="Employee Number"><img src="${accountPicture}"/>${accountId}</td>	
 				<td data-label="Employee Name">${accountFullname}</td>
 				<td data-label="Account Status">${accountStatus}</td>	
-				<td data-label="Account Status">${accountSection}</td>	
+				<td data-label="Account Section">${accountSection}</td>	
 				<td data-label="Date Created">${accountCreated}</td>
 				<td data-label="Actions">
 					<div class="cusDroplistBtn_RoClass">
@@ -37,7 +37,9 @@ function AccountsDetailsMoreTr(){
 							<div><img src="../../src/Chevron Down.png"></div>
 						</div>					
 						<div class="droplistWrap_RoClass">
-							<button class="listBtn_RoClass">Reset Password</button>							
+							<button class="listBtn_RoClass" value="${accountId}" onclick="controller_Btn_ResetPassword(this)">Reset Password</button>	
+							<button class="listBtn_RoClass">Assign as Admin</button>
+							<button class="listBtn_RoClass">Edit</button>						
 						</div>
 					</div>
 				</td>

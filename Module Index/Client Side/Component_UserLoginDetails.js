@@ -7,7 +7,7 @@ import {globalKey} from "../../Global Client Side/Values_Global.js";
 function UserLoginDetails(){
 
 	const accountPicture = `./src/${globalKey.account_picture}`;
-	const accountFullname = `${globalKey.account_fname} ${globalKey.account_mname} `;
+	const accountFullname = `${globalKey.account_fname} ${globalKey.account_lname} `;
 
 	let userLoginDetails = `
 		<div class="userLoginIconWrap_RoClass"><img src="./src/actionofficericon.png"/></div>
