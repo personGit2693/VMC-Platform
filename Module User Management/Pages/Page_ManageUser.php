@@ -59,9 +59,10 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 				<div class="projTitleAndUserLogin_RoClass">
 					<div class="projTitleTxt_RoClass">VMC Web Applications</div>
 					<div class="userLogin_RoClass" id="userLoginDetailsWrap">
-						<!--Component-->
+						<!--Component
 						<div class="userLoginIconWrap_RoClass"><img src="../../src/actionofficericon.png"/></div>
 						<div class="userLoginDetails_RoClass">Rogelio Cruz</div>
+						-->
 					</div>
 				</div>
 			</div>
