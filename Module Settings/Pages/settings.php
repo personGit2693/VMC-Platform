@@ -190,7 +190,7 @@
 							<div>
 								<div id="changeCredentials_id"><button class="normButton_RoClass">Update Password</button></div>
 							</div>
-						<!--Reset Button-->
+							<!--Reset Button-->
 						</div>
 					</div>
 

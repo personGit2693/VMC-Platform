@@ -7082,9 +7082,11 @@ table tbody tr td img {
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
+/*Root*/
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
 /*General*/
-/*List of web applications*/
-/*List of web applications*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -7096,175 +7098,77 @@ table tbody tr td img {
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  /*List of web applications*/
-  --perWebAppIcon_Size: clamp(35px, 2vw, 70px);
-  /*List of web applications*/
-  /*Greetings Area*/
-  --greetingUserImage_Size: clamp(40px, 5vw, 50px);
-  --greetingWebApps_Size: clamp(225px, 15vw, 250px);
-  /*Greetings Area*/ }
+  --normBtnWidth: auto;
+  --normBtnPadding: 10px;
+  --normBtnBorderWidth: 1px;
+  --normBtnBorderColor: #39AB5B;
+  --normBtnRadius: 7px;
+  --normBtnFWeight: bold;
+  --normBtnFSize: clamp(12px, 2vw, 16px);
+  --normBtnBgColor: #39AB5B;
+  --normBtnFcolor: #ffffff;
+  --normBtnHovActFColor: #ffffff;
+  --normBtnHovActBgColor: #3D8554; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
-/*Greetings Area*/
-#greetingSection {
-  display: flex;
-  overflow: hidden;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--greetingSection_BgColor); }
-
-#greetingWrap {
-  display: flex;
-  overflow: hidden;
-  flex-flow: row nowrap;
-  align-items: center;
-  margin-left: 14px; }
-
-#greetingUserImage {
-  display: inline-block;
-  width: var(--greetingUserImage_Size);
-  height: var(--greetingUserImage_Size);
-  object-fit: contain;
-  overflow: hidden;
-  border-radius: 50%;
-  flex-shrink: 0; }
-
-#greetingUserDetailsWrap {
+#profilePic-Wrap {
   width: 100%;
-  overflow: hidden; }
-
-#greetingUserFName, #greetingUserEmpNo {
-  font-family: "binanceFont";
-  font-size: clamp(14px, 1vw, 16px);
-  padding: 5px; }
-
-#greetingUserFName {
-  color: var(--mainTextColor);
-  font-weight: bold; }
-
-#greetingWebApps {
-  width: var(--greetingWebApps_Size);
-  height: var(--greetingWebApps_Size);
-  background: transparent url("../../src/webapps.png") center no-repeat;
-  background-size: contain; }
-
-/*Greetings Area*/
-/*Banner*/
-#bannerWrap {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  background: transparent url("../../src/bg2.png") center no-repeat;
-  background-size: cover;
-  height: auto; }
-
-#bannerDetailsWrap {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  overflow: hidden;
-  padding: 20px;
-  background-color: rgba(22, 27, 34, 0.5);
-  height: 100%; }
-
-#bannerDetailsMainTxt, #bannerDetailsSubTxt {
-  text-align: center;
-  padding: 7px;
-  font-family: "binanceFont";
-  color: #ffffff; }
-
-#bannerDetailsMainTxt {
-  font-weight: bold;
-  font-size: clamp(16px, 5vw, 40px); }
-
-#bannerDetailsSubTxt {
-  font-size: clamp(12px, 2vw, 18px); }
-
-#bannerBtnGoToApp {
-  font-size: clamp(12px, 2vw, 18px);
-  align-self: center;
-  color: #ffffff;
-  background-color: #39AB5B;
-  text-decoration: none;
-  margin-top: 12px;
-  border-radius: 8px; }
-
-#bannerBtnGoToApp:hover {
-  background-color: #26723C; }
-
-/*Banner*/
-/*List of web applications*/
-#webAppListSection {
-  overflow: hidden;
-  background-color: var(--webAppListSection_BgColor);
-  margin-bottom: clamp(10px, 2vw, 14px); }
-
-.sectionsLabel {
-  font-size: clamp(12px, 2vw, 18px); }
-
-.searchInput_RoClass {
-  display: inline-block !important;
-  --inputSearchWidth: clamp(150px, 20vw, 200px);
-  --inputSearchTopPadding: 7px;
-  --inputSearchRightPadding: 7px;
-  --inputSearchBottomPadding: 7px;
-  --inputSearchLeftPadding: 28px;
-  --inputSearchBorderColor: #97A0A8;
-  --inputSearchBorderRadius: 4px;
-  --inputSearchIconHori: 4px;
-  --inputSearchIconSize: 25px;
-  --inputSearchFSize: clamp(10px, 2vw, 14px); }
-
-#webAppList {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-  padding: 5px; }
-
-.perWebApp {
-  display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
-  width: 170px;
-  cursor: pointer;
-  margin: 0px 20px 20px 20px;
-  box-shadow: none;
-  transition: box-shadow 0.2s; }
+  height: 10%;
+  margin-bottom: 10px;
+  border: 1px solid yellow; }
 
-.perWebApp:hover {
-  box-shadow: 0px 0px 15px #39AB5B; }
+#profilePic-id {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid yellow; }
 
-.perWebAppIcon_LightMode {
-  background-image: var(--perWebAppIcon_BgImage_LightMode);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: var(--perWebAppIcon_Size);
-  height: var(--perWebAppIcon_Size); }
+#picAndbuttonwrap_id {
+  max-width: 180px;
+  margin: auto;
+  border: 1px solid black; }
 
-.perWebAppIcon_DarkMode {
-  background-image: var(--perWebAppIcon_BgImage_DarkMode);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: var(--perWebAppIcon_Size);
-  height: var(--perWebAppIcon_Size); }
+#profilePic-id {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid white; }
 
-.perWebAppName {
-  overflow: hidden;
-  font-family: "binanceFont";
-  font-size: clamp(12px, 2vw, 18px);
-  color: var(--perWebAppName_FColor);
-  text-align: center;
-  padding: 5px; }
+#changeProfilePicBtn_id {
+  width: 100%;
+  display: flex;
+  height: 10%;
+  justify-content: center; }
 
-/*List of web applications*/
+#changeProfilePicBtn_id label {
+  font-family: "binanceFont"; }
+
+.changeCredentialsWrap_class {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 4px rgba(9, 107, 108, 0.7);
+  margin-top: 10px; }
+
+#SettingsTitle_id {
+  color: black;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: "binanceFont"; }
+
+.passwordAndCheckPasswordWrap_Class {
+  margin: 15px; }
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -7284,4 +7188,4 @@ table tbody tr td img {
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=Page_AccountSettings.css.map */

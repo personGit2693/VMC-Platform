@@ -83,7 +83,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 
 
 			<!--Page Manage User Main Feature-->
-			<div class="mainmechaCon_RoClass" id="manageUserFeatureWrap">
+			<div class="mainmechaCon_RoClass featureWrap">
 				<div class="mainmechaCon_RoClass searchOnTableLabel">Search Accounts</div>
 				<div class="mainmechaCon_RoClass searchOnTableInputWrap">
 					<input type="text" class="searchInput_RoClass lightMode" onkeyup="controller_InputText_SearchAccounts(this)" placeholder="Type Account Details" style="--inputSearchIcon: url('../../src/searchIcon.png')">

@@ -37,9 +37,7 @@ function AccountsDetailsTr(){
 							<div><img src="../../src/Chevron Down.png"></div>
 						</div>					
 						<div class="droplistWrap_RoClass">
-							<button class="listBtn_RoClass" value="${accountId}" onclick="controller_Btn_ResetPassword(this)">Reset Password</button>							
-							<button class="listBtn_RoClass">Assign as Admin</button>
-							<button class="listBtn_RoClass">Edit</button>							
+							<button class="listBtn_RoClass" value="${accountId}" onclick="controller_Btn_ResetPassword(this)">Reset Password</button>
 						</div>
 					</div>
 				</td>

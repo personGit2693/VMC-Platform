@@ -10,7 +10,7 @@ function UserLoginDetails(){
 	const accountFullname = `${globalKey.account_fname} ${globalKey.account_lname} `;
 
 	let userLoginDetails = `
-		<div class="userLoginIconWrap_RoClass"><img src="./src/actionofficericon.png"/></div>
+		<div class="userLoginIconWrap_RoClass"><img src="${accountPicture}"/></div>
 		<div class="userLoginDetails_RoClass">${accountFullname}</div>
 	`;	
 

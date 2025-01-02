@@ -3298,6 +3298,14 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   color: var(--navLogo_FColor); }
 
 /*Navigation Logo*/
+/*Page Feature Wrapper*/
+.featureWrap {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 12px;
+  margin-top: 7px; }
+
+/*Page Feature Wrapper*/
 /*Dark Mode and light mode*/
 .darkMode {
   /**Navigation*/

@@ -2,7 +2,7 @@
 /*Import Mixins*/
 @import "../../Global Style/Rogie Rostrap Global";
 @import "../../Global Style/Rogie Global Style";
-@import "./Mixin_Page_ManageUser";
+@import "./Mixin_Page_AccountSettings";
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -11,7 +11,17 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	
+	--normBtnWidth: auto;
+	--normBtnPadding: 10px;
+	--normBtnBorderWidth: 1px;
+	--normBtnBorderColor: #39AB5B;
+	--normBtnRadius: 7px;
+	--normBtnFWeight: bold;
+	--normBtnFSize: clamp(12px, 2vw, 16px);
+	--normBtnBgColor: #39AB5B;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	--normBtnHovActBgColor: #3D8554;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -20,18 +30,74 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
-.searchInput_RoClass{	
-	--inputSearchWidth: 100%;
-	--inputSearchTopPadding: 7px;
-	--inputSearchRightPadding: 7px;
-	--inputSearchBottomPadding: 7px;
-	--inputSearchLeftPadding: 28px;
-	--inputSearchBorderColor: #97A0A8;
-	--inputSearchBorderRadius: 4px;		
-	--inputSearchIconHori: 4px;
-	--inputSearchIconSize: 25px;
-	--inputSearchFSize: clamp(10px, 2vw, 14px);
+#profilePic-Wrap{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	height:10%;
+	margin-bottom:10px;
+
+	border: 1px solid yellow;
 }
+
+#profilePic-id{
+	width:100%;
+	max-height:250px;
+	object-fit: contain;
+	border-radius: 10px;
+
+	border: 1px solid yellow;
+}
+
+#picAndbuttonwrap_id{
+	max-width: 180px;
+	margin: auto;
+	border: 1px solid black;
+}
+
+#profilePic-id{
+	width:100%;
+	max-height:250px;
+	object-fit: contain;
+	border-radius: 10px;
+	border:1px solid white;
+}
+
+#changeProfilePicBtn_id{
+	width:100%;
+	display:flex;
+	height:10%;
+	justify-content:center;
+}
+
+#changeProfilePicBtn_id label{
+	font-family: "binanceFont";
+}
+
+
+.changeCredentialsWrap_class{
+	display:flex;
+	flex-direction:column;
+	padding:10px;
+	border-radius:6px;
+	margin-bottom:20px;
+	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
+	margin-top: 10px;
+}
+
+#SettingsTitle_id{
+	color: black;
+	width:100%;
+	margin-bottom:5px;
+	font-family: "binanceFont";
+}
+
+
+.passwordAndCheckPasswordWrap_Class{
+	margin: 15px;
+}
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -43,9 +109,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	.cusDroplistBtn_RoClass{
-		@include cusDroplistBtn_Smart;		
-	}
+	
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -54,9 +118,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	.cusDroplistBtn_RoClass{
-		@include cusDroplistBtn_Smart;
-	}
+	
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -65,10 +127,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*PC*/
 @media all and (min-width:1081px){
-	.cusDroplistBtn_RoClass{
-		display: inline-block !important;
-		--droplistBtnWidth: 150px;
-	}
+	
 }
 /*PC*/
 /***********************************************************************************************************************************************************************************************************/
