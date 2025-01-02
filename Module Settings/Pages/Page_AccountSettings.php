@@ -36,12 +36,12 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<span class="generalNavMenuText_RoClass">Home</span>
 				</a>
 
-				<a href="../../Module Settings/Pages/Page_ManageUser.php" class="activeMainNavMenu_RoClass lightMode">					
+				<a href="../../Module User Management/Pages/Page_ManageUser.php" class="mainNavMenu_RoClass lightMode">					
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/user account management icon.png'); --activeMainNavMenuIcon:url('../../src/user account management icon.png')"></div>
 					<span class="generalNavMenuText_RoClass">Manage User Accounts</span>
 				</a>
 
-				<a href="" class="mainNavMenu_RoClass lightMode">					
+				<a href="" class="activeMainNavMenu_RoClass lightMode">					
 					<div class="activeMainNavMenuIconWrap_RoClass" style="--activeMainNavMenuIcon:url('../../src/gear_black.png')"></div>
 					<span class="generalNavMenuText_RoClass">Settings</span>
 				</a>
@@ -85,16 +85,12 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 			<!--Page Account Settings Main Feature-->
 			<div class="mainmechaCon_RoClass featureWrap autoReponsiveSection">
 				<!--Profile Picture and Change Button-->
-				<div id="picAndbuttonwrap_id">
-					<div id="imgWrapper_id"><label for="fileInput"><img id="profilePic-id" src="../../src/actionofficericon.png"></label></div>
-					<div id="changeProfilePicBtn_id">
-						<!--
-						<button class="normButton_RoClass" type="button">
-							Change Profile Picture 
-						</button>
-						-->
-						<label for="fileInput">Change Profile Picture</label>
-						<input type="file" id="fileInput" style="display:none;" accept="image/*" onchange="controller_InputFile_ChangeProfilePic(this)">
+				<div id="picAndbuttonwrap">
+					<div class="mainmechaCon_RoClass"><label for="fileEmpPic"><img id="profilePic-id" src="../../src/actionofficericon.png"></label></div>
+					<div class="mainmechaCon_RoClass" id="changeProfilePicBtn">						
+						<label for="fileEmpPic">Change Profile Picture</label>
+						<input type="file" id="fileEmpPic" style="display:none;" accept="image/*" onchange="controller_InputFile_ChangeProfilePic(this)">
+						<button class="normButton_RoClass" onclick="controller_Btn_SaveNewEmployeePicture()">Save Picture</button>
 					</div>
 				</div>
 				<!--Profile Picture and Change Button-->
@@ -171,7 +167,8 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!---Dependecies-->
 
 	<!---Controllers-->
-	<!--<script type="module" src="../Client Side/Controller_Div_ListMoreAccountsTr.js"></script>-->	
+	<script type="module" src="../Client Side/Controller_InputFile_ChangeProfilePic.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_SaveNewEmployeePicture.js"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

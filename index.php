@@ -41,7 +41,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<span class="generalNavMenuText_RoClass">Manage User Accounts</span>
 				</a>
 
-				<a href="./Module Settings/Pages/settings.php" class="mainNavMenu_RoClass lightMode">					
+				<a href="./Module Settings/Pages/Page_AccountSettings.php" class="mainNavMenu_RoClass lightMode">					
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/gear_black.png'); --activeMainNavMenuIcon:url('../../src/gear_black.png')"></div>
 					<span class="generalNavMenuText_RoClass">Settings</span>
 				</a>

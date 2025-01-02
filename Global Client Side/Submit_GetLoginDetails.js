@@ -44,6 +44,10 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 					if("outputGreetingUserDetails" in controllersObj){
 						controllersObj.outputGreetingUserDetails();
 					}
+
+					if("controller_Docs_DisplayCurrentPicture" in controllersObj){
+						controllersObj.controller_Docs_DisplayCurrentPicture();
+					}
 				}else{
 					window.location.href = logoutPath;
 				}

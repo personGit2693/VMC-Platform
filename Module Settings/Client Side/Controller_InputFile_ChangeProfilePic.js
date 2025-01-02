@@ -1,18 +1,19 @@
 /*Import*/
-import {fileReader} from "./Values_Settings.js";
+import {profilePic} from "./Elements_Page_AccountSettings.js";
+import {fileReader, assignSelectedFileEmpPic} from "./Values_Settings.js";
 /*Import*/
 
 
 /*Controller*/
-function controller_InputFile_ChangeProfilePic(inputFile){
+function controller_InputFile_ChangeProfilePic(elem){
 
-	const file = inputFile.files[0];
+	const file = elem.files[0];
 
 	fileReader.readAsDataURL(file);
 
 	fileReader.onload = function(){
-		document.getElementById('profilePic-id').src = fileReader.result;
-		document.getElementById('profilePic-id1').src = fileReader.result;
+		profilePic.src = fileReader.result;
+		assignSelectedFileEmpPic(elem.files[0]);
 	};
 }
 /*Controller*/
