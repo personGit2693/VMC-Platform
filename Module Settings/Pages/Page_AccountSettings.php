@@ -83,75 +83,48 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 
 
 			<!--Page Account Settings Main Feature-->
-			<div class="mainmechaCon_RoClass featureWrap autoReponsiveSection">
+			<div class="mainmechaCon_RoClass featureWrap autoReponsiveSection" id="accountSettingsWrap">
+
 				<!--Profile Picture and Change Button-->
-				<div id="picAndbuttonwrap">
+				<div class="mainmechaCon_RoClass" id="picAndbuttonWrap">
 					<div class="mainmechaCon_RoClass"><label for="fileEmpPic"><img id="profilePic-id" src="../../src/actionofficericon.png"></label></div>
 					<div class="mainmechaCon_RoClass" id="changeProfilePicBtn">						
-						<label for="fileEmpPic">Change Profile Picture</label>
+						<label for="fileEmpPic"><b>Change Profile Picture</b></label>
 						<input type="file" id="fileEmpPic" style="display:none;" accept="image/*" onchange="controller_InputFile_ChangeProfilePic(this)">
-						<button class="normButton_RoClass" onclick="controller_Btn_SaveNewEmployeePicture()">Save Picture</button>
+						<button id="saveNewPictureBtn" class="normButton_RoClass" onclick="controller_Btn_SaveNewEmployeePicture(this)">Save Picture</button>
 					</div>
 				</div>
 				<!--Profile Picture and Change Button-->
 
 
 				<!--Login Credentials Reset-->
-				<div class="changeCredentialsWrap_class">
-					<div id="SettingsTitle_id">Change Password</div>
-					<div class="inputBoxesWrap_class">
-						
-						<div class="passwordAndCheckPasswordWrap_Class">
-							<div class="cusInputs_RoClass">					
-								<input id="inputPassword1" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-								<div class="placeholdme_RoClass">Old Password</div>	
-							</div>
-							<!--
-							<div class="checkPasswordBtn_Class">
-								<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword1', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
-							</div>
-							-->
-						</div>
+				<div class="mainmechaCon_RoClass" id="loginCredentialsResetWrap">
+					<div id="settingsTitle"><b>Change Password</b></div>
 
-						<div class="passwordAndCheckPasswordWrap_Class">
-							<div class="cusInputs_RoClass">					
-								<input id="inputPassword2" type="password" onfocusout="lowlightInWrap(this)" onfocus="highlightInWrap(this)" required>
-								<div class="placeholdme_RoClass">New Password</div>	
-							</div>
-							<!--
-							<div class="checkPasswordBtn_Class">
-								<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword2',this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
-							</div>
-							-->
-						</div>
-
-						<div class="passwordAndCheckPasswordWrap_Class">
-							<div class="cusInputs_RoClass">					
-								<input id="inputPassword3" type="password" onfocusout="lowlightInWrap(this,)" onfocus="highlightInWrap(this)" required>
-								<div class="placeholdme_RoClass">Confirm New Password</div>	
-							</div>
-							<!--
-							<div class="checkPasswordBtn_Class">
-								<button class="iconBtn_RoClass" id="togglePasswordBtn" onclick="controller_Btn_TogglePasswordVisibility('inputPassword3', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png')"></button>
-							</div>
-							-->
-						</div>
-
-						<!--Reset Button-->		
-						<div>
-							<div id="changeCredentials_id"><button class="normButton_RoClass">Update Password</button></div>
-						</div>
-						<!--Reset Button-->
+					<div class="cusInputs_RoClass">					
+						<input type="password" onkeyup="" id="oldPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
+						<div class="placeholdme_RoClass">Old Password</div>
+						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('oldPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
 					</div>
+
+					<div class="cusInputs_RoClass">					
+						<input type="password" onkeyup="" id="newPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
+						<div class="placeholdme_RoClass">New Password</div>
+						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('newPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
+					</div>
+
+					<div class="cusInputs_RoClass">					
+						<input type="password" onkeyup="" id="confirmNewPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
+						<div class="placeholdme_RoClass">Confirm New Password</div>
+						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('confirmNewPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
+					</div>
+
+					<button class="normButton_RoClass">Update Password</button>					
 				</div>
 				<!--Login Credentials Reset-->
 			</div>
 			<!--Page Manage User Main Feature-->
-
-
-
 			
-
 			<hr class="linethis_RoClass">
 			<div class="footerWrap_RoClass lightMode">
 				<span class="footerTxt_RoClass">&copy; Valenzuela Medical Center</span>
@@ -169,6 +142,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<!---Controllers-->
 	<script type="module" src="../Client Side/Controller_InputFile_ChangeProfilePic.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_SaveNewEmployeePicture.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

@@ -491,6 +491,16 @@
 	--boxLoaderIconSize: clamp(50px, 1vw, 60px);
 }
 /**Box Loader*/
+
+/**Input*/
+.passwordEye{
+	position: absolute; 
+	right: 5px; 
+	top: 50%;
+  transform: translateY(-50%);	
+}
+/**Input*/
+
 /*Rogrid*/
 
 
@@ -531,7 +541,7 @@
 	padding-bottom: 10px;
 	background-color: #ffffff;
 	font-family: "binanceFont";
-	font-size: clamp(20px, 1vw, 30px);
+	font-size: clamp(16px, 2vw, 18px);
 	font-weight: bold;
 
 }

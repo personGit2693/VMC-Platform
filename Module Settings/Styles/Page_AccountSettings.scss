@@ -11,17 +11,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	--normBtnWidth: auto;
-	--normBtnPadding: 10px;
-	--normBtnBorderWidth: 1px;
-	--normBtnBorderColor: #39AB5B;
-	--normBtnRadius: 7px;
-	--normBtnFWeight: bold;
-	--normBtnFSize: clamp(12px, 2vw, 16px);
-	--normBtnBgColor: #39AB5B;
-	--normBtnFcolor: #ffffff;
-	--normBtnHovActFColor: #ffffff;
-	--normBtnHovActBgColor: #3D8554;
+	
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -30,15 +20,81 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
-#picAndbuttonwrap{
-	max-width: clamp(100px, 15vw,180px);
+
+/*Rogrid*/
+/**Button*/
+.normButton_RoClass{
+	--normBtnWidth: auto;
+	--normBtnPadding: 4px;
+	--normBtnBorderWidth: 1px;
+	--normBtnBorderColor: #39AB5B;
+	--normBtnRadius: 7px;
+	--normBtnFWeight: bold;
+	--normBtnFSize: clamp(14px, 2vw, 16px);
+	--normBtnBgColor: #39AB5B;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: #ffffff;
+	--normBtnHovActBgColor: #3D8554;
+}
+/**Button*/
+
+/**Input*/
+.cusInputs_RoClass{
+	margin: 8px 0px 8px 0px;
+}
+
+.cusInputs_RoClass, .cusInputs_RoClass input{
+	border-radius: 7px;
+}
+
+.cusInputs_RoClass, .cusInputs_RoClass input, .placeholdme_RoClass, .upPlaceholdme_RoClass{
+	--customInputColor: black;
+	--customInputFSize: clamp(14px, 2vw, 16px);
+	--customInputAnimFSize: clamp(12px, 1vw, 14px);
+}
+/**Input*/
+
+/**Icon Button*/
+.iconBtn_RoClass{
+	position: absolute !important;
+	box-sizing: border-box;
+	right: 5px; 
+	top: 50%;
+  	transform: translateY(-50%);
+	--iconBtnWidth: clamp(16px, 2vw, 18px);
+	--iconBtnHeight: clamp(16px, 2vw, 18px);
+	--iconBtnBgColor: transparent;
+	--iconBtnBgSize: 100%;
+	--iconBtnBorderWidth: 0px;
+	--iconBtnBorderColor: none;
+	--iconBtnBorderRadius: 0px;
+}		
+/**Icon Button*/
+/*Rogrid*/
+
+
+/*Page Account Settings Main Feature*/
+#accountSettingsWrap{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+/*Page Account Settings Main Feature*/
+
+
+/*Profile Picture and Change Button*/
+#picAndbuttonWrap{
+	width: auto;
 	margin: auto;
 	border: 1px solid black;
+	padding: 7px;
+	display: inline-block;
 }
 
 #profilePic-id{
 	width:100%;
-	max-height:250px;
+	height: clamp(100px, 2vw, 175px);
 	object-fit: contain;
 	border-radius: 10px;
 	border:1px solid white;
@@ -54,31 +110,30 @@
 }
 
 #changeProfilePicBtn label{
+	font-size: clamp(12px, 2vw, 16px);
 	font-family: "binanceFont";
 }
 
+#saveNewPictureBtn{
+	margin-top: 5px;
+}
+/*Profile Picture and Change Button*/
 
-.changeCredentialsWrap_class{
-	display:flex;
-	flex-direction:column;
+
+/*Login Credentials Reset*/
+#loginCredentialsResetWrap{	
+	align-self: stretch;
 	padding:10px;
 	border-radius:6px;
-	margin-bottom:20px;
 	box-shadow: 0px 0px 4px rgba(#096B6C, .7);
-	margin-top: 10px;
+	margin-top: 25px;
 }
 
-#SettingsTitle_id{
-	color: black;
-	width:100%;
-	margin-bottom:5px;
+#settingsTitle{
+	font-size: clamp(12px, 2vw, 16px);
 	font-family: "binanceFont";
 }
-
-
-.passwordAndCheckPasswordWrap_Class{
-	margin: 15px;
-}
+/*Login Credentials Reset*/
 
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
