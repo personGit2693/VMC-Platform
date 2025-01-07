@@ -1,6 +1,5 @@
 /*Import*/
-import controller_Doc_GetLoginDetails from "./Controller_Doc_GetLoginDetails.js";
-import {selectedFileEmpPic} from "./Values_Settings.js";
+import {assignElemReference_UploadNewEmployeePicture, selectedFileEmpPic} from "./Values_Settings.js";
 import {submitUploadNewEmployeePicture} from "./Submit_UploadNewEmployeePicture.js";
 /*Import*/
 
@@ -8,10 +7,10 @@ import {submitUploadNewEmployeePicture} from "./Submit_UploadNewEmployeePicture.
 /*Controller*/
 function controller_Btn_SaveNewEmployeePicture(elem){
 	
-	/*assignElemReference_GetLoginDetails(elem);*/
+	assignElemReference_UploadNewEmployeePicture(elem);
 
-	const dataObj = {selectedFileEmpPic: selectedFileEmpPic};
-	const controllersObj = {controller_Doc_GetLoginDetails};
+	const dataObj = {selectedFileEmpPic};
+	const controllersObj = {};
 	const loaderObj = {};	
 
 	submitUploadNewEmployeePicture(controller_Btn_SaveNewEmployeePicture, dataObj, controllersObj, loaderObj);

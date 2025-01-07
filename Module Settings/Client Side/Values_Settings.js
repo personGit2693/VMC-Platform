@@ -9,6 +9,8 @@
 
 
 /*Prep export variables*/
+var elemReference_UploadNewEmployeePicture = null;
+
 const fileReader = new FileReader();
 var selectedFileEmpPic = "";
 var oldPassword = "";
@@ -19,6 +21,14 @@ var submitUpdatePassword = false;
 
 
 /*Assign, Reset, Populate*/
+function resetElemReference_UploadNewEmployeePicture(){
+	elemReference_UploadNewEmployeePicture = null;
+}
+
+function assignElemReference_UploadNewEmployeePicture(newValue){
+	elemReference_UploadNewEmployeePicture = newValue;
+}
+
 function resetSubmitUpdatePassword(){
 	submitUpdatePassword = false;
 }
@@ -49,6 +59,7 @@ function resetOldPassword(){
 
 function assignOldPassword(newValue){
 	oldPassword = newValue;
+	console.log(oldPassword);
 }
 
 function resetSelectedFileEmpPic(){
@@ -64,7 +75,10 @@ function assignSelectedFileEmpPic(newValue){
 
 /*Export*/
 export {
-	resetSubmitUpdatePassword
+	elemReference_UploadNewEmployeePicture,
+	resetElemReference_UploadNewEmployeePicture,
+	assignElemReference_UploadNewEmployeePicture,
+	resetSubmitUpdatePassword,
 	assignSubmitUpdatePassword,
 	submitUpdatePassword,
 	oldPassword,

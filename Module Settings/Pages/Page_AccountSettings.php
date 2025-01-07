@@ -87,7 +87,11 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 
 				<!--Profile Picture and Change Button-->
 				<div class="mainmechaCon_RoClass" id="picAndbuttonWrap">
-					<div class="mainmechaCon_RoClass"><label for="fileEmpPic"><img id="profilePic-id" src="../../src/actionofficericon.png"></label></div>
+					<div class="mainmechaCon_RoClass">
+						<label for="fileEmpPic" id="profilePicLabelWrap">
+							<img id="profilePic-id" />
+						</label>
+					</div>
 					<div class="mainmechaCon_RoClass" id="changeProfilePicBtn">						
 						<label for="fileEmpPic"><b>Change Profile Picture</b></label>
 						<input type="file" id="fileEmpPic" style="display:none;" accept="image/*" onchange="controller_InputFile_ChangeProfilePic(this)">
@@ -102,24 +106,24 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<div id="settingsTitle"><b>Change Password</b></div>
 
 					<div class="cusInputs_RoClass">					
-						<input type="password" onkeyup="" id="oldPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
-						<div class="placeholdme_RoClass">Old Password</div>
-						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('oldPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
+						<input type="password" onkeyup="controller_InputPassword_AssignOldPassword(this)" id="oldInputPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
+						<div class="placeholdme_RoClass">Current Password</div>
+						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('oldInputPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
 					</div>
 
 					<div class="cusInputs_RoClass">					
-						<input type="password" onkeyup="" id="newPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
+						<input type="password" onkeyup="controller_InputPassword_AssignNewPassword(this)" id="newInputPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
 						<div class="placeholdme_RoClass">New Password</div>
-						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('newPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
+						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('newInputPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
 					</div>
 
 					<div class="cusInputs_RoClass">					
-						<input type="password" onkeyup="" id="confirmNewPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
+						<input type="password" onkeyup="controller_InputPassword_AssignCNewPassword(this)" id="cNewInputPassword" onfocusout="lowlightInWrap(this, 'black')" onfocus="highlightInWrap(this, '#FAB142')" required>
 						<div class="placeholdme_RoClass">Confirm New Password</div>
-						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('confirmNewPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
+						<button class="iconBtn_RoClass" onclick="controller_Btn_TogglePasswordVisibility('cNewInputPassword', this)" style="--iconBtnBgIcon: url('../../src/passwordeyeopen.png') "></button>
 					</div>
 
-					<button class="normButton_RoClass">Update Password</button>					
+					<button class="normButton_RoClass" onclick="controller_Btn_UpdatePassword(this)">Update Password</button>					
 				</div>
 				<!--Login Credentials Reset-->
 			</div>
@@ -143,6 +147,10 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<script type="module" src="../Client Side/Controller_InputFile_ChangeProfilePic.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_SaveNewEmployeePicture.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_TogglePasswordVisibility.js"></script>
+	<script type="module" src="../Client Side/Controller_InputPassword_AssignOldPassword.js"></script>
+	<script type="module" src="../Client Side/Controller_InputPassword_AssignNewPassword.js"></script>
+	<script type="module" src="../Client Side/Controller_InputPassword_AssignCNewPassword.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_UpdatePassword.js"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

@@ -106,11 +106,18 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 		/*Upload File*/
 		$folderName = "../../Employee Pictures/";
 
+		/*Generate Anti Cache*/
+		$alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+		$shuffled_AlphaNum = str_shuffle($alphanumeric);
+		$getHalfShuffled_Value = substr($shuffled_AlphaNum, 0, strlen($alphanumeric)/2);
+		$uniqueIdentifier =  rand(1000,9999).$getHalfShuffled_Value.rand(1000,9999);
+		/*Generate Anti Cache*/
+
 		$selectedFileEmpPic_Basename = $folderName.basename($selectedFileEmpPic["name"]);
 
 		$selectedFileEmpPic_Extension = pathinfo($selectedFileEmpPic_Basename, PATHINFO_EXTENSION);
 
-		$selectedFileEmpPic_Name = $account_id.".".$selectedFileEmpPic_Extension;
+		$selectedFileEmpPic_Name = $uniqueIdentifier.".".$selectedFileEmpPic_Extension;
 
 		$execution = move_uploaded_file($selectedFileEmpPic["tmp_name"], $folderName.$selectedFileEmpPic_Name);
 		/*Upload File*/

@@ -45,9 +45,9 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 						controllersObj.outputGreetingUserDetails();
 					}
 
-					if("controller_Docs_DisplayCurrentPicture" in controllersObj){
-						controllersObj.controller_Docs_DisplayCurrentPicture();
-					}
+					if("controller_Doc_DisplayProfilePic" in controllersObj){
+						controllersObj.controller_Doc_DisplayProfilePic();
+					}					
 				}else{
 					window.location.href = logoutPath;
 				}

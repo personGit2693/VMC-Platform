@@ -1,4 +1,5 @@
 /*Import*/
+import {elemReference_UploadNewEmployeePicture} from "./Values_Settings.js";
 import {newEmpPicName, requestUploadNewEmployeePicture} from "./Request_UploadNewEmployeePicture.js";
 /*Import*/
 
@@ -26,10 +27,8 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 		requestUploadNewEmployeePicture(dataObj)
 		.then(requestPromise => {
 			if(requestPromise === true){
-				
-				controllersObj.controller_Doc_GetLoginDetails(window);
 
-				alert("Account's Picture has been updated!");
+				window.location.href = "";
 
 				/*Remove loader*/
 				/*				
@@ -48,9 +47,9 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 			if(pendingSubmit !== 0){
 
 				pendingSubmit--;
-				/*				
-				controller(elemReference_GetAccounts);				
-				*/
+							
+				controller(elemReference_UploadNewEmployeePicture);				
+				
 			}
 		});
 	}else if(blockRequest === true){
