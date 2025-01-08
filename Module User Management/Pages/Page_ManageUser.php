@@ -140,18 +140,18 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 
 	<!--JS Script-->
 	<!---Dependecies-->
-	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>
-	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js?v2"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js?v2"></script>
 	<!---Dependecies-->
 
 	<!---Controllers-->
-	<script type="module" src="../Client Side/Controller_Div_ListMoreAccountsTr.js"></script>
-	<script type="module" src="../Client Side/Controller_InputText_SearchAccounts.js"></script>
-	<script type="module" src="../Client Side/Controller_Btn_ResetPassword.js"></script>
+	<script type="module" src="../Client Side/Controller_Div_ListMoreAccountsTr.js?v2"></script>
+	<script type="module" src="../Client Side/Controller_InputText_SearchAccounts.js?v2"></script>
+	<script type="module" src="../Client Side/Controller_Btn_ResetPassword.js?v2"></script>
 	<!---Controllers-->
 
 	<!---Executor-->
-	<script type="module" src="../Client Side/Executor_Page_ManageUser.js"></script>
+	<script type="module" src="../Client Side/Executor_Page_ManageUser.js?v2"></script>
 	<!---Executor-->		
 	<!--JS Script-->
 </body>

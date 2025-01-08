@@ -13,7 +13,7 @@ require_once "../../Global PHP/CheckAppKey.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
+if(isset($_POST["secretKey"]) && isset($_POST["newPassword"])){
 	
 	/*Required Files*/
 	
@@ -22,35 +22,34 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 
 	/*Query string*/
 	$secretKey = $_POST["secretKey"];	
-	$selectedFileEmpPic = $_FILES["selectedFileEmpPic"];	
+	$newPassword = $_POST["newPassword"];	
 	/*Query string*/
 
 
 	/*Prep variables*/
 	$vmcplatDbConnection = connectToDb("vmc_platform");
-	$account_id = $_SESSION["account_id"];
-	$account_picture = $_SESSION["account_picture"];	
+	$account_id = $_SESSION["account_id"];	
 	/*Prep variables*/
 	
 
 	/*Prep response*/
 	$validToken = null;
 	$execution = null;
-	$newEmpPicName = null;	
+	$accountUpdated = null;	
 	
-	$uploadNewEmployeePicture_Resp = new stdClass();	
-	$uploadNewEmployeePicture_Resp->validAccess = true;
-	$uploadNewEmployeePicture_Resp->vmcplatDbConnection = $vmcplatDbConnection;		
-	$uploadNewEmployeePicture_Resp->validToken = $validToken;
-	$uploadNewEmployeePicture_Resp->execution = $execution;	
-	$uploadNewEmployeePicture_Resp->newEmpPicName = $newEmpPicName;
+	$updatePassword_Resp = new stdClass();	
+	$updatePassword_Resp->validAccess = true;
+	$updatePassword_Resp->vmcplatDbConnection = $vmcplatDbConnection;		
+	$updatePassword_Resp->validToken = $validToken;
+	$updatePassword_Resp->execution = $execution;	
+	$updatePassword_Resp->accountUpdated = $accountUpdated;
 	/*Prep response*/
 
 
 	/*Check connection*/	
 	/**VMC Platform DB Connection*/
 	if($vmcplatDbConnection->serverConnection != null){
-		echo json_encode($uploadNewEmployeePicture_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -58,7 +57,7 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 
 		return;
 	}else if($vmcplatDbConnection->selectedPdoConn == null){
-		echo json_encode($uploadNewEmployeePicture_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -76,9 +75,9 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating secret key has execution problem!";
-		$uploadNewEmployeePicture_Resp->validToken = $validToken;
+		$updatePassword_Resp->validToken = $validToken;
 
-		echo json_encode($uploadNewEmployeePicture_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -89,9 +88,9 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "secret key can't be found!";
-		$uploadNewEmployeePicture_Resp->validToken = $validToken;
+		$updatePassword_Resp->validToken = $validToken;
 
-		echo json_encode($uploadNewEmployeePicture_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -114,13 +113,13 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 		$uniqueIdentifier =  rand(1000,9999).$getHalfShuffled_Value.rand(1000,9999);
 		/*Generate Anti Cache*/
 
-		$selectedFileEmpPic_Basename = $folderName.basename($selectedFileEmpPic["name"]);
+		$newPassword_Basename = $folderName.basename($newPassword["name"]);
 
-		$selectedFileEmpPic_Extension = pathinfo($selectedFileEmpPic_Basename, PATHINFO_EXTENSION);
+		$newPassword_Extension = pathinfo($newPassword_Basename, PATHINFO_EXTENSION);
 
-		$selectedFileEmpPic_Name = $uniqueIdentifier.".".$selectedFileEmpPic_Extension;
+		$newPassword_Name = $uniqueIdentifier.".".$newPassword_Extension;
 
-		$execution = move_uploaded_file($selectedFileEmpPic["tmp_name"], $folderName.$selectedFileEmpPic_Name);
+		$execution = move_uploaded_file($newPassword["tmp_name"], $folderName.$newPassword_Name);
 		/*Upload File*/
 
 
@@ -135,21 +134,21 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 			/*_Prep query*/
 			$uploadNewEmployeePicture_Query = "
 				UPDATE accounts_tab 
-				SET account_picture = :selectedFileEmpPic_Name 
+				SET account_picture = :newPassword_Name 
 				WHERE account_id = :account_id;
 			";				
 			/*_Prep query*/
 
 			/*_Execute query*/
 			$uploadNewEmployeePicture_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($uploadNewEmployeePicture_Query);
-			$uploadNewEmployeePicture_QueryObj->bindValue(':selectedFileEmpPic_Name', $selectedFileEmpPic_Name, PDO::PARAM_STR);
+			$uploadNewEmployeePicture_QueryObj->bindValue(':newPassword_Name', $newPassword_Name, PDO::PARAM_STR);
 			$uploadNewEmployeePicture_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);		
 			$execution = $uploadNewEmployeePicture_QueryObj->execute();		
 			/*_Execute query*/
 
 			/*_Fetching*/		
 			if($execution){
-				$newEmpPicName = $_SESSION["account_picture"] = $selectedFileEmpPic_Name;
+				$accountUpdated = $_SESSION["account_picture"] = $newPassword_Name;
 			}		
 			/*_Fetching*/
 		}
@@ -163,19 +162,19 @@ if(isset($_POST["secretKey"]) && isset($_FILES["selectedFileEmpPic"])){
 
 
 	/*Return response*/
-	$uploadNewEmployeePicture_Resp->execution = $execution;
-	$uploadNewEmployeePicture_Resp->newEmpPicName = $newEmpPicName;
+	$updatePassword_Resp->execution = $execution;
+	$updatePassword_Resp->accountUpdated = $accountUpdated;
 
-	echo json_encode($uploadNewEmployeePicture_Resp, JSON_NUMERIC_CHECK);
+	echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 
 }else{
 
 	/*Return response*/
-	$uploadNewEmployeePicture_Resp = new stdClass();
-	$uploadNewEmployeePicture_Resp->validAccess = false;
+	$updatePassword_Resp = new stdClass();
+	$updatePassword_Resp->validAccess = false;
 
-	echo json_encode($uploadNewEmployeePicture_Resp, JSON_NUMERIC_CHECK);
+	echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 }
 ?>

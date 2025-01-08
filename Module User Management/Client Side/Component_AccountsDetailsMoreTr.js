@@ -11,7 +11,7 @@ function AccountsDetailsMoreTr(){
 	for(let index=0; index<accounts.length; index++){
 
 		const accountId = `${accounts[index].account_id}`;
-		const accountPicture = `../../src/${accounts[index].account_picture}`;
+		const accountPicture = `../../Employee Pictures/${accounts[index].account_picture}`;
 		const accountFullname = `${accounts[index].account_fname} ${accounts[index].account_mname} ${accounts[index].account_lname} ${accounts[index].account_suffix}`;
 		const accountSection = accounts[index].account_section;
 		const accountCreated = accounts[index].account_datetime;
