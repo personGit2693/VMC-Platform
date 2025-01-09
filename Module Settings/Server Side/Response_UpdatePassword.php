@@ -29,6 +29,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["newPassword"])){
 	/*Prep variables*/
 	$vmcplatDbConnection = connectToDb("vmc_platform");
 	$account_id = $_SESSION["account_id"];	
+	$account_identifier = $_SESSION["account_identifier"];
 	/*Prep variables*/
 	
 
@@ -36,6 +37,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["newPassword"])){
 	$validToken = null;
 	$execution = null;
 	$accountUpdated = null;	
+	$accountNewPassword = null;
+	$accountCorrectPassword = null;
 	
 	$updatePassword_Resp = new stdClass();	
 	$updatePassword_Resp->validAccess = true;
@@ -43,6 +46,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["newPassword"])){
 	$updatePassword_Resp->validToken = $validToken;
 	$updatePassword_Resp->execution = $execution;	
 	$updatePassword_Resp->accountUpdated = $accountUpdated;
+	$updatePassword_Resp->accountNewPassword = $accountNewPassword;
+	$updatePassword_Resp->accountCorrectPassword = $accountCorrectPassword;
 	/*Prep response*/
 
 
@@ -102,57 +107,35 @@ if(isset($_POST["secretKey"]) && isset($_POST["newPassword"])){
 
 
 	if($validToken === null){	
-		
-		/*Upload File*/
-		$folderName = "../../Employee Pictures/";
-
-		/*Generate Anti Cache*/
-		$alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-		$shuffled_AlphaNum = str_shuffle($alphanumeric);
-		$getHalfShuffled_Value = substr($shuffled_AlphaNum, 0, strlen($alphanumeric)/2);
-		$uniqueIdentifier =  rand(1000,9999).$getHalfShuffled_Value.rand(1000,9999);
-		/*Generate Anti Cache*/
-
-		$newPassword_Basename = $folderName.basename($newPassword["name"]);
-
-		$newPassword_Extension = pathinfo($newPassword_Basename, PATHINFO_EXTENSION);
-
-		$newPassword_Name = $uniqueIdentifier.".".$newPassword_Extension;
-
-		$execution = move_uploaded_file($newPassword["tmp_name"], $folderName.$newPassword_Name);
-		/*Upload File*/
-
-
-		/*Delete the old File*/
-		unlink("../../Employee Pictures/".$account_picture); 
-		/*Delete the old File*/
-
-
-		/*Update Account Picture*/
-		if($execution){
 				
-			/*_Prep query*/
-			$uploadNewEmployeePicture_Query = "
-				UPDATE accounts_tab 
-				SET account_picture = :newPassword_Name 
-				WHERE account_id = :account_id;
-			";				
-			/*_Prep query*/
+		/*Update Account Password*/		
+		/*_Prep query*/
+		$updatePassword_Query = "
+			UPDATE accounts_tab 
+			SET account_password = :newPassword 
+			WHERE account_id = :account_id;
+		";				
+		/*_Prep query*/
 
-			/*_Execute query*/
-			$uploadNewEmployeePicture_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($uploadNewEmployeePicture_Query);
-			$uploadNewEmployeePicture_QueryObj->bindValue(':newPassword_Name', $newPassword_Name, PDO::PARAM_STR);
-			$uploadNewEmployeePicture_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);		
-			$execution = $uploadNewEmployeePicture_QueryObj->execute();		
-			/*_Execute query*/
+		/*_Execute query*/
+		$updatePassword_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($updatePassword_Query);
+		$updatePassword_QueryObj->bindValue(':newPassword', md5($newPassword.$account_identifier), PDO::PARAM_STR);
+		$updatePassword_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);		
+		$execution = $updatePassword_QueryObj->execute();		
+		/*_Execute query*/
 
-			/*_Fetching*/		
-			if($execution){
-				$accountUpdated = $_SESSION["account_picture"] = $newPassword_Name;
-			}		
-			/*_Fetching*/
-		}
-		/*Update Account Picture*/						
+		/*_Fetching*/		
+		if($execution){
+
+			$accountUpdated = $updatePassword_QueryObj->rowCount();
+
+			if($accountUpdated !== 0){
+				$accountNewPassword = $_SESSION["account_password"] = md5($newPassword.$account_identifier);
+				$accountCorrectPassword = $_SESSION["correctPassword"] = $newPassword;
+			}			
+		}		
+		/*_Fetching*/	
+		/*Update Account Password*/						
 	}
 	
 
@@ -164,6 +147,8 @@ if(isset($_POST["secretKey"]) && isset($_POST["newPassword"])){
 	/*Return response*/
 	$updatePassword_Resp->execution = $execution;
 	$updatePassword_Resp->accountUpdated = $accountUpdated;
+	$updatePassword_Resp->accountNewPassword = $accountNewPassword;
+	$updatePassword_Resp->accountCorrectPassword = $accountCorrectPassword;
 
 	echo json_encode($updatePassword_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/

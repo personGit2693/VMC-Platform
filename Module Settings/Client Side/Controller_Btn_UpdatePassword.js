@@ -1,18 +1,20 @@
 /*Import*/
 import {globalKey} from "../../Global Client Side/Values_Global.js";
+import outputPageLoader from "../../Global Client Side/Output_PageLoader.js";
 import {oldInputPassword, newInputPassword, cNewInputPassword} from "./Elements_Page_AccountSettings.js";
-import {oldPassword, newPassword, cNewPassword, submitUpdatePassword, resetSubmitUpdatePassword, assignSubmitUpdatePassword} from "./Values_Settings.js";
+import {assignElemReference_UpdatePassword, oldPassword, newPassword, cNewPassword, submitUpdatePassword as submitUpdatePassword_Result, resetSubmitUpdatePassword, assignSubmitUpdatePassword} from "./Values_Settings.js";
+import {submitUpdatePassword} from "./Submit_UpdatePassword.js";
 /*Import*/
 
 
 /*Controller*/
 function controller_Btn_UpdatePassword(elem){
 	
-	/*assignElemReference_GetLoginDetails(elem);*/
+	assignElemReference_UpdatePassword(elem);
 
-	const dataObj = {};
+	const dataObj = {newPassword};
 	const controllersObj = {};
-	const loaderObj = {};		
+	const loaderObj = {outputPageLoader, id1:"thisIsJapan_RoId", id2:"spinnerLoad_RoId"};		
 
 	if(oldPassword !== globalKey.correctPassword){
 		
@@ -66,8 +68,8 @@ function controller_Btn_UpdatePassword(elem){
 	}
 
 
-	if(submitUpdatePassword === true){
-		alert(`New Password Updated`);
+	if(submitUpdatePassword_Result === true){
+		submitUpdatePassword(controller_Btn_UpdatePassword, dataObj, controllersObj, loaderObj);
 	}
 
 	/*submitGetLoginDetails(controller_Btn_UpdatePassword, dataObj, controllersObj, loaderObj, serverPath, logoutPath);*/

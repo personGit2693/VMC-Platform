@@ -70,24 +70,25 @@ const showBlurrerOnly = () =>{
 
 
 /*_Function to show modal*/
-const showMyMod = (modalClass_Param, modalInt_Param) =>{
-	const modal_Class_Rogrid = document.getElementsByClassName(modalClass_Param)[modalInt_Param];
-	modal_Class_Rogrid.parentNode.style.display = "flex";
-	modal_Class_Rogrid.style.display = "block";
-	asyncDelayModal(modalClass_Param, modalInt_Param);
+const showMyMod = (elemId) =>{	
+	const elem = document.getElementById(elemId);
+
+	elem.parentNode.style.display = "flex";
+	elem.style.display = "block";
+	asyncDelayModal(elemId);
 }
 /*_Function to show modal*/
 
 
 /*Async function to delay the animation for showing modal*/
-async function asyncDelayModal(demodalClass_Param, demodalInt_Param){
-	const demodal_Class_Rogrid = document.getElementsByClassName(demodalClass_Param)[demodalInt_Param];
+async function asyncDelayModal(elemId){
+	const elem = document.getElementById(elemId);
 
 	const promiseAnimateMod_Obj = new Promise((delayAnimateMod_Resolve) => {
 		setTimeout(function(){
-			demodal_Class_Rogrid.parentNode.style.width = "100%";
-			demodal_Class_Rogrid.parentNode.style.height = "100%";
-			demodal_Class_Rogrid.style.transform = "scale(1)";			
+			elem.parentNode.style.width = "100%";
+			elem.parentNode.style.height = "100%";
+			elem.style.transform = "scale(1)";			
 			delayAnimateMod_Resolve();
 		}, 1);		
 	});
@@ -97,13 +98,12 @@ async function asyncDelayModal(demodalClass_Param, demodalInt_Param){
 
 
 /*Function to close modal*/
-function closeMyMod(closeModalClass_Param, closeModalInt_Param){
-	const closeModal_Class_Rogrid = document.getElementsByClassName(closeModalClass_Param)[closeModalInt_Param];
-	closeModal_Class_Rogrid.parentNode.style.display = "none";
-	closeModal_Class_Rogrid.parentNode.style.width = "0px";
-	closeModal_Class_Rogrid.parentNode.style.height = "0px";
-	closeModal_Class_Rogrid.style.display = "none";
-	closeModal_Class_Rogrid.style.transform = "scale(0)";
+function closeMyMod(elem){
+	elem.parentNode.parentNode.parentNode.style.display = "none";
+	elem.parentNode.parentNode.parentNode.style.width = "0px";
+	elem.parentNode.parentNode.parentNode.style.height = "0px";
+	elem.parentNode.parentNode.style.display = "none";
+	elem.parentNode.parentNode.style.transform = "scale(0)";
 }
 /*Function to close modal*/
 

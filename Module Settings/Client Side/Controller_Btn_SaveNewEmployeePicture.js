@@ -1,4 +1,5 @@
 /*Import*/
+import outputPageLoader from "../../Global Client Side/Output_PageLoader.js";
 import {assignElemReference_UploadNewEmployeePicture, selectedFileEmpPic} from "./Values_Settings.js";
 import {submitUploadNewEmployeePicture} from "./Submit_UploadNewEmployeePicture.js";
 /*Import*/
@@ -7,13 +8,15 @@ import {submitUploadNewEmployeePicture} from "./Submit_UploadNewEmployeePicture.
 /*Controller*/
 function controller_Btn_SaveNewEmployeePicture(elem){
 	
-	assignElemReference_UploadNewEmployeePicture(elem);
+	if(selectedFileEmpPic !== ""){
+		assignElemReference_UploadNewEmployeePicture(elem);
 
-	const dataObj = {selectedFileEmpPic};
-	const controllersObj = {};
-	const loaderObj = {};	
+		const dataObj = {selectedFileEmpPic};
+		const controllersObj = {};
+		const loaderObj = {outputPageLoader, id1:"thisIsJapan_RoId", id2:"spinnerLoad_RoId"};	
 
-	submitUploadNewEmployeePicture(controller_Btn_SaveNewEmployeePicture, dataObj, controllersObj, loaderObj);
+		submitUploadNewEmployeePicture(controller_Btn_SaveNewEmployeePicture, dataObj, controllersObj, loaderObj);
+	}
 }
 /*Controller*/
 

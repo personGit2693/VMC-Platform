@@ -109,7 +109,7 @@
 * How to use footer RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file
 	• Codes needed 
-		• " --footerBgColor: value " (Provide background color) (For footerTxt_RoClass)
+		• " --footerBgColor: value " (Provide background color) (For footerWrap_RoClass)
 		• " --footerFSize: value " (Provide font size) (For footerTxt_RoClass)
 		• " --footerFColor: value " (Provide font color) (For footerTxt_RoClass)
 	• Structure
@@ -142,7 +142,7 @@
 		<div class="thisIsJapan_RoClass" style=" --putOnTop: integer; "></div>
 
 
-Modal Note: Invoke "showMyMod('modalme_RoClass', index)" function to show the modal.
+Modal Note: Invoke "showMyMod('Modal ID')" function to show the modal.
 * How to use Custom Modal RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
@@ -158,10 +158,10 @@ Modal Note: Invoke "showMyMod('modalme_RoClass', index)" function to show the mo
 		• " --modalCloseIconSize: value " (Provide the close icon size) (For modalHeadClose_RoClass)
 	• Structure
 		<div class="modalmeCon_RoClass" style=" --topOnBlurrer: integer; ">
-			<div class="modalme_RoClass">
+			<div class="modalme_RoClass" id="Modal ID">
 				<div class="modalHeader_RoClass">
 					<div class="modalHeadTxt_RoClass">Value</div>
-					<div class="modalHeadClose_RoClass" onclick="closeMyMod('modalme_RoClass', index)"><img src="../../src/closeModIcon.png"></div>
+					<div class="modalHeadClose_RoClass" onclick="closeMyMod(this)"><img src="../../src/closeModIcon.png"></div>
 				</div>
 				<div class="modalBody_RoClass">
 					<!--Content Here-->
@@ -198,7 +198,7 @@ Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner a
 		• " --inputSearchFSize: value " (Provide font size) (For searchInput_RoClass)
 		• " --inputSearchFColor: value " (Provide font color) (For searchInput_RoClass)
 	• Structure
-	<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url(' filename ')">
+		<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url(' filename ')">
 
 Notification Box Note: Invoke "notifyNodeBox(boolean, ' Sample Message ', ' wrapper-id ')" function to create and show notification box with auto close and "notifyNodeBoxStay(boolean, ' Sample Message ', ' wrapper-id ')" for stay. No need to copy paste the structure just invoke the function on your javascript. 
 * How to use Notification Box RoStrap Style
@@ -378,7 +378,7 @@ Radio Button Note: The "colorName" parameter In "radioCircleSelected(this, ' col
 		• " --listBtnFColorha: value; " (Provide list button font color when hovered) (listBtn_RoClass)
 	• Structure
 		<div class="cusDroplistBtn_RoClass">
-			<div class="masterBtnWrap_RoClass">
+			<div class="masterBtnWrap_RoClass" onclick="showActionButtons(this)">
 				<button>Masterlist Button</button>
 				<div><img src="./src/Chevron Down.png"></div>
 			</div>					

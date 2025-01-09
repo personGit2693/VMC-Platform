@@ -1,6 +1,6 @@
 /*Import*/
-import {elemReference_UploadNewEmployeePicture} from "./Values_Settings.js";
-import {newEmpPicName, requestUploadNewEmployeePicture} from "./Request_UploadNewEmployeePicture.js";
+import {elemReference_UpdatePassword} from "./Values_Settings.js";
+import {accountCorrectPassword, accountUpdated, accountNewPassword, requestUpdatePassword} from "./Request_UpdatePassword.js";
 /*Import*/
 
 
@@ -11,27 +11,29 @@ var pendingSubmit = 0;
 
 
 /*Submit Function*/
-function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loaderObj){	
+function submitUpdatePassword(controller, dataObj, controllersObj, loaderObj){	
 
 	if(blockRequest === false){
 
 		blockRequest = true;
 
 		/*Display Loader*/
-		/*
 		loaderObj.outputPageLoader();
-		*/
 		/*Display Loader*/
 
 
-		requestUploadNewEmployeePicture(dataObj)
+		requestUpdatePassword(dataObj)
 		.then(requestPromise => {
 			if(requestPromise === true){
 
-				window.location.href = "";
+				if(accountUpdated !== 0){
+					window.location.href = "";
+				}else if(accountUpdated === 0){
+					alert("No changes made on your password");
+				}
+				
 
 				/*Remove loader*/
-				/*
 				if(document.getElementById(loaderObj.id1) !== null){
 					
 					document.getElementById(loaderObj.id1).remove();
@@ -41,10 +43,9 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 					
 					document.getElementById(loaderObj.id2).remove();
 				}
-				*/							
 				/*Remove loader*/
 			}else{				
-				console.log(`Submit_UploadNewEmployeePicture Resolve ${requestPromise}`);
+				console.log(`Submit_UpdatePassword Resolve ${requestPromise}`);
 			}			
 
 			blockRequest = false;			
@@ -53,7 +54,7 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 
 				pendingSubmit--;
 							
-				controller(elemReference_UploadNewEmployeePicture);				
+				controller(elemReference_UpdatePassword);				
 				
 			}
 		});
@@ -66,10 +67,10 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 
 
 /*Declare global*/
-window.submitUploadNewEmployeePicture = submitUploadNewEmployeePicture;
+window.submitUpdatePassword = submitUpdatePassword;
 /*Declare global*/
 
 
 /*Export*/
-export {submitUploadNewEmployeePicture, blockRequest};
+export {submitUpdatePassword, blockRequest};
 /*Export*/

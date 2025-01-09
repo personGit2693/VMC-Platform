@@ -70,7 +70,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 			<!--Greetings Area--> 
 			<div class="mainmechaCon_RoClass autoReponsiveSection lightMode" id="greetingSection">
 				<div class="mainmechaCon_RoClass" id="greetingWrap">
-					<img id="greetingUserImage" src="./src/actionofficericon.png" />
+					<img id="greetingUserImage" src="./Employee Pictures/actionofficericon.png" />
 						
 					<div class="mainmechaCon_RoClass" id="greetingUserDetailsWrap">
 						<!--

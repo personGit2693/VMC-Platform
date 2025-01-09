@@ -1,4 +1,5 @@
 /*Import*/
+import {greetingUserImage} from "./Elements_Index.js";
 import {globalKey} from "../../Global Client Side/Values_Global.js";
 /*Import*/
 
@@ -8,6 +9,9 @@ function GreetingUserDetails(){
 	
 	const accountFirstname = `${globalKey.account_fname}`;
 	const accountId = `${globalKey.account_id}`;
+	const accountPicture = `./Employee Pictures/${globalKey.account_picture}`;
+
+	greetingUserImage.src = `${accountPicture}`;
 
 	let greetingUserDetails = `
 		<div class="mainmechaCon_RoClass lightMode" id="greetingUserFName">Hi! welcome back, ${accountFirstname}!</div>

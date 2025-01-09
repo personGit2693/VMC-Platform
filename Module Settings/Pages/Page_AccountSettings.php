@@ -52,7 +52,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 				</a>
 			</div>
 		</div>
-		<div class="mainmecha_RoClass lightMode">
+		<div class="mainmecha_RoClass lightMode" id="mainPageSide">
 			<div class="mainmechaCon_RoClass layoutOneHead_RoClass lightMode">
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>			
 				
@@ -133,7 +133,14 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 			<div class="footerWrap_RoClass lightMode">
 				<span class="footerTxt_RoClass">&copy; Valenzuela Medical Center</span>
 			</div>
-		</div> 
+		</div>
+
+		<!--Page Loading Component
+		<div class="thisIsJapan_RoClass" style="--putOnTop: 0; display: block;"></div> 
+		<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 0; display: block;">
+			<img src="../../src/Spinner.gif">
+		</div>
+		-->
 	</div>
 
 

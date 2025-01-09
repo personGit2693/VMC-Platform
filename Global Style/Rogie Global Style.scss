@@ -405,6 +405,12 @@
 
 
 /*Rogrid*/
+/**Spinning Loading*/
+.spinnerLoad_RoClass{
+	--spinnerWidthHeight: clamp(55px, 6vw, 65px);
+}
+/**Spinning Loading*/
+
 /**Navigation*/
 .mainNavMenuIconWrap_RoClass, .activeMainNavMenuIconWrap_RoClass{
 	--mainNavMenuIconSize: clamp(14px, 2vw, 16px);
