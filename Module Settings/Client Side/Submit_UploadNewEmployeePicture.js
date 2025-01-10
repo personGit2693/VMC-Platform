@@ -17,10 +17,8 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 
 		blockRequest = true;
 
-		/*Display Loader*/
-		/*
-		loaderObj.outputPageLoader();
-		*/
+		/*Display Loader*/		
+		loaderObj.outputPageLoader();		
 		/*Display Loader*/
 
 
@@ -31,7 +29,6 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 				window.location.href = "";
 
 				/*Remove loader*/
-				/*
 				if(document.getElementById(loaderObj.id1) !== null){
 					
 					document.getElementById(loaderObj.id1).remove();
@@ -40,8 +37,7 @@ function submitUploadNewEmployeePicture(controller, dataObj, controllersObj, loa
 				if(document.getElementById(loaderObj.id2) !== null){
 					
 					document.getElementById(loaderObj.id2).remove();
-				}
-				*/							
+				}						
 				/*Remove loader*/
 			}else{				
 				console.log(`Submit_UploadNewEmployeePicture Resolve ${requestPromise}`);

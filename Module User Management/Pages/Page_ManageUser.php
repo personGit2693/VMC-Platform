@@ -148,6 +148,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 	<script type="module" src="../Client Side/Controller_Div_ListMoreAccountsTr.js?v2"></script>
 	<script type="module" src="../Client Side/Controller_InputText_SearchAccounts.js?v2"></script>
 	<script type="module" src="../Client Side/Controller_Btn_ResetPassword.js?v2"></script>
+	<script type="module" src="../Client Side/Controller_Btn_ActivateAccount.js?v2"></script>
 	<!---Controllers-->
 
 	<!---Executor-->

@@ -17,11 +17,16 @@ function AccountsDetailsTr(){
 		const accountCreated = accounts[index].account_datetime;
 
 		let accountStatus = "";
+		let accountStatusChangeTo = "";
 		if(accounts[index].account_status == 1){
 			accountStatus = "Activated";
+			accountStatusChangeTo = "Deactivate";
 		}else{
 			accountStatus = "Deactivated";
+			accountStatusChangeTo = "Activate";
 		}
+
+		const accountDetails_Base = btoa(unescape(encodeURIComponent(JSON.stringify(accounts[index]))));
 
 		accountsDetailsTr += `
 			<tr>
@@ -37,8 +42,9 @@ function AccountsDetailsTr(){
 							<div><img src="../../src/Chevron Down.png"></div>
 						</div>					
 						<div class="droplistWrap_RoClass">
-							<button class="listBtn_RoClass" value="${accountId}" onclick="controller_Btn_ResetPassword(this)">Reset Password</button>
-						</div>
+							<button class="listBtn_RoClass" value="${accountId}" onclick="controller_Btn_ResetPassword(this)">Reset Password</button>							
+							<button class="listBtn_RoClass" value="${accountDetails_Base}" onclick="controller_Btn_ActivateAccount(this)">${accountStatusChangeTo}</button>
+						</div>						
 					</div>
 				</td>
 			</tr>

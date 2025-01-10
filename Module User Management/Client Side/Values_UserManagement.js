@@ -10,6 +10,7 @@
 
 /*Prep export variables*/
 var elemReference_GetAccounts = "";
+var elemReference_ActivateAccount = "";
 
 var searchAccount = "";
 var sortAccountBy = "accounts_tab.account_fname";
@@ -17,10 +18,16 @@ var sortAccountScending = "ASC";
 var startRowIndex = 0;
 var displayRowNum = 200;
 var pageNumber = 1;
+var accountActivated = 1;
+var accountDeactivated = 0;
 /*Prep export variables*/
 
 
 /*Assign, Reset, Populate*/
+function assignElemReference_ActivateAccount(newValue){
+	elemReference_ActivateAccount = newValue;
+}
+
 function resetPageNumber(){
 	pageNumber = 1;
 }
@@ -72,6 +79,10 @@ function assignSearchAccount(newValue){
 
 /*Export*/
 export {
+	assignElemReference_ActivateAccount,
+	elemReference_ActivateAccount,
+	accountDeactivated,
+	accountActivated,
 	resetPageNumber,
 	pageNumber,
 	elemReference_GetAccounts,

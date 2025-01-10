@@ -14,7 +14,7 @@ require_once "../../Global PHP/GetIdentifier.php";
 /*Global Required Files*/
 
 
-if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
+if(isset($_POST["secretKey"]) && isset($_POST["account_id"]) && isset($_POST["account_status"]) && isset($_POST["accountActivated"]) && isset($_POST["accountDeactivated"])){
 	
 	/*Required Files*/
 	
@@ -23,35 +23,45 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
 
 	/*Query string*/
 	$secretKey = $_POST["secretKey"];	
-	$account_id = $_POST["account_id"];		
+	$account_id = $_POST["account_id"];
+	$account_status = $_POST["account_status"];
+	$accountActivated = $_POST["accountActivated"];
+	$accountDeactivated = $_POST["accountDeactivated"];
 	/*Query string*/
 
 
 	/*Prep variables*/
-	$vmcplatDbConnection = connectToDb("vmc_platform");	
+	$vmcplatDbConnection = connectToDb("vmc_platform");
+
+	$newAccountStatusResult = null;
+	if($account_status === $accountActivated){
+		$newAccountStatusResult = $accountDeactivated;
+	}else if($account_status === $accountDeactivated){
+		$newAccountStatusResult = $accountActivated;
+	}
 	/*Prep variables*/
 	
 
 	/*Prep response*/
 	$validToken = null;
 	$execution = null;
-	$resetPassword = null;
-	$newPassword = null;
+	$accountUpdated = null;
+	$accountNewStatus = null;
 	
-	$resetPassword_Resp = new stdClass();	
-	$resetPassword_Resp->validAccess = true;
-	$resetPassword_Resp->vmcplatDbConnection = $vmcplatDbConnection;		
-	$resetPassword_Resp->validToken = $validToken;
-	$resetPassword_Resp->execution = $execution;
-	$resetPassword_Resp->newPassword = $newPassword;	
-	$resetPassword_Resp->resetPassword = $resetPassword;	
+	$activateAccount_Resp = new stdClass();	
+	$activateAccount_Resp->validAccess = true;
+	$activateAccount_Resp->vmcplatDbConnection = $vmcplatDbConnection;		
+	$activateAccount_Resp->validToken = $validToken;
+	$activateAccount_Resp->execution = $execution;
+	$activateAccount_Resp->accountUpdated = $accountUpdated;
+	$activateAccount_Resp->accountNewStatus = $accountNewStatus;	
 	/*Prep response*/
 
 
 	/*Check connection*/	
 	/**VMC Platform DB Connection*/
 	if($vmcplatDbConnection->serverConnection != null){
-		echo json_encode($resetPassword_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($activateAccount_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -59,7 +69,7 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
 
 		return;
 	}else if($vmcplatDbConnection->selectedPdoConn == null){
-		echo json_encode($resetPassword_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($activateAccount_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -77,9 +87,9 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
 	if($validateGlobalToken_Obj->execution !== true){
 
 		$validToken = "Validating secret key has execution problem!";
-		$resetPassword_Resp->validToken = $validToken;
+		$activateAccount_Resp->validToken = $validToken;
 
-		echo json_encode($resetPassword_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($activateAccount_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -90,9 +100,9 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
 	}else if($validateGlobalToken_Obj->counted === 0){
 
 		$validToken = "secret key can't be found!";
-		$resetPassword_Resp->validToken = $validToken;
+		$activateAccount_Resp->validToken = $validToken;
 
-		echo json_encode($resetPassword_Resp, JSON_NUMERIC_CHECK);
+		echo json_encode($activateAccount_Resp, JSON_NUMERIC_CHECK);
 
 		/*_Disconnect*/
 		$vmcplatDbConnection = null;
@@ -103,41 +113,31 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
 	/*Validate secret key*/
 
 
-	if($validToken === null){	
-		
-		/*Random Password*/
-		$alphanumeric = "abcdefghijklmnopqrstuvwxyz";
-		$shuffled_AlphaNum = str_shuffle($alphanumeric);
-		$getHalfShuffled_Value = substr($shuffled_AlphaNum, 0, 4);
-		$newPassword =  $getHalfShuffled_Value;
-		/*Random Password*/
+	if($validToken === null){			
 
-		/*Get Identifier*/
-		$getIdentifier_Obj = getIdentifier($vmcplatDbConnection->selectedPdoConn, $account_id);		
-		/*Get Identifier*/
-
-		/*Reset Password*/
+		/*Update Account Status*/
 		/*_Prep query*/
-		$resetPassword_Resp_Query = "
+		$activateAccount_Query = "
 			UPDATE accounts_tab 
-			SET account_password = :newPassword 
+			SET account_status = :newAccountStatusResult 
 			WHERE account_id = :account_id;
 		";				
 		/*_Prep query*/
 
 		/*_Execute query*/
-		$resetPassword_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($resetPassword_Resp_Query);
-		$resetPassword_QueryObj->bindValue(':newPassword', md5($newPassword.$getIdentifier_Obj->identifier), PDO::PARAM_STR);
-		$resetPassword_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);		
-		$execution = $resetPassword_QueryObj->execute();		
+		$activateAccount_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($activateAccount_Query);
+		$activateAccount_QueryObj->bindValue(':newAccountStatusResult', intval($newAccountStatusResult), PDO::PARAM_INT);
+		$activateAccount_QueryObj->bindValue(':account_id', $account_id, PDO::PARAM_STR);		
+		$execution = $activateAccount_QueryObj->execute();		
 		/*_Execute query*/
 
 		/*_Fetching*/		
 		if($execution){
-			$resetPassword= $resetPassword_QueryObj->rowCount();
+			$accountUpdated = $activateAccount_QueryObj->rowCount();
+			$accountNewStatus = $newAccountStatusResult;
 		}		
 		/*_Fetching*/
-		/*Reset Password*/
+		/*Update Account Status*/
 	}
 	
 
@@ -147,20 +147,19 @@ if(isset($_POST["secretKey"]) && isset($_POST["account_id"])){
 
 
 	/*Return response*/
-	$resetPassword_Resp->execution = $execution;
-	$resetPassword_Resp->newPassword = $newPassword;
-	$resetPassword_Resp->resetPassword = $resetPassword;	
+	$activateAccount_Resp->execution = $execution;	
+	$activateAccount_Resp->accountUpdated = $accountUpdated;	
+	$activateAccount_Resp->accountNewStatus = $accountNewStatus;
 
-	echo json_encode($resetPassword_Resp, JSON_NUMERIC_CHECK);
+	echo json_encode($activateAccount_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
-
 }else{
 
 	/*Return response*/
-	$resetPassword_Resp = new stdClass();
-	$resetPassword_Resp->validAccess = false;
+	$activateAccount_Resp = new stdClass();
+	$activateAccount_Resp->validAccess = false;
 
-	echo json_encode($resetPassword_Resp, JSON_NUMERIC_CHECK);
+	echo json_encode($activateAccount_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/
 }
 ?>
