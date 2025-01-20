@@ -14,7 +14,7 @@ function GreetingUserDetails(){
 	greetingUserImage.src = `${accountPicture}`;
 
 	let greetingUserDetails = `
-		<div class="mainmechaCon_RoClass lightMode" id="greetingUserFName">Hi! welcome back, ${accountFirstname}!</div>
+		<div class="mainmechaCon_RoClass lightMode" id="greetingUserFName">Hi! welcome, ${accountFirstname}!</div>
 		<div class="mainmechaCon_RoClass sub-textFColor" id="greetingUserEmpNo">Employee number ${accountId}</div>
 	`;	
 

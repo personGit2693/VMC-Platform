@@ -88,8 +88,7 @@
 	white-space: normal;
 	font-family: "binanceFont";
 	font-size: clamp(14px, 2vw, 16px);
-	font-weight: bold;
-	color: var(--navLogo_FColor);
+	font-weight: bold;	
 }		
 /*Navigation Logo*/
 
@@ -506,7 +505,6 @@
   transform: translateY(-50%);	
 }
 /**Input*/
-
 /*Rogrid*/
 
 
@@ -536,6 +534,7 @@
 	background-size: contain;
 	width: clamp(17px, 1vw, 28px);
 	height: clamp(17px, 1vw, 28px);
+	flex-shrink: 0;
 }
 /*Path Guide*/
 
@@ -582,6 +581,7 @@ table{
 
 table thead{
 	border-bottom: 1.5px solid black;
+	position: sticky;
 }
 
 table thead tr th{
