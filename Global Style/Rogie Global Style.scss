@@ -582,6 +582,7 @@ table{
 table thead{
 	border-bottom: 1.5px solid black;
 	position: sticky;
+	z-index: 1;
 }
 
 table thead tr th{
