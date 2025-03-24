@@ -13,9 +13,11 @@ var elemReference_RegisterEsrs = null;
 var elemReference_GetLoginDetails = null;
 var elemReference_GetApps = null;
 var elemReference_RegisterSmis = null;
+var elemReference_RegisterAbtc = null;
 
 var esrsEndpoint = "LoginEsrs";
 var smisEndpoint = "LoginSmis";
+var abtcEndpoint = "LoginAbtc";
 var pageRegistrationSuccessPath = "../../Global Pages/Page_RegistrationSuccess.php";
 var lightmode = "lightMode";
 var darkmode = "darkMode";
@@ -28,6 +30,10 @@ var chatContactName = "";
 
 
 /*Assign, Reset, Populate*/
+function assignElemReference_RegisterAbtc(newValue){
+	elemReference_RegisterAbtc = newValue;
+}
+
 function assignElemReference_RegisterSmis(newValue){
 	elemReference_RegisterSmis = newValue;
 }
@@ -68,6 +74,9 @@ function assignChatContactName(chatContactName_Param){
 
 /*Export*/
 export {
+	elemReference_RegisterAbtc,
+	assignElemReference_RegisterAbtc,
+	abtcEndpoint,
 	elemReference_RegisterSmis,
 	assignElemReference_RegisterSmis,
 	smisEndpoint,

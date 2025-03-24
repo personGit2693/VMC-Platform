@@ -1,6 +1,6 @@
 /*Import*/
 import {registerToEndpoint} from "./Values_Registration.js";
-import {smisEndpoint, esrsEndpoint, globalKey} from "../../Global Client Side/Values_Global.js";
+import {abtcEndpoint, smisEndpoint, esrsEndpoint, globalKey} from "../../Global Client Side/Values_Global.js";
 /*Import*/
 
 
@@ -12,6 +12,8 @@ function AccessBoxDetails(){
 		registrationController = "controller_Btn_RegisterEsrs(this)";
 	}else if(registerToEndpoint == smisEndpoint){
 		registrationController = "controller_Btn_RegisterSmis(this)";
+	}else if(registerToEndpoint == abtcEndpoint){
+		registrationController = "controller_Btn_RegisterAbtc(this)";
 	}
 
 	let accessBoxDetails = `

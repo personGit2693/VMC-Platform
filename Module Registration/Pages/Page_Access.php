@@ -35,7 +35,8 @@ if(isset($_GET["endpoint"]) && isset($_SESSION["account_id"]) && isset($_SESSION
 	<!--_Controllers-->
 	<script type="module" src="../../Global Client Side/Controller_Textarea_ResizeTextArea.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_RegisterEsrs.js"></script>
-	<script type="module" src="../Client Side/Controller_Btn_RegisterSmis.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_RegisterSmis.js"></script> 
+	<script type="module" src="../Client Side/Controller_Btn_RegisterAbtc.js"></script> 
 	<!--_Controllers-->
 
 

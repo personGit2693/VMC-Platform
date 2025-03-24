@@ -76,6 +76,15 @@ function connectToDb(string $connectionName){
 
 			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
 			/*Connect to web hosting*/
+		}else if($connectionName === "ABTC"){
+
+			/*Connect to ABTC*/
+			$connString = "mysql:host=localhost;dbname=vmc_abtc;";
+			$serverUsername = "root";
+			$serverPassword = "";		
+
+			$selectedPdoConn = new PDO($connString, $serverUsername, $serverPassword);		
+			/*Connect to ABTC*/
 		}
 		/*Connect to DB*/
 
