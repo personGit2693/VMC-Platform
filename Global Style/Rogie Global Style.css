@@ -3294,8 +3294,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   white-space: normal;
   font-family: "binanceFont";
   font-size: clamp(14px, 2vw, 16px);
-  font-weight: bold;
-  color: var(--navLogo_FColor); }
+  font-weight: bold; }
 
 /*Navigation Logo*/
 /*Page Feature Wrapper*/
@@ -3631,7 +3630,8 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   background: transparent url("../../src/right-arrow-black.png") center no-repeat;
   background-size: contain;
   width: clamp(17px, 1vw, 28px);
-  height: clamp(17px, 1vw, 28px); }
+  height: clamp(17px, 1vw, 28px);
+  flex-shrink: 0; }
 
 /*Path Guide*/
 /*Page Big Title*/
@@ -3668,7 +3668,9 @@ table {
   margin-top: 15px; }
 
 table thead {
-  border-bottom: 1.5px solid black; }
+  border-bottom: 1.5px solid black;
+  position: sticky;
+  z-index: 1; }
 
 table thead tr th {
   padding: 5px; }
