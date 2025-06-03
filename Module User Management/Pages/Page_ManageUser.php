@@ -23,14 +23,17 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 <body>
 	<div class="rolayout_RoClass"> 
 		<div class="sidemecha_RoClass lightMode">
-			<div class="sidemechaCon_RoClass">
+			<div class="sidemechaCon_RoClass" id="sidemechaCon-Id">
 				<!--Navigation Logo-->
+				<!--
 				<div id="navLogoWrap">
 					<img src="../../src/vmclogo.png" />
 					<span class="lightMode">VMC WAC</span>
 				</div>
+				-->
 				<!--Navigation Logo-->
 
+				<!--
 				<a href="../../index.php" class="mainNavMenu_RoClass lightMode">					
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/homeiconblack.png'); --activeMainNavMenuIcon:url('../../src/homeiconblack.png')"></div>
 					<span class="generalNavMenuText_RoClass">Home</span>
@@ -50,6 +53,7 @@ if(isset($_SESSION["account_id"]) && isset($_SESSION["account_fname"]) && isset(
 					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('../../src/logouticon black.png'); --activeMainNavMenuIcon:url('../../src/logouticon black.png')"></div>
 					<span class="generalNavMenuText_RoClass">Logout</span>
 				</a>
+				-->
 			</div>
 		</div>
 		<div class="mainmecha_RoClass lightMode">

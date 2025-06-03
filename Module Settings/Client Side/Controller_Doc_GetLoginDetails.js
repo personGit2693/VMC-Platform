@@ -3,6 +3,7 @@ import {assignElemReference_GetLoginDetails} from "../../Global Client Side/Valu
 import {submitGetLoginDetails} from "../../Global Client Side/Submit_GetLoginDetails.js";
 import outputUserLoginDetails from "./Output_UserLoginDetails.js";
 import controller_Doc_DisplayProfilePic from "./Controller_Doc_DisplayProfilePic.js";
+import outputNavigationMenu from "./../../Global Client Side/Output_NavigationMenu.js";
 /*Import*/
 
 
@@ -12,7 +13,7 @@ function controller_Doc_GetLoginDetails(elem){
 	assignElemReference_GetLoginDetails(elem);
 
 	const dataObj = {};
-	const controllersObj = {outputUserLoginDetails, controller_Doc_DisplayProfilePic};
+	const controllersObj = {outputUserLoginDetails, controller_Doc_DisplayProfilePic, outputNavigationMenu};
 	const loaderObj = {};	
 
 	const serverPath = "../../Global Server Side/Response_GetLoginDetails.php";

@@ -47,6 +47,10 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 
 					if("controller_Doc_DisplayProfilePic" in controllersObj){
 						controllersObj.controller_Doc_DisplayProfilePic();
+					}
+
+					if("outputNavigationMenu" in controllersObj){
+						controllersObj.outputNavigationMenu();
 					}					
 				}else{
 					window.location.href = logoutPath;

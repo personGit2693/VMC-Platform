@@ -10,6 +10,8 @@ $currentDateTime = date("Y-m-d H:i:s", time());
 /*Global Required Files*/
 require_once "./../Global PHP/Connection.php";
 require_once "./../Global PHP/CheckAppKey.php";
+require_once "./../Global PHP/GetAllAccessLevels.php";
+require_once "./../Global PHP/GetAccountAccess.php";
 /*Global Required Files*/
 
 
@@ -40,6 +42,8 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 	$execution = null;
 	$validAccount = null;
 	$globalKey = null;
+	$accesslevels = array();
+	$accountAccess = array();
 
 	
 	$getLoginDetails_Resp = new stdClass();	
@@ -50,6 +54,8 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 	$getLoginDetails_Resp->validAccount = $validAccount;
 	$getLoginDetails_Resp->globalKey = $globalKey;		
 	$getLoginDetails_Resp->endpoint = $endpoint;
+	$getLoginDetails_Resp->accesslevels = $accesslevels;
+	$getLoginDetails_Resp->accountAccess = $accountAccess;
 	/*Prep response*/
 
 
@@ -109,47 +115,65 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 
 
 	if($validToken === null){	
-				
-		/*Check Account Session Details*/
-		/*_Prep query*/
-		$checkAccountSession_Query = "
-			SELECT * 
-			FROM accounts_tab 
-			WHERE account_id = :account_id 
-			AND account_password = :account_password
-			AND account_status = 1;
-		";		
-		/*_Prep query*/
+		
+		/*Get all access levels*/
+		$getAllAccessLevels_Obj = GetAllAccessLevels($vmcplatDbConnection->selectedPdoConn);
+		$accesslevels = $getAllAccessLevels_Obj->accesslevels;
+		$execution = $getAllAccessLevels_Obj->execution;
+		/*Get all access levels*/
 
-		/*_Execute query*/
-		$checkAccountSession_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($checkAccountSession_Query);
-		$checkAccountSession_QueryObj->bindValue(':account_id', $_SESSION["account_id"], PDO::PARAM_STR);
-		$checkAccountSession_QueryObj->bindValue(':account_password', $_SESSION["account_password"], PDO::PARAM_STR);		
-		$execution = $checkAccountSession_QueryObj->execute();		
-		/*_Execute query*/
 
-		/*_Fetching*/		
+		/*Get Account access*/
 		if($execution){
-			if($checkAccountSession_QueryObj->rowCount() != 0){	
-				$validAccount = true;
+			$getAccountAccess_Obj = GetAccountAccess($vmcplatDbConnection->selectedPdoConn, $_SESSION["account_id"]);
+			$accountAccess = $getAccountAccess_Obj->accountAccess;
+			$execution = $getAccountAccess_Obj->execution;
+		}
+		/*Get Account access*/
 
-				$accountSession_Obj = new stdClass();
-				$accountSession_Obj->account_id = $_SESSION["account_id"];
-				$accountSession_Obj->account_fname = $_SESSION["account_fname"];
-				$accountSession_Obj->account_mname = $_SESSION["account_mname"];
-				$accountSession_Obj->account_lname = $_SESSION["account_lname"];
-				$accountSession_Obj->account_suffix = $_SESSION["account_suffix"];
-				$accountSession_Obj->account_password = $_SESSION["account_password"];				
-				$accountSession_Obj->account_identifier = $_SESSION["account_identifier"];				
-				$accountSession_Obj->account_picture = $_SESSION["account_picture"];
-				$accountSession_Obj->account_status = $_SESSION["account_status"];				
-				$accountSession_Obj->account_section = $_SESSION["account_section"];				
-				$accountSession_Obj->correctPassword = $_SESSION["correctPassword"];
 
-				$globalKey = base64_encode(json_encode($accountSession_Obj, JSON_NUMERIC_CHECK));
-			}
-		}		
-		/*_Fetching*/
+		/*Check Account Session Details*/
+		if($execution){
+			/*_Prep query*/
+			$checkAccountSession_Query = "
+				SELECT * 
+				FROM accounts_tab 
+				WHERE account_id = :account_id 
+				AND account_password = :account_password
+				AND account_status = 1;
+			";		
+			/*_Prep query*/
+
+			/*_Execute query*/
+			$checkAccountSession_QueryObj = $vmcplatDbConnection->selectedPdoConn->prepare($checkAccountSession_Query);
+			$checkAccountSession_QueryObj->bindValue(':account_id', $_SESSION["account_id"], PDO::PARAM_STR);
+			$checkAccountSession_QueryObj->bindValue(':account_password', $_SESSION["account_password"], PDO::PARAM_STR);		
+			$execution = $checkAccountSession_QueryObj->execute();		
+			/*_Execute query*/
+
+			/*_Fetching*/		
+			if($execution){
+				if($checkAccountSession_QueryObj->rowCount() != 0){	
+					$validAccount = true;
+
+					$accountSession_Obj = new stdClass();
+					$accountSession_Obj->account_id = $_SESSION["account_id"];
+					$accountSession_Obj->account_fname = $_SESSION["account_fname"];
+					$accountSession_Obj->account_mname = $_SESSION["account_mname"];
+					$accountSession_Obj->account_lname = $_SESSION["account_lname"];
+					$accountSession_Obj->account_suffix = $_SESSION["account_suffix"];
+					$accountSession_Obj->account_password = $_SESSION["account_password"];				
+					$accountSession_Obj->account_identifier = $_SESSION["account_identifier"];				
+					$accountSession_Obj->account_picture = $_SESSION["account_picture"];
+					$accountSession_Obj->account_status = $_SESSION["account_status"];				
+					$accountSession_Obj->account_section = $_SESSION["account_section"];				
+					$accountSession_Obj->correctPassword = $_SESSION["correctPassword"];
+
+					$globalKey = base64_encode(json_encode($accountSession_Obj, JSON_NUMERIC_CHECK));
+				}
+			}		
+			/*_Fetching*/
+		}
 		/*Check Account Session Details*/
 	}
 	
@@ -162,7 +186,9 @@ if(isset($_POST["secretKey"]) && isset($_SESSION["account_id"]) && isset($_SESSI
 	/*Return response*/
 	$getLoginDetails_Resp->execution = $execution;
 	$getLoginDetails_Resp->validAccount = $validAccount;	
-	$getLoginDetails_Resp->globalKey = $globalKey;	
+	$getLoginDetails_Resp->globalKey = $globalKey;
+	$getLoginDetails_Resp->accesslevels = $accesslevels;
+	$getLoginDetails_Resp->accountAccess = $accountAccess;	
 
 	echo json_encode($getLoginDetails_Resp, JSON_NUMERIC_CHECK);
 	/*Return response*/

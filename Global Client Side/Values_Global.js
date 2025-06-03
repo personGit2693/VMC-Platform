@@ -26,6 +26,10 @@ var colormode = "lightMode";
 
 var isLightMode = localStorage.getItem('isLightMode') === 'true';
 var chatContactName = "";
+
+var currentPage = "Home";
+
+var accountAccess = [];
 /*Prep export variables*/
 
 
@@ -58,22 +62,29 @@ function resetGlobalKey(){
 	globalKey = null;
 }
 
-/*_Assign isLightMode*/
 function assignIsLightMode(newMode){
 	isLightMode = newMode;
 }
-/*_Assign isLightMode*/
 
-/*_Assign chatContactName*/
 function assignChatContactName(chatContactName_Param){
 	chatContactName = chatContactName_Param;
 }
-/*_Assign chatContactName*/
+
+function assignCurrentPage(newValue){
+	currentPage = newValue;
+}
+
+function resetCurrentPage(){
+	currentPage = "Home";
+}
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
+	currentPage,
+	assignCurrentPage,
+	resetCurrentPage,
 	elemReference_RegisterAbtc,
 	assignElemReference_RegisterAbtc,
 	abtcEndpoint,

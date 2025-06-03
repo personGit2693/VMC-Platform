@@ -12,6 +12,8 @@ import secretKey from "./Dummy.js";
 var validAccount = null;
 var globalKey = null;
 var endpoint = null;
+var accesslevels = null;
+var accountAccess = null;
 /*Export variables*/
 
 
@@ -46,9 +48,12 @@ async function requestGetLoginDetails(dataObj, serverPath){
 				console.log("Execution Problem in Request_GetLoginDetails!");
 				resolve(false);
 			}else{
+
 				validAccount = parseObj.validAccount;				
 				globalKey = parseObj.globalKey;	
 				endpoint = parseObj.endpoint;			
+				accesslevels = parseObj.accesslevels;
+				accountAccess = parseObj.accountAccess;
 				
 				resolve(true);
 			}			
@@ -64,5 +69,5 @@ async function requestGetLoginDetails(dataObj, serverPath){
 
 
 /*Export*/
-export {endpoint, globalKey, validAccount, requestGetLoginDetails};
+export {accountAccess, accesslevels, endpoint, globalKey, validAccount, requestGetLoginDetails};
 /*Export*/

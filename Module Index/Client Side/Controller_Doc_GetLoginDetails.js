@@ -3,6 +3,7 @@ import {assignElemReference_GetLoginDetails} from "../../Global Client Side/Valu
 import {submitGetLoginDetails} from "../../Global Client Side/Submit_GetLoginDetails.js";
 import outputUserLoginDetails from "./Output_UserLoginDetails.js";
 import outputGreetingUserDetails from "./Output_GreetingUserDetails.js";
+import outputNavigationMenu from "./Output_NavigationMenu.js";
 /*Import*/
 
 
@@ -14,7 +15,8 @@ function controller_Doc_GetLoginDetails(elem){
 	const dataObj = {};
 	const controllersObj = {
 		outputUserLoginDetails,
-		outputGreetingUserDetails
+		outputGreetingUserDetails,
+		outputNavigationMenu		
 	};
 	const loaderObj = {};	
 
