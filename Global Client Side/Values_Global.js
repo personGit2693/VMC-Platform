@@ -77,11 +77,22 @@ function assignCurrentPage(newValue){
 function resetCurrentPage(){
 	currentPage = "Home";
 }
+
+function assignAccountAccess(newValue){
+	accountAccess = newValue;
+}
+
+function resetAccountAccess(){
+	accountAccess = [];
+}
 /*Assign, Reset, Populate*/
 
 
 /*Export*/
 export {
+	accountAccess,
+	assignAccountAccess,
+	resetAccountAccess,
 	currentPage,
 	assignCurrentPage,
 	resetCurrentPage,

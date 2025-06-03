@@ -1,6 +1,6 @@
 /*Import*/
 import {assignGlobalKey, elemReference_GetLoginDetails} from "./Values_Global.js";
-import {endpoint, validAccount, globalKey, requestGetLoginDetails} from "./Request_GetLoginDetails.js";
+import {endpoint, validAccount, globalKey, requestGetLoginDetails, accountAccess} from "./Request_GetLoginDetails.js";
 /*Import*/
 
 
@@ -51,6 +51,10 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 
 					if("outputNavigationMenu" in controllersObj){
 						controllersObj.outputNavigationMenu();
+					}
+
+					if("assignAccountAccess" in controllersObj){
+						controllersObj.assignAccountAccess(accountAccess);
 					}					
 				}else{
 					window.location.href = logoutPath;
