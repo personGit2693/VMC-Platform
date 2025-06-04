@@ -11,7 +11,7 @@ var pendingSubmit = 0;
 
 
 /*Submit Function*/
-function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, serverPath, logoutPath){	
+function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, serverPath, logoutPath, accessLevelKey){	
 
 	if(blockRequest === false){
 
@@ -55,6 +55,10 @@ function submitGetLoginDetails(controller, dataObj, controllersObj, loaderObj, s
 
 					if("assignAccountAccess" in controllersObj){
 						controllersObj.assignAccountAccess(accountAccess);
+					}
+
+					if("controller_Doc_SecurePage" in controllersObj){
+						controllersObj.controller_Doc_SecurePage(accessLevelKey, logoutPath);
 					}					
 				}else{
 					window.location.href = logoutPath;

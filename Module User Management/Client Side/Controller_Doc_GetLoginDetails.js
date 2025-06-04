@@ -3,6 +3,7 @@ import {assignElemReference_GetLoginDetails, assignAccountAccess} from "../../Gl
 import {submitGetLoginDetails} from "../../Global Client Side/Submit_GetLoginDetails.js";
 import outputUserLoginDetails from "./Output_UserLoginDetails.js";
 import outputNavigationMenu from "./../../Global Client Side/Output_NavigationMenu.js";
+import controller_Doc_SecurePage from "./../../Global Client Side/Controller_Doc_SecurePage.js";
 /*Import*/
 
 
@@ -12,13 +13,14 @@ function controller_Doc_GetLoginDetails(elem){
 	assignElemReference_GetLoginDetails(elem);
 
 	const dataObj = {};
-	const controllersObj = {outputUserLoginDetails, outputNavigationMenu, assignAccountAccess};
+	const controllersObj = {outputUserLoginDetails, outputNavigationMenu, assignAccountAccess, controller_Doc_SecurePage};
 	const loaderObj = {};	
 
 	const serverPath = "../../Global Server Side/Response_GetLoginDetails.php";
 	const logoutPath = "../../Global PHP/DestroySessions.php";
+	const accessLevelKey = "User Management Navigation";
 
-	submitGetLoginDetails(controller_Doc_GetLoginDetails, dataObj, controllersObj, loaderObj, serverPath, logoutPath);
+	submitGetLoginDetails(controller_Doc_GetLoginDetails, dataObj, controllersObj, loaderObj, serverPath, logoutPath, accessLevelKey);
 }
 /*Controller*/
 
